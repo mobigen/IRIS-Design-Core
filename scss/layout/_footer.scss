@@ -1,0 +1,22 @@
+footer {
+  background-color: $ui-03;
+  border: 1px solid $ui-04;
+}
+
+.footer-title {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.icon-text {
+  display: block;
+  margin-right: 15px;
+  font-weight: bold;
+  font-size: 12px;
+}
