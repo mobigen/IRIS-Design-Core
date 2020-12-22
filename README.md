@@ -14,7 +14,7 @@ IRIS-Design-Core를 포함하는 상위 저장소
 2. IDC 의 `setting` 브랜치를 Subtree로 등록합니다
    `setting` 브랜치는 초기 웹팩 설정 등을 위한 임시 브랜치입니다. 추후 개발 진행시 `dev` 브랜치로 변경이 필요합니다.
    ```bash
-   $ git subtree add -P src/core-style https://github.com/mobigen/IRIS-Design-Core.git setting
+   $ git subtree add -P src/core-style https://github.com/mobigen/IRIS-Design-Core.git main
    ```
 
 ### 작업 순서
