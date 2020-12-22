@@ -1,0 +1,20 @@
+html {
+  font-size: $base-font-size;
+}
+
+body {
+  @include font-family("sans");
+  @include font-size("14");
+  @include letter-spacing;
+  color: $text-01;
+  background-color: $ui-01;
+  line-height: 1.5;
+}
+
+code {
+  @include font-family("mono");
+}
+
+strong {
+  font-weight: 700;
+}

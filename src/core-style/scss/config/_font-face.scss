@@ -1,0 +1,41 @@
+@font-face {
+  font-family: "notokr";
+  font-style: normal;
+  font-weight: 300;
+  src: url("#{$font-path}/notokr-light.eot");
+  src: url("#{$font-path}/notokr-light.eot?#iefix") format("embedded-opentype"),
+    url("#{$font-path}/notokr-light.woff2") format("woff2"),
+    url("#{$font-path}/notokr-light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "notokr";
+  font-style: normal;
+  font-weight: 400;
+  src: url("#{$font-path}/notokr-regular.eot");
+  src: url("#{$font-path}/notokr-regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("#{$font-path}/notokr-regular.woff2") format("woff2"),
+    url("#{$font-path}/notokr-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "notokr";
+  font-style: normal;
+  font-weight: 500;
+  src: url("#{$font-path}/notokr-medium.eot");
+  src: url("#{$font-path}/notokr-medium.eot?#iefix") format("embedded-opentype"),
+    url("#{$font-path}/notokr-medium.woff2") format("woff2"),
+    url("#{$font-path}/notokr-medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "notokr";
+  font-style: normal;
+  font-weight: 700;
+  src: url("#{$font-path}/notokr-bold.eot");
+  src: url("#{$font-path}/notokr-bold.eot?#iefix") format("embedded-opentype"),
+    url("#{$font-path}/notokr-bold.woff2") format("woff2"),
+    url("#{$font-path}/notokr-bold.woff") format("woff");
+}
+
