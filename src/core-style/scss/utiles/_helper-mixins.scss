@@ -9,10 +9,60 @@
   }
 }
 
-@mixin ellipsis-end($max-width) {
-  display: inline-block;
-  max-width: $max-width;
+@mixin text-overflow($width: false) {
+  display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+
+  // width parameter가 있을 경우 허용
+  @if ($width) {
+    width: $width;
+  }
+}
+
+@mixin hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  visibility: visible;
+  white-space: nowrap;
+}
+
+// Image Replacement Phark Method
+@mixin ir-pm {
+  display: block;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+  color: transparent;
+}
+
+// Img Global
+@mixin img-g {
+  display: block;
+  width: 100%;
+}
+
+// Hide Table Caption
+@mixin caption-out {
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  visibility: hidden;
+}
+
+// Right Position Center
+@mixin right-position {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
 }
