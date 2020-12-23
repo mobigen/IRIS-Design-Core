@@ -13,3 +13,7 @@
 .caption-out {
   @include caption-out;
 }
+
+.text-emphasis {
+  @include font-weight("bold");
+}
