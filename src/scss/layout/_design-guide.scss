@@ -79,10 +79,6 @@
   }
 }
 
-.page__desc {
-  padding: 0 0 $layout-2xs;
-}
-
 .code-example {
   max-width: 100%;
   display: flex;
@@ -113,45 +109,48 @@
 // }
 
 .page-header__lable {
+  @include font-size("14");
+  @include font-weight("regular");
   color: $text-02;
-  margin: $layout-md 0 $layout-xs;
+  margin: $layout-md 0 $layout-3xs;
   white-space: nowrap;
   text-transform: capitalize;
 }
 
 .page-header__title {
   @include letter-spacing;
-  @include line-height("heading");
+  // @include line-height("body");
   @include font-size("32");
+  @include font-weight("medium");
   color: $text-01;
-  margin: -1.15rem 0 0 -3px;
-  line-height: 1.25;
+  margin-top: -$spacing-sm;
   padding: 0;
 }
 
 .page__desc {
   @include font-smoothing;
   @include letter-spacing;
-  max-width: 38rem;
+  @include font-size("16");
+  @include line-height("body");
+  max-width: rem(800px);
   color: $text-01;
   word-wrap: break-word;
-  font-size: 1.125rem;
-  line-height: 1.5;
   font-weight: 600;
-  padding-bottom: 1rem;
-
+  padding-bottom: $layout-sm;
+  
   span {
     color: $primary;
   }
 }
 
-.page__usage {
+.page__usage { 
   margin-bottom: $layout-sm;
 }
 
 .md {
   @include font-size("14");
   @include line-height("body");
+  color: $text-02;
 
   ul {
     list-style: disc;
@@ -217,10 +216,26 @@
   border: 1px solid $ui-04;
 }
 
-.component-example--rendered {
+.component-example__row {
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
+}
+
+.component-example__row + .component-example__row {
+  margin-top: $spacing-sm;
+}
+
+.component-example__size-label {
+  @include font-size("12");
+  margin-right: $spacing-lg;
+  width: rem(60px);
+  color: $text-03;
+}
+
+.component-examle__button-group {
+  display: flex;
+}
+
+.component-examle__button-group button + button {
+  margin-left: $spacing-sm;
 }
