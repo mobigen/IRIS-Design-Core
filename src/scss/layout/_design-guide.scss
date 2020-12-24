@@ -24,14 +24,13 @@
 .footer {
   // position: absolute;
   width: 100%;
-  padding: $layout-lg $layout-sm;
+  padding: $layout-lg $layout-md $layout-md;
   background-color: $ui-01;
   border-top: 1px solid $ui-04;
 }
 
 .footer__version {
   @include font-size("14");
-  margin-bottom: $spacing-2xs;
   color: $text-02;
 }
 
@@ -119,7 +118,6 @@
 
 .page-header__title {
   @include letter-spacing;
-  // @include line-height("body");
   @include font-size("32");
   @include font-weight("medium");
   color: $text-01;
@@ -150,7 +148,7 @@
 .md {
   @include font-size("14");
   @include line-height("body");
-  color: $text-02;
+  color: $text-01;
 
   ul {
     list-style: disc;
@@ -159,7 +157,7 @@
 }
 
 .component-variation {
-  margin: $layout-lg 0 $layout-xl;
+  margin: $layout-xl 0 $layout-xl;
 }
 
 .component-variation__name {
@@ -232,10 +230,11 @@
   color: $text-03;
 }
 
-.component-examle__button-group {
+.component-examle__item-group {
   display: flex;
 }
 
-.component-examle__button-group button + button {
+.component-examle__item-group button + button,
+.component-examle__item-group .checkbox + .checkbox {
   margin-left: $spacing-sm;
 }

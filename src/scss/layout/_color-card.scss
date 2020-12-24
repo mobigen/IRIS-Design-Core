@@ -1,6 +1,10 @@
 // -------------------
 // color
 // -------------------
+#page_color .component-variation {
+  margin-top: $layout-xs;
+}
+
 .color-card-wrap {
   display: flex;
   flex-wrap: wrap;
