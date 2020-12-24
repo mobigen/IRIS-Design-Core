@@ -26,7 +26,7 @@ IRIS-Design-Product 저장소의 [README](https://github.com/mobigen/IRIS-Design
      이 후, 상위 저장소에 PR요청 혹은 upstream에 push하는 등 작업자들에게 코드를 공유해줍니다.
    - 서브트리에 push 하기
    ```bash
-   git subtree push -P src/core-style design-core-origin master
+   git subtree push -P src/core-style design-core-origin main
 
    # 위 명령어를 수행하는 npm 스크립트
    npm run push
