@@ -31,6 +31,12 @@
         <li class="sub-nav__item">
           <a class="sub-nav__item-link" href="#page_button">Button</a>
         </li>
+        <li class="sub-nav__item">
+          <a class="sub-nav__item-link" href="#page_checkbox">Checkbox</a>
+        </li>
+        <li class="sub-nav__item">
+          <a class="sub-nav__item-link" href="#page_radio">Radio</a>
+        </li>
       </ul>
     </li>
   </ul>
@@ -192,7 +198,7 @@
         <div>
           <div class="component-example__row">
             <p class="component-example__size-label">Size: lg</p>
-            <div class="component-examle__button-group">
+            <div class="component-examle__item-group">
               <button class="button button-theme--primary button--lg" type="button">
                 <span class="button__text">Primary Button</span>
               </button>
@@ -213,7 +219,7 @@
           </div>
           <div class="component-example__row">
             <p class="component-example__size-label">Size: md</p>
-            <div class="component-examle__button-group">
+            <div class="component-examle__item-group">
               <button class="button button-theme--primary" type="button">
                 <span class="button__text">Primary Button</span>
               </button>
@@ -234,7 +240,7 @@
           </div>
           <div class="component-example__row">
             <p class="component-example__size-label">Size: sm</p>
-            <div class="component-examle__button-group">
+            <div class="component-examle__item-group">
               <button class="button button-theme--primary button--sm" type="button">
                 <span class="button__text">Primary Button</span>
               </button>
@@ -265,7 +271,7 @@
         <div>
           <div class="component-example__row">
             <p class="component-example__size-label">Size: lg</p>
-            <div class="component-examle__button-group">
+            <div class="component-examle__item-group">
               <button class="button button-theme--secondary button--lg" type="button">
                 Secondary Button
               </button>
@@ -276,7 +282,7 @@
                 <svg class="icon-comm">
                   <use xlink:href="#airbnb"></use>
                 </svg>
-                <span>Secondary Button</span>
+                <span class="button__text">Secondary Button</span>
               </button>
               <button class="button button--icon button-theme--secondary button--lg" type="button">
                 <svg class="icon-comm">
@@ -287,7 +293,7 @@
           </div>
           <div class="component-example__row">
             <p class="component-example__size-label">Size: md</p>
-            <div class="component-examle__button-group">
+            <div class="component-examle__item-group">
               <button class="button button-theme--secondary" type="button">
                 Secondary Button
               </button>
@@ -298,7 +304,7 @@
                 <svg class="icon-comm">
                   <use xlink:href="#airbnb"></use>
                 </svg>
-                <span>Secondary Button</span>
+                <span class="button__text">Secondary Button</span>
               </button>
               <button class="button button--icon button-theme--secondary" type="button">
                 <svg class="icon-comm">
@@ -309,7 +315,7 @@
           </div>
           <div class="component-example__row">
             <p class="component-example__size-label">Size: sm</p>
-            <div class="component-examle__button-group">
+            <div class="component-examle__item-group">
               <button class="button button-theme--secondary button--sm" type="button">
                 Secondary Button
               </button>
@@ -320,7 +326,7 @@
                 <svg class="icon-comm">
                   <use xlink:href="#airbnb"></use>
                 </svg>
-                <span>Secondary Button</span>
+                <span class="button__text">Secondary Button</span>
               </button>
               <button class="button button--icon button-theme--secondary button--sm" type="button">
                 <svg class="icon-comm">
@@ -341,7 +347,7 @@
         <div>
           <div class="component-example__row">
             <p class="component-example__size-label">Size: lg</p>
-            <div class="component-examle__button-group">
+            <div class="component-examle__item-group">
               <button class="button button-theme--tertiary button--lg" type="button">
                 Tertiary Button
               </button>
@@ -352,7 +358,7 @@
                 <svg class="icon-comm">
                   <use xlink:href="#airbnb"></use>
                 </svg>
-                <span>Tertiary Button</span>
+                <span class="button__text">Tertiary Button</span>
               </button>
               <button class="button button--icon button-theme--tertiary button--lg" type="button">
                 <svg class="icon-comm">
@@ -363,7 +369,7 @@
           </div>
           <div class="component-example__row">
             <p class="component-example__size-label">Size: md</p>
-            <div class="component-examle__button-group">
+            <div class="component-examle__item-group">
               <button class="button button-theme--tertiary" type="button">
                 Tertiary Button
               </button>
@@ -374,7 +380,7 @@
                 <svg class="icon-comm">
                   <use xlink:href="#airbnb"></use>
                 </svg>
-                <span>Tertiary Button</span>
+                <span class="button__text">Tertiary Button</span>
               </button>
               <button class="button button--icon button-theme--tertiary" type="button">
                 <svg class="icon-comm">
@@ -385,7 +391,7 @@
           </div>
           <div class="component-example__row">
             <p class="component-example__size-label">Size: sm</p>
-            <div class="component-examle__button-group">
+            <div class="component-examle__item-group">
               <button class="button button-theme--tertiary button--sm" type="button">
                 Tertiary Button
               </button>
@@ -396,7 +402,7 @@
                 <svg class="icon-comm">
                   <use xlink:href="#airbnb"></use>
                 </svg>
-                <span>Tertiary Button</span>
+                <span class="button__text">Tertiary Button</span>
               </button>
               <button class="button button--icon button-theme--tertiary button--sm" type="button">
                 <svg class="icon-comm">
@@ -417,7 +423,7 @@
         <div>
           <div class="component-example__row">
             <p class="component-example__size-label">Size: lg</p>
-            <div class="component-examle__button-group">
+            <div class="component-examle__item-group">
               <button class="button button-theme--ghost button--lg" type="button">
                 Ghost Button
               </button>
@@ -428,7 +434,7 @@
                 <svg class="icon-comm">
                   <use xlink:href="#airbnb"></use>
                 </svg>
-                <span>Ghost Button</span>
+                <span class="button__text">Ghost Button</span>
               </button>
               <button class="button button--icon button-theme--ghost button--lg" type="button">
                 <svg class="icon-comm">
@@ -439,7 +445,7 @@
           </div>
           <div class="component-example__row">
             <p class="component-example__size-label">Size: md</p>
-            <div class="component-examle__button-group">
+            <div class="component-examle__item-group">
               <button class="button button-theme--ghost" type="button">
                 Ghost Button
               </button>
@@ -450,7 +456,7 @@
                 <svg class="icon-comm">
                   <use xlink:href="#airbnb"></use>
                 </svg>
-                <span>Ghost Button</span>
+                <span class="button__text">Ghost Button</span>
               </button>
               <button class="button button--icon button-theme--ghost" type="button">
                 <svg class="icon-comm">
@@ -461,7 +467,7 @@
           </div>
           <div class="component-example__row">
             <p class="component-example__size-label">Size: sm</p>
-            <div class="component-examle__button-group">
+            <div class="component-examle__item-group">
               <button class="button button-theme--ghost button--sm" type="button">
                 Ghost Button
               </button>
@@ -472,7 +478,7 @@
                 <svg class="icon-comm">
                   <use xlink:href="#airbnb"></use>
                 </svg>
-                <span>Ghost Button</span>
+                <span class="button__text">Ghost Button</span>
               </button>
               <button class="button button--icon button-theme--ghost button--sm" type="button">
                 <svg class="icon-comm">
@@ -493,7 +499,7 @@
         <div>
           <div class="component-example__row">
             <p class="component-example__size-label">Size: lg</p>
-            <div class="component-examle__button-group">
+            <div class="component-examle__item-group">
               <button class="button button-theme--negative button--lg" type="button">
                 Negative Button
               </button>
@@ -504,7 +510,7 @@
                 <svg class="icon-comm">
                   <use xlink:href="#airbnb"></use>
                 </svg>
-                <span>Negative Button</span>
+                <span class="button__text">Negative Button</span>
               </button>
               <button class="button button--icon button-theme--negative button--lg" type="button">
                 <svg class="icon-comm">
@@ -515,7 +521,7 @@
           </div>
           <div class="component-example__row">
             <p class="component-example__size-label">Size: md</p>
-            <div class="component-examle__button-group">
+            <div class="component-examle__item-group">
               <button class="button button-theme--negative" type="button">
                 Negative Button
               </button>
@@ -526,7 +532,7 @@
                 <svg class="icon-comm">
                   <use xlink:href="#airbnb"></use>
                 </svg>
-                <span>Negative Button</span>
+                <span class="button__text">Negative Button</span>
               </button>
               <button class="button button--icon button-theme--negative" type="button">
                 <svg class="icon-comm">
@@ -537,7 +543,7 @@
           </div>
           <div class="component-example__row">
             <p class="component-example__size-label">Size: sm</p>
-            <div class="component-examle__button-group">
+            <div class="component-examle__item-group">
               <button class="button button-theme--negative button--sm" type="button">
                 Negative Button
               </button>
@@ -548,7 +554,7 @@
                 <svg class="icon-comm">
                   <use xlink:href="#airbnb"></use>
                 </svg>
-                <span>Negative Button</span>
+                <span class="button__text">Negative Button</span>
               </button>
               <button class="button button--icon button-theme--negative button--sm" type="button">
                 <svg class="icon-comm">
@@ -569,7 +575,7 @@
         <div>
           <div class="component-example__row">
             <p class="component-example__size-label">Size: lg</p>
-            <div class="component-examle__button-group">
+            <div class="component-examle__item-group">
               <button class="button button-theme--link button--lg" type="button">
                 Link Button
               </button>
@@ -580,7 +586,7 @@
                 <svg class="icon-comm">
                   <use xlink:href="#airbnb"></use>
                 </svg>
-                <span>Link Button</span>
+                <span class="button__text">Link Button</span>
               </button>
               <button class="button button--icon button-theme--link button--lg" type="button">
                 <svg class="icon-comm">
@@ -591,7 +597,7 @@
           </div>
           <div class="component-example__row">
             <p class="component-example__size-label">Size: md</p>
-            <div class="component-examle__button-group">
+            <div class="component-examle__item-group">
               <button class="button button-theme--link" type="button">
                 Link Button
               </button>
@@ -602,7 +608,7 @@
                 <svg class="icon-comm">
                   <use xlink:href="#airbnb"></use>
                 </svg>
-                <span>Link Button</span>
+                <span class="button__text">Link Button</span>
               </button>
               <button class="button button--icon button-theme--link" type="button">
                 <svg class="icon-comm">
@@ -613,7 +619,7 @@
           </div>
           <div class="component-example__row">
             <p class="component-example__size-label">Size: sm</p>
-            <div class="component-examle__button-group">
+            <div class="component-examle__item-group">
               <button class="button button-theme--link button--sm" type="button">
                 Link Button
               </button>
@@ -624,7 +630,7 @@
                 <svg class="icon-comm">
                   <use xlink:href="#airbnb"></use>
                 </svg>
-                <span>Link Button</span>
+                <span class="button__text">Link Button</span>
               </button>
               <button class="button button--icon button-theme--link button--sm" type="button">
                 <svg class="icon-comm">
@@ -639,6 +645,228 @@
   </div>
 </div>
 
+        </div>
+        <div class="page" id="page_checkbox">
+          
+<div class="page-header">
+  <h2 class="page-header__lable">component</h2>
+  <h3 class="page-header__title">Check Box</h3>
+</div>
+<div class="page-content">
+  <p class="page__desc">체크 박스</p>
+  <div class="page__usage md">
+    <ul>
+      <li>체크박스는 <em class="text-emphasis">2개</em> 크기로 구분합니다.</li>
+      <li>체크박스는 default, hover, checked, indeterminate, disabled <em class="text-emphasis">총 5개</em> 상태를 갖습니다.</li>
+    </ul>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Default Checkbox</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: lg</p>
+            <div class="component-examle__item-group">
+              <!-- default -->
+              <div class="checkbox checkbox--lg">
+                <input id="check-05" type="checkbox" class="checkbox__input" value="label">
+                <label for="check-05" class="checkbox__label">label</label>
+              </div>
+              <!-- checked -->
+              <div class="checkbox checkbox--lg">
+                <input id="check-06" type="checkbox" class="checkbox__input" value="label" checked>
+                <label for="check-06" class="checkbox__label">label</label>
+              </div>
+              <!-- indeterminate -->
+              <div class="checkbox checkbox--lg checkbox--indeterminate">
+                <input id="check-07" type="checkbox" class="checkbox__input" value="label">
+                <label for="check-07" class="checkbox__label">label</label>
+              </div>
+              <!-- disabled -->
+              <div class="checkbox checkbox--lg checkbox--disabled">
+                <input id="check-08" type="checkbox" class="checkbox__input" value="lable">
+                <label for="check-08" class="checkbox__label">label</label>
+              </div>
+            </div>
+          </div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: md</p>
+            <div class="component-examle__item-group">
+              <!-- default -->
+              <div class="checkbox">
+                <input id="check-01" type="checkbox" class="checkbox__input" value="label">
+                <label for="check-01" class="checkbox__label">label</label>
+              </div>
+              <!-- checked -->
+              <div class="checkbox">
+                <input id="check-02" type="checkbox" class="checkbox__input" value="label" checked>
+                <label for="check-02" class="checkbox__label">label</label>
+              </div>
+              <!-- indeterminate -->
+              <div class="checkbox checkbox--indeterminate">
+                <input id="check-03" type="checkbox" class="checkbox__input" value="label">
+                <label for="check-03" class="checkbox__label">label</label>
+              </div>
+              <!-- disabled -->
+              <div class="checkbox checkbox--disabled">
+                <input id="check-04" type="checkbox" class="checkbox__input" value="label">
+                <label for="check-04" class="checkbox__label">label</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Studio Checkbox</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div class="studio-component"> <!-- TODO: studio 디자인 개편 반영시 객체, 컴포넌트 네이밍에 따라 변경 예정 -->
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: lg</p>
+            <div class="component-examle__item-group">
+              <!-- default -->
+              <div class="checkbox checkbox--lg">
+                <input id="studio-check-05" type="checkbox" class="checkbox__input" value="label">
+                <label for="studio-check-05" class="checkbox__label">label</label>
+              </div>
+              <!-- checked -->
+              <div class="checkbox checkbox--lg">
+                <input id="studio-check-06" type="checkbox" class="checkbox__input" value="label" checked>
+                <label for="studio-check-06" class="checkbox__label">label</label>
+              </div>
+              <!-- indeterminate -->
+              <div class="checkbox checkbox--lg checkbox--indeterminate">
+                <input id="studio-check-07" type="checkbox" class="checkbox__input" value="label">
+                <label for="studio-check-07" class="checkbox__label">label</label>
+              </div>
+              <!-- disabled -->
+              <div class="checkbox checkbox--lg checkbox--disabled">
+                <input id="studio-check-08" type="checkbox" class="checkbox__input" value="lable">
+                <label for="studio-check-08" class="checkbox__label">label</label>
+              </div>
+            </div>
+          </div>
+          
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: md</p>
+            <div class="component-examle__item-group">
+              <!-- default -->
+              <div class="checkbox">
+                <input id="studio-check-01" type="checkbox" class="checkbox__input" value="label">
+                <label for="studio-check-01" class="checkbox__label">label</label>
+              </div>
+              <!-- checked -->
+              <div class="checkbox">
+                <input id="studio-check-02" type="checkbox" class="checkbox__input" value="label" checked>
+                <label for="studio-check-02" class="checkbox__label">label</label>
+              </div>
+              <!-- indeterminate -->
+              <div class="checkbox checkbox--indeterminate">
+                <input id="studio-check-03" type="checkbox" class="checkbox__input" value="label">
+                <label for="studio-check-03" class="checkbox__label">label</label>
+              </div>
+              <!-- disabled -->
+              <div class="checkbox checkbox--disabled">
+                <input id="studio-check-04" type="checkbox" class="checkbox__input" value="label">
+                <label for="studio-check-04" class="checkbox__label">label</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+        </div>
+        <div class="page" id="page_radio">
+          <div class="page-header">
+  <h2 class="page-header__lable">component</h2>
+  <h3 class="page-header__title">Radio</h3>
+</div>
+<div class="page-content">
+  <p class="page__desc">라디오 버튼</p>
+  <div class="page__usage md">
+    <ul>
+      <li>라디오는 <em class="text-emphasis">1개</em> 크기로 구분합니다.</li>
+      <li>라디오는 default, hover, checked, disabled <em class="text-emphasis">총 4개</em> 상태를 갖습니다.</li>
+    </ul>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Default Radio</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <!-- default -->
+          <div class="radio">
+            <input type="radio" id="radioId-01" name="radio-group" class="radio__input" value="label">
+            <label for="radioId-01" class="radio__label">label
+            </label>
+          </div>
+          <!-- checked -->
+          <div class="radio">
+            <input type="radio" id="radioId-02" name="radio-group" class="radio__input" value="label" checked>
+            <label for="radioId-02" class="radio__label">label
+            </label>
+          </div>
+          <!-- disabled -->
+          <div class="radio">
+            <input type="radio" id="radioId-03" name="radio-group" class="radio__input" value="label" disabled>
+            <label for="radioId-03" class="radio__label">label
+            </label>
+          </div>
+          <!-- checked + disabled -->
+          <div class="radio">
+            <input type="radio" id="radioId-03" name="radio-group" class="radio__input" value="label" checked disabled>
+            <label for="radioId-03" class="radio__label">label
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Studio Radio</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div class="studio-component">
+          <!-- default -->
+          <div class="radio">
+            <input type="radio" id="studio-radio-01" name="studio-radio-group" class="radio__input" value="label">
+            <label for="studio-radio-01" class="radio__label">label
+            </label>
+          </div>
+          <!-- checked -->
+          <div class="radio">
+            <input type="radio" id="studio-radio-02" name="studio-radio-group" class="radio__input" value="label" checked>
+            <label for="studio-radio-02" class="radio__label">label
+            </label>
+          </div>
+          <!-- disabled -->
+          <div class="radio">
+            <input type="radio" id="studio-radio-03" name="studio-radio-group" class="radio__input" value="label" disabled>
+            <label for="studio-radio-03" class="radio__label">label
+            </label>
+          </div>
+          <!-- checked + disabled -->
+          <div class="radio">
+            <input type="radio" id="studio-radio-03" name="studio-radio-group" class="radio__input" value="label" checked disabled>
+            <label for="studio-radio-03" class="radio__label">label
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
         </div>
       </main>
       <footer class="footer">
