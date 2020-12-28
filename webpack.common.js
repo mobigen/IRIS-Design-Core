@@ -4,8 +4,14 @@ const path = require("path"),
   SvgSpriteLoaderPlugin = require("svg-sprite-loader/plugin");
 
 module.exports = {
+  watch: true,
+
+  watchOptions: {
+    ignored: ['./node_modules/**', './clean-dist.js']
+  },
+
   entry: {
-    "main": "./src/_js/guide.js",
+    "main": "./src/js/index.js",
   },
 
   module: {
@@ -60,7 +66,7 @@ module.exports = {
       // Image(png) - Core
       {
         test: /\.(png|jp(e*)g|gif|ico)$/,
-        include: path.resolve(__dirname, "./src/core-style/images/common"),
+        include: path.resolve(__dirname, "./src/core-style/images"),
         use: {
           loader: "file-loader",
           options: {
@@ -75,7 +81,7 @@ module.exports = {
       // Image(png) - Product
       {
         test: /\.(png|jp(e*)g|gif|ico)$/,
-        include: path.resolve(__dirname, "./src/images/common"),
+        include: path.resolve(__dirname, "./src/images"),
         use: {
           loader: "file-loader",
           options: {
@@ -122,7 +128,7 @@ module.exports = {
   plugins: [
     // index.js에 포함된 css를 별도의 .css 파일 형식으로 추출한다.
     new MiniCssExtractPlugin({
-      filename: "css/[name]/style.min.css",
+      filename: "css/style.min.css",
     }),
 
     // 공통 컴포넌트 영역 모듈화
@@ -144,7 +150,6 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "./dist"),
     filename: "./js/[name].bundle.js",
-    // publicPath: "../../", 기존과 경로가 변경됐으나, 재변경 상관 없음
     publicPath: "../../",
   },
 };
