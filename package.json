@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "node ./clean-dist-folder.js && webpack --config webpack.prod.js --watch",
     "prod": "node ./clean-dist-folder.js && webpack --config webpack.prod.js",
-    "pull": "git subtree pull -P src/core-style core-upstream setting",
-    "push": "git subtree push -P src/core-style core-origin setting"
+    "pull": "git subtree pull -P src/core-style core-upstream dev",
+    "push": "git subtree push -P src/core-style core-origin dev"
   },
   "repository": {
     "type": "git",
