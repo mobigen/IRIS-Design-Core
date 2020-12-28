@@ -10,17 +10,23 @@ IRIS-Design-Core를 포함하는 상위 저장소
    ```bash
    $ git remote add core-origin https://github.com/<본인계정>/IRIS-Design-Core
    $ git remote add core-upstream https://github.com/mobigen/IRIS-Design-Core
-   ``` 
-2. IDC 의 `setting` 브랜치를 Subtree로 등록합니다
-   `setting` 브랜치는 초기 웹팩 설정 등을 위한 임시 브랜치입니다. 추후 개발 진행시 `dev` 브랜치로 변경이 필요합니다.
+   ```
+
+👇 현재 `main` 브랜치를 복제할 경우, 2번 작업은 건너 뛰뜁니다.
+
+2. ~~IDC 의 `setting` 브랜치를 Subtree로 등록합니다~~
+
    ```bash
    $ git subtree add -P src/core-style https://github.com/mobigen/IRIS-Design-Core.git main
+
+   # 아래와 같은 의미
+   $ git subtree add   --prefix=<prefix(path)> <repository> <ref>
    ```
 
 ### 작업 순서
 1. 작업 할 저장소(IRIS-Design-Product, IDP) 에서 서브 트리 (IRIS-Design-Core, IDC) 변경사항 받아오기
    ```bash
-   git subtree pull -P src/core-style design-core-upstrea main
+   git subtree pull -P src/core-style design-core-upstream main
 
    # 위 명령어를 수행하는 npm 스크립트
    npm run pull
@@ -35,7 +41,7 @@ IRIS-Design-Core를 포함하는 상위 저장소
      이 후, 상위 저장소에 PR요청 혹은 upstream에 push하는 등 작업자들에게 코드를 공유해줍니다.
    - 서브트리에 push 하기
    ```bash
-   git subtree push -P src/core-style design-core-origin master
+   git subtree push -P src/core-style design-core-origin dev
 
    # 위 명령어를 수행하는 npm 스크립트
    npm run push
