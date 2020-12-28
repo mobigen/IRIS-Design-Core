@@ -41,5 +41,5 @@ requireSvgAll(require.context('../images/icon/', true, /\.svg$/));
 const requirePngAll = (r) => {
   r.keys().forEach(r);
 }
-requirePngAll(require.context('../core-style/images/common/', true, /\.png$/));
-requirePngAll(require.context('../images/common/', true, /\.png$/));
+requirePngAll(require.context('../core-style/images/', true, /\.png$/));
+requirePngAll(require.context('../images/', true, /\.png$/));

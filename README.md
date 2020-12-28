@@ -2,9 +2,6 @@
 
 [IRIS-Design-Core](https://github.com/mobigen/IRIS-Design-Core/tree/main) 가이드를 확인할 수 있는 저장소
 
-<<<<<<< HEAD
-작업 설정은 IRIS-Design-Product 저장소의 [문서](https://github.com/mobigen/IRIS-Design-Product/blob/main/README.md)에서 확인해주세요 😉
-=======
 ## 작업 방법
 
 IRIS-Design-Core 에는 HTML view가 없습니다.
@@ -37,4 +34,3 @@ IRIS-Design-Product 저장소의 [README](https://github.com/mobigen/IRIS-Design
    - 서브트리의 upstream에 PR하기
 
 upstream에 변경 내역이 잘 **병합 되고 나면**, 다시 1번 과정을 수행한 후 작업 합니다.
->>>>>>> 1c386aa4d76f6d7a66e079472e34708c7bc0bbb2
