@@ -186,6 +186,7 @@
 
 @mixin button--lg {
   @include button-size(15px, $button-height-lg, 24px);
+  @include button-padding($spacing-md, $spacing-md)
 }
 
 @mixin button--sm {
@@ -246,6 +247,10 @@
 
 .button--lg {
   @include button--lg;
+
+  svg + .button__text {
+    margin-left: $spacing-xs * .75;
+  }
 }
 
 .button--sm {
@@ -266,7 +271,7 @@
 }
 
 .button--icon.button-theme--link.button--lg {
-  @include button--icon(4px, 24px);
+  @include button--icon(4px, 28px);
 }
 
 .button--icon.button-theme--link.button--sm {
