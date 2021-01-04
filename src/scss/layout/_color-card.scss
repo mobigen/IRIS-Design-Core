@@ -88,10 +88,6 @@
     @include color-vars($icon-02);
   }
 
-  .icon-03 {
-    @include color-vars($icon-03);
-  }
-
   .inverse-01 {
     @include color-vars($inverse-01);
   }
@@ -119,6 +115,10 @@
   .support-04 {
     @include color-vars($support-04);
   }
+
+  .overlay-01 {
+    @include color-vars($overlay-01);
+  }
 }
 
 .color-card__example {
@@ -140,6 +140,6 @@
 }
 
 .color-card__value {
-  @include font-size("14");
+  @include font-size("12");
   // @include line-height("body");
 }
