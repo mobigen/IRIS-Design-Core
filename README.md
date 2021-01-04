@@ -26,7 +26,7 @@ IRIS-Design-Core를 포함하는 상위 저장소
 ### 작업 순서
 1. 작업 할 저장소(IRIS-Design-Product, IDP) 에서 서브 트리 (IRIS-Design-Core, IDC) 변경사항 받아오기
    ```bash
-   git subtree pull -P src/core-style design-core-upstream main
+   git subtree pull -P src/core-style design-core-upstream dev
 
    # 위 명령어를 수행하는 npm 스크립트
    npm run pull
