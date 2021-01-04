@@ -1,15 +1,26 @@
 @font-face {
-  font-family: "notokr";
+  font-family: "NotoSansKR";
   font-style: normal;
   font-weight: 300;
-  src: url("#{$font-path}/notokr-light.eot");
-  src: url("#{$font-path}/notokr-light.eot?#iefix") format("embedded-opentype"),
+  src: url("#{$font-path}/OpenSans-Light.eot");
+  src: url("#{$font-path}/OpenSans-Light.eot?#iefix") format("embedded-opentype"),
     url("#{$font-path}/notokr-light.woff2") format("woff2"),
     url("#{$font-path}/notokr-light.woff") format("woff");
 }
 
 @font-face {
-  font-family: "notokr";
+  font-family: "NotoSansKR";
+  font-style: normal;
+  font-weight: 300;
+  unicode-range: U+0020-007E;
+  src: url("#{$font-path}/OpenSans-Light.eot");
+  src: url("#{$font-path}/OpenSans-Light.eot?#iefix") format("embedded-opentype"),
+    url("#{$font-path}/OpenSans-Light.woff2") format("woff2"),
+    url("#{$font-path}/OpenSans-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "NotoSansKR";
   font-style: normal;
   font-weight: 400;
   src: url("#{$font-path}/notokr-regular.eot");
@@ -20,7 +31,19 @@
 }
 
 @font-face {
-  font-family: "notokr";
+  font-family: "NotoSansKR";
+  font-style: normal;
+  font-weight: 400;
+  unicode-range: U+0020-007E;
+  src: url("#{$font-path}/OpenSans-Regular.eot");
+  src: url("#{$font-path}/OpenSans-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("#{$font-path}/OpenSans-Regular.woff2") format("woff2"),
+    url("#{$font-path}/OpenSans-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "NotoSansKR";
   font-style: normal;
   font-weight: 500;
   src: url("#{$font-path}/notokr-medium.eot");
@@ -30,12 +53,34 @@
 }
 
 @font-face {
-  font-family: "notokr";
+  font-family: "NotoSansKR";
+  font-style: normal;
+  font-weight: 500;
+  unicode-range: U+0020-007E;
+  src: url("#{$font-path}/OpenSans-SemiBold.eot");
+  src: url("#{$font-path}/OpenSans-SemiBold.eot?#iefix") format("embedded-opentype"),
+    url("#{$font-path}/OpenSans-SemiBold.woff2") format("woff2"),
+    url("#{$font-path}/OpenSans-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "NotoSansKR";
   font-style: normal;
   font-weight: 700;
   src: url("#{$font-path}/notokr-bold.eot");
   src: url("#{$font-path}/notokr-bold.eot?#iefix") format("embedded-opentype"),
     url("#{$font-path}/notokr-bold.woff2") format("woff2"),
     url("#{$font-path}/notokr-bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "NotoSansKR";
+  font-style: normal;
+  font-weight: 700;
+  unicode-range: U+0020-007E;
+  src: url("#{$font-path}/OpenSans-Bold.eot");
+  src: url("#{$font-path}/OpenSans-Bold.eot?#iefix") format("embedded-opentype"),
+    url("#{$font-path}/OpenSans-Bold.woff2") format("woff2"),
+    url("#{$font-path}/OpenSans-Bold.woff") format("woff");
 }
 
