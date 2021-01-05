@@ -238,7 +238,7 @@
   flex-direction: column;
 }
 
-.component-examle__item-group button + button,
+.component-examle__item-group .button + .button,
 .component-examle__item-group .checkbox + .checkbox {
   margin-left: $spacing-sm;
 }
