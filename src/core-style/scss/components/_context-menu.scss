@@ -1,0 +1,148 @@
+@mixin list-button-base {
+  @include font-family("sans");
+  @include font-smoothing;
+  @include letter-spacing;
+  @include font-weight("regular");
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  flex-shrink: 0;
+  font-size: 100%;
+  text-align: center;
+  text-decoration: none;
+  transition-duration: $duration-fast-02;
+  transition-timing-function: ease-in-out;
+  white-space: nowrap;
+  user-select: none;
+  background-color: $ui-02;
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  // Reset intrisic padding in Firefox
+  &::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+
+  &:hover:not(:disabled) {
+    background-color: $ui-01;
+  }
+
+  &:active,
+  &:focus {
+    background-color: $ui-01;
+
+    .context-menu__text {
+      color: $primary;
+    }
+
+    .context-menu__icon {
+      fill: $primary;
+    }
+  }
+
+  &:disabled,
+  &:disabled:hover,
+  &:disabled:focus {
+    cursor: not-allowed;
+    background-color: $ui-02;
+
+    .context-menu__text {
+      color: $text-05;
+    }
+
+    .context-menu__icon {
+      fill: $text-05;
+    }
+  }
+
+}
+
+@mixin list-button-width($min-width) {
+  min-width: $min-width;
+}
+
+@mixin list-button-size($height, $icon-size, $margin-right) {
+  height: $height;
+
+  .context-menu__icon {
+    width: $icon-size;
+    height: $icon-size;
+    margin-right: $margin-right;
+  }
+}
+
+@mixin list-button-padding($padding-up-and-down, $padding-both-sides) {
+  padding: $padding-up-and-down $padding-both-sides;
+}
+
+// -------------------------
+// theme-size
+// -------------------------
+@mixin list-button--lg {
+  @include list-button-size($button-height-lg, 20px, $spacing-xs);
+  @include list-button-padding($spacing-2xs, $spacing-sm);
+}
+
+@mixin list-button--sm {
+  @include list-button-size($button-height-sm, 16px, $spacing-2xs);
+  @include list-button-padding($spacing-3xs, $spacing-xs);
+}
+
+// -------------------------
+// components
+// -------------------------
+.context-menu__list {
+  @include list-button-width(130px);
+  overflow: hidden;
+  background-color: $ui-02;
+  box-shadow: 0px 0px 8px rgba(206, 211, 217, 0.7);
+  border-radius: 2px;
+}
+
+.context-menu__button {
+  @include list-button-base;
+  @include list-button-size($button-height-md, 18px, $spacing-2xs);
+  @include list-button-padding($spacing-2xs, $spacing-sm);
+  width: 100%;
+}
+
+.context-menu__text {
+  @include font-size("14");
+  display: block;
+  color: $text-02;
+}
+
+.context-menu__button .context-menu__text + .context-menu__icon{
+  margin-left: auto;
+  margin-right: 0 !important;
+}
+
+.context-menu--lg {
+  .context-menu__list {
+    @include list-button-width(140px);
+  }
+
+  .context-menu__button {
+    @include list-button--lg;
+  }
+}
+
+.context-menu--sm {
+  .context-menu__list {
+    @include list-button-width(96px);
+  }
+
+  .context-menu__button {
+    @include list-button--sm;
+  }
+
+  .context-menu__text {
+    @include font-size("12");
+  }
+}
