@@ -39,6 +39,9 @@ $z-indexes: (
   dropdown: 9100,
   header: 6000,
   footer: 5000,
+  layer: 510,
+  tooltip: 500,
+  float: 1,
   hidden: - 1,
   overflowHidden: - 1,
   floating: 10000,
@@ -49,7 +52,7 @@ $z-indexes: (
 //   }
 @function z($layer) {
   @if not map-has-key($z-indexes, $layer) {
-    @warn 'No layer found for `#{$layer}` in $z-indexes map. Property omitted.';
+    @warn '$z-indexes 맵에서 `#{$layer}` 에 해당하는 layer를 찾지 못했습니다.';
   }
 
   @return map-get($z-indexes, $layer);
