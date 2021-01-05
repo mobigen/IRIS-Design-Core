@@ -220,7 +220,7 @@
 }
 
 .component-example__row + .component-example__row {
-  margin-top: $spacing-sm;
+  margin-top: $spacing-md;
 }
 
 .component-example__size-label {
@@ -234,7 +234,21 @@
   display: flex;
 }
 
+.component-examle__item-group--row {
+  flex-direction: column;
+}
+
 .component-examle__item-group button + button,
 .component-examle__item-group .checkbox + .checkbox {
   margin-left: $spacing-sm;
+}
+
+.component-examle__item-group .text-input:not(:first-child),
+.component-examle__item-group .text-input-group:not(:first-child),
+.component-examle__item-group .text-input-group:not(:first-child) {
+  margin-top: $spacing-xs;
+}
+
+.component-examle__item-group .text-input-group .text-input {
+  margin: 0;
 }
