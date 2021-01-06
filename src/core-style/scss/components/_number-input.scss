@@ -78,7 +78,7 @@
 }
 
 .number-input__control-btn {
-  @include button;
+  @include button-normal;
   @include button--icon(2px, 14px);
   height: 50%;
   background-color: $ui-02;
