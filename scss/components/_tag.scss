@@ -1,0 +1,114 @@
+.tag {
+  @include button-normal;
+  @include font-size("12");
+  height: rem(24px);
+  padding: 0 $spacing-2xs;
+  border-radius: $field-border-radius;
+  background-color: $hover-row;
+  color: $text-03;
+
+  &:hover:not(:disabled) {
+    background-color: darken($hover-row, 5%);
+    color: $primary;
+  }
+
+  &:disabled {
+    opacity: 0.25;
+    cursor: not-allowed;
+
+    .tag__remove-button:hover {
+      fill: $icon-01;
+    }
+  }
+}
+
+.tag__label {
+  @include line-height("heading");
+  @include font-weight("medium");
+}
+
+.tag__remove-button {
+  width: 14px;
+  height: 14px;
+  margin-left: $spacing-2xs;
+  fill: $icon-01;
+
+  &:hover {
+    background-color: rgba($ui-02, 0.25);
+    fill: $primary;
+  }
+}
+
+.tag--selected {
+  background-color: $primary;
+  color: $text-04;
+
+  &:hover:not(:disabled) {
+    background-color: $hover-primary;
+    color: $text-04;
+  }
+
+  &:disabled {
+    .tag__remove-button:hover {
+      fill: $text-04;
+      background-color: transparent;
+    }
+  }
+}
+
+.tag--selected .tag__remove-button {
+  fill: $text-04;
+}
+
+.tag--large {
+  @include font-size("14");
+  height: rem(32px);
+  padding: 0 $spacing-xs;
+}
+
+.tag--small {
+  height: rem(18px);
+}
+
+// -------------------------
+// Studio 컴포넌트 스타일 overwrite
+// -------------------------
+.studio-component {
+  .tag {
+    &:hover:not(:disabled) {
+      color: $text-03;
+    }
+  }
+
+  .tag--selected {
+    background-color: $text-03;
+    color: $text-04;
+
+    &:hover:not(:disabled) {
+      background-color: lighten($text-03, 5%);
+      color: $text-04;
+    }
+
+    &:disabled {
+      .tag__remove-button:hover {
+        fill: $text-04;
+        background-color: transparent;
+      }
+    }
+  }
+
+  .tag__remove-button {
+    &:hover {
+      background-color: rgba($ui-02, .25);
+      fill: $text-03;
+    }
+  }
+
+  .tag--selected .tag__remove-button {
+    fill: $text-04;
+
+    &:hover {
+      fill: $text-04;
+    }
+  }
+}

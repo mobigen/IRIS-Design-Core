@@ -20,35 +20,10 @@
 // button-base
 // -------------------------
 @mixin button-base {
-  @include font-family("sans");
-  @include font-smoothing;
-  @include letter-spacing;
-  @include font-weight("medium");
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+  @include button-normal;
   height: $button-height-md;
-  font-size: 100%;
-  border: 1px solid transparent;
   border-radius: $button-border-radius;
   text-align: center;
-  text-decoration: none;
-  transition-duration: $duration-fast-02;
-  transition-timing-function: ease-in-out;
-  white-space: nowrap;
-  user-select: none;
-
-  &:focus {
-    outline: none;
-  }
-
-  // Reset intrisic padding in Firefox
-  &::-moz-focus-inner {
-    padding: 0;
-    border: 0;
-  }
 
   &:disabled,
   &:disabled:hover,
