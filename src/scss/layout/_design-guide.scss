@@ -30,12 +30,12 @@
 }
 
 .footer__version {
-  @include font-size("14");
+  @include font-size("12");
   color: $text-02;
 }
 
 .footer__copyright {
-  @include font-size("14");
+  @include font-size("12");
   color: $text-02
 }
 // content - article area
@@ -220,7 +220,7 @@
 }
 
 .component-example__row + .component-example__row {
-  margin-top: $spacing-sm;
+  margin-top: $spacing-md;
 }
 
 .component-example__size-label {
@@ -232,10 +232,25 @@
 
 .component-examle__item-group {
   display: flex;
+  align-items: center;
 }
 
-.component-examle__item-group button + button,
+.component-examle__item-group--row {
+  flex-direction: column;
+}
+
+.component-examle__item-group .button + .button,
 .component-examle__item-group .checkbox + .checkbox,
 .component-examle__item-group .context-menu + .context-menu {
   margin-left: $spacing-sm;
+}
+
+.component-examle__item-group .text-input:not(:first-child),
+.component-examle__item-group .text-input-group:not(:first-child),
+.component-examle__item-group .text-input-group:not(:first-child) {
+  margin-top: $spacing-xs;
+}
+
+.component-examle__item-group .text-input-group .text-input {
+  margin: 0;
 }

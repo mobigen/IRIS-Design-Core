@@ -4,7 +4,7 @@ const path = require("path"),
   SvgSpriteLoaderPlugin = require("svg-sprite-loader/plugin");
 
 module.exports = {
-  
+
   watchOptions: {
     ignored: ["./node_modules/**", "./clean-dist.js"]
   },

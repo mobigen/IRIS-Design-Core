@@ -44,7 +44,7 @@
           <a class="sub-nav__item-link" href="#page--modal">Modal</a>
         </li>
         <li class="sub-nav__item">
-          <a class="sub-nav__item-link" href="#page--number-iunput">Number Input</a>
+          <a class="sub-nav__item-link" href="#page--number-input">Number Input</a>
         </li>
         <li class="sub-nav__item">
           <a class="sub-nav__item-link" href="#page--radio">Radio</a>
@@ -1592,6 +1592,230 @@
         <div class="page" id="page--number-input">
           
 <!-- number-input -->
+<div class="page-header">
+  <h2 class="page-header__lable">component</h2>
+  <h3 class="page-header__title">Number Input</h3>
+</div>
+<div class="page-content">
+  <p class="page__desc">숫자 입력 필드</p>
+  <div class="page__usage md">
+    <ul>
+      <li>숫자 입력 필드는 <em class="text-emphasis">1개</em> 유형이 있으며 <em class="text-emphasis">3개</em> 크기로 구분합니다.</li>
+    </ul>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Default Number Input</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: lg</p>
+            <div class="component-examle__item-group component-examle__item-group--row">
+              <!-- default -->
+              <input type="number" class="text-input text-input--lg" max="100" min="0" step="1" value="3">
+              <!-- disabled -->
+              <input type="number" class="text-input text-input--lg" max="100" min="0" step="1" value="3" disabled>
+            </div>
+          </div>
+
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: md</p>
+            <div class="component-examle__item-group component-examle__item-group--row">
+              <!-- default -->
+              <input type="number" class="text-input" max="100" min="0" step="1" value="3">
+              <!-- disabled -->
+              <input type="number" class="text-input" max="100" min="0" step="1" value="3" disabled>
+            </div>
+          </div>
+
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: sm</p>
+            <div class="component-examle__item-group component-examle__item-group--row">
+              <!-- default -->
+              <input type="number" class="text-input text-input--sm" max="100" min="0" step="1" value="3">
+              <!-- disabled -->
+              <input type="number" class="text-input text-input--sm" max="100" min="0" step="1" value="3" disabled>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Styled Number Input</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: lg</p>
+            <div class="component-examle__item-group component-examle__item-group--row">
+              <!-- default -->
+              <div class="number-input number-input--lg">
+                <input type="number" class="number-input__input" max="100" min="0" step="1" value="3"/>
+                <div class="number-input__controls">
+                  <button class="number-input__control-btn up-icon" title="increment number">
+                    <svg class="icon-comm">
+                      <use xlink:href="#chevron-up"></use>
+                    </svg>
+                  </button>
+                  <button class="number-input__control-btn down-icon" title="increment number">
+                    <svg class="icon-comm">
+                      <use xlink:href="#chevron-down"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <!-- TODO: input 입력 중일 땐 number-input--focused 클래스가 추가되어야함 -->
+              <!-- focused -->
+              <div class="number-input number-input--lg number-input--focused" style="margin-top: 8px;">
+                <input type="number" class="number-input__input" max="100" min="0" step="1" value="3"/>
+                <div class="number-input__controls">
+                  <button class="number-input__control-btn up-icon" title="increment number">
+                    <svg class="icon-comm">
+                      <use xlink:href="#chevron-up"></use>
+                    </svg>
+                  </button>
+                  <button class="number-input__control-btn down-icon" title="increment number">
+                    <svg class="icon-comm">
+                      <use xlink:href="#chevron-down"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <!-- disabled -->
+              <div class="number-input number-input--lg number-input--disabled" style="margin-top: 8px;">
+                <input type="number" class="number-input__input" max="100" min="0" step="1" value="3" disabled/>
+                <div class="number-input__controls">
+                  <button class="number-input__control-btn up-icon" title="increment number">
+                    <svg class="icon-comm">
+                      <use xlink:href="#chevron-up"></use>
+                    </svg>
+                  </button>
+                  <button class="number-input__control-btn down-icon" title="increment number">
+                    <svg class="icon-comm">
+                      <use xlink:href="#chevron-down"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: md</p>
+            <div class="component-examle__item-group component-examle__item-group--row">
+              <!-- default -->
+              <div class="number-input">
+                <input type="number" class="number-input__input" max="100" min="0" step="1" value="3"/>
+                <div class="number-input__controls">
+                  <button class="number-input__control-btn up-icon" title="increment number">
+                    <svg class="icon-comm">
+                      <use xlink:href="#chevron-up"></use>
+                    </svg>
+                  </button>
+                  <button class="number-input__control-btn down-icon" title="increment number">
+                    <svg class="icon-comm">
+                      <use xlink:href="#chevron-down"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <!-- focused -->
+              <div class="number-input number-input--focused" style="margin-top: 8px;">
+                <input type="number" class="number-input__input" max="100" min="0" step="1" value="3"/>
+                <div class="number-input__controls">
+                  <button class="number-input__control-btn up-icon" title="increment number">
+                    <svg class="icon-comm">
+                      <use xlink:href="#chevron-up"></use>
+                    </svg>
+                  </button>
+                  <button class="number-input__control-btn down-icon" title="increment number">
+                    <svg class="icon-comm">
+                      <use xlink:href="#chevron-down"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <!-- disabled -->
+              <div class="number-input number-input--disabled" style="margin-top: 8px;">
+                <input type="number" class="number-input__input" max="100" min="0" step="1" value="3" disabled/>
+                <div class="number-input__controls">
+                  <button class="number-input__control-btn up-icon" title="increment number">
+                    <svg class="icon-comm">
+                      <use xlink:href="#chevron-up"></use>
+                    </svg>
+                  </button>
+                  <button class="number-input__control-btn down-icon" title="increment number">
+                    <svg class="icon-comm">
+                      <use xlink:href="#chevron-down"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: sm</p>
+            <div class="component-examle__item-group component-examle__item-group--row">
+              <!-- default -->
+              <div class="number-input number-input--sm">
+                <input type="number" class="number-input__input" max="100" min="0" step="1" value="3"/>
+                <div class="number-input__controls">
+                  <button class="number-input__control-btn up-icon" title="increment number">
+                    <svg class="icon-comm">
+                      <use xlink:href="#chevron-up"></use>
+                    </svg>
+                  </button>
+                  <button class="number-input__control-btn down-icon" title="increment number">
+                    <svg class="icon-comm">
+                      <use xlink:href="#chevron-down"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <!-- focused -->
+              <div class="number-input number-input--sm number-input--focused" style="margin-top: 8px;">
+                <input type="number" class="number-input__input" max="100" min="0" step="1" value="3"/>
+                <div class="number-input__controls">
+                  <button class="number-input__control-btn up-icon" title="increment number">
+                    <svg class="icon-comm">
+                      <use xlink:href="#chevron-up"></use>
+                    </svg>
+                  </button>
+                  <button class="number-input__control-btn down-icon" title="increment number">
+                    <svg class="icon-comm">
+                      <use xlink:href="#chevron-down"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <!-- disabled -->
+              <div class="number-input number-input--sm number-input--disabled" style="margin-top: 8px;">
+                <input type="number" class="number-input__input" max="100" min="0" step="1" value="3" disabled/>
+                <div class="number-input__controls">
+                  <button class="number-input__control-btn up-icon" title="increment number">
+                    <svg class="icon-comm">
+                      <use xlink:href="#chevron-up"></use>
+                    </svg>
+                  </button>
+                  <button class="number-input__control-btn down-icon" title="increment number">
+                    <svg class="icon-comm">
+                      <use xlink:href="#chevron-down"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
         </div>
         <div class="page" id="page--radio">
           
@@ -1690,14 +1914,827 @@
         <div class="page" id="page--tag">
           
 <!-- tag -->
+<div class="page-header">
+  <h2 class="page-header__lable">component</h2>
+  <h3 class="page-header__title">Tag</h3>
+</div>
+<div class="page-content">
+  <p class="page__desc">태그는 각 항목을 설명하는 키워드로 사용하여<br/>항목에 레이블 지정, 분류(categorizing) 또는 정리할 수 있습니다.</p>
+  <div class="page__usage md">
+    <ul>
+      <li>태그는 <em class="text-emphasis">2개</em> 유형, <em class="text-emphasis">2개</em> 스타일이 있으며 <em class="text-emphasis">3개</em> 크기로 구분합니다.</li>
+      <li>유형: Basic Tag 유형과 제거 버튼이 있는 Removable Tag 2개 유형</li>
+      <li>테마: 전체 서비스에 사용하는 Default 테마와 Studio에만 사용하는 2개 테마</li>
+      <li>태그를 한번 클릭하여 토글할 수 있습니다. `tag--selected` 클래스 추가/제거로 제어합니다.</li>
+      <li>Studio 테마는 엘리먼트 상위에 `studio-component` 클래스 여부에 따라 적용됩니다.</li>
+    </ul>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Default Tag</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: lg</p>
+            <div class="component-examle__item-group">
+              <!-- default -->
+              <button class="tag tag--large">
+                <span class="tag__label">TAG1</span>
+              </button>
+              <!-- selected -->
+              <button class="tag tag--large tag--selected" style="margin-left: 16px;">
+                <span class="tag__label">TAG1</span>
+              </button>
+              <!-- disabled -->
+              <button class="tag tag--large" style="margin-left: 16px;"disabled>
+                <span class="tag__label">TAG1</span>
+              </button>
+              <!-- selected + disabled -->
+              <button class="tag tag--large tag--selected" style="margin-left: 16px;" disabled>
+                <span class="tag__label">TAG1</span>
+              </button>
+            </div>
+          </div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: md</p>
+            <div class="component-examle__item-group">
+              <!-- default -->
+              <button class="tag">
+                <span class="tag__label">TAG1</span>
+              </button>
+              <!-- selected -->
+              <button class="tag tag--selected" style="margin-left: 16px;">
+                <span class="tag__label">TAG1</span>
+              </button>
+              <!-- disabled -->
+              <button class="tag" style="margin-left: 16px;"disabled>
+                <span class="tag__label">TAG1</span>
+              </button>
+              <!-- selected + disabled -->
+              <button class="tag tag--selected" style="margin-left: 16px;" disabled>
+                <span class="tag__label">TAG1</span>
+              </button>
+            </div>
+          </div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: sm</p>
+            <div class="component-examle__item-group">
+              <!-- default -->
+              <button class="tag tag--small">
+                <span class="tag__label">TAG1</span>
+              </button>
+              <!-- selected -->
+              <button class="tag tag--small tag--selected" style="margin-left: 16px;">
+                <span class="tag__label">TAG1</span>
+              </button>
+              <!-- disabled -->
+              <button class="tag" style="margin-left: 16px;"disabled>
+                <span class="tag__label">TAG1</span>
+              </button>
+              <!-- selected + disabled -->
+              <button class="tag tag--small tag--selected" style="margin-left: 16px;" disabled>
+                <span class="tag__label">TAG1</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Removable Tag</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: lg</p>
+            <div class="component-examle__item-group">
+              <!-- default -->
+              <button class="tag tag--large">
+                <span class="tag__label">TAG1</span>
+                <svg class="tag__remove-button">
+                  <use xlink:href="#close"></use>
+                </svg>
+              </button>
+              <!-- selected -->
+              <button class="tag tag--large tag--selected" style="margin-left: 16px;">
+                <span class="tag__label">TAG1</span>
+                <svg class="tag__remove-button">
+                  <use xlink:href="#close"></use>
+                </svg>
+              </button>
+              <!-- disabled -->
+              <button class="tag tag--large" style="margin-left: 16px;"disabled>
+                <span class="tag__label">TAG1</span>
+                <svg class="tag__remove-button">
+                  <use xlink:href="#close"></use>
+                </svg>
+              </button>
+              <!-- selected + disabled -->
+              <button class="tag tag--large tag--selected" style="margin-left: 16px;" disabled>
+                <span class="tag__label">TAG1</span>
+                <svg class="tag__remove-button">
+                  <use xlink:href="#close"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: md</p>
+            <div class="component-examle__item-group">
+              <!-- default -->
+              <button class="tag">
+                <span class="tag__label">TAG1</span>
+                <svg class="tag__remove-button">
+                  <use xlink:href="#close"></use>
+                </svg>
+              </button>
+              <!-- selected -->
+              <button class="tag tag--selected" style="margin-left: 16px;">
+                <span class="tag__label">TAG1</span>
+                <svg class="tag__remove-button">
+                  <use xlink:href="#close"></use>
+                </svg>
+              </button>
+              <!-- disabled -->
+              <button class="tag" style="margin-left: 16px;"disabled>
+                <span class="tag__label">TAG1</span>
+                <svg class="tag__remove-button">
+                  <use xlink:href="#close"></use>
+                </svg>
+              </button>
+              <!-- selected + disabled -->
+              <button class="tag tag--selected" style="margin-left: 16px;" disabled>
+                <span class="tag__label">TAG1</span>
+                <svg class="tag__remove-button">
+                  <use xlink:href="#close"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: sm</p>
+            <div class="component-examle__item-group">
+              <!-- default -->
+              <button class="tag tag--small">
+                <span class="tag__label">TAG1</span>
+                <svg class="tag__remove-button">
+                  <use xlink:href="#close"></use>
+                </svg>
+              </button>
+              <!-- selected -->
+              <button class="tag tag--small tag--selected" style="margin-left: 16px;">
+                <span class="tag__label">TAG1</span>
+                <svg class="tag__remove-button">
+                  <use xlink:href="#close"></use>
+                </svg>
+              </button>
+              <!-- disabled -->
+              <button class="tag" style="margin-left: 16px;"disabled>
+                <span class="tag__label">TAG1</span>
+                <svg class="tag__remove-button">
+                  <use xlink:href="#close"></use>
+                </svg>
+              </button>
+              <!-- selected + disabled -->
+              <button class="tag tag--small tag--selected" style="margin-left: 16px;" disabled>
+                <span class="tag__label">TAG1</span>
+                <svg class="tag__remove-button">
+                  <use xlink:href="#close"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Studio Default Tag</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div class="studio-component">
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: lg</p>
+            <div class="component-examle__item-group">
+              <!-- default -->
+              <button class="tag tag--large">
+                <span class="tag__label">TAG1</span>
+              </button>
+              <!-- selected -->
+              <button class="tag tag--large tag--selected" style="margin-left: 16px;">
+                <span class="tag__label">TAG1</span>
+              </button>
+              <!-- disabled -->
+              <button class="tag tag--large" style="margin-left: 16px;"disabled>
+                <span class="tag__label">TAG1</span>
+              </button>
+              <!-- selected + disabled -->
+              <button class="tag tag--large tag--selected" style="margin-left: 16px;" disabled>
+                <span class="tag__label">TAG1</span>
+              </button>
+            </div>
+          </div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: md</p>
+            <div class="component-examle__item-group">
+              <!-- default -->
+              <button class="tag">
+                <span class="tag__label">TAG1</span>
+              </button>
+              <!-- selected -->
+              <button class="tag tag--selected" style="margin-left: 16px;">
+                <span class="tag__label">TAG1</span>
+              </button>
+              <!-- disabled -->
+              <button class="tag" style="margin-left: 16px;"disabled>
+                <span class="tag__label">TAG1</span>
+              </button>
+              <!-- selected + disabled -->
+              <button class="tag tag--selected" style="margin-left: 16px;" disabled>
+                <span class="tag__label">TAG1</span>
+              </button>
+            </div>
+          </div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: sm</p>
+            <div class="component-examle__item-group">
+              <!-- default -->
+              <button class="tag tag--small">
+                <span class="tag__label">TAG1</span>
+              </button>
+              <!-- selected -->
+              <button class="tag tag--small tag--selected" style="margin-left: 16px;">
+                <span class="tag__label">TAG1</span>
+              </button>
+              <!-- disabled -->
+              <button class="tag" style="margin-left: 16px;"disabled>
+                <span class="tag__label">TAG1</span>
+              </button>
+              <!-- selected + disabled -->
+              <button class="tag tag--small tag--selected" style="margin-left: 16px;" disabled>
+                <span class="tag__label">TAG1</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Studio Removable Tag</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div class="studio-component">
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: lg</p>
+            <div class="component-examle__item-group">
+              <!-- default -->
+              <button class="tag tag--large">
+                <span class="tag__label">TAG1</span>
+                <svg class="tag__remove-button">
+                  <use xlink:href="#close"></use>
+                </svg>
+              </button>
+              <!-- selected -->
+              <button class="tag tag--large tag--selected" style="margin-left: 16px;">
+                <span class="tag__label">TAG1</span>
+                <svg class="tag__remove-button">
+                  <use xlink:href="#close"></use>
+                </svg>
+              </button>
+              <!-- disabled -->
+              <button class="tag tag--large" style="margin-left: 16px;"disabled>
+                <span class="tag__label">TAG1</span>
+                <svg class="tag__remove-button">
+                  <use xlink:href="#close"></use>
+                </svg>
+              </button>
+              <!-- selected + disabled -->
+              <button class="tag tag--large tag--selected" style="margin-left: 16px;" disabled>
+                <span class="tag__label">TAG1</span>
+                <svg class="tag__remove-button">
+                  <use xlink:href="#close"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: md</p>
+            <div class="component-examle__item-group">
+              <!-- default -->
+              <button class="tag">
+                <span class="tag__label">TAG1</span>
+                <svg class="tag__remove-button">
+                  <use xlink:href="#close"></use>
+                </svg>
+              </button>
+              <!-- selected -->
+              <button class="tag tag--selected" style="margin-left: 16px;">
+                <span class="tag__label">TAG1</span>
+                <svg class="tag__remove-button">
+                  <use xlink:href="#close"></use>
+                </svg>
+              </button>
+              <!-- disabled -->
+              <button class="tag" style="margin-left: 16px;"disabled>
+                <span class="tag__label">TAG1</span>
+                <svg class="tag__remove-button">
+                  <use xlink:href="#close"></use>
+                </svg>
+              </button>
+              <!-- selected + disabled -->
+              <button class="tag tag--selected" style="margin-left: 16px;" disabled>
+                <span class="tag__label">TAG1</span>
+                <svg class="tag__remove-button">
+                  <use xlink:href="#close"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: sm</p>
+            <div class="component-examle__item-group">
+              <!-- default -->
+              <button class="tag tag--small">
+                <span class="tag__label">TAG1</span>
+                <svg class="tag__remove-button">
+                  <use xlink:href="#close"></use>
+                </svg>
+              </button>
+              <!-- selected -->
+              <button class="tag tag--small tag--selected" style="margin-left: 16px;">
+                <span class="tag__label">TAG1</span>
+                <svg class="tag__remove-button">
+                  <use xlink:href="#close"></use>
+                </svg>
+              </button>
+              <!-- disabled -->
+              <button class="tag" style="margin-left: 16px;"disabled>
+                <span class="tag__label">TAG1</span>
+                <svg class="tag__remove-button">
+                  <use xlink:href="#close"></use>
+                </svg>
+              </button>
+              <!-- selected + disabled -->
+              <button class="tag tag--small tag--selected" style="margin-left: 16px;" disabled>
+                <span class="tag__label">TAG1</span>
+                <svg class="tag__remove-button">
+                  <use xlink:href="#close"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
         </div>
         <div class="page" id="page--text-input">
           
 <!-- text-input -->
+<div class="page-header">
+  <h2 class="page-header__lable">component</h2>
+  <h3 class="page-header__title">Text Input</h3>
+</div>
+<div class="page-content">
+  <p class="page__desc">텍스트 입력 필드</p>
+  <div class="page__usage md">
+    <ul>
+      <li>텍스트 입력 필드는 <em class="text-emphasis">3개</em> 유형이 있으며 <em class="text-emphasis">3개</em> 크기로 구분합니다.</li>
+    </ul>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Default Input</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: lg</p>
+            <div class="component-examle__item-group component-examle__item-group--row">
+              <!-- default -->
+              <input type="text" class="text-input filled-input--lg" placeholder="placeholder text" />
+              <!-- filled -->
+              <input type="text" class="text-input filled-input--lg" placeholder="placeholder text" value="input filled" />
+              <!-- disabled -->
+              <input type="text" class="text-input filled-input--lg" placeholder="placeholder text" disabled />
+              <!-- filled + disabled -->
+              <input type="text" class="text-input filled-input--lg" placeholder="placeholder text" value="input filled" disabled />
+            </div>
+          </div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: md</p>
+            <div class="component-examle__item-group component-examle__item-group--row">
+              <!-- default -->
+              <input type="text" class="text-input" placeholder="placeholder text" />
+              <!-- filled -->
+              <input type="text" class="text-input" placeholder="placeholder text" value="input filled" />
+              <!-- disabled -->
+              <input type="text" class="text-input" placeholder="placeholder text" disabled />
+              <!-- filled + disabled -->
+              <input type="text" class="text-input" placeholder="placeholder text" value="input filled" disabled />
+            </div>
+          </div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: sm</p>
+            <div class="component-examle__item-group component-examle__item-group--row">
+              <!-- default -->
+              <input type="text" class="text-input filled-input--sm" placeholder="placeholder text" />
+              <!-- filled -->
+              <input type="text" class="text-input filled-input--sm" placeholder="placeholder text" value="input filled" />
+              <!-- disabled -->
+              <input type="text" class="text-input filled-input--sm" placeholder="placeholder text" disabled />
+              <!-- filled + disabled -->
+              <input type="text" class="text-input filled-input--sm" placeholder="placeholder text" value="input filled" disabled />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Input + icon</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: lg</p>
+            <div class="component-examle__item-group component-examle__item-group--row">
+              <!-- default -->
+              <div class="text-input-group text-input-group--lg">
+                <span class="text-input-group__icon">
+                  <svg class="icon-comm">
+                    <use xlink:href="#search"></use>
+                  </svg>
+                </span>
+                <input type="text" class="text-input" placeholder="placeholder text" />
+              </div>
+              <!-- filled -->
+              <div class="text-input-group text-input-group--lg">
+                <span class="text-input-group__icon">
+                  <svg class="icon-comm">
+                    <use xlink:href="#search"></use>
+                  </svg>
+                </span>
+                <input type="text" class="text-input" placeholder="placeholder text" value="input filled" />
+              </div>
+              <!-- disabled -->
+              <div class="text-input-group text-input-group--lg text-input-group--disabled">
+                <span class="text-input-group__icon">
+                  <svg class="icon-comm">
+                    <use xlink:href="#search"></use>
+                  </svg>
+                </span>
+                <input type="text" class="text-input" placeholder="placeholder text" disabled />
+              </div>
+              <!-- filled + disabled -->
+              <div class="text-input-group text-input-group--lg text-input-group--disabled">
+                <span class="text-input-group__icon">
+                  <svg class="icon-comm">
+                    <use xlink:href="#search"></use>
+                  </svg>
+                </span>
+                <input type="text" class="text-input" placeholder="placeholder text" value="input filled" disabled />
+              </div>
+            </div>
+          </div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: md</p>
+            <div class="component-examle__item-group component-examle__item-group--row">
+              <!-- default -->
+              <div class="text-input-group">
+                <span class="text-input-group__icon">
+                  <svg class="icon-comm">
+                    <use xlink:href="#search"></use>
+                  </svg>
+                </span>
+                <input type="text" class="text-input" placeholder="placeholder text" />
+              </div>
+              <!-- filled -->
+              <div class="text-input-group">
+                <span class="text-input-group__icon">
+                  <svg class="icon-comm">
+                    <use xlink:href="#search"></use>
+                  </svg>
+                </span>
+                <input type="text" class="text-input" placeholder="placeholder text" value="input filled" />
+              </div>
+              <!-- disabled -->
+              <div class="text-input-group">
+                <span class="text-input-group__icon">
+                  <svg class="icon-comm">
+                    <use xlink:href="#search"></use>
+                  </svg>
+                </span>
+                <input type="text" class="text-input" placeholder="placeholder text" disabled />
+              </div>
+              <!-- filled + disabled -->
+              <div class="text-input-group">
+                <span class="text-input-group__icon">
+                  <svg class="icon-comm">
+                    <use xlink:href="#search"></use>
+                  </svg>
+                </span>
+                <input type="text" class="text-input" placeholder="placeholder text" value="input filled" disabled />
+              </div>
+            </div>
+          </div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: sm</p>
+            <div class="component-examle__item-group component-examle__item-group--row">
+              <!-- default -->
+              <div class="text-input-group text-input-group--sm">
+                <span class="text-input-group__icon">
+                  <svg class="icon-comm">
+                    <use xlink:href="#search"></use>
+                  </svg>
+                </span>
+                <input type="text" class="text-input" placeholder="placeholder text" />
+              </div>
+              <!-- filled -->
+              <div class="text-input-group text-input-group--sm">
+                <span class="text-input-group__icon">
+                  <svg class="icon-comm">
+                    <use xlink:href="#search"></use>
+                  </svg>
+                </span>
+                <input type="text" class="text-input" placeholder="placeholder text" value="input filled" />
+              </div>
+              <!-- disabled -->
+              <div class="text-input-group text-input-group--sm text-input-group--disabled">
+                <span class="text-input-group__icon">
+                  <svg class="icon-comm">
+                    <use xlink:href="#search"></use>
+                  </svg>
+                </span>
+                <input type="text" class="text-input" placeholder="placeholder text" disabled />
+              </div>
+              <!-- filled + disabled -->
+              <div class="text-input-group text-input-group--sm text-input-group--disabled">
+                <span class="text-input-group__icon">
+                  <svg class="icon-comm">
+                    <use xlink:href="#search"></use>
+                  </svg>
+                </span>
+                <input type="text" class="text-input" placeholder="placeholder text" value="input filled" disabled />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Input + icon + clear button</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: lg</p>
+            <div class="component-examle__item-group component-examle__item-group--row">
+              <!-- default -->
+              <div class="text-input-group text-input-group--lg">
+                <span class="text-input-group__icon">
+                  <svg class="icon-comm">
+                    <use xlink:href="#search"></use>
+                  </svg>
+                </span>
+                <input type="text" class="text-input" placeholder="placeholder text" />
+                <span class="text-input-group__clear-button">
+                  <svg class="icon-comm">
+                    <use xlink:href="#close"></use>
+                  </svg>
+                </span>
+              </div>
+              <!-- filled -->
+              <div class="text-input-group text-input-group--lg">
+                <span class="text-input-group__icon">
+                  <svg class="icon-comm">
+                    <use xlink:href="#search"></use>
+                  </svg>
+                </span>
+                <input type="text" class="text-input" placeholder="placeholder text" value="input filled" />
+                <span class="text-input-group__clear-button">
+                  <svg class="icon-comm">
+                    <use xlink:href="#close"></use>
+                  </svg>
+                </span>
+              </div>
+              <!-- disabled -->
+              <div class="text-input-group text-input-group--lg text-input-group--disabled">
+                <span class="text-input-group__icon">
+                  <svg class="icon-comm">
+                    <use xlink:href="#search"></use>
+                  </svg>
+                </span>
+                <input type="text" class="text-input" placeholder="placeholder text" disabled />
+                <span class="text-input-group__clear-button">
+                  <svg class="icon-comm">
+                    <use xlink:href="#close"></use>
+                  </svg>
+                </span>
+              </div>
+              <!-- filled + disabled -->
+              <div class="text-input-group text-input-group--lg text-input-group--disabled">
+                <span class="text-input-group__icon">
+                  <svg class="icon-comm">
+                    <use xlink:href="#search"></use>
+                  </svg>
+                </span>
+                <input type="text" class="text-input" placeholder="placeholder text" value="input filled" disabled />
+                <span class="text-input-group__clear-button">
+                  <svg class="icon-comm">
+                    <use xlink:href="#close"></use>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: md</p>
+            <div class="component-examle__item-group component-examle__item-group--row">
+              <!-- default -->
+              <div class="text-input-group">
+                <span class="text-input-group__icon">
+                  <svg class="icon-comm">
+                    <use xlink:href="#search"></use>
+                  </svg>
+                </span>
+                <input type="text" class="text-input" placeholder="placeholder text" />
+                <span class="text-input-group__clear-button">
+                  <svg class="icon-comm">
+                    <use xlink:href="#close"></use>
+                  </svg>
+                </span>
+              </div>
+              <!-- filled -->
+              <div class="text-input-group">
+                <span class="text-input-group__icon">
+                  <svg class="icon-comm">
+                    <use xlink:href="#search"></use>
+                  </svg>
+                </span>
+                <input type="text" class="text-input" placeholder="placeholder text" value="input filled" />
+                <span class="text-input-group__clear-button">
+                  <svg class="icon-comm">
+                    <use xlink:href="#close"></use>
+                  </svg>
+                </span>
+              </div>
+              <!-- disabled -->
+              <div class="text-input-group text-input-group--disabled">
+                <span class="text-input-group__icon">
+                  <svg class="icon-comm">
+                    <use xlink:href="#search"></use>
+                  </svg>
+                </span>
+                <input type="text" class="text-input" placeholder="placeholder text" disabled />
+                <span class="text-input-group__clear-button">
+                  <svg class="icon-comm">
+                    <use xlink:href="#close"></use>
+                  </svg>
+                </span>
+              </div>
+              <!-- filled + disabled -->
+              <div class="text-input-group text-input-group--disabled">
+                <span class="text-input-group__icon">
+                  <svg class="icon-comm">
+                    <use xlink:href="#search"></use>
+                  </svg>
+                </span>
+                <input type="text" class="text-input" placeholder="placeholder text" value="input filled" disabled />
+                <span class="text-input-group__clear-button">
+                  <svg class="icon-comm">
+                    <use xlink:href="#close"></use>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: sm</p>
+            <div class="component-examle__item-group component-examle__item-group--row">
+              <!-- default -->
+              <div class="text-input-group text-input-group--sm">
+                <span class="text-input-group__icon">
+                  <svg class="icon-comm">
+                    <use xlink:href="#search"></use>
+                  </svg>
+                </span>
+                <input type="text" class="text-input" placeholder="placeholder text" />
+                <span class="text-input-group__clear-button">
+                  <svg class="icon-comm">
+                    <use xlink:href="#close"></use>
+                  </svg>
+                </span>
+              </div>
+              <!-- filled -->
+              <div class="text-input-group text-input-group--sm">
+                <span class="text-input-group__icon">
+                  <svg class="icon-comm">
+                    <use xlink:href="#search"></use>
+                  </svg>
+                </span>
+                <input type="text" class="text-input" placeholder="placeholder text" value="input filled" />
+                <span class="text-input-group__clear-button">
+                  <svg class="icon-comm">
+                    <use xlink:href="#close"></use>
+                  </svg>
+                </span>
+              </div>
+              <!-- disabled -->
+              <div class="text-input-group text-input-group--sm text-input-group--disabled">
+                <span class="text-input-group__icon">
+                  <svg class="icon-comm">
+                    <use xlink:href="#search"></use>
+                  </svg>
+                </span>
+                <input type="text" class="text-input" placeholder="placeholder text" disabled />
+                <span class="text-input-group__clear-button">
+                  <svg class="icon-comm">
+                    <use xlink:href="#close"></use>
+                  </svg>
+                </span>
+              </div>
+              <!-- filled + disabled -->
+              <div class="text-input-group text-input-group--sm text-input-group--disabled">
+                <span class="text-input-group__icon">
+                  <svg class="icon-comm">
+                    <use xlink:href="#search"></use>
+                  </svg>
+                </span>
+                <input type="text" class="text-input" placeholder="placeholder text" value="input filled" disabled />
+                <span class="text-input-group__clear-button">
+                  <svg class="icon-comm">
+                    <use xlink:href="#close"></use>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
         </div>
         <div class="page" id="page--textarea">
           
 <!-- textarea -->
+<div class="page-header">
+  <h2 class="page-header__lable">component</h2>
+  <h3 class="page-header__title">Textarea</h3>
+</div>
+<div class="page-content">
+  <p class="page__desc">텍스트 입력 영역 필드</p>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Default</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <!-- default -->
+          <textarea type="text" class="text-area" placeholder="placeholder text"></textarea>
+          <!-- filled -->
+          <textarea type="text" class="text-area" placeholder="placeholder text" style="margin-top: 8px;">textarea filled</textarea>
+          <!-- disabled -->
+          <textarea type="text" class="text-area" placeholder="placeholder text" readonly style="margin-top: 8px;">textarea readonly</textarea>
+          <!-- disabled -->
+          <textarea type="text" class="text-area" placeholder="placeholder text" disabled style="margin-top: 8px;"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Not Resizeable</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <!-- default -->
+          <textarea type="text" class="text-area text-area--fixed" placeholder="placeholder text"></textarea>
+          <!-- filled -->
+          <textarea type="text" class="text-area text-area--fixed" placeholder="placeholder text" style="margin-top: 8px;">textarea filled</textarea>
+          <!-- disabled -->
+          <textarea type="text" class="text-area text-area--fixed" placeholder="placeholder text" readonly style="margin-top: 8px;">textarea readonly</textarea>
+          <!-- disabled -->
+          <textarea type="text" class="text-area text-area--fixed" placeholder="placeholder text" disabled style="margin-top: 8px;"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
         </div>
       </main>
       <footer class="footer">
