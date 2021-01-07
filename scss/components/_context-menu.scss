@@ -1,85 +1,7 @@
-// -------------------------
-// mixin
-// -------------------------
-@mixin list-button-base {
-  @include font-weight("regular");
-  flex-direction: row;
-  justify-content: start;
-  cursor: pointer;
-  background-color: $ui-02;
-  border: none;
-
-  &:hover:not(:disabled) {
-    background-color: $ui-01;
-
-    + .context-menu__side-button {
-      background-color: $ui-02;
-    }
-  }
-
-  &:active {
-    background-color: $ui-01;
-
-    + .context-menu__side-button {
-      background-color: $ui-02;
-    }
-
-    .context-menu__text {
-      color: $primary;
-    }
-
-    .context-menu__icon {
-      fill: $primary;
-    }
-  }
-
-  &:disabled,
-  &:disabled:hover,
-  &:disabled:focus {
-    cursor: not-allowed;
-    background-color: $ui-02;
-
-    + .context-menu__side-button,
-    .context-menu__side-button:hover:not(:disabled) {
-      cursor: not-allowed;
-      background-color: $ui-02 !important;
-
-      .context-menu__icon {
-        fill: $text-05;
-      }
-    }
-
-    .context-menu__text {
-      color: $text-05;
-    }
-
-    .context-menu__icon {
-      fill: $text-05;
-    }
-  }
+.context-menu {
+  @include list;
 }
 
-@mixin list-side-button-base {
-  padding: 0;
-  background-color: $ui-02;
-  border: none;
-
-  &:hover:not(:disabled) {
-    background-color: $hover-row;
-  }
-
-  &:active {
-    background-color: $hover-row;
-
-    .context-menu__icon {
-      fill: $primary;
-    }
-  }
-}
-
-// -------------------------
-// context components
-// -------------------------
 .context-menu__list {
   min-width: rem(130px);
   overflow: hidden;
@@ -88,38 +10,8 @@
   border-radius: $field-border-radius;
 }
 
-.context-menu__item {
-  position: relative;
-}
-
-.context-menu__button {
-  @include button-normal;
-  @include list-button-base;
-  @include stable-padding($spacing-2xs, $spacing-xs);
-  width: 100%;
-  height: $button-height-md;
-
-  .context-menu__icon {
-    margin-right: $spacing-2xs;
-  }
-}
-
-.context-menu__icon {
-  @include svg-icon-size(18px);
-  fill: $icon-01;
-}
-
 .context-menu__text {
-  @include font-size("14");
-  display: block;
   color: $text-02;
-}
-
-.context-menu__side-button {
-  @include button-normal;
-  @include list-side-button-base;
-  @include position-right-center($spacing-xs);
-  z-index: 1;
 }
 
 // -------------------------
