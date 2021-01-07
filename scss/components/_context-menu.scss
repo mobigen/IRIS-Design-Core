@@ -77,15 +77,6 @@
   }
 }
 
-@mixin list-button-padding($padding-up-and-down, $padding-both-sides) {
-  padding: $padding-up-and-down $padding-both-sides;
-}
-
-@mixin list-button-icon($icon-size) {
-  width: $icon-size;
-  height: $icon-size;
-}
-
 // -------------------------
 // context components
 // -------------------------
@@ -104,7 +95,7 @@
 .context-menu__button {
   @include button-normal;
   @include list-button-base;
-  @include list-button-padding($spacing-2xs, $spacing-xs);
+  @include stable-padding($spacing-2xs, $spacing-xs);
   width: 100%;
   height: $button-height-md;
 
@@ -114,7 +105,7 @@
 }
 
 .context-menu__icon {
-  @include list-button-icon(18px);
+  @include svg-icon-size(18px);
   fill: $icon-01;
 }
 
@@ -127,18 +118,15 @@
 .context-menu__side-button {
   @include button-normal;
   @include list-side-button-base;
+  @include position-right-center($spacing-xs);
   z-index: 1;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: $spacing-xs;
 }
 
 // -------------------------
 // checkbox overwrite
 // -------------------------\
 .context-menu__item .checkbox {
-  @include list-button-padding($spacing-2xs, $spacing-xs);
+  @include stable-padding($spacing-2xs, $spacing-xs);
   background-color: $ui-02;
   height: $button-height-md;
 
@@ -188,29 +176,31 @@
   }
 
   .context-menu__button {
-    @include list-button-padding($spacing-2xs, $spacing-sm);
+    @include stable-padding($spacing-2xs, $spacing-sm);
     height: $button-height-lg;
   }
 
-  .checkbox{
-    @include list-button-padding($spacing-2xs, $spacing-sm);
+  .context-menu__icon {
+    @include svg-icon-size(20px);
+  }
+  
+  .checkbox {
+    @include stable-padding($spacing-2xs, $spacing-sm);
     height: $button-height-lg;
 
-    .checkbox__label{
+    .checkbox__label {
       height: 100%;
-      &::before{
+
+      &::before {
         top: 50%;
         margin-top: -$spacing-xs;
       }
-      &::after{
+
+      &::after {
         top: 50%;
         margin-top: -$spacing-xs;
       }
     }
-  }
-
-  .context-menu__icon {
-    @include list-button-icon(20px);
   }
 }
 
@@ -220,12 +210,12 @@
   }
 
   .context-menu__button {
-    @include list-button-padding($spacing-3xs, $spacing-xs);
+    @include stable-padding($spacing-3xs, $spacing-xs);
     height: $button-height-sm;
   }
 
   .context-menu__icon {
-    @include list-button-icon(16px);
+    @include svg-icon-size(16px);
   }
 
   .context-menu__text {
