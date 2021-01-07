@@ -1,0 +1,48 @@
+@mixin list {
+  @include font-size("14");
+  @include line-height("heading");
+  width: 100%;
+  border: 1px solid $ui-04;
+  background-color: $ui-02;
+  color: $text-01;
+}
+
+.list {
+  @include list;
+}
+
+.list-header {
+  padding: $spacing-xs;
+  background-color: $ui-01;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  padding: $spacing-2xs $spacing-sm;
+  border-bottom: 1px solid $hover-row;
+  cursor: pointer;
+  user-select: none;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  &:hover {
+    background-color: $ui-01;
+  }
+
+  &:active,
+  &:focus {
+    color: $primary;
+    outline: none;
+  }
+}
+
+.list-item .filter-highlight {
+  @include line-height("body");
+}
+
+.stacked-list {
+  @include list;
+}
