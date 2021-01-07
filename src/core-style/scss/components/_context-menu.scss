@@ -169,7 +169,6 @@
 // -------------------------
 // Size overwrite
 // -------------------------
-
 .context-menu--lg {
   .context-menu__list {
     min-width: rem(140px);
@@ -183,7 +182,7 @@
   .context-menu__icon {
     @include svg-icon-size(20px);
   }
-  
+
   .checkbox {
     @include stable-padding($spacing-2xs, $spacing-sm);
     height: $button-height-lg;

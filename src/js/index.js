@@ -43,3 +43,34 @@ const requirePngAll = (r) => {
 }
 requirePngAll(require.context('../core-style/images/', true, /\.png$/));
 requirePngAll(require.context('../images/', true, /\.png$/));
+
+// ****************************
+// UI Event
+// ****************************
+
+// selectbox default button - Toggle
+const selectDefaultButton = document.querySelectorAll(".select__default-button");
+const selectDefaultButtonToggle = "select__default-button--toggle";
+
+console.log(selectDefaultButtonToggle);
+
+const toggleSelectbox = () => {
+  // window OS에서 동작하도록 설정 
+  if (window.NodeList && !NodeList.prototype.forEach) {
+    NodeList.prototype.forEach = Array.prototype.forEach;
+  }
+
+  selectDefaultButton.forEach((i) => {
+    i.addEventListener('click', (event) => {
+      event.preventDefault();   
+         
+      i.classList.toggle(selectDefaultButtonToggle)
+    })
+  })
+}
+
+const init = () => {
+  toggleSelectbox();
+}
+
+init();
