@@ -123,8 +123,7 @@
 }
 
 .text-input-group__clear-button {
-  @include right-position;
-  right: 6px;
+  @include position-right-center(6px);
   width: $spacing-md;
   height: $spacing-md;
   z-index: z("float");
