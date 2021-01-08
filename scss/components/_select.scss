@@ -1,20 +1,22 @@
-// select
-.select{
+// -------------------------
+// Select
+// -------------------------
+.select {
+  @include list;
   position: relative;
 }
 
 .select__default-button {
   @include button-normal;
-  @include stable-padding($spacing-2xs, $spacing-sm);
+  padding: $spacing-2xs $spacing-xl $spacing-2xs $spacing-sm;
   justify-content: start;
+  position: relative;
   min-width: rem(124px);
   height: $button-height-md;
-  position: relative;
   text-align: left;
   background-color: $ui-02;
   border: 1px solid $ui-04;
   border-radius: $button-border-radius;
-  box-sizing: border-box;
 
   &:hover:not(:disabled) {
     border-color: $text-03;
@@ -66,6 +68,7 @@
 .select__default-text {
   @include font-size("14");
   @include font-weight("regular");
+  display: block;
   color: $text-02;
 }
 
@@ -82,20 +85,39 @@
   position: relative;
   top: 100%;
   left: 0;
+  background-color: $ui-02;
+}
+
+.select__text {
+  color: $text-02;
 }
 
 // -------------------------
 // Size overwrite
 // -------------------------
 .select--lg {
-  .select__default-button{
+  .select__default-button {
     min-width: rem(132px);
     height: $button-height-lg;
+  }
+
+  .select__list {
+    min-width: rem(140px);
+  }
+
+  .select__button {
+    @include stable-padding($spacing-2xs, $spacing-sm);
+    height: $button-height-lg;
+  }
+
+  .select__icon {
+    @include svg-icon-size(20px);
   }
 }
 
 .select--sm {
-  .select__default-button{
+  .select__default-button {
+    padding: $spacing-2xs $spacing-lg $spacing-2xs $spacing-sm;
     min-width: rem(110px);
     height: $button-height-sm;
   }
@@ -104,5 +126,22 @@
     @include svg-icon-size(14px);
     right: 8px;
     margin-top: -7px;
+  }
+
+  .select__list {
+    min-width: rem(110px);
+  }
+
+  .select__button {
+    @include stable-padding($spacing-3xs, $spacing-xs);
+    height: $button-height-sm;
+  }
+
+  .select__icon {
+    @include svg-icon-size(16px);
+  }
+
+  .select__text {
+    @include font-size("12");
   }
 }
