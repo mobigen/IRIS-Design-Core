@@ -1,6 +1,7 @@
-.icon-comm {
+@import "../utiles/helper-mixins";
+
+.svg-icon {
+  @include svg-icon-size(18px);
   display: inline-block;
-  width: 80px;
-  height: 80px;
-  fill: $text-03;
+  fill: $icon-01;
 }

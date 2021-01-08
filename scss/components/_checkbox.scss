@@ -1,0 +1,197 @@
+.checkbox {
+  position: relative;
+}
+
+.checkbox__input {
+  @include hidden;
+  top: 4px;
+  left: 2px;
+}
+
+.checkbox__label {
+  @include line-height("heading");
+  @include font-weight("regular");
+  display: inline-flex;
+  position: relative;
+  padding-left: rem(24px); //NOTE: width of checkbox 16px + 8px of padding
+  align-items: center;
+  min-height: rem(24px);
+  color: $text-02;
+  user-select: none;
+  cursor: pointer;
+}
+
+.checkbox__label::before,
+.checkbox__label::after {
+  box-sizing: border-box;
+  transition: all $duration-fast-01 motion(entrance, productive);
+}
+
+.checkbox__label::before {
+  content: "";
+  width: rem(16px);
+  height: rem(16px);
+  margin: rem(2px);
+  position: absolute;
+  left: 0;
+  top: rem(2px);
+  background-color: transparent;
+  border: 2px solid $text-03;
+}
+
+.checkbox__label::after {
+  content: "";
+  position: absolute;
+  left: rem(6px);
+  top: rem(4px);
+  width: rem(9px);
+  height: rem(5px);
+  background: none;
+  border-left: 2px solid $text-04;
+  border-bottom: 2px solid $text-04;
+  transform: scale(0) rotate(-45deg);
+  transform-origin: bottom right;
+}
+
+// -------------------------
+// 상태별 스타일
+// -------------------------
+// hover 상태
+.checkbox__label:hover::before {
+  border-color: $primary;
+}
+
+// checked 상태
+.checkbox__input:checked + .checkbox__label::before {
+  background-color: $primary;
+  border-color: $primary;
+}
+
+.checkbox__input:checked + .checkbox__label::after {
+  transform: scale(1) rotate(-45deg);
+}
+
+// 부분 선택 상태
+.checkbox--indeterminate .checkbox__input + .checkbox__label::before,
+.checkbox__input:indeterminate + .checkbox__label::before {
+  border-color: $primary;
+}
+
+.checkbox--indeterminate .checkbox__input + .checkbox__label::after,
+.checkbox__input:indeterminate + .checkbox__label::after {
+  transform: scale(1) rotate(0deg);
+  top: rem(9px);
+  left: rem(7px);
+  width: rem(6px);
+  border-left-width: 0;
+  border-bottom-width: rem(6px);
+  border-color: $primary;
+}
+
+// disabled 상태
+.checkbox--disabled {
+  .checkbox__label {
+    opacity: 0.4;
+    cursor: not-allowed;
+
+    // TODO: 기본 상태 디자인에 :not 으로 줄일 수 있음
+    &:hover {
+      &::before,
+      &::after {
+        border-color: $text-03;
+      }
+    }
+  }
+
+  .checkbox__input:checked + .checkbox__label::before {
+    background-color: transparent;
+    border: 2px solid $text-03;
+  }
+
+  .checkbox__input:checked + .checkbox__label::after {
+    transform: scale(0) rotate(-45deg);
+  }
+}
+
+// -------------------------
+// 크기별 스타일
+// -------------------------
+.checkbox--lg {
+  .checkbox__label {
+    @include font-size("16");
+    padding-left: rem(28px); //width of checkbox 20px + 8px of padding
+    min-height: rem(28px);
+  }
+
+  .checkbox__label::before {
+    content: "";
+    width: rem(20px);
+    height: rem(20px);
+    margin: rem(2px);
+    top: rem(2px);
+  }
+
+  .checkbox__label::after {
+    left: rem(8px);
+    top: rem(4px);
+    width: rem(10px);
+    height: rem(7px);
+  }
+
+  &.checkbox--indeterminate .checkbox__input + .checkbox__label::after,
+  .checkbox__input:indeterminate + .checkbox__label::after {
+    transform: scale(1) rotate(0deg);
+    top: rem(10px);
+    left: rem(8px);
+    width: rem(8px);
+    border-left-width: 0;
+    border-bottom-width: rem(8px);
+  }
+}
+
+// -------------------------
+// Studio 컴포넌트 스타일 overwrite
+// -------------------------
+.studio-component {
+  .checkbox__label:hover::before {
+    border-color: $text-02;
+  }
+
+  // checked 상태
+  .checkbox__input:checked + .checkbox__label::before {
+    background-color: $text-03;
+    border-color: $text-03;
+  }
+
+  // 부분 선택 상태
+  .checkbox--indeterminate .checkbox__input + .checkbox__label::before,
+  .checkbox__input:indeterminate + .checkbox__label::before {
+    border-color: $text-03;
+  }
+
+  .checkbox--indeterminate .checkbox__input + .checkbox__label::after,
+  .checkbox__input:indeterminate + .checkbox__label::after {
+    border-color: $text-03;
+  }
+
+  // disabled 상태
+  .checkbox--disabled {
+    .checkbox__label {
+      &:hover {
+        &::before,
+        &::after {
+          border-color: $text-03;
+        }
+      }
+    }
+    
+    .checkbox__input:checked + .checkbox__label::before {
+      background-color: transparent;
+      border: 2px solid $text-03;
+    }
+  
+    .checkbox__input:checked + .checkbox__label::after {
+      transform: scale(0) rotate(-45deg);
+    }
+  }
+}

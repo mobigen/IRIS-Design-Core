@@ -1,0 +1,42 @@
+.tab {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.tab__list {
+  display: flex;
+}
+
+.tab__list--horizontal {
+  flex-direction: row;
+}
+
+.tab__item {
+  background-color: $hover-field-border;
+
+  &:hover {
+    background-color: darken($hover-field-border, 6%);
+  }
+}
+
+.tab__item--selected {
+  background-color: $ui-01;
+
+  &:hover {
+    background-color: $ui-01;
+  }
+  
+  .tab__button {
+    color: $text-03;
+  }
+}
+
+.tab__button {
+  @include button-normal;
+  background-color: transparent;
+  color: rgba($text-04, 0.85);
+}
+
+.tab__button-text {
+}

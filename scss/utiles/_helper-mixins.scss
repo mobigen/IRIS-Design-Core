@@ -9,10 +9,210 @@
   }
 }
 
-@mixin ellipsis-end($max-width) {
-  display: inline-block;
-  max-width: $max-width;
+@mixin text-overflow($width: false) {
+  display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+
+  // width parameter가 있을 경우 허용
+  @if ($width) {
+    width: $width;
+  }
+}
+
+@mixin hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  visibility: visible;
+  white-space: nowrap;
+}
+
+// Image Replacement Phark Method
+@mixin ir-pm {
+  display: block;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+  color: transparent;
+}
+
+// Img Global
+@mixin img-g {
+  display: block;
+  width: 100%;
+}
+
+// Hide Table Caption
+@mixin caption-out {
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  visibility: hidden;
+}
+
+// Right Position Center
+@mixin position-right-center($right-interval) {
+  position: absolute;
+  top: 50%;
+  right: $right-interval;
+  transform: translateY(-50%);
+}
+
+// 상하와 좌우가 동일한 padding
+@mixin stable-padding($padding-up-and-down, $padding-both-sides) {
+  padding: $padding-up-and-down $padding-both-sides;
+}
+
+// svg icon size
+@mixin svg-icon-size($size) {
+  width: $size;
+  height: $size;
+}
+
+// button 엘리먼트 normalize
+@mixin button-normal {
+  @include font-family("sans");
+  @include font-weight("medium");
+  @include font-smoothing;
+  @include letter-spacing;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 100%;
+  border: 1px solid transparent;
+  text-decoration: none;
+  transition-duration: $duration-fast-02;
+  transition-timing-function: ease-in-out;
+  white-space: nowrap;
+  user-select: none;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  // Reset intrisic padding in Firefox
+  &::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+}
+
+// list에 사용하는 button 엘리먼트 normalize
+@mixin list {
+  &__item {
+    position: relative;
+  }
+
+  &__button {
+    @include button-normal;
+    @include font-weight("regular");
+    @include stable-padding($spacing-2xs, $spacing-xs);
+    width: 100%;
+    height: $button-height-md;
+    flex-direction: row;
+    justify-content: start;
+    cursor: pointer;
+    background-color: $ui-02;
+    border: none;
+
+    &:hover:not(:disabled) {
+      background-color: $ui-01;
+    }
+
+    &:active,
+    &:focus {
+      background-color: $ui-01;
+    }
+
+    &:disabled,
+    &:disabled:hover,
+    &:disabled:focus {
+      opacity: 0.25;
+      cursor: not-allowed;
+    }
+  }
+
+  &__button > &__icon {
+    margin-right: $spacing-2xs;
+  }
+
+  &__button:active:not(:disabled) &__text,
+  &__button:focus:not(:disabled) &__text {
+    color: $primary;
+  }
+
+  &__button:active:not(:disabled) &__icon,
+  &__button:focus:not(:disabled) &__icon {
+    fill: $primary;
+  }
+
+  &__button:disabled + &__action-button-wrap &__action-button,
+  &__button:disabled:hover + &__action-button-wrap &__action-button,
+  &__button:disabled:focus + &__action-button-wrap &__action-button,
+  &__button:disabled &__action-button:hover:not(:disabled),
+  &__button:disabled:hover &__action-button:hover:not(:disabled),
+  &__button:disabled:focus &__action-button:hover:not(:disabled) {
+    cursor: not-allowed;
+    background-color: $ui-02;
+  }
+
+  &__button:disabled + &__action-button-wrap &__icon,
+  &__button:disabled:hover + &__action-button-wrap &__icon,
+  &__button:disabled:focus + &__action-button-wrap &__icon,
+  &__button:disabled &__action-button:hover:not(:disabled) &__icon,
+  &__button:disabled:hover &__action-button:hover:not(:disabled) &__icon,
+  &__button:disabled:focus &__action-button:hover:not(:disabled) &__icon {
+    opacity: 0.25;
+    fill: $icon-01;
+  }
+
+  &__button:disabled &__icon,
+  &__button:disabled:hover &__icon,
+  &__button:disabled:focus &__icon {
+    fill: $text-05;
+  }
+
+  &__text {
+    @include font-size("14");
+  }
+
+  &__icon {
+    @include svg-icon-size(18px);
+    fill: $icon-01;
+  }
+
+  &__action-button-wrap {
+    @include position-right-center($spacing-xs);
+    z-index: 1;
+  }
+
+  &__action-button {
+    @include button-normal;
+    padding: 0;
+    border-radius: $field-border-radius;
+    background-color: $ui-02;
+    
+    &:hover:not(:disabled) {
+      background-color: $hover-row;
+    }
+
+    &:active {
+      background-color: $hover-row;
+    }
+  }
+
+  &__action-button:active &__icon {
+    fill: $primary;
+  }
 }

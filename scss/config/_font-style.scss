@@ -6,7 +6,7 @@ $font-families: (
   "mono": unquote("Consolas, Menlo, 'SFMono-Regular', Courier, monospace"),
   "sans":
     unquote(
-      "'notokr', 'メイリオ', Meiryo, 'Yu Gothic UI', 'Microsoft YaHei UI', 'Microsoft JhengHei UI', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif"
+      "'NotoSansKR', 'メイリオ', Meiryo, 'Yu Gothic UI', 'Microsoft YaHei UI', 'Microsoft JhengHei UI', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif"
     ),
   "serif": unquote("'Georgia', Times, serif"),
 );
@@ -24,9 +24,9 @@ $font-families: (
 // ------------------------------------------
 
 $font-weights: (
-  "thin": 100,
   "light": 300,
   "regular": 400,
+  "medium": 500,
   "bold": 700,
 );
 
@@ -49,11 +49,11 @@ $font-weights: (
 // heading 텍스트와 body 텍스트, 두개의 line-height를 선택할 수 있다
 @mixin line-height($el) {
   @if $el == "heading" {
-    line-height: 1.5;
+    line-height: 1.75;
   } @else if $el == "body" {
-    line-height: 1.25;
+    line-height: 1.5;
   } @else {
-    @warn 'Invalid argument used for @mixin line-height($el) . Please use 'heading' or 'body'.';
+    @warn '@mixin line-height($el) 을 사용할 수 없습니다. 'heading' 또는 'body'를 사용해 주세요.';
   }
 }
 
@@ -101,7 +101,7 @@ $font-size-map: (
   @if map-has-key($font-size-map, $size) {
     font-size: map-get($font-size-map, $size);
   } @else {
-    @warn 'This is not a step of the IRIS Font Size! Valid sizes are 10, 11, 12, 14, 16, 18, 20, 24, 28, 32, 36, 48, 54, 72 and 76';
+    @warn 'IRIS의 폰트 사이즈가 아닙니다! 10, 11, 12, 14, 16, 18, 20, 24, 28, 32, 36, 48, 54, 72, 76 중에서 사용해 주세요.';
   }
 }
 
@@ -122,6 +122,22 @@ $font-size-map: (
 //   desc
 //   label
 //   ==========================================
+//
+//   New Type Scale
+//   ==========================================
+//   heading-04
+//   heading-05
+//   heading-06
+//   text-lg
+//   text-md
+//   text-sm
+//   btn-xlg
+//   btn-lg
+//   btn-md
+//   btn-sm
+//   link-lg
+//   link-md
+// ==========================================
 
 @mixin heading-01 {
   @include font-size("72");
