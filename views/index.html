@@ -2608,33 +2608,239 @@
   </div>
 
   <div class="component-variation">
-    <span class="component-variation__name">Container Tab - horizontal</span>
+    <span class="component-variation__name">Default Tab - horizontal</span>
     <div class="component-example">
       <div class="component-example__live">
-        <div>
-          <div class="tab">
-            <ul class="tab__list tab__list--horizontal">
+        <div style="width: 500px;">
+          <div class="tab tab--horizontal">
+            <ul class="tab__bar">
               <li class="tab__item">
                 <button type="button" class="tab__button">
-                  <span class=" tab__button-text">tab1</span>
+                  <span class="tab__button-text">tab1</span>
                 </button>
               </li>
               <li class="tab__item tab__item--selected">
                 <button type="button" class="tab__button">
-                  <span class=" tab__button-text">tab2</span>
+                  <span class="tab__button-text">tab2</span>
                 </button>
               </li>
               <li class="tab__item">
                 <button type="button" class="tab__button">
-                  <span class=" tab__button-text">tab3</span>
+                  <span class="tab__button-text">tab3</span>
                 </button>
               </li>
               <li class="tab__item">
                 <button type="button" class="tab__button">
-                  <span class=" tab__button-text">tab4</span>
+                  <span class="tab__button-text">tab4</span>
                 </button>
               </li>
             </ul>
+            <div class="tab__panel">
+              <div class="tab__contents">
+                <p>Content of Tab1</p>
+              </div>
+              <div class="tab__contents tab__contents--active">
+                <p>Content of Tab2</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Default Tab - vertical</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <div class="tab tab--vertical">
+            <ul class="tab__bar">
+              <li class="tab__item">
+                <button type="button" class="tab__button">
+                  <span class="tab__button-text">tab1</span>
+                </button>
+              </li>
+              <li class="tab__item tab__item--selected">
+                <button type="button" class="tab__button">
+                  <span class="tab__button-text">tab2</span>
+                </button>
+              </li>
+              <li class="tab__item">
+                <button type="button" class="tab__button">
+                  <span class="tab__button-text">tab3</span>
+                </button>
+              </li>
+              <li class="tab__item">
+                <button type="button" class="tab__button">
+                  <span class="tab__button-text">tab4</span>
+                </button>
+              </li>
+            </ul>
+            <div class="tab__panel">
+              <div class="tab__contents">
+                <p>Content of Tab1</p>
+              </div>
+              <div class="tab__contents tab__contents--active">
+                <p>Content of Tab2</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Container Tab - horizontal</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <div class="tab tab--container tab--horizontal">
+            <ul class="tab__bar">
+              <li class="tab__item">
+                <button type="button" class="tab__button">
+                  <span class="tab__button-text">tab1</span>
+                </button>
+              </li>
+              <li class="tab__item tab__item--selected">
+                <button type="button" class="tab__button">
+                  <span class="tab__button-text">tab2</span>
+                </button>
+              </li>
+              <li class="tab__item">
+                <button type="button" class="tab__button">
+                  <span class="tab__button-text">tab3</span>
+                </button>
+              </li>
+              <li class="tab__item">
+                <button type="button" class="tab__button">
+                  <span class="tab__button-text">tab4</span>
+                </button>
+              </li>
+            </ul>
+            <div class="tab__panel">
+              <div class="tab__contents">
+                <p>Content of Tab1</p>
+              </div>
+              <div class="tab__contents tab__contents--active">
+                <p>Content of Tab2</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Container Tab - vertical</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <div class="tab tab--container tab--vertical">
+            <ul class="tab__bar">
+              <li class="tab__item">
+                <button type="button" class="tab__button">
+                  <span class="tab__button-text">tab1</span>
+                </button>
+              </li>
+              <li class="tab__item tab__item--selected">
+                <button type="button" class="tab__button">
+                  <span class="tab__button-text">tab2</span>
+                </button>
+              </li>
+              <li class="tab__item">
+                <button type="button" class="tab__button">
+                  <span class="tab__button-text">tab3</span>
+                </button>
+              </li>
+              <li class="tab__item">
+                <button type="button" class="tab__button">
+                  <span class="tab__button-text">tab4</span>
+                </button>
+              </li>
+            </ul>
+            <div class="tab__panel">
+              <div class="tab__contents">
+                <p>Content of Tab1</p>
+              </div>
+              <div class="tab__contents tab__contents--active">
+                <p>Content of Tab2</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Studio Tab - horizontal</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div class="studio-component" style="width: 500px; height: 60px;"> <!-- TODO: studio 디자인 개편 반영시 객체, 컴포넌트 네이밍에 따라 변경 예정 -->
+          <div class="tab tab--container tab--horizontal">
+            <ul class="tab__bar">
+              <li class="tab__item" style="width: calc(100% / 4);">
+                <button type="button" class="tab__button">
+                  <span class="tab__button-text">tab1</span>
+                </button>
+              </li>
+              <li class="tab__item tab__item--selected" style="width: calc(100% / 4);">
+                <button type="button" class="tab__button">
+                  <span class="tab__button-text">tab2</span>
+                </button>
+              </li>
+              <li class="tab__item" style="width: calc(100% / 4);">
+                <button type="button" class="tab__button">
+                  <span class="tab__button-text">tab3</span>
+                </button>
+              </li>
+              <li class="tab__item" style="width: calc(100% / 4);">
+                <button type="button" class="tab__button">
+                  <span class="tab__button-text">tab4</span>
+                </button>
+              </li>
+            </ul>
+            <!-- <div class="tab__panel">
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Studio Tab - vertical</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div class="studio-component" style="width: 100px; height: 240px;"> <!-- TODO: studio 디자인 개편 반영시 객체, 컴포넌트 네이밍에 따라 변경 예정 -->
+          <div class="tab tab--container tab--vertical">
+            <ul class="tab__bar">
+              <li class="tab__item" style="height: calc(100% / 4);">
+                <button type="button" class="tab__button">
+                  <span class="tab__button-text">tab1</span>
+                </button>
+              </li>
+              <li class="tab__item tab__item--selected" style="height: calc(100% / 4);">
+                <button type="button" class="tab__button">
+                  <span class="tab__button-text">tab2</span>
+                </button>
+              </li>
+              <li class="tab__item" style="height: calc(100% / 4);">
+                <button type="button" class="tab__button">
+                  <span class="tab__button-text">tab3</span>
+                </button>
+              </li>
+              <li class="tab__item" style="height: calc(100% / 4);">
+                <button type="button" class="tab__button">
+                  <span class="tab__button-text">tab4</span>
+                </button>
+              </li>
+            </ul>
+            <!-- <div class="tab__panel">
+            </div> -->
           </div>
         </div>
       </div>
