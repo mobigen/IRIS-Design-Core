@@ -21,3 +21,7 @@
 .list__item .filter-highlight {
   @include line-height("body");
 }
+
+.list__checkmark {
+  vertical-align: middle;
+}

@@ -24,25 +24,124 @@
                     <span class="list__text">list item text</span>
                   </button>
                 </li>
-                <li class="list__item">
+                <li class="list__item list__item--selected">
                   <button type="button" class="list__button">
-                    <span class="list__text">list item text</span>
+                    <span class="list__text">list item text selected</span>
                   </button>
                 </li>
-                <li class="list__item">
+                <li class="list__item list__item--disabled" disabled>
                   <button type="button" class="list__button">
-                    <span class="list__text">list item text</span>
+                    <span class="list__text">list item text disabled</span>
                   </button>
                 </li>
-                <li class="list__item">
-                  <button type="button" class="list__button">
-                    <span class="list__text">list item text</span>
+                <li class="list__item list__item--selected list__item--disabled">
+                  <button type="button" class="list__button" disabled>
+                    <span class="list__text">list item text selected disabled</span>
                   </button>
                 </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Action Button List</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <div class="list" style="width: 520px;">
+            <div class="list__container">
+              <ul class="list__items">
                 <li class="list__item">
                   <button type="button" class="list__button">
-                    <span class="list__text">list item text</span>
+                    <span class="list__text">Action Button list item text long long long long long long long long long long</span>
                   </button>
+                  <div class="list__action-button-wrap">
+                    <button class="list__action-button" type="button" title="위로">
+                      <svg class="svg-icon list__icon">
+                        <use xlink:href="#chevron-up"></use>
+                      </svg>
+                    </button>
+                    <button class="list__action-button" type="button" title="아래로">
+                      <svg class="svg-icon list__icon">
+                        <use xlink:href="#chevron-down"></use>
+                      </svg>
+                    </button>
+                    <button class="list__action-button" type="button" title="삭제">
+                      <svg class="svg-icon list__icon">
+                        <use xlink:href="#trash"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </li>
+                <li class="list__item list__item--selected">
+                  <button type="button" class="list__button">
+                    <span class="list__text">Action Button list item text selected</span>
+                  </button>
+                  <div class="list__action-button-wrap">
+                    <button class="list__action-button" type="button" title="위로">
+                      <svg class="svg-icon list__icon">
+                        <use xlink:href="#chevron-up"></use>
+                      </svg>
+                    </button>
+                    <button class="list__action-button" type="button" title="아래로">
+                      <svg class="svg-icon list__icon">
+                        <use xlink:href="#chevron-down"></use>
+                      </svg>
+                    </button>
+                    <button class="list__action-button" type="button" title="삭제">
+                      <svg class="svg-icon list__icon">
+                        <use xlink:href="#trash"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </li>
+                <li class="list__item list__item--disabled">
+                  <button type="button" class="list__button">
+                    <span class="list__text">Action Button list item text disabled</span>
+                  </button>
+                  <div class="list__action-button-wrap">
+                    <button class="list__action-button" type="button" title="위로">
+                      <svg class="svg-icon list__icon">
+                        <use xlink:href="#chevron-up"></use>
+                      </svg>
+                    </button>
+                    <button class="list__action-button" type="button" title="아래로">
+                      <svg class="svg-icon list__icon">
+                        <use xlink:href="#chevron-down"></use>
+                      </svg>
+                    </button>
+                    <button class="list__action-button" type="button" title="삭제">
+                      <svg class="svg-icon list__icon">
+                        <use xlink:href="#trash"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </li>
+                <li class="list__item list__item--selected list__item--disabled">
+                  <button type="button" class="list__button">
+                    <span class="list__text">Action Button list item text selected disabled</span>
+                  </button>
+                  <div class="list__action-button-wrap">
+                    <button class="list__action-button" type="button" title="위로">
+                      <svg class="svg-icon list__icon">
+                        <use xlink:href="#chevron-up"></use>
+                      </svg>
+                    </button>
+                    <button class="list__action-button" type="button" title="아래로">
+                      <svg class="svg-icon list__icon">
+                        <use xlink:href="#chevron-down"></use>
+                      </svg>
+                    </button>
+                    <button class="list__action-button" type="button" title="삭제">
+                      <svg class="svg-icon list__icon">
+                        <use xlink:href="#trash"></use>
+                      </svg>
+                    </button>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -61,13 +160,13 @@
             <div class="list__header">
               <div class="text-input-group">
                 <span class="text-input-group__icon">
-                  <svg class="icon-comm">
+                  <svg class="svg-icon">
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
                 <input type="text" class="text-input" placeholder="검색어를 입력해주세요">
                 <span class="text-input-group__clear-button">
-                  <svg class="icon-comm">
+                  <svg class="svg-icon">
                     <use xlink:href="#close"></use>
                   </svg>
                 </span>
@@ -95,9 +194,52 @@
                     <span class="list__text">list item text</span>
                   </button>
                 </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Selectable List</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <div class="list" style="width: 520px;">
+            <div class="list__container">
+              <ul class="list__items">
                 <li class="list__item">
                   <button type="button" class="list__button">
-                    <span class="list__text">list item text</span>
+                    <svg class="svg-icon list__checkmark">
+                      <use xlink:href="#checkmark"></use>
+                    </svg>
+                    <span class="list__text">selectable list item text</span>
+                  </button>
+                </li>
+                <li class="list__item list__item--selected">
+                  <button type="button" class="list__button">
+                    <svg class="svg-icon list__checkmark">
+                      <use xlink:href="#checkmark"></use>
+                    </svg>
+                    <span class="list__text">selectable list item text selected</span>
+                  </button>
+                </li>
+                <li class="list__item list__item--disabled">
+                  <button type="button" class="list__button" disabled>
+                    <svg class="svg-icon list__checkmark">
+                      <use xlink:href="#checkmark"></use>
+                    </svg>
+                    <span class="list__text">selectable list item text disabled</span>
+                  </button>
+                </li>
+                <li class="list__item list__item--selected list__item--disabled">
+                  <button type="button" class="list__button" disabled>
+                    <svg class="svg-icon list__checkmark">
+                      <use xlink:href="#checkmark"></use>
+                    </svg>
+                    <span class="list__text">selectable list item text selected disabled</span>
                   </button>
                 </li>
               </ul>
@@ -108,4 +250,63 @@
     </div>
   </div>
 
+  <div class="component-variation">
+    <span class="component-variation__name">Checkable List</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <div class="list" style="width: 520px;">
+            <div class="list__container">
+              <ul class="list__items">
+                <li class="list__item">
+                  <div class="checkbox">
+                    <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                    <label for="list-check-01" class="checkbox__label">
+                      <svg class="svg-icon list__icon">
+                        <use xlink:href="#data-storage"></use>
+                      </svg>
+                      <span class="list__text">checkable list item text</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="list__item list__item--selected">
+                  <div class="checkbox checkbox--checked">
+                    <input id="list-check-02" type="checkbox" class="checkbox__input" value="label" checked="">
+                    <label for="list-check-02" class="checkbox__label">
+                      <svg class="svg-icon list__icon">
+                        <use xlink:href="#data-storage"></use>
+                      </svg>
+                      <span class="list__text">checkable list item text selected</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="list__item list__item--disabled">
+                  <div class="checkbox checkbox--disabled">
+                    <input id="list-check-03" type="checkbox" class="checkbox__input" value="label" disabled>
+                    <label for="list-check-03" class="checkbox__label">
+                      <svg class="svg-icon list__icon">
+                        <use xlink:href="#data-storage"></use>
+                      </svg>
+                      <span class="list__text">checkable list item text disabled</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="list__item list__item--selected list__item--disabled">
+                  <div class="checkbox checkbox--disabled">
+                    <input id="list-check-03" type="checkbox" class="checkbox__input" value="label" checked disabled>
+                    <label for="list-check-03" class="checkbox__label">
+                      <svg class="svg-icon list__icon">
+                        <use xlink:href="#data-storage"></use>
+                      </svg>
+                      <span class="list__text">checkable list item text selected disabled</span>
+                    </label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

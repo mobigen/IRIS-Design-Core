@@ -111,89 +111,65 @@
 // list에 사용하는 button 엘리먼트 normalize
 @mixin list {
   &__item {
-    position: relative;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      background-color: $ui-01;
+    }
   }
 
   &__button {
     @include button-normal;
     @include font-weight("regular");
     @include stable-padding($spacing-2xs, $spacing-xs);
-    width: 100%;
+    @include text-overflow;
+    // width: 100%;
+    flex: 1;
     height: $button-height-md;
     flex-direction: row;
     justify-content: start;
     cursor: pointer;
-    background-color: $ui-02;
+    background-color: transparent;
     border: none;
+    color: inherit;
+    text-align: left;
 
-    &:hover:not(:disabled) {
+    // &:hover:not(:disabled) {
+    //   background-color: $ui-01;
+    // }
+
+    &:active {
       background-color: $ui-01;
-    }
-
-    &:active,
-    &:focus {
-      background-color: $ui-01;
-    }
-
-    &:disabled,
-    &:disabled:hover,
-    &:disabled:focus {
-      opacity: 0.25;
-      cursor: not-allowed;
     }
   }
 
-  &__button > &__icon {
-    margin-right: $spacing-2xs;
+  &__icon {
+    vertical-align: middle;
   }
 
-  &__button:active:not(:disabled) &__text,
-  &__button:focus:not(:disabled) &__text {
+  &__icon + &__text {
+    margin-left: $spacing-3xs;
+  }
+
+  &__button:active &__text {
     color: $primary;
   }
 
-  &__button:active:not(:disabled) &__icon,
-  &__button:focus:not(:disabled) &__icon {
+  &__button:active &__icon {
     fill: $primary;
-  }
-
-  &__button:disabled + &__action-button-wrap &__action-button,
-  &__button:disabled:hover + &__action-button-wrap &__action-button,
-  &__button:disabled:focus + &__action-button-wrap &__action-button,
-  &__button:disabled &__action-button:hover:not(:disabled),
-  &__button:disabled:hover &__action-button:hover:not(:disabled),
-  &__button:disabled:focus &__action-button:hover:not(:disabled) {
-    cursor: not-allowed;
-    background-color: $ui-02;
-  }
-
-  &__button:disabled + &__action-button-wrap &__icon,
-  &__button:disabled:hover + &__action-button-wrap &__icon,
-  &__button:disabled:focus + &__action-button-wrap &__icon,
-  &__button:disabled &__action-button:hover:not(:disabled) &__icon,
-  &__button:disabled:hover &__action-button:hover:not(:disabled) &__icon,
-  &__button:disabled:focus &__action-button:hover:not(:disabled) &__icon {
-    opacity: 0.25;
-    fill: $icon-01;
-  }
-
-  &__button:disabled &__icon,
-  &__button:disabled:hover &__icon,
-  &__button:disabled:focus &__icon {
-    fill: $text-05;
   }
 
   &__text {
     @include font-size("14");
-  }
-
-  &__icon {
-    @include svg-icon-size(18px);
-    fill: $icon-01;
+    @include line-height("heading");
+    vertical-align: middle;
+    color: inherit;
   }
 
   &__action-button-wrap {
-    @include position-right-center($spacing-xs);
+    display: flex;
+    margin-right: $spacing-xs;
     z-index: 1;
   }
 
@@ -201,8 +177,8 @@
     @include button-normal;
     padding: 0;
     border-radius: $field-border-radius;
-    background-color: $ui-02;
-    
+    background-color: transparent;
+
     &:hover:not(:disabled) {
       background-color: $hover-row;
     }
@@ -210,9 +186,101 @@
     &:active {
       background-color: $hover-row;
     }
+
+    &:not(:last-child) {
+      margin-right: $spacing-3xs;
+    }
   }
 
   &__action-button:active &__icon {
+    fill: $primary;
+  }
+
+  // -------------------------
+  // checkbox overwrite
+  // -------------------------
+  &__item .checkbox {
+    @include stable-padding($spacing-2xs, $spacing-xs);
+    // background-color: $ui-02;
+    height: $button-height-md;
+    width: 100%;
+
+    .checkbox__label {
+      width: 100%;
+    }
+
+    .checkbox__input:checked {
+      + .checkbox__label {
+        color: $primary;
+      }
+
+      + .checkbox__label .context-menu__icon {
+        fill: $primary;
+      }
+    }
+
+    &.checkbox--disabled,
+    &.checkbox--disabled:hover {
+      cursor: not-allowed;
+      background-color: $ui-02;
+    }
+  }
+
+  // -------------------------
+  // Modifier: disabled
+  // -------------------------
+  &__item--disabled {
+    cursor: not-allowed;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  &__item--disabled &__button,
+  &__item--disabled &__action-button {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  &__item--disabled &__button:active &__text {
+    color: inherit;
+  }
+
+  &__item--disabled &__button:active &__icon {
+    fill: $text-03;
+  }
+
+  &__item--disabled &__action-button:hover,
+  &__item--disabled &__action-button:active {
+    background-color: transparent;
+  }
+
+  &__item--disabled &__action-button:active &__icon{
+    fill: $text-03;
+  }
+
+  // -------------------------
+  // Modifier: selected
+  // -------------------------
+  &__checkmark {
+    opacity: 0;
+  }
+
+  &__item--selected {
+    color: $primary;
+  }
+
+  &__item--selected &__checkmark {
+    opacity: 1;
+    fill: $primary;
+  }
+
+  &__item--selected &__icon {
+    fill: $primary;
+  }
+
+  &__item--selected &__button:active &__icon {
     fill: $primary;
   }
 }

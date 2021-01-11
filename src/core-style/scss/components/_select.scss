@@ -4,6 +4,7 @@
 .select {
   @include list;
   position: relative;
+  color: $text-02;
 }
 
 .select__default-button {
@@ -86,10 +87,6 @@
   top: 100%;
   left: 0;
   background-color: $ui-02;
-}
-
-.select__text {
-  color: $text-02;
 }
 
 // -------------------------
