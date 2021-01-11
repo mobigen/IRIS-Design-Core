@@ -1,5 +1,6 @@
 .context-menu {
   @include list;
+  color: $text-02;
 }
 
 .context-menu__list {
@@ -8,54 +9,6 @@
   background-color: $ui-02;
   box-shadow: 0px 0px 8px rgba(206, 211, 217, 0.7);
   border-radius: $field-border-radius;
-}
-
-.context-menu__text {
-  color: $text-02;
-}
-
-// -------------------------
-// checkbox overwrite
-// -------------------------\
-.context-menu__item .checkbox {
-  @include stable-padding($spacing-2xs, $spacing-xs);
-  background-color: $ui-02;
-  height: $button-height-md;
-
-  .checkbox__label {
-    width: 100%;
-  }
-
-  .checkbox__input:checked {
-    + .checkbox__label {
-      color: $primary;
-    }
-
-    + .checkbox__label .context-menu__icon {
-      fill: $primary;
-    }
-  }
-
-  &:hover:not(:disabled) {
-    background-color: $ui-01;
-  }
-
-  &.checkbox--checked {
-    background-color: $ui-01;
-  }
-
-  &.checkbox--disabled,
-  &.checkbox--disabled:hover,
-  &.checkbox--disabled:focus {
-    cursor: not-allowed;
-    background-color: $ui-02;
-
-    .checkbox__input:checked {
-      + .checkbox__label {
-        color: $text-02;
-      }
-    }
-  }
 }
 
 // -------------------------
@@ -93,6 +46,13 @@
       }
     }
   }
+  .checkbox--indeterminate {
+    .checkbox__label {
+      &::after {
+        margin-top: -3px;
+      }
+    }
+  }
 }
 
 .context-menu--sm {
@@ -103,6 +63,7 @@
   .context-menu__button {
     @include stable-padding($spacing-3xs, $spacing-xs);
     height: $button-height-sm;
+    line-height: 9px;
   }
 
   .context-menu__icon {
