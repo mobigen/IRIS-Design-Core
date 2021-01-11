@@ -17,6 +17,7 @@
   padding-left: rem(24px); //NOTE: width of checkbox 16px + 8px of padding
   min-height: rem(24px);
   color: $text-02;
+  white-space: nowrap;
   user-select: none;
   cursor: pointer;
 }
