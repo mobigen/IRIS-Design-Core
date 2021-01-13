@@ -50,7 +50,7 @@ requirePngAll(require.context('../images/', true, /\.png$/));
 
 // selectbox default button - Toggle
 const selectDefaultButton = document.querySelectorAll(".select__default-button");
-const selectDefaultButtonToggle = "select__default-button--toggle";
+const selectDefaultButtonToggle = "select__default-button--selected";
 
 console.log(selectDefaultButtonToggle);
 
