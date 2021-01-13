@@ -1,0 +1,62 @@
+// -------------------------
+// modal-body padding
+// 1. madal-body: 0px !default
+// 2. modal-body--sm: 16px
+// 3. modal-body--md: 32px
+// 4. moadl-body--lg: 48px
+// -------------------------
+.modal {
+  @include layer("pop-out");
+  display: flex;
+  flex-direction: column;
+  border-radius: $field-border-radius;
+}
+
+.modal-head {
+  @include stable-padding($spacing-xs, $spacing-md);
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid $ui-04;
+}
+
+.modal-head__close {
+  margin-left: $spacing-lg;
+}
+
+.modal-head__title {
+  flex: 1;
+}
+
+.modal-head__subtitle {
+  @include line-height("body");
+  @include font-size("13");
+  margin-left: $spacing-2xs;
+  color: $text-02;
+}
+
+.modal-body--sm {
+  padding: $layout-2xs;
+}
+
+.modal-body--md {
+  padding: $layout-sm;
+}
+
+.modal-body--lg {
+  padding: $layout-md;
+}
+
+.modal-foot {
+  @include stable-padding($spacing-xs, $spacing-sm);
+  display: flex;
+  background-color: $ui-01;
+}
+
+.modal-foot__main-buttons {
+  display: flex;
+  margin-left: auto;
+}
+
+.modal-foot .button + .button {
+  margin-left: $spacing-xs;
+}

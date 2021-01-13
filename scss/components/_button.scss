@@ -80,16 +80,6 @@
 
   svg {
     fill: $font-color;
-
-    & + .button__text {
-      margin-left: $spacing-2xs;
-    }
-  }
-
-  .button__text {
-    & + svg {
-      margin-left: $spacing-2xs;
-    }
   }
 
   @if ($border-color) {
@@ -128,8 +118,37 @@
   @include button-theme($negative, $text-04, $hover-negative, $active-negative);
 }
 
+@mixin button-theme--danger {
+  @include button-theme($ui-02, $negative, $negative, $active-negative, $ui-04);
+  // danger 예외 사항
+  &:hover:not(:disabled) {
+    color: $text-04;
+    border-color: $negative;
+
+    svg {
+      fill: $text-04;
+    }
+  }
+}
+
 @mixin button-theme--link {
   @include button-theme(transparent, $text-02, transparent, transparent);
+  // link 예외 사항
+  &:hover {
+    color: $text-03;
+
+    svg {
+      fill: $text-03;
+    }
+  }
+
+  &:active {
+    color: darken($text-02, 0.25);
+
+    svg {
+      fill: darken($text-02, 0.25);
+    }
+  }
 }
 
 // -------------------------
@@ -147,8 +166,22 @@
   svg {
     width: $icon-size;
     height: $icon-size;
+
+    & + .button__text {
+      margin-left: $spacing-2xs;
+    }
   }
 
+  .button__text {
+    & + svg {
+      margin-left: $spacing-2xs;
+    }
+  }
+
+  .loader + .button__text {
+    margin-left: $spacing-2xs;
+  }
+  
   @if ($button-width) {
     width: $button-width;
   }
@@ -161,7 +194,7 @@
 
 @mixin button--lg {
   @include button-size(15px, $button-height-lg, 24px);
-  @include button-padding($spacing-md, $spacing-md)
+  @include button-padding($spacing-md, $spacing-md);
 }
 
 @mixin button--sm {
@@ -177,7 +210,7 @@
 }
 
 .button--icon {
-  @include button--icon(6px , 20px);
+  @include button--icon(6px, 20px);
 }
 
 .button-theme--primary {
@@ -200,31 +233,19 @@
   @include button-theme--negative;
 }
 
+.button-theme--danger {
+  @include button-theme--danger;
+}
+
 .button-theme--link {
   @include button-theme--link;
-  // link 예외 사항
-  &:hover {
-    color: $text-03;
-
-    svg {
-      fill: $text-03;
-    }
-  }
-
-  &:active {
-    color: darken($text-02, 0.25);
-
-    svg {
-      fill: darken($text-02, 0.25);
-    }
-  }
 }
 
 .button--lg {
   @include button--lg;
 
   svg + .button__text {
-    margin-left: $spacing-xs * .75;
+    margin-left: $spacing-xs * 0.75;
   }
 }
 
@@ -250,5 +271,10 @@
 }
 
 .button--icon.button-theme--link.button--sm {
-  @include button--icon(6px, 20px);
+  @include button--icon(2px, 20px);
+}
+
+.button--icon.button-theme--link.button--xs {
+  @include button--icon(1px, 16px);
+  height: 16px;
 }
