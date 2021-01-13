@@ -80,16 +80,6 @@
 
   svg {
     fill: $font-color;
-
-    & + .button__text {
-      margin-left: $spacing-2xs;
-    }
-  }
-
-  .button__text {
-    & + svg {
-      margin-left: $spacing-2xs;
-    }
   }
 
   @if ($border-color) {
@@ -176,8 +166,22 @@
   svg {
     width: $icon-size;
     height: $icon-size;
+
+    & + .button__text {
+      margin-left: $spacing-2xs;
+    }
   }
 
+  .button__text {
+    & + svg {
+      margin-left: $spacing-2xs;
+    }
+  }
+
+  .loader + .button__text {
+    margin-left: $spacing-2xs;
+  }
+  
   @if ($button-width) {
     width: $button-width;
   }
