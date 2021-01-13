@@ -58,10 +58,10 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 4;
   width: 100%;
   height: 100%;
   background-color: $overlay-01;
+  z-index: z("overlay");
 }
 
 .loader-overlay .loader {
