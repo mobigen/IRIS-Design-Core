@@ -24,11 +24,11 @@
   text-transform: capitalize;
 }
 
-.main-nave-item {
+.main-nav-item {
   margin-top: $spacing-md;
 }
 
-.main-nave-item__heading {
+.main-nav-item__heading {
   @include font-size("12");
   padding: $spacing-sm $spacing-md;
   color: $text-03;
