@@ -48,11 +48,10 @@ requirePngAll(require.context('../images/', true, /\.png$/));
 // UI Event
 // ****************************
 
-// selectbox default button - Toggle
-const selectDefaultButton = document.querySelectorAll(".select__default-button");
-const selectDefaultButtonToggle = "select__default-button--selected";
-
-console.log(selectDefaultButtonToggle);
+// toggle button
+const beforeToggleButton = document.querySelectorAll(".select__head, .accordion__head");
+const afterToggleSuffix = "--selected";
+let afterToggleButton;
 
 const toggleSelectbox = () => {
   // window OS에서 동작하도록 설정 
@@ -60,11 +59,16 @@ const toggleSelectbox = () => {
     NodeList.prototype.forEach = Array.prototype.forEach;
   }
 
-  selectDefaultButton.forEach((i) => {
+  beforeToggleButton.forEach((i) => {
     i.addEventListener('click', (event) => {
-      event.preventDefault();   
-         
-      i.classList.toggle(selectDefaultButtonToggle)
+      event.preventDefault();
+      console.log(`i => ${i.classList[0]}`);
+
+      afterToggleButton = i.classList[0].concat(afterToggleSuffix);
+
+      console.log(`최종 => ${afterToggleButton}`);
+
+      i.classList.toggle(afterToggleButton);
     })
   })
 }
