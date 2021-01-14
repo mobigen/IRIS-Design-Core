@@ -3,25 +3,30 @@
   width: rem(400px);
 }
 
-.accordion__default-button {
+.accordion-button{
+  @include button-list;
+  width: rem(400px);
+}
+
+.accordion-container+.accordion-container .accordion__head {
+  border-top: transparent;
+}
+
+.accordion__head {
   @include button-normal;
   justify-content: start;
   width: 100%;
   height: $button-height-md;
   padding: $spacing-2xs $spacing-sm;
-  border: 1px solid $hover-row;
   background-color: $ui-01;
+  border: 1px solid $hover-row;
 }
 
-.accordion__default-button .accordion__icon {
-  @include svg-icon-size(24px);
+.accordion__head-icon {
+  @include svg-icon-size($button-height-sm);
 }
 
-.accordion-container+.accordion-container .accordion__default-button {
-  border-top: transparent;
-}
-
-.accordion__title {
+.accordion__head-title {
   @include text-overflow;
   @include font-size("14");
   @include font-weight("medium");
@@ -30,20 +35,28 @@
   color: $text-02;
 }
 
-.accordion__default-button .accordion__icon+.accordion__title {
-
+.accordion__head-icon+.accordion__head-title {
   margin-left: $spacing-2xs;
-
 }
 
-.accordion__default-button .accordion__title+.accordion__icon {
+.accordion__head-icon--right {
   margin-left: auto;
 }
 
-.accordion__list {
+.accordion__body {
   display: none;
+}
+
+
+.accordion__list, .accordion-button__list {
   border: 1px solid $hover-row;
   border-top: transparent;
+}
+
+.accordion__text {
+  @include text-overflow;
+  width: 100%;
+  margin: 0;
 }
 
 .accordion__item+.accordion__item {
@@ -53,65 +66,14 @@
 // -------------------------
 // default 열고 닫을 경우 스타일
 // -------------------------
-.accordion__default-button--selected>.accordion__icon {
+.accordion__head--selected .accordion__head-icon {
   transform: rotate(90deg);
 }
 
-.accordion__default-button--selected .accordion__title+.accordion__icon {
+.accordion__head--selected .accordion__head-icon--right {
   transform: rotate(180deg);
 }
 
-.accordion__default-button--selected+.accordion__list {
+.accordion__head--selected+.accordion__body {
   display: block;
-}
-
-// -------------------------
-// 가로 정렬일 경우
-// -------------------------
-.accordion__list--horizontal {
-  display: flex !important;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 8px;
-
-  .accordion__item {
-    flex-direction: column;
-    width: calc(33.33% - 8px);
-    margin: 4px;
-    border: none;
-  }
-
-  .accordion__button {
-    flex-direction: column;
-    justify-content: center;
-    border: 1px solid transparent;
-    width: 100%;
-    height: 100%;
-
-    .accordion__icon {
-      @include svg-icon-size(32px);
-      display: block;
-      margin: 0 auto $spacing-2xs auto;
-    }
-
-    .accordion__text {
-      @include text-overflow;
-      width: 100%;
-      margin: 0;
-    }
-
-    &:hover {
-      border: 1px solid $primary;
-      border-radius: 2px;
-
-      .accordion__icon {
-        fill: $primary;
-      }
-
-      .accordion__text {
-        color: $primary;
-      }
-    }
-  }
 }
