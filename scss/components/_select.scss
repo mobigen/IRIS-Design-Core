@@ -3,28 +3,28 @@
 // -------------------------
 .select {
   @include list;
+  min-width: rem(160px);
+  max-width: rem(230px);
   position: relative;
   color: $text-02;
 }
 
-.select__default-button {
+.select__head {
   @include button-normal;
-  padding: $spacing-2xs $spacing-xl $spacing-2xs $spacing-sm;
-  justify-content: start;
-  position: relative;
-  min-width: rem(124px);
+  width: 100%;
+  padding: $spacing-2xs $spacing-sm;
   height: $button-height-md;
-  text-align: left;
   background-color: $ui-02;
   border: 1px solid $ui-04;
   border-radius: $button-border-radius;
-
-  &:hover:not(:disabled) {
-    border-color: $text-03;
-  }
+  text-align: left;
 
   &:active {
     border-color: $secondary !important;
+  }
+
+  &:hover{
+    border-color: $text-03;
   }
 
   &:focus,
@@ -39,24 +39,24 @@
     cursor: not-allowed;
     border-color: $hover-row !important;
 
-    .select__default-text {
+    .select__head-title {
       color: $text-05;
     }
 
-    .select__default-icon {
+    .select__head-icon {
       opacity: 0.5;
     }
   }
 
-  &.select__default-button--selected {
+  &.select__head--selected {
     border-color: $secondary;
     box-shadow: 0px 0px 4px rgba(77, 174, 255, 0.4);
 
-    .select__default-icon {
+    .select__head-icon {
       transform: rotate(-180deg);
     }
 
-    + .select__list {
+    + .select__body {
       display: block;
     }
 
@@ -66,40 +66,41 @@
   }
 }
 
-.select__default-text {
+.select__head-title {
+  @include text-overflow;
   @include font-size("14");
   @include font-weight("regular");
-  display: block;
+  flex: 1;
   color: $text-02;
 }
 
-.select__default-icon {
-  @include position-right-center(12px);
+.select__head-icon {
   @include svg-icon-size(20px);
+  margin-left: auto;
   transform: none;
-  margin-top: -10px;
-  color: $text-03;
+}
+
+.select__body{
+  display: none;
 }
 
 .select__list {
-  display: none;
-  position: relative;
-  top: 100%;
+  z-index: z('float');
+  position: absolute;
+  top: calc(100% + 2px);
   left: 0;
+  right: 0;
   background-color: $ui-02;
+  box-shadow: 0px 0px 8px rgba(206, 211, 217, 0.7);
+  border-radius: 2px;
 }
 
 // -------------------------
 // Size overwrite
 // -------------------------
 .select--lg {
-  .select__default-button {
-    min-width: rem(132px);
+  .select__head {
     height: $button-height-lg;
-  }
-
-  .select__list {
-    min-width: rem(140px);
   }
 
   .select__button {
@@ -113,20 +114,13 @@
 }
 
 .select--sm {
-  .select__default-button {
-    padding: $spacing-2xs $spacing-lg $spacing-2xs $spacing-sm;
-    min-width: rem(110px);
+  .select__head {
+    padding: $spacing-2xs $spacing-xs;
     height: $button-height-sm;
   }
 
-  .select__default-icon {
+  .select__head-icon {
     @include svg-icon-size(14px);
-    right: 8px;
-    margin-top: -7px;
-  }
-
-  .select__list {
-    min-width: rem(110px);
   }
 
   .select__button {

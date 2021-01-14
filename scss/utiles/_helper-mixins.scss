@@ -284,3 +284,73 @@
     fill: $primary;
   }
 }
+
+@mixin button-list{
+  &__list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: $spacing-xs;
+  }
+
+  &__item {
+    width: calc(33.33% - 8px);
+    margin: $spacing-2xs;
+
+    &:hover {
+      background-color: $ui-01;
+    }
+  }
+
+  &__button {
+    @include button-normal;
+    @include font-weight("regular");
+    @include stable-padding($spacing-2xs, $spacing-xs);
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    color: inherit;
+    text-align: center;
+
+    // &:hover:not(:disabled) {
+    //   background-color: $ui-01;
+    // }
+
+    &:active {
+      background-color: $ui-01;
+    }
+  }
+
+  &__icon {
+    @include svg-icon-size($button-height-md);
+    vertical-align: middle;
+  }
+
+  &__button:active{
+    border: 1px solid $primary;
+  }
+
+  &__button:active &__text {
+    color: $primary;
+  }
+
+  &__button:active &__icon {
+    fill: $primary;
+  }
+
+  &__text {
+    @include text-overflow;
+    @include font-size("14");
+    @include line-height("heading");
+    width: 100%;
+    text-align: center;
+    color: inherit;
+  }
+
+}
