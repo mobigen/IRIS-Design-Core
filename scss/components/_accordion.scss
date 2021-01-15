@@ -1,9 +1,12 @@
 .accordion {
-  @include list;
   width: rem(400px);
 }
 
-.accordion-button{
+.accordion-vertical {
+  @include list;
+}
+
+.accordion-horizontal {
   @include button-list;
   width: rem(400px);
 }
@@ -48,18 +51,19 @@
 }
 
 
-.accordion__list, .accordion-button__list {
+.accordion-vertical__list,
+.accordion-horizontal__list {
   border: 1px solid $hover-row;
   border-top: transparent;
 }
 
-.accordion__text {
+.accordion-vertical__text {
   @include text-overflow;
   width: 100%;
   margin: 0;
 }
 
-.accordion__item+.accordion__item {
+.accordion-vertical__item+.accordion-vertical__item {
   border-top: 1px solid $hover-row;
 }
 
