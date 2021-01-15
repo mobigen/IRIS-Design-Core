@@ -49,7 +49,7 @@ requirePngAll(require.context('../images/', true, /\.png$/));
 // ****************************
 
 // toggle button
-const beforeToggleButton = document.querySelectorAll(".select__head, .accordion__head");
+const beforeToggleButton = document.querySelectorAll(".select__head, .accordion__head, .toggle-switch");
 const afterToggleSuffix = "--selected";
 let afterToggleButton;
 
@@ -69,6 +69,7 @@ const toggleSelectbox = () => {
       console.log(`최종 => ${afterToggleButton}`);
 
       i.classList.toggle(afterToggleButton);
+
     })
   })
 }

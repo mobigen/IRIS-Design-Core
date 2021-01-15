@@ -9,8 +9,8 @@
 .pagination__link {
   @include button-normal;
   @include font-weight("regular");
-  width: 32px;
-  height: 32px;
+  width: rem(32px);
+  height: rem(32px);
   background-color: transparent;
   border-radius: 2px;
   color: $text-02;

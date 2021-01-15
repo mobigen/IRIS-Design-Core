@@ -243,7 +243,8 @@
 .component-examle__item-group .button + .button,
 .component-examle__item-group .checkbox + .checkbox,
 .component-examle__item-group .context-menu + .context-menu,
-.component-examle__item-group .select + .select {
+.component-examle__item-group .select + .select,
+.component-examle__item-group .toggle-switch + .toggle-switch {
   margin-left: $spacing-sm;
 }
 
