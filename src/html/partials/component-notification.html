@@ -1,0 +1,211 @@
+<!-- notification -->
+<div class="page-header">
+  <h2 class="page-header__lable">component</h2>
+  <h3 class="page-header__title">Notification</h3>
+</div>
+<div class="page-content">
+  <p class="page__desc">알림 메시지</p>
+  <div class="page__usage md">
+    <ul>
+      <li>노티피케이션은 화면 일부를 가리며 나타나는 일반적인 유형과 메시지만 표시해주는 두가지 유형으로 구분합니다</li>
+      <li>Message 유형은 Validation에 사용됩니다. (구, mui-message)</li>
+      <li>Message 유형은 notification-message--inline 클래스를 추가하여 inline-flex로 사용할 수 있습니다</li>
+    </ul>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Default</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div style="width: 600px;">
+          <!-- info -->
+          <div class="notification notification--info">
+            <svg class="notification__icon svg-icon">
+              <use xlink:href="#info-fill"></use>
+            </svg>
+            <div class="notification__contents">
+              <p class="notification__title">Notification Title</p>
+              <p class="notification__text">Notification Text Here.</p>
+            </div>
+          </div>
+          <!-- success -->
+          <div class="notification notification--success">
+            <svg class="notification__icon svg-icon">
+              <use xlink:href="#checkmark-fill"></use>
+            </svg>
+            <div class="notification__contents">
+              <p class="notification__title">Notification Title</p>
+              <p class="notification__text">Notification Text Here.</p>
+            </div>
+          </div>
+          <!-- warning -->
+          <div class="notification notification--warning">
+            <svg class="notification__icon svg-icon">
+              <use xlink:href="#warning-fill"></use>
+            </svg>
+            <div class="notification__contents">
+              <p class="notification__title">Notification Title</p>
+              <p class="notification__text">Notification Text Here.</p>
+            </div>
+          </div>
+          <!-- error -->
+          <div class="notification notification--error">
+            <svg class="notification__icon svg-icon">
+              <use xlink:href="#issue-fill"></use>
+            </svg>
+            <div class="notification__contents">
+              <p class="notification__title">Notification Title</p>
+              <p class="notification__text">Notification Text Here Notification Text Here Notification Text Here Notification Text Here Notification Text Here Notification Text Here Notification Text Here Notification Text Here.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Closable</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div style="width: 600px;">
+          <!-- info -->
+          <div class="notification notification--info">
+            <svg class="notification__icon svg-icon">
+              <use xlink:href="#info-fill"></use>
+            </svg>
+            <div class="notification__contents">
+              <p class="notification__title">Notification Title</p>
+              <p class="notification__text">Notification Text Here.</p>
+            </div>
+            <button class="notification__close-button">
+              <svg class="svg-icon">
+                <use xlink:href="#close"></use>
+              </svg>
+            </button>
+          </div>
+          <!-- success -->
+          <div class="notification notification--success">
+            <svg class="notification__icon svg-icon">
+              <use xlink:href="#checkmark-fill"></use>
+            </svg>
+            <div class="notification__contents">
+              <p class="notification__title">Notification Title</p>
+              <p class="notification__text">Notification Text Here.</p>
+            </div>
+            <button class="notification__close-button">
+              <svg class="svg-icon">
+                <use xlink:href="#close"></use>
+              </svg>
+            </button>
+          </div>
+          <!-- warning -->
+          <div class="notification notification--warning">
+            <svg class="notification__icon svg-icon">
+              <use xlink:href="#warning-fill"></use>
+            </svg>
+            <div class="notification__contents">
+              <p class="notification__title">Notification Title</p>
+              <p class="notification__text">Notification Text Here.</p>
+            </div>
+            <button class="notification__close-button">
+              <svg class="svg-icon">
+                <use xlink:href="#close"></use>
+              </svg>
+            </button>
+          </div>
+          <!-- error -->
+          <div class="notification notification--error">
+            <svg class="notification__icon svg-icon">
+              <use xlink:href="#issue-fill"></use>
+            </svg>
+            <div class="notification__contents">
+              <p class="notification__title">Notification Title</p>
+              <p class="notification__text">Notification Text Here Notification Text Here Notification Text Here Notification Text Here Notification Text Here Notification Text Here Notification Text Here Notification Text Here.</p>
+            </div>
+            <button class="notification__close-button">
+              <svg class="svg-icon">
+                <use xlink:href="#close"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Message - block</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <!-- info -->
+          <div class="notification-message notification-message--info">
+            <svg class="notification-message__icon svg-icon">
+              <use xlink:href="#info-fill"></use>
+            </svg>
+            <span class="notification-message__text">Notification Message</span>
+          </div>
+          <!-- success -->
+          <div class="notification-message notification-message--success">
+            <svg class="notification-message__icon svg-icon">
+              <use xlink:href="#checkmark-fill"></use>
+            </svg>
+            <span class="notification-message__text">Notification Message</span>
+          </div>
+          <!-- warning -->
+          <div class="notification-message notification-message--warning">
+            <svg class="notification-message__icon svg-icon">
+              <use xlink:href="#warning-fill"></use>
+            </svg>
+            <span class="notification-message__text">Notification Message</span>
+          </div>
+          <!-- error -->
+          <div class="notification-message notification-message--error">
+            <svg class="notification-message__icon svg-icon">
+              <use xlink:href="#issue-fill"></use>
+            </svg>
+            <span class="notification-message__text">Notification Message</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Message - inline</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <!-- info -->
+          <div class="notification-message notification-message--inline notification-message--info">
+            <svg class="notification-message__icon svg-icon">
+              <use xlink:href="#info-fill"></use>
+            </svg>
+            <span class="notification-message__text">Notification Message</span>
+          </div>
+          <!-- success -->
+          <div class="notification-message notification-message--inline notification-message--success">
+            <svg class="notification-message__icon svg-icon">
+              <use xlink:href="#checkmark-fill"></use>
+            </svg>
+            <span class="notification-message__text">Notification Message</span>
+          </div>
+          <!-- warning -->
+          <div class="notification-message notification-message--inline notification-message--warning">
+            <svg class="notification-message__icon svg-icon">
+              <use xlink:href="#warning-fill"></use>
+            </svg>
+            <span class="notification-message__text">Notification Message</span>
+          </div>
+          <!-- error -->
+          <div class="notification-message notification-message--inline notification-message--error">
+            <svg class="notification-message__icon svg-icon">
+              <use xlink:href="#issue-fill"></use>
+            </svg>
+            <span class="notification-message__text">Notification Message</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

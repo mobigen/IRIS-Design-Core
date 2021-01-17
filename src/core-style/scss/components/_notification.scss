@@ -1,0 +1,118 @@
+// -------------------------
+// Mixins
+// -------------------------
+@mixin notification-status($status-color, $background-color) {
+  background-color: $background-color;
+
+  .notification__icon {
+    fill: $status-color;
+  }
+}
+
+@mixin notification-message-status($status-color) {
+  color: $status-color;
+
+  .notification-message__icon {
+    fill: $status-color;
+  }
+}
+
+@mixin notification-message {
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    @include svg-icon-size(16px);
+    margin-right: $spacing-2xs ;
+  }
+
+  &__text {
+    @include line-height("heading");
+    @include font-size("12");
+  }
+
+  &--inline {
+    display: inline-flex;
+  }
+
+  &--info {
+    @include notification-message-status($support-01);
+  }
+  
+  &--success {
+    @include notification-message-status($support-02);
+  }
+  
+  &--warning {
+    @include notification-message-status($support-03);
+  }
+  
+  &--error {
+    @include notification-message-status($support-04);
+  }
+  
+}
+
+// -------------------------
+// Notification
+// -------------------------
+.notification {
+  display: flex;
+  width: 100%;
+}
+
+.notification__icon {
+  @include svg-icon-size(22px);
+  flex-shrink: 0;
+  margin: $spacing-md $spacing-sm 0 $spacing-md;
+}
+
+.notification__close-button {
+  @include button;
+  @include button-theme--link;
+  padding: 0;
+  width: rem(48px);
+  height: rem(53px);
+  margin-left: auto;
+
+  .svg-icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.notification__contents {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: $spacing-md $spacing-lg $spacing-md 0
+}
+
+.notification__title {
+  @include font-weight("medium");
+  margin-right: $spacing-2xs;
+}
+
+.notification--info {
+  @include notification-status($support-01, #DEEBFF);
+}
+
+.notification--success {
+  @include notification-status($support-02, #E3FCEF);
+}
+
+.notification--warning {
+  @include notification-status($support-03, #FFF5EA);
+}
+
+.notification--error {
+  @include notification-status($support-04, #FFEBE6);
+}
+
+// -------------------------
+// Notification Message
+// -------------------------
+.notification-message {
+  @include notification-message;
+}
+

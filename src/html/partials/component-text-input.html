@@ -1,4 +1,3 @@
-
 <!-- text-input -->
 <div class="page-header">
   <h2 class="page-header__lable">component</h2>
@@ -35,8 +34,20 @@
             <div class="component-examle__item-group component-examle__item-group--row">
               <!-- default -->
               <input type="text" class="text-input" placeholder="placeholder text" />
+              <div class="notification-message notification-message--error" style="align-self: flex-start;">
+                <svg class="notification-message__icon svg-icon">
+                  <use xlink:href="#issue-fill"></use>
+                </svg>
+                <span class="notification-message__text">Notification Message</span>
+              </div>
               <!-- filled -->
               <input type="text" class="text-input" placeholder="placeholder text" value="input filled" />
+              <div class="notification-message notification-message--info" style="align-self: flex-start;">
+                <svg class="notification-message__icon svg-icon">
+                  <use xlink:href="#info-fill"></use>
+                </svg>
+                <span class="notification-message__text">Notification Message</span>
+              </div>
               <!-- disabled -->
               <input type="text" class="text-input" placeholder="placeholder text" disabled />
               <!-- filled + disabled -->
