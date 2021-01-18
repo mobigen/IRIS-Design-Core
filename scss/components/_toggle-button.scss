@@ -1,0 +1,55 @@
+.toggle-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-button__item {
+  @include button;
+  @include button-theme(rgba(171, 175, 186, 0.5), $ui-02, $ui-04, $text-05);
+
+  svg+.toggle-button__text {
+    margin-left: $spacing-3xs;
+  }
+
+  &:disabled,
+  &:disabled:hover,
+  &:disabled:focus {
+    background-color: $text-05;
+  }
+}
+
+.toggle-button__item:not(:only-child):first-child {
+  border-radius: 2px 0px 0px 2px;
+}
+
+.toggle-button__item:not(:first-child),
+.toggle-button__item:not(:last-child) {
+  border-radius: 0;
+}
+
+.toggle-button__item:not(:only-child):last-child {
+  border-radius: 0px 2px 2px 0px;
+}
+// -------------------------
+// Theme
+// -------------------------
+.toggle-button__item--selected {
+  @include button-theme--primary;
+}
+
+.toggle-button__item--icon {
+  @include button--icon(6px, 20px);
+}
+
+// -------------------------
+// Size
+// -------------------------
+.toggle-button__item--sm {
+  @include button--sm;
+}
+
+.toggle-button__item--icon.toggle-button__item--sm {
+  @include button--icon(4px, 16px);
+}
