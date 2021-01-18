@@ -17,7 +17,7 @@
 
 .accordion__head {
   @include button-normal;
-  justify-content: start;
+  justify-content: flex-start;
   width: 100%;
   height: $button-height-md;
   padding: $spacing-2xs $spacing-sm;

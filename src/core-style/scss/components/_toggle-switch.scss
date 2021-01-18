@@ -1,6 +1,6 @@
 .toggle-switch {
   @include button-normal;
-  justify-content: start;
+  justify-content: flex-start;
   width: rem(45px);
   height: rem(22px);
   padding: $spacing-3xs;

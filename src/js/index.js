@@ -49,7 +49,7 @@ requirePngAll(require.context('../images/', true, /\.png$/));
 // ****************************
 
 // toggle button
-const beforeToggleButton = document.querySelectorAll(".select__head, .accordion__head, .toggle-switch");
+const beforeToggleButton = document.querySelectorAll(".select__head, .accordion__head, .toggle-switch, .toggle-button__item");
 const afterToggleSuffix = "--selected";
 let afterToggleButton;
 
