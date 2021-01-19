@@ -65,13 +65,13 @@
   }
 }
 
-.tag--large {
+.tag--lg {
   @include font-size("14");
   height: rem(32px);
   padding: 0 $spacing-xs;
 }
 
-.tag--small {
+.tag--sm {
   height: rem(18px);
 }
 
