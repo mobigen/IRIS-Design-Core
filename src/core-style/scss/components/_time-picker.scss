@@ -1,0 +1,152 @@
+.time-picker {
+  @include font-size("14");
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: rem(32px);
+  padding: 0 $spacing-xl 0 $spacing-sm;
+  border: 1px solid $ui-04;
+  border-radius: $field-border-radius;
+  background-color: rgba($ui-02, 0.8);
+  transition: all $duration-fast-01 motion(standard, productive);
+
+  &:hover {
+    border-color: darken($ui-04, 15%);
+
+    .time-picker__input {
+      background-color: rgba($ui-02, 1);
+      border-color: darken($ui-04, 15%);
+    }
+
+    .time-picker__button {
+      border-left-color: darken($ui-04, 15%);
+      background-color: $ui-01;
+    }
+  }
+}
+
+.time-picker__input {
+  @include font-family("sans");
+  width: 100%;
+  line-height: 1.5;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  color: $text-02;
+
+  &::placeholder {
+    color: $text-05;
+  }
+
+  &[readonly],
+  &[readonly]:hover,
+  &[readonly]:focus {
+    cursor: default;
+    background-color: $ui-01;
+    color: $text-01;
+  }
+
+  &[disabled],
+  &[disabled]:hover,
+  &[disabled]:focus {
+    cursor: not-allowed;
+    background-color: rgba($ui-02, 0.8);
+    // border-color: $ui-04;
+    // opacity: 0.5;
+    box-shadow: none;
+  }
+}
+
+.time-picker__button {
+  @include button-normal;
+  @include button--icon(6px, 20px);
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  border-color: $ui-04;
+  border-width: 0 0 0 1px;
+  background-color: $ui-02;
+  transition: all $duration-fast-01 motion(standard, productive);
+}
+
+// dropdown container
+.time-picker-panel {
+  @include layer("overlay");
+  display: flex;
+  flex: auto;
+  position: absolute;
+  height: rem(258px);
+  min-width: 128px;
+  margin-top: 3px;
+  background-color: $ui-02;
+  border: 1px solid $ui-04;
+  // z-index: 22;
+}
+
+.time-picker-panel-list {
+  @include list;
+  width: calc(100% / 3);
+  overflow-y: auto;
+
+  &:not(:last-child) {
+    border-right: 1px solid $ui-04;
+  }
+}
+
+.time-picker-panel-list__button {
+  text-align: center;
+}
+
+// -------------------------
+// Modifier: focused
+// -------------------------
+.time-picker--focused {
+  border-color: $secondary;
+  box-shadow: 0 0 4px rgba($secondary, 0.65);
+
+  .time-picker__button {
+    border-left-color: $secondary;
+    background-color: rgba($secondary, 0.06);
+
+    .svg-icon {
+      fill: $secondary;
+    }
+  }
+
+  &:hover {
+    border-color: $secondary;
+
+    .time-picker__button {
+      border-left-color: $secondary;
+      background-color: rgba($secondary, 0.06);
+
+      .svg-icon {
+        fill: $secondary;
+      }
+    }
+  }
+}
+
+// -------------------------
+// Modifier: disabled
+// -------------------------
+
+.time-picker--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+
+  &:hover {
+    border-color: $ui-04;
+
+    .time-picker__button {
+      border-left-color: $ui-04;
+      background-color: $ui-02;
+    }
+  }
+
+  .time-picker__button,
+  .time-picker__input {
+    cursor: not-allowed;
+  }
+}

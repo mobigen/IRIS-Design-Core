@@ -1,6 +1,5 @@
 .number-input {
   position: relative;
-  // width: rem(100px);
 
   &:hover {
     .number-input__input {
@@ -20,14 +19,6 @@
       }
     }
   }
-
-  // &:active,
-  // &:focus {
-  //   .number-input__input {
-  //     border-color: $secondary;
-  //     box-shadow: 0 0 4px rgba($secondary, 0.65);
-  //   }
-  // }
 }
 
 .number-input__input {
@@ -93,7 +84,6 @@
 // modifiers
 // -------------------------
 .number-input--lg {
-
   .number-input__input {
     @include font-size("16");
     height: rem(40px);
@@ -104,9 +94,9 @@
   width: rem(64px);
 
   .number-input__input {
-  @include font-size("12");
-  padding-left: $spacing-xs;
-  height: rem(24px);
+    @include font-size("12");
+    padding-left: $spacing-xs;
+    height: rem(24px);
   }
 
   .number-input__control-button {
