@@ -48,25 +48,27 @@ requirePngAll(require.context('../images/', true, /\.png$/));
 // UI Event
 // ****************************
 
-// toggle button
-const beforeToggleButton = document.querySelectorAll(".select__head, .accordion__head, .toggle-switch, .toggle-button__item");
+// toggle variation
+const beforeToggleElement = document.querySelectorAll(".select__head, .accordion__head, .toggle-switch, .toggle-button__item");
 const afterToggleSuffix = "--selected";
-let afterToggleButton;
 
+// 토글 버튼 클릭시 --selected 추가
 const toggleSelectbox = () => {
-  // window OS에서 동작하도록 설정 
-  if (window.NodeList && !NodeList.prototype.forEach) {
-    NodeList.prototype.forEach = Array.prototype.forEach;
-  }
 
-  beforeToggleButton.forEach((i) => {
+  beforeToggleElement.forEach((i) => {
+    // window OS에서 동작하도록 설정 
+    if (window.NodeList && !NodeList.prototype.forEach) {
+      NodeList.prototype.forEach = Array.prototype.forEach;
+    }
+
     i.addEventListener('click', (event) => {
       event.preventDefault();
-      console.log(`i => ${i.classList[0]}`);
 
-      afterToggleButton = i.classList[0].concat(afterToggleSuffix);
+      let afterToggleButton = i.classList[0].concat(afterToggleSuffix);
 
-      console.log(`최종 => ${afterToggleButton}`);
+      // Test
+      console.log(`Click한 Element의 첫번째 클릭스=> ${i.classList[0]}`);
+      console.log(`Element + "--selected" => ${afterToggleButton}`);
 
       i.classList.toggle(afterToggleButton);
 
@@ -75,6 +77,7 @@ const toggleSelectbox = () => {
 }
 
 const init = () => {
+  tooltipMovableActive();
   toggleSelectbox();
 }
 
