@@ -49,7 +49,7 @@ requirePngAll(require.context('../images/', true, /\.png$/));
 // ****************************
 
 // toggle variation
-const beforeToggleElement = document.querySelectorAll(".select__head, .accordion__head, .toggle-switch, .toggle-button__item");
+const beforeToggleElement = document.querySelectorAll(".select, .accordion__head, .toggle-switch, .toggle-button__item");
 const afterToggleSuffix = "--selected";
 
 // 토글 버튼 클릭시 --selected 추가
@@ -67,7 +67,7 @@ const toggleSelectbox = () => {
       let afterToggleButton = i.classList[0].concat(afterToggleSuffix);
 
       // Test
-      console.log(`Click한 Element의 첫번째 클릭스=> ${i.classList[0]}`);
+      console.log(`Click Element => ${i.classList[0]}`);
       console.log(`Element + "--selected" => ${afterToggleButton}`);
 
       i.classList.toggle(afterToggleButton);
@@ -77,7 +77,6 @@ const toggleSelectbox = () => {
 }
 
 const init = () => {
-  tooltipMovableActive();
   toggleSelectbox();
 }
 
