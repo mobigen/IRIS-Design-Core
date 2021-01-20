@@ -1,15 +1,9 @@
 // -------------------------
 // Select
 // -------------------------
-.select {
-  @include list;
-  min-width: rem(160px);
-  max-width: rem(230px);
-  position: relative;
-  color: $text-02;
-}
 
-.select__head {
+// select button
+.select {
   @include button-normal;
   width: 100%;
   padding: $spacing-2xs $spacing-sm;
@@ -23,7 +17,7 @@
     border-color: $secondary !important;
   }
 
-  &:hover{
+  &:hover {
     border-color: $text-03;
   }
 
@@ -39,24 +33,24 @@
     cursor: not-allowed;
     border-color: $hover-row !important;
 
-    .select__head-title {
+    .select__title {
       color: $text-05;
     }
 
-    .select__head-icon {
+    .select__icon {
       opacity: 0.5;
     }
   }
 
-  &.select__head--selected {
+  &.select--selected {
     border-color: $secondary;
     box-shadow: 0px 0px 4px rgba(77, 174, 255, 0.4);
 
-    .select__head-icon {
+    .select__icon {
       transform: rotate(-180deg);
     }
 
-    + .select__body {
+    +.select-panel {
       display: block;
     }
 
@@ -66,7 +60,7 @@
   }
 }
 
-.select__head-title {
+.select__title {
   @include text-overflow;
   @include font-size("14");
   @include font-weight("regular");
@@ -74,65 +68,67 @@
   color: $text-02;
 }
 
-.select__head-icon {
+.select__icon {
   @include svg-icon-size(20px);
   margin-left: auto;
   transform: none;
 }
 
-.select__body{
+// select panel(dropdown)
+.select-panel {
+  @include list;
   display: none;
-}
-
-.select__list {
   z-index: z('float');
   position: absolute;
-  top: calc(100% + 2px);
-  left: 0;
-  right: 0;
   background-color: $ui-02;
   box-shadow: 0px 0px 8px rgba(206, 211, 217, 0.7);
   border-radius: 2px;
 }
 
+.select-panel__list {
+  background-color: $ui-02;
+}
+
 // -------------------------
 // Size overwrite
 // -------------------------
+// lg
 .select--lg {
-  .select__head {
-    height: $button-height-lg;
-  }
+  height: $button-height-lg;
+}
 
-  .select__button {
+.select-panel--lg {
+  .select-panel__button {
     @include stable-padding($spacing-2xs, $spacing-sm);
     height: $button-height-lg;
   }
 
-  .select__icon {
+  .select-panel__icon {
     @include svg-icon-size(20px);
   }
 }
 
+// sm
 .select--sm {
-  .select__head {
-    padding: $spacing-2xs $spacing-xs;
-    height: $button-height-sm;
-  }
+  padding: $spacing-2xs $spacing-xs;
+  height: $button-height-sm;
+}
 
-  .select__head-icon {
+.select-panel--sm {
+  .select__icon {
     @include svg-icon-size(14px);
   }
 
-  .select__button {
+  .select-panel__button {
     @include stable-padding($spacing-3xs, $spacing-xs);
     height: $button-height-sm;
   }
 
-  .select__icon {
+  .select-panel__icon {
     @include svg-icon-size(16px);
   }
 
-  .select__text {
+  .select-panel__text {
     @include font-size("12");
   }
 }
