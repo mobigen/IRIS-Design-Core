@@ -1,6 +1,5 @@
 .number-input {
   position: relative;
-  // width: rem(100px);
 
   &:hover {
     .number-input__input {
@@ -12,7 +11,7 @@
       border-left-color: darken($ui-04, 15%);
     }
 
-    .number-input__control-btn {
+    .number-input__control-button {
       background-color: $ui-01;
 
       &.down-icon {
@@ -20,14 +19,6 @@
       }
     }
   }
-
-  // &:active,
-  // &:focus {
-  //   .number-input__input {
-  //     border-color: $secondary;
-  //     box-shadow: 0 0 4px rgba($secondary, 0.65);
-  //   }
-  // }
 }
 
 .number-input__input {
@@ -77,7 +68,7 @@
   transition: all $duration-fast-01 motion(standard, productive);
 }
 
-.number-input__control-btn {
+.number-input__control-button {
   @include button-normal;
   @include button--icon(2px, 14px);
   height: 50%;
@@ -85,7 +76,7 @@
   border-radius: 0;
 }
 
-.number-input__control-btn.down-icon {
+.number-input__control-button.down-icon {
   border-top: 1px solid $ui-04;
 }
 
@@ -93,7 +84,6 @@
 // modifiers
 // -------------------------
 .number-input--lg {
-
   .number-input__input {
     @include font-size("16");
     height: rem(40px);
@@ -104,12 +94,12 @@
   width: rem(64px);
 
   .number-input__input {
-  @include font-size("12");
-  padding-left: $spacing-xs;
-  height: rem(24px);
+    @include font-size("12");
+    padding-left: $spacing-xs;
+    height: rem(24px);
   }
 
-  .number-input__control-btn {
+  .number-input__control-button {
     svg {
       width: 10px;
       height: 10px;
@@ -127,7 +117,7 @@
       border-left-color: $secondary;
     }
 
-    .number-input__control-btn {
+    .number-input__control-button {
       background-color: rgba($secondary, 0.06);
 
       &.down-icon {
@@ -148,7 +138,7 @@
     border-left-color: $secondary;
   }
 
-  .number-input__control-btn {
+  .number-input__control-button {
     background-color: rgba($secondary, 0.06);
 
     &.down-icon {
@@ -170,7 +160,7 @@
       border-left-color: $ui-04;
     }
 
-    .number-input__control-btn {
+    .number-input__control-button {
       background-color: $ui-02;
       cursor: not-allowed;
 
