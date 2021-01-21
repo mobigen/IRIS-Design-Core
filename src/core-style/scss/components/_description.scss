@@ -20,7 +20,7 @@
   border-top: 1px solid $hover-row;
 }
 
-.description__item:last-child:not(:only-child){
+.description__item:last-child:not(:only-child) {
   border-bottom: 1px solid $hover-row;
 }
 
@@ -53,16 +53,16 @@
     @include font-size("18");
   }
 
-  .description__item{
+  .description__item {
     height: rem(55px);
   }
 
-  .description__title{
+  .description__title {
     width: rem(180px);
   }
 
-  .description__title, .description__text{
+  .description__title,
+  .description__text {
     font-size: 15px;
-
   }
 }
