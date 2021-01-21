@@ -3042,7 +3042,7 @@
                   </ul>
                 </div>
               </div>
-              <div style="position: relative; min-width: 160px; max-width: 230px;">
+              <div style="position: relative; min-width: 160px; max-width: 230px; margin-left: 8px;">
                 <!-- select--selected 클래스 추가시 open -->
                 <button class="select select--lg" type="button">
                   <strong class="select__title">선택하세요</strong>
@@ -3095,7 +3095,7 @@
                   </ul>
                 </div>
               </div>
-              <div style="position: relative; min-width: 160px; max-width: 230px;">
+              <div style="position: relative; min-width: 160px; max-width: 230px; margin-left: 8px;">
                 <!-- select--selected 클래스 추가시 open -->
                 <button class="select select--lg" type="button">
                   <strong class="select__title">선택하세요</strong>
@@ -3168,7 +3168,7 @@
                   </ul>
                 </div>
               </div>
-              <div style="position: relative; min-width: 160px; max-width: 230px;">
+              <div style="position: relative; min-width: 160px; max-width: 230px; margin-left: 8px;">
                 <button class="select select--lg" type="button" disabled>
                   <strong class="select__title">선택하세요</strong>
                   <svg class="svg-icon select__icon">
@@ -3233,7 +3233,7 @@
                   </ul>
                 </div>
               </div>
-              <div style="position: relative; min-width: 160px; max-width: 230px;">
+              <div style="position: relative; min-width: 160px; max-width: 230px; margin-left: 8px;">
                 <!-- select--selected 클래스 추가시 open -->
                 <button class="select" type="button">
                   <strong class="select__title">선택하세요</strong>
@@ -3286,7 +3286,7 @@
                   </ul>
                 </div>
               </div>
-              <div style="position: relative; min-width: 160px; max-width: 230px;">
+              <div style="position: relative; min-width: 160px; max-width: 230px; margin-left: 8px;">
                 <!-- select--selected 클래스 추가시 open -->
                 <button class="select" type="button">
                   <strong class="select__title">선택하세요</strong>
@@ -3359,7 +3359,7 @@
                   </ul>
                 </div>
               </div>
-              <div style="position: relative; min-width: 160px; max-width: 230px;">
+              <div style="position: relative; min-width: 160px; max-width: 230px; margin-left: 8px;">
                 <button class="select" type="button" disabled>
                   <strong class="select__title">선택하세요</strong>
                   <svg class="svg-icon select__icon">
@@ -3424,7 +3424,7 @@
                   </ul>
                 </div>
               </div>
-              <div style="position: relative; min-width: 160px; max-width: 230px;">
+              <div style="position: relative; min-width: 160px; max-width: 230px; margin-left: 8px;">
                 <!-- select--selected 클래스 추가시 open -->
                 <button class="select select--sm" type="button">
                   <strong class="select__title">선택하세요</strong>
@@ -3477,7 +3477,7 @@
                   </ul>
                 </div>
               </div>
-              <div style="position: relative; min-width: 160px; max-width: 230px;">
+              <div style="position: relative; min-width: 160px; max-width: 230px; margin-left: 8px;">
                 <!-- select--selected 클래스 추가시 open -->
                 <button class="select select--sm" type="button">
                   <strong class="select__title">선택하세요</strong>
@@ -3550,7 +3550,7 @@
                   </ul>
                 </div>
               </div>
-              <div style="position: relative; min-width: 160px; max-width: 230px;">
+              <div style="position: relative; min-width: 160px; max-width: 230px; margin-left: 8px;">
                 <button class="select select--sm" type="button" disabled>
                   <strong class="select__title">선택하세요</strong>
                   <svg class="svg-icon select__icon">
@@ -5357,27 +5357,84 @@
       <div class="component-example__live">
         <div>
           <div class="component-example__row">
+            <p class="component-example__size-label">Size: lg</p>
+            <div class="component-examle__item-group component-examle__item-group--row">
+              <div class="upload upload--lg" style="width: 375px;">
+                <input type="text" class="upload__input" placeholder="등록한 파일명이 보여집니다." readonly>
+                <div class="upload__file">
+                  <button class="upload__file-button" type="button">
+                    <svg class="svg-icon">
+                      <use xlink:href="#add"></use>
+                    </svg>
+                    Upload
+                  </button>
+                  <input type="file" class="upload__file-input">
+                </div>
+              </div>
+              <div class="upload upload--selected upload--lg" style="width: 375px;">
+                <input type="text" class="upload__input" placeholder="등록한 파일명이 보여집니다." readonly>
+                <div class="upload__file">
+                  <button class="upload__file-button" type="button">
+                    <svg class="svg-icon">
+                      <use xlink:href="#add"></use>
+                    </svg>
+                    Upload
+                  </button>
+                  <input type="file" class="upload__file-input">
+                </div>
+              </div>
+              <div class="upload upload--disabled upload--lg" style="width: 375px;">
+                <input type="text" class="upload__input" placeholder="등록한 파일명이 보여집니다." readonly disabled>
+                <div class="upload__file">
+                  <button class="upload__file-button" type="button" disabled>
+                    <svg class="svg-icon">
+                      <use xlink:href="#add"></use>
+                    </svg>
+                    Upload
+                  </button>
+                  <input type="file" class="upload__file-input" disabled>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="component-example__row">
             <p class="component-example__size-label">Size: md</p>
-            <div class="component-examle__item-group">
-              <div class="tooltip tooltip--bottom">
-                <span class="tooltip__text">
-                  Tooltip Text
-                </span>
+            <div class="component-examle__item-group component-examle__item-group--row">
+              <div class="upload" style="width: 375px;">
+                <input type="text" class="upload__input" placeholder="등록한 파일명이 보여집니다." readonly>
+                <div class="upload__file">
+                  <button class="upload__file-button" type="button">
+                    <svg class="svg-icon">
+                      <use xlink:href="#add"></use>
+                    </svg>
+                    Upload
+                  </button>
+                  <input type="file" class="upload__file-input">
+                </div>
               </div>
-              <div class="tooltip tooltip--top">
-                <span class="tooltip__text">
-                  Tooltip Text
-                </span>
+              <div class="upload upload--selected" style="width: 375px;">
+                <input type="text" class="upload__input" placeholder="등록한 파일명이 보여집니다." readonly>
+                <div class="upload__file">
+                  <button class="upload__file-button" type="button">
+                    <svg class="svg-icon">
+                      <use xlink:href="#add"></use>
+                    </svg>
+                    Upload
+                  </button>
+                  <input type="file" class="upload__file-input">
+                </div>
               </div>
-              <div class="tooltip tooltip--left">
-                <span class="tooltip__text">
-                  Tooltip Text
-                </span>
-              </div>
-              <div class="tooltip tooltip--right">
-                <span class="tooltip__text">
-                  Tooltip Text
-                </span>
+              <div class="upload upload--disabled" style="width: 375px;">
+                <input type="text" class="upload__input" placeholder="등록한 파일명이 보여집니다." readonly disabled>
+                <div class="upload__file">
+                  <button class="upload__file-button" type="button" disabled>
+                    <svg class="svg-icon">
+                      <use xlink:href="#add"></use>
+                    </svg>
+                    Upload
+                  </button>
+                  <input type="file" class="upload__file-input" disabled>
+                </div>
               </div>
             </div>
           </div>

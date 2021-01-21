@@ -17,27 +17,84 @@
       <div class="component-example__live">
         <div>
           <div class="component-example__row">
+            <p class="component-example__size-label">Size: lg</p>
+            <div class="component-examle__item-group component-examle__item-group--row">
+              <div class="upload upload--lg" style="width: 375px;">
+                <input type="text" class="upload__input" placeholder="등록한 파일명이 보여집니다." readonly>
+                <div class="upload__file">
+                  <button class="upload__file-button" type="button">
+                    <svg class="svg-icon">
+                      <use xlink:href="#add"></use>
+                    </svg>
+                    Upload
+                  </button>
+                  <input type="file" class="upload__file-input">
+                </div>
+              </div>
+              <div class="upload upload--selected upload--lg" style="width: 375px;">
+                <input type="text" class="upload__input" placeholder="등록한 파일명이 보여집니다." readonly>
+                <div class="upload__file">
+                  <button class="upload__file-button" type="button">
+                    <svg class="svg-icon">
+                      <use xlink:href="#add"></use>
+                    </svg>
+                    Upload
+                  </button>
+                  <input type="file" class="upload__file-input">
+                </div>
+              </div>
+              <div class="upload upload--disabled upload--lg" style="width: 375px;">
+                <input type="text" class="upload__input" placeholder="등록한 파일명이 보여집니다." readonly disabled>
+                <div class="upload__file">
+                  <button class="upload__file-button" type="button" disabled>
+                    <svg class="svg-icon">
+                      <use xlink:href="#add"></use>
+                    </svg>
+                    Upload
+                  </button>
+                  <input type="file" class="upload__file-input" disabled>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="component-example__row">
             <p class="component-example__size-label">Size: md</p>
-            <div class="component-examle__item-group">
-              <div class="tooltip tooltip--bottom">
-                <span class="tooltip__text">
-                  Tooltip Text
-                </span>
+            <div class="component-examle__item-group component-examle__item-group--row">
+              <div class="upload" style="width: 375px;">
+                <input type="text" class="upload__input" placeholder="등록한 파일명이 보여집니다." readonly>
+                <div class="upload__file">
+                  <button class="upload__file-button" type="button">
+                    <svg class="svg-icon">
+                      <use xlink:href="#add"></use>
+                    </svg>
+                    Upload
+                  </button>
+                  <input type="file" class="upload__file-input">
+                </div>
               </div>
-              <div class="tooltip tooltip--top">
-                <span class="tooltip__text">
-                  Tooltip Text
-                </span>
+              <div class="upload upload--selected" style="width: 375px;">
+                <input type="text" class="upload__input" placeholder="등록한 파일명이 보여집니다." readonly>
+                <div class="upload__file">
+                  <button class="upload__file-button" type="button">
+                    <svg class="svg-icon">
+                      <use xlink:href="#add"></use>
+                    </svg>
+                    Upload
+                  </button>
+                  <input type="file" class="upload__file-input">
+                </div>
               </div>
-              <div class="tooltip tooltip--left">
-                <span class="tooltip__text">
-                  Tooltip Text
-                </span>
-              </div>
-              <div class="tooltip tooltip--right">
-                <span class="tooltip__text">
-                  Tooltip Text
-                </span>
+              <div class="upload upload--disabled" style="width: 375px;">
+                <input type="text" class="upload__input" placeholder="등록한 파일명이 보여집니다." readonly disabled>
+                <div class="upload__file">
+                  <button class="upload__file-button" type="button" disabled>
+                    <svg class="svg-icon">
+                      <use xlink:href="#add"></use>
+                    </svg>
+                    Upload
+                  </button>
+                  <input type="file" class="upload__file-input" disabled>
+                </div>
               </div>
             </div>
           </div>
