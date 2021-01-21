@@ -1,8 +1,8 @@
 // -------------------------
-// modal-body padding
+// modal__body padding
 // 1. madal-body: 0px !default
-// 2. modal-body--sm: 16px
-// 3. modal-body--md: 32px
+// 2. modal__body--sm: 16px
+// 3. modal__body--md: 32px
 // 4. moadl-body--lg: 48px
 // -------------------------
 .modal {
@@ -12,51 +12,51 @@
   border-radius: $field-border-radius;
 }
 
-.modal-head {
+.modal__head {
   @include stable-padding($spacing-xs, $spacing-md);
   display: flex;
   align-items: center;
   border-bottom: 1px solid $ui-04;
 }
 
-.modal-head__close-button {
+.modal__head-close-button {
   margin-left: $spacing-lg;
 }
 
-.modal-head__title {
+.modal__head-title {
   flex: 1;
 }
 
-.modal-head__subtitle {
+.modal__head-subtitle {
   @include line-height("body");
   @include font-size("13");
   margin-left: $spacing-2xs;
   color: $text-02;
 }
 
-.modal-body--sm {
+.modal__body--sm {
   padding: $layout-2xs;
 }
 
-.modal-body--md {
+.modal__body--md {
   padding: $layout-sm;
 }
 
-.modal-body--lg {
+.modal__body--lg {
   padding: $layout-md;
 }
 
-.modal-foot {
+.modal__foot {
   @include stable-padding($spacing-xs, $spacing-sm);
   display: flex;
   background-color: $ui-01;
 }
 
-.modal-foot__main-buttons {
+.modal__foot-main-buttons {
   display: flex;
   margin-left: auto;
 }
 
-.modal-foot .button + .button {
+.modal__foot .button + .button {
   margin-left: $spacing-xs;
 }
