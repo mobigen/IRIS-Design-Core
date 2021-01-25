@@ -82,7 +82,7 @@
   position: absolute;
   background-color: $ui-02;
   box-shadow: 0px 0px 8px rgba(206, 211, 217, 0.7);
-  border-radius: 2px;
+  border-radius: $field-border-radius;
 }
 
 .select-panel__list {
