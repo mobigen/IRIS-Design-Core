@@ -260,6 +260,7 @@
   margin: 0;
 }
 
-.component-examle__item-group--row .upload + .upload{
+.component-examle__item-group--row .upload + .upload,
+.component-examle__item-group--row .upload-alt + .upload-alt{
   margin-top: $spacing-xs;
 }

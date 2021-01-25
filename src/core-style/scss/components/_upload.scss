@@ -1,3 +1,6 @@
+// -------------------------
+// upload
+// -------------------------
 .upload {
   display: flex;
   flex-direction: row;
@@ -5,7 +8,7 @@
   justify-content: flex-start;
   height: $button-height-md;
   border: 1px solid $ui-04;
-  border-radius: $field-border-radius;
+  border-radius: $button-border-radius;
 
   &:hover {
     border-color: $ui-03;
@@ -46,7 +49,7 @@
       border-left-color: $disabled-01;
       color: $disabled-02;
 
-      svg{
+      svg {
         fill: $disabled-02;
       }
     }
@@ -91,15 +94,16 @@
     fill: $text-02;
   }
 
-  &:disabled{
+  &:disabled {
     z-index: 1;
     position: relative;
     cursor: not-allowed;
   }
 }
 
-.upload__file-input {
-  // z-index: z("hidden");
+.upload__file-input,
+.upload-alt__file-input {
+  z-index: z("float");
   position: absolute;
   top: 0;
   left: 0;
@@ -118,4 +122,104 @@
 // -------------------------
 .upload--lg {
   height: $button-height-lg;
+}
+
+// -------------------------
+// upload-alt
+// -------------------------
+.upload-alt {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+
+  &--selected {
+    
+    .upload-alt__file-button {
+      background-color: $secondary;
+    }
+
+    .upload-alt__file-input {
+      &:hover {
+        +.upload-alt__file-button {
+          background-color: $active-secondary;
+        }
+      }
+    }
+
+    .upload-alt__file-icon-download {
+      display: none !important;
+    }
+
+    .upload-alt__file-icon-close {
+      display: block !important;
+    }
+  }
+}
+
+.upload-alt__file {
+  position: relative;
+}
+
+.upload-alt__file-button {
+  @include button-normal;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  width: 220px;
+  height: 57px;
+  padding: 6px $spacing-2xl 6px $spacing-sm;
+  border-radius: $button-border-radius;
+  background-color: $hover-field-border;
+}
+
+.upload-alt__file-input {
+  &:hover {
+    +.upload-alt__file-button {
+      background-color: $text-03;
+    }
+  }
+}
+
+.upload-alt__file-title {
+  @include text-overflow;
+  @include font-size("14");
+  max-width: 100%;
+  color: $ui-02;
+  text-align: left;
+}
+
+.upload-alt__file-text {
+  @include text-overflow;
+  @include font-size("12");
+  max-width: 100%;
+  margin-top: auto;
+  color: $ui-02;
+  text-align: left;
+}
+
+.upload-alt__file-icon {
+  @include position-right-center(12px);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  svg {
+    @include svg-icon-size(22px);
+    fill: $ui-02;
+  }
+
+  .upload-alt__file-icon-download {
+    display: block;
+  }
+
+  .upload-alt__file-icon-close {
+    display: none;
+  }
+}
+
+.upload-alt__text {
+  margin-left: $spacing-sm;
+  color: $text-02;
 }
