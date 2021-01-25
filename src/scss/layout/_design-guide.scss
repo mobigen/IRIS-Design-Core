@@ -261,6 +261,7 @@
 }
 
 .component-examle__item-group--row .upload + .upload,
-.component-examle__item-group--row .upload-alt + .upload-alt{
+.component-examle__item-group--row .upload-alt + .upload-alt,
+.component-examle__item-group--row .upload-preview + .upload-preview{
   margin-top: $spacing-xs;
 }
