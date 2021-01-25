@@ -102,7 +102,8 @@
 }
 
 .upload__file-input,
-.upload-alt__file-input {
+.upload-alt__file-input,
+.upload-preview__file-input {
   z-index: z("float");
   position: absolute;
   top: 0;
@@ -117,9 +118,7 @@
   -moz-opacity: 0;
 }
 
-// -------------------------
 // Size overwrite
-// -------------------------
 .upload--lg {
   height: $button-height-lg;
 }
@@ -134,14 +133,15 @@
   justify-content: flex-start;
 
   &--selected {
-    
+
     .upload-alt__file-button {
       background-color: $secondary;
     }
 
-    .upload-alt__file-input {
+    .upload-alt__file {
+
       &:hover {
-        +.upload-alt__file-button {
+        .upload-alt__file-button {
           background-color: $active-secondary;
         }
       }
@@ -159,6 +159,12 @@
 
 .upload-alt__file {
   position: relative;
+
+  &:hover {
+    .upload-alt__file-button {
+      background-color: $text-03;
+    }
+  }
 }
 
 .upload-alt__file-button {
@@ -172,14 +178,6 @@
   padding: 6px $spacing-2xl 6px $spacing-sm;
   border-radius: $button-border-radius;
   background-color: $hover-field-border;
-}
-
-.upload-alt__file-input {
-  &:hover {
-    +.upload-alt__file-button {
-      background-color: $text-03;
-    }
-  }
 }
 
 .upload-alt__file-title {
@@ -222,4 +220,85 @@
 .upload-alt__text {
   margin-left: $spacing-sm;
   color: $text-02;
+}
+
+// -------------------------
+// upload-preview
+// -------------------------
+.upload-preview__thumbnail {
+  width: 100%;
+  min-height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $ui-02;
+  border: 1px solid $ui-04;
+  border-radius: $field-border-radius;
+
+  svg {
+    @include svg-icon-size(40px);
+    margin-bottom: $spacing-xs;
+    fill: $ui-03;
+  }
+  
+  img{
+    width: 66px;
+  }
+}
+
+.upload-preview__thumbnail-text {
+  @include font-size("14");
+  @include font-weight("light");
+  color: $text-05;
+  text-align: center;
+  line-height: normal;
+}
+
+.upload-preview__file {
+  position: relative;
+  width: 100%;
+
+  &:hover {
+    .upload-preview__file-button {
+      border-color: $ui-03;
+    }
+  }
+}
+
+.upload-preview__file-button {
+  @include button-normal;
+  width: 100%;
+  height: $button-height-md;
+  margin-top: $spacing-xs;
+  background-color: $ui-02;
+  border: 1px solid $ui-04;
+  border-radius: $field-border-radius;
+
+  svg {
+    @include svg-icon-size(20px);
+    fill: $primary;
+  }
+}
+
+.upload-preview__file-text {
+  @include font-size("14");
+  margin-left: $spacing-2xs;
+  color: $primary;
+}
+
+.upload-preview--selected {
+  .upload-preview__thumbnail{
+    background: $ui-01;
+  }
+
+  .upload-preview__file-button {
+    svg {
+      fill: $negative;
+    }
+  }
+
+  .upload-preview__file-text {
+    color: $negative;
+  }
 }
