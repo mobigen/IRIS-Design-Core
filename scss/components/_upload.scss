@@ -241,8 +241,8 @@
     margin-bottom: $spacing-xs;
     fill: $ui-03;
   }
-  
-  img{
+
+  img {
     width: 66px;
   }
 }
@@ -261,7 +261,14 @@
 
   &:hover {
     .upload-preview__file-button {
-      border-color: $ui-03;
+      background-color: rgba(0, 90, 205, 0.07);
+      ;
+    }
+  }
+
+  &:active {
+    .upload-preview__file-button {
+      background-color: rgba(0, 90, 205, 0.16);
     }
   }
 }
@@ -288,11 +295,12 @@
 }
 
 .upload-preview--selected {
-  .upload-preview__thumbnail{
+  .upload-preview__thumbnail {
     background: $ui-01;
   }
 
   .upload-preview__file-button {
+
     svg {
       fill: $negative;
     }
@@ -300,5 +308,27 @@
 
   .upload-preview__file-text {
     color: $negative;
+  }
+}
+
+.upload-preview--disabled {
+  cursor: not-allowed;
+
+  .upload-preview__file-input {
+    cursor: not-allowed;
+  }
+
+  .upload-preview__file-button {
+    cursor: not-allowed;
+    opacity: 0.25;
+  }
+
+  &:hover,
+  &:hover:active,
+  &:hover:focus {
+    .upload-preview__file-button {
+      background-color: $ui-02;
+      border: 1px solid $ui-04;
+    }
   }
 }
