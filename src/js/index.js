@@ -54,6 +54,7 @@ const afterToggleSuffix = "--selected";
 
 // 토글 버튼 클릭시 --selected 추가
 const toggleSelectbox = () => {
+  console.log("toggle 전");
 
   beforeToggleElement.forEach((i) => {
     // window OS에서 동작하도록 설정 
@@ -61,9 +62,11 @@ const toggleSelectbox = () => {
       NodeList.prototype.forEach = Array.prototype.forEach;
     }
 
+    console.log("toggle 후")
+
     i.addEventListener('click', (event) => {
       event.preventDefault();
-
+      console.log("toggle Click")
       let afterToggleButton = i.classList[0].concat(afterToggleSuffix);
 
       // Test
