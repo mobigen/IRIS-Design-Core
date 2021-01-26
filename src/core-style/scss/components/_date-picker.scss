@@ -1,0 +1,43 @@
+.date-picker {
+  @include picker;
+}
+
+// dropdown container
+.time-picker-container {
+  .ui-datepicker {
+    display: block;
+    position: static;
+    border: none;
+    box-shadow: none;
+  }
+}
+
+.date-picker-panel {
+  display: flex;
+  flex-direction: column;
+
+  &:not(:last-child) {
+    border-right: 1px solid $ui-04;
+  }
+}
+
+.date-picker-panel__head {
+  display: flex;
+  align-items: center;
+  padding: $spacing-2xs $spacing-xs;
+  border-bottom: 1px solid $ui-04;
+}
+
+.date-picker-panel__body {
+  flex: 1;
+}
+
+.date-picker-panel__foot {
+  padding: 0 $spacing-xs $spacing-sm $spacing-xs;
+
+  .time-picker {
+    width: 100%;
+  }
+}
+
+// jquery-datepicker
