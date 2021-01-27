@@ -181,17 +181,15 @@
 }
 
 .upload-alt__file-title {
-  @include text-overflow;
+  @include text-overflow(100%);
   @include font-size("14");
-  max-width: 100%;
   color: $ui-02;
   text-align: left;
 }
 
 .upload-alt__file-text {
-  @include text-overflow;
+  @include text-overflow(100%);
   @include font-size("12");
-  max-width: 100%;
   margin-top: auto;
   color: $ui-02;
   text-align: left;
@@ -227,7 +225,7 @@
 // -------------------------
 .upload-preview__thumbnail {
   width: 100%;
-  min-height: 130px;
+  height: 130px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -312,7 +310,6 @@
 }
 
 .upload-preview--disabled {
-  cursor: not-allowed;
 
   .upload-preview__file-input {
     cursor: not-allowed;
