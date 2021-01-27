@@ -1,13 +1,4 @@
 // ****************************
-// test
-// ****************************
-
-const testConsole = () => {
-  console.log("Test Success");
-}
-testConsole();
-
-// ****************************
 // SCSS
 // ****************************
 
@@ -28,9 +19,10 @@ import '../scss/guide-index.scss'
 // svg icon
 // ****************************
 
-const requireSvgAll = (r) => {
+function requireSvgAll(r) {
   r.keys().forEach(r);
 }
+
 requireSvgAll(require.context('../core-style/images/icon/', true, /\.svg$/));
 requireSvgAll(require.context('../images/icon/', true, /\.svg$/));
 
@@ -38,9 +30,10 @@ requireSvgAll(require.context('../images/icon/', true, /\.svg$/));
 // png img
 // ****************************
 
-const requirePngAll = (r) => {
+function requirePngAll(r) {
   r.keys().forEach(r);
 }
+
 requirePngAll(require.context('../core-style/images/', true, /\.png$/));
 requirePngAll(require.context('../images/', true, /\.png$/));
 
@@ -54,19 +47,15 @@ const afterToggleSuffix = "--selected";
 
 // 토글 버튼 클릭시 --selected 추가
 const toggleSelectbox = () => {
-  console.log("toggle 전");
+
+  if (window.NodeList && !NodeList.prototype.forEach) {
+    NodeList.prototype.forEach = Array.prototype.forEach;
+  }
 
   beforeToggleElement.forEach((i) => {
-    // window OS에서 동작하도록 설정 
-    if (window.NodeList && !NodeList.prototype.forEach) {
-      NodeList.prototype.forEach = Array.prototype.forEach;
-    }
-
-    console.log("toggle 후")
 
     i.addEventListener('click', (event) => {
       event.preventDefault();
-      console.log("toggle Click")
       let afterToggleButton = i.classList[0].concat(afterToggleSuffix);
 
       // Test

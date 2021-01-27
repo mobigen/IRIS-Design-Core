@@ -10,17 +10,18 @@ module.exports = {
   },
 
   entry: {
-    "main": "./src/js/index.js",
+    "main": ["./src/js/index.js"],
   },
 
   module: {
-    rules: [
-      // Js
-      {
+    rules: [{
         test: /\.(js|jsx)$/,
         exclude: /[\\/]node_modules[\\/]/,
         use: {
           loader: "babel-loader",
+          options: {
+            presets: ['@babel/preset-env']
+          }
         },
       },
 
@@ -28,14 +29,12 @@ module.exports = {
       {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
         include: path.resolve(__dirname, "./src/core-style/fonts"),
-        use: [
-          {
-            loader: "file-loader",
-            options: {
-              name: "fonts/[name].[ext]",
-            },
+        use: [{
+          loader: "file-loader",
+          options: {
+            name: "fonts/[name].[ext]",
           },
-        ],
+        }, ],
       },
 
       // SCSS - Core
@@ -100,9 +99,11 @@ module.exports = {
           loader: "svg-sprite-loader",
           options: {
             outputPath: "./",
-            name: "[path][name].[ext]",
-            // 가져올 경로에서 해당 경로만 지우고 가져온다.
-            context: "src/core-style",
+            runtimeCompat: true,
+            context: "src/core-style", // 가져올 경로에서 해당 경로만 지우고 가져온다.
+            // extract: true,
+            // spriteFilename: 'images/icon/svg-sprite.svg',
+            // name: "[path][name].[ext]",
           },
         },
       },
@@ -115,9 +116,11 @@ module.exports = {
           loader: "svg-sprite-loader",
           options: {
             outputPath: "./",
-            name: "[path][name].[ext]",
-            // 가져올 경로에서 해당 경로만 지우고 가져온다.
-            context: "src",
+            runtimeCompat: true,
+            context: "src/core-style", // 가져올 경로에서 해당 경로만 지우고 가져온다.
+            // extract: true,
+            // spriteFilename: 'images/icon/svg-sprite.svg',
+            // name: "[path][name].[ext]",
           },
         },
       },
@@ -133,12 +136,10 @@ module.exports = {
     // 공통 컴포넌트 영역 모듈화
     new FileIncludeWebpackPlugin({
       source: "./src/html/pages",
-      replace: [
-        {
-          regex: /\[\[FILE_VERSION]]/g,
-          to: "v=1.0.0",
-        },
-      ],
+      replace: [{
+        regex: /\[\[FILE_VERSION]]/g,
+        to: "v=1.0.0",
+      }, ],
       loader: "prettier-loader",
       destination: "../views",
     }),
