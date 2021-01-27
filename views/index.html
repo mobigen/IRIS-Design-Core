@@ -1763,7 +1763,1065 @@
   
         </div>
         <div class="page" id="page--date-picker">
-          
+          <!-- date-picker -->
+<div class="page-header">
+  <h2 class="page-header__lable">component</h2>
+  <h3 class="page-header__title">Date Picker</h3>
+</div>
+<div class="page-content">
+  <p class="page__desc">날짜 선택형 필드</p>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Date time picker</span>
+    <div class="component-example">
+      <div class="component-example__live" style="align-items: flex-start; height: 356px;">
+        <div>
+          <!-- default -->
+          <div class="date-picker" style="display: inline-flex;">
+            <div class="date-picker-selector" style="margin-right: 18px;">
+              <input type="text" class="date-picker-selector__input" placeholder="YYYY/MM/DD HH:MM:SS" autocomplete="off" readonly>
+              <button class="date-picker-selector__button">
+                <svg class="svg-icon">
+                  <use xlink:href="#calendar"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <!-- focused + open -->
+          <div class="date-picker date-picker--focused date-picker--open" style="display: inline-flex;margin-right: 18px;">
+            <div class="date-picker-selector">
+              <input type="text" class="date-picker-selector__input" placeholder="YYYY/MM/DD HH:MM:SS" value="2021/01/25 02:05:07" autocomplete="off">
+              <button class="date-picker-selector__button">
+                <svg class="svg-icon">
+                  <use xlink:href="#calendar"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="date-picker-container">
+              <div class="date-picker-panel">
+                <div class="date-picker-panel__head">
+                  <button class="button button-theme--link">오늘</button>
+                </div>
+                <div class="date-picker-panel__body">
+                  <div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all">
+  <div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all"><a class="ui-datepicker-prev ui-corner-all ui-state-disabled" title="이전달"><span class="ui-icon ui-icon-circle-triangle-w">이전달</span></a><a class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title="다음달"><span class="ui-icon ui-icon-circle-triangle-e">다음달</span></a>
+    <div class="ui-datepicker-title"><span class="ui-datepicker-year">2019</span>년&nbsp;<span class="ui-datepicker-month">8월</span></div>
+  </div>
+  <table class="ui-datepicker-calendar">
+    <thead>
+      <tr>
+        <th class="ui-datepicker-week-end"><span title="일요일">일</span></th>
+        <th><span title="월요일">월</span></th>
+        <th><span title="화요일">화</span></th>
+        <th><span title="수요일">수</span></th>
+        <th><span title="목요일">목</span></th>
+        <th><span title="금요일">금</span></th>
+        <th class="ui-datepicker-week-end"><span title="토요일">토</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">
+          &nbsp;</td>
+        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">
+          &nbsp;</td>
+        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">
+          &nbsp;</td>
+        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">
+          &nbsp;</td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">1</span></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">2</span></td>
+        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">3</span></td>
+      </tr>
+      <tr>
+        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">4</span></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">5</span></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">6</span></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">7</span></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">8</span></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">9</span></td>
+        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">10</span></td>
+      </tr>
+      <tr>
+        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">11</span></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">12</span></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">13</span></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">14</span></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">15</span></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">16</span></td>
+        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">17</span></td>
+      </tr>
+      <tr>
+        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">18</span></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">19</span></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">20</span></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">21</span></td>
+        <td class=" ui-datepicker-today" data-handler="selectDay" data-event="click" data-month="7" data-year="2019"><a class="ui-state-default" href="#">22</a></td>
+        <td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2019">
+          <a class="ui-state-default" href="#">23</a>
+        </td>
+        <td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="7" data-year="2019"><a class="ui-state-default" href="#">24</a></td>
+      </tr>
+      <tr>
+        <td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="7" data-year="2019"><a class="ui-state-default ui-state-active" href="#">25</a></td>
+        <td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2019">
+          <a class="ui-state-default" href="#">26</a>
+        </td>
+        <td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2019">
+          <a class="ui-state-default" href="#">27</a>
+        </td>
+        <td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2019">
+          <a class="ui-state-default" href="#">28</a>
+        </td>
+        <td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2019">
+          <a class="ui-state-default" href="#">29</a>
+        </td>
+        <td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2019">
+          <a class="ui-state-default" href="#">30</a>
+        </td>
+        <td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="7" data-year="2019"><a class="ui-state-default" href="#">31</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+                </div>
+                <div class="date-picker-panel__foot">
+                  <div class="time-picker">
+                    <div class="time-picker-selector">
+                      <input type="text" class="time-picker-selector__input" placeholder="hh:mm:ss" autocomplete="off">
+                      <button class="time-picker-selector__button">
+                        <svg class="svg-icon">
+                          <use xlink:href="#time"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    
+<div class="time-picker-container" style="/* top:  셀렉터의 Y좌표 + 셀렉터의 높이; left: 셀렉터의 Y좌표 */">
+  <ul class="time-picker-container-list">
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled">
+      <button class="time-picker-container-list__button">00</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled">
+      <button class="time-picker-container-list__button">01</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled">
+      <button class="time-picker-container-list__button">02</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled time-picker-container-list__item--selected">
+      <button class="time-picker-container-list__button">03</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">04</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">05</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">06</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">07</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">08</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">09</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">10</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">11</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">12</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">13</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">14</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">15</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">16</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">17</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">18</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">19</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">20</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">21</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">22</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">23</button>
+    </li>
+  </ul>
+  <ul class="time-picker-container-list">
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled">
+      <button class="time-picker-container-list__button">00</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled">
+      <button class="time-picker-container-list__button">01</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled">
+      <button class="time-picker-container-list__button">02</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled">
+      <button class="time-picker-container-list__button">03</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--selected">
+      <button class="time-picker-container-list__button">04</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">05</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">06</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">07</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">08</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">09</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">10</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">11</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">12</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">13</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">14</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">15</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">16</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">17</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">18</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">19</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">20</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">21</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">22</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">23</button>
+    </li>
+  </ul>
+  <ul class="time-picker-container-list">
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">00</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">01</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">02</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">03</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">04</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">05</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">06</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--selected">
+      <button class="time-picker-container-list__button">07</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">08</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">09</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">10</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">11</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">12</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">13</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">14</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">15</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">16</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">17</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">18</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">19</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">20</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">21</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">22</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">23</button>
+    </li>
+  </ul>
+</div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- disabled -->
+          <div class="date-picker date-picker--disabled" style="display: inline-flex;">
+            <div class="date-picker-selector">
+              <input type="text" class="date-picker-selector__input" placeholder="YYYY/MM/DD HH:MM:SS" autocomplete="off" disabled>
+              <button class="date-picker-selector__button" disabled>
+                <svg class="svg-icon">
+                  <use xlink:href="#calendar"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Date time range picker</span>
+    <div class="component-example">
+      <div class="component-example__live" style="align-items: flex-start; height: 356px;">
+        <div>
+          <!-- focused + open -->
+          <div class="date-picker date-picker--open">
+            <div class="date-picker-selector">
+              <input type="text" class="date-picker-selector__input" placeholder="YYYY/MM/DD HH:MM:SS" autocomplete="off">
+              <div class="date-picker-selector__separator">
+                <span>&sim;</span>
+              </div>
+              <input type="text" class="date-picker-selector__input" placeholder="YYYY/MM/DD HH:MM:SS" autocomplete="off">
+              <button class="date-picker-selector__button">
+                <svg class="svg-icon">
+                  <use xlink:href="#calendar"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="date-picker-container">
+              <div class="date-picker-panel">
+                <div class="date-picker-panel__head">
+                  <button class="button button-theme--link">오늘</button>
+                </div>
+                <div class="date-picker-panel__body">
+                  <div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all">
+  <div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all"><a class="ui-datepicker-prev ui-corner-all ui-state-disabled" title="이전달"><span class="ui-icon ui-icon-circle-triangle-w">이전달</span></a><a class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title="다음달"><span class="ui-icon ui-icon-circle-triangle-e">다음달</span></a>
+    <div class="ui-datepicker-title"><span class="ui-datepicker-year">2019</span>년&nbsp;<span class="ui-datepicker-month">8월</span></div>
+  </div>
+  <table class="ui-datepicker-calendar">
+    <thead>
+      <tr>
+        <th class="ui-datepicker-week-end"><span title="일요일">일</span></th>
+        <th><span title="월요일">월</span></th>
+        <th><span title="화요일">화</span></th>
+        <th><span title="수요일">수</span></th>
+        <th><span title="목요일">목</span></th>
+        <th><span title="금요일">금</span></th>
+        <th class="ui-datepicker-week-end"><span title="토요일">토</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">
+          &nbsp;</td>
+        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">
+          &nbsp;</td>
+        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">
+          &nbsp;</td>
+        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">
+          &nbsp;</td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">1</span></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">2</span></td>
+        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">3</span></td>
+      </tr>
+      <tr>
+        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">4</span></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">5</span></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">6</span></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">7</span></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">8</span></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">9</span></td>
+        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">10</span></td>
+      </tr>
+      <tr>
+        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">11</span></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">12</span></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">13</span></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">14</span></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">15</span></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">16</span></td>
+        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">17</span></td>
+      </tr>
+      <tr>
+        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">18</span></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">19</span></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">20</span></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">21</span></td>
+        <td class=" ui-datepicker-today" data-handler="selectDay" data-event="click" data-month="7" data-year="2019"><a class="ui-state-default" href="#">22</a></td>
+        <td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2019">
+          <a class="ui-state-default" href="#">23</a>
+        </td>
+        <td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="7" data-year="2019"><a class="ui-state-default" href="#">24</a></td>
+      </tr>
+      <tr>
+        <td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="7" data-year="2019"><a class="ui-state-default ui-state-active" href="#">25</a></td>
+        <td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2019">
+          <a class="ui-state-default" href="#">26</a>
+        </td>
+        <td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2019">
+          <a class="ui-state-default" href="#">27</a>
+        </td>
+        <td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2019">
+          <a class="ui-state-default" href="#">28</a>
+        </td>
+        <td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2019">
+          <a class="ui-state-default" href="#">29</a>
+        </td>
+        <td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2019">
+          <a class="ui-state-default" href="#">30</a>
+        </td>
+        <td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="7" data-year="2019"><a class="ui-state-default" href="#">31</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+                </div>
+                <div class="date-picker-panel__foot">
+                  <div class="time-picker">
+                    <div class="time-picker-selector">
+                      <input type="text" class="time-picker-selector__input" placeholder="hh:mm:ss" autocomplete="off">
+                      <button class="time-picker-selector__button">
+                        <svg class="svg-icon">
+                          <use xlink:href="#time"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    
+<div class="time-picker-container" style="/* top:  셀렉터의 Y좌표 + 셀렉터의 높이; left: 셀렉터의 Y좌표 */">
+  <ul class="time-picker-container-list">
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled">
+      <button class="time-picker-container-list__button">00</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled">
+      <button class="time-picker-container-list__button">01</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled">
+      <button class="time-picker-container-list__button">02</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled time-picker-container-list__item--selected">
+      <button class="time-picker-container-list__button">03</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">04</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">05</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">06</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">07</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">08</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">09</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">10</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">11</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">12</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">13</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">14</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">15</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">16</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">17</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">18</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">19</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">20</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">21</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">22</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">23</button>
+    </li>
+  </ul>
+  <ul class="time-picker-container-list">
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled">
+      <button class="time-picker-container-list__button">00</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled">
+      <button class="time-picker-container-list__button">01</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled">
+      <button class="time-picker-container-list__button">02</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled">
+      <button class="time-picker-container-list__button">03</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--selected">
+      <button class="time-picker-container-list__button">04</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">05</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">06</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">07</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">08</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">09</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">10</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">11</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">12</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">13</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">14</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">15</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">16</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">17</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">18</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">19</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">20</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">21</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">22</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">23</button>
+    </li>
+  </ul>
+  <ul class="time-picker-container-list">
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">00</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">01</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">02</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">03</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">04</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">05</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">06</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--selected">
+      <button class="time-picker-container-list__button">07</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">08</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">09</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">10</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">11</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">12</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">13</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">14</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">15</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">16</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">17</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">18</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">19</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">20</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">21</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">22</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">23</button>
+    </li>
+  </ul>
+</div>
+
+                  </div>
+                </div>
+              </div>
+              <div class="date-picker-panel">
+                <div class="date-picker-panel__head">
+                  <button class="button button-theme--link">오늘</button>
+                </div>
+                <div class="date-picker-panel__body">
+                  <div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all">
+  <div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all"><a class="ui-datepicker-prev ui-corner-all ui-state-disabled" title="이전달"><span class="ui-icon ui-icon-circle-triangle-w">이전달</span></a><a class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title="다음달"><span class="ui-icon ui-icon-circle-triangle-e">다음달</span></a>
+    <div class="ui-datepicker-title"><span class="ui-datepicker-year">2019</span>년&nbsp;<span class="ui-datepicker-month">8월</span></div>
+  </div>
+  <table class="ui-datepicker-calendar">
+    <thead>
+      <tr>
+        <th class="ui-datepicker-week-end"><span title="일요일">일</span></th>
+        <th><span title="월요일">월</span></th>
+        <th><span title="화요일">화</span></th>
+        <th><span title="수요일">수</span></th>
+        <th><span title="목요일">목</span></th>
+        <th><span title="금요일">금</span></th>
+        <th class="ui-datepicker-week-end"><span title="토요일">토</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">
+          &nbsp;</td>
+        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">
+          &nbsp;</td>
+        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">
+          &nbsp;</td>
+        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">
+          &nbsp;</td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">1</span></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">2</span></td>
+        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">3</span></td>
+      </tr>
+      <tr>
+        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">4</span></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">5</span></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">6</span></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">7</span></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">8</span></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">9</span></td>
+        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">10</span></td>
+      </tr>
+      <tr>
+        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">11</span></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">12</span></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">13</span></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">14</span></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">15</span></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">16</span></td>
+        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">17</span></td>
+      </tr>
+      <tr>
+        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">18</span></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">19</span></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">20</span></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">21</span></td>
+        <td class=" ui-datepicker-today" data-handler="selectDay" data-event="click" data-month="7" data-year="2019"><a class="ui-state-default" href="#">22</a></td>
+        <td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2019">
+          <a class="ui-state-default" href="#">23</a>
+        </td>
+        <td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="7" data-year="2019"><a class="ui-state-default" href="#">24</a></td>
+      </tr>
+      <tr>
+        <td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="7" data-year="2019"><a class="ui-state-default ui-state-active" href="#">25</a></td>
+        <td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2019">
+          <a class="ui-state-default" href="#">26</a>
+        </td>
+        <td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2019">
+          <a class="ui-state-default" href="#">27</a>
+        </td>
+        <td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2019">
+          <a class="ui-state-default" href="#">28</a>
+        </td>
+        <td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2019">
+          <a class="ui-state-default" href="#">29</a>
+        </td>
+        <td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2019">
+          <a class="ui-state-default" href="#">30</a>
+        </td>
+        <td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="7" data-year="2019"><a class="ui-state-default" href="#">31</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+                </div>
+                <div class="date-picker-panel__foot">
+                  <div class="time-picker">
+                    <div class="time-picker-selector">
+                      <input type="text" class="time-picker-selector__input" placeholder="hh:mm:ss" autocomplete="off">
+                      <button class="time-picker-selector__button">
+                        <svg class="svg-icon">
+                          <use xlink:href="#time"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    
+<div class="time-picker-container" style="/* top:  셀렉터의 Y좌표 + 셀렉터의 높이; left: 셀렉터의 Y좌표 */">
+  <ul class="time-picker-container-list">
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled">
+      <button class="time-picker-container-list__button">00</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled">
+      <button class="time-picker-container-list__button">01</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled">
+      <button class="time-picker-container-list__button">02</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled time-picker-container-list__item--selected">
+      <button class="time-picker-container-list__button">03</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">04</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">05</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">06</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">07</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">08</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">09</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">10</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">11</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">12</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">13</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">14</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">15</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">16</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">17</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">18</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">19</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">20</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">21</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">22</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">23</button>
+    </li>
+  </ul>
+  <ul class="time-picker-container-list">
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled">
+      <button class="time-picker-container-list__button">00</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled">
+      <button class="time-picker-container-list__button">01</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled">
+      <button class="time-picker-container-list__button">02</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled">
+      <button class="time-picker-container-list__button">03</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--selected">
+      <button class="time-picker-container-list__button">04</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">05</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">06</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">07</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">08</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">09</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">10</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">11</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">12</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">13</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">14</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">15</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">16</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">17</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">18</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">19</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">20</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">21</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">22</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">23</button>
+    </li>
+  </ul>
+  <ul class="time-picker-container-list">
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">00</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">01</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">02</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">03</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">04</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">05</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">06</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--selected">
+      <button class="time-picker-container-list__button">07</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">08</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">09</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">10</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">11</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">12</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">13</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">14</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">15</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">16</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">17</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">18</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">19</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">20</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">21</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">22</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">23</button>
+    </li>
+  </ul>
+</div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
         </div>
         <div class="page" id="page--description">
           <!-- context menu -->
@@ -2663,7 +3721,7 @@
       <li>숫자 입력 필드는 <em class="text-emphasis">1개</em> 유형이 있으며 <em class="text-emphasis">3개</em> 크기로 구분합니다.</li>
     </ul>
   </div>
-
+=
   <div class="component-variation">
     <span class="component-variation__name">Default Number Input</span>
     <div class="component-example">
@@ -3144,7 +4202,7 @@
       <li>텍스트만 사용하거나, 아이콘과 텍스트를 사용한 UI </li>
     </ul>
   </div>
-=
+
   <div class="component-variation">
     <span class="component-variation__name">Default Select</span>
     <div class="component-example">
@@ -5106,7 +6164,7 @@
         </div>
         <div class="page" id="page--time-picker">
           
-<!-- textarea -->
+<!-- time-picker -->
 <div class="page-header">
   <h2 class="page-header__lable">component</h2>
   <h3 class="page-header__title">Time Picker</h3>
@@ -5120,257 +6178,715 @@
       <div class="component-example__live" style="align-items: flex-start; height: 356px;">
         <div>
           <!-- default -->
-          <div class="time-picker" style="margin-right: 18px;">
-            <input type="text" class="time-picker__input" placeholder="hh:mm:ss" autocomplete="off">
-            <button class="time-picker__button">
-              <svg class="svg-icon">
-                <use xlink:href="#time"></use>
-              </svg>
-            </button>
-          </div>
-          <!-- focused -->
-          <div style="display: inline-flex; position: relative;">
-            <div class="time-picker time-picker--focused" style="margin-right: 18px;">
-              <input type="text" class="time-picker__input" placeholder="hh:mm:ss" value="03:04:07" autocomplete="off">
-              <button class="time-picker__button">
+          <div class="time-picker" style="display: inline-flex; margin-right: 18px;">
+            <div class="time-picker-selector">
+              <input type="text" class="time-picker-selector__input" placeholder="hh:mm:ss" autocomplete="off">
+              <button class="time-picker-selector__button">
                 <svg class="svg-icon">
                   <use xlink:href="#time"></use>
                 </svg>
               </button>
             </div>
-            <div class="time-picker-panel" style="/* top:  셀렉터의 Y좌표 + 셀렉터의 높이; left: 셀렉터의 Y좌표 */ top: 32px; left: 0;width: 167px;">
-              <ul class="time-picker-panel-list">
-                <li class="time-picker-panel-list__item time-picker-panel-list__item--disabled">
-                  <button class="time-picker-panel-list__button">00</button>
-                </li>
-                <li class="time-picker-panel-list__item time-picker-panel-list__item--disabled">
-                  <button class="time-picker-panel-list__button">01</button>
-                </li>
-                <li class="time-picker-panel-list__item time-picker-panel-list__item--disabled">
-                  <button class="time-picker-panel-list__button">02</button>
-                </li>
-                <li class="time-picker-panel-list__item time-picker-panel-list__item--disabled time-picker-panel-list__item--selected">
-                  <button class="time-picker-panel-list__button">03</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">04</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">05</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">06</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">07</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">08</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">09</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">10</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">11</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">12</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">13</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">14</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">15</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">16</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">17</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">18</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">19</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">20</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">21</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">22</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">23</button>
-                </li>
-              </ul>
-              <ul class="time-picker-panel-list">
-                <li class="time-picker-panel-list__item time-picker-panel-list__item--disabled">
-                  <button class="time-picker-panel-list__button">00</button>
-                </li>
-                <li class="time-picker-panel-list__item time-picker-panel-list__item--disabled">
-                  <button class="time-picker-panel-list__button">01</button>
-                </li>
-                <li class="time-picker-panel-list__item time-picker-panel-list__item--disabled">
-                  <button class="time-picker-panel-list__button">02</button>
-                </li>
-                <li class="time-picker-panel-list__item time-picker-panel-list__item--disabled">
-                  <button class="time-picker-panel-list__button">03</button>
-                </li>
-                <li class="time-picker-panel-list__item time-picker-panel-list__item--selected">
-                  <button class="time-picker-panel-list__button">04</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">05</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">06</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">07</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">08</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">09</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">10</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">11</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">12</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">13</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">14</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">15</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">16</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">17</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">18</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">19</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">20</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">21</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">22</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">23</button>
-                </li>
-              </ul>
-              <ul class="time-picker-panel-list">
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">00</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">01</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">02</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">03</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">04</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">05</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">06</button>
-                </li>
-                <li class="time-picker-panel-list__item time-picker-panel-list__item--selected">
-                  <button class="time-picker-panel-list__button">07</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">08</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">09</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">10</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">11</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">12</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">13</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">14</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">15</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">16</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">17</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">18</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">19</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">20</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">21</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">22</button>
-                </li>
-                <li class="time-picker-panel-list__item">
-                  <button class="time-picker-panel-list__button">23</button>
-                </li>
-              </ul>
+            
+<div class="time-picker-container" style="/* top:  셀렉터의 Y좌표 + 셀렉터의 높이; left: 셀렉터의 Y좌표 */">
+  <ul class="time-picker-container-list">
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled">
+      <button class="time-picker-container-list__button">00</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled">
+      <button class="time-picker-container-list__button">01</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled">
+      <button class="time-picker-container-list__button">02</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled time-picker-container-list__item--selected">
+      <button class="time-picker-container-list__button">03</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">04</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">05</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">06</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">07</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">08</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">09</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">10</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">11</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">12</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">13</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">14</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">15</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">16</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">17</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">18</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">19</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">20</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">21</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">22</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">23</button>
+    </li>
+  </ul>
+  <ul class="time-picker-container-list">
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled">
+      <button class="time-picker-container-list__button">00</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled">
+      <button class="time-picker-container-list__button">01</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled">
+      <button class="time-picker-container-list__button">02</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled">
+      <button class="time-picker-container-list__button">03</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--selected">
+      <button class="time-picker-container-list__button">04</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">05</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">06</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">07</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">08</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">09</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">10</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">11</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">12</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">13</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">14</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">15</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">16</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">17</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">18</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">19</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">20</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">21</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">22</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">23</button>
+    </li>
+  </ul>
+  <ul class="time-picker-container-list">
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">00</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">01</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">02</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">03</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">04</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">05</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">06</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--selected">
+      <button class="time-picker-container-list__button">07</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">08</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">09</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">10</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">11</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">12</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">13</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">14</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">15</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">16</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">17</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">18</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">19</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">20</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">21</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">22</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">23</button>
+    </li>
+  </ul>
+</div>
+
+          </div>
+          <!-- focused + open -->
+          <div class="time-picker time-picker--focused time-picker--open" style="display: inline-flex; margin-right: 18px;">
+            <div class="time-picker-selector">
+              <input type="text" class="time-picker-selector__input" placeholder="hh:mm:ss" value="03:04:07" autocomplete="off">
+              <button class="time-picker-selector__button">
+                <svg class="svg-icon">
+                  <use xlink:href="#time"></use>
+                </svg>
+              </button>
             </div>
+            
+<div class="time-picker-container" style="/* top:  셀렉터의 Y좌표 + 셀렉터의 높이; left: 셀렉터의 Y좌표 */">
+  <ul class="time-picker-container-list">
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled">
+      <button class="time-picker-container-list__button">00</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled">
+      <button class="time-picker-container-list__button">01</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled">
+      <button class="time-picker-container-list__button">02</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled time-picker-container-list__item--selected">
+      <button class="time-picker-container-list__button">03</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">04</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">05</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">06</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">07</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">08</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">09</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">10</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">11</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">12</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">13</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">14</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">15</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">16</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">17</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">18</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">19</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">20</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">21</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">22</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">23</button>
+    </li>
+  </ul>
+  <ul class="time-picker-container-list">
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled">
+      <button class="time-picker-container-list__button">00</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled">
+      <button class="time-picker-container-list__button">01</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled">
+      <button class="time-picker-container-list__button">02</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled">
+      <button class="time-picker-container-list__button">03</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--selected">
+      <button class="time-picker-container-list__button">04</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">05</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">06</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">07</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">08</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">09</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">10</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">11</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">12</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">13</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">14</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">15</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">16</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">17</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">18</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">19</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">20</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">21</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">22</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">23</button>
+    </li>
+  </ul>
+  <ul class="time-picker-container-list">
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">00</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">01</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">02</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">03</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">04</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">05</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">06</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--selected">
+      <button class="time-picker-container-list__button">07</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">08</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">09</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">10</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">11</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">12</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">13</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">14</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">15</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">16</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">17</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">18</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">19</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">20</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">21</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">22</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">23</button>
+    </li>
+  </ul>
+</div>
+
           </div>
           <!-- disabled -->
-          <div class="time-picker time-picker--disabled">
-            <input type="text" class="time-picker__input" placeholder="hh:mm:ss" autocomplete="off" disabled>
-            <button class="time-picker__button" disabled>
-              <svg class="svg-icon">
-                <use xlink:href="#time"></use>
-              </svg>
-            </button>
+          <div class="time-picker time-picker--disabled" style="display: inline-flex;">
+            <div class="time-picker-selector">
+              <input type="text" class="time-picker-selector__input" placeholder="hh:mm:ss" autocomplete="off" disabled>
+              <button class="time-picker-selector__button" disabled>
+                <svg class="svg-icon">
+                  <use xlink:href="#time"></use>
+                </svg>
+              </button>
+            </div>
+            
+<div class="time-picker-container" style="/* top:  셀렉터의 Y좌표 + 셀렉터의 높이; left: 셀렉터의 Y좌표 */">
+  <ul class="time-picker-container-list">
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled">
+      <button class="time-picker-container-list__button">00</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled">
+      <button class="time-picker-container-list__button">01</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled">
+      <button class="time-picker-container-list__button">02</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled time-picker-container-list__item--selected">
+      <button class="time-picker-container-list__button">03</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">04</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">05</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">06</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">07</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">08</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">09</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">10</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">11</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">12</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">13</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">14</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">15</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">16</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">17</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">18</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">19</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">20</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">21</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">22</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">23</button>
+    </li>
+  </ul>
+  <ul class="time-picker-container-list">
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled">
+      <button class="time-picker-container-list__button">00</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled">
+      <button class="time-picker-container-list__button">01</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled">
+      <button class="time-picker-container-list__button">02</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--disabled">
+      <button class="time-picker-container-list__button">03</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--selected">
+      <button class="time-picker-container-list__button">04</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">05</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">06</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">07</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">08</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">09</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">10</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">11</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">12</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">13</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">14</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">15</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">16</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">17</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">18</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">19</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">20</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">21</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">22</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">23</button>
+    </li>
+  </ul>
+  <ul class="time-picker-container-list">
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">00</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">01</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">02</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">03</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">04</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">05</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">06</button>
+    </li>
+    <li class="time-picker-container-list__item time-picker-container-list__item--selected">
+      <button class="time-picker-container-list__button">07</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">08</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">09</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">10</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">11</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">12</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">13</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">14</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">15</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">16</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">17</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">18</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">19</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">20</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">21</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">22</button>
+    </li>
+    <li class="time-picker-container-list__item">
+      <button class="time-picker-container-list__button">23</button>
+    </li>
+  </ul>
+</div>
+
           </div>
         </div>
       </div>
