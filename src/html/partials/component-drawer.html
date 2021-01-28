@@ -21,21 +21,33 @@
             <div class="component-examle__item-group">
               <div class="drawer">
                 <div class="drawer__head">
-                  <strong class="drawer__head-title">
-                    로그인 설정
-                  </strong>
-                  <div class="drawer__head-content">
-                    
+                  <strong class="drawer__head-title">로그인 설정</strong>
+                  <div class="drawer__head-group">
+                    <div class="checkbox">
+                      <input id="drawerCheck01" type="checkbox" class="checkbox__input" value="label" />
+                      <label for="drawerCheck01" class="checkbox__label">실시간 미리보기</label>
+                    </div>
                   </div>
-
                 </div>
                 <div class="drawer__body">
-
+                  <button class="drawer__setting-button" type="button">
+                    <svg class="svg-icon">
+                      <use xlink:href="#setting"></use>
+                    </svg>
+                  </button>
+                  <button class="button button-theme--ghost" type="button">전체 복원</button>
+                  <div class="drawer__body-inner">
+                    <strong class="drawer__body-title"> </strong>
+                  </div>
                 </div>
-                <div class="drawer__body">
-
+                <div class="drawer__foot">
+                  <button class="button button-theme--tertiary button--lg" type="button">초기화</button>
+                  <div class="drawer__foot-main-buttons">
+                    <button class="button button-theme--primary button--lg" type="button">
+                      <span class="button__text">저장</span>
+                    </button>
+                  </div>
                 </div>
-                
               </div>
             </div>
           </div>
@@ -43,3 +55,4 @@
       </div>
     </div>
   </div>
+</div>

@@ -1,4 +1,3 @@
-
 <!-- time-picker -->
 <div class="page-header">
   <h2 class="page-header__lable">component</h2>
@@ -10,12 +9,12 @@
   <div class="component-variation">
     <span class="component-variation__name">Default</span>
     <div class="component-example">
-      <div class="component-example__live" style="align-items: flex-start; height: 356px;">
+      <div class="component-example__live" style="align-items: flex-start; height: 356px">
         <div>
           <!-- default -->
-          <div class="time-picker" style="display: inline-flex; margin-right: 18px;">
+          <div class="time-picker" style="display: inline-flex; margin-right: 18px">
             <div class="time-picker-selector">
-              <input type="text" class="time-picker-selector__input" placeholder="hh:mm:ss" autocomplete="off">
+              <input type="text" class="time-picker-selector__input" placeholder="hh:mm:ss" autocomplete="off" />
               <button class="time-picker-selector__button">
                 <svg class="svg-icon">
                   <use xlink:href="#time"></use>
@@ -25,9 +24,18 @@
             @@include('../partials/component-time-picker-container.html')
           </div>
           <!-- focused + open -->
-          <div class="time-picker time-picker--focused time-picker--open" style="display: inline-flex; margin-right: 18px;">
+          <div
+            class="time-picker time-picker--focused time-picker--open"
+            style="display: inline-flex; margin-right: 18px"
+          >
             <div class="time-picker-selector">
-              <input type="text" class="time-picker-selector__input" placeholder="hh:mm:ss" value="03:04:07" autocomplete="off">
+              <input
+                type="text"
+                class="time-picker-selector__input"
+                placeholder="hh:mm:ss"
+                value="03:04:07"
+                autocomplete="off"
+              />
               <button class="time-picker-selector__button">
                 <svg class="svg-icon">
                   <use xlink:href="#time"></use>
@@ -37,9 +45,15 @@
             @@include('../partials/component-time-picker-container.html')
           </div>
           <!-- disabled -->
-          <div class="time-picker time-picker--disabled" style="display: inline-flex;">
+          <div class="time-picker time-picker--disabled" style="display: inline-flex">
             <div class="time-picker-selector">
-              <input type="text" class="time-picker-selector__input" placeholder="hh:mm:ss" autocomplete="off" disabled>
+              <input
+                type="text"
+                class="time-picker-selector__input"
+                placeholder="hh:mm:ss"
+                autocomplete="off"
+                disabled
+              />
               <button class="time-picker-selector__button" disabled>
                 <svg class="svg-icon">
                   <use xlink:href="#time"></use>
@@ -52,5 +66,4 @@
       </div>
     </div>
   </div>
-</div>
 </div>
