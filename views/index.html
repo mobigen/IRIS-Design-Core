@@ -2826,8 +2826,10 @@
             <p class="component-example__size-label">Size: lg</p>
             <div class="component-examle__item-group">
               <div class="description description--lg" style="width: 700px">
+                <div class="description__head">
+                  <strong class="description__head-title"> Information </strong>
+                </div>
                 <div class="description__body">
-                  <strong class="description__title"> Information </strong>
                   <ul class="description__list">
                     <li class="description__item">
                       <strong class="description__header"> 아이디아이디아이디아이디아이디 </strong>
@@ -2878,8 +2880,10 @@
             <p class="component-example__size-label">Size: md</p>
             <div class="component-examle__item-group">
               <div class="description" style="width: 550px">
+                <div class="description__head">
+                  <strong class="description__head-title"> Information </strong>
+                </div>
                 <div class="description__body">
-                  <strong class="description__title"> Information </strong>
                   <ul class="description__list">
                     <li class="description__item">
                       <strong class="description__header"> 아이디아이디아이디아이디아이디 </strong>
@@ -2966,19 +2970,218 @@
                   </div>
                 </div>
                 <div class="drawer__body">
-                  <button class="drawer__setting-button" type="button">
+                  <button class="drawer__toggle-button" type="button">
                     <svg class="svg-icon">
                       <use xlink:href="#setting"></use>
                     </svg>
                   </button>
-                  <button class="button button-theme--ghost" type="button">전체 복원</button>
-                  <div class="drawer__body-inner">
-                    <strong class="drawer__body-title"> </strong>
+                  <div class="drawer__content drawer__content--horizontal">
+                    <button class="drawer__content-reset-button button button-theme--ghost" type="button">
+                      전체 복원
+                    </button>
+                  </div>
+                  <div class="drawer__content">
+                    <div class="drawer__content-label">
+                      <strong class="drawer__content-title"> 이미지 </strong>
+                    </div>
+                    <div class="drawer__content-detail">
+                      <ul class="drawer__content-list">
+                        <li class="drawer__content-item">
+                          <div class="upload-alt upload-alt--selected">
+                            <div class="upload-alt__file">
+                              <input type="file" class="upload-alt__file-input" />
+                              <button class="upload-alt__file-button" type="button">
+                                <strong class="upload-alt__file-title"> 파비콘 </strong>
+                                <span class="upload-alt__file-text"> 사용자 지정</span>
+                                <span class="upload-alt__file-icon">
+                                  <svg class="svg-icon upload-alt__file-icon-download">
+                                    <use xlink:href="#upload"></use>
+                                  </svg>
+                                  <!-- 이미지 select된 경우 보여짐 -->
+                                  <svg class="svg-icon upload-alt__file-icon-close">
+                                    <use xlink:href="#close-middle"></use>
+                                  </svg>
+                                </span>
+                              </button>
+                            </div>
+                            <p class="upload-alt__text">* 권장 포맷 : 64x64px, ICO</p>
+                          </div>
+                        </li>
+                        <li class="drawer__content-item">
+                          <div class="upload-alt">
+                            <div class="upload-alt__file">
+                              <input type="file" class="upload-alt__file-input" />
+                              <button class="upload-alt__file-button" type="button">
+                                <strong class="upload-alt__file-title"> 화면 좌측 상단 기업 로고 </strong>
+                                <span class="upload-alt__file-text"> 기본 </span>
+                                <span class="upload-alt__file-icon">
+                                  <svg class="svg-icon upload-alt__file-icon-download">
+                                    <use xlink:href="#upload"></use>
+                                  </svg>
+                                  <!-- 이미지 select된 경우 보여짐 -->
+                                  <svg class="svg-icon upload-alt__file-icon-close">
+                                    <use xlink:href="#close-middle"></use>
+                                  </svg>
+                                </span>
+                              </button>
+                            </div>
+                            <p class="upload-alt__text">* 권장 포맷 : 가로 140px, PNG</p>
+                          </div>
+                        </li>
+                        <li class="drawer__content-item">
+                          <div class="upload-alt">
+                            <div class="upload-alt__file">
+                              <input type="file" class="upload-alt__file-input" />
+                              <button class="upload-alt__file-button" type="button">
+                                <strong class="upload-alt__file-title"> 로그인 폼 상단 솔루션 보고 </strong>
+                                <span class="upload-alt__file-text"> 기본 </span>
+                                <span class="upload-alt__file-icon">
+                                  <svg class="svg-icon upload-alt__file-icon-download">
+                                    <use xlink:href="#upload"></use>
+                                  </svg>
+                                  <!-- 이미지 select된 경우 보여짐 -->
+                                  <svg class="svg-icon upload-alt__file-icon-close">
+                                    <use xlink:href="#close-middle"></use>
+                                  </svg>
+                                </span>
+                              </button>
+                            </div>
+                            <p class="upload-alt__text">* 권장 포맷 : 가로 120 / 혹은 세로 56px, PNG</p>
+                          </div>
+                        </li>
+                        <li class="drawer__content-item">
+                          <div class="upload-alt">
+                            <div class="upload-alt__file">
+                              <input type="file" class="upload-alt__file-input" />
+                              <button class="upload-alt__file-button" type="button">
+                                <strong class="upload-alt__file-title"> 배경 이미지 </strong>
+                                <span class="upload-alt__file-text"> 기본 </span>
+                                <span class="upload-alt__file-icon">
+                                  <svg class="svg-icon upload-alt__file-icon-download">
+                                    <use xlink:href="#upload"></use>
+                                  </svg>
+                                  <!-- 이미지 select된 경우 보여짐 -->
+                                  <svg class="svg-icon upload-alt__file-icon-close">
+                                    <use xlink:href="#close-middle"></use>
+                                  </svg>
+                                </span>
+                              </button>
+                            </div>
+                            <p class="upload-alt__text"></p>
+                          </div>
+                        </li>
+                        <li class="drawer__content-item">
+                          <div class="upload-alt">
+                            <div class="upload-alt__file">
+                              <input type="file" class="upload-alt__file-input" />
+                              <button class="upload-alt__file-button" type="button">
+                                <strong class="upload-alt__file-title"> 로그인 폼 배경 이미지 </strong>
+                                <span class="upload-alt__file-text"> 기본 </span>
+                                <span class="upload-alt__file-icon">
+                                  <svg class="svg-icon upload-alt__file-icon-download">
+                                    <use xlink:href="#upload"></use>
+                                  </svg>
+                                  <!-- 이미지 select된 경우 보여짐 -->
+                                  <svg class="svg-icon upload-alt__file-icon-close">
+                                    <use xlink:href="#close-middle"></use>
+                                  </svg>
+                                </span>
+                              </button>
+                            </div>
+                            <p class="upload-alt__text"></p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="drawer__content">
+                    <div class="drawer__content-label">
+                      <strong class="drawer__content-title"> 배경 컨셉 설명 </strong>
+                    </div>
+                    <div class="drawer__content-detail">
+                      <textarea
+                        type="text"
+                        class="drawer__content-textarea text-area text-area--fixed"
+                        placeholder="내용을 입력해주세요"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="drawer__content">
+                    <div class="drawer__content-label">
+                      <strong class="drawer__content-title"> 로그인 폼 문구 </strong>
+                      <button class="drawer__content-close-button button button-theme--link" type="button">
+                        <svg class="svg-icon">
+                          <use xlink:href="#close"></use>
+                        </svg>
+                      </button>
+                      <span class="drawer__content-text">* TAG 입력</span>
+                    </div>
+                    <div class="drawer__content-detail">
+                      <textarea
+                        type="text"
+                        class="drawer__content-textarea text-area text-area--fixed"
+                        placeholder="내용을 입력해주세요"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="drawer__content">
+                    <div class="drawer__content-label">
+                      <strong class="drawer__content-title"> 회원가입 버튼 사용 여부 </strong>
+                    </div>
+                    <div class="drawer__content-detail">
+                      <div class="radio">
+                        <input
+                          type="radio"
+                          id="drawerRadio01"
+                          name="radio-group"
+                          class="radio__input"
+                          value="label"
+                          checked=""
+                        />
+                        <label for="drawerRadio01" class="radio__label">사용 </label>
+                      </div>
+                      <div class="radio">
+                        <input
+                          type="radio"
+                          id="drawerRadio02"
+                          name="radio-group"
+                          class="radio__input"
+                          value="label"
+                          checked=""
+                        />
+                        <label for="drawerRadio02" class="radio__label">사용 안함 </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="drawer__content">
+                    <div class="drawer__content-label">
+                      <strong class="drawer__content-title"> 컬러 </strong>
+                    </div>
+                    <div class="drawer__content-detail">
+                      <textarea
+                        type="text"
+                        class="drawer__content-textarea text-area text-area--fixed"
+                        placeholder="내용을 입력해주세요"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="drawer__content">
+                    <div class="drawer__content-label">
+                      <strong class="drawer__content-title"> Copyrights </strong>
+                      <span class="drawer__content-text">* TAG 입력</span>
+                    </div>
+                    <div class="drawer__content-detail">
+                      <textarea
+                        type="text"
+                        class="drawer__content-textarea text-area text-area--fixed"
+                        placeholder="내용을 입력해주세요"
+                      ></textarea>
+                    </div>
                   </div>
                 </div>
                 <div class="drawer__foot">
                   <button class="button button-theme--tertiary button--lg" type="button">초기화</button>
-                  <div class="drawer__foot-main-buttons">
+                  <div class="drawer__foot-group">
                     <button class="button button-theme--primary button--lg" type="button">
                       <span class="button__text">저장</span>
                     </button>
@@ -2988,6 +3191,93 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Description Drawer</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: md</p>
+            <div class="component-examle__item-group">
+              <div class="drawer">
+                <div class="drawer__head">
+                  <strong class="drawer__head-title">사용자 계정 정보</strong>
+                  <div class="drawer__head-group">
+                    <button class="button button--icon button-theme--link">
+                      <svg class="svg-icon">
+                        <use xlink:href="#close"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="drawer__body">
+                  <div class="description">
+                    <div class="description__head">
+                      <strong class="description__head-title"> Information </strong>
+                    </div>
+                    <div class="description__body">
+                      <ul class="description__list">
+                        <li class="description__item">
+                          <strong class="description__header"> 아이디아이디아이디아이디아이디 </strong>
+                          <span class="description__text"> desirade </span>
+                        </li>
+                        <li class="description__item">
+                          <strong class="description__header"> 이름 </strong>
+                          <span class="description__text"> 홍길동 </span>
+                        </li>
+                        <li class="description__item">
+                          <strong class="description__header"> 역할 </strong>
+                          <span class="description__text"> 사용자 </span>
+                        </li>
+                        <li class="description__item">
+                          <strong class="description__header"> 그룹 </strong>
+                          <span class="description__text">
+                            JIRANSECURITYJIRANSECURITYJIRANSECURITYJIRANSECURITYJIRANSECURITY
+                          </span>
+                        </li>
+                        <li class="description__item">
+                          <strong class="description__header"> 전화번호 </strong>
+                          <span class="description__text"> 010-1234-5376 </span>
+                        </li>
+                        <li class="description__item">
+                          <strong class="description__header"> 그룹 </strong>
+                          <span class="description__text"> JIRANSECURITY </span>
+                        </li>
+                        <li class="description__item">
+                          <strong class="description__header"> 이메일 </strong>
+                          <span class="description__text"> gildong@hotmail.com </span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="description__foot">
+                      <div class="description__foot-main-buttons">
+                        <button class="button button-theme--ghost" type="button">
+                          <span class="button__text"> 수정 </span>
+                        </button>
+                        <button class="button button-theme--negative" type="button">
+                          <span class="button__text"> 삭제 </span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Description Drawer</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div></div>
       </div>
     </div>
   </div>
