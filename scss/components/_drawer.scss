@@ -1,22 +1,22 @@
 .drawer {
   width: rem(600px);
+  position: relative;
   background-color: $ui-02;
   box-shadow: 0px 0px 8px rgba(206, 211, 217, 0.7);
 }
 .drawer__head {
   @include stable-padding($spacing-sm, $spacing-md);
   display: flex;
-  align-content: center;
+  align-items: center;
   height: rem(50px);
+  border-bottom: 1px solid $ui-04;
 }
 
 .drawer__head-title {
+  @include font-weight('medium');
   @include text-overflow;
   @include font-size('18');
   flex: 1;
-}
-
-.drawer__head-group {
 }
 
 .drawer__body {
@@ -24,7 +24,7 @@
   padding: $spacing-md;
 }
 
-.drawer__setting-button {
+.drawer__toggle-button {
   @include button-normal;
   position: absolute;
   top: 0;
@@ -34,9 +34,53 @@
   background-color: $ui-02;
   border-radius: 3px 0px 0px 3px;
 
-  svg{
+  svg {
     @include svg-icon-size(26px);
   }
+}
+
+.drawer__content + .drawer__content {
+  margin-top: $spacing-lg;
+}
+
+.drawer__content-reset-button {
+  margin-left: auto;
+}
+
+.drawer__content-label {
+  display: flex;
+  align-items: center;
+}
+
+.drawer__content-title {
+  @include font-weight('regular');
+  display: block;
+  font-size: 15px;
+  color: $text-02;
+}
+
+.drawer__content-close-button {
+  padding: 0;
+  width: rem(22px);
+  height: rem(22px);
+}
+
+.drawer__content-text {
+  @include font-size('12');
+  margin-left: auto;
+  color: $text-03;
+}
+
+.drawer__content-detail {
+  margin-top: $spacing-sm;
+}
+
+.drawer__content-item + .drawer__content-item {
+  margin-top: $spacing-sm;
+}
+
+.drawer__content-textarea {
+  height: 120px;
 }
 
 .drawer__foot {
@@ -47,6 +91,19 @@
   background-color: $ui-01;
 }
 
-.drawer__foot-main-buttons {
+.drawer__foot-group {
   margin-left: auto;
+}
+
+// -------------------------
+// overwrite
+// -------------------------
+
+.drawer__content--horizontal {
+  display: flex;
+  align-items: center;
+}
+
+.drawer__body .description {
+  padding-top: $spacing-xs;
 }

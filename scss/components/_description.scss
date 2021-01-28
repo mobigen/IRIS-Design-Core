@@ -1,10 +1,10 @@
-.description__title {
+.description__head-title {
   @include font-size('16');
   @include font-weight('medium');
   display: block;
 }
 
-.description__list {
+.description__body {
   margin-top: $spacing-lg;
 }
 
@@ -14,6 +14,7 @@
   align-items: center;
   justify-content: flex-start;
   height: rem(46px);
+  padding: 0 $spacing-xs;
 }
 
 .description__item + .description__item {
