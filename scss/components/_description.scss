@@ -1,10 +1,10 @@
 .description__title {
   @include font-size('16');
   @include font-weight('medium');
-  display: inline-block;
+  display: block;
 }
 
-.description__body {
+.description__list {
   margin-top: $spacing-lg;
 }
 
@@ -51,7 +51,7 @@
 // Size overwrite
 // -------------------------
 .description--lg {
-  .description__title {
+  .description__head-title {
     @include font-size('18');
   }
 
