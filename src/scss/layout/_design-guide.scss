@@ -240,7 +240,7 @@
   flex-direction: column;
 }
 
-.component-examle__item-group .button + .button,
+.component-examle__item-group > .button + .button,
 .component-examle__item-group .checkbox + .checkbox,
 .component-examle__item-group .context-menu + .context-menu,
 .component-examle__item-group .select + .select,
