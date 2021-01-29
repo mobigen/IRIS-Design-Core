@@ -7,20 +7,14 @@
   <p class="page__desc">날짜 선택형 필드</p>
 
   <div class="component-variation">
-    <span class="component-variation__name">Date time picker</span>
+    <span class="component-variation__name">Date picker</span>
     <div class="component-example">
-      <div class="component-example__live" style="align-items: flex-start; height: 356px">
+      <div class="component-example__live" style="align-items: flex-start; height: 400px">
         <div>
           <!-- default -->
-          <div class="date-picker" style="display: inline-flex">
-            <div class="date-picker-selector" style="margin-right: 18px">
-              <input
-                type="text"
-                class="date-picker-selector__input"
-                placeholder="YYYY/MM/DD HH:MM:SS"
-                autocomplete="off"
-                readonly
-              />
+          <div class="date-picker" style="display: inline-flex; margin-right: 18px;">
+            <div class="date-picker-selector">
+              <input type="text" class="date-picker-selector__input" placeholder="yyyy/mm/dd hh:mm:ss" autocomplete="off" readonly>
               <button class="date-picker-selector__button">
                 <svg class="svg-icon">
                   <use xlink:href="#calendar"></use>
@@ -29,18 +23,57 @@
             </div>
           </div>
           <!-- focused + open -->
-          <div
-            class="date-picker date-picker--focused date-picker--open"
-            style="display: inline-flex; margin-right: 18px"
-          >
+          <div class="date-picker date-picker--focused date-picker--open" style="display: inline-flex; margin-right: 18px">
             <div class="date-picker-selector">
-              <input
-                type="text"
-                class="date-picker-selector__input"
-                placeholder="YYYY/MM/DD HH:MM:SS"
-                value="2021/01/25 02:05:07"
-                autocomplete="off"
-              />
+              <input type="text" class="date-picker-selector__input" placeholder="yyyy/mm/dd hh:mm:ss" value="2021/01/25 02:05:07" autocomplete="off">
+              <button class="date-picker-selector__button">
+                <svg class="svg-icon">
+                  <use xlink:href="#calendar"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="date-picker-container">
+              <div class="date-picker-panel">
+                @@include('../partials/component-date-picker-calendar.html')
+              </div>
+            </div>
+          </div>
+          <!-- disabled -->
+          <div class="date-picker date-picker--disabled" style="display: inline-flex">
+            <div class="date-picker-selector">
+              <input type="text" class="date-picker-selector__input" placeholder="yyyy/mm/dd hh:mm:ss" autocomplete="off" disabled>
+              <button class="date-picker-selector__button" disabled>
+                <svg class="svg-icon">
+                  <use xlink:href="#calendar"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Date time picker</span>
+    <div class="component-example">
+      <div class="component-example__live" style="align-items: flex-start; height: 500px">
+        <div>
+          <!-- default -->
+          <div class="date-picker" style="display: inline-flex; margin-right: 18px;">
+            <div class="date-picker-selector">
+              <input type="text" class="date-picker-selector__input" placeholder="yyyy/mm/dd hh:mm:ss" autocomplete="off" readonly>
+              <button class="date-picker-selector__button">
+                <svg class="svg-icon">
+                  <use xlink:href="#calendar"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <!-- focused + open -->
+          <div class="date-picker date-picker--focused date-picker--open" style="display: inline-flex; margin-right: 18px">
+            <div class="date-picker-selector">
+              <input type="text" class="date-picker-selector__input" placeholder="yyyy/mm/dd hh:mm:ss" value="2021/01/25 02:05:07" autocomplete="off">
               <button class="date-picker-selector__button">
                 <svg class="svg-icon">
                   <use xlink:href="#calendar"></use>
@@ -50,18 +83,13 @@
             <div class="date-picker-container">
               <div class="date-picker-panel">
                 <div class="date-picker-panel__head">
-                  <button class="button button-theme--link">오늘</button>
+                  <button class="button button-theme--link button--sm">오늘</button>
                 </div>
                 <div class="date-picker-panel__body">@@include('../partials/component-date-picker-calendar.html')</div>
                 <div class="date-picker-panel__foot">
                   <div class="time-picker">
                     <div class="time-picker-selector">
-                      <input
-                        type="text"
-                        class="time-picker-selector__input"
-                        placeholder="hh:mm:ss"
-                        autocomplete="off"
-                      />
+                      <input type="text" class="time-picker-selector__input" placeholder="hh:mm:ss" autocomplete="off" value="02:05:07">
                       <button class="time-picker-selector__button">
                         <svg class="svg-icon">
                           <use xlink:href="#time"></use>
@@ -77,13 +105,7 @@
           <!-- disabled -->
           <div class="date-picker date-picker--disabled" style="display: inline-flex">
             <div class="date-picker-selector">
-              <input
-                type="text"
-                class="date-picker-selector__input"
-                placeholder="YYYY/MM/DD HH:MM:SS"
-                autocomplete="off"
-                disabled
-              />
+              <input type="text" class="date-picker-selector__input" placeholder="yyyy/mm/dd hh:mm:ss" autocomplete="off" disabled>
               <button class="date-picker-selector__button" disabled>
                 <svg class="svg-icon">
                   <use xlink:href="#calendar"></use>
@@ -99,26 +121,16 @@
   <div class="component-variation">
     <span class="component-variation__name">Date time range picker</span>
     <div class="component-example">
-      <div class="component-example__live" style="align-items: flex-start; height: 356px">
+      <div class="component-example__live" style="align-items: flex-start; height: 450px">
         <div>
           <!-- focused + open -->
           <div class="date-picker date-picker--open">
             <div class="date-picker-selector">
-              <input
-                type="text"
-                class="date-picker-selector__input"
-                placeholder="YYYY/MM/DD HH:MM:SS"
-                autocomplete="off"
-              />
+              <input type="text" class="date-picker-selector__input" placeholder="yyyy/mm/dd hh:mm:ss" autocomplete="off">
               <div class="date-picker-selector__separator">
                 <span>&sim;</span>
               </div>
-              <input
-                type="text"
-                class="date-picker-selector__input"
-                placeholder="YYYY/MM/DD HH:MM:SS"
-                autocomplete="off"
-              />
+              <input type="text" class="date-picker-selector__input" placeholder="yyyy/mm/dd hh:mm:ss" autocomplete="off">
               <button class="date-picker-selector__button">
                 <svg class="svg-icon">
                   <use xlink:href="#calendar"></use>
@@ -128,18 +140,13 @@
             <div class="date-picker-container">
               <div class="date-picker-panel">
                 <div class="date-picker-panel__head">
-                  <button class="button button-theme--link">오늘</button>
+                  <button class="button button-theme--link button--sm">오늘</button>
                 </div>
                 <div class="date-picker-panel__body">@@include('../partials/component-date-picker-calendar.html')</div>
                 <div class="date-picker-panel__foot">
                   <div class="time-picker">
                     <div class="time-picker-selector">
-                      <input
-                        type="text"
-                        class="time-picker-selector__input"
-                        placeholder="hh:mm:ss"
-                        autocomplete="off"
-                      />
+                      <input type="text" class="time-picker-selector__input" placeholder="hh:mm:ss" autocomplete="off" />
                       <button class="time-picker-selector__button">
                         <svg class="svg-icon">
                           <use xlink:href="#time"></use>
@@ -152,18 +159,13 @@
               </div>
               <div class="date-picker-panel">
                 <div class="date-picker-panel__head">
-                  <button class="button button-theme--link">오늘</button>
+                  <button class="button button-theme--link button--sm">오늘</button>
                 </div>
                 <div class="date-picker-panel__body">@@include('../partials/component-date-picker-calendar.html')</div>
                 <div class="date-picker-panel__foot">
                   <div class="time-picker">
                     <div class="time-picker-selector">
-                      <input
-                        type="text"
-                        class="time-picker-selector__input"
-                        placeholder="hh:mm:ss"
-                        autocomplete="off"
-                      />
+                      <input type="text" class="time-picker-selector__input" placeholder="hh:mm:ss" autocomplete="off" />
                       <button class="time-picker-selector__button">
                         <svg class="svg-icon">
                           <use xlink:href="#time"></use>

@@ -30,7 +30,10 @@
 
 .main-nav-item__heading {
   @include font-size("12");
+  position: sticky;
+  top: 0;
   padding: $spacing-sm $spacing-md;
+  background-color: rgba($ui-02, .9);
   color: $text-03;
 }
 

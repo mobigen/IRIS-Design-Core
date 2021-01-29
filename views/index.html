@@ -1712,20 +1712,14 @@
   <p class="page__desc">날짜 선택형 필드</p>
 
   <div class="component-variation">
-    <span class="component-variation__name">Date time picker</span>
+    <span class="component-variation__name">Date picker</span>
     <div class="component-example">
-      <div class="component-example__live" style="align-items: flex-start; height: 356px">
+      <div class="component-example__live" style="align-items: flex-start; height: 400px">
         <div>
           <!-- default -->
-          <div class="date-picker" style="display: inline-flex">
-            <div class="date-picker-selector" style="margin-right: 18px">
-              <input
-                type="text"
-                class="date-picker-selector__input"
-                placeholder="YYYY/MM/DD HH:MM:SS"
-                autocomplete="off"
-                readonly
-              />
+          <div class="date-picker" style="display: inline-flex; margin-right: 18px;">
+            <div class="date-picker-selector">
+              <input type="text" class="date-picker-selector__input" placeholder="yyyy/mm/dd hh:mm:ss" autocomplete="off" readonly>
               <button class="date-picker-selector__button">
                 <svg class="svg-icon">
                   <use xlink:href="#calendar"></use>
@@ -1734,18 +1728,9 @@
             </div>
           </div>
           <!-- focused + open -->
-          <div
-            class="date-picker date-picker--focused date-picker--open"
-            style="display: inline-flex; margin-right: 18px"
-          >
+          <div class="date-picker date-picker--focused date-picker--open" style="display: inline-flex; margin-right: 18px">
             <div class="date-picker-selector">
-              <input
-                type="text"
-                class="date-picker-selector__input"
-                placeholder="YYYY/MM/DD HH:MM:SS"
-                value="2021/01/25 02:05:07"
-                autocomplete="off"
-              />
+              <input type="text" class="date-picker-selector__input" placeholder="yyyy/mm/dd hh:mm:ss" value="2021/01/25 02:05:07" autocomplete="off">
               <button class="date-picker-selector__button">
                 <svg class="svg-icon">
                   <use xlink:href="#calendar"></use>
@@ -1754,12 +1739,10 @@
             </div>
             <div class="date-picker-container">
               <div class="date-picker-panel">
-                <div class="date-picker-panel__head">
-                  <button class="button button-theme--link">오늘</button>
-                </div>
-                <div class="date-picker-panel__body"><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all">
-  <div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all"><a class="ui-datepicker-prev ui-corner-all ui-state-disabled" title="이전달"><span class="ui-icon ui-icon-circle-triangle-w">이전달</span></a><a class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title="다음달"><span class="ui-icon ui-icon-circle-triangle-e">다음달</span></a>
-    <div class="ui-datepicker-title"><span class="ui-datepicker-year">2019</span>년&nbsp;<span class="ui-datepicker-month">8월</span></div>
+                
+<div class="ui-datepicker-inline ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="display: block;">
+  <div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all"><a class="ui-datepicker-prev ui-corner-all" data-handler="prev" data-event="click" title="Prev"><span class="ui-icon ui-icon-circle-triangle-w">Prev</span></a><a class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title="Next"><span class="ui-icon ui-icon-circle-triangle-e">Next</span></a>
+    <div class="ui-datepicker-title"><span class="ui-datepicker-year">2021</span>년&nbsp;<span class="ui-datepicker-month">1월</span></div>
   </div>
   <table class="ui-datepicker-calendar">
     <thead>
@@ -1775,78 +1758,193 @@
     </thead>
     <tbody>
       <tr>
-        <td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">
-          &nbsp;</td>
-        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">
-          &nbsp;</td>
-        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">
-          &nbsp;</td>
-        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">
-          &nbsp;</td>
-        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">1</span></td>
-        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">2</span></td>
-        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">3</span></td>
+        <td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">1</a></td>
+        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">2</a></td>
       </tr>
       <tr>
-        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">4</span></td>
-        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">5</span></td>
-        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">6</span></td>
-        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">7</span></td>
-        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">8</span></td>
-        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">9</span></td>
-        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">10</span></td>
+        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">3</a></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">4</a></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">5</a></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">6</a></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">7</a></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">8</a></td>
+        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">9</a></td>
       </tr>
       <tr>
-        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">11</span></td>
-        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">12</span></td>
-        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">13</span></td>
-        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">14</span></td>
-        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">15</span></td>
-        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">16</span></td>
-        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">17</span></td>
+        <td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">10</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">11</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">12</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">13</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default ui-state-hover" href="#">14</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">15</a></td>
+        <td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">16</a></td>
       </tr>
       <tr>
-        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">18</span></td>
-        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">19</span></td>
-        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">20</span></td>
-        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">21</span></td>
-        <td class=" ui-datepicker-today" data-handler="selectDay" data-event="click" data-month="7" data-year="2019"><a class="ui-state-default" href="#">22</a></td>
-        <td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2019">
-          <a class="ui-state-default" href="#">23</a>
-        </td>
-        <td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="7" data-year="2019"><a class="ui-state-default" href="#">24</a></td>
+        <td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">17</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">18</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">19</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">20</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">21</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">22</a></td>
+        <td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">23</a></td>
       </tr>
       <tr>
-        <td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="7" data-year="2019"><a class="ui-state-default ui-state-active" href="#">25</a></td>
-        <td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2019">
-          <a class="ui-state-default" href="#">26</a>
-        </td>
-        <td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2019">
-          <a class="ui-state-default" href="#">27</a>
-        </td>
-        <td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2019">
-          <a class="ui-state-default" href="#">28</a>
-        </td>
-        <td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2019">
-          <a class="ui-state-default" href="#">29</a>
-        </td>
-        <td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2019">
-          <a class="ui-state-default" href="#">30</a>
-        </td>
-        <td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="7" data-year="2019"><a class="ui-state-default" href="#">31</a></td>
+        <td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">24</a></td>
+        <td class=" undefined ui-datepicker-current-day" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default ui-state-active" href="#">25</a></td>
+        <td class=" ui-datepicker-range undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">26</a></td>
+        <td class=" ui-datepicker-days-cell-over undefined ui-datepicker-current-day ui-datepicker-today" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default ui-state-highlight" href="#">27</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">28</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">29</a></td>
+        <td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">30</a></td>
+      </tr>
+      <tr>
+        <td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">31</a></td>
+        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+        <td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
       </tr>
     </tbody>
   </table>
-</div></div>
+</div>
+
+              </div>
+            </div>
+          </div>
+          <!-- disabled -->
+          <div class="date-picker date-picker--disabled" style="display: inline-flex">
+            <div class="date-picker-selector">
+              <input type="text" class="date-picker-selector__input" placeholder="yyyy/mm/dd hh:mm:ss" autocomplete="off" disabled>
+              <button class="date-picker-selector__button" disabled>
+                <svg class="svg-icon">
+                  <use xlink:href="#calendar"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Date time picker</span>
+    <div class="component-example">
+      <div class="component-example__live" style="align-items: flex-start; height: 500px">
+        <div>
+          <!-- default -->
+          <div class="date-picker" style="display: inline-flex; margin-right: 18px;">
+            <div class="date-picker-selector">
+              <input type="text" class="date-picker-selector__input" placeholder="yyyy/mm/dd hh:mm:ss" autocomplete="off" readonly>
+              <button class="date-picker-selector__button">
+                <svg class="svg-icon">
+                  <use xlink:href="#calendar"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <!-- focused + open -->
+          <div class="date-picker date-picker--focused date-picker--open" style="display: inline-flex; margin-right: 18px">
+            <div class="date-picker-selector">
+              <input type="text" class="date-picker-selector__input" placeholder="yyyy/mm/dd hh:mm:ss" value="2021/01/25 02:05:07" autocomplete="off">
+              <button class="date-picker-selector__button">
+                <svg class="svg-icon">
+                  <use xlink:href="#calendar"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="date-picker-container">
+              <div class="date-picker-panel">
+                <div class="date-picker-panel__head">
+                  <button class="button button-theme--link button--sm">오늘</button>
+                </div>
+                <div class="date-picker-panel__body">
+<div class="ui-datepicker-inline ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="display: block;">
+  <div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all"><a class="ui-datepicker-prev ui-corner-all" data-handler="prev" data-event="click" title="Prev"><span class="ui-icon ui-icon-circle-triangle-w">Prev</span></a><a class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title="Next"><span class="ui-icon ui-icon-circle-triangle-e">Next</span></a>
+    <div class="ui-datepicker-title"><span class="ui-datepicker-year">2021</span>년&nbsp;<span class="ui-datepicker-month">1월</span></div>
+  </div>
+  <table class="ui-datepicker-calendar">
+    <thead>
+      <tr>
+        <th class="ui-datepicker-week-end"><span title="일요일">일</span></th>
+        <th><span title="월요일">월</span></th>
+        <th><span title="화요일">화</span></th>
+        <th><span title="수요일">수</span></th>
+        <th><span title="목요일">목</span></th>
+        <th><span title="금요일">금</span></th>
+        <th class="ui-datepicker-week-end"><span title="토요일">토</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">1</a></td>
+        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">2</a></td>
+      </tr>
+      <tr>
+        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">3</a></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">4</a></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">5</a></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">6</a></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">7</a></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">8</a></td>
+        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">9</a></td>
+      </tr>
+      <tr>
+        <td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">10</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">11</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">12</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">13</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default ui-state-hover" href="#">14</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">15</a></td>
+        <td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">16</a></td>
+      </tr>
+      <tr>
+        <td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">17</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">18</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">19</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">20</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">21</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">22</a></td>
+        <td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">23</a></td>
+      </tr>
+      <tr>
+        <td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">24</a></td>
+        <td class=" undefined ui-datepicker-current-day" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default ui-state-active" href="#">25</a></td>
+        <td class=" ui-datepicker-range undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">26</a></td>
+        <td class=" ui-datepicker-days-cell-over undefined ui-datepicker-current-day ui-datepicker-today" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default ui-state-highlight" href="#">27</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">28</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">29</a></td>
+        <td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">30</a></td>
+      </tr>
+      <tr>
+        <td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">31</a></td>
+        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+        <td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
                 <div class="date-picker-panel__foot">
                   <div class="time-picker">
                     <div class="time-picker-selector">
-                      <input
-                        type="text"
-                        class="time-picker-selector__input"
-                        placeholder="hh:mm:ss"
-                        autocomplete="off"
-                      />
+                      <input type="text" class="time-picker-selector__input" placeholder="hh:mm:ss" autocomplete="off" value="02:05:07">
                       <button class="time-picker-selector__button">
                         <svg class="svg-icon">
                           <use xlink:href="#time"></use>
@@ -2087,13 +2185,7 @@
           <!-- disabled -->
           <div class="date-picker date-picker--disabled" style="display: inline-flex">
             <div class="date-picker-selector">
-              <input
-                type="text"
-                class="date-picker-selector__input"
-                placeholder="YYYY/MM/DD HH:MM:SS"
-                autocomplete="off"
-                disabled
-              />
+              <input type="text" class="date-picker-selector__input" placeholder="yyyy/mm/dd hh:mm:ss" autocomplete="off" disabled>
               <button class="date-picker-selector__button" disabled>
                 <svg class="svg-icon">
                   <use xlink:href="#calendar"></use>
@@ -2109,26 +2201,16 @@
   <div class="component-variation">
     <span class="component-variation__name">Date time range picker</span>
     <div class="component-example">
-      <div class="component-example__live" style="align-items: flex-start; height: 356px">
+      <div class="component-example__live" style="align-items: flex-start; height: 450px">
         <div>
           <!-- focused + open -->
           <div class="date-picker date-picker--open">
             <div class="date-picker-selector">
-              <input
-                type="text"
-                class="date-picker-selector__input"
-                placeholder="YYYY/MM/DD HH:MM:SS"
-                autocomplete="off"
-              />
+              <input type="text" class="date-picker-selector__input" placeholder="yyyy/mm/dd hh:mm:ss" autocomplete="off">
               <div class="date-picker-selector__separator">
                 <span>&sim;</span>
               </div>
-              <input
-                type="text"
-                class="date-picker-selector__input"
-                placeholder="YYYY/MM/DD HH:MM:SS"
-                autocomplete="off"
-              />
+              <input type="text" class="date-picker-selector__input" placeholder="yyyy/mm/dd hh:mm:ss" autocomplete="off">
               <button class="date-picker-selector__button">
                 <svg class="svg-icon">
                   <use xlink:href="#calendar"></use>
@@ -2138,11 +2220,12 @@
             <div class="date-picker-container">
               <div class="date-picker-panel">
                 <div class="date-picker-panel__head">
-                  <button class="button button-theme--link">오늘</button>
+                  <button class="button button-theme--link button--sm">오늘</button>
                 </div>
-                <div class="date-picker-panel__body"><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all">
-  <div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all"><a class="ui-datepicker-prev ui-corner-all ui-state-disabled" title="이전달"><span class="ui-icon ui-icon-circle-triangle-w">이전달</span></a><a class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title="다음달"><span class="ui-icon ui-icon-circle-triangle-e">다음달</span></a>
-    <div class="ui-datepicker-title"><span class="ui-datepicker-year">2019</span>년&nbsp;<span class="ui-datepicker-month">8월</span></div>
+                <div class="date-picker-panel__body">
+<div class="ui-datepicker-inline ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="display: block;">
+  <div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all"><a class="ui-datepicker-prev ui-corner-all" data-handler="prev" data-event="click" title="Prev"><span class="ui-icon ui-icon-circle-triangle-w">Prev</span></a><a class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title="Next"><span class="ui-icon ui-icon-circle-triangle-e">Next</span></a>
+    <div class="ui-datepicker-title"><span class="ui-datepicker-year">2021</span>년&nbsp;<span class="ui-datepicker-month">1월</span></div>
   </div>
   <table class="ui-datepicker-calendar">
     <thead>
@@ -2158,78 +2241,67 @@
     </thead>
     <tbody>
       <tr>
-        <td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">
-          &nbsp;</td>
-        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">
-          &nbsp;</td>
-        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">
-          &nbsp;</td>
-        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">
-          &nbsp;</td>
-        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">1</span></td>
-        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">2</span></td>
-        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">3</span></td>
+        <td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">1</a></td>
+        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">2</a></td>
       </tr>
       <tr>
-        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">4</span></td>
-        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">5</span></td>
-        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">6</span></td>
-        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">7</span></td>
-        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">8</span></td>
-        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">9</span></td>
-        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">10</span></td>
+        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">3</a></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">4</a></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">5</a></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">6</a></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">7</a></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">8</a></td>
+        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">9</a></td>
       </tr>
       <tr>
-        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">11</span></td>
-        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">12</span></td>
-        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">13</span></td>
-        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">14</span></td>
-        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">15</span></td>
-        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">16</span></td>
-        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">17</span></td>
+        <td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">10</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">11</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">12</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">13</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default ui-state-hover" href="#">14</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">15</a></td>
+        <td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">16</a></td>
       </tr>
       <tr>
-        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">18</span></td>
-        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">19</span></td>
-        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">20</span></td>
-        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">21</span></td>
-        <td class=" ui-datepicker-today" data-handler="selectDay" data-event="click" data-month="7" data-year="2019"><a class="ui-state-default" href="#">22</a></td>
-        <td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2019">
-          <a class="ui-state-default" href="#">23</a>
-        </td>
-        <td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="7" data-year="2019"><a class="ui-state-default" href="#">24</a></td>
+        <td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">17</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">18</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">19</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">20</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">21</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">22</a></td>
+        <td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">23</a></td>
       </tr>
       <tr>
-        <td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="7" data-year="2019"><a class="ui-state-default ui-state-active" href="#">25</a></td>
-        <td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2019">
-          <a class="ui-state-default" href="#">26</a>
-        </td>
-        <td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2019">
-          <a class="ui-state-default" href="#">27</a>
-        </td>
-        <td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2019">
-          <a class="ui-state-default" href="#">28</a>
-        </td>
-        <td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2019">
-          <a class="ui-state-default" href="#">29</a>
-        </td>
-        <td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2019">
-          <a class="ui-state-default" href="#">30</a>
-        </td>
-        <td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="7" data-year="2019"><a class="ui-state-default" href="#">31</a></td>
+        <td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">24</a></td>
+        <td class=" undefined ui-datepicker-current-day" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default ui-state-active" href="#">25</a></td>
+        <td class=" ui-datepicker-range undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">26</a></td>
+        <td class=" ui-datepicker-days-cell-over undefined ui-datepicker-current-day ui-datepicker-today" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default ui-state-highlight" href="#">27</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">28</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">29</a></td>
+        <td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">30</a></td>
+      </tr>
+      <tr>
+        <td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">31</a></td>
+        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+        <td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
       </tr>
     </tbody>
   </table>
-</div></div>
+</div>
+</div>
                 <div class="date-picker-panel__foot">
                   <div class="time-picker">
                     <div class="time-picker-selector">
-                      <input
-                        type="text"
-                        class="time-picker-selector__input"
-                        placeholder="hh:mm:ss"
-                        autocomplete="off"
-                      />
+                      <input type="text" class="time-picker-selector__input" placeholder="hh:mm:ss" autocomplete="off" />
                       <button class="time-picker-selector__button">
                         <svg class="svg-icon">
                           <use xlink:href="#time"></use>
@@ -2467,11 +2539,12 @@
               </div>
               <div class="date-picker-panel">
                 <div class="date-picker-panel__head">
-                  <button class="button button-theme--link">오늘</button>
+                  <button class="button button-theme--link button--sm">오늘</button>
                 </div>
-                <div class="date-picker-panel__body"><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all">
-  <div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all"><a class="ui-datepicker-prev ui-corner-all ui-state-disabled" title="이전달"><span class="ui-icon ui-icon-circle-triangle-w">이전달</span></a><a class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title="다음달"><span class="ui-icon ui-icon-circle-triangle-e">다음달</span></a>
-    <div class="ui-datepicker-title"><span class="ui-datepicker-year">2019</span>년&nbsp;<span class="ui-datepicker-month">8월</span></div>
+                <div class="date-picker-panel__body">
+<div class="ui-datepicker-inline ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="display: block;">
+  <div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all"><a class="ui-datepicker-prev ui-corner-all" data-handler="prev" data-event="click" title="Prev"><span class="ui-icon ui-icon-circle-triangle-w">Prev</span></a><a class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title="Next"><span class="ui-icon ui-icon-circle-triangle-e">Next</span></a>
+    <div class="ui-datepicker-title"><span class="ui-datepicker-year">2021</span>년&nbsp;<span class="ui-datepicker-month">1월</span></div>
   </div>
   <table class="ui-datepicker-calendar">
     <thead>
@@ -2487,78 +2560,67 @@
     </thead>
     <tbody>
       <tr>
-        <td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">
-          &nbsp;</td>
-        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">
-          &nbsp;</td>
-        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">
-          &nbsp;</td>
-        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">
-          &nbsp;</td>
-        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">1</span></td>
-        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">2</span></td>
-        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">3</span></td>
+        <td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">1</a></td>
+        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">2</a></td>
       </tr>
       <tr>
-        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">4</span></td>
-        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">5</span></td>
-        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">6</span></td>
-        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">7</span></td>
-        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">8</span></td>
-        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">9</span></td>
-        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">10</span></td>
+        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">3</a></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">4</a></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">5</a></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">6</a></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">7</a></td>
+        <td class=" ui-datepicker-unselectable ui-state-disabled undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">8</a></td>
+        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">9</a></td>
       </tr>
       <tr>
-        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">11</span></td>
-        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">12</span></td>
-        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">13</span></td>
-        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">14</span></td>
-        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">15</span></td>
-        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">16</span></td>
-        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">17</span></td>
+        <td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">10</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">11</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">12</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">13</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default ui-state-hover" href="#">14</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">15</a></td>
+        <td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">16</a></td>
       </tr>
       <tr>
-        <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">18</span></td>
-        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">19</span></td>
-        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">20</span></td>
-        <td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">21</span></td>
-        <td class=" ui-datepicker-today" data-handler="selectDay" data-event="click" data-month="7" data-year="2019"><a class="ui-state-default" href="#">22</a></td>
-        <td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2019">
-          <a class="ui-state-default" href="#">23</a>
-        </td>
-        <td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="7" data-year="2019"><a class="ui-state-default" href="#">24</a></td>
+        <td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">17</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">18</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">19</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">20</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">21</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">22</a></td>
+        <td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">23</a></td>
       </tr>
       <tr>
-        <td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="7" data-year="2019"><a class="ui-state-default ui-state-active" href="#">25</a></td>
-        <td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2019">
-          <a class="ui-state-default" href="#">26</a>
-        </td>
-        <td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2019">
-          <a class="ui-state-default" href="#">27</a>
-        </td>
-        <td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2019">
-          <a class="ui-state-default" href="#">28</a>
-        </td>
-        <td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2019">
-          <a class="ui-state-default" href="#">29</a>
-        </td>
-        <td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2019">
-          <a class="ui-state-default" href="#">30</a>
-        </td>
-        <td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="7" data-year="2019"><a class="ui-state-default" href="#">31</a></td>
+        <td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">24</a></td>
+        <td class=" undefined ui-datepicker-current-day" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default ui-state-active" href="#">25</a></td>
+        <td class=" ui-datepicker-range undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">26</a></td>
+        <td class=" ui-datepicker-days-cell-over undefined ui-datepicker-current-day ui-datepicker-today" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default ui-state-highlight" href="#">27</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">28</a></td>
+        <td class=" undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">29</a></td>
+        <td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">30</a></td>
+      </tr>
+      <tr>
+        <td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default" href="#">31</a></td>
+        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+        <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+        <td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
       </tr>
     </tbody>
   </table>
-</div></div>
+</div>
+</div>
                 <div class="date-picker-panel__foot">
                   <div class="time-picker">
                     <div class="time-picker-selector">
-                      <input
-                        type="text"
-                        class="time-picker-selector__input"
-                        placeholder="hh:mm:ss"
-                        autocomplete="off"
-                      />
+                      <input type="text" class="time-picker-selector__input" placeholder="hh:mm:ss" autocomplete="off" />
                       <button class="time-picker-selector__button">
                         <svg class="svg-icon">
                           <use xlink:href="#time"></use>
@@ -2801,7 +2863,6 @@
     </div>
   </div>
 </div>
-
         </div>
         <div class="page" id="page--description">
           <!-- context menu -->
