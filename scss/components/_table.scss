@@ -1,0 +1,83 @@
+.table {
+}
+
+.table table {
+  width: 100%;
+  // table-layout: fixed;
+  border: 1px solid $ui-04;
+}
+
+.table th,
+.table td {
+  vertical-align: middle;
+}
+
+.table th {
+  @include font-weight('regular');
+  @include font-size('14');
+  padding: $spacing-2xs $spacing-sm;
+  color: $text-02;
+}
+
+.table td {
+  padding: $spacing-3xs $spacing-sm;
+  border-top: 1px solid $ui-04;
+}
+
+.table__text {
+  @include font-weight('regular');
+  @include font-size('14');
+  color: $text-02;
+}
+
+.table__group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table__group button + button{
+  margin-left: $spacing-2xs;
+}
+// -------------------------
+// Theme - table--primary
+// -------------------------
+.table--primary th {
+  height: rem(44px);
+  background-color: $ui-02;
+}
+
+.table--primary td {
+  height: rem(40px);
+}
+
+.table--primary tr:nth-child(2n + 1) td {
+  background-color: $odd-row;
+}
+// -------------------------
+// Theme - table--secondary
+// -------------------------
+.table--secondary th {
+  height: rem(40px);
+  background-color: $hover-row;
+}
+
+.table--secondary td {
+  height: rem(40px);
+  color: $text-03;
+}
+
+.notification-message {
+  justify-content: center;
+}
+// -------------------------
+// Theme - table--border
+// ------------------------
+.table--border th + th,
+.table--border td + td {
+  border-left: 1px solid $ui-04;
+}
+
+.table--border td:first-child{
+  color: $text-03;
+}
