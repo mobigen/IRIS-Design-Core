@@ -1,27 +1,37 @@
-.table {
-}
-
 .table table {
   width: 100%;
-  // table-layout: fixed;
   border: 1px solid $ui-04;
+}
+
+.table caption {
+  @include font-weight('light');
+  @include font-size('12');
+  margin-bottom: $spacing-xs;
+  color: $text-03;
+  text-align: left;
 }
 
 .table th,
 .table td {
+  padding: $spacing-3xs $spacing-xs;
   vertical-align: middle;
+  word-break: break-all;
 }
 
 .table th {
   @include font-weight('regular');
   @include font-size('14');
-  padding: $spacing-2xs $spacing-sm;
   color: $text-02;
+  border-bottom: 1px solid $ui-04;
 }
 
 .table td {
-  padding: $spacing-3xs $spacing-sm;
-  border-top: 1px solid $ui-04;
+  height: rem(40px);
+  border-bottom: 1px solid $ui-04;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
 }
 
 .table__text {
@@ -36,9 +46,10 @@
   justify-content: center;
 }
 
-.table__group button + button{
+.table__group button+button {
   margin-left: $spacing-2xs;
 }
+
 // -------------------------
 // Theme - table--primary
 // -------------------------
@@ -47,13 +58,10 @@
   background-color: $ui-02;
 }
 
-.table--primary td {
-  height: rem(40px);
-}
-
 .table--primary tr:nth-child(2n + 1) td {
   background-color: $odd-row;
 }
+
 // -------------------------
 // Theme - table--secondary
 // -------------------------
@@ -62,22 +70,30 @@
   background-color: $hover-row;
 }
 
-.table--secondary td {
-  height: rem(40px);
+.table--secondary td:first-child .table__text,
+.table--secondary td:first-child .button .button__text {
   color: $text-03;
+}
+
+.table--secondary td:first-child .button .svg-icon {
+  fill: $text-03;
 }
 
 .notification-message {
   justify-content: center;
 }
+
 // -------------------------
 // Theme - table--border
 // ------------------------
-.table--border th + th,
-.table--border td + td {
+.table--border th+th,
+.table--border td+td {
   border-left: 1px solid $ui-04;
 }
 
-.table--border td:first-child{
-  color: $text-03;
+// -------------------------
+// Theme - table--horizontal
+// ------------------------
+.table--horizontal th {
+  text-align: left;
 }
