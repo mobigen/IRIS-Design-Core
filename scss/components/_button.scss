@@ -5,12 +5,12 @@
 // button--icon                     || 아이콘 버튼
 // 2. 6개 Theme별 Button 클래스
 // @button-theme                   || 믹스인
-// button-theme--primary
-// button-theme--secondary
-// button-theme--tertiary
-// button-theme--ghost
-// button-theme--link
-// button-theme--negative
+// button--primary
+// button--secondary
+// button--tertiary
+// button--ghost
+// button--link
+// button--negative
 // 3. Size별 Button 클래스            || 버튼 사이즈를 결정하는 클래스 (버튼 유형마다 여백이 달라짐)
 // button--lg
 // button--md
@@ -87,11 +87,11 @@
   }
 }
 
-@mixin button-theme--primary {
+@mixin button--primary {
   @include button-theme($primary, $text-04, $hover-primary, $active-primary);
 }
 
-@mixin button-theme--secondary {
+@mixin button--secondary {
   @include button-theme(
     $secondary,
     $text-04,
@@ -100,11 +100,11 @@
   );
 }
 
-@mixin button-theme--tertiary {
+@mixin button--tertiary {
   @include button-theme($ui-02, $text-02, $ui-01, $ui-03, $ui-04);
 }
 
-@mixin button-theme--ghost {
+@mixin button--ghost {
   @include button-theme(
     transparent,
     $primary,
@@ -114,11 +114,11 @@
   );
 }
 
-@mixin button-theme--negative {
+@mixin button--negative {
   @include button-theme($negative, $text-04, $hover-negative, $active-negative);
 }
 
-@mixin button-theme--danger {
+@mixin button--danger {
   @include button-theme($ui-02, $negative, $negative, $active-negative, $ui-04);
   // danger 예외 사항
   &:hover:not(:disabled) {
@@ -131,7 +131,7 @@
   }
 }
 
-@mixin button-theme--link {
+@mixin button--link {
   @include button-theme(transparent, $text-02, transparent, transparent);
   // link 예외 사항
   &:hover {
@@ -213,32 +213,32 @@
   @include button--icon(6px, 20px);
 }
 
-.button-theme--primary {
-  @include button-theme--primary;
+.button--primary {
+  @include button--primary;
 }
 
-.button-theme--secondary {
-  @include button-theme--secondary;
+.button--secondary {
+  @include button--secondary;
 }
 
-.button-theme--tertiary {
-  @include button-theme--tertiary;
+.button--tertiary {
+  @include button--tertiary;
 }
 
-.button-theme--ghost {
-  @include button-theme--ghost;
+.button--ghost {
+  @include button--ghost;
 }
 
-.button-theme--negative {
-  @include button-theme--negative;
+.button--negative {
+  @include button--negative;
 }
 
-.button-theme--danger {
-  @include button-theme--danger;
+.button--danger {
+  @include button--danger;
 }
 
-.button-theme--link {
-  @include button-theme--link;
+.button--link {
+  @include button--link;
 }
 
 .button--lg {
@@ -262,19 +262,19 @@
 }
 
 // link 테마 버튼이 icon만 사용되는 경우 예외 사항
-.button--icon.button-theme--link {
+.button--icon.button--link {
   @include button--icon(4px, 24px);
 }
 
-.button--icon.button-theme--link.button--lg {
+.button--icon.button--link.button--lg {
   @include button--icon(4px, 28px);
 }
 
-.button--icon.button-theme--link.button--sm {
+.button--icon.button--link.button--sm {
   @include button--icon(2px, 20px);
 }
 
-.button--icon.button-theme--link.button--xs {
+.button--icon.button--link.button--xs {
   @include button--icon(1px, 16px);
   height: 16px;
 }
