@@ -246,7 +246,8 @@
 .component-examle__item-group .select + .select,
 .component-examle__item-group .toggle-switch + .toggle-switch,
 .component-examle__item-group .toggle-button + .toggle-button,
-.component-examle__item-group .tooltip + .tooltip {
+.component-examle__item-group .tooltip + .tooltip,
+.component-examle__item-group .table + .table {
   margin-left: $spacing-sm;
 }
 
