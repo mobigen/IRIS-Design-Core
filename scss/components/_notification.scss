@@ -69,7 +69,7 @@
 
 .notification__close-button {
   @include button;
-  @include button-theme--link;
+  @include button--link;
   padding: 0;
   width: rem(48px);
   height: rem(53px);
