@@ -17,7 +17,7 @@
   padding: 0 $spacing-xs;
 }
 
-.description__item + .description__item {
+.description__item+.description__item {
   border-top: 1px solid $hover-row;
 }
 
@@ -42,10 +42,15 @@
   align-items: center;
   margin-top: $spacing-sm;
 }
+
 .description__foot-main-buttons {
   margin-left: auto;
   display: flex;
   align-items: center;
+
+  .button+.button {
+    margin-left: $spacing-xs;
+  }
 }
 
 // -------------------------
