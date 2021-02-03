@@ -251,9 +251,9 @@
   margin-left: $spacing-sm;
 }
 
-.component-examle__item-group .text-input:not(:first-child),
-.component-examle__item-group .text-input-group:not(:first-child),
-.component-examle__item-group .text-input-group:not(:first-child) {
+.component-examle__item-group > .text-input:not(:first-child),
+.component-examle__item-group > .text-input-group:not(:first-child),
+.component-examle__item-group > .text-input-group:not(:first-child) {
   margin-top: $spacing-xs;
 }
 
