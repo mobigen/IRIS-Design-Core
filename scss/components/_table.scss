@@ -109,6 +109,41 @@
 }
 
 // -------------------------
+// Table overwrite
+// -------------------------
+.table__color-picker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table__color-picker-button {
+  @include button-normal;
+  position: relative;
+  width: 26px;
+  height: 26px;
+  background-color: $ui-02;
+  border-radius: 50%;
+  border: 1px solid $ui-04;
+  vertical-align: middle;
+}
+
+.table__color-picker-inner {
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.text-input.table__color-picker-input {
+  width: 80px;
+  margin-left: $spacing-2xs;
+}
+
+// -------------------------
 // size
 // -------------------------
 .table--sm th,
