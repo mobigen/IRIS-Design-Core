@@ -5,19 +5,37 @@
   box-shadow: 0px 0px 8px rgba(206, 211, 217, 0.7);
 }
 
+.drawer__title {
+  @include font-weight('medium');
+  @include font-size('16');
+  display: block;
+  margin-bottom: $spacing-lg;
+}
+
+.drawer__item+.drawer__item {
+  margin-top: $spacing-xl;
+}
+
 .drawer__head {
-  @include stable-padding($spacing-sm, $spacing-md);
+  @include stable-padding(0, $spacing-md);
   display: flex;
   align-items: center;
   height: rem(50px);
   border-bottom: 1px solid $ui-04;
 }
 
+.drawer__head-group {
+  margin-left: auto;
+}
+
+.drawer__head-group--direction-end {
+  align-self: flex-end;
+}
+
 .drawer__head-title {
   @include font-weight('medium');
   @include text-overflow;
   @include font-size('18');
-  flex: 1;
 }
 
 .drawer__body {
@@ -66,7 +84,7 @@
   height: rem(22px);
 }
 
-.drawer__content-text {
+.drawer__content-helper-text {
   @include font-size('12');
   margin-left: auto;
   color: $text-03;
@@ -105,42 +123,23 @@
   align-items: center;
 }
 
+.drawer__content--horizontal+.drawer__content--horizontal {
+  margin-top: $spacing-md;
+}
+
+.drawer__content--horizontal .drawer__content-label {
+  @include text-overflow(160px);
+}
+
+.drawer__content--horizontal .drawer__content-title {
+  @include font-size("14");
+}
+
+.drawer__content--horizontal .drawer__content-detail {
+  flex: 1;
+  margin-top: 0;
+}
+
 .drawer__body .description {
   padding-top: $spacing-xs;
-}
-
-// -------------------------
-// Table overwrite
-// -------------------------
-
-.table__color-picker{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.table__color-picker-button {
-  @include button-normal;
-  position: relative;
-  width: 26px;
-  height: 26px;
-  background-color: $ui-02;
-  border-radius: 50%;
-  border: 1px solid $ui-04;
-  vertical-align: middle;
-}
-
-.table__color-picker-inner {
-  position: absolute;
-  width: 19px;
-  height: 19px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-}
-
-.text-input.table__color-picker-input {
-  width: 80px;
-  margin-left: $spacing-2xs;
 }

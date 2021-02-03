@@ -70,14 +70,14 @@
 // -------------------------
 // default 열고 닫을 경우 스타일
 // -------------------------
-.accordion__head--selected .accordion__head-icon {
+.accordion__head--open .accordion__head-icon {
   transform: rotate(90deg);
 }
 
-.accordion__head--selected .accordion__head-icon--right {
+.accordion__head--open .accordion__head-icon--right {
   transform: rotate(180deg);
 }
 
-.accordion__head--selected+.accordion__body {
+.accordion__head--open+.accordion__body {
   display: block;
 }

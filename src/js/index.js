@@ -42,34 +42,60 @@ requirePngAll(require.context('../images/', true, /\.png$/));
 // ****************************
 
 // toggle variation
-const beforeToggleElement = document.querySelectorAll(".select, .accordion__head, .toggle-switch, .toggle-button__item");
-const afterToggleSuffix = "--selected";
+const beforeSelectElement = document.querySelectorAll(".select, .toggle-switch, .toggle-button__item");
+const afterSelectSuffix = "--selected";
+const beforeOpenElement = document.querySelectorAll(".accordion__head");
+const afterOpenSuffix = "--open";
 
 // 토글 버튼 클릭시 --selected 추가
-const toggleSelectbox = () => {
+const toggleSelect = () => {
 
   if (window.NodeList && !NodeList.prototype.forEach) {
     NodeList.prototype.forEach = Array.prototype.forEach;
   }
 
-  beforeToggleElement.forEach((i) => {
+  beforeSelectElement.forEach((i) => {
 
     i.addEventListener('click', (event) => {
       event.preventDefault();
-      let afterToggleButton = i.classList[0].concat(afterToggleSuffix);
+      let afterSelectButton = i.classList[0].concat(afterSelectSuffix);
 
       // Test
       console.log(`Click Element => ${i.classList[0]}`);
-      console.log(`Element + "--selected" => ${afterToggleButton}`);
+      console.log(`Element + "--selected" => ${afterSelectButton}`);
 
-      i.classList.toggle(afterToggleButton);
+      i.classList.toggle(afterSelectButton);
+
+    })
+  })
+}
+
+// 열리기 class 추가
+const toggleOpen = () => {
+
+  if (window.NodeList && !NodeList.prototype.forEach) {
+    NodeList.prototype.forEach = Array.prototype.forEach;
+  }
+
+  beforeOpenElement.forEach((i) => {
+
+    i.addEventListener('click', (event) => {
+      event.preventDefault();
+      let afterOpenButton = i.classList[0].concat(afterOpenSuffix);
+
+      // Test
+      console.log(`Click Element => ${i.classList[0]}`);
+      console.log(`Element + "--open" => ${afterOpenButton}`);
+
+      i.classList.toggle(afterOpenButton);
 
     })
   })
 }
 
 const init = () => {
-  toggleSelectbox();
+  toggleSelect();
+  toggleOpen();
 }
 
 init();
