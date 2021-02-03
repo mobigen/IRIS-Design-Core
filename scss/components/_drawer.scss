@@ -4,6 +4,7 @@
   background-color: $ui-02;
   box-shadow: 0px 0px 8px rgba(206, 211, 217, 0.7);
 }
+
 .drawer__head {
   @include stable-padding($spacing-sm, $spacing-md);
   display: flex;
@@ -39,7 +40,7 @@
   }
 }
 
-.drawer__content + .drawer__content {
+.drawer__content+.drawer__content {
   margin-top: $spacing-lg;
 }
 
@@ -75,7 +76,7 @@
   margin-top: $spacing-sm;
 }
 
-.drawer__content-item + .drawer__content-item {
+.drawer__content-item+.drawer__content-item {
   margin-top: $spacing-sm;
 }
 
@@ -91,7 +92,7 @@
   background-color: $ui-01;
 }
 
-.drawer__foot-group {
+.drawer__foot-main-buttons {
   margin-left: auto;
 }
 
@@ -106,4 +107,36 @@
 
 .drawer__body .description {
   padding-top: $spacing-xs;
+}
+
+// -------------------------
+// Table overwrite
+// -------------------------
+
+.color-picker__button {
+  @include button-normal;
+  display: inline-block;
+  position: relative;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid $ui-04;
+  vertical-align: middle;
+}
+
+.color-picker__box {
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.drawer .table .text-input {
+  display: inline-block;
+  width: 80px;
+  margin-right: -$spacing-2xs;
+  vertical-align: middle;
 }
