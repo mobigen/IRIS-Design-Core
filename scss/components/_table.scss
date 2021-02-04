@@ -18,13 +18,16 @@
   height: $button-height-lg;
   padding: $spacing-3xs $spacing-xs;
   color: $text-02;
-  border-bottom: 1px solid $ui-04;
   vertical-align: middle;
   word-break: break-all;
 }
 
-.table--primary tr:last-child td {
-  border-bottom: none;
+.table th {
+  position: relative;
+}
+
+.table td {
+  background-color: $ui-02;
 }
 
 .table__action-button-wrap {
@@ -33,7 +36,7 @@
   justify-content: center;
 }
 
-.table__action-button-wrap .button+.button {
+.table__action-button-wrap .button + .button {
   margin-left: $spacing-2xs;
 }
 
@@ -54,20 +57,28 @@
   color: $text-03;
 }
 
+.table .notification-message {
+  justify-content: center;
+}
+
 // -------------------------
 // Theme - table--primary
 // -------------------------
-.table--primary th {
-  background-color: $ui-02;
-}
-
 .table--primary tr:nth-child(2n + 1) td {
   background-color: $odd-row;
 }
 
+.table--primary th {
+  background-color: $ui-02;
+  border-bottom: 1px solid $ui-04;
+}
 // -------------------------
 // Theme - table--secondary
 // -------------------------
+.table--secondary tr:nth-child(2n) td {
+  background-color: $odd-row;
+}
+
 .table--secondary th {
   background-color: $hover-row;
 }
@@ -75,17 +86,24 @@
 .table--secondary td:first-child .button .svg-icon {
   fill: $text-03;
 }
-
-.notification-message {
-  justify-content: center;
-}
-
 // -------------------------
 // Theme - table--border
 // ------------------------
-.table--border th+th,
-.table--border td+td {
+.table--border td + td {
   border-left: 1px solid $ui-04;
+}
+
+.table--border th + th {
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    margin-top: -7px;
+    left: 1px;
+    width: 2px;
+    height: 14px;
+    background-color: $ui-04;
+  }
 }
 
 // -------------------------
@@ -98,7 +116,7 @@
 // -------------------------
 // Status
 // -------------------------
-.table tr:hover>td {
+.table tr:hover > td {
   background: $hover-row;
 }
 
