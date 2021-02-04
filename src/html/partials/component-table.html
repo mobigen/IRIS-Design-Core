@@ -23,7 +23,6 @@
               <!-- table-primary -->
               <div class="table table--primary table--sm">
                 <table>
-                  <caption>* 세로 border 없는 경우 </caption>
                   <thead>
                     <tr>
                       <th>오브젝트 ID</th>
@@ -32,6 +31,7 @@
                     </tr>
                   </thead>
                   <tbody>
+                    <!-- 선택 되었을 경우, tr--selected 클래스 추가-->
                     <tr class="tr--selected">
                       <td>Selected Status</td>
                       <td>USER_ID</td>
@@ -42,23 +42,8 @@
                       <td>USER_ID</td>
                       <td>Root</td>
                     </tr>
-                  </tbody>
-                </table>
-              </div>
-              <!-- table-primary + table-border -->
-              <div class="table table--primary table--border table--sm">
-                <table>
-                  <caption>* 세로 border 있는 경우 (table--border)</caption>
-                  <thead>
                     <tr>
-                      <th>오브젝트 ID</th>
-                      <th>변수명</th>
-                      <th>변수 값</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr class="tr--selected">
-                      <td>Selected Status</td>
+                      <td>GLOBAL</td>
                       <td>USER_ID</td>
                       <td>Root</td>
                     </tr>
@@ -78,7 +63,6 @@
               <!-- table-primary -->
               <div class="table table--primary">
                 <table>
-                  <caption>* 세로 border 없는 경우 </caption>
                   <thead>
                     <tr>
                       <th>오브젝트 ID</th>
@@ -87,8 +71,19 @@
                     </tr>
                   </thead>
                   <tbody>
+                    <!-- 선택 되었을 경우, tr--selected 클래스 추가-->
                     <tr class="tr--selected">
                       <td>Selected Status</td>
+                      <td>USER_ID</td>
+                      <td>Root</td>
+                    </tr>
+                    <tr>
+                      <td>GLOBAL</td>
+                      <td>USER_ID</td>
+                      <td>Root</td>
+                    </tr>
+                    <tr>
+                      <td>GLOBAL</td>
                       <td>USER_ID</td>
                       <td>Root</td>
                     </tr>
@@ -100,32 +95,6 @@
                   </tbody>
                 </table>
               </div>
-              <!-- table-primary + table-border -->
-              <div class="table table--primary table--border">
-                <table>
-                  <caption>* 세로 border 있는 경우 (table--border)</caption>
-                  <thead>
-                    <tr>
-                      <th>오브젝트 ID</th>
-                      <th>변수명</th>
-                      <th>변수 값</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr class="tr--selected">
-                      <td>Selected Status</td>
-                      <td>USER_ID</td>
-                      <td>Root</td>
-                    </tr>
-                    <tr>
-                      <td>GLOBAL</td>
-                      <td>USER_ID</td>
-                      <td>Root</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              
             </div>
           </div>
         </div>
