@@ -117,29 +117,6 @@
 // -------------------------
 // overwrite
 // -------------------------
-
-.drawer__content--horizontal {
-  display: flex;
-  align-items: center;
-}
-
-.drawer__content--horizontal+.drawer__content--horizontal {
-  margin-top: $spacing-md;
-}
-
-.drawer__content--horizontal .drawer__content-label {
-  @include text-overflow(160px);
-}
-
-.drawer__content--horizontal .drawer__content-title {
-  @include font-size("14");
-}
-
-.drawer__content--horizontal .drawer__content-detail {
-  flex: 1;
-  margin-top: 0;
-}
-
 .drawer__body .description {
   padding-top: $spacing-xs;
 }
