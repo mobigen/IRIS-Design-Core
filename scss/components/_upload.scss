@@ -151,7 +151,7 @@
       display: none !important;
     }
 
-    .upload-alt__file-icon-close {
+    .upload-alt__file-icon-remove {
       display: block !important;
     }
   }
@@ -210,12 +210,12 @@
     display: block;
   }
 
-  .upload-alt__file-icon-close {
+  .upload-alt__file-icon-remove {
     display: none;
   }
 }
 
-.upload-alt__text {
+.upload-alt__helper-text {
   margin-left: $spacing-sm;
   color: $text-02;
 }

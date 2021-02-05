@@ -4,14 +4,14 @@
 
 // dropdown container
 .time-picker-container {
+  @include list;
   flex: auto;
   height: rem(258px);
   width: 100%;
   min-width: 128px;
 }
 
-.time-picker-container-list {
-  @include list;
+.time-picker-container__list {
   width: calc(100% / 3);
   overflow-y: auto;
 
@@ -20,6 +20,6 @@
   }
 }
 
-.time-picker-container-list__button {
+.time-picker-container__button {
   text-align: center;
 }
