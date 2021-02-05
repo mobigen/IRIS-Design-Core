@@ -12,7 +12,7 @@
   margin-bottom: $spacing-lg;
 }
 
-.drawer__item+.drawer__item {
+.drawer__item + .drawer__item {
   margin-top: $spacing-xl;
 }
 
@@ -39,6 +39,7 @@
 }
 
 .drawer__body {
+  overflow-y: auto;
   position: relative;
   padding: $spacing-md;
 }
@@ -58,7 +59,7 @@
   }
 }
 
-.drawer__content+.drawer__content {
+.drawer__content + .drawer__content {
   margin-top: $spacing-lg;
 }
 
@@ -94,7 +95,7 @@
   margin-top: $spacing-sm;
 }
 
-.drawer__content-item+.drawer__content-item {
+.drawer__content-item + .drawer__content-item {
   margin-top: $spacing-sm;
 }
 
@@ -117,6 +118,12 @@
 // -------------------------
 // overwrite
 // -------------------------
-.drawer__body .description {
+.drawer__body .description,
+.drawer__body .form {
   padding-top: $spacing-xs;
+}
+
+.drawer__body .description + .description,
+.drawer__body .form + .form {
+  padding-top: $spacing-xl;
 }
