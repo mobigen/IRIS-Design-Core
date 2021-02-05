@@ -36,12 +36,15 @@
 
 // Image Replacement Phark Method
 @mixin ir-pm {
-  display: block;
-  overflow: hidden;
-  font-size: 0;
-  line-height: 0;
-  text-indent: -9999px;
-  color: transparent;
+  	/* 레이아웃에 영향을 끼치지 않도록 */
+	position: absolute; 
+	/* 스크린 리더가 읽을 수 있도록 */
+	width: 1px; 
+	height: 1px; 
+	/* 눈에 보이는 부분을 제거 */
+	clip: rect(0 0 0 0); 
+	margin: -1px; 
+	overflow: hidden;
 }
 
 // Img Global
