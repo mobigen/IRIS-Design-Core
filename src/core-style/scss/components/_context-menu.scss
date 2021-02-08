@@ -24,7 +24,8 @@
     height: $button-height-lg;
   }
 
-  .context-menu__icon {
+  .context-menu__icon,
+  .context-menu__action-button .svg-icon {
     @include svg-icon-size(20px);
   }
 
@@ -66,7 +67,8 @@
     line-height: 9px;
   }
 
-  .context-menu__icon {
+  .context-menu__icon,
+  .context-menu__action-button .svg-icon {
     @include svg-icon-size(16px);
   }
 

@@ -163,7 +163,7 @@
   height: $button-height;
   font-size: $font-size;
 
-  svg {
+  .svg-icon {
     width: $icon-size;
     height: $icon-size;
 
@@ -173,7 +173,7 @@
   }
 
   .button__text {
-    & + svg {
+    & + .svg-icon {
       margin-left: $spacing-2xs;
     }
   }
@@ -244,7 +244,7 @@
 .button--lg {
   @include button--lg;
 
-  svg + .button__text {
+  .svg-icon + .button__text {
     margin-left: $spacing-xs * 0.75;
   }
 }
