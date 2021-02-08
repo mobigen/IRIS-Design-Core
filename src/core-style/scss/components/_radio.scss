@@ -104,4 +104,9 @@
     background-color: $text-03;
     border-color: $text-03;
   }
+
+  // checked + disabled 상태
+  .radio__input:checked:disabled + .radio__label:hover::before {
+    border-color: $text-03; 
+  }
 }

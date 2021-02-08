@@ -1,0 +1,43 @@
+.toggle-switch {
+  @include button-normal;
+  justify-content: flex-start;
+  width: rem(45px);
+  height: rem(22px);
+  padding: $spacing-3xs;
+  background-color: $text-05;
+  border: none;
+  border-radius: 16px;
+  opacity: .5;
+  transition-duration: $duration-fast-02;
+  transition-timing-function: ease-in-out;
+}
+
+.toggle-switch__handle {
+  display: block;
+  width: rem(18px);
+  height: rem(18px);
+  background-color: $ui-02;
+  border-radius: 50%;
+}
+
+.toggle-switch--selected {
+  background-color: $primary;
+  opacity: 1;
+
+  .toggle-switch__handle {
+    margin-left: auto;
+  }
+}
+
+// -------------------------
+// Size overwrite
+// -------------------------
+.toggle-switch--sm {
+  width: rem(36px);
+  height: rem(18px);
+
+  .toggle-switch__handle {
+    width: 14px;
+    height: 14px;
+  }
+}

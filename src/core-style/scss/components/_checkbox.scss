@@ -12,10 +12,12 @@
   @include line-height("heading");
   @include font-weight("regular");
   display: inline-flex;
+  align-items: center;
   position: relative;
   padding-left: rem(24px); //NOTE: width of checkbox 16px + 8px of padding
   min-height: rem(24px);
   color: $text-02;
+  white-space: nowrap;
   user-select: none;
   cursor: pointer;
 }
@@ -94,11 +96,20 @@
 
   // TODO: 기본 상태 디자인에 :not 으로 줄일 수 있음
   &:hover {
-    color: $text-03;
-
     &::before,
     &::after {
       border-color: $text-03;
+    }
+  }
+}
+
+.checkbox--disabled .checkbox__input:checked + .checkbox__label {
+  &:hover {
+    &::before{
+      border-color: $primary;
+    }
+    &::after {
+      border-color: $text-04;
     }
   }
 }
@@ -151,6 +162,24 @@
   .checkbox__input:checked + .checkbox__label::before {
     background-color: $text-03;
     border-color: $text-03;
+  }
+
+  // disabled 상태
+  .checkbox--disabled .checkbox__label {
+    &:hover {
+      &::before,
+      &::after {
+        border-color: $text-03;
+      }
+    }
+  }
+  
+  .checkbox--disabled .checkbox__input:checked + .checkbox__label {
+    &:hover {
+      &::before{
+        border-color: $text-03;
+      }
+    }
   }
   
   // 부분 선택 상태

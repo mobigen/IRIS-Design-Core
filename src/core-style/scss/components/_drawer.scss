@@ -1,0 +1,129 @@
+.drawer {
+  width: rem(600px);
+  position: relative;
+  background-color: $ui-02;
+  box-shadow: 0px 0px 8px rgba(206, 211, 217, 0.7);
+}
+
+.drawer__title {
+  @include font-weight('medium');
+  @include font-size('16');
+  display: block;
+  margin-bottom: $spacing-lg;
+}
+
+.drawer__item + .drawer__item {
+  margin-top: $spacing-xl;
+}
+
+.drawer__head {
+  @include stable-padding(0, $spacing-md);
+  display: flex;
+  align-items: center;
+  height: rem(50px);
+  border-bottom: 1px solid $ui-04;
+}
+
+.drawer__head-group {
+  margin-left: auto;
+}
+
+.drawer__head-group--direction-end {
+  align-self: flex-end;
+}
+
+.drawer__head-title {
+  @include font-weight('medium');
+  @include text-overflow;
+  @include font-size('18');
+}
+
+.drawer__body {
+  overflow-y: auto;
+  position: relative;
+  padding: $spacing-md;
+}
+
+.drawer__body-toggle-button {
+  @include button-normal;
+  position: absolute;
+  top: 0;
+  left: -42px;
+  width: rem(42px);
+  height: rem(52px);
+  background-color: $ui-02;
+  border-radius: 3px 0px 0px 3px;
+
+  svg {
+    @include svg-icon-size(26px);
+  }
+}
+
+.drawer__content + .drawer__content {
+  margin-top: $spacing-lg;
+}
+
+.drawer__content-reset-button {
+  margin-left: auto;
+}
+
+.drawer__content-label {
+  display: flex;
+  align-items: center;
+}
+
+.drawer__content-title {
+  @include font-weight('regular');
+  display: block;
+  font-size: 15px;
+  color: $text-02;
+}
+
+.drawer__content-clear-button {
+  padding: 0;
+  width: rem(22px);
+  height: rem(22px);
+}
+
+.drawer__content-helper-text {
+  @include font-size('12');
+  margin-left: auto;
+  color: $text-03;
+}
+
+.drawer__content-detail {
+  margin-top: $spacing-sm;
+}
+
+.drawer__content-item + .drawer__content-item {
+  margin-top: $spacing-sm;
+}
+
+.drawer__content-textarea {
+  height: 120px;
+}
+
+.drawer__foot {
+  @include stable-padding($spacing-sm, $spacing-md);
+  display: flex;
+  align-items: center;
+  height: rem(64px);
+  background-color: $ui-01;
+}
+
+.drawer__foot-main-buttons {
+  margin-left: auto;
+}
+
+// -------------------------
+// overwrite
+// -------------------------
+.drawer__body .description,
+.drawer__body .form {
+  padding-top: $spacing-xs;
+}
+
+.drawer__body .description + .description,
+.drawer__body .form + .form {
+  padding-top: $spacing-xl;
+}

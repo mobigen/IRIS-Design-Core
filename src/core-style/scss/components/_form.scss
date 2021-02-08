@@ -1,0 +1,71 @@
+.form__head-title {
+  @include font-size('16');
+  @include font-weight('medium');
+  display: block;
+}
+
+.form__body {
+  margin-top: $spacing-md;
+}
+
+.form__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: $spacing-xs 0;
+}
+
+.form__title {
+  @include text-overflow(160px);
+  @include font-weight('medium');
+  padding-right: $spacing-2xs;
+  color: $text-02;
+}
+
+.form__subtext {
+  @include font-weight('light');
+  color: $text-02;
+}
+
+.form__detail {
+  flex: 1;
+}
+
+.form__foot {
+  display: flex;
+  align-items: center;
+  margin-top: $spacing-sm;
+}
+
+.form__foot-main-buttons {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+
+  .button + .button {
+    margin-left: $spacing-xs;
+  }
+}
+
+// -------------------------
+// Size overwrite
+// -------------------------
+.form--lg {
+  .form__head-title {
+    @include font-size('20');
+  }
+
+  .form__item {
+    padding: $spacing-sm 0 $spacing-xs;
+  }
+
+  .form__title {
+    width: rem(200px);
+  }
+
+  .form__title,
+  .form__text {
+    font-size: 15px;
+  }
+}
