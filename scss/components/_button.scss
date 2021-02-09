@@ -8,8 +8,9 @@
 // button--primary
 // button--secondary
 // button--tertiary
-// button--ghost
 // button--link
+// button--support
+// button--danger
 // button--negative
 // 3. Size별 Button 클래스            || 버튼 사이즈를 결정하는 클래스 (버튼 유형마다 여백이 달라짐)
 // button--lg
@@ -41,7 +42,7 @@
   @include button-base;
   padding: 0 $spacing-sm;
 
-  svg {
+  .svg-icon {
     width: 20px;
     height: 20px;
   }
@@ -51,7 +52,7 @@
 @mixin button--icon($button--icon-padding, $icon-size) {
   padding: 0 $button--icon-padding - 1;
 
-  svg {
+  .svg-icon {
     width: $icon-size;
     height: $icon-size;
   }
@@ -78,7 +79,7 @@
     background-color: $active-bg-color;
   }
 
-  svg {
+  .svg-icon {
     fill: $font-color;
   }
 
@@ -104,18 +105,37 @@
   @include button-theme($ui-02, $text-02, $ui-01, $ui-03, $ui-04);
 }
 
-@mixin button--ghost {
-  @include button-theme(
-    transparent,
-    $primary,
-    rgba($primary, 0.07),
-    rgba($primary, 0.16),
-    $primary
-  );
+@mixin button--link {
+  @include button-theme(transparent, $text-02, transparent, transparent);
+  // link 예외 사항
+  &:hover {
+    color: $text-03;
+
+    .svg-icon {
+      fill: $text-03;
+    }
+  }
+
+  &:active {
+    color: darken($text-02, 0.25);
+
+    .svg-icon {
+      fill: darken($text-02, 0.25);
+    }
+  }
 }
 
-@mixin button--negative {
-  @include button-theme($negative, $text-04, $hover-negative, $active-negative);
+@mixin button--support {
+  @include button-theme($ui-02, $primary, #edf3fb, #d6e4f7, $ui-04);
+  // support 예외 사항
+  &:hover:not(:disabled) {
+    color: $primary;
+    border-color: $primary;
+
+    .svg-icon {
+      fill: $primary;
+    }
+  }
 }
 
 @mixin button--danger {
@@ -125,30 +145,14 @@
     color: $text-04;
     border-color: $negative;
 
-    svg {
+    .svg-icon {
       fill: $text-04;
     }
   }
 }
 
-@mixin button--link {
-  @include button-theme(transparent, $text-02, transparent, transparent);
-  // link 예외 사항
-  &:hover {
-    color: $text-03;
-
-    svg {
-      fill: $text-03;
-    }
-  }
-
-  &:active {
-    color: darken($text-02, 0.25);
-
-    svg {
-      fill: darken($text-02, 0.25);
-    }
-  }
+@mixin button--negative {
+  @include button-theme($negative, $text-04, $hover-negative, $active-negative);
 }
 
 // -------------------------
@@ -163,7 +167,7 @@
   height: $button-height;
   font-size: $font-size;
 
-  svg {
+  .svg-icon {
     width: $icon-size;
     height: $icon-size;
 
@@ -173,7 +177,7 @@
   }
 
   .button__text {
-    & + svg {
+    & + .svg-icon {
       margin-left: $spacing-2xs;
     }
   }
@@ -181,7 +185,7 @@
   .loader + .button__text {
     margin-left: $spacing-2xs;
   }
-  
+
   @if ($button-width) {
     width: $button-width;
   }
@@ -225,26 +229,26 @@
   @include button--tertiary;
 }
 
-.button--ghost {
-  @include button--ghost;
+.button--link {
+  @include button--link;
 }
 
-.button--negative {
-  @include button--negative;
+.button--support {
+  @include button--support;
 }
 
 .button--danger {
   @include button--danger;
 }
 
-.button--link {
-  @include button--link;
+.button--negative {
+  @include button--negative;
 }
 
 .button--lg {
   @include button--lg;
 
-  svg + .button__text {
+  .svg-icon + .button__text {
     margin-left: $spacing-xs * 0.75;
   }
 }
