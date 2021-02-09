@@ -117,7 +117,7 @@
     }
   }
 
-  &__action-button:active &__icon {
+  &__action-button:active .svg-icon {
     fill: $primary;
   }
 
@@ -201,11 +201,13 @@
     fill: $primary;
   }
 
-  &__item--selected &__icon {
+  &__item--selected &__icon,
+  &__item--selected &__action-button .svg-icon {
     fill: $primary;
   }
 
-  &__item--selected &__button:active &__icon {
+  &__item--selected &__button:active &__icon,
+  &__item--selected &__button:active .svg-icon {
     fill: $primary;
   }
 }
