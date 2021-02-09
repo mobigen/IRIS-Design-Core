@@ -16,10 +16,11 @@
   @include font-weight('regular');
   @include font-size('14');
   height: $button-height-lg;
-  padding: $spacing-3xs $spacing-xs;
+  padding: $spacing-2xs $spacing-xs;
   color: $text-02;
   vertical-align: middle;
   word-break: break-all;
+  line-height: 100%;
 }
 
 .table th {
@@ -36,7 +37,7 @@
   justify-content: center;
 }
 
-.table__action-buttons .button + .button {
+.table__action-buttons .button+.button {
   margin-left: $spacing-2xs;
 }
 
@@ -72,6 +73,7 @@
   background-color: $ui-02;
   border-bottom: 1px solid $ui-04;
 }
+
 // -------------------------
 // Theme - table--secondary
 // -------------------------
@@ -83,32 +85,30 @@
   background-color: $hover-row;
 }
 
-.table--secondary td:first-child .button .svg-icon {
-  fill: $text-03;
-}
-// -------------------------
-// Theme - table--border
-// ------------------------
-.table--border td + td {
-  border-left: 1px solid $ui-04;
-}
-
-.table--border th + th {
+.table--secondary th+th {
   &:after {
     content: '';
+    width: rem(1px);
+    height: rem(14px);
+    background-color: $ui-04;
     position: absolute;
     top: 50%;
     margin-top: -7px;
-    left: 1px;
-    width: 2px;
-    height: 14px;
-    background-color: $ui-04;
+    left: -1px;
   }
+}
+
+.table--secondary td:first-child {
+  color: $text-03;
 }
 
 // -------------------------
 // Theme - table--horizontal
 // ------------------------
+.table--horizontal tr:nth-child(2n) td {
+  background-color: $ui-02;
+}
+
 .table--horizontal th {
   text-align: left;
 }
@@ -116,14 +116,18 @@
 // -------------------------
 // Status
 // -------------------------
-.table tr:hover > td {
+.table tr:hover>td {
   background: $hover-row;
 }
 
-.tr--selected td,
-.tr--selected:hover td {
+.table .tr--selected td,
+.table .tr--selected:hover td {
   background-color: $ui-01 !important;
   color: $active-primary !important;
+}
+
+.table .td--interval-sm {
+  padding: $spacing-3xs $spacing-2xs;
 }
 
 // -------------------------
@@ -164,7 +168,7 @@
 // -------------------------
 // size
 // -------------------------
-.table--sm th,
-.table--sm td {
+.table.table--sm th,
+.table.table--sm td {
   height: $button-height-md;
 }
