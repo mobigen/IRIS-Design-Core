@@ -111,13 +111,11 @@
           <div class="component-example__row">
             <p class="component-example__size-label">Size: sm</p>
             <div class="component-examle__item-group">
-              <!-- table-secondary -->
               <div class="table table--secondary table--sm">
                 <table>
-                  <caption>* 세로 border 없는 경우</caption>
                   <colgroup>
-                    <col width="90"/>
-                    <col width="90"/>
+                    <col width="90" />
+                    <col width="90" />
                   </colgroup>
                   <thead>
                     <tr>
@@ -128,20 +126,23 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td>
-                        <input type="text" class="text-input" placeholder="canvas_1">
+                      <!-- 간격 좁은 경우, td--interval-sm 클래스 추가 -->
+                      <td class="td--interval-sm">
+                        <input type="text" class="text-input text-input--sm" placeholder="canvas_1">
                       </td>
-                      <td>
-                        <input type="text" class="text-input" placeholder="">
+                      <!-- 간격 좁은 경우, td--interval-sm 클래스 추가 -->
+                      <td class="td--interval-sm">
+                        <input type="text" class="text-input text-input--sm" placeholder="">
                       </td>
-                      <td>
+                      <!-- 간격 좁은 경우, td--interval-sm 클래스 추가 -->
+                      <td class="td--interval-sm">
                         <div class="table__action-buttons">
-                          <button class="button button--icon button--tertiary" type="button">
+                          <button class="button button--icon button--support button--sm" type="button">
                             <svg class="svg-icon">
                               <use xlink:href="#add"></use>
                             </svg>
                           </button>
-                          <button class="button button--icon button--tertiary" type="button">
+                          <button class="button button--icon button--danger button--sm" type="button">
                             <svg class="svg-icon">
                               <use xlink:href="#minus"></use>
                             </svg>
@@ -150,20 +151,23 @@
                       </td>
                     </tr>
                     <tr>
-                      <td>
-                        <input type="text" class="text-input" placeholder="canvas_1">
+                      <!-- 간격 좁은 경우, td--interval-sm 클래스 추가 -->
+                      <td class="td--interval-sm">
+                        <input type="text" class="text-input text-input--sm" placeholder="canvas_1">
                       </td>
-                      <td>
-                        <input type="text" class="text-input" placeholder="">
+                      <!-- 간격 좁은 경우, td--interval-sm 클래스 추가 -->
+                      <td class="td--interval-sm">
+                        <input type="text" class="text-input text-input--sm" placeholder="">
                       </td>
-                      <td>
+                      <!-- 간격 좁은 경우, td--interval-sm 클래스 추가 -->
+                      <td class="td--interval-sm">
                         <div class="table__action-buttons">
-                          <button class="button button--icon button--tertiary" type="button">
+                          <button class="button button--icon button--support button--sm" type="button">
                             <svg class="svg-icon">
                               <use xlink:href="#add"></use>
                             </svg>
                           </button>
-                          <button class="button button--icon button--tertiary" type="button">
+                          <button class="button button--icon button--danger button--sm" type="button">
                             <svg class="svg-icon">
                               <use xlink:href="#minus"></use>
                             </svg>
@@ -174,10 +178,8 @@
                   </tbody>
                 </table>
               </div>
-              <!-- table-secondary + table-border -->
-              <div class="table table--secondary table--border table--sm">
+              <div class="table table--secondary table--sm">
                 <table>
-                  <caption>* 세로 border 있는 경우 (table--border)</caption>
                   <thead>
                     <tr>
                       <th>대상 오브젝트 ID</th>
@@ -206,12 +208,12 @@
                       </td>
                       <td>
                         <div class="table__action-buttons">
-                          <button class="button button--icon button--link" type="button">
+                          <button class="button button--icon button--link button--sm" type="button">
                             <svg class="svg-icon">
                               <use xlink:href="#return"></use>
                             </svg>
                           </button>
-                          <button class="button button--icon button--link" type="button">
+                          <button class="button button--icon button--link button--sm" type="button">
                             <svg class="svg-icon">
                               <use xlink:href="#unlink"></use>
                             </svg>
@@ -229,13 +231,45 @@
                         <span class="table__subtext">Button 5</span>
                       </td>
                       <td>
-                        Data Received
+                        Data
+                        <br />
+                        Received
                       </td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <!-- table-secondary -->
+              <div class="table table--secondary table--sm">
+                <table>
+                  <colgroup>
+                    <col width="160" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>이름</th>
+                      <th>구분</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>히트맵</td>
+                      <td>고급 시각화</td>
+                    </tr>
+                    <tr>
+                      <td>미인증사용자_중복시간과멤버예시</td>
+                      <td>검색</td>
+                    </tr>
+                    <tr>
+                      <td>철도청_예측_pi_pm_5m</td>
+                      <td>피벗</td>
+                    </tr>
+                    <tr>
+                      <td>test_timediff</td>
+                      <td>고급 시각화</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
               <div class="table table--secondary table--horizontal table--sm">
                 <table>
                   <caption>* 제목 / 내용 수평일 경우 (table--horizontal) </caption>
@@ -272,13 +306,11 @@
           <div class="component-example__row">
             <p class="component-example__size-label">Size: md</p>
             <div class="component-examle__item-group">
-              <!-- table-secondary -->
               <div class="table table--secondary">
                 <table>
-                  <caption>* 세로 border 없는 경우</caption>
                   <colgroup>
-                    <col width="90"/>
-                    <col width="90"/>
+                    <col width="90" />
+                    <col width="90" />
                   </colgroup>
                   <thead>
                     <tr>
@@ -289,20 +321,23 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td>
+                      <!-- 간격 좁은 경우, td--interval-sm 클래스 추가 -->
+                      <td class="td--interval-sm">
                         <input type="text" class="text-input" placeholder="canvas_1">
                       </td>
-                      <td>
+                      <!-- 간격 좁은 경우, td--interval-sm 클래스 추가 -->
+                      <td class="td--interval-sm">
                         <input type="text" class="text-input" placeholder="">
                       </td>
-                      <td>
+                      <!-- 간격 좁은 경우, td--interval-sm 클래스 추가 -->
+                      <td class="td--interval-sm">
                         <div class="table__action-buttons">
-                          <button class="button button--icon button--tertiary" type="button">
+                          <button class="button button--icon button--support" type="button">
                             <svg class="svg-icon">
                               <use xlink:href="#add"></use>
                             </svg>
                           </button>
-                          <button class="button button--icon button--tertiary" type="button">
+                          <button class="button button--icon button--danger" type="button">
                             <svg class="svg-icon">
                               <use xlink:href="#minus"></use>
                             </svg>
@@ -311,20 +346,23 @@
                       </td>
                     </tr>
                     <tr>
-                      <td>
+                      <!-- 간격 좁은 경우, td--interval-sm 클래스 추가 -->
+                      <td class="td--interval-sm">
                         <input type="text" class="text-input" placeholder="canvas_1">
                       </td>
-                      <td>
+                      <!-- 간격 좁은 경우, td--interval-sm 클래스 추가 -->
+                      <td class="td--interval-sm">
                         <input type="text" class="text-input" placeholder="">
                       </td>
-                      <td>
+                      <!-- 간격 좁은 경우, td--interval-sm 클래스 추가 -->
+                      <td class="td--interval-sm">
                         <div class="table__action-buttons">
-                          <button class="button button--icon button--tertiary" type="button">
+                          <button class="button button--icon button--support" type="button">
                             <svg class="svg-icon">
                               <use xlink:href="#add"></use>
                             </svg>
                           </button>
-                          <button class="button button--icon button--tertiary" type="button">
+                          <button class="button button--icon button--danger" type="button">
                             <svg class="svg-icon">
                               <use xlink:href="#minus"></use>
                             </svg>
@@ -335,10 +373,8 @@
                   </tbody>
                 </table>
               </div>
-              <!-- table-secondary + table-border -->
-              <div class="table table--secondary table--border">
+              <div class="table table--secondary">
                 <table>
-                  <caption>* 세로 border 있는 경우 (table--border)</caption>
                   <thead>
                     <tr>
                       <th>대상 오브젝트 ID</th>
@@ -390,13 +426,45 @@
                         <span class="table__subtext">Button 5</span>
                       </td>
                       <td>
-                        Data Received
+                        Data
+                        <br />
+                        Received
                       </td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <!-- table-secondary -->
+              <div class="table table--secondary">
+                <table>
+                  <colgroup>
+                    <col width="160" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>이름</th>
+                      <th>구분</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>히트맵</td>
+                      <td>고급 시각화</td>
+                    </tr>
+                    <tr>
+                      <td>미인증사용자_중복시간과멤버예시_미인증사용자_중복시간과멤버예시</td>
+                      <td>검색</td>
+                    </tr>
+                    <tr>
+                      <td>철도청_예측_pi_pm_5m</td>
+                      <td>피벗</td>
+                    </tr>
+                    <tr>
+                      <td>test_timediff</td>
+                      <td>고급 시각화</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
               <div class="table table--secondary table--horizontal">
                 <table>
                   <caption>* 제목 / 내용 수평일 경우 (table--horizontal) </caption>
