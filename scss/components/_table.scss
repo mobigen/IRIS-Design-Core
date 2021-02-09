@@ -30,13 +30,13 @@
   background-color: $ui-02;
 }
 
-.table__action-button-wrap {
+.table__action-buttons {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.table__action-button-wrap .button + .button {
+.table__action-buttons .button + .button {
   margin-left: $spacing-2xs;
 }
 
