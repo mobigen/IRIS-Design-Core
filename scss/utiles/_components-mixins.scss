@@ -110,15 +110,15 @@
 
     &:active {
       background-color: $hover-row;
+
+      .svg-icon {
+        fill: $primary
+      }
     }
 
     &:not(:last-child) {
       margin-right: $spacing-3xs;
     }
-  }
-
-  &__action-button:active .svg-icon {
-    fill: $primary;
   }
 
   // -------------------------
