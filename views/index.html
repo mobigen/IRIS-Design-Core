@@ -527,7 +527,7 @@
         버튼은 <em class="text-emphasis">6개</em>가 있으며 <em class="text-emphasis">3개</em> 크기로 구분합니다.<br />이
         이외의 버튼 스타일은 사용하지 않습니다. 각 버튼의 설명을 숙지하고 목적에 맞게 사용하도록합니다.
       </li>
-      <li>버튼에 아이콘을 조합하여 사용할 경우 버튼 텍스트를 `span`태그로 감싸서 사용합니다.</li>
+      <li>버튼에 아이콘을 조합하여 사용할 경우 버튼 텍스트를 `span`태그로 감싸`button__text` 라는 클래스를 추가해 사용합니다.</li>
     </ul>
   </div>
 
@@ -2929,7 +2929,7 @@
                 </div>
                 <div class="description__foot">
                   <div class="description__foot-main-buttons">
-                    <button class="button button--ghost button--lg" type="button">
+                    <button class="button button--support button--lg" type="button">
                       <span class="button__text"> 수정 </span>
                     </button>
                     <button class="button button--primary button--lg" type="button">
@@ -2983,7 +2983,7 @@
                 </div>
                 <div class="description__foot">
                   <div class="description__foot-main-buttons">
-                    <button class="button button--ghost" type="button">
+                    <button class="button button--support" type="button">
                       <span class="button__text"> 수정 </span>
                     </button>
                     <button class="button button--negative" type="button">
@@ -3038,7 +3038,7 @@
                   </svg>
                 </button>
                 <div class="drawer__content">
-                  <button class="drawer__content-reset-button button button--ghost" type="button">
+                  <button class="drawer__content-reset-button button button--support" type="button">
                     전체 복원
                   </button>
                 </div>
@@ -3461,7 +3461,7 @@
                   </div>
                   <div class="description__foot">
                     <div class="description__foot-main-buttons">
-                      <button class="button button--ghost" type="button">
+                      <button class="button button--support" type="button">
                         <span class="button__text"> 수정 </span>
                       </button>
                       <button class="button button--negative" type="button">
@@ -3830,7 +3830,7 @@
                     <span class="button__text"> 초기화 </span>
                   </button>
                   <div class="form__foot-main-buttons">
-                    <button class="button button--ghost button--lg" type="button">
+                    <button class="button button--support button--lg" type="button">
                       <span class="button__text"> 수정 </span>
                     </button>
                     <button class="button button--primary button--lg" type="button">
@@ -3954,7 +3954,7 @@
                     <span class="button__text"> 초기화 </span>
                   </button>
                   <div class="form__foot-main-buttons">
-                    <button class="button button--ghost" type="button">
+                    <button class="button button--support" type="button">
                       <span class="button__text"> 수정 </span>
                     </button>
                     <button class="button button--primary" type="button">
@@ -6308,27 +6308,43 @@
     <span class="component-variation__name">Default Tab - horizontal</span>
     <div class="component-example">
       <div class="component-example__live">
-        <div style="width: 500px">
+        <div style="width: 700px">
           <div class="tab tab--horizontal">
             <ul class="tab__bar">
               <li class="tab__item">
                 <button type="button" class="tab__button">
-                  <span class="tab__button-text">tab1</span>
+                  <span class="tab__button-text">Tab1</span>
                 </button>
               </li>
+              <!-- 선택된 항목에 tab__item--selected 클래스 추가 -->
               <li class="tab__item tab__item--selected">
                 <button type="button" class="tab__button">
-                  <span class="tab__button-text">tab2</span>
+                  <span class="tab__button-text">Tab2</span>
                 </button>
               </li>
               <li class="tab__item">
                 <button type="button" class="tab__button">
-                  <span class="tab__button-text">tab3</span>
+                  <span class="tab__button-text">Tab3 - removable</span>
+                  <svg class="svg-icon tab__remove-button">
+                    <use xlink:href="#close"></use>
+                  </svg>
                 </button>
               </li>
               <li class="tab__item">
                 <button type="button" class="tab__button">
-                  <span class="tab__button-text">tab4</span>
+                  <span class="tab__button-text">Tab4 - removable</span>
+                  <svg class="svg-icon tab__remove-button">
+                    <use xlink:href="#close"></use>
+                  </svg>
+                </button>
+              </li>
+              <!-- 비활성 항목에 tab__item--disabled 클래스 추가 -->
+              <li class="tab__item tab__item--disabled">
+                <button type="button" class="tab__button">
+                  <span class="tab__button-text">Tab5 - removable, disabled</span>
+                  <svg class="svg-icon tab__remove-button">
+                    <use xlink:href="#close"></use>
+                  </svg>
                 </button>
               </li>
             </ul>
@@ -6355,22 +6371,28 @@
             <ul class="tab__bar">
               <li class="tab__item">
                 <button type="button" class="tab__button">
-                  <span class="tab__button-text">tab1</span>
+                  <span class="tab__button-text">Tab1</span>
                 </button>
               </li>
               <li class="tab__item tab__item--selected">
                 <button type="button" class="tab__button">
-                  <span class="tab__button-text">tab2</span>
+                  <span class="tab__button-text">Tab2</span>
                 </button>
               </li>
               <li class="tab__item">
                 <button type="button" class="tab__button">
-                  <span class="tab__button-text">tab3</span>
+                  <span class="tab__button-text">Tab3</span>
+                  <svg class="svg-icon tab__remove-button">
+                    <use xlink:href="#close"></use>
+                  </svg>
                 </button>
               </li>
               <li class="tab__item">
                 <button type="button" class="tab__button">
-                  <span class="tab__button-text">tab4</span>
+                  <span class="tab__button-text">Tab4</span>
+                  <svg class="svg-icon tab__remove-button">
+                    <use xlink:href="#close"></use>
+                  </svg>
                 </button>
               </li>
             </ul>
@@ -6397,22 +6419,27 @@
             <ul class="tab__bar">
               <li class="tab__item">
                 <button type="button" class="tab__button">
-                  <span class="tab__button-text">tab1</span>
+                  <span class="tab__button-text">Tab1</span>
                 </button>
               </li>
               <li class="tab__item tab__item--selected">
                 <button type="button" class="tab__button">
-                  <span class="tab__button-text">tab2</span>
+                  <span class="tab__button-text">Tab2</span>
                 </button>
               </li>
               <li class="tab__item">
                 <button type="button" class="tab__button">
-                  <span class="tab__button-text">tab3</span>
+                  <span class="tab__button-text">Tab3</span>
                 </button>
               </li>
               <li class="tab__item">
                 <button type="button" class="tab__button">
-                  <span class="tab__button-text">tab4</span>
+                  <span class="tab__button-text">Tab4</span>
+                </button>
+              </li>
+              <li class="tab__item tab__item--disabled">
+                <button type="button" class="tab__button">
+                  <span class="tab__button-text">Tab5-disabled</span>
                 </button>
               </li>
             </ul>
@@ -6439,22 +6466,22 @@
             <ul class="tab__bar">
               <li class="tab__item">
                 <button type="button" class="tab__button">
-                  <span class="tab__button-text">tab1</span>
+                  <span class="tab__button-text">Tab1</span>
                 </button>
               </li>
               <li class="tab__item tab__item--selected">
                 <button type="button" class="tab__button">
-                  <span class="tab__button-text">tab2</span>
+                  <span class="tab__button-text">Tab2</span>
                 </button>
               </li>
               <li class="tab__item">
                 <button type="button" class="tab__button">
-                  <span class="tab__button-text">tab3</span>
+                  <span class="tab__button-text">Tab3</span>
                 </button>
               </li>
               <li class="tab__item">
                 <button type="button" class="tab__button">
-                  <span class="tab__button-text">tab4</span>
+                  <span class="tab__button-text">Tab4</span>
                 </button>
               </li>
             </ul>
@@ -6482,22 +6509,22 @@
             <ul class="tab__bar">
               <li class="tab__item" style="width: calc(100% / 4)">
                 <button type="button" class="tab__button">
-                  <span class="tab__button-text">tab1</span>
+                  <span class="tab__button-text">Tab1</span>
                 </button>
               </li>
               <li class="tab__item tab__item--selected" style="width: calc(100% / 4)">
                 <button type="button" class="tab__button">
-                  <span class="tab__button-text">tab2</span>
+                  <span class="tab__button-text">Tab2</span>
                 </button>
               </li>
               <li class="tab__item" style="width: calc(100% / 4)">
                 <button type="button" class="tab__button">
-                  <span class="tab__button-text">tab3</span>
+                  <span class="tab__button-text">Tab3</span>
                 </button>
               </li>
               <li class="tab__item" style="width: calc(100% / 4)">
                 <button type="button" class="tab__button">
-                  <span class="tab__button-text">tab4</span>
+                  <span class="tab__button-text">Tab4</span>
                 </button>
               </li>
             </ul>
@@ -6519,22 +6546,22 @@
             <ul class="tab__bar">
               <li class="tab__item" style="height: calc(100% / 4)">
                 <button type="button" class="tab__button">
-                  <span class="tab__button-text">tab1</span>
+                  <span class="tab__button-text">Tab1</span>
                 </button>
               </li>
               <li class="tab__item tab__item--selected" style="height: calc(100% / 4)">
                 <button type="button" class="tab__button">
-                  <span class="tab__button-text">tab2</span>
+                  <span class="tab__button-text">Tab2</span>
                 </button>
               </li>
               <li class="tab__item" style="height: calc(100% / 4)">
                 <button type="button" class="tab__button">
-                  <span class="tab__button-text">tab3</span>
+                  <span class="tab__button-text">Tab3</span>
                 </button>
               </li>
               <li class="tab__item" style="height: calc(100% / 4)">
                 <button type="button" class="tab__button">
-                  <span class="tab__button-text">tab4</span>
+                  <span class="tab__button-text">Tab4</span>
                 </button>
               </li>
             </ul>
@@ -6546,7 +6573,6 @@
     </div>
   </div>
 </div>
-
         </div>
         <div class="page" id="page--table">
           <!-- context menu -->

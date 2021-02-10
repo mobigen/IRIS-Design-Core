@@ -154,6 +154,10 @@
     list-style: disc;
     padding-left: $spacing-xl;
   }
+
+  li {
+    margin-bottom: $spacing-3xs;
+  }
 }
 
 .component-variation {
