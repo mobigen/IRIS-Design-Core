@@ -20,7 +20,7 @@
             <div class="drawer">
               <div class="drawer__head">
                 <strong class="drawer__head-title">로그인 설정</strong>
-                <div class="drawer__head-group">
+                <div class="drawer__actions">
                   <div class="checkbox">
                     <input id="drawerCheck01" type="checkbox" class="checkbox__input" value="label" />
                     <label for="drawerCheck01" class="checkbox__label">실시간 미리보기</label>
@@ -37,161 +37,6 @@
                   <button class="drawer__content-reset-button button button--ghost" type="button">
                     전체 복원
                   </button>
-                </div>
-                <div class="drawer__content">
-                  <div class="drawer__content-label">
-                    <strong class="drawer__content-title"> 이미지 </strong>
-                  </div>
-                  <div class="drawer__content-detail">
-                    <ul class="drawer__content-list">
-                      <li class="drawer__content-item">
-                        <div class="upload-alt upload-alt--selected">
-                          <div class="upload-alt__file">
-                            <input type="file" class="upload-alt__file-input" />
-                            <button class="upload-alt__file-button" type="button">
-                              <strong class="upload-alt__file-title"> 파비콘 </strong>
-                              <span class="upload-alt__file-text"> 사용자 지정</span>
-                              <span class="upload-alt__file-icon">
-                                <svg class="svg-icon upload-alt__file-icon-download">
-                                  <use xlink:href="#upload"></use>
-                                </svg>
-                                <!-- 이미지 select된 경우 보여짐 -->
-                                <svg class="svg-icon upload-alt__file-icon-remove">
-                                  <use xlink:href="#close-middle"></use>
-                                </svg>
-                              </span>
-                            </button>
-                          </div>
-                          <p class="upload-alt__helper-text">* 권장 포맷 : 64x64px, ICO</p>
-                        </div>
-                      </li>
-                      <li class="drawer__content-item">
-                        <div class="upload-alt">
-                          <div class="upload-alt__file">
-                            <input type="file" class="upload-alt__file-input" />
-                            <button class="upload-alt__file-button" type="button">
-                              <strong class="upload-alt__file-title"> 화면 좌측 상단 기업 로고 </strong>
-                              <span class="upload-alt__file-text"> 기본 </span>
-                              <span class="upload-alt__file-icon">
-                                <svg class="svg-icon upload-alt__file-icon-download">
-                                  <use xlink:href="#upload"></use>
-                                </svg>
-                                <!-- 이미지 select된 경우 보여짐 -->
-                                <svg class="svg-icon upload-alt__file-icon-remove">
-                                  <use xlink:href="#close-middle"></use>
-                                </svg>
-                              </span>
-                            </button>
-                          </div>
-                          <p class="upload-alt__helper-text">* 권장 포맷 : 가로 140px, PNG</p>
-                        </div>
-                      </li>
-                      <li class="drawer__content-item">
-                        <div class="upload-alt">
-                          <div class="upload-alt__file">
-                            <input type="file" class="upload-alt__file-input" />
-                            <button class="upload-alt__file-button" type="button">
-                              <strong class="upload-alt__file-title"> 로그인 폼 상단 솔루션 보고 </strong>
-                              <span class="upload-alt__file-text"> 기본 </span>
-                              <span class="upload-alt__file-icon">
-                                <svg class="svg-icon upload-alt__file-icon-download">
-                                  <use xlink:href="#upload"></use>
-                                </svg>
-                                <!-- 이미지 select된 경우 보여짐 -->
-                                <svg class="svg-icon upload-alt__file-icon-remove">
-                                  <use xlink:href="#close-middle"></use>
-                                </svg>
-                              </span>
-                            </button>
-                          </div>
-                          <p class="upload-alt__helper-text">* 권장 포맷 : 가로 120 / 혹은 세로 56px, PNG</p>
-                        </div>
-                      </li>
-                      <li class="drawer__content-item">
-                        <div class="upload-alt">
-                          <div class="upload-alt__file">
-                            <input type="file" class="upload-alt__file-input" />
-                            <button class="upload-alt__file-button" type="button">
-                              <strong class="upload-alt__file-title"> 배경 이미지 </strong>
-                              <span class="upload-alt__file-text"> 기본 </span>
-                              <span class="upload-alt__file-icon">
-                                <svg class="svg-icon upload-alt__file-icon-download">
-                                  <use xlink:href="#upload"></use>
-                                </svg>
-                                <!-- 이미지 select된 경우 보여짐 -->
-                                <svg class="svg-icon upload-alt__file-icon-remove">
-                                  <use xlink:href="#close-middle"></use>
-                                </svg>
-                              </span>
-                            </button>
-                          </div>
-                          <p class="upload-alt__helper-text"></p>
-                        </div>
-                      </li>
-                      <li class="drawer__content-item">
-                        <div class="upload-alt">
-                          <div class="upload-alt__file">
-                            <input type="file" class="upload-alt__file-input" />
-                            <button class="upload-alt__file-button" type="button">
-                              <strong class="upload-alt__file-title"> 로그인 폼 배경 이미지 </strong>
-                              <span class="upload-alt__file-text"> 기본 </span>
-                              <span class="upload-alt__file-icon">
-                                <svg class="svg-icon upload-alt__file-icon-download">
-                                  <use xlink:href="#upload"></use>
-                                </svg>
-                                <!-- 이미지 select된 경우 보여짐 -->
-                                <svg class="svg-icon upload-alt__file-icon-remove">
-                                  <use xlink:href="#close-middle"></use>
-                                </svg>
-                              </span>
-                            </button>
-                          </div>
-                          <p class="upload-alt__helper-text"></p>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="drawer__content">
-                  <div class="drawer__content-label">
-                    <strong class="drawer__content-title"> 배경 컨셉 설명 </strong>
-                  </div>
-                  <div class="drawer__content-detail">
-                    <textarea type="text" class="drawer__content-textarea text-area text-area--fixed"
-                      placeholder="내용을 입력해주세요"></textarea>
-                  </div>
-                </div>
-                <div class="drawer__content">
-                  <div class="drawer__content-label">
-                    <strong class="drawer__content-title"> 로그인 폼 문구 </strong>
-                    <button class="drawer__content-clear-button button button--link" type="button">
-                      <svg class="svg-icon">
-                        <use xlink:href="#close-middle"></use>
-                      </svg>
-                    </button>
-                    <span class="drawer__content-helper-text">* TAG 입력</span>
-                  </div>
-                  <div class="drawer__content-detail">
-                    <textarea type="text" class="drawer__content-textarea text-area text-area--fixed"
-                      placeholder="내용을 입력해주세요"></textarea>
-                  </div>
-                </div>
-                <div class="drawer__content">
-                  <div class="drawer__content-label">
-                    <strong class="drawer__content-title"> 회원가입 버튼 사용 여부 </strong>
-                  </div>
-                  <div class="drawer__content-detail">
-                    <div class="radio">
-                      <input type="radio" id="drawerRadio01" name="radio-group" class="radio__input" value="label"
-                        checked="" />
-                      <label for="drawerRadio01" class="radio__label">사용 </label>
-                    </div>
-                    <div class="radio">
-                      <input type="radio" id="drawerRadio02" name="radio-group" class="radio__input" value="label"
-                        checked="" />
-                      <label for="drawerRadio02" class="radio__label">사용 안함 </label>
-                    </div>
-                  </div>
                 </div>
                 <div class="drawer__content">
                   <div class="drawer__content-label">
@@ -563,7 +408,7 @@
             <div class="drawer">
               <div class="drawer__head">
                 <strong class="drawer__head-title">사용자 계정 정보</strong>
-                <div class="drawer__head-group">
+                <div class="drawer__actions">
                   <button class="button button--icon button--link">
                     <svg class="svg-icon">
                       <use xlink:href="#close"></use>
@@ -638,7 +483,7 @@
             <div class="drawer">
               <div class="drawer__head">
                 <strong class="drawer__head-title">사용자 계정 정보</strong>
-                <div class="drawer__head-group">
+                <div class="drawer__actions">
                   <button class="button button--icon button--link">
                     <svg class="svg-icon">
                       <use xlink:href="#close"></use>
@@ -656,7 +501,7 @@
                   <div class="form__body">
                     <ul class="form__list">
                       <li class="form__item">
-                        <strong class="form__title"> 그룹 메뉴 아이콘 </strong>
+                        <label class="form__label"> 그룹 메뉴 아이콘 </label>
                         <div class="form__detail">
                           <div class="upload-preview">
                             <div class="upload-preview__thumbnail">
@@ -682,49 +527,49 @@
                         </div>
                       </li>
                       <li class="form__item">
-                        <strong class="form__title"> 그룹명 <span class="form__subtext">(한국어)</span></strong>
+                        <label class="form__label"> 그룹명 <span class="form__label-subtext">(한국어)</span></label>
                         <div class="form__detail">
                           <input type="text" class="text-input" placeholder="그룹명을 입력해주세요.">
                         </div>
                       </li>
                       <li class="form__item">
-                        <strong class="form__title"> 그룹 설명 <span class="form__subtext">(한국어)</span></strong>
+                        <label class="form__label"> 그룹 설명 <span class="form__label-subtext">(한국어)</span></label>
                         <div class="form__detail">
                           <input type="text" class="text-input" placeholder="그룹명을 입력해주세요.">
                         </div>
                       </li>
                       <li class="form__item">
-                        <strong class="form__title"> 그룹명 <span class="form__subtext">(한국어)</span></strong>
+                        <label class="form__label"> 그룹명 <span class="form__label-subtext">(한국어)</span></label>
                         <div class="form__detail">
                           <input type="text" class="text-input" placeholder="그룹명을 입력해주세요.">
                         </div>
                       </li>
                       <li class="form__item">
-                        <strong class="form__title"> 그룹 설명 <span class="form__subtext">(한국어)</span> </strong>
+                        <label class="form__label"> 그룹 설명 <span class="form__label-subtext">(한국어)</span> </label>
                         <div class="form__detail">
                           <input type="text" class="text-input" placeholder="그룹명을 입력해주세요.">
                         </div>
                       </li>
                       <li class="form__item">
-                        <strong class="form__title"> 그룹명 <span class="form__subtext">(한국어)</span></strong>
+                        <label class="form__label"> 그룹명 <span class="form__label-subtext">(한국어)</span></label>
                         <div class="form__detail">
                           <input type="text" class="text-input" placeholder="그룹명을 입력해주세요.">
                         </div>
                       </li>
                       <li class="form__item">
-                        <strong class="form__title"> 그룹 설명 <span class="form__subtext">(한국어)</span> </strong>
+                        <label class="form__label"> 그룹 설명 <span class="form__label-subtext">(한국어)</span> </label>
                         <div class="form__detail">
                           <input type="text" class="text-input" placeholder="그룹명을 입력해주세요.">
                         </div>
                       </li>
                       <li class="form__item">
-                        <strong class="form__title"> 그룹 설명 <span class="form__subtext">(한국어)</span> </strong>
+                        <label class="form__label"> 그룹 설명 <span class="form__label-subtext">(한국어)</span> </label>
                         <div class="form__detail">
                           <input type="text" class="text-input" placeholder="그룹명을 입력해주세요.">
                         </div>
                       </li>
                       <li class="form__item">
-                        <strong class="form__title"> 첫그룹 <span class="form__subtext">(한국어)</span> </strong>
+                        <label class="form__label"> 첫그룹 <span class="form__label-subtext">(한국어)</span> </label>
                         <div class="form__detail">
                           <div class="checkbox">
                             <input id="drawerCheck02" type="checkbox" class="checkbox__input" value="label">
@@ -744,7 +589,7 @@
                   <div class="form__body">
                     <ul class="form__list">
                       <li class="form__item">
-                        <strong class="form__title"> 그룹 메뉴 아이콘 </strong>
+                        <label class="form__label"> 그룹 메뉴 아이콘 </label>
                         <div class="form__detail">
                           <div class="upload-preview">
                             <div class="upload-preview__thumbnail">
@@ -770,49 +615,49 @@
                         </div>
                       </li>
                       <li class="form__item">
-                        <strong class="form__title"> 그룹명 <span class="form__subtext">(한국어)</span></strong>
+                        <label class="form__label"> 그룹명 <span class="form__label-subtext">(한국어)</span></label>
                         <div class="form__detail">
                           <input type="text" class="text-input" placeholder="그룹명을 입력해주세요.">
                         </div>
                       </li>
                       <li class="form__item">
-                        <strong class="form__title"> 그룹 설명 <span class="form__subtext">(한국어)</span></strong>
+                        <label class="form__label"> 그룹 설명 <span class="form__label-subtext">(한국어)</span></label>
                         <div class="form__detail">
                           <input type="text" class="text-input" placeholder="그룹명을 입력해주세요.">
                         </div>
                       </li>
                       <li class="form__item">
-                        <strong class="form__title"> 그룹명 <span class="form__subtext">(한국어)</span></strong>
+                        <label class="form__label"> 그룹명 <span class="form__label-subtext">(한국어)</span></label>
                         <div class="form__detail">
                           <input type="text" class="text-input" placeholder="그룹명을 입력해주세요.">
                         </div>
                       </li>
                       <li class="form__item">
-                        <strong class="form__title"> 그룹 설명 <span class="form__subtext">(한국어)</span> </strong>
+                        <label class="form__label"> 그룹 설명 <span class="form__label-subtext">(한국어)</span> </label>
                         <div class="form__detail">
                           <input type="text" class="text-input" placeholder="그룹명을 입력해주세요.">
                         </div>
                       </li>
                       <li class="form__item">
-                        <strong class="form__title"> 그룹명 <span class="form__subtext">(한국어)</span></strong>
+                        <label class="form__label"> 그룹명 <span class="form__label-subtext">(한국어)</span></label>
                         <div class="form__detail">
                           <input type="text" class="text-input" placeholder="그룹명을 입력해주세요.">
                         </div>
                       </li>
                       <li class="form__item">
-                        <strong class="form__title"> 그룹 설명 <span class="form__subtext">(한국어)</span> </strong>
+                        <label class="form__label"> 그룹 설명 <span class="form__label-subtext">(한국어)</span> </label>
                         <div class="form__detail">
                           <input type="text" class="text-input" placeholder="그룹명을 입력해주세요.">
                         </div>
                       </li>
                       <li class="form__item">
-                        <strong class="form__title"> 그룹 설명 <span class="form__subtext">(한국어)</span> </strong>
+                        <label class="form__label"> 그룹 설명 <span class="form__label-subtext">(한국어)</span> </label>
                         <div class="form__detail">
                           <input type="text" class="text-input" placeholder="그룹명을 입력해주세요.">
                         </div>
                       </li>
                       <li class="form__item">
-                        <strong class="form__title"> 첫그룹 <span class="form__subtext">(한국어)</span> </strong>
+                        <label class="form__label"> 첫그룹 <span class="form__label-subtext">(한국어)</span> </label>
                         <div class="form__detail">
                           <div class="checkbox">
                             <input id="drawerCheck02" type="checkbox" class="checkbox__input" value="label">
