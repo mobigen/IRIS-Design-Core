@@ -26,6 +26,7 @@
 
 .accordion__head-icon {
   @include svg-icon-size($button-height-sm);
+  transition: all $duration-fast-02 motion(entrance, productive);
 }
 
 .accordion__head-title {
