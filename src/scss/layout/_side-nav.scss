@@ -26,6 +26,10 @@
 
 .main-nav-item {
   margin-top: $spacing-md;
+
+  &:last-child {
+    margin-bottom: $spacing-lg;
+  }
 }
 
 .main-nav-item__heading {
