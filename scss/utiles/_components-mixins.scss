@@ -6,6 +6,7 @@
   @include font-weight("medium");
   @include font-smoothing;
   @include letter-spacing;
+  @include line-height("heading");
   display: flex;
   margin: 0;
   align-items: center;
