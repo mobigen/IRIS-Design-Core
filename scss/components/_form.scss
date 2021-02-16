@@ -32,13 +32,7 @@
 }
 
 .form__label-subtext {
-  @include font-weight('light');
-  color: $text-02;
-}
-
-.form__label-explain {
   @include font-size("12");
-  margin-left: auto;
   color: $text-03;
 }
 
@@ -99,6 +93,11 @@
     width: 100%;
     padding: 0;
     font-size: 15px;
+  }
+
+
+  .form__label-subtext {
+    margin-left: auto;
   }
 
   .form__detail {
