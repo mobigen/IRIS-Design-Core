@@ -12,6 +12,16 @@
   }
 }
 
+.date-picker-container {
+  .ui-datepicker {
+    display: block;
+    position: static;
+    border: none;
+    box-shadow: none;
+    width: auto;
+  }
+}
+
 .date-picker-panel {
   display: flex;
   flex-direction: column;
@@ -26,6 +36,10 @@
   align-items: center;
   padding: $spacing-2xs $spacing-2xs;
   border-bottom: 1px solid $hover-row;
+}
+
+.date-picker-panel__head-actions {
+  margin-left: auto;
 }
 
 .date-picker-panel__body {
@@ -76,10 +90,17 @@
 }
 
 .ui-datepicker {
-  // width: 17em;
-  padding: $spacing-2xs;
+  @include layer("overlay");
   display: none;
+  position: absolute;
+  top: 100%;
+  width: rem(255px);
+  padding: $spacing-2xs;
+  margin-top: $spacing-2xs;
+  background-color: $ui-02;
+  border: 1px solid $ui-04;
 }
+
 .ui-datepicker .ui-datepicker-header {
   position: relative;
   padding-top: $spacing-xs;
@@ -189,27 +210,6 @@
   top: 0.3em;
 }
 
-/* Interaction states
-----------------------------------*/
-.ui-state-hover,
-.ui-widget-content .ui-state-hover,
-.ui-widget-header .ui-state-hover,
-.ui-state-focus,
-.ui-widget-content .ui-state-focus,
-.ui-widget-header .ui-state-focus,
-.ui-button:hover,
-.ui-button:focus {
-  background: rgba($secondary, 0.2);
-}
-.ui-state-active,
-.ui-widget-content .ui-state-active,
-.ui-widget-header .ui-state-active,
-a.ui-button:active,
-.ui-button:active,
-.ui-button.ui-state-active:hover {
-  background: $secondary;
-  color: $text-04;
-}
 /* Interaction Cues
 ----------------------------------*/
 .ui-state-highlight,
@@ -246,6 +246,35 @@ a.ui-button:active,
 .ui-datepicker-week-end.ui-datepicker-range a {
   color: $text-04;
 }
+
+/* Interaction states
+----------------------------------*/
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus,
+.ui-button:hover,
+.ui-button:focus {
+  background: rgba($secondary, 0.2);
+}
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+  background: $secondary;
+  color: $text-04;
+}
+
+.ui-datepicker-week-end:first-child .ui-state-active,
+.ui-datepicker-week-end:last-child .ui-state-active {
+  color: $text-04;
+}
+
 // range style
 .ui-datepicker-range::before {
   position: absolute;
@@ -254,7 +283,7 @@ a.ui-button:active,
   left: -2px;
   z-index: 1;
   width: 114%;
-  height: 30px;
+  height: 31px;
   transform: translateY(-50%);
   background-color: rgba($secondary, 0.6);
   content: "";

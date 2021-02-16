@@ -32,6 +32,9 @@
           <a class="sub-nav__item-link" href="#page--accordion">Accordion</a>
         </li>
         <li class="sub-nav__item">
+          <a class="sub-nav__item-link" href="#page--alert">Alert</a>
+        </li>
+        <li class="sub-nav__item">
           <a class="sub-nav__item-link" href="#page--button">Button</a>
         </li>
         <li class="sub-nav__item">
@@ -515,6 +518,267 @@
 </div>
 
         </div>
+        <div class="page" id="page--alert">
+          
+<!-- alert -->
+<div class="page-header">
+  <h2 class="page-header__lable">component</h2>
+  <h3 class="page-header__title">Alert</h3>
+</div>
+<div class="page-content">
+  <p class="page__desc">얼럿</p>
+  <div class="page__usage md">
+    <ul>
+      <li>
+        얼럿은 <em class="text-emphasis">5개</em> 종류를 사용합니다.
+        <ul>
+          <li>기본</li>
+          <li>정보</li>
+          <li>성공</li>
+          <li>경고</li>
+          <li>에러</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Default</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <div class="alert alert--default">
+            <div class="alert__body">
+              <svg class="alert__icon svg-icon">
+                <use xlink:href="#info-fill"></use>
+              </svg>
+              <div class="alert__contents">
+                <p class="alert__title">Alert Title</p>
+                <p class="alert__text">Alert Contents Here.</p>
+              </div>
+            </div>
+            <div class="alert__foot">
+              <div class="alert__foot-main-buttons">
+                <button class="button button--link button--lg" type="button">
+                  <span>취소</span>
+                </button>
+                <button class="button button--primary button--lg" type="button">
+                  <span>확인</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Information</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <div class="alert alert--info">
+            <div class="alert__body">
+              <svg class="alert__icon svg-icon">
+                <use xlink:href="#info-fill"></use>
+              </svg>
+              <div class="alert__contents">
+                <p class="alert__title">Info Alert Title</p>
+                <p class="alert__text">Info Alert Contents Here.<br/>이 얼럿은 사용자에게 정보 상태를 알리기 위해 사용합니다.</p>
+              </div>
+            </div>
+            <div class="alert__foot">
+              <div class="alert__foot-main-buttons">
+                <button class="button button--link button--lg" type="button">
+                  <span>취소</span>
+                </button>
+                <button class="button button--primary button--lg" type="button">
+                  <span>확인</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="alert alert--info" style="margin-top: 40px;">
+            <div class="alert__body">
+              <svg class="alert__icon svg-icon">
+                <use xlink:href="#info-fill"></use>
+              </svg>
+              <div class="alert__contents">
+                <p class="alert__text">Alert 타이틀 미사용 예제<br/>이 얼럿은 사용자에게 정보 상태를 알리기 위해 사용합니다.</p>
+              </div>
+            </div>
+            <div class="alert__foot">
+              <div class="alert__foot-main-buttons">
+                <button class="button button--link button--lg" type="button">
+                  <span>취소</span>
+                </button>
+                <button class="button button--primary button--lg" type="button">
+                  <span>확인</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Success</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <div class="alert alert--success">
+            <div class="alert__body">
+              <svg class="alert__icon svg-icon">
+                <use xlink:href="#checkmark-fill"></use>
+              </svg>
+              <div class="alert__contents">
+                <p class="alert__title">Success Alert Title</p>
+                <p class="alert__text">Success Alert Contents Here.<br/>이 얼럿은 사용자에게 성공 상태를 알리기 위해 사용합니다.</p>
+              </div>
+            </div>
+            <div class="alert__foot">
+              <div class="alert__foot-main-buttons">
+                <button class="button button--link button--lg" type="button">
+                  <span>취소</span>
+                </button>
+                <button class="button button--primary button--lg" type="button">
+                  <span>확인</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="alert alert--success" style="margin-top: 40px;">
+            <div class="alert__body">
+              <svg class="alert__icon svg-icon">
+                <use xlink:href="#checkmark-fill"></use>
+              </svg>
+              <div class="alert__contents">
+                <p class="alert__text">Alert title 미사용 예제.<br/>이 얼럿은 사용자에게 성공 상태를 알리기 위해 사용합니다.</p>
+              </div>
+            </div>
+            <div class="alert__foot">
+              <div class="alert__foot-main-buttons">
+                <button class="button button--link button--lg" type="button">
+                  <span>취소</span>
+                </button>
+                <button class="button button--primary button--lg" type="button">
+                  <span>확인</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Warning</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <div class="alert alert--warning">
+            <div class="alert__body">
+              <svg class="alert__icon svg-icon">
+                <use xlink:href="#warning-fill"></use>
+              </svg>
+              <div class="alert__contents">
+                <p class="alert__title">Warning Alert Title</p>
+                <p class="alert__text">Warning Alert Contents Here.<br/>이 얼럿은 사용자에게 경고 상태를 알리기 위해 사용합니다.</p>
+              </div>
+            </div>
+            <div class="alert__foot">
+              <div class="alert__foot-main-buttons">
+                <button class="button button--link button--lg" type="button">
+                  <span>취소</span>
+                </button>
+                <button class="button button--primary button--lg" type="button">
+                  <span>확인</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="alert alert--warning" style="margin-top: 40px;">
+            <div class="alert__body">
+              <svg class="alert__icon svg-icon">
+                <use xlink:href="#warning-fill"></use>
+              </svg>
+              <div class="alert__contents">
+                <p class="alert__text">Alert title 미사용 예제<br/>이 얼럿은 사용자에게 경고 상태를 알리기 위해 사용합니다.</p>
+              </div>
+            </div>
+            <div class="alert__foot">
+              <div class="alert__foot-main-buttons">
+                <button class="button button--link button--lg" type="button">
+                  <span>취소</span>
+                </button>
+                <button class="button button--primary button--lg" type="button">
+                  <span>확인</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Error</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <div class="alert alert--error">
+            <div class="alert__body">
+              <svg class="alert__icon svg-icon">
+                <use xlink:href="#issue-fill"></use>
+              </svg>
+              <div class="alert__contents">
+                <p class="alert__title">Error Alert Title</p>
+                <p class="alert__text">Error Alert Contents Here.<br/>이 얼럿은 사용자에게 에러 상태를 알리기 위해 사용합니다.</p>
+              </div>
+            </div>
+            <div class="alert__foot">
+              <div class="alert__foot-main-buttons">
+                <button class="button button--link button--lg" type="button">
+                  <span>취소</span>
+                </button>
+                <button class="button button--primary button--lg" type="button">
+                  <span>확인</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="alert alert--error" style="margin-top: 40px;">
+            <div class="alert__body">
+              <svg class="alert__icon svg-icon">
+                <use xlink:href="#issue-fill"></use>
+              </svg>
+              <div class="alert__contents">
+                <p class="alert__text">Alert title 미사용 예제<br/>이 얼럿은 사용자에게 에러 상태를 알리기 위해 사용합니다.</p>
+              </div>
+            </div>
+            <div class="alert__foot">
+              <div class="alert__foot-main-buttons">
+                <button class="button button--link button--lg" type="button">
+                  <span>취소</span>
+                </button>
+                <button class="button button--primary button--lg" type="button">
+                  <span>확인</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+        </div>
         <div class="page" id="page--button">
           
 <!-- button -->
@@ -530,7 +794,7 @@
         버튼은 <em class="text-emphasis">6개</em>가 있으며 <em class="text-emphasis">3개</em> 크기로 구분합니다.<br />이
         이외의 버튼 스타일은 사용하지 않습니다. 각 버튼의 설명을 숙지하고 목적에 맞게 사용하도록합니다.
       </li>
-      <li>버튼에 아이콘을 조합하여 사용할 경우 버튼 텍스트를 `span`태그로 감싸`button__text` 라는 클래스를 추가해 사용합니다.</li>
+      <li>버튼에 아이콘을 조합하여 사용할 경우 버튼 텍스트를 <code class="code-inline">span</code>태그로 감싸 <code class="code-inline">button__text</code> 라는 클래스를 추가해 사용합니다.</li>
     </ul>
   </div>
 
@@ -2546,6 +2810,14 @@
               <div class="date-picker-panel">
                 <div class="date-picker-panel__head">
                   <button class="button button--link button--sm">오늘</button>
+                  <div class="date-picker-panel__head-actions toggle-switch toggle-switch--sm">
+                    <label for="currentDay" class="toggle-switch__label">현재</label>
+                    <button id="currentDay" class="toggle-switch__switch toggle-switch--sm" type="button">
+                      <span class="toggle-switch__handle">
+                        <span class="ir-pm"></span>
+                      </span>
+                    </button>
+                  </div>
                 </div>
                 <div class="date-picker-panel__body">
 <div class="ui-datepicker-inline ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="display: block;">
@@ -5020,7 +5292,8 @@
 </div>
         </div>
         <div class="page" id="page--loader">
-          <!-- loader -->
+          
+<!-- loader -->
 <div class="page-header">
   <h2 class="page-header__lable">component</h2>
   <h3 class="page-header__title">Loader</h3>
@@ -5032,12 +5305,12 @@
       <li>
         로더는 3개 사이즈로 구분합니다
         <ul>
-          <li>loader--sm: 버튼 등 Form 요소나 텍스트 수준 영역 로딩</li>
-          <li>loader--md: 카드 수준의 블록 영역 로딩</li>
-          <li>loader--sm: 페이지 영역 로딩</li>
+          <li><code class="code-inline">loader--sm</code>: 버튼 등 Form 요소나 텍스트 수준 영역 로딩</li>
+          <li><code class="code-inline">loader--md</code>: 카드 수준의 블록 영역 로딩</li>
+          <li><code class="code-inline">loader--sm</code>: 페이지 영역 로딩</li>
         </ul>
       </li>
-      <li>loader-overlay는 loader 아래에 있는 컨텐츠를 조작할 수 없도록 처리할 때 사용합니다.</li>
+      <li><code class="code-inline">loader-overlay</code>는 loader 아래에 있는 컨텐츠를 조작할 수 없는 경우 사용합니다.</li>
     </ul>
   </div>
 
@@ -5132,10 +5405,10 @@
       <li>
         모달 바디 영역은 내부 여백 사이즈를 기준으로 <em class="text-emphasis">4개</em> Modifier를 갖습니다.
         <ul>
-          <li>defalut: 0</li>
-          <li>modal__body--sm: 16px</li>
-          <li>modal__body--md: 32px</li>
-          <li>modal__body--lg: 48px</li>
+          <li><code class="code-inline">defalut</code>: 0</li>
+          <li><code class="code-inline">modal__body--sm</code>: 16px</li>
+          <li><code class="code-inline">modal__body--md</code>: 32px</li>
+          <li><code class="code-inline">modal__body--lg</code>: 48px</li>
         </ul>
       </li>
     </ul>
@@ -5198,8 +5471,8 @@
   <div class="page__usage md">
     <ul>
       <li>노티피케이션은 화면 일부를 가리며 나타나는 일반적인 유형과 메시지만 표시해주는 두가지 유형으로 구분합니다</li>
-      <li>Message 유형은 Validation에 사용됩니다. (구, mui-message)</li>
-      <li>Message 유형은 notification-message--inline 클래스를 추가하여 inline-flex로 사용할 수 있습니다</li>
+      <li>Message 유형은 Validation에 사용합니다. (구, <code class="code-inline">mui-message</code>)</li>
+      <li>Message 유형은 <code class="code-inline">notification-message--inline</code> 클래스를 추가하여 inline-flex로 사용할 수 있습니다</li>
     </ul>
   </div>
 
@@ -7377,8 +7650,8 @@
       </li>
       <li>유형: Basic Tag 유형과 제거 버튼이 있는 Removable Tag 2개 유형</li>
       <li>테마: 전체 서비스에 사용하는 Default 테마와 Studio에만 사용하는 2개 테마</li>
-      <li>태그를 한번 클릭하여 토글할 수 있습니다. `tag--selected` 클래스 추가/제거로 제어합니다.</li>
-      <li>Studio 테마는 엘리먼트 상위에 `studio-component` 클래스 여부에 따라 적용됩니다.</li>
+      <li>태그를 한번 클릭하여 토글할 수 있습니다. <code class="code-inline">tag--selected</code> 클래스 추가/제거로 제어합니다.</li>
+      <li>Studio 테마는 엘리먼트 상위에 <code class="code-inline">studio-component</code> 클래스 여부에 따라 적용됩니다.</li>
     </ul>
   </div>
 
@@ -9545,6 +9818,7 @@
   <p class="page__desc">토글 스위치</p>
   <div class="page__usage md">
     <ul>
+      <li>토글 스위치는 <code class="code-inline">label</code> 없이 사용하는 경우와 함께 사용하는 경우를 고려하여 구현 되었습니다.</li>
       <li>토글 스위치는 <em class="text-emphasis">2개</em>의 사이즈가 있습니다.</li>
     </ul>
   </div>
@@ -9557,33 +9831,95 @@
           <div class="component-example__row">
             <p class="component-example__size-label">Size: md</p>
             <div class="component-examle__item-group">
-              <button class="toggle-switch" type="button">
-                <span class="toggle-switch__handle">
-                  <span class="ir-pm"></span>
-                </span>
-              </button>
+              <div class="toggle-switch">
+                <button class="toggle-switch__switch" type="button">
+                  <span class="toggle-switch__handle">
+                    <span class="ir-pm"></span>
+                  </span>
+                </button>
+              </div>
               <!-- toggle-switch--selected 추가 시 button 활성화 -->
-              <button class="toggle-switch toggle-switch--selected" type="button">
-                <span class="toggle-switch__handle">
-                  <span class="ir-pm"></span>
-                </span>
-              </button>
+              <div class="toggle-switch">
+                <button class="toggle-switch__switch toggle-switch__switch--selected" type="button">
+                  <span class="toggle-switch__handle">
+                    <span class="ir-pm"></span>
+                  </span>
+                </button>
+              </div>
             </div>
           </div>
           <div class="component-example__row">
             <p class="component-example__size-label">Size: sm</p>
             <div class="component-examle__item-group">
-              <button class="toggle-switch toggle-switch--sm" type="button">
-                <span class="toggle-switch__handle">
-                  <span class="ir-pm"></span>
-                </span>
-              </button>
+              <div class="toggle-switch toggle-switch--sm">
+                <button class="toggle-switch__switch" type="button">
+                  <span class="toggle-switch__handle">
+                    <span class="ir-pm"></span>
+                  </span>
+                </button>
+              </div>
               <!-- toggle-switch--selected 추가 시 button 활성화 -->
-              <button class="toggle-switch toggle-switch--sm toggle-switch--selected" type="button">
-                <span class="toggle-switch__handle">
-                  <span class="ir-pm"></span>
-                </span>
-              </button>
+              <div class="toggle-switch toggle-switch--sm">
+                <button class="toggle-switch__switch toggle-switch__switch--selected" type="button">
+                  <span class="toggle-switch__handle">
+                    <span class="ir-pm"></span>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Label</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: md</p>
+            <div class="component-examle__item-group">
+              <div class="toggle-switch">
+                <label for="toggleSwitch1" class="toggle-switch__label">label</label>
+                <button id="toggleSwitch1" class="toggle-switch__switch" type="button">
+                  <span class="toggle-switch__handle">
+                    <span class="ir-pm"></span>
+                  </span>
+                </button>
+              </div>
+              <!-- toggle-switch--selected 추가 시 button 활성화 -->
+              <div class="toggle-switch">
+                <label for="toggleSwitch2" class="toggle-switch__label">label</label>
+                <button id="toggleSwitch2" class="toggle-switch__switch toggle-switch__switch--selected" type="button">
+                  <span class="toggle-switch__handle">
+                    <span class="ir-pm"></span>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: sm</p>
+            <div class="component-examle__item-group">
+              <div class="toggle-switch toggle-switch--sm">
+                <label for="toggleSwitch3"class="toggle-switch__label">label</label>
+                <button id="toggleSwitch3" class="toggle-switch__switch" type="button">
+                  <span class="toggle-switch__handle">
+                    <span class="ir-pm"></span>
+                  </span>
+                </button>
+              </div>
+              <!-- toggle-switch--selected 추가 시 button 활성화 -->
+              <div class="toggle-switch toggle-switch--sm">
+                <label for="toggleSwitch4" class="toggle-switch__label">label</label>
+                <button id="toggleSwitch4" class="toggle-switch__switch toggle-switch__switch--selected" type="button">
+                  <span class="toggle-switch__handle">
+                    <span class="ir-pm"></span>
+                  </span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
