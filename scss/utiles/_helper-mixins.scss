@@ -80,3 +80,10 @@
   width: $size;
   height: $size;
 }
+
+// svg icon stroke (bolder, lighter)
+@mixin svg-icon-stroke($stroke-color) {
+  stroke: $stroke-color;
+  stroke-width: 1;
+  stroke-opacity: .3;
+}
