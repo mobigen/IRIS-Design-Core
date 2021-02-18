@@ -3300,7 +3300,7 @@
           <div class="component-example__row">
             <div class="drawer">
               <div class="drawer__head">
-                <button class="drawer__head-control-button button--tertiary" type="button">
+                <button class="drawer__head-control-button" type="button">
                   <svg class="svg-icon">
                     <use xlink:href="#setting"></use>
                   </svg>
@@ -3319,7 +3319,7 @@
                     전체 복원
                   </button>
                 </div>
-                <div class="form form--vertical" style="width: 570px">
+                <div class="form form--vertical">
                   <div class="form__head">
                     <strong class="form__head-title"> 그룹 기본설정 </strong>
                   </div>
@@ -3332,7 +3332,7 @@
                         <div class="form__detail">
                           <ul class="form__detail-list">
                             <li class="form__detail-item">
-                              <div class="upload-alt upload-alt--selected">
+                              <div class="upload-alt upload-alt--loaded">
                                 <div class="upload-alt__file">
                                   <input type="file" class="upload-alt__file-input" />
                                   <button class="upload-alt__file-button" type="button">
@@ -3909,7 +3909,7 @@
           <div class="component-example__row">
             <div class="drawer">
               <div class="drawer__head">
-                <button class="drawer__head-control-button button--tertiary" type="button">
+                <button class="drawer__head-control-button" type="button">
                   <svg class="svg-icon">
                     <use xlink:href="#setting"></use>
                   </svg>
@@ -3995,7 +3995,7 @@
           <div class="component-example__row">
             <div class="drawer">
               <div class="drawer__head">
-                <button class="drawer__head-control-button button--tertiary" type="button">
+                <button class="drawer__head-control-button" type="button">
                   <svg class="svg-icon">
                     <use xlink:href="#setting"></use>
                   </svg>
@@ -4010,7 +4010,7 @@
                 </div>
               </div>
               <div class="drawer__body" style="height: 900px">
-                <div class="form" style="width: 570px">
+                <div class="form">
                   <div class="form__head">
                     <strong class="form__head-title"> 그룹 기본설정 </strong>
                   </div>
@@ -4120,7 +4120,7 @@
                     </ul>
                   </div>
                 </div>
-                <div class="form" style="width: 570px">
+                <div class="form">
                   <div class="form__head">
                     <strong class="form__head-title"> 그룹 기본설정 </strong>
                   </div>
@@ -4542,7 +4542,7 @@
                       <div class="form__detail">
                         <ul class="form__detail-list">
                           <li class="form__detail-item">
-                            <div class="upload-alt upload-alt--selected">
+                            <div class="upload-alt upload-alt--loaded">
                               <div class="upload-alt__file">
                                 <input type="file" class="upload-alt__file-input" />
                                 <button class="upload-alt__file-button" type="button">
@@ -5044,7 +5044,7 @@
                     <span class="button__text"> 초기화 </span>
                   </button>
                   <div class="form__foot-main-buttons">
-                    <button class="button button--ghost" type="button">
+                    <button class="button button--support" type="button">
                       <span class="button__text"> 수정 </span>
                     </button>
                     <button class="button button--primary" type="button">
@@ -10089,7 +10089,7 @@
                   </button>
                 </div>
               </div>
-              <div class="upload upload--selected upload--lg" style="width: 375px">
+              <div class="upload upload--focused upload--lg" style="width: 375px">
                 <input
                   type="text"
                   class="upload__input"
@@ -10141,7 +10141,7 @@
                   <input type="file" class="upload__file-input" />
                 </div>
               </div>
-              <div class="upload upload--selected" style="width: 375px">
+              <div class="upload upload--focused" style="width: 375px">
                 <input
                   type="text"
                   class="upload__input"
@@ -10210,7 +10210,8 @@
                 </div>
                 <p class="upload-alt__helper-text">* 권장 포맷: 가로 140pz, PNG</p>
               </div>
-              <div class="upload-alt upload-alt--selected">
+              <!-- 보조 업로드 항목에 파일이 업로드 됐을 때 upload-alt--loaded 클래스 추가 -->
+              <div class="upload-alt upload-alt--loaded">
                 <div class="upload-alt__file">
                   <input type="file" class="upload-alt__file-input" />
                   <button class="upload-alt__file-button" type="button">
@@ -10265,7 +10266,8 @@
                   </button>
                 </div>
               </div>
-              <div class="upload-preview upload-preview--selected" style="width: 390px">
+              <!-- 미리보기형 파일이 업로드 됐을 떄 upload-preview--loaded 클래스 추가 -->
+              <div class="upload-preview upload-preview--loaded" style="width: 390px">
                 <div class="upload-preview__thumbnail">
                   <img src="../src/images/common/thumbnail.png" class="img-g" alt="sample image" />
                 </div>
