@@ -22,7 +22,7 @@ module.exports = {
       // Font
       {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-        include: path.resolve(__dirname, "./src/core-style/fonts"),
+        include: path.resolve(__dirname, "./src/style-core/fonts"),
         use: [
           {
             loader: "file-loader",
@@ -36,7 +36,7 @@ module.exports = {
       // SCSS - Core
       // {
       //   test: /\.(sass|scss)$/,
-      //   include: path.resolve(__dirname, "./src/core-style/scss"),
+      //   include: path.resolve(__dirname, "./src/style-core/scss"),
       //   use: [
       //     MiniCssExtractPlugin.loader,
       //     "css-loader", // css를 읽어들이기
@@ -48,7 +48,7 @@ module.exports = {
       // SCSS - Product
       {
         test: /\.(sass|scss)$/,
-        include: path.resolve(__dirname, "./src/product-style/scss"),
+        include: path.resolve(__dirname, "./src/style-product/scss"),
         use: [
           MiniCssExtractPlugin.loader,
           "css-loader", // css를 읽어들이기
@@ -60,14 +60,14 @@ module.exports = {
       // Image(png) - Core
       {
         test: /\.(png|jp(e*)g|gif|ico)$/,
-        include: path.resolve(__dirname, "./src/core-style/images/common"),
+        include: path.resolve(__dirname, "./src/style-core/images/common"),
         use: {
           loader: "file-loader",
           options: {
             outputPath: "./",
             name: "[path][name].[ext]",
             // 가져올 경로에서 해당 경로만 지우고 가져온다.
-            context: "src/core-style",
+            context: "src/style-core",
           },
         },
       },
@@ -75,14 +75,14 @@ module.exports = {
       // Image(png) - Product
       {
         test: /\.(png|jp(e*)g|gif|ico)$/,
-        include: path.resolve(__dirname, "./src/product-style/images/common"),
+        include: path.resolve(__dirname, "./src/style-product/images/common"),
         use: {
           loader: "file-loader",
           options: {
             outputPath: "./",
             name: "[path][name].[ext]",
             // 가져올 경로에서 해당 경로만 지우고 가져온다.
-            context: "src/product-style",
+            context: "src/style-product",
           },
         },
       },
@@ -90,14 +90,14 @@ module.exports = {
       // Image(svg) - Core
       {
         test: /\.svg$/,
-        include: path.resolve(__dirname, "./src/core-style/images/icon"),
+        include: path.resolve(__dirname, "./src/style-core/images/icon"),
         use: {
           loader: "svg-sprite-loader",
           options: {
             outputPath: "./",
             name: "[path][name].[ext]",
             // 가져올 경로에서 해당 경로만 지우고 가져온다.
-            context: "src/core-style",
+            context: "src/style-core",
           },
         },
       },
@@ -105,14 +105,14 @@ module.exports = {
       // Image(svg) - Product
       {
         test: /\.svg$/,
-        include: path.resolve(__dirname, "./src/product-style/images/icon"),
+        include: path.resolve(__dirname, "./src/style-product/images/icon"),
         use: {
           loader: "svg-sprite-loader",
           options: {
             outputPath: "./",
             name: "[path][name].[ext]",
             // 가져올 경로에서 해당 경로만 지우고 가져온다.
-            context: "src/core-style",
+            context: "src/style-core",
           },
         },
       },
@@ -127,7 +127,7 @@ module.exports = {
 
     // 공통 컴포넌트 영역 모듈화
     new FileIncludeWebpackPlugin({
-      source: "./src/product-style/html/pages",
+      source: "./src/style-product/html/pages",
       replace: [
         {
           regex: /\[\[FILE_VERSION]]/g,
