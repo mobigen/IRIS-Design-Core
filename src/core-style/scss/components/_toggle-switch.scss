@@ -1,4 +1,9 @@
 .toggle-switch {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-switch__switch {
   @include button-normal;
   justify-content: flex-start;
   width: rem(45px);
@@ -7,7 +12,7 @@
   background-color: $text-05;
   border: none;
   border-radius: 16px;
-  opacity: .5;
+  opacity: 0.5;
   transition-duration: $duration-fast-02;
   transition-timing-function: ease-in-out;
 }
@@ -20,7 +25,13 @@
   border-radius: 50%;
 }
 
-.toggle-switch--selected {
+.toggle-switch__label {
+  @include font-size("13");
+  margin-right: $spacing-2xs;
+  color: $text-02;
+}
+
+.toggle-switch__switch--selected {
   background-color: $primary;
   opacity: 1;
 
@@ -32,12 +43,17 @@
 // -------------------------
 // Size overwrite
 // -------------------------
-.toggle-switch--sm {
+
+.toggle-switch--sm .toggle-switch__switch {
   width: rem(36px);
   height: rem(18px);
+}
 
-  .toggle-switch__handle {
-    width: 14px;
-    height: 14px;
-  }
+.toggle-switch--sm .toggle-switch__handle {
+  width: 14px;
+  height: 14px;
+}
+
+.toggle-switch--sm .toggle-switch__label {
+  @include font-size("12");
 }

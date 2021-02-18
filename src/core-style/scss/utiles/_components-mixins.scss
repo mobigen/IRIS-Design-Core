@@ -6,6 +6,7 @@
   @include font-weight("medium");
   @include font-smoothing;
   @include letter-spacing;
+  @include line-height("heading");
   display: flex;
   margin: 0;
   align-items: center;
@@ -110,15 +111,15 @@
 
     &:active {
       background-color: $hover-row;
+
+      .svg-icon {
+        fill: $primary
+      }
     }
 
     &:not(:last-child) {
       margin-right: $spacing-3xs;
     }
-  }
-
-  &__action-button:active &__icon {
-    fill: $primary;
   }
 
   // -------------------------
@@ -201,11 +202,13 @@
     fill: $primary;
   }
 
-  &__item--selected &__icon {
+  &__item--selected &__icon,
+  &__item--selected &__action-button .svg-icon {
     fill: $primary;
   }
 
-  &__item--selected &__button:active &__icon {
+  &__item--selected &__button:active &__icon,
+  &__item--selected &__button:active .svg-icon {
     fill: $primary;
   }
 }
