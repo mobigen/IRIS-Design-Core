@@ -1,0 +1,149 @@
+// -------------------------
+// Select
+// -------------------------
+
+.select {
+  position: relative;
+
+  &.select--selected {
+    .select-selector {
+      border-color: $secondary;
+      box-shadow: 0px 0px 4px rgba(77, 174, 255, 0.4);
+
+      .select-selector__icon {
+        transform: rotate(-180deg);
+      }
+
+      &:hover:not(:disabled) {
+        border-color: $secondary;
+      }
+    }
+
+    .select-container {
+      display: block;
+    }
+  }
+}
+
+// select button
+.select-selector {
+  @include button-normal;
+  width: 100%;
+  padding: $spacing-2xs $spacing-sm;
+  height: $button-height-md;
+  background-color: $ui-02;
+  border: 1px solid $ui-04;
+  border-radius: $button-border-radius;
+  text-align: left;
+
+  &:active {
+    border-color: $secondary !important;
+  }
+
+  &:hover {
+    border-color: $text-03;
+  }
+
+  &:focus,
+  &:focus:hover {
+    border-color: $secondary;
+    box-shadow: 0px 0px 4px rgba(77, 174, 255, 0.4);
+  }
+
+  &:disabled,
+  &:disabled:hover,
+  &:disabled:focus {
+    cursor: not-allowed;
+    border-color: $hover-row !important;
+
+    .select-selector__title {
+      color: $text-05;
+    }
+
+    .select-selector__icon {
+      opacity: 0.5;
+    }
+  }
+}
+
+.select-selector__title {
+  @include text-overflow;
+  @include font-size("14");
+  @include font-weight("regular");
+  flex: 1;
+  color: $text-02;
+}
+
+.select-selector__icon {
+  @include svg-icon-size(20px);
+  margin-left: auto;
+  transform: none;
+}
+
+// select panel(dropdown)
+.select-container {
+  @include list;
+  display: none;
+  z-index: z('float');
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 0;
+  right: 0;
+  background-color: $ui-02;
+  box-shadow: 0px 0px 8px rgba(206, 211, 217, 0.7);
+  border-radius: $field-border-radius;
+}
+
+.select-container__list {
+  background-color: $ui-02;
+}
+
+// -------------------------
+// Size overwrite
+// -------------------------
+// lg
+.select--lg {
+  .select-selector {
+    height: $button-height-lg;
+  }
+
+  .select-container {
+    .select-container__button {
+      @include stable-padding($spacing-2xs, $spacing-sm);
+      height: $button-height-lg;
+    }
+
+    .select-container__icon {
+      @include svg-icon-size(20px);
+    }
+  }
+}
+
+
+
+// sm
+.select--sm {
+  .select-selector {
+    padding: $spacing-2xs $spacing-xs;
+    height: $button-height-sm;
+  }
+
+  .select-container {
+    .select-selector__icon {
+      @include svg-icon-size(14px);
+    }
+
+    .select-container__button {
+      @include stable-padding($spacing-3xs, $spacing-xs);
+      height: $button-height-sm;
+    }
+
+    .select-container__icon {
+      @include svg-icon-size(16px);
+    }
+
+    .select-container__text {
+      @include font-size("12");
+    }
+  }
+}
