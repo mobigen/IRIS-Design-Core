@@ -1,0 +1,62 @@
+.text-area {
+  @include font-size("14");
+  @include font-family("sans");
+  padding: $spacing-2xs $spacing-xs;
+  width: 100%;
+  min-width: rem(120px);
+  min-height: rem(40px);
+  color: $text-01;
+  background-color: $ui-02;
+  border: 1px solid $ui-04;
+  border-radius: $field-border-radius;
+  transition: all $duration-fast-01 motion(standard, productive);
+  outline: none;
+  resize: vertical;
+
+  &:hover {
+    background-color: rgba($ui-02, 1);
+    border-color: darken($ui-04, 15%);
+  }
+
+  &:active,
+  &:focus {
+    border-color: $secondary;
+    box-shadow: 0 0 4px rgba($secondary, 0.65);
+  }
+
+  // chrom에서 자동저장된 input의 배경컬러를 제어
+  &:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px $ui-02 inset;
+  }
+
+  &[disabled],
+  &[disabled]:hover,
+  &[disabled]:focus {
+    cursor: not-allowed;
+    border-color: $ui-04;
+    background-color: rgba($ui-02, 0.8);
+    opacity: 0.5;
+    box-shadow: none;
+
+    ~ .text-input-group__button {
+      display: none;
+    }
+  }
+
+  &[readonly],
+  &[readonly]:hover,
+  &[readonly]:focus {
+    cursor: default;
+    border-color: $ui-04;
+    background-color: rgba($ui-02, 0.8);
+    box-shadow: none;
+  }
+
+  &::placeholder {
+    color: $text-05;
+  }
+}
+
+.text-area--fixed {
+  resize: none;
+}
