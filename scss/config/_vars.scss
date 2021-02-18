@@ -11,6 +11,12 @@ $button-height-sm: 24px !default;
 // fields
 $field-border-radius: 2px !default;
 
+// form
+$min-form-label-width-fixed: 220px;
+$min-form-label-width: 18%;
+$max-form-label-width: 30%;
+$row-form-margin: $spacing-xs;
+
 // loader
 $transition-base: 160ms !default;
 $loader-color: $primary !default;
