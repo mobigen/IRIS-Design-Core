@@ -83,14 +83,15 @@
 // select panel(dropdown)
 .select-container {
   @include list;
+  @include layer("overlay");
   display: none;
-  z-index: z('float');
+  z-index: z("float");
   position: absolute;
   top: calc(100% + 2px);
   left: 0;
   right: 0;
+  padding: $spacing-2xs 0;
   background-color: $ui-02;
-  box-shadow: 0px 0px 8px rgba(206, 211, 217, 0.7);
   border-radius: $field-border-radius;
 }
 
@@ -119,8 +120,6 @@
   }
 }
 
-
-
 // sm
 .select--sm {
   .select-selector {
@@ -136,6 +135,7 @@
     .select-container__button {
       @include stable-padding($spacing-3xs, $spacing-xs);
       height: $button-height-sm;
+      line-height: 0.75;
     }
 
     .select-container__icon {
