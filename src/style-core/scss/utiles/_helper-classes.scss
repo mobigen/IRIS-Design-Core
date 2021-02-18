@@ -1,0 +1,23 @@
+.hidden {
+  @include hidden;
+}
+
+.ir-pm {
+  @include ir-pm;
+}
+
+.img-g {
+  @include img-g;
+}
+
+.caption-out {
+  @include caption-out;
+}
+
+.text-emphasis {
+  @include font-weight("bold");
+}
+
+.filter-highlight {
+  background-color: #fff09c;
+}

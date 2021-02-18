@@ -1,0 +1,16 @@
+header{
+  padding: 15px 20px 20px;
+  background-color: $ui-02;
+  border: 1px solid $ui-04;
+}
+
+.header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header-title{
+  font-size: 20px;
+  font-weight: bold;
+}

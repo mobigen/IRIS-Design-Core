@@ -1,0 +1,27 @@
+.list {
+  @include list;
+  border: 1px solid $ui-04;
+  background-color: $ui-02;
+  color: $text-01;
+}
+
+.list__head {
+  padding: $spacing-xs;
+  background-color: $ui-01;
+}
+
+.list__item {
+  border-bottom: 1px solid $hover-row;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.list__item .filter-highlight {
+  @include line-height("body");
+}
+
+.list__checkmark {
+  vertical-align: middle;
+}
