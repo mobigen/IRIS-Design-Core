@@ -18,7 +18,7 @@
     }
   }
 
-  &--selected {
+  &--focused {
     border-color: $secondary;
     box-shadow: 0px 0px 4px rgba(77, 174, 255, 0.4);
 
@@ -132,7 +132,7 @@
   align-items: center;
   justify-content: flex-start;
 
-  &--selected {
+  &--loaded {
 
     .upload-alt__file-button {
       background-color: $secondary;
@@ -292,7 +292,7 @@
   color: $primary;
 }
 
-.upload-preview--selected {
+.upload-preview--loaded {
   .upload-preview__thumbnail {
     background: $ui-01;
   }
