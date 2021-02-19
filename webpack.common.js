@@ -22,6 +22,19 @@ module.exports = {
         exclude: /[\\/]node_modules[\\/]/,
         use: {
           loader: "babel-loader",
+          options: {
+            "presets": [
+              [
+                "@babel/preset-env",
+                {
+                  "targets": {
+                    "chrome": "58",
+                    "ie": "11"
+                  }
+                }
+              ]
+            ]
+          }
         },
       },
 
@@ -29,14 +42,12 @@ module.exports = {
       {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
         include: path.resolve(__dirname, "./src/style-core/fonts"),
-        use: [
-          {
-            loader: "file-loader",
-            options: {
-              name: "fonts/[name].[ext]",
-            },
+        use: [{
+          loader: "file-loader",
+          options: {
+            name: "fonts/[name].[ext]",
           },
-        ],
+        }, ],
       },
 
       // SCSS - Core
@@ -134,12 +145,10 @@ module.exports = {
     // 공통 컴포넌트 영역 모듈화
     new FileIncludeWebpackPlugin({
       source: "./src/style-product/html/pages",
-      replace: [
-        {
-          regex: /\[\[FILE_VERSION]]/g,
-          to: "v=1.0.0",
-        },
-      ],
+      replace: [{
+        regex: /\[\[FILE_VERSION]]/g,
+        to: "v=1.0.0",
+      }, ],
       loader: "prettier-loader",
       destination: "../views",
     }),
