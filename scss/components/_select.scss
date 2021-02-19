@@ -4,33 +4,76 @@
 
 .select {
   position: relative;
+}
 
-  &.select--selected {
-    .select-selector {
+.select--selected {
+  .select-selector__button {
+    border-color: $secondary;
+    box-shadow: 0px 0px 4px rgba(77, 174, 255, 0.4);
+
+    &:hover:not(:disabled) {
       border-color: $secondary;
-      box-shadow: 0px 0px 4px rgba(77, 174, 255, 0.4);
-
-      .select-selector__icon {
-        transform: rotate(-180deg);
-      }
-
-      &:hover:not(:disabled) {
-        border-color: $secondary;
-      }
     }
+  }
 
-    .select-container {
-      display: block;
-    }
+  .select-selector__icon {
+    transform: rotate(-180deg);
+  }
+
+  .select-container {
+    display: block;
   }
 }
 
-// select button
+.select--disabled {
+  .select-selector__button {
+    border-color: $hover-row !important;
+    cursor: not-allowed;
+    box-shadow: none;
+
+    &:hover,
+    &:hover:active,
+    &:hover:focus {
+      box-shadow: none;
+      border-color: $hover-row !important;
+      cursor: not-allowed;
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  .select-selector__title {
+    color: $text-05;
+  }
+
+  .select-selector__icon {
+    opacity: 0.5;
+  }
+}
+
+.select--selected.select--disabled {
+  .select-selector__icon {
+    transform: none;
+  }
+
+  .select-container {
+    display: none;
+  }
+}
+
+
 .select-selector {
+  position: relative;
+  height: $button-height-md;
+}
+
+.select-selector__button {
   @include button-normal;
   width: 100%;
-  padding: $spacing-2xs $spacing-sm;
-  height: $button-height-md;
+  height: 100%;
+  padding: $spacing-2xs $spacing-xl $spacing-2xs $spacing-sm;
   background-color: $ui-02;
   border: 1px solid $ui-04;
   border-radius: $button-border-radius;
@@ -44,39 +87,30 @@
     border-color: $text-03;
   }
 
-  &:focus,
-  &:focus:hover {
+  &:focus {
     border-color: $secondary;
     box-shadow: 0px 0px 4px rgba(77, 174, 255, 0.4);
   }
+}
 
-  &:disabled,
-  &:disabled:hover,
-  &:disabled:focus {
-    cursor: not-allowed;
-    border-color: $hover-row !important;
-
-    .select-selector__title {
-      color: $text-05;
-    }
-
-    .select-selector__icon {
-      opacity: 0.5;
-    }
-  }
+.text-input.select-selector__input {
+  height: 100%;
+  padding-right: $spacing-xl;
 }
 
 .select-selector__title {
   @include text-overflow;
   @include font-size("14");
   @include font-weight("regular");
-  flex: 1;
   color: $text-02;
 }
 
 .select-selector__icon {
   @include svg-icon-size(20px);
-  margin-left: auto;
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  right: $spacing-sm;
   transform: none;
 }
 
@@ -104,6 +138,7 @@
 // -------------------------
 // lg
 .select--lg {
+
   .select-selector {
     height: $button-height-lg;
   }
@@ -122,8 +157,8 @@
 
 // sm
 .select--sm {
+
   .select-selector {
-    padding: $spacing-2xs $spacing-xs;
     height: $button-height-sm;
   }
 
