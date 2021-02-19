@@ -4,7 +4,7 @@
   "description": "IRIS-Design-Core를 포함하는 상위 저장소",
   "main": "index.js",
   "scripts": {
-    "dev": "node ./clean-dist.js && webpack --config webpack.dev.js --watch",
+    "dev": "node ./clean-dist.js && webpack --config webpack.dev.js",
     "build": "node ./clean-dist.js && webpack --config webpack.prod.js",
     "pull": "git subtree pull -P src/style-core core-upstream dev --squash",
     "push": "git subtree push -P src/style-core core-origin dev"
