@@ -14,7 +14,9 @@
   background-color: transparent;
   border-radius: $field-border-radius;
   color: $text-02;
+}
 
+.pagination__link {
   &:hover:not(:disabled) {
     background-color: $ui-01;
     color: $text-02;
@@ -38,6 +40,7 @@
       fill: $ui-02;
     }
   }
+
 }
 
 .pagination__list {
@@ -47,7 +50,11 @@
   justify-content: center;
 }
 
-.pagination__ellipsis{
+.pagination__list .text-input {
+  width: rem(32px);
+}
+
+.pagination__ellipsis {
   display: block;
   padding: 0 $spacing-xs;
 }
