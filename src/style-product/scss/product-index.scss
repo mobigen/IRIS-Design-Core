@@ -17,6 +17,7 @@ $font-path: '/src/style-core/fonts/';
 @import "/src/style-core/scss/core-index.scss";
 @import "/src/style-core/scss/themes/pink";
 
+@import "./layout/layout.scss";
 @import "./vendor/vendor.scss";
-@import "./layout/common.scss";
-@import "./pages/pages.scss";
+// 불러올 서비스
+@import "./servieces/studio.scss";
