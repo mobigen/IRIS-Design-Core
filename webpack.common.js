@@ -5,7 +5,13 @@ const path = require("path"),
 
 module.exports = {
   entry: {
-    "main": "./src/_js/studio.js",
+    "main": "./src/js/studio.js",
+  },
+
+  output: {
+    path: path.resolve(__dirname, "./dist"),
+    filename: "./js/[name].bundle.js",
+    publicPath: "../../",
   },
 
   module: {
@@ -141,10 +147,4 @@ module.exports = {
     new SvgSpriteLoaderPlugin({}),
   ],
 
-  output: {
-    path: path.resolve(__dirname, "./dist"),
-    filename: "./js/[name].bundle.js",
-    // publicPath: "../../", 기존과 경로가 변경됐으나, 재변경 상관 없음
-    publicPath: "../../",
-  },
 };

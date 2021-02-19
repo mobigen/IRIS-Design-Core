@@ -4,7 +4,7 @@
   "description": "IRIS-Design-Core를 포함하는 상위 저장소",
   "main": "index.js",
   "scripts": {
-    "dev": "node ./clean-dist.js && webpack --config webpack.prod.js --watch",
+    "dev": "node ./clean-dist.js && webpack --config webpack.dev.js",
     "prod": "node ./clean-dist.js && webpack --config webpack.prod.js",
     "pull": "git subtree pull -P src/style-core core-upstream dev",
     "push": "git subtree push -P src/style-core core-origin dev"
@@ -30,7 +30,6 @@
     "cssnano": "^4.1.10",
     "file-include-webpack-plugin": "^1.3.5",
     "file-loader": "^6.2.0",
-    "html-beautify-webpack-plugin": "^1.0.5",
     "html-loader": "^1.3.2",
     "html-webpack-plugin": "^5.0.0-alpha.15",
     "mini-css-extract-plugin": "^1.3.3",
@@ -51,9 +50,9 @@
     "svg-sprite-loader": "^5.1.1",
     "svgo": "^1.3.2",
     "svgo-loader": "^2.2.1",
-    "terser-webpack-plugin": "^5.0.3",
+    "terser-webpack-plugin": "^5.1.1",
     "watch": "^1.0.2",
-    "webpack": "^5.10.1",
+    "webpack": "^4.46.0",
     "webpack-bundle-analyzer": "^4.2.0",
     "webpack-cli": "^4.2.0",
     "webpack-merge": "^5.7.0"
