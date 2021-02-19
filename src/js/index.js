@@ -6,7 +6,7 @@
 // ----------------------------
 // 장: core의 scss에서 파일을 임포트하는 경로가 깔끔함
 // 단: 전체 테마 적용시 core/index.scss와 product/index.scss 에 두번 적용해야 함
-// import '../core-style/scss/index.scss'
+// import '../style-core/scss/index.scss'
 // import '../product-style/scss/index.scss'
 
 // 2. product scss에 core를 포함해 impoart 하는 방법
@@ -23,7 +23,7 @@ function requireSvgAll(r) {
   r.keys().forEach(r);
 }
 
-requireSvgAll(require.context('../core-style/images/icon/', true, /\.svg$/));
+requireSvgAll(require.context('../style-core/images/icon/', true, /\.svg$/));
 requireSvgAll(require.context('../images/icon/', true, /\.svg$/));
 
 // ****************************
@@ -34,7 +34,7 @@ function requirePngAll(r) {
   r.keys().forEach(r);
 }
 
-requirePngAll(require.context('../core-style/images/', true, /\.png$/));
+requirePngAll(require.context('../style-core/images/', true, /\.png$/));
 requirePngAll(require.context('../images/', true, /\.png$/));
 
 // ****************************

@@ -1,13 +1,13 @@
 {
-  "name": "IRIS-Design-Product",
+  "name": "IRIS-Design-Guide",
   "version": "1.0.0",
   "description": "IRIS-Design-Core를 포함하는 상위 저장소",
   "main": "index.js",
   "scripts": {
     "dev": "node ./clean-dist.js && webpack --config webpack.dev.js --watch",
     "build": "node ./clean-dist.js && webpack --config webpack.prod.js",
-    "pull": "git subtree pull -P src/core-style core-upstream dev --squash",
-    "push": "git subtree push -P src/core-style core-origin dev"
+    "pull": "git subtree pull -P src/style-core core-upstream dev --squash",
+    "push": "git subtree push -P src/style-core core-origin dev"
   },
   "repository": {
     "type": "git",

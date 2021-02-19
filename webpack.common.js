@@ -23,7 +23,7 @@ module.exports = {
       // Font
       {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-        include: path.resolve(__dirname, "./src/core-style/fonts"),
+        include: path.resolve(__dirname, "./src/style-core/fonts"),
         use: [{
           loader: "file-loader",
           options: {
@@ -35,7 +35,7 @@ module.exports = {
       // SCSS - Core
       // {
       //   test: /\.(sass|scss)$/,
-      //   include: path.resolve(__dirname, "./src/core-style/scss"),
+      //   include: path.resolve(__dirname, "./src/style-core/scss"),
       //   use: [
       //     MiniCssExtractPlugin.loader,
       //     "css-loader", // css를 읽어들이기
@@ -59,14 +59,14 @@ module.exports = {
       // Image(png) - Core
       {
         test: /\.(png|jp(e*)g|gif|ico)$/,
-        include: path.resolve(__dirname, "./src/core-style/images"),
+        include: path.resolve(__dirname, "./src/style-core/images"),
         use: {
           loader: "file-loader",
           options: {
             outputPath: "./",
             name: "[path][name].[ext]",
             // 가져올 경로에서 해당 경로만 지우고 가져온다.
-            context: "src/core-style",
+            context: "src/style-core",
           },
         },
       },
@@ -89,13 +89,13 @@ module.exports = {
       // Image(svg) - Core
       {
         test: /\.svg$/,
-        include: path.resolve(__dirname, "./src/core-style/images/icon"),
+        include: path.resolve(__dirname, "./src/style-core/images/icon"),
         use: {
           loader: "svg-sprite-loader",
           options: {
             outputPath: "./",
             runtimeCompat: true,
-            context: "src/core-style", // 가져올 경로에서 해당 경로만 지우고 가져온다.
+            context: "src/style-core", // 가져올 경로에서 해당 경로만 지우고 가져온다.
             // extract: true,
             // spriteFilename: 'images/icon/svg-sprite.svg',
             // name: "[path][name].[ext]",
@@ -112,7 +112,7 @@ module.exports = {
           options: {
             outputPath: "./",
             runtimeCompat: true,
-            context: "src/core-style", // 가져올 경로에서 해당 경로만 지우고 가져온다.
+            context: "src/style-core", // 가져올 경로에서 해당 경로만 지우고 가져온다.
             // extract: true,
             // spriteFilename: 'images/icon/svg-sprite.svg',
             // name: "[path][name].[ext]",
