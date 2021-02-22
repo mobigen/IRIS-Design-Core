@@ -1,5 +1,89 @@
 .studio-edit {
-  width: 100%;
-  height: 100%;
-  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+}
+
+.studio-edit-head {
+  @include layer("raised");
+  display: flex;
+  flex-direction: column;
+  background-color: $ui-01;
+  z-index: z("header");
+}
+
+.studio-edit-head__top-bar {
+  display: flex;
+  align-items: center;
+  padding: $spacing-xs $spacing-xs $spacing-xs $spacing-sm;
+}
+
+.studio-edit-head__title-wrap {
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+
+.studio-edit-head__title {
+  @include line-height("heading");
+}
+
+.studio-edit-head__title-text {
+  @include font-weight("medium");
+}
+
+.studio-edit-head__title-button {
+  margin-left: $spacing-2xs;
+}
+
+.studio-edit-head__action-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.studio-edit-head__action-buttons .button + .button {
+  margin-left: $spacing-2xs;
+}
+
+.studio-edit-head__menu-bar {
+  display: flex;
+  background-color: $ui-02;
+  padding: $spacing-xs $spacing-xs $spacing-xs $spacing-sm;
+}
+
+.studio-edit-head__object-list {
+  display: flex;
+  flex: 1;
+  margin-left: $spacing-xs;
+}
+
+.studio-edit-head__additinal-buttons {
+  display: flex;
+}
+
+.studio-edit-body {
+  display: flex;
+  flex: 1;
+  overflow: auto;
+}
+
+.studio-edit-body__canvas-wrap {
+  flex: 1;
+  padding: $layout-2xs;
+  overflow: auto;
+  background-color: $ui-04;
+}
+
+.studio-edit-body__canvas {
+  background-color: $ui-02;
+  border: 1px solid $ui-04;
+}
+
+.studio-edit-body__panel {
+  width: 280px;
+  background-color: $ui-01;
+  overflow: auto;
+}
+
+.studio-edit-body__panel-tab {
+  background-color: $ui-04;
 }

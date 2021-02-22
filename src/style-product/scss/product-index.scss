@@ -14,8 +14,10 @@ $font-path: '/src/style-core/fonts/';
 // @import "/src/style-core/scss/themes/pink";
 // @import "/src/style-core/scss/core-index.scss";
 // 2-2. product의 테마만 바꾸고 싶은 경우
+// @import "/src/style-core/scss/core-index.scss";
+// @import "/src/style-core/scss/themes/pink";
+
 @import "/src/style-core/scss/core-index.scss";
-@import "/src/style-core/scss/themes/pink";
 
 @import "./layout/layout.scss";
 @import "./vendor/vendor.scss";
