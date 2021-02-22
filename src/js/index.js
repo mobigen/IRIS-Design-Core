@@ -42,9 +42,9 @@ requirePngAll(require.context('../images/', true, /\.png$/));
 // ****************************
 
 // toggle variation
-const beforeSelectElement = document.querySelectorAll(".select, .toggle-switch__switch, .toggle-button__item");
+const beforeSelectElement = document.querySelectorAll(".toggle-switch__switch, .toggle-button__item");
 const afterSelectSuffix = "--selected";
-const beforeOpenElement = document.querySelectorAll(".accordion__head");
+const beforeOpenElement = document.querySelectorAll(".accordion__head, .select");
 const afterOpenSuffix = "--open";
 
 // 토글 버튼 클릭시 --selected 추가
