@@ -21,3 +21,14 @@
 .filter-highlight {
   background-color: #fff09c;
 }
+
+.division-line {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: middle;
+  width: 1px;
+  height: 16px;
+  margin: 0 8px;
+  border-left: 1px solid $ui-04;
+  clip: rect(1px, 1px, 1px, 1px);
+}
