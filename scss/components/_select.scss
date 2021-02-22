@@ -6,7 +6,7 @@
   position: relative;
 }
 
-.select--selected {
+.select--open {
   .select-selector__button {
     border-color: $secondary;
     box-shadow: 0px 0px 4px rgba(77, 174, 255, 0.4);
@@ -53,7 +53,7 @@
   }
 }
 
-.select--selected.select--disabled {
+.select--open.select--disabled {
   .select-selector__icon {
     transform: none;
   }
@@ -127,6 +127,7 @@
   padding: $spacing-2xs 0;
   background-color: $ui-02;
   border-radius: $field-border-radius;
+  border: 1px solid $ui-04;
 }
 
 .select-container__list {
