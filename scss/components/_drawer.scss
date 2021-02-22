@@ -23,7 +23,7 @@
   height: rem(52px);
   border: 0;
   border-radius: 3px 0px 0px 3px;
-  box-shadow: -2px 0px 4px 0 rgb(0 0 0 / 20%);
+  box-shadow: -2px 0px 4px 0 rgba(0, 0, 0, 0.2);
 
   svg {
     @include svg-icon-size(26px);
