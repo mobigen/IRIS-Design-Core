@@ -126,7 +126,6 @@
 .text-input-group__clear-button {
   @include button-normal;
   @include position-right-center(6px);
-  display: none;
   width: $spacing-md;
   height: $spacing-md;
   border: 0;
@@ -145,10 +144,6 @@
     .svg-icon {
       fill: $icon-01;
     }
-  }
-
-  &--show {
-    display: flex;
   }
 }
 
