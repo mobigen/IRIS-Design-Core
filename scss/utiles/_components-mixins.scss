@@ -332,6 +332,7 @@
     color: $text-02;
 
     &::placeholder {
+      @include font-weight("light");
       color: $text-05;
     }
 

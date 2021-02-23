@@ -33,6 +33,8 @@
 
 .form__label-subtext {
   @include font-size("12");
+  @include line-height("heading");
+  padding-right: $spacing-2xs;
   color: $text-03;
 }
 
