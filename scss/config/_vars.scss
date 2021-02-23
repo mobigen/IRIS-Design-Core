@@ -1,8 +1,8 @@
 @import "spacing";
 
 // file path
-$img-path: '../images' !default;
-$font-path: '../fonts' !default;
+$img-path: "../images" !default;
+$font-path: "../fonts" !default;
 
 // button
 $button-border-radius: 2px !default;
@@ -27,8 +27,32 @@ $loader-25: $secondary !default;
 $loader-50: $primary !default;
 $loader-75: $secondary !default;
 $loader-end: $primary !default;
-$inverse-loader-start: rgba($ui-02, .3) !default;
-$inverse-loader-25: rgba($ui-02, .8) !default;
-$inverse-loader-50: rgba($ui-02, .3) !default;
-$inverse-loader-75: rgba($ui-02, .8) !default;
-$inverse-loader-end: rgba($ui-02, .3) !default;
+$inverse-loader-start: rgba($ui-02, 0.3) !default;
+$inverse-loader-25: rgba($ui-02, 0.8) !default;
+$inverse-loader-50: rgba($ui-02, 0.3) !default;
+$inverse-loader-75: rgba($ui-02, 0.8) !default;
+$inverse-loader-end: rgba($ui-02, 0.3) !default;
+
+// Grid columns
+$enable-grid-classes: true !default;
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer / 4,
+  2: $spacer / 2,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+) !default;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 640px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+  2xl: 1400px,
+) !default;
+$grid-columns: 12 !default;
+$grid-gutter-width: 0 !default;
+$grid-row-columns: 6 !default;
+$gutters: $spacers !default;

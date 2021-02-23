@@ -5,6 +5,7 @@
 @mixin text-input {
   @include font-family("sans");
   @include font-size("14");
+  @include font-weight("regular");
   position: relative;
   background-color: rgba($ui-02, 0.8);
   width: 100%;
@@ -56,6 +57,7 @@
   }
 
   &::placeholder {
+    @include font-weight("light");
     color: $text-05;
   }
 }

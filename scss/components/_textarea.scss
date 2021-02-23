@@ -53,6 +53,7 @@
   }
 
   &::placeholder {
+    @include font-weight("light");
     color: $text-05;
   }
 }
