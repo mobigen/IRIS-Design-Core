@@ -126,11 +126,10 @@
 }
 
 @mixin button--support {
-  @include button-theme($ui-02, $primary, #edf3fb, #d6e4f7, $ui-04);
+  @include button-theme($ui-02, $primary, #e1eaf7, #c6d8f2, $ui-04);
   // support 예외 사항
   &:hover:not(:disabled) {
     color: $primary;
-    border-color: $primary;
 
     .svg-icon {
       fill: $primary;
