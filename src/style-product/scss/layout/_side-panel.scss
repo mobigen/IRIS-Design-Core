@@ -1,0 +1,66 @@
+.side-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.side-panel-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: auto;
+  padding: $layout-3xs / 2 $layout-3xs $layout-3xs;
+  letter-spacing: -0.3px;
+}
+
+.side-panel-content {
+  padding: $layout-3xs 0;
+}
+
+.side-panel-content-head {
+  display: flex;
+  align-items: center;
+  margin-bottom: $spacing-xs;
+}
+
+.side-panel-content-head .button--link {
+  padding: 0;
+  text-decoration: underline;
+}
+
+.side-panel-content-head__title {
+  @include font-weight("medium");
+  @include line-height("heading");
+  flex: 1;
+  color: $text-02;
+}
+
+.side-panel-content-body {
+}
+
+// side-panel 내 form 요소 재선언
+.side-panel-body {
+  .form__item {
+    padding: $spacing-3xs 0;
+    min-height: rem(32px);
+  }
+
+  .form__label {
+    @include make-col(4);
+    min-width: auto;
+  }
+
+  .form__label-text {
+    @include font-weight("regular");
+    @include font-size("13");
+    @include line-height("heading");
+  }
+
+  .form__label-subtext {
+    @include font-size("12");
+    @include line-height("body");
+  }
+
+  .form__detail {
+    @include make-col(8);
+  }
+}

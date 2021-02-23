@@ -12,31 +12,31 @@
 <body>
   <div class="service-container">
     <section>
-      <div class="service-content studio-edit">
+      <div class="service-content editor-layout">
         <!-- 상단 영역 -->
-        <div class="studio-edit-head">
-          <div class="studio-edit-head__top-bar">
-            <div class="studio-edit-head__title-wrap">
-              <div class="studio-edit-head__title">
-                <!-- 제목 수정시 studio-edit-head__title-text display: none;
+        <div class="editor-layout-head">
+          <div class="editor-layout-head__top-bar">
+            <div class="editor-layout-head__title-wrap">
+              <div class="editor-layout-head__title">
+                <!-- 제목 수정시 editor-layout-head__title-text display: none;
                   text-input display: block,  -->
-                <span class="studio-edit-head__title-text">Untitled (01)</span>
+                <span class="editor-layout-head__title-text">Untitled (01)</span>
                 <input type="text" class="text-input" style="display: none;">
               </div>
               <!-- 제목 수정시 write button display: none;
                   checkmark button display: block,  -->
-              <button class="studio-edit-head__title-button button button--icon button--link" type="button" title="수정">
+              <button class="editor-layout-head__title-button button button--icon button--link" type="button" title="수정">
                 <svg class="svg-icon">
                   <use xlink:href="#write"></use>
                 </svg>
               </button>
-              <button class="studio-edit-head__title-button button button--icon button--link" type="button" title="확인" style="display: none;">
+              <button class="editor-layout-head__title-button button button--icon button--link" type="button" title="확인" style="display: none;">
                 <svg class="svg-icon">
                   <use xlink:href="#checkmark"></use>
                 </svg>
               </button>
             </div>
-            <div class="studio-edit-head__action-buttons">
+            <div class="editor-layout-head__action-buttons">
               <button class="button button--support" type="button">보기</button>
               <span class="division-line"></span>
               <button class="button button--primary" type="button">저장</button>
@@ -50,16 +50,16 @@
             </div>
           </div>
           <!-- 객체 메뉴바 -->
-          <div class="studio-edit-head__menu-bar">
+          <div class="editor-layout-head__menu-bar">
             <!-- 객체 카테고리 -->
             <!-- select 선택시 select--selected 클래스 추가 -->
             <div class="select">
               <div class="select-selector">
                 <button class="select-selector__button" type="button">
                   <span class="select-selector__title">카테고리</span>
-                    <svg class="svg-icon select-selector__icon">
-                      <use xlink:href="#arrow-down"></use>
-                    </svg>
+                  <svg class="svg-icon select-selector__icon">
+                    <use xlink:href="#arrow-down"></use>
+                  </svg>
                 </button>
               </div>
               <div class="select-container">
@@ -93,38 +93,171 @@
               </div>
             </div>
             <!-- 객체 목록 -->
-            <ul class="studio-edit-head__object-list">
-              <li>
+            <ul class="editor-layout-head__object-list">
+              <li class="editor-layout-head__object-list-item">
                 <button class="button button--icon button--link">
                   <svg class="svg-icon">
-                    <use xlink:href="#checkmark"></use>
+                    <use xlink:href="#button"></use>
                   </svg>
                 </button>
               </li>
-              <li>
+              <li class="editor-layout-head__object-list-item">
                 <button class="button button--icon button--link">
                   <svg class="svg-icon">
-                    <use xlink:href="#checkmark"></use>
+                    <use xlink:href="#calendar-setting"></use>
                   </svg>
                 </button>
               </li>
-              <li>
+              <li class="editor-layout-head__object-list-item">
                 <button class="button button--icon button--link">
                   <svg class="svg-icon">
-                    <use xlink:href="#checkmark"></use>
+                    <use xlink:href="#chart"></use>
                   </svg>
                 </button>
               </li>
-              <li>
+              <li class="editor-layout-head__object-list-item">
                 <button class="button button--icon button--link">
                   <svg class="svg-icon">
-                    <use xlink:href="#checkmark"></use>
+                    <use xlink:href="#checkbox-selected"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="editor-layout-head__object-list-item">
+                <button class="button button--icon button--link">
+                  <svg class="svg-icon">
+                    <use xlink:href="#circle"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="editor-layout-head__object-list-item">
+                <button class="button button--icon button--link">
+                  <svg class="svg-icon">
+                    <use xlink:href="#combobox"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="editor-layout-head__object-list-item">
+                <button class="button button--icon button--link">
+                  <svg class="svg-icon">
+                    <use xlink:href="#date-time"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="editor-layout-head__object-list-item">
+                <button class="button button--icon button--link">
+                  <svg class="svg-icon">
+                    <use xlink:href="#document-html"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="editor-layout-head__object-list-item">
+                <button class="button button--icon button--link">
+                  <svg class="svg-icon">
+                    <use xlink:href="#edit-box"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="editor-layout-head__object-list-item">
+                <button class="button button--icon button--link">
+                  <svg class="svg-icon">
+                    <use xlink:href="#hidden-input"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="editor-layout-head__object-list-item">
+                <button class="button button--icon button--link">
+                  <svg class="svg-icon">
+                    <use xlink:href="#image"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="editor-layout-head__object-list-item">
+                <button class="button button--icon button--link">
+                  <svg class="svg-icon">
+                    <use xlink:href="#label"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="editor-layout-head__object-list-item">
+                <button class="button button--icon button--link">
+                  <svg class="svg-icon">
+                    <use xlink:href="#list-unordered"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="editor-layout-head__object-list-item">
+                <button class="button button--icon button--link">
+                  <svg class="svg-icon">
+                    <use xlink:href="#map"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="editor-layout-head__object-list-item">
+                <button class="button button--icon button--link">
+                  <svg class="svg-icon">
+                    <use xlink:href="#no-image"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="editor-layout-head__object-list-item">
+                <button class="button button--icon button--link">
+                  <svg class="svg-icon">
+                    <use xlink:href="#popup"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="editor-layout-head__object-list-item">
+                <button class="button button--icon button--link">
+                  <svg class="svg-icon">
+                    <use xlink:href="#portlet"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="editor-layout-head__object-list-item">
+                <button class="button button--icon button--link">
+                  <svg class="svg-icon">
+                    <use xlink:href="#rectangle"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="editor-layout-head__object-list-item">
+                <button class="button button--icon button--link">
+                  <svg class="svg-icon">
+                    <use xlink:href="#renew"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="editor-layout-head__object-list-item">
+                <button class="button button--icon button--link">
+                  <svg class="svg-icon">
+                    <use xlink:href="#tab"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="editor-layout-head__object-list-item">
+                <button class="button button--icon button--link">
+                  <svg class="svg-icon">
+                    <use xlink:href="#tag"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="editor-layout-head__object-list-item">
+                <button class="button button--icon button--link">
+                  <svg class="svg-icon">
+                    <use xlink:href="#text-field"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="editor-layout-head__object-list-item">
+                <button class="button button--icon button--link">
+                  <svg class="svg-icon">
+                    <use xlink:href="#text-input"></use>
                   </svg>
                 </button>
               </li>
             </ul>
             <!-- 추가 기능 -->
-            <div class="studio-edit-head__additinal-buttons">
+            <div class="editor-layout-head__additinal-buttons">
               <button class="button button--link" type="button">객체목록보기</button>
               <button class="button button--link" type="button">히든객체숨김</button>
               <button class="button button--link" type="button">전체변수명보기</button>
@@ -140,12 +273,12 @@
         </div>
         <!-- //상단 영역 -->
         <!-- 편집 영역 -->
-        <div class="studio-edit-body">
-          <div class="studio-edit-body__canvas-wrap">
-            <div class="studio-edit-body__canvas" style="width: 1920px; height: 1200px;">캔버스 영역</div>
+        <div class="editor-layout-body">
+          <div class="editor-layout-body__canvas-wrap">
+            <div class="editor-layout-body__canvas" style="width: 1920px; height: 1200px;">캔버스 영역</div>
           </div>
-          <div class="studio-edit-body__panel">
-            <div class="studio-edit-body__panel-tab tab tab--container tab--horizontal">
+          <div class="editor-layout-body__side-penal side-panel">
+            <div class="side-panel-head__tab tab tab--container tab--horizontal">
               <ul class="tab__bar">
                 <li class="tab__item tab__item--selected">
                   <button type="button" class="tab__button">
@@ -159,7 +292,178 @@
                 </li>
               </ul>
             </div>
-            <div class="studio-edit-body__panel-content">리포트 패널 영역</div>
+            <div class="side-panel-body">
+              <div class="side-panel-content">
+                <div class="side-panel-content-head">
+                  <strong class="side-panel-content-head__title">이벤트 값 전달 설정</strong>
+                </div>
+                <div class="side-panel-content-body">
+                  <ul class="form__list">
+                    <li class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">오브젝트 ID</span></label>
+                      <div class="form__detail">
+                        canvas
+                      </div>
+                    </li>
+                    <li class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">변수명</span></label>
+                      <div class="form__detail">
+                        <input type="text" class="text-input" placeholder="변수명을 입력해 주세요." value="common_data_1">
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- 구분선 -->
+              <span class="division-line-horizontal"></span>
+              <div class="side-panel-content">
+                <div class="side-panel-content-head">
+                  <strong class="side-panel-content-head__title">패널 헤드</strong>
+                </div>
+                <div class="side-panel-content-body">
+                  <ul class="form__list">
+                    <li class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">그룹 메뉴 아이콘</span>
+                      </label>
+                      <div class="form__detail">
+                        <div class="upload-preview">
+                          <div class="upload-preview__thumbnail">
+                            <svg class="svg-icon">
+                              <use xlink:href="#image-guide"></use>
+                            </svg>
+                            <p class="upload-preview__thumbnail-text">
+                              파일을 선택하시면 이곳에 추가됩니다.
+                              <br>
+                              pdf, jpg, gif up to 10MB
+                            </p>
+                          </div>
+                          <div class="upload-preview__file">
+                            <input type="file" class="upload-preview__file-input">
+                            <button class="upload-preview__file-button" type="button">
+                              <svg class="svg-icon">
+                                <use xlink:href="#upload"></use>
+                              </svg>
+                              <span class="upload-preview__file-text"> Click To Upload </span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">색상 선택</span>
+                        <span class="form__label-subtext">(subtext)</span></label>
+                      <div class="form__detail">
+                        <input type="text" class="text-input" placeholder="그룹명을 입력해주세요.">
+                      </div>
+                    </li>
+                    <li class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">배경 색상 선택</span></label>
+                      <div class="form__detail">
+                        <input type="text" class="text-input" placeholder="그룹명을 입력해주세요.">
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- 구분선 -->
+              <span class="division-line-horizontal"></span>
+              <div class="side-panel-content">
+                <div class="side-panel-content-head">
+                  <strong class="side-panel-content-head__title">기본 값 설정</strong>
+                  <button class="button button--link" type="button">현재 지도 값으로 설정</button>
+                </div>
+                <div class="side-panel-content-body">
+                  <ul class="form__list">
+                    <li class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">위도</span>
+                      </label>
+                      <div class="form__detail">
+                        <input type="text" class="text-input" placeholder="위도를 입력해주세요.">
+                      </div>
+                    </li>
+                    <li class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">경도</span></label>
+                      <div class="form__detail">
+                        <input type="text" class="text-input" placeholder="경도를 입력해주세요.">
+                      </div>
+                    </li>
+                    <li class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">줌 레벨</span></label>
+                      <div class="form__detail">
+                        <input type="text" class="text-input" placeholder="줌레벨을 입력해주세요." value="7">
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- 구분선 -->
+              <span class="division-line-horizontal"></span>
+              <div class="side-panel-content">
+                <div class="side-panel-content-head">
+                  <strong class="side-panel-content-head__title">제한 설정</strong>
+                </div>
+                <div class="side-panel-content-body">
+                  <ul class="form__list">
+                    <li class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">Readonly</span>
+                      </label>
+                      <div class="form__detail">
+                        <div class="toggle-switch">
+                          <button class="toggle-switch__switch toggle-switch__switch--selected" type="button">
+                            <span class="toggle-switch__handle">
+                              <span class="ir-pm"></span>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- 구분선 -->
+              <span class="division-line-horizontal"></span>
+              <div class="side-panel-content">
+                <div class="side-panel-content-head">
+                  <strong class="side-panel-content-head__title">자동 전환</strong>
+                </div>
+                <div class="side-panel-content-body">
+                  <ul class="form__list">
+                    <li class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">사용 여부</span>
+                      </label>
+                      <div class="form__detail">
+                        <div class="radio">
+                          <input type="radio" id="use" name="radio-group" class="radio__input" value="label">
+                          <label for="use" class="radio__label">사용</label>
+                        </div>
+                        <div class="radio">
+                          <input type="radio" id="unuse" name="radio-group" class="radio__input" value="label">
+                          <label for="unuse" class="radio__label">미사용</label>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">시간 간격</span>
+                      </label>
+                      <div class="form__detail">
+                        <input type="number" class="text-input" max="100" min="0" step="1" value="3"> 초
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <!-- //편집 영역 -->
