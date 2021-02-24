@@ -3,10 +3,19 @@
   flex-direction: column;
 }
 
+.side-panel-head {
+  position: relative;
+}
+
+.side-panel-head__tab {
+  background-color: $ui-04;
+}
+
 .side-panel-body {
   display: flex;
   flex-direction: column;
   flex: 1;
+  position: relative;
   overflow: auto;
   padding: $layout-3xs / 2 $layout-3xs $layout-3xs;
   letter-spacing: -0.3px;
@@ -19,15 +28,16 @@
 .side-panel-content-head {
   display: flex;
   align-items: center;
-  margin-bottom: $spacing-xs;
+  margin-bottom: $spacing-2xs;
 }
 
 .side-panel-content-head .button--link {
   padding: 0;
-  text-decoration: underline;
+  margin-left: $spacing-3xs;
 }
 
 .side-panel-content-head__title {
+  @include text-overflow;
   @include font-weight("medium");
   @include line-height("heading");
   flex: 1;
@@ -37,7 +47,16 @@
 .side-panel-content-body {
 }
 
-// side-panel 내 form 요소 재선언
+.side-panel-content-body .row {
+  margin-bottom: $spacing-2xs;
+  width: 100%;
+}
+
+.side-panel-content-body .h-group {
+  width: 100%;
+}
+
+// side-panel 내 요소 재선언
 .side-panel-body {
   .form__item {
     padding: $spacing-3xs 0;
@@ -62,5 +81,22 @@
 
   .form__detail {
     @include make-col(8);
+  }
+
+  .form--vertical {
+    .form__label {
+      width: 100%;
+    }
+    .form__detail {
+      width: 100%;
+      margin-top: $spacing-2xs;
+    }
+  }
+
+  .table__toolbar {
+    .text-input-group {
+      width: 100%;
+      margin-bottom: $spacing-2xs;
+    }
   }
 }

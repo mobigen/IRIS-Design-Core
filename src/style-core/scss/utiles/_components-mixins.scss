@@ -87,6 +87,7 @@
   }
 
   &__text {
+    @include text-overflow;
     @include font-size("14");
     @include line-height("heading");
     vertical-align: middle;
@@ -123,13 +124,14 @@
   }
 
   // -------------------------
-  // checkbox overwrite
+  // checkbox, radio overwrite
   // -------------------------
   &__item .checkbox {
+    @include text-overflow;
     @include stable-padding($spacing-2xs, $spacing-xs);
     // background-color: $ui-02;
     height: $button-height-md;
-    width: 100%;
+    flex: 1;
 
     .checkbox__label {
       width: 100%;
@@ -147,6 +149,34 @@
 
     &.checkbox--disabled,
     &.checkbox--disabled:hover {
+      cursor: not-allowed;
+      background-color: $ui-02;
+    }
+  }
+
+  &__item .radio {
+    @include text-overflow;
+    @include stable-padding($spacing-2xs, $spacing-xs);
+    // background-color: $ui-02;
+    height: $button-height-md;
+    flex: 1;
+
+    .radio__label {
+      width: 100%;
+    }
+
+    .radio__input:checked {
+      + .radio__label {
+        color: $primary;
+      }
+
+      + .radio__label .context-menu__icon {
+        fill: $primary;
+      }
+    }
+
+    &.radio--disabled,
+    &.radio--disabled:hover {
       cursor: not-allowed;
       background-color: $ui-02;
     }

@@ -198,3 +198,17 @@
     opacity: 0.6;
   }
 }
+
+// -------------------------
+// input + suffix
+// -------------------------
+// 
+.text-input-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.text-input-wrap__suffix {
+  margin-left: $spacing-2xs;
+  color: $text-02;
+}

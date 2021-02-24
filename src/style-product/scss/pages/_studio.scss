@@ -51,6 +51,10 @@
   padding: $spacing-xs $spacing-xs $spacing-xs $spacing-sm;
 }
 
+.editor-layout-head__menu-bar .select {
+  flex-shrink: 0;
+}
+
 .editor-layout-head__object-list {
   display: flex;
   flex: 1;
@@ -87,8 +91,4 @@
   width: 280px;
   background-color: $ui-01;
   overflow: auto;
-}
-
-.side-panel-head__tab {
-  background-color: $ui-04;
 }
