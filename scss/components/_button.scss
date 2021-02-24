@@ -43,8 +43,18 @@
   padding: 0 $spacing-sm;
 
   .svg-icon {
-    width: 20px;
-    height: 20px;
+    width: rem(20px);
+    height: rem(20px);
+
+    & + .button__text {
+      margin-left: $spacing-2xs;
+    }
+  }
+
+  .button__text {
+    & + .svg-icon {
+      margin-left: $spacing-2xs;
+    }
   }
 }
 
