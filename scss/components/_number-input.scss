@@ -184,6 +184,7 @@
 // .text-input의 type 만 숫자 형식인 컴포넌트 디자인 재정의
 .text-input[type="number"] {
   padding-right: $spacing-xs;
+  min-width: rem(64px);
 }
 
 .text-input[type="number"].text-input--sm {

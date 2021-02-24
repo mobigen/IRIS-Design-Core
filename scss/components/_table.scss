@@ -16,11 +16,11 @@
   @include font-weight('regular');
   @include font-size('14');
   height: $button-height-lg;
-  padding: $spacing-2xs $spacing-xs;
+  padding: $spacing-xs $spacing-xs;
   color: $text-02;
   vertical-align: middle;
   word-break: break-all;
-  line-height: 100%;
+  line-height: 1.2;
 }
 
 .table th {
@@ -126,7 +126,7 @@
   color: $active-primary !important;
 }
 
-.table .td--interval-sm {
+.table .td--spacing-sm {
   padding: $spacing-3xs $spacing-2xs;
 }
 
@@ -171,4 +171,23 @@
 .table.table--sm th,
 .table.table--sm td {
   height: $button-height-md;
+}
+
+// -------------------------
+// table complexe type
+// -------------------------
+.table-wrap {
+  display: block;
+  flex-direction: column;
+}
+
+.table__toolbar {
+  display: flex;
+  margin-bottom: $spacing-2xs;
+}
+
+.table__toolbar-right-box {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
 }
