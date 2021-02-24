@@ -1,9 +1,13 @@
 .radio {
-  display: inline-block;
+  display: block;
 }
 
-.radio:not(:last-of-type) {
-  margin-right: $spacing-sm;
+.radios {
+  display: flex;
+}
+
+.radios .radio:not(:last-of-type) {
+  margin-right: $spacing-xs;
 }
 
 .radio__input {

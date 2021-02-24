@@ -2,6 +2,14 @@
   position: relative;
 }
 
+.checkboxs {
+  display: flex
+}
+
+.checkboxs .checkbox:not(:last-of-type) {
+  margin-right: $spacing-xs;
+}
+
 .checkbox__input {
   @include hidden;
   top: 4px;
