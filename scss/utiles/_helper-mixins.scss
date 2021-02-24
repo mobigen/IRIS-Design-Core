@@ -63,10 +63,10 @@
 }
 
 // Right Position Center
-@mixin position-right-center($right-interval) {
+@mixin position-right-center($right-spacing) {
   position: absolute;
   top: 50%;
-  right: $right-interval;
+  right: $right-spacing;
   transform: translateY(-50%);
 }
 

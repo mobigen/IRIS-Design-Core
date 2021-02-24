@@ -7,9 +7,9 @@
   --gutter-y: 0;
   display: flex;
   flex-wrap: wrap;
-  margin-top: calc(var(--gutter-y) * -1); // stylelint-disable-line function-disallowed-list
-  margin-right: calc(var(--gutter-x) / -2); // stylelint-disable-line function-disallowed-list
-  margin-left: calc(var(--gutter-x) / -2); // stylelint-disable-line function-disallowed-list
+  margin-top: calc(var(--gutter-y) * -1);
+  margin-right: calc(var(--gutter-x) / -2);
+  margin-left: calc(var(--gutter-x) / -2);
 }
 
 @mixin make-col-ready($gutter: $grid-gutter-width) {
@@ -103,22 +103,4 @@
       }
     }
   }
-}
-
-
-// Row
-@if $enable-grid-classes {
-  .row {
-    @include make-row();
-
-    > * {
-      @include make-col-ready();
-    }
-  }
-}
-
-
-// Columns
-@if $enable-grid-classes {
-  @include make-grid-columns();
 }
