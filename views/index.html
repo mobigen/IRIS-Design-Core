@@ -11,11 +11,31 @@
 <body>
   <div class="content-wrap">
     <header>
-      @@include('partials/header.html')
+      
+<div class="header">
+  <h3 class="header-title">이 곳은 헤더입니다.</h3>
+  <ul class="gnb">
+    <li>
+      <a href="studio/studio-index.html"> studio </a>
+    </li>
+    <li>
+      <a href="#"> hd2 </a>
+    </li>
+    <li>
+      <a href="#"> hd3 </a>
+    </li>
+  </ul>
+</div>
+
     </header>
     <main>
       <h1>component guide~</h1>
-      @@include('partials/top-content.html')
+      
+<div class="top-content">
+  <strong class="title"> title </strong>
+  <span class="text">공통 모듈화 시킨 top-content</span>
+</div>
+
       <section>
         <strong class="component-title">이곳은 컴포넌트 섹션!</strong>
         <span>
@@ -29,7 +49,12 @@
           </svg>
         </span>
       </section>
-      @@include('partials/top-content.html')
+      
+<div class="top-content">
+  <strong class="title"> title </strong>
+  <span class="text">공통 모듈화 시킨 top-content</span>
+</div>
+
       <section>
         <strong class="component-title">sherman에서만 사용할 컴포넌트</strong>
         <span>전체 테마가 아닌, sherman에만 테마 적용이 가능함</span>
@@ -41,23 +66,51 @@
           </ul>
         </div>
       </section>
-      @@include('partials/top-content.html')
+      
+<div class="top-content">
+  <strong class="title"> title </strong>
+  <span class="text">공통 모듈화 시킨 top-content</span>
+</div>
+
       <section>
         <strong class="component-title">이곳은 컴포넌트 섹션!3</strong>
       </section>
-      @@include('partials/top-content.html')
+      
+<div class="top-content">
+  <strong class="title"> title </strong>
+  <span class="text">공통 모듈화 시킨 top-content</span>
+</div>
+
       <section>
         <strong class="component-title">이곳은 컴포넌트 섹션!4</strong>
         <span>
           <img src="../dist/images/common/img1.png" alt="test">
         </span>
       </section>
-      @@include('partials/top-content.html')
+      
+<div class="top-content">
+  <strong class="title"> title </strong>
+  <span class="text">공통 모듈화 시킨 top-content</span>
+</div>
+
       <section>
         <strong class="component-title">이곳은 컴포넌트 섹션!5</strong>
       </section>
     </main>
-    <footer>@@include('partials/footer.html')</footer>
+    <footer>
+<div class="footer">
+  <strong class="footer-title">이 곳은 푸터입니다.</strong>
+  <div class="icon">
+    <span class="icon-text"> svg 아이콘 사용 </span>
+    <svg class="icon-comm">
+      <use xlink:href="#address-card"></use>
+    </svg>
+    <svg class="icon-comm">
+      <use xlink:href="#airbnb"></use>
+    </svg>
+  </div>
+</div>
+</footer>
   </div>
   <script src="../dist/js/main.bundle.js"></script>
 </body>

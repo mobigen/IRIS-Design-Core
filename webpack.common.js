@@ -144,7 +144,7 @@ module.exports = {
 
     // 공통 컴포넌트 영역 모듈화
     new FileIncludeWebpackPlugin({
-      source: "./src/style-product/html/pages",
+      source: "./src/style-product/html",
       replace: [{
         regex: /\[\[FILE_VERSION]]/g,
         to: "v=1.0.0",
