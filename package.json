@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "node ./clean-dist.js && webpack --config webpack.dev.js",
-    "prod": "node ./clean-dist.js && webpack --config webpack.prod.js",
+    "build": "node ./clean-dist.js && webpack --config webpack.prod.js",
     "pull": "git subtree pull -P src/style-core core-upstream dev",
     "push": "git subtree push -P src/style-core core-origin dev"
   },
@@ -50,7 +50,7 @@
     "svg-sprite-loader": "^5.1.1",
     "svgo": "^1.3.2",
     "svgo-loader": "^2.2.1",
-    "terser-webpack-plugin": "^5.1.1",
+    "terser-webpack-plugin": "^4.2.3",
     "watch": "^1.0.2",
     "webpack": "^4.46.0",
     "webpack-bundle-analyzer": "^4.2.0",
