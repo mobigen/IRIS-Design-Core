@@ -8,8 +8,11 @@ module.exports = merge(common, {
 
   // CSS Minify
   optimization: {
-    minimizer: [new TerserJSPlugin({
-      cache: false,
-    }), new OptimizeCSSAssetsPlugin({})],
+    minimizer: [
+      new TerserJSPlugin({
+        cache: false,
+      }),
+      new OptimizeCSSAssetsPlugin({}),
+    ],
   },
 });

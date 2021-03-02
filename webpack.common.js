@@ -5,7 +5,7 @@ const path = require("path"),
 
 module.exports = {
   entry: {
-    "main": "./src/js/studio.js",
+    main: "./src/js/studio.js",
   },
 
   output: {
@@ -23,18 +23,18 @@ module.exports = {
         use: {
           loader: "babel-loader",
           options: {
-            "presets": [
+            presets: [
               [
                 "@babel/preset-env",
                 {
-                  "targets": {
-                    "chrome": "58",
-                    "ie": "11"
-                  }
-                }
-              ]
-            ]
-          }
+                  targets: {
+                    chrome: "58",
+                    ie: "11",
+                  },
+                },
+              ],
+            ],
+          },
         },
       },
 
@@ -42,12 +42,14 @@ module.exports = {
       {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
         include: path.resolve(__dirname, "./src/style-core/fonts"),
-        use: [{
-          loader: "file-loader",
-          options: {
-            name: "fonts/[name].[ext]",
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "fonts/[name].[ext]",
+            },
           },
-        }, ],
+        ],
       },
 
       // SCSS - Core
@@ -155,5 +157,4 @@ module.exports = {
 
     new SvgSpriteLoaderPlugin({}),
   ],
-
 };

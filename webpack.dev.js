@@ -3,13 +3,10 @@ const common = require("./webpack.common.js");
 
 module.exports = merge(common, {
   mode: "development",
-  
+
   watch: true,
-  
+
   watchOptions: {
-    ignored: [
-      "./node_modules/**",
-      "./clean-dist.js",
-    ],
+    ignored: ["./node_modules/**", "./clean-dist.js"],
   },
 });
