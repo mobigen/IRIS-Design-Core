@@ -9,7 +9,6 @@
   }
 }
 
-
 // Columns
 @if $enable-grid-classes {
   @include make-grid-columns();
@@ -69,14 +68,23 @@
 
 .h-group {
   display: flex;
+  align-items: center;
 
   & > *:not(:last-child) {
     margin-right: $spacing-2xs;
   }
 }
 
+.h-group .select {
+  width: auto;
+}
+
 .h-group--half .h-group__item {
   width: 50%;
+}
+
+.form__detail .h-group {
+  width: 100%;
 }
 
 .item-group {
@@ -90,10 +98,115 @@
   padding: 0;
 }
 
-
 // -------------------------
 // flex box
 // -------------------------
 .ml-auto {
   margin-left: auto;
+}
+
+.self-start {
+  align-self: flex-start;
+}
+
+// -------------------------
+// width, height
+// -------------------------
+//   midal size
+//   ==========================================
+//   xs   ||  350px
+//   sm   ||  480px (450, 418)
+//   md   ||  600px
+//   lg   ||  900px
+//   xl   ||  1180px
+//   ==========================================
+.w-80 {
+  width: rem(80px);
+}
+
+.w-112 {
+  width: rem(112px);
+}
+
+.w-160 {
+  width: rem(160px);
+}
+
+.w-350 {
+  width: rem(350px);
+}
+
+.w-480 {
+  width: rem(480px);
+}
+
+.w-600 {
+  width: rem(600px);
+}
+
+.w-900 {
+  width: rem(900px);
+}
+
+.w-1180 {
+  width: rem(1180px);
+}
+
+.w-1-12 {
+  width: 8.3333333333%;
+}
+
+.w-2_12 {
+  width: 16.6666666667%;
+}
+
+.w-3_12 {
+  width: 25%;
+}
+
+.w-4_12 {
+  width: 33.3333333333%;
+}
+
+.w-5_12 {
+  width: 41.6666666667%;
+}
+
+.w-6_12 {
+  width: 50%;
+}
+
+.w-7_12 {
+  width: 58.3333333333%;
+}
+
+.w-8_12 {
+  width: 66.6666666667%;
+}
+
+.w-9_12 {
+  width: 75%;
+}
+
+.w-10_12 {
+  width: 83.3333333333%;
+}
+
+.w-11_12 {
+  width: 91.6666666667%;
+}
+
+.w-12_12 {
+  width: 100%;
+}
+
+.mh-600 {
+  max-height: 600px;
+}
+
+// -------------------------
+// overflow
+// -------------------------
+.overflow-auto {
+  overflow: auto;
 }
