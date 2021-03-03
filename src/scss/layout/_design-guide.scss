@@ -12,7 +12,9 @@
   flex-direction: column;
   flex: 0 1 100%;
   position: relative;
-  margin-left: 12.5rem;
+  margin-left: rem(200px);
+  width: calc(100% - 12.5rem);
+  overflow-x: hidden;
 }
 
 .content {
