@@ -277,3 +277,11 @@
     }
   }
 }
+
+// -------------------------
+// tab in modal overwrite
+// -------------------------
+.modal .tab__contents {
+  padding-right: $spacing-md;
+  padding-left: $spacing-md;
+}
