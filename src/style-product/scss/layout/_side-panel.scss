@@ -1,6 +1,7 @@
 .side-panel {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .side-panel-head {
@@ -17,8 +18,39 @@
   flex: 1;
   position: relative;
   overflow: auto;
-  padding: $layout-3xs / 2 $layout-3xs $layout-3xs;
+  padding: $layout-3xs / 2 $layout-3xs $layout-2xs;
   letter-spacing: -0.3px;
+}
+
+.side-panel::before,
+.side-panel::after {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: rem(24px);
+  content: "";
+  z-index: 1;
+}
+
+.side-panel::before {
+  top: 41px; // side-panel-head의 높이
+  background-image: linear-gradient(
+    0deg,
+    rgba($ui-01, 0) 0,
+    rgba($ui-01, 0.7) 30%,
+    $ui-01
+  );
+}
+
+.side-panel::after {
+  bottom: 0;
+  background-image: linear-gradient(
+    180deg,
+    rgba($ui-01, 0) 0,
+    rgba($ui-01, 0.7) 30%,
+    $ui-01
+  );
 }
 
 .side-panel-content {
