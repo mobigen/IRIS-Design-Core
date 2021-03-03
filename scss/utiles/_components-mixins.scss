@@ -46,6 +46,7 @@
   }
 
   &__button {
+    @include text-overflow;
     @include button-normal;
     @include font-weight("regular");
     @include stable-padding($spacing-2xs, $spacing-xs);
@@ -74,6 +75,7 @@
 
   &__icon {
     vertical-align: middle;
+    flex-shrink: 0;
   }
 
   &__icon + &__text {
@@ -89,6 +91,7 @@
   }
 
   &__text {
+    @include text-overflow;
     @include font-size("14");
     @include line-height("heading");
     vertical-align: middle;
