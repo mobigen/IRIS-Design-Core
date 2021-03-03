@@ -9,7 +9,10 @@
   @include layer("pop-out");
   display: flex;
   flex-direction: column;
+  position: absolute;
   border-radius: $field-border-radius;
+  background-color: $ui-02;
+  z-index: z("modal");
 }
 
 .modal__head {
@@ -43,7 +46,7 @@
 }
 
 .modal__body--lg {
-  padding: $layout-md;
+  padding: $layout-sm $layout-md;
 }
 
 .modal__foot {
@@ -59,4 +62,32 @@
 
 .modal__foot .button + .button {
   margin-left: $spacing-xs;
+}
+
+//   midal size
+//   ==========================================
+//   xs   ||  350px
+//   sm   ||  480px (450, 418)
+//   md   ||  620px
+//   lg   ||  900px
+//   xl   ||  1180px
+//   ==========================================
+.modal--xs {
+  width: rem(350px);
+}
+
+.modal--sm {
+  width: rem(480px);
+}
+
+.modal--md {
+  width: rem(620px);
+}
+
+.modal--lg {
+  width: rem(900px);
+}
+
+.modal--xl {
+  width: rem(1180px);
 }
