@@ -1,0 +1,13 @@
+.guide-wrap {
+  display: flex;
+  flex-direction: column;
+  padding: $layout-lg $layout-xl;
+}
+
+.modal-variation {
+  margin-bottom: $layout-lg;
+}
+
+.modal-variation__name {
+  margin-bottom: $spacing-md;
+}
