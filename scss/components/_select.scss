@@ -115,6 +115,10 @@
   transform: none;
 }
 
+.svg-icon + .select-selector__title {
+  margin-left: $spacing-3xs;
+}
+
 // select panel(dropdown)
 .select-container {
   @include list;
