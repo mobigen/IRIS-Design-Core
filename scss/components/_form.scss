@@ -12,7 +12,6 @@
   @include line-height("heading");
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: flex-start;
   padding: $spacing-xs 0;
 }
@@ -23,6 +22,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+  height: rem(32px)
 }
 
 .form__label-text {
@@ -40,14 +40,12 @@
   color: $text-03;
 }
 
-.form__label--self-start {
-  align-self: flex-start;
-  padding-top: $spacing-2xs;
-}
-
 .form__detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   flex: 1;
-  line-height: rem(32px);
+  min-height: rem(32px)
 }
 
 .form__foot {
@@ -101,7 +99,7 @@
   .form__label {
     width: 100%;
     padding: 0;
-    font-size: 15px;
+    height: auto;
   }
 
   .form__label-subtext {
@@ -115,6 +113,10 @@
 
   .form__detail-textarea {
     height: 120px;
+  }
+
+  .form__detail-inner {
+    flex: auto;
   }
 }
 
