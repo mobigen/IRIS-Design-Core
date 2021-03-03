@@ -46,11 +46,13 @@
   }
 
   &__button {
+    @include text-overflow;
     @include button-normal;
     @include font-weight("regular");
     @include stable-padding($spacing-2xs, $spacing-xs);
-    @include text-overflow;
+    // @include text-overflow;
     // width: 100%;
+    overflow: hidden;
     flex: 1;
     height: $button-height-md;
     flex-direction: row;
@@ -60,7 +62,8 @@
     border: none;
     color: inherit;
     text-align: left;
-
+    text-overflow: ellipsis;
+    white-space: nowrap;
     // &:hover:not(:disabled) {
     //   background-color: $ui-01;
     // }
@@ -72,6 +75,7 @@
 
   &__icon {
     vertical-align: middle;
+    flex-shrink: 0;
   }
 
   &__icon + &__text {
@@ -87,6 +91,7 @@
   }
 
   &__text {
+    @include text-overflow;
     @include font-size("14");
     @include line-height("heading");
     vertical-align: middle;
