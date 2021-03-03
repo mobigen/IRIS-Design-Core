@@ -57,7 +57,7 @@
               <div class="form__body">
                 <div class="form__list">
                   <div class="form__item">
-                    <label class="form__label form__label--self-start">
+                    <label class="form__label">
                       <span class="form__label-text">
                         행 번호
                       </span>
@@ -79,7 +79,9 @@
                       </span>
                     </label>
                     <div class="form__detail">
-                      <input type="number" class="text-input" max="100" min="0" step="1" value="3">
+                      <div class="form__detail-inner">
+                        <input type="number" class="text-input" max="100" min="0" step="1" value="3">
+                      </div>
                     </div>
                   </div>
                   <div class="form__item">
@@ -89,15 +91,17 @@
                       </span>
                     </label>
                     <div class="form__detail">
-                      <div class="text-input-wrap">
-                        <input type="number" class="text-input" max="100" min="0" step="1" value="0">
-                        <span class="text-input-wrap__suffix">%</span>
-                      </div>
-                      <div class="notification-message notification-message--info">
-                        <svg class="notification-message__icon svg-icon">
-                          <use xlink:href="#info-fill"></use>
-                        </svg>
-                        <span class="notification-message__text">Notification Message</span>
+                      <div class="form__detail-inner">
+                        <div class="text-input-wrap">
+                          <input type="number" class="text-input" max="100" min="0" step="1" value="0">
+                          <span class="text-input-wrap__suffix">%</span>
+                        </div>
+                        <div class="notification-message notification-message--info">
+                          <svg class="notification-message__icon svg-icon">
+                            <use xlink:href="#info-fill"></use>
+                          </svg>
+                          <span class="notification-message__text">Notification Message</span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -108,20 +112,22 @@
                       </span>
                     </label>
                     <div class="form__detail">
-                      <div class="toggle-button">
-                        <!-- toggle-button__item--selected 클래스 추가시 버튼 활성화 -->
-                        <button class="toggle-button__item toggle-button__item--selected" type="button">
-                          <span class="toggle-button__text">Toggle Button</span>
-                        </button>
-                        <button class="toggle-button__item" type="button">
-                          <span class="toggle-button__text">Toggle Button</span>
-                        </button>
-                        <button class="toggle-button__item" type="button">
-                          <span class="toggle-button__text">Toggle Button</span>
-                        </button>
-                        <button class="toggle-button__item" type="button" disabled="">
-                          <span class="toggle-button__text">Toggle Button</span>
-                        </button>
+                      <div class="form__detail-inner">
+                        <div class="toggle-button">
+                          <!-- toggle-button__item--selected 클래스 추가시 버튼 활성화 -->
+                          <button class="toggle-button__item toggle-button__item--selected" type="button">
+                            <span class="toggle-button__text">Toggle Button</span>
+                          </button>
+                          <button class="toggle-button__item" type="button">
+                            <span class="toggle-button__text">Toggle Button</span>
+                          </button>
+                          <button class="toggle-button__item" type="button">
+                            <span class="toggle-button__text">Toggle Button</span>
+                          </button>
+                          <button class="toggle-button__item" type="button" disabled="">
+                            <span class="toggle-button__text">Toggle Button</span>
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -132,54 +138,8 @@
                       </span>
                     </label>
                     <div class="form__detail">
-                      <input type="text" class="text-input" placeholder="그룹명을 입력해주세요.">
-                    </div>
-                  </div>
-                  <div class="form__item">
-                    <label class="form__label">
-                      <span class="form__label-text">목록 개수</span>
-                    </label>
-                    <div class="form__detail">
-                      <!-- sselect--open 클래스 추가시 드롭다운 리스트 열림 -->
-                      <!-- select가 단독으로 사용되는 경우 w- 클래스를 사용해야 가로 사이즈 조정 가능 -->
-                      <div class="select w-80">
-                        <div class="select-selector">
-                          <button class="select-selector__button" type="button">
-                            <span class="select-selector__title">5</span>
-                            <svg class="svg-icon select-selector__icon">
-                              <use xlink:href="#arrow-down"></use>
-                            </svg>
-                          </button>
-                        </div>
-                        <div class="select-container">
-                          <ul class="select-container__list">
-                            <li class="select-container__item select-container__item--selected">
-                              <button class="select-container__button" type="button">
-                                <span class="select-container__text">5</span>
-                              </button>
-                            </li>
-                            <li class="select-container__item">
-                              <button class="select-container__button" type="button">
-                                <span class="select-container__text">10</span>
-                              </button>
-                            </li>
-                            <li class="select-container__item">
-                              <button class="select-container__button" type="button">
-                                <span class="select-container__text">15</span>
-                              </button>
-                            </li>
-                            <li class="select-container__item">
-                              <button class="select-container__button" type="button">
-                                <span class="select-container__text">20</span>
-                              </button>
-                            </li>
-                            <li class="select-container__item">
-                              <button class="select-container__button" type="button">
-                                <span class="select-container__text">25</span>
-                              </button>
-                            </li>
-                          </ul>
-                        </div>
+                      <div class="form__detail-inner">
+                        <input type="text" class="text-input" placeholder="그룹명을 입력해주세요.">
                       </div>
                     </div>
                   </div>
@@ -188,12 +148,13 @@
                       <span class="form__label-text">목록 개수</span>
                     </label>
                     <div class="form__detail">
-                      <div class="h-group">
+                      <div class="form__detail-inner">
                         <!-- sselect--open 클래스 추가시 드롭다운 리스트 열림 -->
-                        <div class="select">
+                        <!-- select가 단독으로 사용되는 경우 w- 클래스를 사용해야 가로 사이즈 조정 가능 -->
+                        <div class="select w-80">
                           <div class="select-selector">
                             <button class="select-selector__button" type="button">
-                              <span class="select-selector__title">1단계</span>
+                              <span class="select-selector__title">5</span>
                               <svg class="svg-icon select-selector__icon">
                                 <use xlink:href="#arrow-down"></use>
                               </svg>
@@ -203,36 +164,87 @@
                             <ul class="select-container__list">
                               <li class="select-container__item select-container__item--selected">
                                 <button class="select-container__button" type="button">
-                                  <span class="select-container__text">1단계</span>
+                                  <span class="select-container__text">5</span>
                                 </button>
                               </li>
                               <li class="select-container__item">
                                 <button class="select-container__button" type="button">
-                                  <span class="select-container__text">2단계</span>
+                                  <span class="select-container__text">10</span>
                                 </button>
                               </li>
                               <li class="select-container__item">
                                 <button class="select-container__button" type="button">
-                                  <span class="select-container__text">3단계</span>
+                                  <span class="select-container__text">15</span>
                                 </button>
                               </li>
                               <li class="select-container__item">
                                 <button class="select-container__button" type="button">
-                                  <span class="select-container__text">4단계</span>
+                                  <span class="select-container__text">20</span>
                                 </button>
                               </li>
                               <li class="select-container__item">
                                 <button class="select-container__button" type="button">
-                                  <span class="select-container__text">5단계</span>
+                                  <span class="select-container__text">25</span>
                                 </button>
                               </li>
                             </ul>
                           </div>
                         </div>
-                        <span>까지 열림</span>
-                        <div class="checkbox ml-auto">
-                          <input id="formChekcbox-02" type="checkbox" class="checkbox__input" value="label">
-                          <label for="formChekcbox-02" class="checkbox__label">전체 접힘(최상위만)</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form__item">
+                    <label class="form__label">
+                      <span class="form__label-text">목록 개수</span>
+                    </label>
+                    <div class="form__detail">
+                      <div class="form__detail-inner">
+                        <div class="h-group">
+                          <!-- sselect--open 클래스 추가시 드롭다운 리스트 열림 -->
+                          <div class="select">
+                            <div class="select-selector">
+                              <button class="select-selector__button" type="button">
+                                <span class="select-selector__title">1단계</span>
+                                <svg class="svg-icon select-selector__icon">
+                                  <use xlink:href="#arrow-down"></use>
+                                </svg>
+                              </button>
+                            </div>
+                            <div class="select-container">
+                              <ul class="select-container__list">
+                                <li class="select-container__item select-container__item--selected">
+                                  <button class="select-container__button" type="button">
+                                    <span class="select-container__text">1단계</span>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <span class="select-container__text">2단계</span>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <span class="select-container__text">3단계</span>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <span class="select-container__text">4단계</span>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <span class="select-container__text">5단계</span>
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <span>까지 열림</span>
+                          <div class="checkbox ml-auto">
+                            <input id="formChekcbox-02" type="checkbox" class="checkbox__input" value="label">
+                            <label for="formChekcbox-02" class="checkbox__label">전체 접힘(최상위만)</label>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -242,15 +254,19 @@
                       <span class="form__label-text">그룹명</span>
                       <span class="form__label-subtext">(한국어)</span> </label>
                     <div class="form__detail">
-                      <input type="text" class="text-input" placeholder="그룹명을 입력해주세요.">
+                      <div class="form__detail-inner">
+                        <input type="text" class="text-input" placeholder="그룹명을 입력해주세요.">
+                      </div>
                     </div>
                   </div>
                   <div class="form__item">
                     <label class="form__label"> <span class="form__label-text">첫그룹</span> <span class="form__label-subtext">(한국어)</span> </label>
                     <div class="form__detail">
-                      <div class="checkbox">
-                        <input id="formChekcbox-03" type="checkbox" class="checkbox__input" value="label">
-                        <label for="formChekcbox-03" class="checkbox__label">첫 그룹으로 설정</label>
+                      <div class="form__detail-inner">
+                        <div class="checkbox">
+                          <input id="formChekcbox-03" type="checkbox" class="checkbox__input" value="label">
+                          <label for="formChekcbox-03" class="checkbox__label">첫 그룹으로 설정</label>
+                        </div>
                       </div>
                     </div>
                   </div>

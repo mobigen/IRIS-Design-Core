@@ -65,7 +65,7 @@
 
 .side-panel-content-head .button--link {
   padding: 0;
-  margin-left: $spacing-3xs;
+  margin-left: $spacing-2xs;
 }
 
 .side-panel-content-head__title {
@@ -97,7 +97,6 @@
 
   .form__label {
     @include make-col(4);
-    min-width: auto;
   }
 
   .form__label-text {
