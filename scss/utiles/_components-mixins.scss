@@ -49,8 +49,9 @@
     @include button-normal;
     @include font-weight("regular");
     @include stable-padding($spacing-2xs, $spacing-xs);
-    @include text-overflow;
+    // @include text-overflow;
     // width: 100%;
+    overflow: hidden;
     flex: 1;
     height: $button-height-md;
     flex-direction: row;
@@ -60,7 +61,8 @@
     border: none;
     color: inherit;
     text-align: left;
-
+    text-overflow: ellipsis;
+    white-space: nowrap;
     // &:hover:not(:disabled) {
     //   background-color: $ui-01;
     // }
