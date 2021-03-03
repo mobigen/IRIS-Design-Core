@@ -76,9 +76,13 @@
     padding: $spacing-sm 0 $spacing-xs;
   }
 
+  .form__label {
+    height: rem(40px);
+  }
+
   .form__label,
   .form__text {
-    font-size: 15px;
+    font-size: rem(15px);
   }
 }
 
