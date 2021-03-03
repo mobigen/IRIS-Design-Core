@@ -1,14 +1,15 @@
 .form__head-title {
-  @include font-size('16');
-  @include font-weight('medium');
+  @include font-size("16");
+  @include font-weight("medium");
   display: block;
 }
 
-.form__body {
+.form__head + .form__body {
   margin-top: $spacing-md;
 }
 
 .form__item {
+  @include line-height("heading");
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -17,16 +18,16 @@
 }
 
 .form__label {
+  @include make-col(4);
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  min-width: rem(160px);
 }
 
 .form__label-text {
   @include text-overflow();
-  @include font-weight('medium');
+  @include font-weight("medium");
   padding-right: $spacing-2xs;
   color: $text-02;
 }
@@ -34,12 +35,19 @@
 .form__label-subtext {
   @include font-size("12");
   @include line-height("heading");
+  @include text-overflow;
   padding-right: $spacing-2xs;
   color: $text-03;
 }
 
+.form__label--self-start {
+  align-self: flex-start;
+  padding-top: $spacing-2xs;
+}
+
 .form__detail {
   flex: 1;
+  line-height: rem(32px);
 }
 
 .form__foot {
@@ -53,7 +61,7 @@
   display: flex;
   align-items: center;
 
-  .button+.button {
+  .button + .button {
     margin-left: $spacing-xs;
   }
 }
@@ -63,7 +71,7 @@
 // -------------------------
 .form--lg {
   .form__head-title {
-    @include font-size('20');
+    @include font-size("20");
   }
 
   .form__item {
@@ -80,13 +88,12 @@
 // form--vertical
 // -------------------------
 .form--vertical {
-
   .form__item {
     flex-direction: column;
     align-items: flex-start;
     padding: $spacing-sm 0;
 
-    .form__detail-item+.form__detail-item {
+    .form__detail-item + .form__detail-item {
       margin-top: $spacing-sm;
     }
   }
@@ -96,7 +103,6 @@
     padding: 0;
     font-size: 15px;
   }
-
 
   .form__label-subtext {
     margin-left: auto;
@@ -110,5 +116,33 @@
   .form__detail-textarea {
     height: 120px;
   }
+}
 
+// -------------------------
+// form in modal/tab overwrite
+// -------------------------
+
+.modal .form__item {
+  padding: $spacing-sm / 2 0;
+}
+
+.modal .form__label-text {
+  @include font-weight("regular");
+}
+
+.modal .form__label {
+  @include make-col(2);
+}
+
+.modal .form--vertical .form__label {
+  width: 100%;
+}
+
+.modal .form--vertical .form__detail {
+  @include line-height("body");
+  margin-top: $spacing-2xs;
+}
+
+.modal .form--complex .text-input {
+  width: auto;
 }
