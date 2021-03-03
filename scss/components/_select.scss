@@ -110,8 +110,8 @@
   @include svg-icon-size(20px);
   position: absolute;
   top: 50%;
-  margin-top: -10px;
-  right: $spacing-sm;
+  margin-top: - rem(10px);
+  right: $spacing-xs;
   transform: none;
 }
 
@@ -153,6 +153,7 @@
 
     .select-container__icon {
       @include svg-icon-size(20px);
+      right: $spacing-sm;
     }
   }
 }
