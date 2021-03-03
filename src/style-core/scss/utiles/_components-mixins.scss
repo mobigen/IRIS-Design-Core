@@ -46,10 +46,10 @@
   }
 
   &__button {
+    @include text-overflow;
     @include button-normal;
     @include font-weight("regular");
     @include stable-padding($spacing-2xs, $spacing-xs);
-    @include text-overflow;
     // width: 100%;
     flex: 1;
     height: $button-height-md;
