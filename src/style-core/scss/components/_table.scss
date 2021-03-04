@@ -1,20 +1,21 @@
-.table table {
+.table {
   width: 100%;
   border: 1px solid $ui-04;
 }
 
-.table caption {
-  @include font-weight('light');
-  @include font-size('12');
-  margin-bottom: $spacing-xs;
-  color: $text-03;
-  text-align: left;
-}
+// 캡션을 미사용해서 일단 주석 처리
+// .table caption {
+//   @include font-weight("light");
+//   @include font-size("12");
+//   margin-bottom: $spacing-xs;
+//   color: $text-03;
+//   text-align: left;
+// }
 
 .table th,
 .table td {
-  @include font-weight('regular');
-  @include font-size('14');
+  @include font-weight("regular");
+  @include font-size("14");
   height: $button-height-lg;
   padding: $spacing-xs $spacing-xs;
   color: $text-02;
@@ -37,7 +38,7 @@
   justify-content: center;
 }
 
-.table__action-buttons .button+.button {
+.table__action-buttons .button + .button {
   margin-left: $spacing-2xs;
 }
 
@@ -85,9 +86,9 @@
   background-color: $hover-row;
 }
 
-.table--secondary th+th {
+.table--secondary th + th {
   &:after {
-    content: '';
+    content: "";
     width: rem(1px);
     height: rem(14px);
     background-color: $ui-04;
@@ -116,7 +117,7 @@
 // -------------------------
 // Status
 // -------------------------
-.table tr:hover>td {
+.table tr:hover > td {
   background: $hover-row;
 }
 
@@ -124,10 +125,6 @@
 .table .tr--selected:hover td {
   background-color: $ui-01 !important;
   color: $active-primary !important;
-}
-
-.table .td--spacing-sm {
-  padding: $spacing-3xs $spacing-2xs;
 }
 
 // -------------------------
@@ -173,6 +170,12 @@
   height: $button-height-md;
 }
 
+
+.table.td--gap-sm td {
+  padding: $spacing-3xs $spacing-2xs;
+}
+
+
 // -------------------------
 // table complexe type
 // -------------------------
@@ -190,4 +193,12 @@
   display: flex;
   align-items: center;
   margin-left: auto;
+}
+
+.table__toolbar-title {
+  @include text-overflow();
+  @include font-weight("regular");
+  @include font-size("13");
+  @include line-height("heading");
+  color: $text-02;
 }
