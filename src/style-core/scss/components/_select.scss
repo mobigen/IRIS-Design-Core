@@ -8,7 +8,8 @@
 }
 
 .select--open {
-  .select-selector__button {
+  .select-selector__button,
+  .select-selector__input {
     border-color: $secondary;
     box-shadow: 0px 0px 4px rgba(77, 174, 255, 0.4);
 

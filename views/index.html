@@ -7108,7 +7108,7 @@
             <div class="component-examle__item-group">
               <div class="select select--sm select--open" style="min-width: 160px; max-width: 230px;">
                 <div class="select-selector">
-                  <input type="text" class="text-input select-selector__input" placeholder="placeholder text"
+                  <input type="text" class="text-input text-input--sm select-selector__input" placeholder="placeholder text"
                     value="일치 단어">
                   <svg class="svg-icon select-selector__icon">
                     <use xlink:href="#arrow-down"></use>
@@ -7548,393 +7548,377 @@
       <div class="component-example__live">
         <div>
           <div class="component-example__row">
-            <p class="component-example__size-label">Size: sm</p>
+            <p class="component-example__size-label">Size: md</p>
             <div class="component-examle__item-group">
-              <div class="table table--secondary table--sm">
-                <table>
-                  <colgroup>
-                    <col width="90" />
-                    <col width="90" />
-                  </colgroup>
-                  <thead>
-                    <tr>
-                      <th>변수명</th>
-                      <th>변수값</th>
-                      <th>추가/삭제</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <!-- 간격 좁은 경우, td--spacing-sm 클래스 추가 -->
-                      <td class="td--spacing-sm">
-                        <input type="text" class="text-input text-input--sm" placeholder="canvas_1">
-                      </td>
-                      <!-- 간격 좁은 경우, td--spacing-sm 클래스 추가 -->
-                      <td class="td--spacing-sm">
-                        <input type="text" class="text-input text-input--sm" placeholder="">
-                      </td>
-                      <!-- 간격 좁은 경우, td--spacing-sm 클래스 추가 -->
-                      <td class="td--spacing-sm">
-                        <div class="table__action-buttons">
-                          <button class="button button--icon button--support button--sm" type="button">
-                            <svg class="svg-icon">
-                              <use xlink:href="#add"></use>
-                            </svg>
-                          </button>
-                          <button class="button button--icon button--danger button--sm" type="button">
-                            <svg class="svg-icon">
-                              <use xlink:href="#minus"></use>
-                            </svg>
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <!-- 간격 좁은 경우, td--spacing-sm 클래스 추가 -->
-                      <td class="td--spacing-sm">
-                        <input type="text" class="text-input text-input--sm" placeholder="canvas_1">
-                      </td>
-                      <!-- 간격 좁은 경우, td--spacing-sm 클래스 추가 -->
-                      <td class="td--spacing-sm">
-                        <input type="text" class="text-input text-input--sm" placeholder="">
-                      </td>
-                      <!-- 간격 좁은 경우, td--spacing-sm 클래스 추가 -->
-                      <td class="td--spacing-sm">
-                        <div class="table__action-buttons">
-                          <button class="button button--icon button--support button--sm" type="button">
-                            <svg class="svg-icon">
-                              <use xlink:href="#add"></use>
-                            </svg>
-                          </button>
-                          <button class="button button--icon button--danger button--sm" type="button">
-                            <svg class="svg-icon">
-                              <use xlink:href="#minus"></use>
-                            </svg>
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="table table--secondary table--sm">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>대상 오브젝트 ID</th>
-                      <th>이벤트</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td colspan="2">
-                        <div class="notification-message notification-message--info">
-                          <svg class="notification-message__icon svg-icon">
-                            <use xlink:href="#info-fill"></use>
-                          </svg>
-                          <span class="notification-message__text">데이터가 없습니다.</span>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <span class="table__icon">
+              <table class="table table--secondary td--gap-sm">
+                <colgroup>
+                  <col width="90" />
+                  <col width="90" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>변수명</th>
+                    <th>변수값</th>
+                    <th>추가/삭제</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <!-- 간격 좁은 경우, td--spacing-sm 클래스 추가 -->
+                    <td class="td--spacing-sm">
+                      <input type="text" class="text-input" placeholder="canvas_1">
+                    </td>
+                    <!-- 간격 좁은 경우, td--spacing-sm 클래스 추가 -->
+                    <td class="td--spacing-sm">
+                      <input type="text" class="text-input" placeholder="">
+                    </td>
+                    <!-- 간격 좁은 경우, td--spacing-sm 클래스 추가 -->
+                    <td class="td--spacing-sm">
+                      <div class="table__action-buttons">
+                        <button class="button button--icon button--support" type="button">
                           <svg class="svg-icon">
-                            <use xlink:href="#write"></use>
+                            <use xlink:href="#add"></use>
                           </svg>
-                        </span>
-                        <span class="table__subtext">Button-5</span>
-                      </td>
-                      <td>
-                        <div class="table__action-buttons">
-                          <button class="button button--icon button--link button--sm" type="button">
-                            <svg class="svg-icon">
-                              <use xlink:href="#return"></use>
-                            </svg>
-                          </button>
-                          <button class="button button--icon button--link button--sm" type="button">
-                            <svg class="svg-icon">
-                              <use xlink:href="#unlink"></use>
-                            </svg>
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <span class="table__icon">
+                        </button>
+                        <button class="button button--icon button--danger" type="button">
                           <svg class="svg-icon">
-                            <use xlink:href="#write"></use>
+                            <use xlink:href="#minus"></use>
                           </svg>
-                        </span>
-                        <span class="table__subtext">Button 5</span>
-                      </td>
-                      <td>
-                        Data
-                        <br />
-                        Received
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="table table--secondary table--sm">
-                <table>
-                  <colgroup>
-                    <col width="160" />
-                  </colgroup>
-                  <thead>
-                    <tr>
-                      <th>이름</th>
-                      <th>구분</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>히트맵</td>
-                      <td>고급 시각화</td>
-                    </tr>
-                    <tr>
-                      <td>미인증사용자_중복시간과멤버예시</td>
-                      <td>검색</td>
-                    </tr>
-                    <tr>
-                      <td>철도청_예측_pi_pm_5m</td>
-                      <td>피벗</td>
-                    </tr>
-                    <tr>
-                      <td>test_timediff</td>
-                      <td>고급 시각화</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="table table--secondary table--horizontal table--sm">
-                <table>
-                  <caption>* 제목 / 내용 수평일 경우 (table--horizontal) </caption>
-                  <tbody>
-                    <tr>
-                      <th>행 번호</th>
-                      <td>
-                        <span class="table__icon">
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <!-- 간격 좁은 경우, td--spacing-sm 클래스 추가 -->
+                    <td class="td--spacing-sm">
+                      <input type="text" class="text-input" placeholder="canvas_1">
+                    </td>
+                    <!-- 간격 좁은 경우, td--spacing-sm 클래스 추가 -->
+                    <td class="td--spacing-sm">
+                      <input type="text" class="text-input" placeholder="">
+                    </td>
+                    <!-- 간격 좁은 경우, td--spacing-sm 클래스 추가 -->
+                    <td class="td--spacing-sm">
+                      <div class="table__action-buttons">
+                        <button class="button button--icon button--support" type="button">
                           <svg class="svg-icon">
-                            <use xlink:href="#write"></use>
+                            <use xlink:href="#add"></use>
                           </svg>
-                        </span>
-                        미표시
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>미리설정</th>
-                      <td>
-                        <div class="checkbox">
-                          <input id="tableCheck01" type="checkbox" class="checkbox__input" value="label">
-                          <label for="tableCheck01" class="checkbox__label">그림자 없음</label>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>상세보기 버튼</th>
-                      <td>미표시미표시미표시</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+                        </button>
+                        <button class="button button--icon button--danger" type="button">
+                          <svg class="svg-icon">
+                            <use xlink:href="#minus"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table--secondary">
+                <thead>
+                  <tr>
+                    <th>대상 오브젝트 ID</th>
+                    <th>이벤트</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td colspan="2">
+                      <div class="notification-message notification-message--info">
+                        <svg class="notification-message__icon svg-icon">
+                          <use xlink:href="#info-fill"></use>
+                        </svg>
+                        <span class="notification-message__text">데이터가 없습니다.</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="table__icon">
+                        <svg class="svg-icon">
+                          <use xlink:href="#write"></use>
+                        </svg>
+                      </span>
+                      <span class="table__subtext">Button-5</span>
+                    </td>
+                    <td>
+                      <div class="table__action-buttons">
+                        <button class="button button--icon button--link" type="button">
+                          <svg class="svg-icon">
+                            <use xlink:href="#return"></use>
+                          </svg>
+                        </button>
+                        <button class="button button--icon button--link" type="button">
+                          <svg class="svg-icon">
+                            <use xlink:href="#unlink"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="table__icon">
+                        <svg class="svg-icon">
+                          <use xlink:href="#write"></use>
+                        </svg>
+                      </span>
+                      <span class="table__subtext">Button 5</span>
+                    </td>
+                    <td>
+                      Data
+                      <br />
+                      Received
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table--secondary">
+                <colgroup>
+                  <col width="160" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>이름</th>
+                    <th>구분</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>히트맵</td>
+                    <td>고급 시각화</td>
+                  </tr>
+                  <tr>
+                    <td>미인증사용자_중복시간과멤버예시_미인증사용자_중복시간과멤버예시</td>
+                    <td>검색</td>
+                  </tr>
+                  <tr>
+                    <td>철도청_예측_pi_pm_5m</td>
+                    <td>피벗</td>
+                  </tr>
+                  <tr>
+                    <td>test_timediff</td>
+                    <td>고급 시각화</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table--secondary table--horizontal">
+                <caption>* 제목 / 내용 수평일 경우 (table--horizontal) </caption>
+                <tbody>
+                  <tr>
+                    <th>행 번호</th>
+                    <td>
+                      <span class="table__icon">
+                        <svg class="svg-icon">
+                          <use xlink:href="#write"></use>
+                        </svg>
+                      </span>
+                      미표시
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>미리설정</th>
+                    <td>
+                      <div class="checkbox">
+                        <input id="tableCheck02" type="checkbox" class="checkbox__input" value="label">
+                        <label for="tableCheck02" class="checkbox__label">그림자 없음</label>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>상세보기 버튼</th>
+                    <td>미표시미표시미표시</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
           <div class="component-example__row">
-            <p class="component-example__size-label">Size: md</p>
+            <p class="component-example__size-label">Size: sm</p>
             <div class="component-examle__item-group">
-              <div class="table table--secondary">
-                <table>
-                  <colgroup>
-                    <col width="90" />
-                    <col width="90" />
-                  </colgroup>
-                  <thead>
-                    <tr>
-                      <th>변수명</th>
-                      <th>변수값</th>
-                      <th>추가/삭제</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <!-- 간격 좁은 경우, td--spacing-sm 클래스 추가 -->
-                      <td class="td--spacing-sm">
-                        <input type="text" class="text-input" placeholder="canvas_1">
-                      </td>
-                      <!-- 간격 좁은 경우, td--spacing-sm 클래스 추가 -->
-                      <td class="td--spacing-sm">
-                        <input type="text" class="text-input" placeholder="">
-                      </td>
-                      <!-- 간격 좁은 경우, td--spacing-sm 클래스 추가 -->
-                      <td class="td--spacing-sm">
-                        <div class="table__action-buttons">
-                          <button class="button button--icon button--support" type="button">
-                            <svg class="svg-icon">
-                              <use xlink:href="#add"></use>
-                            </svg>
-                          </button>
-                          <button class="button button--icon button--danger" type="button">
-                            <svg class="svg-icon">
-                              <use xlink:href="#minus"></use>
-                            </svg>
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <!-- 간격 좁은 경우, td--spacing-sm 클래스 추가 -->
-                      <td class="td--spacing-sm">
-                        <input type="text" class="text-input" placeholder="canvas_1">
-                      </td>
-                      <!-- 간격 좁은 경우, td--spacing-sm 클래스 추가 -->
-                      <td class="td--spacing-sm">
-                        <input type="text" class="text-input" placeholder="">
-                      </td>
-                      <!-- 간격 좁은 경우, td--spacing-sm 클래스 추가 -->
-                      <td class="td--spacing-sm">
-                        <div class="table__action-buttons">
-                          <button class="button button--icon button--support" type="button">
-                            <svg class="svg-icon">
-                              <use xlink:href="#add"></use>
-                            </svg>
-                          </button>
-                          <button class="button button--icon button--danger" type="button">
-                            <svg class="svg-icon">
-                              <use xlink:href="#minus"></use>
-                            </svg>
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="table table--secondary">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>대상 오브젝트 ID</th>
-                      <th>이벤트</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td colspan="2">
-                        <div class="notification-message notification-message--info">
-                          <svg class="notification-message__icon svg-icon">
-                            <use xlink:href="#info-fill"></use>
-                          </svg>
-                          <span class="notification-message__text">데이터가 없습니다.</span>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <span class="table__icon">
+              <table class="table table--secondary table--sm td--gap-sm">
+                <colgroup>
+                  <col width="90" />
+                  <col width="90" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>변수명</th>
+                    <th>변수값</th>
+                    <th>추가/삭제</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <!-- 간격 좁은 경우, td--spacing-sm 클래스 추가 -->
+                    <td class="td--spacing-sm">
+                      <input type="text" class="text-input text-input--sm" placeholder="canvas_1">
+                    </td>
+                    <!-- 간격 좁은 경우, td--spacing-sm 클래스 추가 -->
+                    <td class="td--spacing-sm">
+                      <input type="text" class="text-input text-input--sm" placeholder="">
+                    </td>
+                    <!-- 간격 좁은 경우, td--spacing-sm 클래스 추가 -->
+                    <td class="td--spacing-sm">
+                      <div class="table__action-buttons">
+                        <button class="button button--icon button--support button--sm" type="button">
                           <svg class="svg-icon">
-                            <use xlink:href="#write"></use>
+                            <use xlink:href="#add"></use>
                           </svg>
-                        </span>
-                        <span class="table__subtext">Button-5</span>
-                      </td>
-                      <td>
-                        <div class="table__action-buttons">
-                          <button class="button button--icon button--link" type="button">
-                            <svg class="svg-icon">
-                              <use xlink:href="#return"></use>
-                            </svg>
-                          </button>
-                          <button class="button button--icon button--link" type="button">
-                            <svg class="svg-icon">
-                              <use xlink:href="#unlink"></use>
-                            </svg>
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <span class="table__icon">
+                        </button>
+                        <button class="button button--icon button--danger button--sm" type="button">
                           <svg class="svg-icon">
-                            <use xlink:href="#write"></use>
+                            <use xlink:href="#minus"></use>
                           </svg>
-                        </span>
-                        <span class="table__subtext">Button 5</span>
-                      </td>
-                      <td>
-                        Data
-                        <br />
-                        Received
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="table table--secondary">
-                <table>
-                  <colgroup>
-                    <col width="160" />
-                  </colgroup>
-                  <thead>
-                    <tr>
-                      <th>이름</th>
-                      <th>구분</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>히트맵</td>
-                      <td>고급 시각화</td>
-                    </tr>
-                    <tr>
-                      <td>미인증사용자_중복시간과멤버예시_미인증사용자_중복시간과멤버예시</td>
-                      <td>검색</td>
-                    </tr>
-                    <tr>
-                      <td>철도청_예측_pi_pm_5m</td>
-                      <td>피벗</td>
-                    </tr>
-                    <tr>
-                      <td>test_timediff</td>
-                      <td>고급 시각화</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="table table--secondary table--horizontal">
-                <table>
-                  <caption>* 제목 / 내용 수평일 경우 (table--horizontal) </caption>
-                  <tbody>
-                    <tr>
-                      <th>행 번호</th>
-                      <td>
-                        <span class="table__icon">
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <!-- 간격 좁은 경우, td--spacing-sm 클래스 추가 -->
+                    <td class="td--spacing-sm">
+                      <input type="text" class="text-input text-input--sm" placeholder="canvas_1">
+                    </td>
+                    <!-- 간격 좁은 경우, td--spacing-sm 클래스 추가 -->
+                    <td class="td--spacing-sm">
+                      <input type="text" class="text-input text-input--sm" placeholder="">
+                    </td>
+                    <!-- 간격 좁은 경우, td--spacing-sm 클래스 추가 -->
+                    <td class="td--spacing-sm">
+                      <div class="table__action-buttons">
+                        <button class="button button--icon button--support button--sm" type="button">
                           <svg class="svg-icon">
-                            <use xlink:href="#write"></use>
+                            <use xlink:href="#add"></use>
                           </svg>
-                        </span>
-                        미표시
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>미리설정</th>
-                      <td>
-                        <div class="checkbox">
-                          <input id="tableCheck02" type="checkbox" class="checkbox__input" value="label">
-                          <label for="tableCheck02" class="checkbox__label">그림자 없음</label>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>상세보기 버튼</th>
-                      <td>미표시미표시미표시</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+                        </button>
+                        <button class="button button--icon button--danger button--sm" type="button">
+                          <svg class="svg-icon">
+                            <use xlink:href="#minus"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table--secondary table--sm">
+                <thead>
+                  <tr>
+                    <th>대상 오브젝트 ID</th>
+                    <th>이벤트</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td colspan="2">
+                      <div class="notification-message notification-message--info">
+                        <svg class="notification-message__icon svg-icon">
+                          <use xlink:href="#info-fill"></use>
+                        </svg>
+                        <span class="notification-message__text">데이터가 없습니다.</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="table__icon">
+                        <svg class="svg-icon">
+                          <use xlink:href="#write"></use>
+                        </svg>
+                      </span>
+                      <span class="table__subtext">Button-5</span>
+                    </td>
+                    <td>
+                      <div class="table__action-buttons">
+                        <button class="button button--icon button--link button--sm" type="button">
+                          <svg class="svg-icon">
+                            <use xlink:href="#return"></use>
+                          </svg>
+                        </button>
+                        <button class="button button--icon button--link button--sm" type="button">
+                          <svg class="svg-icon">
+                            <use xlink:href="#unlink"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="table__icon">
+                        <svg class="svg-icon">
+                          <use xlink:href="#write"></use>
+                        </svg>
+                      </span>
+                      <span class="table__subtext">Button 5</span>
+                    </td>
+                    <td>
+                      Data
+                      <br />
+                      Received
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table--secondary table--sm">
+                <colgroup>
+                  <col width="160" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>이름</th>
+                    <th>구분</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>히트맵</td>
+                    <td>고급 시각화</td>
+                  </tr>
+                  <tr>
+                    <td>미인증사용자_중복시간과멤버예시</td>
+                    <td>검색</td>
+                  </tr>
+                  <tr>
+                    <td>철도청_예측_pi_pm_5m</td>
+                    <td>피벗</td>
+                  </tr>
+                  <tr>
+                    <td>test_timediff</td>
+                    <td>고급 시각화</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table--secondary table--horizontal table--sm">
+                <caption>* 제목 / 내용 수평일 경우 (table--horizontal) </caption>
+                <tbody>
+                  <tr>
+                    <th>행 번호</th>
+                    <td>
+                      <span class="table__icon">
+                        <svg class="svg-icon">
+                          <use xlink:href="#write"></use>
+                        </svg>
+                      </span>
+                      미표시
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>미리설정</th>
+                    <td>
+                      <div class="checkbox">
+                        <input id="tableCheck01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="tableCheck01" class="checkbox__label">그림자 없음</label>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>상세보기 버튼</th>
+                    <td>미표시미표시미표시</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
