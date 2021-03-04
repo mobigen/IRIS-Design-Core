@@ -1,15 +1,16 @@
-.table table {
+.table {
   width: 100%;
   border: 1px solid $ui-04;
 }
 
-.table caption {
-  @include font-weight("light");
-  @include font-size("12");
-  margin-bottom: $spacing-xs;
-  color: $text-03;
-  text-align: left;
-}
+// 캡션을 미사용해서 일단 주석 처리
+// .table caption {
+//   @include font-weight("light");
+//   @include font-size("12");
+//   margin-bottom: $spacing-xs;
+//   color: $text-03;
+//   text-align: left;
+// }
 
 .table th,
 .table td {
@@ -126,10 +127,6 @@
   color: $active-primary !important;
 }
 
-.table .td--spacing-sm {
-  padding: $spacing-3xs $spacing-2xs;
-}
-
 // -------------------------
 // Table overwrite
 // -------------------------
@@ -172,6 +169,12 @@
 .table.table--sm td {
   height: $button-height-md;
 }
+
+
+.table.td--gap-sm td {
+  padding: $spacing-3xs $spacing-2xs;
+}
+
 
 // -------------------------
 // table complexe type
