@@ -1,0 +1,31 @@
+.sp-replacer {
+  padding: $spacing-2xs;
+  border-radius: $field-border-radius;
+  border-color: $ui-04;
+  background-color: $ui-02;
+}
+
+.sp-replacer:hover {
+  border-color: $secondary;
+}
+
+.sp-replacer.sp-active {
+  border-color: $secondary;
+  box-shadow: 0 0 4px rgba($secondary, 0.65);
+}
+
+.sp-palette .sp-thumb-el:hover,
+.sp-palette .sp-thumb-el.sp-thumb-active {
+  border-color: $primary;
+}
+
+.sp-container {
+  border-color: $ui-04;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.sp-preview {
+  width: rem(30px);
+  height: rem(22px);
+  border-color: $ui-04;
+}

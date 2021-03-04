@@ -4,15 +4,16 @@
   position: relative;
 }
 
-.side-panel-head {
-  position: relative;
+.side-panel-tab {
+  height: 100%;
 }
 
-.side-panel-head__tab {
+.side-panel-tab__head {
+  position: relative;
   background-color: $ui-04;
 }
 
-.side-panel-body {
+.side-panel-tab__body {
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -20,6 +21,13 @@
   overflow: auto;
   padding: $layout-3xs / 2 $layout-3xs $layout-2xs;
   letter-spacing: -0.3px;
+}
+
+// tab의 content가 뜨는 영역을 한번 그룹핑하는 block.
+.side-panel-tab__contents {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
 }
 
 .side-panel::before,
@@ -34,7 +42,7 @@
 }
 
 .side-panel::before {
-  top: 41px; // side-panel-head의 높이
+  top: 41px; // side-panel__head의 높이
   background-image: linear-gradient(
     0deg,
     rgba($ui-01, 0) 0,
@@ -57,18 +65,18 @@
   padding: $layout-2xs 0;
 }
 
-.side-panel-content-head {
+.side-panel-content__head {
   display: flex;
   align-items: center;
   margin-bottom: $spacing-2xs;
 }
 
-.side-panel-content-head .button--link {
+.side-panel-content__head .button--link {
   padding: 0;
   margin-left: $spacing-2xs;
 }
 
-.side-panel-content-head__title {
+.side-panel-content__head-title {
   @include text-overflow;
   @include font-weight("medium");
   @include line-height("heading");
@@ -76,20 +84,20 @@
   color: $text-02;
 }
 
-.side-panel-content-body {
+.side-panel-content__body {
 }
 
-.side-panel-content-body .row {
+.side-panel-content__body .row {
   margin-bottom: $spacing-2xs;
   width: 100%;
 }
 
-.side-panel-content-body .h-group {
+.side-panel-content__body .h-group {
   width: 100%;
 }
 
 // side-panel 내 요소 재선언
-.side-panel-body {
+.side-panel-tab__body {
   .form__item {
     padding: $spacing-3xs 0;
     min-height: rem(32px);
@@ -130,4 +138,8 @@
       margin-bottom: $spacing-2xs;
     }
   }
+}
+
+.side-panel--hide .side-panel {
+  display: none;
 }
