@@ -10,6 +10,14 @@
   margin-right: $spacing-xs;
 }
 
+.radios--vertical {
+  flex-direction: column;
+}
+
+.radios .radio:not(:last-of-type) {
+  margin-right: 0;
+}
+
 .radio__input {
   @include hidden;
 }

@@ -42,6 +42,28 @@
   margin-left: $spacing-2xs;
 }
 
+.table--action-buttons-hidable .table--action-buttons {
+  display: none;
+}
+
+.table--action-buttons-hidable tr:hover .table__action-buttons {
+  display: flex;
+}
+
+.table--action-buttons-hidable td {
+  position: relative;
+}
+
+.table--action-buttons-hidable .table__action-buttons {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  background-color: $hover-row;
+}
+
 .table__icon {
   display: inline-block;
   height: 20px;
@@ -175,7 +197,6 @@
   padding: $spacing-3xs $spacing-2xs;
 }
 
-
 // -------------------------
 // table complexe type
 // -------------------------
@@ -201,4 +222,20 @@
   @include font-size("13");
   @include line-height("heading");
   color: $text-02;
+}
+
+// -------------------------
+// table scroll
+// -------------------------
+.table-scroll {
+  height: 100%;
+  border: 1px solid $ui-04;
+}
+
+.table-scroll .table {
+  border: 0;
+}
+
+.table-scroll thead {
+  border-bottom: 1px solid $ui-04;
 }
