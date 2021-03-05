@@ -8,7 +8,7 @@
   <p class="page__desc">테이블</p>
   <div class="page__usage md">
     <ul>
-      <li>테이블은</li>
+      <li>테이블은!!!</li>
     </ul>
   </div>
 
@@ -18,84 +18,80 @@
       <div class="component-example__live">
         <div>
           <div class="component-example__row">
-            <p class="component-example__size-label">Size: sm</p>
-            <div class="component-examle__item-group">
-              <!-- table-primary -->
-              <div class="table table--primary table--sm">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>오브젝트 ID</th>
-                      <th>변수 명</th>
-                      <th>변수 값</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <!-- 선택 되었을 경우, tr--selected 클래스 추가-->
-                    <tr class="tr--selected">
-                      <td>Selected Status</td>
-                      <td>USER_ID</td>
-                      <td>Root</td>
-                    </tr>
-                    <tr>
-                      <td>GLOBAL</td>
-                      <td>USER_ID</td>
-                      <td>Root</td>
-                    </tr>
-                    <!-- Drawer 마크업과 스타일링 UI 추가 시작  -->
-                    <tr>
-                      <td>GLOBAL</td>
-                      <td>USER_ID</td>
-                      <td>Root</td>
-                    </tr>
-                    <tr>
-                      <td>GLOBAL</td>
-                      <td>USER_ID</td>
-                      <td>Root</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-          <div class="component-example__row">
             <p class="component-example__size-label">Size: md</p>
             <div class="component-examle__item-group">
               <!-- table-primary -->
-              <div class="table table--primary">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>오브젝트 ID</th>
-                      <th>변수 명</th>
-                      <th>변수 값</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <!-- 선택 되었을 경우, tr--selected 클래스 추가-->
-                    <tr class="tr--selected">
-                      <td>Selected Status</td>
-                      <td>USER_ID</td>
-                      <td>Root</td>
-                    </tr>
-                    <tr>
-                      <td>GLOBAL</td>
-                      <td>USER_ID</td>
-                      <td>Root</td>
-                    </tr>
-                    <tr>
-                      <td>GLOBAL</td>
-                      <td>USER_ID</td>
-                      <td>Root</td>
-                    </tr>
-                    <tr>
-                      <td>GLOBAL</td>
-                      <td>USER_ID</td>
-                      <td>Root</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+              <table class="table table--primary">
+                <thead>
+                  <tr>
+                    <th>오브젝트 ID</th>
+                    <th>변수 명</th>
+                    <th>변수 값</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- 선택 되었을 경우, tr--selected 클래스 추가-->
+                  <tr class="tr--selected">
+                    <td>Selected Status</td>
+                    <td>USER_ID</td>
+                    <td>Root</td>
+                  </tr>
+                  <tr>
+                    <td>GLOBAL</td>
+                    <td>USER_ID</td>
+                    <td>Root</td>
+                  </tr>
+                  <tr>
+                    <td>GLOBAL</td>
+                    <td>USER_ID</td>
+                    <td>Root</td>
+                  </tr>
+                  <tr>
+                    <td>GLOBAL</td>
+                    <td>USER_ID</td>
+                    <td>Root</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: sm</p>
+            <div class="component-examle__item-group">
+              <!-- table-primary -->
+              <table class="table table--primary table--sm">
+                <thead>
+                  <tr>
+                    <th>오브젝트 ID</th>
+                    <th>변수 명</th>
+                    <th>변수 값</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- 선택 되었을 경우, tr--selected 클래스 추가-->
+                  <tr class="tr--selected">
+                    <td>Selected Status</td>
+                    <td>USER_ID</td>
+                    <td>Root</td>
+                  </tr>
+                  <tr>
+                    <td>GLOBAL</td>
+                    <td>USER_ID</td>
+                    <td>Root</td>
+                  </tr>
+                  <!-- Drawer 마크업과 스타일링 UI 추가 시작  -->
+                  <tr>
+                    <td>GLOBAL</td>
+                    <td>USER_ID</td>
+                    <td>Root</td>
+                  </tr>
+                  <tr>
+                    <td>GLOBAL</td>
+                    <td>USER_ID</td>
+                    <td>Root</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
@@ -176,7 +172,8 @@
                   </tr>
                 </tbody>
               </table>
-              <table class="table table--secondary">
+              <table class="table table--secondary table--action-buttons-hidable">
+                <caption>* action-buttons가 show/hide 하는 유형</caption>
                 <thead>
                   <tr>
                     <th>대상 오브젝트 ID</th>
@@ -204,6 +201,7 @@
                       <span class="table__subtext">Button-5</span>
                     </td>
                     <td>
+                      원래 있던 텍스트
                       <div class="table__action-buttons">
                         <button class="button button--icon button--link" type="button">
                           <svg class="svg-icon">
@@ -231,6 +229,18 @@
                       Data
                       <br />
                       Received
+                      <div class="table__action-buttons">
+                        <button class="button button--icon button--link" type="button">
+                          <svg class="svg-icon">
+                            <use xlink:href="#return"></use>
+                          </svg>
+                        </button>
+                        <button class="button button--icon button--link" type="button">
+                          <svg class="svg-icon">
+                            <use xlink:href="#unlink"></use>
+                          </svg>
+                        </button>
+                      </div>
                     </td>
                   </tr>
                 </tbody>
@@ -363,7 +373,8 @@
                   </tr>
                 </tbody>
               </table>
-              <table class="table table--secondary table--sm">
+              <table class="table table--secondary table--sm table--action-buttons-hidable">
+                <caption>* action-buttons가 show/hide 하는 유형</caption>
                 <thead>
                   <tr>
                     <th>대상 오브젝트 ID</th>
@@ -391,6 +402,7 @@
                       <span class="table__subtext">Button-5</span>
                     </td>
                     <td>
+                      원래 텍스트
                       <div class="table__action-buttons">
                         <button class="button button--icon button--link button--sm" type="button">
                           <svg class="svg-icon">
@@ -418,6 +430,18 @@
                       Data
                       <br />
                       Received
+                      <div class="table__action-buttons">
+                        <button class="button button--icon button--link" type="button">
+                          <svg class="svg-icon">
+                            <use xlink:href="#return"></use>
+                          </svg>
+                        </button>
+                        <button class="button button--icon button--link" type="button">
+                          <svg class="svg-icon">
+                            <use xlink:href="#unlink"></use>
+                          </svg>
+                        </button>
+                      </div>
                     </td>
                   </tr>
                 </tbody>
@@ -477,6 +501,56 @@
                   <tr>
                     <th>상세보기 버튼</th>
                     <td>미표시미표시미표시</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Table Scroll</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <div class="table-scroll">
+            <table class="table table--primary">
+              <thead>
+                <tr>
+                  <th>오브젝트 ID</th>
+                  <th>변수 명</th>
+                  <th>변수 값</th>
+                </tr>
+              </thead>
+            </table>
+            <div class="scroll-v" style="max-height: 120px;">
+              <!-- table-primary -->
+              <table class="table table--primary">
+                <tbody>
+                  <!-- 선택 되었을 경우, tr--selected 클래스 추가-->
+                  <tr class="tr--selected">
+                    <td>Selected Status</td>
+                    <td>USER_ID</td>
+                    <td>Root</td>
+                  </tr>
+                  <tr>
+                    <td>GLOBAL</td>
+                    <td>USER_ID</td>
+                    <td>Root</td>
+                  </tr>
+                  <!-- Drawer 마크업과 스타일링 UI 추가 시작  -->
+                  <tr>
+                    <td>GLOBAL</td>
+                    <td>USER_ID</td>
+                    <td>Root</td>
+                  </tr>
+                  <tr>
+                    <td>GLOBAL</td>
+                    <td>USER_ID</td>
+                    <td>Root</td>
                   </tr>
                 </tbody>
               </table>
