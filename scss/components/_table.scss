@@ -85,6 +85,19 @@
 }
 
 // -------------------------
+// Status
+// -------------------------
+.table tr:hover > td {
+  background: $hover-row;
+}
+
+.table .tr--selected td,
+.table .tr--selected:hover td {
+  background-color: $ui-01 !important;
+  color: $active-primary !important;
+}
+
+// -------------------------
 // Theme - table--primary
 // -------------------------
 .table--primary tr:nth-child(2n + 1) td {
@@ -101,6 +114,10 @@
 // -------------------------
 .table--secondary tr:nth-child(2n) td {
   background-color: $odd-row;
+}
+
+.table--secondary tr:hover > td {
+  background: $ui-01;
 }
 
 .table--secondary th {
@@ -136,16 +153,10 @@
 }
 
 // -------------------------
-// Status
+// Theme - table--description
 // -------------------------
-.table tr:hover > td {
-  background: $hover-row;
-}
-
-.table .tr--selected td,
-.table .tr--selected:hover td {
-  background-color: $ui-01 !important;
-  color: $active-primary !important;
+.table--description tr:hover > td {
+  background-color: $ui-02;
 }
 
 // -------------------------
@@ -222,6 +233,10 @@
   @include font-size("13");
   @include line-height("heading");
   color: $text-02;
+}
+
+.table__foot {
+  margin-top: $spacing-xs;
 }
 
 // -------------------------
