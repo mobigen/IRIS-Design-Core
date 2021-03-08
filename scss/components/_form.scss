@@ -90,6 +90,8 @@
 // form--vertical
 // -------------------------
 .form--vertical {
+  margin-top: $spacing-xs;
+  
   .form__item {
     flex-direction: column;
     align-items: flex-start;
