@@ -43,22 +43,12 @@
 
 .side-panel::before {
   top: 41px; // side-panel__head의 높이
-  background-image: linear-gradient(
-    0deg,
-    rgba($ui-01, 0) 0,
-    rgba($ui-01, 0.7) 30%,
-    $ui-01
-  );
+  background-image: linear-gradient(0deg, rgba($ui-01, 0) 0, rgba($ui-01, 0.7) 30%, $ui-01);
 }
 
 .side-panel::after {
   bottom: 0;
-  background-image: linear-gradient(
-    180deg,
-    rgba($ui-01, 0) 0,
-    rgba($ui-01, 0.7) 30%,
-    $ui-01
-  );
+  background-image: linear-gradient(180deg, rgba($ui-01, 0) 0, rgba($ui-01, 0.7) 30%, $ui-01);
 }
 
 .side-panel-content {
@@ -99,13 +89,14 @@
   padding-bottom: $spacing-md;
 }
 
-.side-panel-content__body .row {
-  margin-bottom: $spacing-2xs;
-  width: 100%;
+.side-panel--hide .side-panel {
+  display: none;
 }
 
-.side-panel-content__body .h-group {
-  width: 100%;
+.side-panel-tab__head-action-buttons {
+  align-self: center;
+  margin-left: auto;
+  margin-right: $spacing-xs;
 }
 
 // side-panel 내 요소 재선언
@@ -150,8 +141,13 @@
       margin-bottom: $spacing-2xs;
     }
   }
-}
 
-.side-panel--hide .side-panel {
-  display: none;
+  .row {
+    margin-bottom: $spacing-2xs;
+    width: 100%;
+  }
+
+  .h-group {
+    width: 100%;
+  }
 }

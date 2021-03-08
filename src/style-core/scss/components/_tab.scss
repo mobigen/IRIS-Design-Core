@@ -49,7 +49,7 @@
     .tab__remove-button {
       background-color: transparent;
     }
-  
+
     .tab__remove-button:active {
       background-color: transparent;
       fill: $icon-01;
@@ -276,12 +276,4 @@
       border-bottom-left-radius: 3px;
     }
   }
-}
-
-// -------------------------
-// tab in modal overwrite
-// -------------------------
-.modal .tab__contents {
-  padding-right: $spacing-md;
-  padding-left: $spacing-md;
 }
