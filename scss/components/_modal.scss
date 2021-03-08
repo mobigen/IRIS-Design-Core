@@ -91,3 +91,37 @@
 .modal--xl {
   width: rem(1180px);
 }
+
+// -------------------------
+// modal 하위에 있는 form, tab overwrite
+// -------------------------
+
+.modal .form__item {
+  padding: $spacing-sm / 2 0;
+}
+
+.modal .form__label-text {
+  @include font-weight("regular");
+}
+
+.modal .form__label {
+  @include make-col(2);
+}
+
+.modal .form--vertical .form__label {
+  width: 100%;
+}
+
+.modal .form--vertical .form__detail {
+  @include line-height("body");
+  margin-top: $spacing-2xs;
+}
+
+.modal .form--complex .text-input {
+  width: auto;
+}
+
+.modal .tab__contents {
+  padding-right: $spacing-md;
+  padding-left: $spacing-md;
+}
