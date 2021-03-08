@@ -226,16 +226,16 @@
   @include button--icon(6px, 20px);
 }
 
+.button--tertiary {
+  @include button--tertiary;
+}
+
 .button--primary {
   @include button--primary;
 }
 
 .button--secondary {
   @include button--secondary;
-}
-
-.button--tertiary {
-  @include button--tertiary;
 }
 
 .button--link {
