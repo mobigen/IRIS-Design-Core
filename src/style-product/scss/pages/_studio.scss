@@ -63,6 +63,11 @@
 
 .editor-layout-head__object-list-item {
   margin-right: $spacing-2xs;
+  border-radius: $button-border-radius;
+}
+
+.editor-layout-head__object-list-item--selected {
+  background-color: darken($ui-01, 3%);
 }
 
 .editor-layout-head__additinal-buttons {
