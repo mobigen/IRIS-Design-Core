@@ -88,7 +88,7 @@
 }
 
 .editor-layout-body__side-penal {
-  width: 280px;
+  width: rem(300px);
   background-color: $ui-01;
   overflow: auto;
 }
@@ -244,7 +244,7 @@
   bottom: 0;
   margin-left: - $spacing-sm;
   height: rem(56px);
-  width: rem(280px);
+  width: rem(300px);
   padding: $spacing-sm;
   background-color: $ui-02;
   border-top: 1px solid $ui-04;

@@ -131,7 +131,7 @@
     }
     .form__detail {
       width: 100%;
-      margin-top: $spacing-2xs;
+      margin-top: 0;
     }
   }
 
@@ -148,7 +148,6 @@
   }
 
   .h-group {
-    flex-wrap: wrap;
     width: 100%;
   }
 }
