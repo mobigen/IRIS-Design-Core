@@ -204,3 +204,30 @@
 .editor-layout .tool.area:hover:not([preview]) {
   border: 1px solid $ui-04;
 }
+
+// toggle-button과 유사한 스타일이지만 selected 불가한 스타일
+.visual-style-preview {
+  display: flex;
+  align-items: center;
+  padding: 0 rem(5px);
+  height: $button-height-md;
+  border-radius: $button-border-radius;
+  text-align: center;
+  border: 1px solid transparent;
+  background-color: rgba(171, 175, 186, 0.5);
+  cursor: default;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.visual-style-preview .svg-icon {
+  width: rem(20px);
+  height: rem(20px);
+  fill: $text-04;
+}
+
+.visual-style-preview--selected {
+  background-color: $primary;
+}
