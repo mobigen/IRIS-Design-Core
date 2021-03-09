@@ -1,6 +1,5 @@
 .drawer {
   @include layer("overlay");
-  width: rem(600px);
   position: relative;
   background-color: $ui-02;
 }
@@ -32,12 +31,14 @@
 
 .drawer__actions {
   margin-left: auto;
+  display: flex;
+  align-items: center;
 }
 
 .drawer__head-title {
-  @include font-weight('medium');
+  @include font-weight("medium");
   @include text-overflow;
-  @include font-size('18');
+  @include font-size("18");
 }
 
 .drawer__body {
@@ -68,18 +69,16 @@
   .description {
     padding-top: $spacing-xs;
 
-    &+.description {
+    & + .description {
       padding-top: $spacing-xl;
-
     }
   }
 
   .form {
     padding-top: $spacing-xs;
 
-    &+.form {
+    & + .form {
       padding-top: $spacing-xl;
-
     }
   }
 }
