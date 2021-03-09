@@ -50,7 +50,10 @@
   &--error {
     @include notification-message-status($support-04);
   }
-  
+
+  .loader + &__text {
+    margin-left: $spacing-2xs;
+  }
 }
 
 // -------------------------
