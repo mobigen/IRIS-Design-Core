@@ -1,6 +1,5 @@
 .drawer {
   @include layer("overlay");
-  width: rem(600px);
   position: relative;
   background-color: $ui-02;
 }
