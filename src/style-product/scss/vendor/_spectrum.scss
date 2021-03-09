@@ -1,4 +1,6 @@
 .sp-replacer {
+  display: flex;
+  flex-shrink: 0;
   padding: $spacing-2xs;
   border-radius: $field-border-radius;
   border-color: $ui-04;
@@ -6,12 +8,16 @@
 }
 
 .sp-replacer:hover {
-  border-color: $secondary;
+  border-color: darken($ui-04, 15%);
 }
 
 .sp-replacer.sp-active {
   border-color: $secondary;
   box-shadow: 0 0 4px rgba($secondary, 0.65);
+}
+
+.text-input ~ .sp-replacer {
+  margin-left: $spacing-2xs;
 }
 
 .sp-palette .sp-thumb-el:hover,
