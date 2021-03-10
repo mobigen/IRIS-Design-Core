@@ -32,12 +32,7 @@
                 </div>
               </div>
               <div class="upload upload--focused upload--lg" style="width: 375px">
-                <input
-                  type="text"
-                  class="upload__input"
-                  placeholder="등록한 파일명이 보여집니다. (selected)"
-                  readonly
-                />
+                <input type="text" class="upload__input" placeholder="등록한 파일명이 보여집니다. (selected)" readonly />
                 <div class="upload__file">
                   <input type="file" class="upload__file-input" />
                   <button class="upload__file-button" type="button">
@@ -49,13 +44,7 @@
                 </div>
               </div>
               <div class="upload upload--disabled upload--lg" style="width: 375px">
-                <input
-                  type="text"
-                  class="upload__input"
-                  placeholder="등록한 파일명이 보여집니다. (disabled)"
-                  readonly
-                  disabled
-                />
+                <input type="text" class="upload__input" placeholder="등록한 파일명이 보여집니다. (disabled)" readonly disabled />
                 <div class="upload__file">
                   <input type="file" class="upload__file-input" disabled />
                   <button class="upload__file-button" type="button" disabled>
@@ -84,12 +73,7 @@
                 </div>
               </div>
               <div class="upload upload--focused" style="width: 375px">
-                <input
-                  type="text"
-                  class="upload__input"
-                  placeholder="등록한 파일명이 보여집니다. (selected)"
-                  readonly
-                />
+                <input type="text" class="upload__input" placeholder="등록한 파일명이 보여집니다. (selected)" readonly />
                 <div class="upload__file">
                   <button class="upload__file-button" type="button">
                     <svg class="svg-icon">
@@ -101,13 +85,7 @@
                 </div>
               </div>
               <div class="upload upload--disabled" style="width: 375px">
-                <input
-                  type="text"
-                  class="upload__input"
-                  placeholder="등록한 파일명이 보여집니다. (disabled)"
-                  readonly
-                  disabled
-                />
+                <input type="text" class="upload__input" placeholder="등록한 파일명이 보여집니다. (disabled)" readonly disabled />
                 <div class="upload__file">
                   <button class="upload__file-button" type="button" disabled>
                     <svg class="svg-icon">
@@ -200,12 +178,12 @@
                 </div>
                 <div class="upload-preview__file">
                   <input type="file" class="upload-preview__file-input" />
-                  <button class="upload-preview__file-button" type="button">
+                  <label class="upload-preview__file-label">
                     <svg class="svg-icon">
                       <use xlink:href="#upload"></use>
                     </svg>
                     <span class="upload-preview__file-text"> Click To Upload </span>
-                  </button>
+                  </label>
                 </div>
               </div>
               <!-- 미리보기형 파일이 업로드 됐을 떄 upload-preview--loaded 클래스 추가 -->
@@ -213,15 +191,12 @@
                 <div class="upload-preview__thumbnail">
                   <img src="../src/images/common/thumbnail.png" class="img-g" alt="sample image" />
                 </div>
-                <div class="upload-preview__file">
-                  <input type="file" class="upload-preview__file-input" />
-                  <button class="upload-preview__file-button" type="button">
-                    <svg class="svg-icon">
-                      <use xlink:href="#trash"></use>
-                    </svg>
-                    <span class="upload-preview__file-text"> Delete File </span>
-                  </button>
-                </div>
+                <button class="upload-preview__delete-button" type="button">
+                  <svg class="svg-icon">
+                    <use xlink:href="#trash"></use>
+                  </svg>
+                  <span class="upload-preview__delete-text"> Delete File </span>
+                </button>
               </div>
               <div class="upload-preview upload-preview--disabled" style="width: 390px">
                 <div class="upload-preview__thumbnail">
@@ -234,15 +209,12 @@
                     pdf, jpg, gif up to 10MB
                   </p>
                 </div>
-                <div class="upload-preview__file">
-                  <input type="file" class="upload-preview__file-input" disabled />
-                  <button class="upload-preview__file-button" type="button">
-                    <svg class="svg-icon">
-                      <use xlink:href="#trash"></use>
-                    </svg>
-                    <span class="upload-preview__file-text"> Disabled </span>
-                  </button>
-                </div>
+                <button class="upload-preview__delete-button" type="button" disabled>
+                  <svg class="svg-icon">
+                    <use xlink:href="#trash"></use>
+                  </svg>
+                  <span class="upload-preview__delete-text"> disabled </span>
+                </button>
               </div>
             </div>
           </div>
