@@ -135,13 +135,11 @@
   justify-content: flex-start;
 
   &--loaded {
-
     .upload-alt__file-button {
       background-color: $secondary;
     }
 
     .upload-alt__file {
-
       &:hover {
         .upload-alt__file-button {
           background-color: $active-secondary;
@@ -261,20 +259,19 @@
   width: 100%;
 
   &:hover {
-    .upload-preview__file-button {
+    .upload-preview__file-label {
       background-color: rgba(0, 90, 205, 0.07);
-      ;
     }
   }
 
   &:active {
-    .upload-preview__file-button {
+    .upload-preview__file-label {
       background-color: rgba(0, 90, 205, 0.16);
     }
   }
 }
 
-.upload-preview__file-button {
+.upload-preview__file-label {
   @include button-normal;
   width: 100%;
   height: $button-height-md;
@@ -286,7 +283,40 @@
   svg {
     @include svg-icon-size(20px);
     fill: $primary;
+    color: $primary;
   }
+}
+
+.upload-preview__delete-button {
+  @include button-normal;
+  width: 100%;
+  height: $button-height-md;
+  margin-top: $spacing-xs;
+  background-color: $ui-02;
+  border: 1px solid $ui-04;
+  border-radius: $field-border-radius;
+
+  &:hover {
+    background-color: #fef3f3;
+    border: 1px solid #ef594f;
+  }
+
+  &:active {
+    background-color: #fce4e3;
+    border: 1px solid #ef594f;
+  }
+
+  svg {
+    @include svg-icon-size(20px);
+    fill: $negative;
+    color: $negative;
+  }
+}
+
+.upload-preview__delete-text {
+  @include font-size("14");
+  margin-left: $spacing-2xs;
+  color: $negative;
 }
 
 .upload-preview__file-text {
@@ -300,8 +330,7 @@
     background: $ui-01;
   }
 
-  .upload-preview__file-button {
-
+  .upload-preview__file-label {
     svg {
       fill: $negative;
     }
@@ -313,12 +342,16 @@
 }
 
 .upload-preview--disabled {
-
   .upload-preview__file-input {
     cursor: not-allowed;
   }
 
-  .upload-preview__file-button {
+  .upload-preview__file-label {
+    cursor: not-allowed;
+    opacity: 0.25;
+  }
+
+  .upload-preview__delete-button {
     cursor: not-allowed;
     opacity: 0.25;
   }
@@ -326,7 +359,8 @@
   &:hover,
   &:hover:active,
   &:hover:focus {
-    .upload-preview__file-button {
+    .upload-preview__file-label,
+    .upload-preview__delete-button {
       background-color: $ui-02;
       border: 1px solid $ui-04;
     }
