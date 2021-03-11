@@ -45,6 +45,7 @@
   justify-content: flex-start;
   flex: 1;
   min-height: rem(32px);
+  align-items: center;
 }
 
 .form__foot {
@@ -65,6 +66,10 @@
 
 .form__detail .upload-preview {
   width: 100%;
+}
+
+.form__detail .text-input + .button {
+  margin-left: $spacing-2xs;
 }
 // -------------------------
 // Size overwrite
