@@ -72,14 +72,14 @@
 }
 
 .loader {
-  display: inline-block;
+  display: flex;
   text-align: center;
 }
 
 .loader__spinner {
   display: inline-block;
-  width: 64px;
-  height: 64px;
+  width: rem(64px);
+  height: rem(64px);
 }
 
 .loader__spinner::after {
@@ -96,29 +96,35 @@
 }
 
 .loader--lg .loader__spinner {
-  width: 80px;
-  height: 80px;
+  width: rem(80px);
+  height: rem(80px);
 }
 
 .loader--sm .loader__spinner {
-  width: 20px;
-  height: 20px;
+  width: rem(20px);
+  height: rem(20px);
 }
 
-.loader--sm .loader__spinner:after {
+.loader--xs .loader__spinner {
+  width: rem(16px);
+  height: rem(16px);
+}
+
+.loader--sm .loader__spinner:after,
+.loader--xs .loader__spinner:after {
   border-width: 2px;
 }
 
-.loader.loader--sm .loader__text {
-  padding-top: 6px;
-  font-size: 12px;
+.loader--sm .loader__text,
+.loader--xs .loader__spinner:after {
+  @include font-size("12");
+  padding-top: $spacing-xs;
 }
 
 .button .loader__spinner::after,
 .loader-overlay .loader__spinner::after {
   animation: loading-spinner-duration 1s linear infinite, inverse-loading-spinner-colors 3s linear infinite;
 }
-
 
 // Loading bar
 @keyframes loading-bar {
@@ -149,7 +155,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 4px;
+  height: rem(4px);
   overflow-x: hidden;
   background-color: $hover-ui-accent;
 }
