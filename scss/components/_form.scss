@@ -22,7 +22,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  height: rem(32px)
+  height: rem(32px);
 }
 
 .form__label-text {
@@ -42,10 +42,10 @@
 
 .form__detail {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   flex: 1;
-  min-height: rem(32px)
+  min-height: rem(32px);
+  align-items: center;
 }
 
 .form__foot {
@@ -64,6 +64,13 @@
   }
 }
 
+.form__detail .upload-preview {
+  width: 100%;
+}
+
+.form__detail .text-input + .button {
+  margin-left: $spacing-2xs;
+}
 // -------------------------
 // Size overwrite
 // -------------------------
@@ -91,7 +98,7 @@
 // -------------------------
 .form--vertical {
   margin-top: $spacing-xs;
-  
+
   .form__item {
     flex-direction: column;
     align-items: flex-start;
