@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 32 32">
-  <path fill-rule="evenodd" d="M4 4.702C4 4.314 4.314 4 4.702 4h16.912v.011l.2.06c.262.079.504.223.702.421l4.992 4.992c.316.316.492.742.492 1.19v16.624a.701.701 0 01-.702.702H4.702A.701.701 0 014 27.298V4.702zm6.386.948H5.65v20.7h20.7V10.659l-4.736-4.735v4.182a.701.701 0 01-.702.702h-9.824a.701.701 0 01-.702-.702V5.65zm9.824 0h-8.42v3.753h8.42V5.65z" clip-rule="evenodd"/>
-  <path fill-rule="evenodd" d="M16.5 20.2a2.7 2.7 0 100-5.4 2.7 2.7 0 000 5.4zm0 1.8a4.5 4.5 0 100-9 4.5 4.5 0 000 9z" clip-rule="evenodd"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <path fill-rule="evenodd" d="M26 26V10.778L21.62 6H6v20h20zm1 2H5a1 1 0 01-1-1V5a1 1 0 011-1h17.06a1 1 0 01.737.324l4.94 5.39a1 1 0 01.263.675V27a1 1 0 01-1 1z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M16 20.5a3 3 0 100-6 3 3 0 000 6zm0 2a5 5 0 100-10 5 5 0 000 10zM11 5h2v3h7V5h2v4.5a.5.5 0 01-.5.5h-10a.5.5 0 01-.5-.5V5z" clip-rule="evenodd"/>
 </svg>
