@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IRIS | Studio Edit</title>
+  <link rel="stylesheet" href="../../dist/css/main/style.min.css" />
+</head>
+
+<body>
+  <div class="service-container">
+    <section>
+      <div class="service-content editor-layout">
+        <!-- 상단 영역 -->
+        <div class="editor-layout-head">
+          
+<!-- 상단 바 -->
+<div class="editor-layout-head__top-bar">
+  <div class="editor-layout-head__title-wrap">
+    <div class="editor-layout-head__title">
+      <!-- 제목 수정시 editor-layout-head__title-text display: none;
+        text-input display: block,  -->
+      <span class="editor-layout-head__title-text">Untitled (01)</span>
+      <input type="text" class="text-input" style="display: none;">
+    </div>
+    <!-- 제목 수정시 write button display: none;
+        checkmark button display: block,  -->
+    <button class="editor-layout-head__title-button button button--icon button--link" type="button" title="수정">
+      <svg class="svg-icon">
+        <use xlink:href="#write"></use>
+      </svg>
+    </button>
+    <button class="editor-layout-head__title-button button button--icon button--link" type="button" title="확인" style="display: none;">
+      <svg class="svg-icon">
+        <use xlink:href="#checkmark"></use>
+      </svg>
+    </button>
+  </div>
+  <div class="editor-layout-head__action-buttons">
+    <button class="button button--support" type="button">보기</button>
+    <span class="division-line"></span>
+    <button class="button button--primary" type="button">저장</button>
+    <button class="button button--secondary" type="button">빠른저장</button>
+    <button class="button button--tertiary" type="button">새로저장</button>
+    <span class="division-line"></span>
+    <button class="button button--tertiary" type="button">접근권한</button>
+    <button class="button button--tertiary" type="button">목록으로</button>
+    <span class="division-line"></span>
+    <button class="button button--danger" type="button">전체삭제</button>
+  </div>
+</div>
+
+          
+<!-- 객체 메뉴바 -->
+<div class="editor-layout-head__menu-bar">
+  <!-- 객체 카테고리 -->
+  <!-- select 선택시 select--selected 클래스 추가 -->
+  <div class="select">
+    <div class="select-selector">
+      <button class="select-selector__button" type="button">
+        <span class="select-selector__title">카테고리</span>
+        <svg class="svg-icon select-selector__icon">
+          <use xlink:href="#arrow-down"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="select-container">
+      <ul class="select-container__list">
+        <li class="select-container__item">
+          <button class="select-container__button" type="button">
+            <span class="select-container__text">item 1</span>
+          </button>
+        </li>
+        <li class="select-container__item">
+          <button class="select-container__button" type="button">
+            <span class="select-container__text">item 2</span>
+          </button>
+        </li>
+        <li class="select-container__item">
+          <button class="select-container__button" type="button">
+            <span class="select-container__text">item 3</span>
+          </button>
+        </li>
+        <li class="select-container__item">
+          <button class="select-container__button" type="button">
+            <span class="select-container__text">item 4</span>
+          </button>
+        </li>
+        <li class="select-container__item">
+          <button class="select-container__button" type="button">
+            <span class="select-container__text">item 5</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- 객체 목록 -->
+  <ul class="editor-layout-head__object-list">
+    <li class="editor-layout-head__object-list-item editor-layout-head__object-list-item--selected">
+      <button class="button button--icon button--link">
+        <svg class="svg-icon">
+          <use xlink:href="#button"></use>
+        </svg>
+      </button>
+    </li>
+    <li class="editor-layout-head__object-list-item">
+      <button class="button button--icon button--link">
+        <svg class="svg-icon">
+          <use xlink:href="#calendar-setting"></use>
+        </svg>
+      </button>
+    </li>
+    <li class="editor-layout-head__object-list-item">
+      <button class="button button--icon button--link">
+        <svg class="svg-icon">
+          <use xlink:href="#chart"></use>
+        </svg>
+      </button>
+    </li>
+    <li class="editor-layout-head__object-list-item">
+      <button class="button button--icon button--link">
+        <svg class="svg-icon">
+          <use xlink:href="#checkbox-selected"></use>
+        </svg>
+      </button>
+    </li>
+    <li class="editor-layout-head__object-list-item">
+      <button class="button button--icon button--link">
+        <svg class="svg-icon">
+          <use xlink:href="#circle"></use>
+        </svg>
+      </button>
+    </li>
+    <li class="editor-layout-head__object-list-item">
+      <button class="button button--icon button--link">
+        <svg class="svg-icon">
+          <use xlink:href="#combobox"></use>
+        </svg>
+      </button>
+    </li>
+    <li class="editor-layout-head__object-list-item">
+      <button class="button button--icon button--link">
+        <svg class="svg-icon">
+          <use xlink:href="#date-time"></use>
+        </svg>
+      </button>
+    </li>
+    <li class="editor-layout-head__object-list-item">
+      <button class="button button--icon button--link">
+        <svg class="svg-icon">
+          <use xlink:href="#document-html"></use>
+        </svg>
+      </button>
+    </li>
+    <li class="editor-layout-head__object-list-item">
+      <button class="button button--icon button--link">
+        <svg class="svg-icon">
+          <use xlink:href="#edit-box"></use>
+        </svg>
+      </button>
+    </li>
+    <li class="editor-layout-head__object-list-item">
+      <button class="button button--icon button--link">
+        <svg class="svg-icon">
+          <use xlink:href="#hidden-input"></use>
+        </svg>
+      </button>
+    </li>
+    <li class="editor-layout-head__object-list-item">
+      <button class="button button--icon button--link">
+        <svg class="svg-icon">
+          <use xlink:href="#image"></use>
+        </svg>
+      </button>
+    </li>
+    <li class="editor-layout-head__object-list-item">
+      <button class="button button--icon button--link">
+        <svg class="svg-icon">
+          <use xlink:href="#label"></use>
+        </svg>
+      </button>
+    </li>
+    <li class="editor-layout-head__object-list-item">
+      <button class="button button--icon button--link">
+        <svg class="svg-icon">
+          <use xlink:href="#list-unordered"></use>
+        </svg>
+      </button>
+    </li>
+    <li class="editor-layout-head__object-list-item">
+      <button class="button button--icon button--link">
+        <svg class="svg-icon">
+          <use xlink:href="#map"></use>
+        </svg>
+      </button>
+    </li>
+    <li class="editor-layout-head__object-list-item">
+      <button class="button button--icon button--link">
+        <svg class="svg-icon">
+          <use xlink:href="#no-image"></use>
+        </svg>
+      </button>
+    </li>
+    <li class="editor-layout-head__object-list-item">
+      <button class="button button--icon button--link">
+        <svg class="svg-icon">
+          <use xlink:href="#popup"></use>
+        </svg>
+      </button>
+    </li>
+    <li class="editor-layout-head__object-list-item">
+      <button class="button button--icon button--link">
+        <svg class="svg-icon">
+          <use xlink:href="#portlet"></use>
+        </svg>
+      </button>
+    </li>
+    <li class="editor-layout-head__object-list-item">
+      <button class="button button--icon button--link">
+        <svg class="svg-icon">
+          <use xlink:href="#rectangle"></use>
+        </svg>
+      </button>
+    </li>
+    <li class="editor-layout-head__object-list-item">
+      <button class="button button--icon button--link">
+        <svg class="svg-icon">
+          <use xlink:href="#renew"></use>
+        </svg>
+      </button>
+    </li>
+    <li class="editor-layout-head__object-list-item">
+      <button class="button button--icon button--link">
+        <svg class="svg-icon">
+          <use xlink:href="#tab"></use>
+        </svg>
+      </button>
+    </li>
+    <li class="editor-layout-head__object-list-item">
+      <button class="button button--icon button--link">
+        <svg class="svg-icon">
+          <use xlink:href="#tag"></use>
+        </svg>
+      </button>
+    </li>
+    <li class="editor-layout-head__object-list-item">
+      <button class="button button--icon button--link">
+        <svg class="svg-icon">
+          <use xlink:href="#text-field"></use>
+        </svg>
+      </button>
+    </li>
+    <li class="editor-layout-head__object-list-item">
+      <button class="button button--icon button--link">
+        <svg class="svg-icon">
+          <use xlink:href="#text-input"></use>
+        </svg>
+      </button>
+    </li>
+  </ul>
+  <!-- 추가 기능 -->
+  <div class="editor-layout-head__additinal-buttons">
+    <button class="button button--link" type="button">객체목록보기</button>
+    <button class="button button--link" type="button">히든객체숨김</button>
+    <button class="button button--link" type="button">전체변수명보기</button>
+  </div>
+  <div class="toggle-button">
+    <button class="toggle-button__item toggle-button__item--icon toggle-button__item--selected" type="button">
+      <svg class="svg-icon">
+        <use xlink:href="#fit-to-screen"></use>
+      </svg>
+    </button>
+  </div>
+</div>
+
+        </div>
+        <!-- //상단 영역 -->
+        <!-- 편집 영역 -->
+        <div class="editor-layout-body">
+          <div class="editor-layout-body__canvas-wrap">
+  <div class="editor-layout-body__canvas" style="width: 1920px; height: 1200px;">캔버스 영역</div>
+</div>
+          <div class="editor-layout-body__side-penal side-panel">
+            <div class="side-panel-tab tab tab--container tab--horizontal">
+              <ul class="side-panel-tab__head tab__bar">
+                <li class="tab__item tab__item--selected">
+                  <button type="button" class="tab__button">
+                    <span class="tab__button-text">데이터</span>
+                  </button>
+                </li>
+                <li class="tab__item">
+                  <button type="button" class="tab__button">
+                    <span class="tab__button-text">객체</span>
+                  </button>
+                </li>
+              </ul>
+              <!-- 실행 버튼이 들어갈 때는 side-panel-tab__body--has-play-button class가 추가 됩니다 -->
+              <div class="side-panel-tab__body tab__panel side-panel-tab__body--has-play-button">
+                <div class="side-panel-tab__contents tab__contents">
+                  <div class="side-panel-content">
+                    <div class="side-panel-content__head">
+                      <strong class="side-panel-content__head-title">다이나믹 폼 유형</strong>
+                    </div>
+                    <div class="side-panel-content__body">
+                      <div class="dynamic-form">
+                        <!-- 세로 스크롤을 위한 scroll-v 클래스. 해당 요소에 max-height를 지정해줘야합니다. -->
+                        <ul class="dynamic-form__list scroll-v" style="max-height: 320px;">
+                          
+<li class="dynamic-form__item">
+  <div class="dynamic-form__handler">
+    <button class="button button--icon button--tertiary button--sm">
+      <svg class="svg-icon">
+        <use xlink:href="#chevron-up"></use>
+      </svg>
+    </button>
+    <button class="button button--icon button--tertiary button--sm">
+      <svg class="svg-icon">
+        <use xlink:href="#chevron-down"></use>
+      </svg>
+    </button>
+  </div>
+  <div class="dynamic-form__forms">
+    <div class="dynamic-form__form">
+      <label class="dynamic-form__form-label">
+        <span class="dynamic-form__form-label-text">탭 이름</span>
+      </label>
+      <div class="dynamic-form__form-detail">
+        <input type="text" class="text-input" placeholder="탭 이름을 입력해주세요.">
+      </div>
+    </div>
+    <div class="dynamic-form__form">
+      <label class="dynamic-form__form-label">
+        <span class="dynamic-form__form-label-text">탭 값</span>
+      </label>
+      <div class="dynamic-form__form-detail">
+          <input type="text" class="text-input" placeholder="탭 값을 입력해주세요.">
+      </div>
+    </div>
+  </div>
+  <div class="dynamic-form__action-buttons">
+    <button class="button button--icon button--link button--xs">
+      <svg class="svg-icon">
+        <use xlink:href="#close"></use>
+      </svg>
+    </button>
+  </div>
+</li>
+
+                          
+<li class="dynamic-form__item">
+  <div class="dynamic-form__handler">
+    <button class="button button--icon button--tertiary button--sm">
+      <svg class="svg-icon">
+        <use xlink:href="#chevron-up"></use>
+      </svg>
+    </button>
+    <button class="button button--icon button--tertiary button--sm">
+      <svg class="svg-icon">
+        <use xlink:href="#chevron-down"></use>
+      </svg>
+    </button>
+  </div>
+  <div class="dynamic-form__forms">
+    <div class="dynamic-form__form">
+      <label class="dynamic-form__form-label">
+        <span class="dynamic-form__form-label-text">탭 이름</span>
+      </label>
+      <div class="dynamic-form__form-detail">
+        <input type="text" class="text-input" placeholder="탭 이름을 입력해주세요.">
+      </div>
+    </div>
+    <div class="dynamic-form__form">
+      <label class="dynamic-form__form-label">
+        <span class="dynamic-form__form-label-text">탭 값</span>
+      </label>
+      <div class="dynamic-form__form-detail">
+          <input type="text" class="text-input" placeholder="탭 값을 입력해주세요.">
+      </div>
+    </div>
+  </div>
+  <div class="dynamic-form__action-buttons">
+    <button class="button button--icon button--link button--xs">
+      <svg class="svg-icon">
+        <use xlink:href="#close"></use>
+      </svg>
+    </button>
+  </div>
+</li>
+
+                          
+<li class="dynamic-form__item">
+  <div class="dynamic-form__handler">
+    <button class="button button--icon button--tertiary button--sm">
+      <svg class="svg-icon">
+        <use xlink:href="#chevron-up"></use>
+      </svg>
+    </button>
+    <button class="button button--icon button--tertiary button--sm">
+      <svg class="svg-icon">
+        <use xlink:href="#chevron-down"></use>
+      </svg>
+    </button>
+  </div>
+  <div class="dynamic-form__forms">
+    <div class="dynamic-form__form">
+      <label class="dynamic-form__form-label">
+        <span class="dynamic-form__form-label-text">탭 이름</span>
+      </label>
+      <div class="dynamic-form__form-detail">
+        <input type="text" class="text-input" placeholder="탭 이름을 입력해주세요.">
+      </div>
+    </div>
+    <div class="dynamic-form__form">
+      <label class="dynamic-form__form-label">
+        <span class="dynamic-form__form-label-text">탭 값</span>
+      </label>
+      <div class="dynamic-form__form-detail">
+          <input type="text" class="text-input" placeholder="탭 값을 입력해주세요.">
+      </div>
+    </div>
+  </div>
+  <div class="dynamic-form__action-buttons">
+    <button class="button button--icon button--link button--xs">
+      <svg class="svg-icon">
+        <use xlink:href="#close"></use>
+      </svg>
+    </button>
+  </div>
+</li>
+
+                          
+<li class="dynamic-form__item">
+  <div class="dynamic-form__handler">
+    <button class="button button--icon button--tertiary button--sm">
+      <svg class="svg-icon">
+        <use xlink:href="#chevron-up"></use>
+      </svg>
+    </button>
+    <button class="button button--icon button--tertiary button--sm">
+      <svg class="svg-icon">
+        <use xlink:href="#chevron-down"></use>
+      </svg>
+    </button>
+  </div>
+  <div class="dynamic-form__forms">
+    <div class="dynamic-form__form">
+      <label class="dynamic-form__form-label">
+        <span class="dynamic-form__form-label-text">탭 이름</span>
+      </label>
+      <div class="dynamic-form__form-detail">
+        <input type="text" class="text-input" placeholder="탭 이름을 입력해주세요.">
+      </div>
+    </div>
+    <div class="dynamic-form__form">
+      <label class="dynamic-form__form-label">
+        <span class="dynamic-form__form-label-text">탭 값</span>
+      </label>
+      <div class="dynamic-form__form-detail">
+          <input type="text" class="text-input" placeholder="탭 값을 입력해주세요.">
+      </div>
+    </div>
+  </div>
+  <div class="dynamic-form__action-buttons">
+    <button class="button button--icon button--link button--xs">
+      <svg class="svg-icon">
+        <use xlink:href="#close"></use>
+      </svg>
+    </button>
+  </div>
+</li>
+
+                          
+<li class="dynamic-form__item">
+  <div class="dynamic-form__handler">
+    <button class="button button--icon button--tertiary button--sm">
+      <svg class="svg-icon">
+        <use xlink:href="#chevron-up"></use>
+      </svg>
+    </button>
+    <button class="button button--icon button--tertiary button--sm">
+      <svg class="svg-icon">
+        <use xlink:href="#chevron-down"></use>
+      </svg>
+    </button>
+  </div>
+  <div class="dynamic-form__forms">
+    <div class="dynamic-form__form">
+      <label class="dynamic-form__form-label">
+        <span class="dynamic-form__form-label-text">탭 이름</span>
+      </label>
+      <div class="dynamic-form__form-detail">
+        <input type="text" class="text-input" placeholder="탭 이름을 입력해주세요.">
+      </div>
+    </div>
+    <div class="dynamic-form__form">
+      <label class="dynamic-form__form-label">
+        <span class="dynamic-form__form-label-text">탭 값</span>
+      </label>
+      <div class="dynamic-form__form-detail">
+          <input type="text" class="text-input" placeholder="탭 값을 입력해주세요.">
+      </div>
+    </div>
+  </div>
+  <div class="dynamic-form__action-buttons">
+    <button class="button button--icon button--link button--xs">
+      <svg class="svg-icon">
+        <use xlink:href="#close"></use>
+      </svg>
+    </button>
+  </div>
+</li>
+
+                          
+<li class="dynamic-form__item">
+  <div class="dynamic-form__handler">
+    <button class="button button--icon button--tertiary button--sm">
+      <svg class="svg-icon">
+        <use xlink:href="#chevron-up"></use>
+      </svg>
+    </button>
+    <button class="button button--icon button--tertiary button--sm">
+      <svg class="svg-icon">
+        <use xlink:href="#chevron-down"></use>
+      </svg>
+    </button>
+  </div>
+  <div class="dynamic-form__forms">
+    <div class="dynamic-form__form">
+      <label class="dynamic-form__form-label">
+        <span class="dynamic-form__form-label-text">탭 이름</span>
+      </label>
+      <div class="dynamic-form__form-detail">
+        <input type="text" class="text-input" placeholder="탭 이름을 입력해주세요.">
+      </div>
+    </div>
+    <div class="dynamic-form__form">
+      <label class="dynamic-form__form-label">
+        <span class="dynamic-form__form-label-text">탭 값</span>
+      </label>
+      <div class="dynamic-form__form-detail">
+          <input type="text" class="text-input" placeholder="탭 값을 입력해주세요.">
+      </div>
+    </div>
+  </div>
+  <div class="dynamic-form__action-buttons">
+    <button class="button button--icon button--link button--xs">
+      <svg class="svg-icon">
+        <use xlink:href="#close"></use>
+      </svg>
+    </button>
+  </div>
+</li>
+
+                          
+<li class="dynamic-form__item">
+  <div class="dynamic-form__handler">
+    <button class="button button--icon button--tertiary button--sm">
+      <svg class="svg-icon">
+        <use xlink:href="#chevron-up"></use>
+      </svg>
+    </button>
+    <button class="button button--icon button--tertiary button--sm">
+      <svg class="svg-icon">
+        <use xlink:href="#chevron-down"></use>
+      </svg>
+    </button>
+  </div>
+  <div class="dynamic-form__forms">
+    <div class="dynamic-form__form">
+      <label class="dynamic-form__form-label">
+        <span class="dynamic-form__form-label-text">탭 이름</span>
+      </label>
+      <div class="dynamic-form__form-detail">
+        <input type="text" class="text-input" placeholder="탭 이름을 입력해주세요.">
+      </div>
+    </div>
+    <div class="dynamic-form__form">
+      <label class="dynamic-form__form-label">
+        <span class="dynamic-form__form-label-text">탭 값</span>
+      </label>
+      <div class="dynamic-form__form-detail">
+          <input type="text" class="text-input" placeholder="탭 값을 입력해주세요.">
+      </div>
+    </div>
+  </div>
+  <div class="dynamic-form__action-buttons">
+    <button class="button button--icon button--link button--xs">
+      <svg class="svg-icon">
+        <use xlink:href="#close"></use>
+      </svg>
+    </button>
+  </div>
+</li>
+
+                        </ul>
+                        <div class="dynamic-form__foot">
+                          <button class="button button--support">
+                            <svg class="svg-icon">
+                              <use xlink:href="#add"></use>
+                            </svg>
+                            <span class="button__text">탭 추가</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 실행 버튼 -->
+                  <div class="side-panel-tab__play-button">
+                    <button type="button" class="button button--secondary play-button">
+                      <svg class="svg-icon">
+                        <use xlink:href="#setting"></use>
+                      </svg>
+                      <span class="button__text">실행</span>
+                    </button>
+                    <!-- 토글 -->
+                    <button type="button" class="button button--secondary play-button" style="display: none;">
+                      <svg class="svg-icon">
+                        <use xlink:href="#setting"></use>
+                      </svg>
+                      <span class="button__text">중지</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- //편집 영역 -->
+      </div>
+    </section>
+  </div>
+  <script src="../../dist/js/main.bundle.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IRIS | Studio Edit</title>
+  <link rel="stylesheet" href="../../dist/css/main/style.min.css" />
+</head>
+
+<body>
+  <div class="service-container">
+    <section>
+      <div class="service-content editor-layout">
+        <!-- 상단 영역 -->
+        <div class="editor-layout-head">
+          @@include('../partials/studio/top-bar.html')
+          @@include('../partials/studio/menu-bar.html')
+        </div>
+        <!-- //상단 영역 -->
+        <!-- 편집 영역 -->
+        <div class="editor-layout-body">
+          @@include('../partials/studio/canvas.html')
+          <div class="editor-layout-body__side-penal side-panel">
+            <div class="side-panel-tab tab tab--container tab--horizontal">
+              <ul class="side-panel-tab__head tab__bar">
+                <li class="tab__item tab__item--selected">
+                  <button type="button" class="tab__button">
+                    <span class="tab__button-text">데이터</span>
+                  </button>
+                </li>
+                <li class="tab__item">
+                  <button type="button" class="tab__button">
+                    <span class="tab__button-text">객체</span>
+                  </button>
+                </li>
+              </ul>
+              <!-- 실행 버튼이 들어갈 때는 side-panel-tab__body--has-play-button class가 추가 됩니다 -->
+              <div class="side-panel-tab__body tab__panel side-panel-tab__body--has-play-button">
+                <div class="side-panel-tab__contents tab__contents">
+                  <div class="side-panel-content">
+                    <div class="side-panel-content__head">
+                      <strong class="side-panel-content__head-title">다이나믹 폼 유형</strong>
+                    </div>
+                    <div class="side-panel-content__body">
+                      <div class="dynamic-form">
+                        <!-- 세로 스크롤을 위한 scroll-v 클래스. 해당 요소에 max-height를 지정해줘야합니다. -->
+                        <ul class="dynamic-form__list scroll-v" style="max-height: 320px;">
+                          @@include('../partials/common/dynamic-form__item.html')
+                          @@include('../partials/common/dynamic-form__item.html')
+                          @@include('../partials/common/dynamic-form__item.html')
+                          @@include('../partials/common/dynamic-form__item.html')
+                          @@include('../partials/common/dynamic-form__item.html')
+                          @@include('../partials/common/dynamic-form__item.html')
+                          @@include('../partials/common/dynamic-form__item.html')
+                        </ul>
+                        <div class="dynamic-form__foot">
+                          <button class="button button--support">
+                            <svg class="svg-icon">
+                              <use xlink:href="#add"></use>
+                            </svg>
+                            <span class="button__text">탭 추가</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 실행 버튼 -->
+                  <div class="side-panel-tab__play-button">
+                    <button type="button" class="button button--secondary play-button">
+                      <svg class="svg-icon">
+                        <use xlink:href="#setting"></use>
+                      </svg>
+                      <span class="button__text">실행</span>
+                    </button>
+                    <!-- 토글 -->
+                    <button type="button" class="button button--secondary play-button" style="display: none;">
+                      <svg class="svg-icon">
+                        <use xlink:href="#setting"></use>
+                      </svg>
+                      <span class="button__text">중지</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- //편집 영역 -->
+      </div>
+    </section>
+  </div>
+  <script src="../../dist/js/main.bundle.js"></script>
+</body>
+
+</html>

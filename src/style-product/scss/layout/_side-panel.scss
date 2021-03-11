@@ -110,7 +110,8 @@
     @include make-col(4);
   }
 
-  .form__label-text {
+  .form__label-text,
+  .dynamic-form__form-label-text {
     @include font-weight("regular");
     @include font-size("13");
     @include line-height("heading");
