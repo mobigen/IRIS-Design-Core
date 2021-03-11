@@ -1,3 +1,35 @@
+@mixin form__item($both-side-padding) {
+  @include line-height("heading");
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: $both-side-padding 0;
+}
+
+@mixin form__label {
+  @include make-col(4);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  height: rem(32px);
+}
+
+@mixin form__label-text {
+  @include text-overflow();
+  @include font-weight("medium");
+  padding-right: $spacing-2xs;
+  color: $text-02;
+}
+
+@mixin form__detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  min-height: rem(32px)
+}
+
 .form__head-title {
   @include font-size("16");
   @include font-weight("medium");
@@ -9,27 +41,15 @@
 }
 
 .form__item {
-  @include line-height("heading");
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  padding: $spacing-xs 0;
+  @include form__item($spacing-xs);
 }
 
 .form__label {
-  @include make-col(4);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  height: rem(32px);
+  @include form__label;
 }
 
 .form__label-text {
-  @include text-overflow();
-  @include font-weight("medium");
-  padding-right: $spacing-2xs;
-  color: $text-02;
+  @include form__label-text;
 }
 
 .form__label-subtext {
@@ -41,11 +61,7 @@
 }
 
 .form__detail {
-  display: flex;
-  justify-content: flex-start;
-  flex: 1;
-  min-height: rem(32px);
-  align-items: center;
+  @include form__detail;
 }
 
 .form__foot {
@@ -131,4 +147,68 @@
   .form__detail-inner {
     flex: auto;
   }
+}
+
+// -------------------------
+// dynamic-from
+// -------------------------
+.dynamic-form {
+}
+
+.dynamic-form__list {
+  padding: $spacing-sm 0;
+  // border-top: 1px solid $ui-04;
+}
+
+.dynamic-form__item {
+  display: flex;
+}
+
+.dynamic-form__item + .dynamic-form__item {
+  margin-top: $spacing-xs;
+}
+
+.dynamic-form__handler {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dynamic-form__handler .button:first-child {
+  margin-bottom: $spacing-2xs;
+}
+
+.dynamic-form__forms {
+  flex: 1;
+  margin-left: $spacing-xs;
+}
+
+.dynamic-form__form {
+  @include form__item($spacing-3xs);
+}
+
+.dynamic-form__form-label {
+  @include form__label;
+}
+
+.dynamic-form__form-label-text {
+  @include form__label-text;
+}
+
+.dynamic-form__form-detail {
+  @include form__detail;
+}
+
+.dynamic-form__action-buttons {
+  display: flex;
+  align-items: center;
+  margin-left: $spacing-3xs;
+}
+
+.dynamic-form__foot {
+  padding-top: $spacing-sm;
+}
+
+.dynamic-form__foot .button {
+  width: 100%;
 }
