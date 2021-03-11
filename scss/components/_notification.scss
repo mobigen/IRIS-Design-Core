@@ -51,6 +51,10 @@
     @include notification-message-status($support-04);
   }
 
+  &--loading {
+    @include notification-message-status($text-03);
+  }
+
   .loader + &__text {
     margin-left: $spacing-2xs;
   }
