@@ -27,7 +27,7 @@
   flex-direction: column;
   justify-content: center;
   flex: 1;
-  min-height: rem(32px)
+  min-height: rem(32px);
 }
 
 .form__head-title {
@@ -180,6 +180,9 @@
 
 .dynamic-form__forms {
   flex: 1;
+}
+
+.dynamic-form__handler + .dynamic-form__forms {
   margin-left: $spacing-xs;
 }
 
