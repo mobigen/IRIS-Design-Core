@@ -2,19 +2,19 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+
+  &:not(:first-child) {
+    margin-left: $spacing-2xs;
+  }
 }
 
 .toggle-buttons {
   display: flex;
 }
 
-.toggle-buttons .toggle-button {
-  margin-right: $spacing-2xs;
-}
-
 .toggle-button__item {
   @include button;
-  @include button-theme(rgba(171, 175, 186, 0.5), $ui-02, $ui-04, $text-05);
+  @include button-theme(rgba(171, 175, 186, 0.5), $text-04, $ui-04, $text-05);
 
   .svg-icon + .toggle-button__text {
     margin-left: $spacing-3xs;
@@ -42,6 +42,59 @@
 // -------------------------
 // Theme
 // -------------------------
+.toggle-button__item--secondary {
+  @include button;
+  @include button-theme($ui-02, $text-02, rgba($secondary, 0.14), rgba($secondary, 0.14), $ui-04);
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  margin: $spacing-3xs;
+  padding: $spacing-xs $spacing-sm;
+
+  &:hover {
+    color: $secondary;
+
+    .svg-icon {
+      fill: $secondary;
+    }
+  }
+
+  &:disabled,
+  &:disabled:hover,
+  &:disabled:focus {
+    background-color: $ui-02;
+    opacity: 0.5;
+    color: $text-02;
+
+    .svg-icon {
+      fill: $text-02;
+    }
+  }
+
+  &.toggle-button__item--selected {
+    background-color: rgba($secondary, 0.14);
+    border-color: $secondary;
+    color: $secondary;
+
+    &:hover:not(:disabled) {
+      background-color: rgba($secondary, 0.14);
+    }
+
+    .svg-icon {
+      fill: $secondary;
+    }
+  }
+}
+
+.toggle-button__item--secondary .svg-icon {
+  @include svg-icon-size(32px);
+}
+
+.toggle-button__item--secondary .svg-icon + .toggle-button__text {
+  margin-top: $spacing-2xs;
+  margin-left: 0
+}
+
 .toggle-button__item--selected {
   @include button--primary;
 }
@@ -59,4 +112,13 @@
 
 .toggle-button__item--icon.toggle-button__item--sm {
   @include button--icon(4px, 16px);
+}
+
+// -------------------------
+// toggle-button-list
+// -------------------------
+.toggle-button-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: rem(6px);
 }
