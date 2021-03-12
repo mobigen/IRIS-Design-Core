@@ -218,3 +218,10 @@
 .scroll-x {
   overflow-x: auto;
 }
+
+// -------------------------
+// font-size
+// -------------------------
+.font-size-11 {
+  @include font-size("11");
+}
