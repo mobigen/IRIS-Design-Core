@@ -16,10 +16,6 @@
   @include button;
   @include button-theme(rgba(171, 175, 186, 0.5), $text-04, $ui-04, $text-05);
 
-  .svg-icon + .toggle-button__text {
-    margin-left: $spacing-3xs;
-  }
-
   &:disabled,
   &:disabled:hover,
   &:disabled:focus {
@@ -39,6 +35,14 @@
 .toggle-button__item:not(:only-child):last-child {
   border-radius: 0px 2px 2px 0px;
 }
+
+.toggle-button__text {
+  @include font-size("13");
+  line-height: 1;
+  white-space: normal;
+  letter-spacing: -.5px
+}
+
 // -------------------------
 // Theme
 // -------------------------
@@ -47,9 +51,9 @@
   @include button-theme($ui-02, $text-02, rgba($secondary, 0.14), rgba($secondary, 0.14), $ui-04);
   display: flex;
   flex-direction: column;
-  height: auto;
-  margin: $spacing-3xs;
-  padding: $spacing-xs $spacing-sm;
+  height: rem(74px);
+  width: 100%;
+  padding: $spacing-xs $spacing-3xs;
 
   &:hover {
     color: $secondary;
@@ -90,9 +94,10 @@
   @include svg-icon-size(32px);
 }
 
-.toggle-button__item--secondary .svg-icon + .toggle-button__text {
-  margin-top: $spacing-2xs;
-  margin-left: 0
+.toggle-button__item--secondary .svg-icon + .toggle-button__text,
+.toggle-button__item--secondary .img-icon + .toggle-button__text {
+  margin-top: $spacing-3xs;
+  margin-left: 0;
 }
 
 .toggle-button__item--selected {
@@ -120,5 +125,12 @@
 .toggle-button-list {
   display: flex;
   flex-wrap: wrap;
-  padding: rem(6px);
+  margin-top: -$spacing-2xs;
+  margin-right: -$spacing-2xs;
+  margin-left: -$spacing-2xs;
+}
+
+.toggle-button-list .toggle-button {
+  margin-left: 0;
+  padding: $spacing-2xs;
 }
