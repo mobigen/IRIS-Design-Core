@@ -1,0 +1,31 @@
+.editor-preview-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.editor-preview-layout-head {
+  width: 100%;
+  padding: $spacing-xs $spacing-xs $spacing-xs $spacing-sm;
+  background-color: $ui-01;
+}
+
+.editor-preview-layout-body {
+  flex: 1;
+  height: 100%;
+  overflow: auto;
+}
+
+.editor-preview-layout-head__title {
+  flex: 1;
+}
+
+.editor-preview-layout-head__title-text {
+  @include line-height("heading");
+  @include font-weight("medium");
+}
+
+.editor-preview-layout__capture-button {
+  position: absolute;
+  z-index: z("float");
+}

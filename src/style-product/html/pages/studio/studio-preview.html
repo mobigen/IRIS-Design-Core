@@ -12,8 +12,36 @@
 <body>
   <div class="service-container">
     <section>
-      <div class="service-content editor-layout">
-      
+      <div id="preview-report" class="service-content editor-preview-layout">
+        <div id="preview-title" class="editor-preview-layout-head">
+          <div class="editor-preview-layout-head__title">
+            <span class="editor-preview-layout-head__title-text">Untitled (01)</span>
+          </div>
+        </div>
+        <div class="editor-preview-layout-body">
+          <div class="editor-preview-layout__preview-wrap">
+            <!-- 화면 캡쳐 버튼 -->
+            <div id="preview-button" class="editor-preview-layout__capture-button" style="right: 30px; top: 50px">
+              <button type="button" class="button button--support button--icon">
+                <svg class="svg-icon">
+                  <use xlink:href="#save"></use>
+                </svg>
+              </button>
+
+              <div class="tooltip tooltip--left" style="position: absolute; left: -300px; top: -2px;">
+                <span class="tooltip__text">저장된 이미지는 실제 화면과 다를 수 있습니다.</span>
+              </div>
+            </div>
+            <!-- 유저가 설정한 캔버스 가로, 세로 사이즈가 inline으로 들어감 -->
+            <div class="editor-preview-layout__preview" style="width: 1920px; height: 1080px;">
+              <div class="box tool button" style="width: 200px; height: 40px;">
+                <button class="button button--primary">
+                  <span>button</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </div>
