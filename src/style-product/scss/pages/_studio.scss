@@ -247,7 +247,7 @@
   align-items: center;
   position: fixed;
   bottom: 0;
-  margin-left: - $spacing-sm;
+  margin-left: -$spacing-sm;
   height: rem(56px);
   width: rem(300px);
   padding: $spacing-sm;
@@ -258,4 +258,34 @@
 
 .play-button {
   width: 100%;
+}
+
+.img-icon--map-type {
+  width: rem(32px);
+  height: rem(32px);
+  background-image: url("#{$img-path}/common/icon_map-type.png");
+}
+
+.toggle-button__item:not(:disabled):hover .img-icon--map-type {
+  background-position-y: rem(-32px);
+}
+
+.toggle-button__item--selected .img-icon--map-type {
+  background-position-y: rem(-32px);
+}
+
+.img-icon--map-type.map-openstreetmap {
+  background-position-x: 0;
+}
+
+.img-icon--map-type.map-naver {
+  background-position-x: rem(-32px);
+}
+
+.img-icon--map-type.map-google {
+  background-position-x: rem(-64px);
+}
+
+.img-icon--map-type.map-ngii {
+  background-position-x: rem(-96px);
 }
