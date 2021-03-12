@@ -1,6 +1,6 @@
 .tooltip {
   z-index: z("tooltip");
-  position: relative;
+  position: absolute;
   padding: $spacing-xs;
   background-color: $text-03;
   border-radius: 4px;
