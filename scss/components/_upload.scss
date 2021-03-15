@@ -220,6 +220,12 @@
   color: $text-02;
 }
 
+.upload-alt__thumbnail {
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  margin-left: $spacing-xs;
+}
 // -------------------------
 // upload-preview
 // -------------------------
