@@ -78,7 +78,7 @@
 // -------------------------
 // Studio 컴포넌트 스타일 overwrite
 // -------------------------
-.studio-component {
+.canvas-object {
   .tag {
     &:hover:not(:disabled) {
       color: $text-03;
