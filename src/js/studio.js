@@ -42,7 +42,7 @@ requirePngAll(require.context('../style-product/images/common/', true, /\.png$/)
 // toggle variation
 const beforeSelectElement = document.querySelectorAll(".toggle-switch__switch, .toggle-button__item");
 const afterSelectSuffix = "--selected";
-const beforeOpenElement = document.querySelectorAll(".accordion__head, .select");
+const beforeOpenElement = document.querySelectorAll(".accordion__head, .select, .time-picker");
 const afterOpenSuffix = "--open";
 
 // 토글 버튼 클릭시 --selected 추가

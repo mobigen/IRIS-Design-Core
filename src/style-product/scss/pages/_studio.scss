@@ -80,6 +80,12 @@
   overflow: auto;
 }
 
+.editor-layout-body__side-penal {
+  width: rem(300px);
+  background-color: $ui-01;
+  overflow: auto;
+}
+
 .editor-layout-body__canvas-wrap {
   flex: 1;
   padding: $layout-2xs;
@@ -92,124 +98,482 @@
   border: 1px solid $ui-04;
 }
 
-.editor-layout-body__side-penal {
-  width: rem(300px);
-  background-color: $ui-01;
+#canvas-area {
+  background-image: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) 1px, transparent 0, transparent 10px),
+    repeating-linear-gradient(-90deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) 1px, transparent 0, transparent 10px);
+  background-size: 10px 10px;
+  background-position: 1px 1px;
+}
+
+// -------------------------
+// 객체 기본 box 스타일
+// -------------------------
+.basic-drag {
+  border: 1px solid $secondary;
+  background-color: rgba($secondary, 0.15);
+  position: absolute;
+}
+
+.multi-drag {
+  border: 1px solid $secondary;
+  position: absolute;
+}
+
+.group-component {
+  border: 1px dashed $secondary;
+  position: absolute;
+}
+
+.prevent-click {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+
+.iframe-box {
+  position: absolute;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  overflow: hidden;
+}
+
+// -------------------------
+// 캔버스 내부 객체
+// -------------------------
+.canvas-object {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+// .canvas-object--active::after {
+//   content: "";
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   border: 1px solid $secondary;
+//   border-radius: 0;
+//   z-index: 4;
+//   pointer-events: none;
+//   margin: -1px;
+//   user-select: auto;
+// }
+
+.canvas-object-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: auto;
+  bottom: auto;
+  width: 100%;
+  height: 100%;
+  // z-index: 5;
+}
+
+.canvas-object-inner__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: rem(40px);
+  height: rem(40px);
+}
+
+.canvas-object--active .canvas-object-inner__icon {
+  fill: $secondary;
+}
+
+// 기본 박스 스타일들
+.object-area,
+.object-image,
+.object-renew,
+.object-map {
+  background: $odd-row;
+  border: 1px solid transparent;
+
+  &:hover:not([preview]) {
+    border: 1px solid $secondary;
+
+    .canvas-object-inner__icon {
+      fill: $secondary;
+    }
+  }
+
+  &.canvas-object--active {
+    background-color: $ui-01;
+  }
+}
+
+.object-list {
+  background: $ui-02;
+  border: 1px solid transparent;
+
+  &:hover:not([preview]) {
+    border: 1px solid $secondary;
+
+    .canvas-object-inner__icon {
+      fill: $secondary;
+    }
+  }
+}
+
+.object-html {
+  background: $ui-02;
+  border: 1px solid $ui-04;
+
+  &:hover:not([preview]) {
+    border: 1px solid $secondary;
+
+    .canvas-object-inner__icon {
+      fill: $secondary;
+    }
+  }
+}
+
+// html
+// TODO: BEM 적용 및 개선 필요
+.html-view {
+  text-align: left;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.html-view .layer-button {
+  position: absolute;
+  text-align: right;
+  z-index: 8;
+  top: 12px;
+  right: 12px;
+}
+
+.html-view pre {
+  border: 0;
+  padding: 10px;
+  text-align: left;
+  height: 100%;
+  white-space: pre-wrap;
+  word-break: break-all;
   overflow: auto;
 }
 
-// 객체 기본 box 스타일
-// TODO: box tool 클래스 비효율적, 개발파트와 협의후 studio-component 와 같은 클래스로 개선하면 어떨까?
-.editor-layout .tool {
-  position: absolute;
-  top: 0;
-  left: 0;
+.html-view .html-draw {
+  border: 0;
+  padding: 10px;
+  text-align: left;
+  height: 100%;
+  overflow: auto;
 }
 
-.editor-layout .tool.active:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
+// renew
+.object-renew--filled {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+
+.renew-time {
+  color: $text-02;
+}
+
+.renew-time__title {
+  color: $text-02;
+}
+
+.renew-time__info-item:not(:last-child) {
+  margin-right: $spacing-sm;
+}
+
+.renew-time__info-time {
+  @include font-weight("regular");
+  margin-left: $spacing-xs;
+}
+
+// label
+.object-label {
+  border: 1px dashed $ui-04;
+
+  &:hover:not([preview]) {
+    border: 1px solid $secondary;
+
+    .canvas-object-inner__icon {
+      fill: $secondary;
+    }
+  }
+}
+
+.object-label__align-box[contenteditable] {
+  user-select: text;
+}
+
+// ellipse
+.object-ellipse {
+  border-radius: 50%;
+}
+
+.object-select {
+}
+
+.object-select .select,
+.object-datetime-picker .date-picker,
+.object-datetime-picker .date-picker-selector {
   width: 100%;
   height: 100%;
-  border: 1px solid $ui-04;
-  border-radius: 0;
-  z-index: 4;
-  pointer-events: none;
-  margin: -1px;
 }
 
-.report .tool.move {
+.object-select .select-selector {
+  height: 100%;
+}
+
+.object-input .text-input {
+  width: 100%;
+  height: 100%;
+}
+
+.object-tab {
+}
+
+.object-tab .tab {
+  width: 100%;
+  height: 100%;
+}
+
+.object-fileupload .upload {
+  width: 100%;
+  height: 100%;
+}
+
+.object-button .button {
+  width: 100%;
+  height: 100%;
+}
+
+.object-map__move-buttons {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 6;
+}
+
+.object-map__layer-name {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  color: $text-01;
+  font-weight: 400;
+  padding: 3px 4px;
+}
+
+.object-map__layer-name-wrap {
+  position: absolute;
+  top: 12px;
+  left: 54px;
+  z-index: 6;
+}
+
+.object-hidden {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: $spacing-2xs $spacing-sm;
+  background-color: $ui-01;
+  border: 1px dashed $ui-04;
+  color: $text-05;
+
+  &:hover:not([preview]) {
+    border: 1px solid $secondary;
+
+    .canvas-object-inner__icon {
+      fill: $secondary;
+    }
+  }
+
+  &.canvas-object--active {
+    background-color: $ui-01;
+  }
+}
+
+.object-hidden__popout-button {
+  display: none;
+  padding: 0;
+  margin-left: $spacing-3xs;
+
+  .svg-icon {
+    fill: $secondary;
+  }
+}
+
+.object-hidden__text {
+  @include text-overflow;
+}
+
+.object-hidden--loaded {
+  color: $secondary;
+
+  .object-hidden__icon {
+    fill: $secondary;
+  }
+
+  .object-hidden__popout-button {
+    display: inline-flex;
+  }
+}
+
+.object-visible {
+  border-style: solid;
+}
+
+// -------------------------
+// canvas-object별 재정의
+// -------------------------
+.canvas-object .list,
+.canvas-object .tags {
+  width: 100%;
+  height: 100%;
+}
+
+.canvas-object .tags,
+.canvas-object .checkboxs,
+.canvas-object .radios {
+  height: 100%;
+  padding: $spacing-2xs;
+  overflow: auto;
+}
+
+// -------------------------
+// canvas-object status
+// -------------------------
+.canvas-object.move {
   opacity: 0.5;
 }
 
-.editor-layout .tool.active span.tl,
-.editor-layout .tool.active span.tc,
-.editor-layout .tool.active span.tr,
-.editor-layout .tool.active span.cl,
-.editor-layout .tool.active span.cr,
-.editor-layout .tool.active span.bl,
-.editor-layout .tool.active span.bc,
-.editor-layout .tool.active span.br {
+.canvas-object--active {
+  border: 1px solid $secondary;
+}
+
+.canvas-object--active span.tl,
+.canvas-object--active span.tc,
+.canvas-object--active span.tr,
+.canvas-object--active span.cl,
+.canvas-object--active span.cr,
+.canvas-object--active span.bl,
+.canvas-object--active span.bc,
+.canvas-object--active span.br {
   position: absolute;
   width: 9px;
   height: 9px;
-  border: 1px solid $ui-04;
+  border: 1px solid $secondary;
   background: $ui-01;
   z-index: 5;
 }
 
-.editor-layout .tool.active span.tl {
+.canvas-object--active span.tl {
   top: 0;
   left: 0;
   margin: -4px 0 0 -4px;
 }
 
-.editor-layout .tool.active span.tc {
+.canvas-object--active span.tc {
   top: 0;
   left: 50%;
   margin: -4px 0 0 -4px;
 }
 
-.editor-layout .tool.active span.tr {
+.canvas-object--active span.tr {
   top: 0;
   right: 0;
   margin: -4px -4px 0 0;
 }
 
-.editor-layout .tool.active span.cl {
+.canvas-object--active span.cl {
   top: 50%;
   left: 0;
   margin: -4px 0 0 -4px;
 }
 
-.editor-layout .tool.active span.cr {
+.canvas-object--active span.cr {
   top: 50%;
   right: 0;
   margin: -4px -4px 0 0;
 }
 
-.editor-layout .tool.active span.bl {
+.canvas-object--active span.bl {
   bottom: 0;
   left: 0;
   margin: 0 0 -4px -4px;
 }
 
-.editor-layout .tool.active span.bc {
+.canvas-object--active span.bc {
   bottom: 0;
   left: 50%;
   margin: 0 0 -4px -4px;
 }
 
-.editor-layout .tool.active span.br {
+.canvas-object--active span.br {
   bottom: 0;
   right: 0;
   margin: 0 -4px -4px 0;
 }
 
-.editor-layout .box {
-  user-select: none;
+.canvas-object--connected::after,
+.canvas-object--unconnected::after,
+.canvas-object--selected::after,
+.canvas-object--deselected::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  pointer-events: none;
 }
 
-.editor-layout .box {
-  user-select: auto;
+.canvas-object--deselected::after {
+  background-color: rgba($ui-02, 0.6);
+  // box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%); //TODO: 디자인 가이드 적용 필요
 }
 
-.editor-layout .box .text-area .inner-text[contenteditable] {
-  user-select: text;
+.canvas-object--selected::after {
+  background-color: rgba($ui-02, 0.6);
 }
 
-.editor-layout .tool.area {
-  background: $ui-01;
-  // background: $ui-01 url("#{$img-path}/sherman/icon_editor-layout_area_normal.png") no-repeat center;
-  border: 1px solid transparent;
+.canvas-object--unconnected::after {
+  background-color: rgba($ui-02, 0.6);
+  z-index: 10; // TODO: z-index function 적용
 }
 
-.editor-layout .tool.area:hover:not([preview]) {
-  border: 1px solid $ui-04;
+.canvas-object--connected {
+  border: 1px solid $secondary;
+  color: $secondary;
+
+  &::after {
+    background-color: rgba($secondary, 0.1);
+  }
+
+  .object-hidden__icon {
+    fill: $secondary;
+  }
 }
 
+.canvas-object > .checkbox {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 11;
+}
+
+// -------------------------
+// Side panel
+// -------------------------
 // toggle-button과 유사한 스타일이지만 selected 불가능한 스타일
 .visual-style-preview {
   display: flex;
