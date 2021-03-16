@@ -1,3 +1,2468 @@
-<div class="editor-layout-body__canvas-wrap">
-  <div class="editor-layout-body__canvas" style="width: 1920px; height: 1200px;">캔버스 영역</div>
+<div id="report-canvas" class="editor-layout-body__canvas-wrap">
+  <div class="editor-layout-body__canvas" style="width: 1920px; height: 1200px;">
+    <div style="display:block;position:relative;width:100%;height:100%;">
+      <div style="display:block;position:relative;width:100%;height:100%;">
+        <div id="canvas-area" style="width: 100%; height: 100%; background-color: rgb(255, 255, 255);">
+          <div class="canvas-object data canvas-object--active unconnected" style="width: 300px; height: 150px;transform: translate(30px, 20px);">
+          </div>
+          <div class="canvas-object object-area unconnected" style="width: 300px; height: 150px;transform: translate(340px, 20px);">
+          </div>
+
+          <!-- old -->
+          <!--  차트  -->
+          <span style="position: absolute; top: 30px; left: 50px;">차트(빈 영역)</span>
+          <div class="box tool area" style="
+                top: 50px;
+                left: 50px;
+                width: 200px;
+                height: 150px;
+              ">
+            <div style="width: 100%; height: 100%;"></div>
+          </div>
+
+          <!-- 박스 클릭 시 사이즈 조절 박스 활성화 -->
+          <span style="position: absolute; top: 30px; left: 260px;">차트(selected/활성화)</span>
+          <div class="tool area active chart-bg-none" style="
+                top: 50px;
+                left: 260px;
+                width: 200px;
+                height: 150px;
+              ">
+            <div style="width: 100%; height: 100%;"></div>
+            <!-- 크기 조절 상자 -->
+            <span class="tl"></span>
+            <span class="tc"></span>
+            <span class="tr"></span>
+            <span class="cl"></span>
+            <span class="cr"></span>
+            <span class="bl"></span>
+            <span class="bc"></span>
+            <span class="br"></span>
+            <!-- //크기 조절 상자 -->
+          </div>
+          <!-- // 박스 클릭 시 사이즈 조절 박스 활성화 -->
+
+          <span style="position: absolute; top: 30px; left: 470px;">차트(loading)</span>
+          <div class="box tool area" style="
+                top: 50px;
+                left: 470px;
+                width: 200px;
+                height: 150px;
+              ">
+            <div class="mui-loading-overlay">
+              <div class="mui-loading mui-loading-sm">
+                <div class="mui-loading-spinner"></div>
+              </div>
+            </div>
+          </div>
+          <!-- //차트  -->
+
+          <!--  리스트  -->
+          <span style="position: absolute; top: 230px; left: 50px;">리스트(빈 영역 / 타이틀이 없는 경우)</span>
+          <div class="box tool list" style="
+                top: 250px;
+                left: 50px;
+                width: 200px;
+                height: 150px;
+              ">
+            <div class="data-list">
+              <!-- 타이틀 사용하지 않는 경우 remove-title 클래스 추가 / 검색창을 사용하지 않는 경우 remove-filter-group 클래스 추가  -->
+              <div class="data-list-head remove-title">
+                <h3 class="mu-type-omega ellipsis-end" title="title"></h3>
+                <div class="data-list-head-filter-group">
+                  <div class="mu-input-icon">
+                    <input type="text" placeholder="검색" class="mu-input" />
+                    <i class="mu-icon search"></i>
+                  </div>
+                  <button type="button" class="mu-btn mu-btn-icon mu-btn-icon-only" title="리스트 정보 새로고침">
+                    <i class="mu-icon repeat"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="data-list-body">
+                <ul class="mu-selectbox-list"></ul>
+              </div>
+            </div>
+          </div>
+
+          <span style="position: absolute; top: 410px; left: 50px;">리스트(빈 영역) - 선택시</span>
+          <div class="box tool list active" style="
+                top: 430px;
+                left: 50px;
+                width: 200px;
+                height: 150px;
+              ">
+            <div class="data-list">
+              <!-- 타이틀 사용하지 않는 경우 remove-title 클래스 추가 / 검색창을 사용하지 않는 경우 remove-filter-group 클래스 추가  -->
+              <div class="data-list-head remove-title">
+                <h3 class="mu-type-omega ellipsis-end"></h3>
+                <div class="data-list-head-filter-group">
+                  <div class="mu-input-icon">
+                    <input type="text" placeholder="검색" class="mu-input" />
+                    <i class="mu-icon search"></i>
+                  </div>
+                  <button type="button" class="mu-btn mu-btn-icon mu-btn-icon-only" title="리스트 정보 새로고침">
+                    <i class="mu-icon repeat"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="data-list-body">
+                <ul class="mu-selectbox-list"></ul>
+              </div>
+            </div>
+            <!-- 크기 조절 상자 -->
+            <span class="tl"></span>
+            <span class="tc"></span>
+            <span class="tr"></span>
+            <span class="cl"></span>
+            <span class="cr"></span>
+            <span class="bl"></span>
+            <span class="bc"></span>
+            <span class="br"></span>
+            <!-- //크기 조절 상자 -->
+          </div>
+          <span style="position: absolute; top: 230px; left: 260px;">리스트 title 없는 경우</span>
+          <div class="box tool list" style="
+                top: 250px;
+                left: 260px;
+                width: 200px;
+                height: 300px;
+              ">
+            <div class="data-list">
+              <!-- 타이틀 사용하지 않는 경우 remove-title 클래스 추가 / 검색창을 사용하지 않는 경우 remove-filter-group 클래스 추가  -->
+              <div class="data-list-head remove-title">
+                <h3 class="mu-type-omega ellipsis-end" title="title"></h3>
+                <div class="data-list-head-filter-group">
+                  <div class="mu-input-icon">
+                    <input type="text" placeholder="search" class="mu-input" />
+                    <i class="mu-icon search"></i>
+                  </div>
+                  <button type="button" class="mu-btn mu-btn-icon mu-btn-icon-only" title="리스트 정보 새로고침">
+                    <i class="mu-icon repeat"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="data-list-body">
+                <ul class="mu-selectbox-list">
+                  <li class="mu-list-item">list-item</li>
+                  <li class="mu-list-item is-selected">list-item</li>
+                  <li class="mu-list-item">list-item</li>
+                  <li class="mu-list-item">list-item</li>
+                  <li class="mu-list-item">list-item</li>
+                  <li class="mu-list-item">list-item</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <span style="position: absolute; top: 230px; left: 470px;">리스트 title 있는 경우</span>
+          <div class="box tool list" style="
+                top: 250px;
+                left: 470px;
+                width: 200px;
+                height: 150px;
+              ">
+            <div class="data-list">
+              <!-- 타이틀 사용하지 않는 경우 remove-title 클래스 추가 / 검색창을 사용하지 않는 경우 remove-filter-group 클래스 추가  -->
+              <div class="data-list-head">
+                <h3 class="mu-type-omega ellipsis-end" title="data-list">
+                  data-list has-title
+                </h3>
+                <div class="data-list-head-filter-group">
+                  <div class="mu-input-icon">
+                    <input type="text" placeholder="search" class="mu-input" />
+                    <i class="mu-icon search"></i>
+                  </div>
+                  <button type="button" class="mu-btn mu-btn-icon mu-btn-icon-only" title="리스트 정보 새로고침">
+                    <i class="mu-icon repeat"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="data-list-body">
+                <ul class="mu-selectbox-list">
+                  <li class="mu-list-item">list-item</li>
+                  <li class="mu-list-item">list-item</li>
+                  <li class="mu-list-item">list-item</li>
+                  <li class="mu-list-item">list-item</li>
+                  <li class="mu-list-item">list-item</li>
+                  <li class="mu-list-item">list-item</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- // 리스트  -->
+
+          <!-- 태그  -->
+          <!-- NOTE: Tag 컴포넌트는 기본 상태일 때 `mui-tag-primary`, 선택된 상태일 때 `mui-tag-primary` 클래스 사용중 -->
+          <!-- Tag: 초기 enabled 상태 -->
+          <span style="position: absolute; top: 30px; left: 680px;">Tag: 초기 enabled 상태</span>
+          <div class="box tool tag" style="
+                top: 50px;
+                left: 680px;
+                width: 200px;
+                height: 150px;
+              ">
+            <!-- 가로 타입일 때 horizontal 클래스 추가 -->
+            <div class="mui-tag-group horizontal">
+              <div class="mui-tag-block">
+                <span class="mui-tag mui-tag-primary"></span>
+              </div>
+            </div>
+          </div>
+          <!-- //Tag: 초기 enabled 상태 -->
+          <!-- Tag: 박스 클릭 시 사이즈 조절 박스 활성화 / 가로 배열 -->
+          <span style="position: absolute; top: 30px; left: 890px;">Tag: 가로형
+          </span>
+          <div class="box tool tag active" style="
+                top: 50px;
+                left: 890px;
+                width: 200px;
+                height: 150px;
+              ">
+            <div class="mui-tag-group horizontal">
+              <!-- 기본 상태 -->
+              <div class="mui-tag-block">
+                <span class="mui-tag mui-tag-primary">Tag A</span>
+              </div>
+              <!-- 활성화된 상태 -->
+              <div class="mui-tag-block">
+                <span class="mui-tag mui-tag-default">Tag BB</span>
+              </div>
+              <div class="mui-tag-block">
+                <span class="mui-tag mui-tag-primary">Tag CCC</span>
+              </div>
+              <div class="mui-tag-block">
+                <span class="mui-tag mui-tag-primary">Tag DDDD</span>
+              </div>
+              <div class="mui-tag-block">
+                <span class="mui-tag mui-tag-primary">Tag EEEEE</span>
+              </div>
+              <div class="mui-tag-block">
+                <span class="mui-tag mui-tag-primary">Tag FFFFFF</span>
+              </div>
+              <div class="mui-tag-block">
+                <span class="mui-tag mui-tag-primary">Tag GGGGGGG</span>
+              </div>
+              <div class="mui-tag-block">
+                <span class="mui-tag mui-tag-primary">Tag HHHHHHHH</span>
+              </div>
+              <div class="mui-tag-block">
+                <span class="mui-tag mui-tag-primary">Tag IIIIIIIII</span>
+              </div>
+              <div class="mui-tag-block">
+                <span class="mui-tag mui-tag-primary">Tag JJJJJJJJJJ</span>
+              </div>
+            </div>
+            <!-- 크기 조절 상자 -->
+            <span class="tl"></span>
+            <span class="tc"></span>
+            <span class="tr"></span>
+            <span class="cl"></span>
+            <span class="cr"></span>
+            <span class="bl"></span>
+            <span class="bc"></span>
+            <span class="br"></span>
+            <!-- //크기 조절 상자 -->
+          </div>
+          <!-- // Tag: 박스 클릭 시 사이즈 조절 박스 활성화 / 가로 배열 -->
+          <!-- Tag: 박스 클릭 시 사이즈 조절 박스 활성화 / 세로 배열 -->
+          <span style="position: absolute; top: 30px; left: 1100px;">Tag: 세로형
+          </span>
+          <div class="box tool tag" style="
+                top: 50px;
+                left: 1100px;
+                width: 200px;
+                height: 150px;
+              ">
+            <div class="mui-tag-group vertical">
+              <div class="mui-tag-block">
+                <span class="mui-tag mui-tag-default">Tag A</span>
+              </div>
+              <div class="mui-tag-block">
+                <span class="mui-tag mui-tag-default">Tag BB</span>
+              </div>
+              <div class="mui-tag-block">
+                <span class="mui-tag mui-tag-default">Tag CCC</span>
+              </div>
+              <div class="mui-tag-block">
+                <span class="mui-tag mui-tag-default">Tag DDDD</span>
+              </div>
+              <div class="mui-tag-block">
+                <span class="mui-tag mui-tag-default">Tag EEEEE</span>
+              </div>
+              <div class="mui-tag-block">
+                <span class="mui-tag mui-tag-default">Tag FFFFFF</span>
+              </div>
+              <div class="mui-tag-block">
+                <span class="mui-tag mui-tag-default">Tag GGGGGGG</span>
+              </div>
+              <div class="mui-tag-block">
+                <span class="mui-tag mui-tag-primary">Tag HHHHHHHH</span>
+              </div>
+              <div class="mui-tag-block">
+                <span class="mui-tag mui-tag-primary">Tag IIIIIIIII</span>
+              </div>
+              <div class="mui-tag-block">
+                <span class="mui-tag mui-tag-primary">Tag JJJJJJJJJJ</span>
+              </div>
+            </div>
+            <!-- 크기 조절 상자 -->
+            <span class="tl"></span>
+            <span class="tc"></span>
+            <span class="tr"></span>
+            <span class="cl"></span>
+            <span class="cr"></span>
+            <span class="bl"></span>
+            <span class="bc"></span>
+            <span class="br"></span>
+            <!-- //크기 조절 상자 -->
+          </div>
+          <!-- // Tag: 박스 클릭 시 사이즈 조절 박스 활성화 / 세로 배열 -->
+          <!-- Tag: deselect -->
+          <span style="position: absolute; top: 230px; left: 680px;">Tag: deselect</span>
+          <div class="box tool tag deselect" style="
+                top: 250px;
+                left: 680px;
+                width: 200px;
+                height: 50px;
+              ">
+            <div class="mui-tag-group horizontal">
+              <div class="mui-tag-block">
+                <span class="mui-tag mui-tag-primary">Tag A</span>
+              </div>
+              <div class="mui-tag-block">
+                <span class="mui-tag mui-tag-primary">Tag BB</span>
+              </div>
+              <div class="mui-tag-block">
+                <span class="mui-tag mui-tag-primary">Tag CCC</span>
+              </div>
+              <div class="mui-tag-block">
+                <span class="mui-tag mui-tag-primary">Tag DDDD</span>
+              </div>
+              <div class="mui-tag-block">
+                <span class="mui-tag mui-tag-primary">Tag EEEEE</span>
+              </div>
+              <div class="mui-tag-block">
+                <span class="mui-tag mui-tag-primary">Tag FFFFFF</span>
+              </div>
+              <div class="mui-tag-block">
+                <span class="mui-tag mui-tag-primary">Tag GGGGGGG</span>
+              </div>
+              <div class="mui-tag-block">
+                <span class="mui-tag mui-tag-primary">Tag HHHHHHHH</span>
+              </div>
+              <div class="mui-tag-block">
+                <span class="mui-tag mui-tag-primary">Tag IIIIIIIII</span>
+              </div>
+              <div class="mui-tag-block">
+                <span class="mui-tag mui-tag-primary">Tag JJJJJJJJJJ</span>
+              </div>
+            </div>
+            <!-- 크기 조절 상자 -->
+            <!-- <span class="tl"></span>
+            <span class="tc"></span>
+            <span class="tr"></span>
+            <span class="cl"></span>
+            <span class="cr"></span>
+            <span class="bl"></span>
+            <span class="bc"></span>
+            <span class="br"></span> -->
+            <!-- //크기 조절 상자 -->
+            <div class="mu-checkbox">
+              <input type="checkbox" id="_tab_ckb" />
+              <label for="_tab_ckb"></label>
+            </div>
+          </div>
+          <!-- // Tag: 박스 클릭 시 사이즈 조절 박스 활성화 / 가로 배열 -->
+          <!-- Tag: 박스 클릭 시 사이즈 조절 박스 활성화 / 세로 배열 -->
+          <span style="position: absolute; top: 230px; left: 890px;">Tag: select</span>
+          <div class="box tool tag select" style="
+                top: 250px;
+                left: 890px;
+                width: 200px;
+                height: 50px;
+              ">
+            <div class="mui-tag-group vertical">
+              <div class="mui-tag-block">
+                <span class="mui-tag mui-tag-primary">Tag A</span>
+              </div>
+              <div class="mui-tag-block">
+                <span class="mui-tag mui-tag-primary">Tag BB</span>
+              </div>
+              <div class="mui-tag-block">
+                <span class="mui-tag mui-tag-primary">Tag CCC</span>
+              </div>
+              <div class="mui-tag-block">
+                <span class="mui-tag mui-tag-primary">Tag DDDD</span>
+              </div>
+              <div class="mui-tag-block">
+                <span class="mui-tag mui-tag-primary">Tag EEEEE</span>
+              </div>
+              <div class="mui-tag-block">
+                <span class="mui-tag mui-tag-primary">Tag FFFFFF</span>
+              </div>
+              <div class="mui-tag-block">
+                <span class="mui-tag mui-tag-primary">Tag GGGGGGG</span>
+              </div>
+              <div class="mui-tag-block">
+                <span class="mui-tag mui-tag-primary">Tag HHHHHHHH</span>
+              </div>
+              <div class="mui-tag-block">
+                <span class="mui-tag mui-tag-primary">Tag IIIIIIIII</span>
+              </div>
+              <div class="mui-tag-block">
+                <span class="mui-tag mui-tag-primary">Tag JJJJJJJJJJ</span>
+              </div>
+            </div>
+            <!-- 크기 조절 상자 -->
+            <!-- <span class="tl"></span>
+            <span class="tc"></span>
+            <span class="tr"></span>
+            <span class="cl"></span>
+            <span class="cr"></span>
+            <span class="bl"></span>
+            <span class="bc"></span>
+            <span class="br"></span> -->
+            <!-- //크기 조절 상자 -->
+            <div class="mu-checkbox">
+              <input type="checkbox" checked id="_tab_ckb" />
+              <label for="_tab_ckb"></label>
+            </div>
+          </div>
+          <!-- // Tag: 박스 클릭 시 사이즈 조절 박스 활성화 / 세로 배열 -->
+          <!-- // 태그  -->
+
+          <!-- HTML -->
+          <span style="position: absolute; top: 30px; left: 1320px;">영역 안에서 HTML 코드를 입력</span>
+          <div class="box tool html active" style="
+                top: 50px;
+                left: 1320px;
+                width: 250px;
+                height: 450px;
+              ">
+            <div class="html-view">
+              <!-- //html display -->
+              <div class="html-draw">
+                <div style="width: 800px; height: 430px;">
+                  <h4>
+                    <div>
+                      <span class="mu-type-strong">IRIS</span> Design
+                      System
+                    </div>
+                  </h4>
+                  <p>Style</p>
+                  <b>Color</b>
+                  <b>Typography</b>
+                  <p>Components</p>
+                  <b>Alert</b>
+                  <b>Badge</b>
+                  <h4>
+                    <div>
+                      <span class="mu-type-strong">IRIS</span> Design
+                      System
+                    </div>
+                  </h4>
+                  <p>Style</p>
+                  <b>Color</b>
+                  <b>Typography</b>
+                  <p>Components</p>
+                  <b>Alert</b>
+                  <b>Badge</b>
+                  <h4>
+                    <div>
+                      <span class="mu-type-strong">IRIS</span> Design
+                      System
+                    </div>
+                  </h4>
+                  <p>Style</p>
+                  <b>Color</b>
+                  <b>Typography</b>
+                  <p>Components</p>
+                  <b>Alert</b>
+                  <b>Badge</b>
+                  <h4>
+                    <div>
+                      <span class="mu-type-strong">IRIS</span> Design
+                      System Design System Design System Design System
+                      Design System Design System Design System Design
+                      System
+                    </div>
+                  </h4>
+                  <p>Style</p>
+                  <b>Color</b>
+                  <b>Typography</b>
+                  <p>Components</p>
+                  <b>Alert</b>
+                  <b>Badge</b>
+                  <h4>
+                    <div>
+                      <span class="mu-type-strong">IRIS</span> Design
+                      System
+                    </div>
+                  </h4>
+                  <p>Style</p>
+                  <b>Color</b>
+                  <b>Typography</b>
+                  <p>Components</p>
+                  <b>Alert</b>
+                  <b>Badge</b>
+                  <h4>
+                    <div>
+                      <span class="mu-type-strong">IRIS</span> Design
+                      System
+                    </div>
+                  </h4>
+                  <p>Style</p>
+                  <b>Color</b>
+                  <b>Typography</b>
+                  <p>Components</p>
+                  <b>Alert</b>
+                  <b>Badge</b>
+                  <h4>
+                    <div>
+                      <span class="mu-type-strong">IRIS</span> Design
+                      System
+                    </div>
+                  </h4>
+                  <p>Style</p>
+                  <b>Color</b>
+                  <b>Typography</b>
+                  <p>Components</p>
+                  <b>Alert</b>
+                  <b>Badge</b>
+                  <h4>
+                    <div>
+                      <span class="mu-type-strong">IRIS</span> Design
+                      System Design System Design System Design System
+                      Design System Design System Design System Design
+                      System
+                    </div>
+                  </h4>
+                  <p>Style</p>
+                  <b>Color</b>
+                  <b>Typography</b>
+                  <p>Components</p>
+                  <b>Alert</b>
+                  <b>Badge</b>
+                </div>
+              </div>
+              <div class="layer-button">
+                <!-- HTML 코드보기 : HTML 그리기, 버튼토글 -->
+                <button type="button" class="mu-btn mu-btn-default">
+                  <i class="mu-icon-img htmlcode"></i> HTML 코드보기
+                </button>
+                <div style="top: 40px;">
+                  <button type="button" class="mu-btn mu-btn-default">
+                    <i class="mu-icon desktop"></i> HTML 그리기
+                  </button>
+                </div>
+                <!-- HTML 코드보기 : HTML 그리기, 버튼토글 -->
+              </div>
+            </div>
+            <!-- 크기 조절 상자 -->
+            <span class="tl"></span>
+            <span class="tc"></span>
+            <span class="tr"></span>
+            <span class="cl"></span>
+            <span class="cr"></span>
+            <span class="bl"></span>
+            <span class="bc"></span>
+            <span class="br"></span>
+            <!-- //크기 조절 상자 -->
+          </div>
+
+          <span style="position: absolute; top: 30px; left: 1590px;">HTML 코드보기 화면</span>
+          <div class="box tool html" style="
+                top: 50px;
+                left: 1590px;
+                width: 250px;
+                height: 450px;
+              ">
+            <div class="html-view">
+              <!-- //html code view -->
+              <pre>
+              &lt;!DOCTYPE html&gt;
+              &lt;html lang="ko"&gt;
+              &lt;head&gt;
+                &lt;meta charset="UTF-8"&gt;
+                &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+                &lt;link rel="stylesheet" type="text/css" href="../assets/css/styleguide/style.min.css"&gt;
+                &lt;itle&gt;IRIS - Style Guide&lt;/itle&gt;
+              &lt;/head&gt;
+              &lt;body&gt;
+                &lt;div class="wrap"&gt;
+                  &lt;!-- navigation --&gt;
+                  &lt;nav class="side-nav"&gt;
+                    &lt;div class="side-nav_top-container"&gt;
+                      &lt;a class="side-nav_logo mu-type-delta" href="/"&gt;&lt;span class="mu-type-strong"&gt;IRIS&lt;/span&gt; Design System&lt;/a&gt;
+                    &lt;/div&gt;
+                    &lt;div class="side-nav_bottom-container"&gt;
+                      &lt;ul class="side-nav_main-nav"&gt;
+                        &lt;li class="main-nave-item"&gt;
+                          &lt;p class="main-nave-item_heading"&gt;Style&lt;/p&gt;
+                          &lt;ul class="main-nav_sub-nav"&gt;
+                            &lt;li class="sub-nav_item"&gt;
+                              &lt;a class="sub-nav_item-link" href="#page_color"&gt;Color&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li class="sub-nav_item"&gt;
+                              &lt;a class="sub-nav_item-link" href="#page_typoghraphy"&gt;Typography&lt;/a&gt;
+                            &lt;/li&gt;
+                          &lt;/ul&gt;
+                        &lt;/li&gt;
+                      &lt;/ul&gt;
+                    &lt;/div&gt;
+                  &lt;/nav&gt;
+              </pre>
+              <div class="layer-button">
+                <!-- HTML 코드보기 : HTML 그리기, 버튼토글 -->
+                <div>
+                  <button type="button" class="mu-btn mu-btn-default">
+                    <i class="mu-icon-img htmlcode"></i> HTML 코드보기
+                  </button>
+                </div>
+                <div style="top: 40px;">
+                  <button type="button" class="mu-btn mu-btn-default">
+                    <i class="mu-icon desktop"></i> HTML 그리기
+                  </button>
+                </div>
+                <!-- HTML 코드보기 : HTML 그리기, 버튼토글 -->
+              </div>
+            </div>
+          </div>
+          <!-- // HTML -->
+
+          <!-- Check-box -->
+          <span style="position: absolute; top: 540px; left: 1220px;">CheckBox 가로형</span>
+          <div class="box tool check-and-radio active" style="
+                top: 560px;
+                left: 1220px;
+                width: 252px;
+                height: 30px;
+              ">
+            <div class="mu-checkbox-group col">
+              <div class="mu-checkbox">
+                <input id="ck_1" checked="checked" type="checkbox" />
+                <label for="ck_1">check box01</label>
+              </div>
+              <div class="mu-checkbox">
+                <input id="ck_2" checked="" type="checkbox" />
+                <label for="ck_2">check box02</label>
+              </div>
+            </div>
+
+            <!-- 크기 조절 상자 -->
+            <span class="tl"></span>
+            <span class="tc"></span>
+            <span class="tr"></span>
+            <span class="cl"></span>
+            <span class="cr"></span>
+            <span class="bl"></span>
+            <span class="bc"></span>
+            <span class="br"></span>
+            <!-- //크기 조절 상자 -->
+          </div>
+          <!-- // Check-box 가로형 -->
+
+          <!-- Check-box 세로형 -->
+          <span style="position: absolute; top: 610px; left: 1430px;">CheckBox 세로형</span>
+          <div class="box tool check-and-radio active" style="
+                top: 630px;
+                left: 1430px;
+                width: 105px;
+                height: 50px;
+              ">
+            <div class="mu-checkbox-group row">
+              <div class="mu-checkbox">
+                <input id="ck_1" checked="checked" type="checkbox" />
+                <label for="ck_1">check box01</label>
+              </div>
+              <div class="mu-checkbox">
+                <input id="ck_2" checked="" type="checkbox" />
+                <label for="ck_2">check box02</label>
+              </div>
+              <div class="mu-checkbox">
+                <input id="ck_1" checked="checked" type="checkbox" />
+                <label for="ck_1">check box01</label>
+              </div>
+              <div class="mu-checkbox">
+                <input id="ck_2" checked="" type="checkbox" />
+                <label for="ck_2">check box02</label>
+              </div>
+            </div>
+
+            <!-- 크기 조절 상자 -->
+            <span class="tl"></span>
+            <span class="tc"></span>
+            <span class="tr"></span>
+            <span class="cl"></span>
+            <span class="cr"></span>
+            <span class="bl"></span>
+            <span class="bc"></span>
+            <span class="br"></span>
+            <!-- //크기 조절 상자 -->
+          </div>
+          <!-- // Check-box 세로형 -->
+
+          <!-- Check-box 가로형(select) -->
+          <span style="position: absolute; top: 540px; left: 1480px;">CheckBox 가로형 (select)</span>
+          <div class="box tool check-and-radio select" style="
+                top: 560px;
+                left: 1480px;
+                width: 202px;
+                height: 30px;
+              ">
+            <div class="mu-checkbox-group col">
+              <div class="mu-checkbox">
+                <input id="ck_1" checked="checked" type="checkbox" />
+                <label for="ck_1">check box01</label>
+              </div>
+              <div class="mu-checkbox">
+                <input id="ck_2" checked="" type="checkbox" />
+                <label for="ck_2">check box02</label>
+              </div>
+            </div>
+            <div class="mu-checkbox">
+              <input type="checkbox" checked="checked" id="_tab_ckb" />
+              <label for="_tab_ckb"></label>
+            </div>
+
+            <!-- 크기 조절 상자 -->
+            <!-- 
+            <span class="tl"></span>
+            <span class="tc"></span>
+            <span class="tr"></span>
+            <span class="cl"></span>
+            <span class="cr"></span>
+            <span class="bl"></span>
+            <span class="bc"></span>
+            <span class="br"></span> 
+            -->
+            <!-- //크기 조절 상자 -->
+          </div>
+          <!-- // Check-box 가로형(select) -->
+
+          <!-- Check-box 세로형 (select) -->
+          <span style="position: absolute; top: 610px; left: 1550px;">세로형 (select)</span>
+          <div class="box tool check-and-radio select" style="
+                top: 630px;
+                left: 1550px;
+                width: 105px;
+                height: 50px;
+              ">
+            <div class="mu-checkbox-group row">
+              <div class="mu-checkbox">
+                <input id="ck_1" checked="checked" type="checkbox" />
+                <label for="ck_1">check box01</label>
+              </div>
+              <div class="mu-checkbox">
+                <input id="ck_2" checked="" type="checkbox" />
+                <label for="ck_2">check box02</label>
+              </div>
+            </div>
+            <div class="mu-checkbox">
+              <input type="checkbox" checked="checked" id="_tab_ckb" />
+              <label for="_tab_ckb"></label>
+            </div>
+
+            <!-- 크기 조절 상자 -->
+            <!-- 
+              <span class="tl"></span>
+              <span class="tc"></span>
+              <span class="tr"></span>
+              <span class="cl"></span>
+              <span class="cr"></span>
+              <span class="bl"></span>
+              <span class="bc"></span>
+              <span class="br"></span> 
+              -->
+            <!-- //크기 조절 상자 -->
+          </div>
+          <!-- // Check-box 세로형 (select) -->
+
+          <!-- Check-box 가로형 (deselect) -->
+          <span style="position: absolute; top: 540px; left: 1690px;">CheckBox 가로형 (deselect)</span>
+          <div class="box tool check-and-radio deselect" style="
+                top: 560px;
+                left: 1690px;
+                width: 202px;
+                height: 30px;
+              ">
+            <div class="mu-checkbox-group col">
+              <div class="mu-checkbox">
+                <input id="ck_1" checked="checked" type="checkbox" />
+                <label for="ck_1">check box01</label>
+              </div>
+              <div class="mu-checkbox">
+                <input id="ck_2" checked="" type="checkbox" />
+                <label for="ck_2">check box02</label>
+              </div>
+            </div>
+            <div class="mu-checkbox">
+              <input type="checkbox" id="_tab_ckb" />
+              <label for="_tab_ckb"></label>
+            </div>
+
+            <!-- 크기 조절 상자 -->
+            <!-- 
+            <span class="tl"></span>
+            <span class="tc"></span>
+            <span class="tr"></span>
+            <span class="cl"></span>
+            <span class="cr"></span>
+            <span class="bl"></span>
+            <span class="bc"></span>
+            <span class="br"></span> 
+            -->
+            <!-- //크기 조절 상자 -->
+          </div>
+          <!-- // Check-box 가로형 (deselect) -->
+
+          <!-- Check-box 세로형 (deselect) -->
+          <span style="position: absolute; top: 610px; left: 1670px;">세로형 (deselect)</span>
+          <div class="box tool check-and-radio deselect" style="
+                top: 630px;
+                left: 1670px;
+                width: 105px;
+                height: 50px;
+              ">
+            <div class="mu-checkbox-group row">
+              <div class="mu-checkbox">
+                <input id="ck_1" checked="checked" type="checkbox" />
+                <label for="ck_1">check box01</label>
+              </div>
+              <div class="mu-checkbox">
+                <input id="ck_2" checked="" type="checkbox" />
+                <label for="ck_2">check box02</label>
+              </div>
+            </div>
+            <div class="mu-checkbox">
+              <input type="checkbox" id="_tab_ckb" />
+              <label for="_tab_ckb"></label>
+            </div>
+
+            <!-- 크기 조절 상자 -->
+            <!-- 
+              <span class="tl"></span>
+              <span class="tc"></span>
+              <span class="tr"></span>
+              <span class="cl"></span>
+              <span class="cr"></span>
+              <span class="bl"></span>
+              <span class="bc"></span>
+              <span class="br"></span> 
+              -->
+            <!-- //크기 조절 상자 -->
+          </div>
+          <!-- //Check-box 세로형 (deselect) -->
+
+          <!-- Radio-button 가로형 -->
+          <span style="position: absolute; top: 610px; left: 1220px;">Radio-button 가로형</span>
+          <div class="box tool check-and-radio active" style="
+                top: 630px;
+                left: 1220px;
+                width: 202px;
+                height: 30px;
+              ">
+            <div class="mu-radio-group col">
+              <div class="mu-radio">
+                <input id="ck_1" checked="checked" type="radio" />
+                <label for="ck_1">radio btn01</label>
+              </div>
+              <div class="mu-radio">
+                <input id="ck_2" type="radio" />
+                <label for="ck_2">radio btn02</label>
+              </div>
+            </div>
+            <!-- 크기 조절 상자 -->
+            <span class="tl"></span>
+            <span class="tc"></span>
+            <span class="tr"></span>
+            <span class="cl"></span>
+            <span class="cr"></span>
+            <span class="bl"></span>
+            <span class="bc"></span>
+            <span class="br"></span>
+            <!-- //크기 조절 상자 -->
+          </div>
+          <!-- Radio-button 가로형 -->
+
+          <!-- Radio-button 세로형 -->
+          <span style="position: absolute; top: 610px; left: 1790px;">Radio-button 세로형</span>
+          <div class="box tool check-and-radio active" style="
+                top: 630px;
+                left: 1790px;
+                width: 105px;
+                height: 50px;
+              ">
+            <div class="mu-radio-group row">
+              <div class="mu-radio">
+                <input id="ck_1" checked="checked" type="radio" />
+                <label for="ck_1">radio btn01</label>
+              </div>
+              <div class="mu-radio">
+                <input id="ck_2" type="radio" />
+                <label for="ck_2">radio btn02</label>
+              </div>
+              <div class="mu-radio">
+                <input id="ck_1" checked="checked" type="radio" />
+                <label for="ck_1">radio btn01</label>
+              </div>
+              <div class="mu-radio">
+                <input id="ck_2" type="radio" />
+                <label for="ck_2">radio btn02</label>
+              </div>
+            </div>
+            <!-- 크기 조절 상자 -->
+            <span class="tl"></span>
+            <span class="tc"></span>
+            <span class="tr"></span>
+            <span class="cl"></span>
+            <span class="cr"></span>
+            <span class="bl"></span>
+            <span class="bc"></span>
+            <span class="br"></span>
+            <!-- //크기 조절 상자 -->
+          </div>
+          <!-- Radio-button 세로형 -->
+          <!--// Check-box -->
+
+          <!-- image -->
+          <!-- image 1/6: Normal-Active -->
+          <span style="position: absolute; top: 710px; left: 1220px;">image: select</span>
+          <div class="box tool image active" style="
+                top: 730px;
+                left: 1220px;
+                width: 200px;
+                height: 150px;
+              ">
+            <!-- 크기 조절 상자 -->
+            <span class="tl"></span>
+            <span class="tc"></span>
+            <span class="tr"></span>
+            <span class="cl"></span>
+            <span class="cr"></span>
+            <span class="bl"></span>
+            <span class="bc"></span>
+            <span class="br"></span>
+            <!-- //크기 조절 상자 -->
+          </div>
+          <!-- // image 1/6: Normal-Active -->
+
+          <!-- image 2/6: Normal -->
+          <span style="position: absolute; top: 710px; left: 1430px;">image</span>
+          <div class="box tool image" style="
+                top: 730px;
+                left: 1430px;
+                width: 200px;
+                height: 150px;
+              ">
+            <!-- 크기 조절 상자 -->
+            <span class="tl"></span>
+            <span class="tc"></span>
+            <span class="tr"></span>
+            <span class="cl"></span>
+            <span class="cr"></span>
+            <span class="bl"></span>
+            <span class="bc"></span>
+            <span class="br"></span>
+            <!-- //크기 조절 상자 -->
+          </div>
+          <!-- //image 2/6: Normal -->
+
+          <!-- image 3/6: Error-Active (is-error 클래스 추가) -->
+          <span style="position: absolute; top: 900px; left: 1220px;">image</span>
+          <div class="box tool image is-error active" style="
+                top: 920px;
+                left: 1220px;
+                width: 200px;
+                height: 150px;
+              ">
+            <!-- <div class="mui-noti mui-noti-error">
+              <i class="mu-icon err-circle mui-noti-icon"></i>
+              <p class="mui-noti-text">이미지를 표시할 수 없습니다</p>
+            </div> -->
+            <!-- 크기 조절 상자 -->
+            <span class="tl"></span>
+            <span class="tc"></span>
+            <span class="tr"></span>
+            <span class="cl"></span>
+            <span class="cr"></span>
+            <span class="bl"></span>
+            <span class="bc"></span>
+            <span class="br"></span>
+            <!-- //크기 조절 상자 -->
+          </div>
+          <!-- //image 3/6: Error-Active (is-error 클래스 추가) -->
+
+          <!-- image 4/6: Error (is-error 클래스 추가) -->
+          <span style="position: absolute; top: 900px; left: 1430px;">image</span>
+          <div class="box tool image is-error" style="
+                top: 920px;
+                left: 1430px;
+                width: 200px;
+                height: 150px;
+              ">
+            <!-- <div class="mui-noti mui-noti-error">
+              <i class="mu-icon err-circle mui-noti-icon"></i>
+              <p class="mui-noti-text">이미지를 표시할 수 없습니다</p>
+            </div> -->
+            <!-- 크기 조절 상자 -->
+            <span class="tl"></span>
+            <span class="tc"></span>
+            <span class="tr"></span>
+            <span class="cl"></span>
+            <span class="cr"></span>
+            <span class="bl"></span>
+            <span class="bc"></span>
+            <span class="br"></span>
+            <!-- //크기 조절 상자 -->
+          </div>
+          <!-- //image 4/6: Error (is-error 클래스 추가) -->
+          <!-- //image -->
+
+          <!-- 주기설정 활성화 -->
+          <span style="position: absolute; top: 1100px; left: 1220px;">주기설정</span>
+          <div class="box tool renew active" style="
+                top: 1120px;
+                left: 1220px;
+                width: 200px;
+                height: 150px;
+              ">
+            <!-- <div class="mui-noti mui-noti-error">
+              <i class="mu-icon err-circle mui-noti-icon"></i>
+              <p class="mui-noti-text">이미지를 표시할 수 없습니다</p>
+            </div> -->
+            <!-- 크기 조절 상자 -->
+            <span class="tl"></span>
+            <span class="tc"></span>
+            <span class="tr"></span>
+            <span class="cl"></span>
+            <span class="cr"></span>
+            <span class="bl"></span>
+            <span class="bc"></span>
+            <span class="br"></span>
+            <!-- //크기 조절 상자 -->
+          </div>
+          <!-- //주기설정 활성화 -->
+
+          <!-- 주기설정 비활성화 -->
+          <span style="position: absolute; top: 1100px; left: 1430px;">주기설정</span>
+          <div class="box tool renew" style="
+                top: 1120px;
+                left: 1430px;
+                width: 200px;
+                height: 150px;
+              ">
+            <!-- <div class="mui-noti mui-noti-error">
+              <i class="mu-icon err-circle mui-noti-icon"></i>
+              <p class="mui-noti-text">이미지를 표시할 수 없습니다</p>
+            </div> -->
+            <!-- 크기 조절 상자 -->
+            <span class="tl"></span>
+            <span class="tc"></span>
+            <span class="tr"></span>
+            <span class="cl"></span>
+            <span class="cr"></span>
+            <span class="bl"></span>
+            <span class="bc"></span>
+            <span class="br"></span>
+            <!-- //크기 조절 상자 -->
+          </div>
+          <!-- //주기설정 비활성화 -->
+
+          <!-- 기간설정 활성화 -->
+          <span style="position: absolute; top: 1300px; left: 1220px;">기간설정</span>
+          <div class="box tool date active" style="
+                top: 1320px;
+                left: 1220px;
+                width: 200px;
+                height: 150px;
+              ">
+            <!-- <div class="mui-noti mui-noti-error">
+              <i class="mu-icon err-circle mui-noti-icon"></i>
+              <p class="mui-noti-text">이미지를 표시할 수 없습니다</p>
+            </div> -->
+            <!-- 크기 조절 상자 -->
+            <span class="tl"></span>
+            <span class="tc"></span>
+            <span class="tr"></span>
+            <span class="cl"></span>
+            <span class="cr"></span>
+            <span class="bl"></span>
+            <span class="bc"></span>
+            <span class="br"></span>
+            <!-- //크기 조절 상자 -->
+          </div>
+          <!-- //기간설정 활성화 -->
+
+          <!-- 기간설정 비활성화 -->
+          <span style="position: absolute; top: 1300px; left: 1430px;">기간설정</span>
+          <div class="box tool date" style="
+                top: 1320px;
+                left: 1430px;
+                width: 200px;
+                height: 150px;
+              ">
+            <!-- <div class="mui-noti mui-noti-error">
+              <i class="mu-icon err-circle mui-noti-icon"></i>
+              <p class="mui-noti-text">이미지를 표시할 수 없습니다</p>
+            </div> -->
+            <!-- 크기 조절 상자 -->
+            <span class="tl"></span>
+            <span class="tc"></span>
+            <span class="tr"></span>
+            <span class="cl"></span>
+            <span class="cr"></span>
+            <span class="bl"></span>
+            <span class="bc"></span>
+            <span class="br"></span>
+            <!-- //크기 조절 상자 -->
+          </div>
+          <!-- //기간설정 비활성화 -->
+
+          <!-- TODO: 컴포넌트 그룹핑 및 주석 확인 필요 -->
+          <div class="box tool date date-input" style="
+                top: 1340px;
+                left: 1650px;
+                width: 140px;
+                height: 50px;
+              " id="report-component-box9">
+            <div class="date-time">
+              최근 1 분
+            </div>
+            <div class="wrap"></div>
+          </div>
+
+          <!-- TODO: 컴포넌트 그룹핑 및 주석 확인 필요 -->
+          <div class="box tool date active date-input" style="
+                top: 1400px;
+                left: 1650px;
+                width: 140px;
+                height: 50px;
+              " id="report-component-box9">
+            <span class="tl"></span>
+            <span class="tc"></span>
+            <span class="tr"></span>
+            <span class="cl"></span>
+            <span class="cr"></span>
+            <span class="bl"></span>
+            <span class="bc"></span>
+            <span class="br"></span>
+
+            <div class="date-time">
+              최근 1 분
+            </div>
+            <div class="wrap"></div>
+          </div>
+
+          <!-- 라벨 -->
+          <span style="position: absolute; top: 900px; left: 1640px;">라벨</span>
+          <div class="box tool text active" style="
+                top: 920px;
+                left: 1640px;
+                width: 250px;
+                height: 60px;
+              ">
+            <!-- 
+              각 서체별 text-area요소에 적용될 인라인 스타일
+              Arial: style="font-family: arial, sans-serif";
+              Courier: style="font-family: "Courier New", Courier, monospace";
+              Georgia: style="font-family: Georgia, serif";
+              Noto Sans: style="font-family: notokr";
+              Times New Roman: style="font-family: "Times New Roman", Times, serif";
+              Verdana: style="font-family: Verdana, Geneva, sans-serif";
+              돋움 {style="font-family: dotum, '돋움', sans-serif;}
+              굴림 {style="font-family: gulim, '굴림', sans-serif;}
+              맑은고딕  {style="font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;}
+              바탕  {style="font-family: batang, '바탕', serif;}
+              산돌고딕 네오 {style="font-family: 'Apple SD Gothic Neo', '애플 SD 산돌고딕 Neo', -apple-system, 'Malgun Gothic', sans-serif;}
+              나눔고딕 {style="font-family: 'Nanum Gothic','나눔고딕', sans-serif}
+            -->
+            <div class="text-area" style="width: 100%; height: 100%; font-family: notokr;">
+              라벨 컴포넌트 Label component
+            </div>
+            <!-- 크기 조절 상자 -->
+            <span class="tl"></span>
+            <span class="tc"></span>
+            <span class="tr"></span>
+            <span class="cl"></span>
+            <span class="cr"></span>
+            <span class="bl"></span>
+            <span class="bc"></span>
+            <span class="br"></span>
+            <!-- //크기 조절 상자 -->
+          </div>
+
+          <div class="box tool text" style="
+                top: 1010px;
+                left: 1640px;
+                width: 250px;
+                height: 60px;
+              ">
+            <!-- 
+              각 서체별 text-area요소에 적용될 인라인 스타일
+              Arial: style="font-family: arial, sans-serif";
+              Courier: style="font-family: "Courier New", Courier, monospace";
+              Georgia: style="font-family: Georgia, serif";
+              Noto Sans: style="font-family: notokr";
+              Times New Roman: style="font-family: "Times New Roman", Times, serif";
+              Verdana: style="font-family: Verdana, Geneva, sans-serif";
+              돋움 {style="font-family: dotum, '돋움', sans-serif;}
+              굴림 {style="font-family: gulim, '굴림', sans-serif;}
+              맑은고딕  {style="font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;}
+              바탕  {style="font-family: batang, '바탕', serif;}
+              산돌고딕 네오 {style="font-family: 'Apple SD Gothic Neo', '애플 SD 산돌고딕 Neo', -apple-system, 'Malgun Gothic', sans-serif;}
+              나눔고딕 {style="font-family: 'Nanum Gothic','나눔고딕', sans-serif}
+            -->
+            <div class="text-area" style="width: 100%; height: 100%; font-family: notokr;">
+              라벨 컴포넌트 Label component
+            </div>
+          </div>
+          <!--// 라벨 -->
+
+          <!-- 주기설정 -->
+          <div class="box tool renew renew-input" style="
+                width: 340px;
+                height: 100px;
+                transform: translate(1580px, 1080px);
+                min-width: 30px;
+                min-height: 30px;
+                border: 0px solid;
+                border-radius: 0px;
+                box-shadow: none;
+                opacity: 1;
+              ">
+            <div div class="renew-time">
+              <div class="mu-item-group">
+                <label>갱신 주기</label>
+                <div class="mu-selectbox">
+                  <button class="mu-value" title="1초">1초</button>
+                  <ul class="mu-selectbox-list">
+                    <li title="1sec">1초</li>
+                  </ul>
+                </div>
+                <button type="button" class="mu-btn mu-btn-icon mu-btn-bg-non" title="시작">
+                  <i class="mu-icon-img play"></i>
+                </button>
+                <button type="button" class="mu-btn mu-btn-icon mu-btn-bg-non" title="중지">
+                  <i class="mu-icon-img pause"></i>
+                </button>
+                <button type="button" class="mu-btn mu-btn-icon mu-btn-bg-non" title="즉시 실행">
+                  <i class="mu-icon-img refresh"></i>
+                </button>
+              </div>
+              <div class="time-setting-text">
+                <span class="renew-info pr5">
+                  다음 갱신까지<label>00:00:01</label>
+                </span>
+                <span class="renew-info">
+                  마지막 갱신 시간<label>11:21:15</label>
+                </span>
+              </div>
+            </div>
+            <div style="
+                  position: absolute;
+                  width: 100%;
+                  height: 100%;
+                  left: 0;
+                  top: 0;
+                  z-index: 9;
+                "></div>
+          </div>
+          <!--//  주기설정 -->
+
+          <!-- Textarea -->
+          <span style="position: absolute; top: 1180px; left: 1640px;">Textarea</span>
+
+          <div class="box tool text" style="
+                top: 1200px;
+                left: 1640px;
+                width: 200px;
+                height: 60px;
+              ">
+            <textarea class="mu-area" style="width: 100%; height: 100%;">
+Textarea</textarea>
+          </div>
+
+          <div class="box tool text active" style="
+                top: 1270px;
+                left: 1640px;
+                width: 200px;
+                height: 60px;
+              ">
+            <!-- 
+                각 서체별 text-area요소에 적용될 인라인 스타일
+                Arial: style="font-family: arial, sans-serif";
+                Courier: style="font-family: "Courier New", Courier, monospace";
+                Georgia: style="font-family: Georgia, serif";
+                Noto Sans: style="font-family: notokr";
+                Times New Roman: style="font-family:"Times New Roman", Times, serif";
+                Verdana: style="font-family:Verdana, Geneva, sans-serif";
+              -->
+            <div class="box tool text" style="width: 200px; height: 60px;">
+              <textarea class="mu-area" style="width: 100%; height: 100%;">
+Textarea</textarea>
+            </div>
+            <!-- 크기 조절 상자 -->
+            <span class="tl"></span>
+            <span class="tc"></span>
+            <span class="tr"></span>
+            <span class="cl"></span>
+            <span class="cr"></span>
+            <span class="bl"></span>
+            <span class="bc"></span>
+            <span class="br"></span>
+            <!-- //크기 조절 상자 -->
+          </div>
+          <!-- //Textarea -->
+
+          <!-- 도형 (circle, rectangle) -->
+          <span style="position: absolute; top: 710px; left: 1640px;">circle</span>
+          <div class="box tool ellipse" style="
+                width: 100px;
+                height: 100px;
+                top: 730px;
+                left: 1640px;
+                background-color: #e6e6e6;
+              "></div>
+
+          <span style="position: absolute; top: 710px; left: 1750px;">rectangle</span>
+          <div class="box tool" style="
+                width: 150px;
+                height: 100px;
+                top: 730px;
+                left: 1750px;
+                background-color: #e6e6e6;
+              "></div>
+          <!-- // 도형 (circle, rectangle) -->
+
+          <!--  notification -->
+          <span style="position: absolute; top: 230px; left: 1100px;">notification: info/error/warning/success</span>
+          <div style="width: 220px; height: 280px; position: absolute; top: 250px; left: 1095px;" class="box tool">
+            <div class="mui-noti mui-noti-info mui-noti-closable">
+              <i class="mu-icon info mui-noti-icon"></i>
+              <p class="mui-noti-text ellipsis-end" title="notification - info">
+                notification - info
+              </p>
+              <button type="button" class="mui-noti-close-btn">
+                <i class="iriscon cancel-thin mui-noti-close-icon"></i>
+              </button>
+            </div>
+            <div class="mui-noti mui-noti-error mui-noti-closable">
+              <i class="mu-icon err-circle mui-noti-icon"></i>
+              <p class="mui-noti-text ellipsis-end" title="notification - error">
+                notification - error
+              </p>
+              <button type="button" class="mui-noti-close-btn">
+                <i class="iriscon cancel-thin mui-noti-close-icon"></i>
+              </button>
+            </div>
+            <div class="mui-noti mui-noti-warning mui-noti-closable">
+              <i class="mu-icon exclamation mui-noti-icon"></i>
+              <p class="mui-noti-text ellipsis-end" title="notification - warning">
+                <span class="mui-noti-title">notifiaction title</span>notification - warning notification - warning
+                notification - warning notification - warning
+                notification - warning notification - warning
+              </p>
+              <button type="button" class="mui-noti-close-btn">
+                <i class="iriscon cancel-thin mui-noti-close-icon"></i>
+              </button>
+            </div>
+            <div class="mui-noti mui-noti-success mui-noti-closable">
+              <i class="mu-icon check-circle mui-noti-icon"></i>
+              <p class="mui-noti-text" title="notification - success">
+                <span class="mui-noti-title mui-noti-title-block">notifiaction title</span>notification - success notification - success
+                notification - success notification - success
+                notification - success notification - success
+                notification - success
+              </p>
+              <button type="button" class="mui-noti-close-btn">
+                <i class="iriscon cancel-thin mui-noti-close-icon"></i>
+              </button>
+            </div>
+          </div>
+          <!-- // notification -->
+
+          <!-- 트리뷰  -->
+          <span style="position: absolute; top: 610px; left: 50px;">트리뷰 - 버튼 모두 있는 경우</span>
+          <div class="box tool list" style="
+                top: 630px;
+                left: 50px;
+                width: 200px;
+                height: 150px;
+              ">
+            <div class="data-list">
+              <!-- 타이틀 사용하지 않는 경우 remove-title 클래스 추가 / 검색창을 사용하지 않는 경우 remove-filter-group 클래스 추가  -->
+              <div class="data-list-head">
+                <h3 class="mu-type-omega ellipsis-end" title="입력한 트리 제목 출력">
+                  입력한 트리 제목 출력
+                </h3>
+                <div class="data-list-head-filter-group">
+                  <div class="mu-input-icon">
+                    <input type="text" placeholder="검색" class="mu-input" />
+                    <i class="mu-icon search"></i>
+                  </div>
+                  <button type="button" class="mu-btn mu-btn-icon mu-btn-icon-only" title="트리뷰 정보 새로고침">
+                    <i class="mu-icon repeat"></i>
+                  </button>
+                  <div class="data-list-btn-group">
+                    <button type="button" class="mu-btn mu-btn-icon">
+                      <i class="mu-icon more-up" title="전체 접기"></i>
+                    </button>
+                    <span class="division-line"></span>
+                    <button type="button" class="mu-btn mu-btn-icon">
+                      <i class="mu-icon more-down" title="전체 펼치기"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- 트리뷰가 들어가는 영역 -->
+              <div class="data-list-body"></div>
+              <!-- //트리뷰가 들어가는 영역 -->
+            </div>
+          </div>
+
+          <span style="position: absolute; top: 610px; left: 260px;">트리뷰 - 전체 접기/펼치기 버튼만 있는 경우</span>
+          <div class="box tool list active" style="
+                top: 630px;
+                left: 260px;
+                width: 200px;
+                height: 150px;
+              ">
+            <div class="data-list">
+              <!-- 타이틀 사용하지 않는 경우 remove-title 클래스 추가 / 검색창을 사용하지 않는 경우 remove-filter-group 클래스 추가  -->
+              <div class="data-list-head">
+                <h3 class="mu-type-omega ellipsis-end" title="입력한 트리 제목 출력">
+                  입력한 트리 제목 출력
+                </h3>
+                <div class="data-list-head-filter-group">
+                  <div class="mu-input-icon">
+                    <input type="text" placeholder="검색" class="mu-input" />
+                    <i class="mu-icon search"></i>
+                  </div>
+                  <div class="data-list-btn-group">
+                    <button type="button" class="mu-btn mu-btn-icon">
+                      <i class="mu-icon more-up" title="전체 접기"></i>
+                    </button>
+                    <span class="division-line"></span>
+                    <button type="button" class="mu-btn mu-btn-icon">
+                      <i class="mu-icon more-down" title="전체 펼치기"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- 트리뷰가 들어가는 영역 -->
+              <div class="data-list-body"></div>
+              <!-- //트리뷰가 들어가는 영역 -->
+            </div>
+            <!-- 크기 조절 상자 -->
+            <span class="tl"></span>
+            <span class="tc"></span>
+            <span class="tr"></span>
+            <span class="cl"></span>
+            <span class="cr"></span>
+            <span class="bl"></span>
+            <span class="bc"></span>
+            <span class="br"></span>
+            <!-- //크기 조절 상자 -->
+          </div>
+
+          <span style="position: absolute; top: 800px; left: 260px;">트리뷰 - 검색만 있는 경우</span>
+          <div class="box tool list" style="
+                top: 820px;
+                left: 260px;
+                width: 200px;
+                height: 150px;
+              ">
+            <div class="data-list">
+              <!-- 타이틀 사용하지 않는 경우 remove-title 클래스 추가 / 검색창을 사용하지 않는 경우 remove-filter-group 클래스 추가  -->
+              <div class="data-list-head">
+                <h3 class="mu-type-omega ellipsis-end" title="입력한 트리 제목 출력">
+                  입력한 트리 제목 출력
+                </h3>
+                <div class="data-list-head-filter-group">
+                  <div class="mu-input-icon">
+                    <input type="text" placeholder="검색" class="mu-input" />
+                    <i class="mu-icon search"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- 트리뷰가 들어가는 영역 -->
+              <div class="data-list-body"></div>
+              <!-- //트리뷰가 들어가는 영역 -->
+            </div>
+          </div>
+
+          <span style="position: absolute; top: 800px; left: 50px;">트리뷰 - 새로고침 버튼만 있는 경우</span>
+          <div class="box tool list" style="
+                top: 820px;
+                left: 50px;
+                width: 200px;
+                height: 150px;
+              ">
+            <div class="data-list">
+              <!-- 타이틀 사용하지 않는 경우 remove-title 클래스 추가 / 검색창을 사용하지 않는 경우 remove-filter-group 클래스 추가  -->
+              <div class="data-list-head">
+                <h3 class="mu-type-omega ellipsis-end" title="입력한 트리 제목 출력">
+                  입력한 트리 제목 출력
+                </h3>
+                <div class="data-list-head-filter-group">
+                  <div class="mu-input-icon">
+                    <input type="text" placeholder="검색" class="mu-input" />
+                    <i class="mu-icon search"></i>
+                  </div>
+                  <button type="button" class="mu-btn mu-btn-icon mu-btn-icon-only" title="트리뷰 정보 새로고침">
+                    <i class="mu-icon repeat"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- 트리뷰가 들어가는 영역 -->
+              <div class="data-list-body"></div>
+              <!-- //트리뷰가 들어가는 영역 -->
+            </div>
+          </div>
+          <!-- //트리뷰  -->
+
+          <!-- 콤보박스 -->
+          <span style="position: absolute; top: 990px; left: 50px;">콤보박스: select</span>
+          <div class="box tool combo-box active" style="
+                top: 1010px;
+                left: 50px;
+                width: 180px;
+                height: 26px;
+              ">
+            <div class="mu-selectbox">
+              <button class="mu-value">값 01</button>
+              <ul class="mu-selectbox-list">
+                <li class="active">값 01</li>
+                <li>값 02</li>
+                <li>값 03</li>
+              </ul>
+            </div>
+            <!-- 크기 조절 상자 -->
+            <span class="tl"></span>
+            <span class="tc"></span>
+            <span class="tr"></span>
+            <span class="cl"></span>
+            <span class="cr"></span>
+            <span class="bl"></span>
+            <span class="bc"></span>
+            <span class="br"></span>
+            <!-- //크기 조절 상자 -->
+          </div>
+
+          <span style="position: absolute; top: 1050px; left: 50px;">콤보박스: dropdown</span>
+          <div class="box tool combo-box active" style="
+                top: 1070px;
+                left: 50px;
+                width: 180px;
+                height: 26px;
+              ">
+            <div class="mu-selectbox on with-input">
+              <button class="mu-btn-icon"></button>
+              <input type="text" class="mu-value" value="값 01 입력 검색어" />
+              <ul class="mu-selectbox-list">
+                <li class="active">값 01</li>
+                <li>값 02</li>
+                <li>값 03</li>
+              </ul>
+            </div>
+            <!-- 크기 조절 상자 -->
+            <span class="tl"></span>
+            <span class="tc"></span>
+            <span class="tr"></span>
+            <span class="cl"></span>
+            <span class="cr"></span>
+            <span class="bl"></span>
+            <span class="bc"></span>
+            <span class="br"></span>
+            <!-- //크기 조절 상자 -->
+          </div>
+          <!--// 콤보박스 -->
+
+          <!-- datetime-picker -->
+          <!-- Datepicker -->
+          <span style="position: absolute; top: 990px; left: 250px;">datetime-picker</span>
+          <div class="box tool datetime-picker" style="
+                top: 1010px;
+                left: 250px;
+                width: 200px;
+                height: 50px;
+              ">
+            <div class="mu-datepicker">
+              <input type="text" class="mu-input" value="yyyy/mm/dd" />
+              <button class="mu-btn mu-btn-default">
+                <i class="iriscon calendar"></i>
+              </button>
+            </div>
+          </div>
+          <!-- // Datepicker -->
+
+          <!-- Datepicker: 박스 클릭 시 사이즈 조절 박스 활성화 -->
+          <span style="position: absolute; top: 1070px; left: 250px;">datetime-picker: select</span>
+          <div class="box tool datetime-picker active" style="
+                top: 1090px;
+                left: 250px;
+                width: 200px;
+                height: 50px;
+              ">
+            <div class="mu-datepicker">
+              <input type="text" class="mu-input hasDatepicker" value="yyyy/mm/dd" />
+              <button class="mu-btn mu-btn-default">
+                <i class="iriscon calendar"></i>
+              </button>
+            </div>
+            <!-- 크기 조절 상자 -->
+            <span class="tl"></span>
+            <span class="tc"></span>
+            <span class="tr"></span>
+            <span class="cl"></span>
+            <span class="cr"></span>
+            <span class="bl"></span>
+            <span class="bc"></span>
+            <span class="br"></span>
+            <!-- //크기 조절 상자 -->
+          </div>
+          <!-- // Datepicker: 박스 클릭 시 사이즈 조절 박스 활성화 -->
+
+          <!-- Datepicker: 대상으로 설정 가능한 상태 -->
+          <span style="position: absolute; top: 1070px; left: 470px;">대상으로 설정 가능한 상태 <span>.deselect</span></span>
+          <div class="box tool datetime-picker deselect" style="
+                top: 1090px;
+                left: 470px;
+                width: 200px;
+                height: 30px;
+              ">
+            <div class="mu-datepicker">
+              <input type="text" class="mu-input hasDatepicker" value="yyyy/mm/dd" />
+              <button class="mu-btn mu-btn-default">
+                <i class="iriscon calendar"></i>
+              </button>
+            </div>
+            <div class="mu-checkbox">
+              <input type="checkbox" id="button01_ckb" />
+              <label for="button01_ckb"></label>
+            </div>
+          </div>
+          <!-- // Datepicker: 대상으로 설정 가능한 상태 -->
+
+          <!-- Datepicker: 대상으로 설정된 상태 -->
+          <span style="position: absolute; top: 990px; left: 470px;">대상으로 설정된 상태 <span>.select</span></span>
+          <div class="box tool datetime-picker select" style="
+                top: 1010px;
+                left: 470px;
+                width: 200px;
+                height: 30px;
+              ">
+            <div class="mu-datepicker">
+              <input type="text" class="mu-input hasDatepicker" value="yyyy/mm/dd" />
+              <button class="mu-btn mu-btn-default">
+                <i class="iriscon calendar"></i>
+              </button>
+            </div>
+            <div class="mu-checkbox">
+              <input type="checkbox" id="button02_ckb" checked />
+              <label for="button02_ckb"></label>
+            </div>
+          </div>
+          <!-- // Datepicker: 대상으로 설정된 상태 -->
+
+          <!-- Datepicker: 객체 최소 사이즈 (40x30) -->
+          <span style="position: absolute; top: 1060px; left: 790px;">객체 최소 사이즈<br />
+            (40x30)</span>
+          <div class="box tool datetime-picker" style="
+                top: 1090px;
+                left: 790px;
+                width: 30px;
+                height: 30px;
+              ">
+            <div class="mu-datepicker">
+              <input type="text" class="mu-input hasDatepicker" value="yyyy/mm/dd" />
+              <button class="mu-btn mu-btn-default">
+                <i class="iriscon calendar"></i>
+              </button>
+            </div>
+          </div>
+          <!-- // Datepicker: 객체 최소 사이즈 (40x30) -->
+
+          <!-- input  -->
+          <span style="position: absolute; top: 1150px; left: 250px;">input</span>
+          <div class="box tool input" style="
+                top: 1170px;
+                left: 250px;
+                width: 200px;
+                height: 30px;
+              ">
+            <div style="width: 100%; height: 100%;">
+              <input type="text" class="mu-input" placeholder="Placeholder text" />
+            </div>
+          </div>
+
+          <span style="position: absolute; top: 1150px; left: 470px;">input: select</span>
+          <div class="box tool input active" style="
+                top: 1170px;
+                left: 470px;
+                width: 200px;
+                height: 30px;
+              ">
+            <input type="text" class="mu-input" placeholder="Placeholder text" />
+            <!-- 크기 조절 상자 -->
+            <span class="tl"></span>
+            <span class="tc"></span>
+            <span class="tr"></span>
+            <span class="cl"></span>
+            <span class="cr"></span>
+            <span class="bl"></span>
+            <span class="bc"></span>
+            <span class="br"></span>
+            <!-- //크기 조절 상자 -->
+          </div>
+
+          <!-- // input -->
+
+          <!-- Timepicker: Open -->
+          <span style="position: absolute; top: 990px; left: 700px;">Timepicker Open</span>
+          <div class="box tool datetime-picker active" style="
+                top: 1010px;
+                left: 700px;
+                width: 120px;
+                height: 30px;
+              ">
+            <div class="mu-timepicker">
+              <input type="text" class="mu-input ui-timepicker-input" id="" autocomplete="off" placeholder="hh:mm" value="02:00" />
+              <button class="mu-btn mu-btn-default">
+                <i class="iriscon clock"></i>
+              </button>
+              <!-- NOTE: overflow, height는 퍼블리싱용 임시 스타일! 개발에 적용될 필요 없음 -->
+              <div class="ui-timepicker-wrapper" style="position: absolute; top: 30px; left: 0; height: 100px; overflow: auto;">
+                <ul class="ui-timepicker-list">
+                  <li class="ui-timepicker-am">00:00</li>
+                  <li class="ui-timepicker-am">00:30</li>
+                  <li class="ui-timepicker-am">01:00</li>
+                  <li class="ui-timepicker-am">01:30</li>
+                  <li class="ui-timepicker-am ui-timepicker-selected">
+                    02:00
+                  </li>
+                  <li class="ui-timepicker-am">02:30</li>
+                  <li class="ui-timepicker-am">03:00</li>
+                  <li class="ui-timepicker-am">03:30</li>
+                  <li class="ui-timepicker-am">04:00</li>
+                  <li class="ui-timepicker-am">04:30</li>
+                </ul>
+              </div>
+            </div>
+            <!-- 크기 조절 상자 -->
+            <span class="tl"></span>
+            <span class="tc"></span>
+            <span class="tr"></span>
+            <span class="cl"></span>
+            <span class="cr"></span>
+            <span class="bl"></span>
+            <span class="bc"></span>
+            <span class="br"></span>
+            <!-- //크기 조절 상자 -->
+          </div>
+          <!-- // Timepicker: Open -->
+          <!-- //datetime-picker -->
+
+          <!-- 탭  -->
+          <span style="position: absolute; top: 420px; left: 470px;">Tab 가로형(빈 영역 / 탭 이름 없는 경우)</span>
+          <div class="box tool tab" style="
+                top: 440px;
+                left: 470px;
+                width: 200px;
+                height: 150px;
+              ">
+            <ul class="data-tab">
+              <li class="data-tab-item" style="width: 100%;">
+                <div class="data-tab-text-box" role="tab">
+                  <span title=""></span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <span style="position: absolute; top: 610px; left: 470px;">Tab 가로형 - 선택시</span>
+          <div class="box tool tab active" style="
+                top: 630px;
+                left: 470px;
+                width: 200px;
+                height: 150px;
+              ">
+            <ul class="data-tab">
+              <li class="data-tab-item is-selected" style="width: calc(100% / 3);">
+                <div class="data-tab-text-box" role="tab">
+                  <span title="tab1">tab1< is-selected</span>
+                </div>
+              </li>
+              <li class="data-tab-item" style="width: calc(100% / 3);">
+                <div class="data-tab-text-box" role="tab">
+                  <span title="tab2">tab2</span>
+                </div>
+              </li>
+              <li class="data-tab-item disabled" style="width: calc(100% / 3);">
+                <div class="data-tab-text-box" role="tab">
+                  <span title="tab3 tab3 tab3">tab3 tab3 tab3</span>
+                </div>
+              </li>
+            </ul>
+            <!-- 크기 조절 상자 -->
+            <span class="tl"></span>
+            <span class="tc"></span>
+            <span class="tr"></span>
+            <span class="cl"></span>
+            <span class="cr"></span>
+            <span class="bl"></span>
+            <span class="bc"></span>
+            <span class="br"></span>
+            <!-- //크기 조절 상자 -->
+          </div>
+
+          <span style="position: absolute; top: 730px; left: 680px;">Tab 세로형(빈 영역 / 탭 이름 없는 경우)</span>
+          <div class="box tool tab" style="
+                top: 750px;
+                left: 680px;
+                width: 30px;
+                height: 30px;
+              ">
+            <ul class="data-tab">
+              <li class="data-tab-item" style="width: 100%;">
+                <div class="data-tab-text-box" role="tab">
+                  <span title=""></span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <span style="position: absolute; top: 420px; left: 680px;">Tab 세로형</span>
+          <div class="box tool tab" style="
+                top: 440px;
+                left: 680px;
+                width: 100px;
+                height: 300px;
+              ">
+            <ul class="data-tab vertical">
+              <li class="data-tab-item is-selected" style="height: calc(100% / 5);">
+                <div class="data-tab-text-box" role="tab">
+                  <span title="tab1">tab1 is-selected</span>
+                </div>
+              </li>
+              <li class="data-tab-item" style="height: calc(100% / 5);">
+                <div class="data-tab-text-box" role="tab">
+                  <span title="tab2">tab2</span>
+                </div>
+              </li>
+              <li class="data-tab-item disabled" style="height: calc(100% / 5);">
+                <div class="data-tab-text-box" role="tab">
+                  <span title="tab3 tab3 tab3">tab3 tab3 tab3</span>
+                </div>
+              </li>
+              <li class="data-tab-item disabled" style="height: calc(100% / 5);">
+                <div class="data-tab-text-box" role="tab">
+                  <span title="tab4">tab4</span>
+                </div>
+              </li>
+              <li class="data-tab-item disabled" style="height: calc(100% / 5);">
+                <div class="data-tab-text-box" role="tab">
+                  <span title="tab5">tab5</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- //탭  -->
+
+          <!-- 파일 업로드  -->
+          <span style="position: absolute; top: 420px; left: 800px;">파일 업로드</span>
+          <div class="box tool fileupload" style="
+                top: 440px;
+                left: 800px;
+                width: 300px;
+                height: 50px;
+              ">
+            <div class="mu-file-attach" style="width: 100%; height: 100%;">
+              <input class="mu-input" type="text" readonly="readonly" placeholder="등록한 파일명이 보여집니다." />
+              <div class="mu-file-btn">
+                <button class="mu-btn" type="button">파일선택</button>
+                <input class="mu-btn-hide" type="file" />
+              </div>
+            </div>
+          </div>
+          <!-- //파일 업로드  -->
+
+          <!-- URL  -->
+          <span style="position: absolute; top: 520px; left: 800px;">URL</span>
+          <div class="tool url" style="
+                top: 540px;
+                left: 800px;
+                width: 200px;
+                height: 150px;
+              ">
+            <div style="width: 100%; height: 100%;"></div>
+          </div>
+
+          <span style="position: absolute; top: 520px; left: 1010px;">URL: select</span>
+          <div class="tool url active" style="
+                top: 540px;
+                left: 1010px;
+                width: 200px;
+                height: 150px;
+              ">
+            <div style="width: 100%; height: 100%;"></div>
+            <!-- 크기 조절 상자 -->
+            <span class="tl"></span>
+            <span class="tc"></span>
+            <span class="tr"></span>
+            <span class="cl"></span>
+            <span class="cr"></span>
+            <span class="bl"></span>
+            <span class="bc"></span>
+            <span class="br"></span>
+            <!-- //크기 조절 상자 -->
+          </div>
+          <!-- //URL  -->
+
+          <!-- 버튼  -->
+          <div class="box tool button" style="
+                top: 820px;
+                left: 470px;
+                width: 200px;
+                height: 50px;
+              ">
+            <button class="mu-btn mu-btn-primary" type="button">
+              mu-btn-primary
+            </button>
+          </div>
+
+          <!-- 박스 클릭 시 사이즈 조절 박스 활성화 -->
+          <div class="box tool button active" style="
+                top: 820px;
+                left: 680px;
+                width: 200px;
+                height: 50px;
+              ">
+            <button class="mu-btn mu-btn-primary" type="button">
+              mu-btn-primary
+            </button>
+            <!-- 크기 조절 상자 -->
+            <span class="tl"></span>
+            <span class="tc"></span>
+            <span class="tr"></span>
+            <span class="cl"></span>
+            <span class="cr"></span>
+            <span class="bl"></span>
+            <span class="bc"></span>
+            <span class="br"></span>
+            <!-- //크기 조절 상자 -->
+          </div>
+          <!-- // 박스 클릭 시 사이즈 조절 박스 활성화 -->
+          <!-- 대상으로 설정 가능한 상태 -->
+          <span style="position: absolute; top: 920px; left: 470px;">대상으로 설정 가능한 상태 <span>.deselect</span></span>
+          <div class="box tool button deselect" style="
+                top: 940px;
+                left: 470px;
+                width: 200px;
+                height: 30px;
+              ">
+            <button class="mu-btn mu-btn-primary" type="button">
+              button 01
+            </button>
+            <div class="mu-checkbox">
+              <input type="checkbox" id="button01_ckb" />
+              <label for="button01_ckb"></label>
+            </div>
+          </div>
+          <!-- //대상으로 설정 가능한 상태 -->
+          <!-- 대상으로 설정된 상태 -->
+          <span style="position: absolute; top: 920px; left: 680px;">대상으로 설정된 상태 <span>.select</span></span>
+          <div class="box tool button select" style="
+                top: 940px;
+                left: 680px;
+                width: 200px;
+                height: 30px;
+              ">
+            <button class="mu-btn mu-btn-primary" type="button">
+              button 02
+            </button>
+            <div class="mu-checkbox">
+              <input type="checkbox" id="button02_ckb" checked />
+              <label for="button02_ckb"></label>
+            </div>
+          </div>
+          <!-- //대상으로 설정된 상태 -->
+          <!-- //버튼  -->
+
+          <!-- 맵  -->
+          <span style="position: absolute; top: 700px; left: 890px;"></span>
+          <div class="box tool map" style="
+                top: 720px;
+                left: 890px;
+                width: 300px;
+                height: 250px;
+              ">
+            <!-- 레이어 이름 요소 -->
+            <!-- <div class="layer-name-wrap">
+              <span class="layer-name">layer name</span>
+            </div> -->
+            <!-- // 레이어 이름 요소 -->
+            <!-- 객체 이동 버튼: 지도 이동, 객체 이동 토글 -->
+            <div class="map-btn-move-wrap">
+              <button type="button" class="mu-btn mu-btn-default map-btn-move">
+                <i class="mu-icon-img earth"></i>지도 이동
+              </button>
+            </div>
+            <div class="map-btn-move-wrap" style="top: 40px;">
+              <button type="button" class="mu-btn mu-btn-default map-btn-move">
+                <i class="mu-icon-img object"></i>객체 이동
+              </button>
+            </div>
+            <!-- // 객체 이동 버튼: 지도 이동, 객체 이동 토글 -->
+            <!-- MAP 레이어 보기/숨기기 -->
+            <div class="leaflet-top leaflet-left">
+              <div class="leaflet-layers on leaflet-control" style="top: 100px; left: 10px;">
+                <button type="button" class="leaflet-view-layers"></button>
+                <div class="map-layers-popup">
+                  <ul class="mu-selectbox-list">
+                    <div class="format-rule-delete">
+                      <button type="button" class="mu-btn mu-btn-icon">
+                        <i class="mu-icon cancel"></i>
+                      </button>
+                    </div>
+                    <li>
+                      <span class="mu-selectbox-text ellipsis-end">Layer 01 Layer 01
+                        LayerLayerLayerLayerLayer</span>
+                      <button class="mu-btn-icon" type="button" title="표시">
+                        <i class="mu-icon eye"></i>
+                      </button>
+                    </li>
+                    <li>
+                      <span class="mu-selectbox-text ellipsis-end">Layer 01</span>
+                      <button class="mu-btn-icon" type="button" title="표시">
+                        <i class="mu-icon eye-slash"></i>
+                      </button>
+                    </li>
+                    <li>
+                      <span class="mu-selectbox-text ellipsis-end">Layer 01</span>
+                      <button class="mu-btn-icon" type="button" title="표시">
+                        <i class="mu-icon eye-slash"></i>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- //MAP 레이어 보기/숨기기 -->
+          </div>
+          <!-- //맵  -->
+
+
+          <!-- 데이터 객체  -->
+          <p style="position: absolute; top: 1240px; left: 50px;">데이터 객체</p>
+          <div class="box tool hidden-object" style="top: 1260px; left: 50px; width: 200px; height: 30px;">
+            <i class="hidden-object-icon common-data"></i>
+            <div class="hidden-object-text">
+              <span>common_data_1</span>
+            </div>
+          </div>
+
+          <p style="position: absolute; top: 1240px; left: 260px;">박스 클릭 상태 <span class="highlight">.active</span></p>
+          <div class="box tool hidden-object active" style="top: 1260px; left: 260px; width: 200px; height: 30px;">
+            <i class="hidden-object-icon common-data"></i>
+            <div class="hidden-object-text">
+              <span>common_data_1</span>
+            </div>
+            <!-- 크기 조절 상자 -->
+            <span class="tl"></span>
+            <span class="tc"></span>
+            <span class="tr"></span>
+            <span class="cl"></span>
+            <span class="cr"></span>
+            <span class="bl"></span>
+            <span class="bc"></span>
+            <span class="br"></span>
+            <!-- //크기 조절 상자 -->
+          </div>
+
+          <p style="position: absolute; top: 1240px; left: 470px;">데이터가 연결된 상태 <span class="highlight">.loaded</span></p>
+          <div class="box tool hidden-object loaded" style="top: 1260px; left: 470px; width: 200px; height: 30px;">
+            <i class="hidden-object-icon common-data"></i>
+            <div class="hidden-object-text">
+              <span>common_data_1</span>
+            </div>
+          </div>
+
+          <p style="position: absolute; top: 1240px; left: 680px;">연결 실패 상태</p>
+          <!-- NOTE: 데이터 연결시 loaded 클래스 추가 -->
+          <div class="box tool hidden-object visible-object" style="top: 1260px; left: 680px; width: 200px; height: 30px;">
+            <div class="mui-message error">
+              <i class="mu-icon err-circle"></i><span class="mui-message-text">데이터가 존재하지 않습니다.</span>
+            </div>
+          </div>
+
+          <p style="position: absolute; top: 1240px; left: 890px;">연결 상태 <span class="highlight">.connected</span></p>
+          <div class="box tool hidden-object loaded connected" style="top: 1260px; left: 890px; width: 200px; height: 30px;">
+            <i class="hidden-object-icon common-data"></i>
+            <div class="hidden-object-text">
+              <span>common_data_1</span>
+            </div>
+          </div>
+
+          <p style="position: absolute; top: 1240px; left: 1100px;">미연결 상태 <span class="highlight">.unconnected</span></p>
+          <div class="box tool hidden-object loaded unconnected" style="top: 1260px; left: 1100px; width: 200px; height: 30px;">
+            <i class="hidden-object-icon common-data"></i>
+            <div class="hidden-object-text">
+              <span>common_data_1</span>
+            </div>
+          </div>
+          <!-- //데이터 객체  -->
+
+
+          <!-- 텍스트 변환 객체 - hidden-input  -->
+          <p style="position: absolute; top: 1310px; left: 50px;">텍스트 변환</p>
+          <div class="box tool hidden-object" style="top: 1330px; left: 50px; width: 200px; height: 30px;">
+            <i class="hidden-object-icon text-converter"></i>
+            <div class="hidden-object-text">
+              <span>hidden_1</span>
+            </div>
+          </div>
+
+          <p style="position: absolute; top: 1310px; left: 260px;">박스 클릭 상태 <span class="highlight">.active</span></p>
+          <div class="box tool hidden-object active" style="top: 1330px; left: 260px; width: 200px; height: 30px;">
+            <i class="hidden-object-icon text-converter"></i>
+            <div class="hidden-object-text">
+              <span>hidden_1</span>
+            </div>
+            <!-- 크기 조절 상자 -->
+            <span class="tl"></span>
+            <span class="tc"></span>
+            <span class="tr"></span>
+            <span class="cl"></span>
+            <span class="cr"></span>
+            <span class="bl"></span>
+            <span class="bc"></span>
+            <span class="br"></span>
+            <!-- //크기 조절 상자 -->
+          </div>
+
+          <p style="position: absolute; top: 1310px; left: 470px;">데이터가 연결된 상태 <span class="highlight">.loaded</span></p>
+          <div class="box tool hidden-object loaded" style="top: 1330px; left: 470px; width: 200px; height: 30px;">
+            <i class="hidden-object-icon text-converter"></i>
+            <div class="hidden-object-text">
+              <span>hidden_1</span>
+            </div>
+          </div>
+
+          <p style="position: absolute; top: 1310px; left: 890px;">연결 상태 <span class="highlight">.connected</span></p>
+          <div class="box tool hidden-object loaded connected" style="top: 1330px; left: 890px; width: 200px; height: 30px;">
+            <i class="hidden-object-icon text-converter"></i>
+            <div class="hidden-object-text">
+              <span>hidden_1</span>
+            </div>
+          </div>
+
+          <p style="position: absolute; top: 1310px; left: 1100px;">미연결 상태 <span class="highlight">.unconnected</span></p>
+          <div class="box tool hidden-object loaded unconnected" style="top: 1330px; left: 1100px; width: 200px; height: 30px;">
+            <i class="hidden-object-icon text-converter"></i>
+            <div class="hidden-object-text">
+              <span>hidden_1</span>
+            </div>
+          </div>
+          <!-- // 텍스트 변환 객체 - hidden-input  -->
+
+
+          <!-- 보고서 가져오기(팝업) -->
+          <p style="position: absolute; top: 1380px; left: 50px;">보고서 가져오기(팝업)</p>
+          <div class="box tool hidden-object" style="top: 1400px; left: 50px; width: 200px; height: 50px;">
+            <i class="hidden-object-icon popup-object"></i>
+            <div class="hidden-object-text">
+              <span>Popup</span>
+            </div>
+            <button class="mu-btn mu-btn-icon" type="button">
+              <i class="mu-icon-img new-open-new"></i>
+            </button>
+          </div>
+
+          <p style="position: absolute; top: 1380px; left: 260px;">박스 클릭 상태 <span class="highlight">.active</span></p>
+          <div class="box tool hidden-object active" style="top: 1400px; left: 260px; width: 200px; height: 50px;">
+            <i class="hidden-object-icon popup-object"></i>
+            <div class="hidden-object-text">
+              <span>PopupPopupPopupPopupPopupPopup</span>
+            </div>
+            <button class="mu-btn mu-btn-icon" type="button">
+              <i class="mu-icon-img new-open-new"></i>
+            </button>
+            <!-- 크기 조절 상자 -->
+            <span class="tl"></span>
+            <span class="tc"></span>
+            <span class="tr"></span>
+            <span class="cl"></span>
+            <span class="cr"></span>
+            <span class="bl"></span>
+            <span class="bc"></span>
+            <span class="br"></span>
+            <!-- //크기 조절 상자 -->
+          </div>
+
+          <p style="position: absolute; top: 1380px; left: 470px;">불러오기로 데이터에 연결된 상태<span class="highlight">.loaded</span></p>
+          <!-- NOTE: 데이터 연결시 loaded 클래스 추가 -->
+          <div class="box tool hidden-object loaded" style="top: 1400px; left: 470px; width: 200px; height: 50px;">
+            <i class="hidden-object-icon popup-object"></i>
+            <div class="hidden-object-text">
+              <span>PopupPopupPopupPopupPopupPopup</span>
+            </div>
+            <button class="mu-btn mu-btn-icon" type="button">
+              <i class="mu-icon-img new-open-new"></i>
+            </button>
+          </div>
+
+          <p style="position: absolute; top: 1380px; left: 680px;">보고서 연결 실패 상태</p>
+          <!-- NOTE: 데이터 연결시 loaded 클래스 추가 -->
+          <div class="box tool hidden-object visible-object" style="top: 1400px; left: 680px; width: 200px; height: 50px;">
+            <div class="mui-message error">
+              <i class="mu-icon err-circle"></i><span class="mui-message-text">보고서가 존재하지 않습니다.</span>
+            </div>
+          </div>
+
+          <p style="position: absolute; top: 1380px; left: 890px;">연결 상태 <span class="highlight">.connected</span></p>
+          <!-- NOTE: 데이터 연결시 loaded 클래스 추가 -->
+          <div class="box tool hidden-object loaded connected" style="top: 1400px; left: 890px; width: 200px; height: 50px;">
+            <i class="hidden-object-icon popup-object"></i>
+            <div class="hidden-object-text">
+              <span>Popup</span>
+            </div>
+            <button class="mu-btn mu-btn-icon" type="button">
+              <i class="mu-icon-img new-open-new"></i>
+            </button>
+          </div>
+
+          <p style="position: absolute; top: 1380px; left: 1100px;">미연결 상태 <span class="highlight">.unconnected</span></p>
+          <!-- NOTE: 데이터 연결시 loaded 클래스 추가 -->
+          <div class="box tool hidden-object loaded unconnected" style="top: 1400px; left: 1100px; width: 200px; height: 50px;">
+            <i class="hidden-object-icon popup-object"></i>
+            <div class="hidden-object-text">
+              <span>Popup</span>
+            </div>
+            <button class="mu-btn mu-btn-icon" type="button">
+              <i class="mu-icon-img new-open-new"></i>
+            </button>
+          </div>
+          <!-- // 보고서 가져오기(팝업) -->
+
+
+          <!-- 보고서 가져오기(포틀릿) -->
+          <p style="position: absolute; top: 1470px; left: 50px;">보고서 가져오기(포틀릿)</p>
+          <div class="box tool hidden-object visible-object" style="top: 1490px; left: 50px; width: 200px; height: 50px;">
+            <i class="hidden-object-icon portlet"></i>
+            <div class="hidden-object-text">
+              <span>Portlet</span>
+            </div>
+            <button class="mu-btn mu-btn-icon" type="button">
+              <!-- <i class="iriscon new-window"></i> -->
+              <i class="mu-icon-img new-open-new"></i>
+            </button>
+          </div>
+          <!-- 박스 클릭 시 사이즈 조절 박스 활성화 -->
+          <div class="box tool hidden-object visible-object active" style="top: 1490px; left: 260px; width: 200px; height: 50px;">
+            <i class="hidden-object-icon portlet"></i>
+            <div class="hidden-object-text">
+              <span>Portlet</span>
+            </div>
+            <button class="mu-btn mu-btn-icon" type="button">
+              <!-- <i class="iriscon new-window"></i> -->
+              <i class="mu-icon-img new-open-new"></i>
+            </button>
+            <!-- 크기 조절 상자 -->
+            <span class="tl"></span>
+            <span class="tc"></span>
+            <span class="tr"></span>
+            <span class="cl"></span>
+            <span class="cr"></span>
+            <span class="bl"></span>
+            <span class="bc"></span>
+            <span class="br"></span>
+            <!-- //크기 조절 상자 -->
+          </div>
+
+          <p style="position: absolute; top: 1470px; left: 470px;">불러오기로 데이터에 연결된 상태<span class="highlight">.loaded</span></p>
+          <!-- NOTE: 데이터 연결시 loaded 클래스 추가 -->
+          <div class="box tool hidden-object visible-object loaded" style="top: 1490px; left: 470px; width: 200px; height: 50px;">
+            <i class="hidden-object-icon portlet"></i>
+            <div class="hidden-object-text">
+              <span>PortletPortletPortletPortletPortlet</span>
+            </div>
+            <button class="mu-btn mu-btn-icon" type="button">
+              <!-- <i class="iriscon new-window"></i> -->
+              <i class="mu-icon-img new-open-new"></i>
+            </button>
+          </div>
+
+          <p style="position: absolute; top: 1470px; left: 680px;">보고서 연결 실패 상태</p>
+          <!-- NOTE: 데이터 연결시 loaded 클래스 추가 -->
+          <div class="box tool hidden-object visible-object" style="top: 1490px; left: 680px; width: 200px; height: 50px;">
+            <div class="mui-message error">
+              <i class="mu-icon err-circle"></i><span class="mui-message-text">보고서가 존재하지 않습니다. 보고서가 존재하지않습니다.</span>
+            </div>
+          </div>
+
+          <p style="position: absolute; top: 1470px; left: 890px;">연결 상태 <span class="highlight">.connected</span></p>
+          <div class="box tool hidden-object visible-object loaded connected" style="top: 1490px; left: 890px; width: 200px; height: 50px;">
+            <i class="hidden-object-icon portlet"></i>
+            <div class="hidden-object-text">
+              <span>Portlet</span>
+            </div>
+            <button class="mu-btn mu-btn-icon" type="button">
+              <!-- <i class="iriscon new-window"></i> -->
+              <i class="mu-icon-img new-open-new"></i>
+            </button>
+          </div>
+
+          <p style="position: absolute; top: 1470px; left: 1100px;">미연결 상태 <span class="highlight">.unconnected</span></p>
+          <div class="box tool hidden-object visible-object loaded unconnected" style="top: 1490px; left: 1100px; width: 200px; height: 50px;">
+            <i class="hidden-object-icon portlet"></i>
+            <div class="hidden-object-text">
+              <span>Portlet</span>
+            </div>
+            <button class="mu-btn mu-btn-icon" type="button">
+              <!-- <i class="iriscon new-window"></i> -->
+              <i class="mu-icon-img new-open-new"></i>
+            </button>
+          </div>
+          <!-- // 보고서 가져오기(포틀릿) -->
+
+
+          <!-- grid-chart-pagination -->
+          <span style="position: absolute; top: 1600px; left: 50px;">Grid-table-chart: Pagination
+          </span>
+          <div class="box tool area" style="top: 1620px; left: 50px; width: 1100px; height: 260px;">
+            <div class="grid-chart">
+              <!-- 필터 그룹 (페이지네이션, 서치바 그룹) -->
+
+              <div class="grid-chart-filter-wrap">
+                <!-- 목록 개수 -->
+                <div class="grid-perpage mr5">
+                  <label for="">목록 개수</label>
+                  <div class="mu-selectbox">
+                    <button class="mu-value">5</button>
+                    <ul class="mu-selectbox-list">
+                      <li class="tl active">5</li>
+                      <li class="tl">10</li>
+                      <li class="tl">20</li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- //목록 개수 -->
+                <!-- 데이터 개수 -->
+                <div class="mr5 mb5">데이터 개수 : 500</div>
+                <!-- //데이터 개수 -->
+                <!-- 차트 데이터 다운로드 버튼 -->
+                <button class="mu-btn mu-btn-default new" type="button">
+                  <i class="mu-icon-img download-new"></i>
+                </button>
+                <!-- //차트 데이터 다운로드 버튼 -->
+                <!-- 새 창으로 열기 버튼 -->
+                <button class="mu-btn mu-btn-default new" type="button">
+                  <i class="mu-icon-img new-open-new"></i>
+                </button>
+                <!-- //새 창으로 열기 버튼 -->
+                <!-- 검색 -->
+                <div class="grid-chart-input-search">
+                  <div class="mu-input-icon">
+                    <input type="text" class="mu-input" />
+                    <i class="mu-icon search"></i>
+                  </div>
+                </div>
+                <!-- //검색 -->
+              </div>
+
+              <!-- //필터 그룹 -->
+              <!-- grid-chart -->
+              <div class="grid-chart-table-wrap">
+                <table class="mu-grid mu-grid-border mu-grid-strip mu-grid-sort">
+                  <thead class="mu-grid-border">
+                    <tr>
+                      <th class="none">No.</th>
+                      <th>SCH_ID</th>
+                      <th>JOB_SEQ</th>
+                      <th>JOB_ID</th>
+                      <th>JOB</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>11</td>
+                      <td>11</td>
+                      <td>HDFS</td>
+                      <td>root</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>22</td>
+                      <td>SYSLOG_R1</td>
+                      <td>LOCAL</td>
+                      <td>root</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>33</td>
+                      <td>SYSLOG_R1</td>
+                      <td>GLOBAL</td>
+                      <td>root</td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>44</td>
+                      <td>44</td>
+                      <td>HDFS</td>
+                      <td>root</td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>55</td>
+                      <td>SYSLOG_R1</td>
+                      <td>LOCAL</td>
+                      <td>root</td>
+                    </tr>
+                    <tr>
+                      <td>6</td>
+                      <td>66</td>
+                      <td>SYSLOG_R1</td>
+                      <td>GLOBAL</td>
+                      <td>root</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //grid-chart -->
+
+              <!-- 페이지네이션 -->
+              <div class="pagination-new">
+                <button type="button" class="mu-btn mu-btn-icon" disabled="disabled">
+                  <i class="iriscon double-angle-left"></i>
+                </button>
+                <button type="button" class="mu-btn mu-btn-icon" disabled="disabled">
+                  <i class="iriscon angle-left"></i>
+                </button>
+                <ul>
+                  <li>
+                    <span role="textbox" contenteditable="" class="mu-input">10000</span>
+                  </li>
+                  <li class="pagination-slash">/</li>
+                  <li><span>100</span></li>
+                </ul>
+                <button type="button" class="mu-btn mu-btn-icon">
+                  <i class="iriscon angle-right"></i>
+                </button>
+                <button type="button" class="mu-btn mu-btn-icon">
+                  <i class="iriscon double-angle-right"></i>
+                </button>
+              </div>
+              <!-- //페이지네이션 -->
+            </div>
+          </div>
+          <!-- //grid-chart-paginaiton -->
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
