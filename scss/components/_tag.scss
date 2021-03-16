@@ -117,6 +117,24 @@
     }
   }
 }
+
+.tags {
+  display: flex;
+}
+
+.tags--horizontal {
+  flex-wrap: wrap;
+}
+
+.tags--vertical {
+  flex-direction: column;
+}
+
+.tags__item {
+  margin-right: $spacing-2xs;
+  margin-bottom: $spacing-2xs;
+}
+
 // -------------------------
 // theme별 mixin
 // -------------------------
