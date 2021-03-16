@@ -1,5 +1,7 @@
 .list {
   @include list;
+  display: flex;
+  flex-direction: column;
   border: 1px solid $ui-04;
   background-color: $ui-02;
   color: $text-01;
@@ -8,6 +10,24 @@
 .list__head {
   padding: $spacing-xs;
   background-color: $ui-01;
+}
+
+.list__head--hide {
+  display: none;
+}
+
+.list__head-title {
+  @include font-weight("medium");
+  color: $text-02;
+  margin-bottom: $spacing-3xs;
+}
+
+.list__head-title--hide {
+  display: none;
+}
+
+.list__head-toolbar {
+  display: flex;
 }
 
 .list__item {
@@ -24,4 +44,8 @@
 
 .list__checkmark {
   vertical-align: middle;
+}
+
+.list__body {
+  overflow: auto;
 }
