@@ -126,8 +126,16 @@
   flex-wrap: wrap;
 }
 
+.tags--horizontal .tag + .tag {
+  margin-left: $spacing-2xs;
+}
+
 .tags--vertical {
   flex-direction: column;
+}
+
+.tags--vertical .tag + .tag {
+  margin-top: $spacing-2xs;
 }
 
 .tags__item {
