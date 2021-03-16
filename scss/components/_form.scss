@@ -92,11 +92,11 @@
 // -------------------------
 .form--lg {
   .form__head-title {
-    @include font-size("20");
+    @include font-size("16");
   }
 
   .form__item {
-    padding: $spacing-sm 0 $spacing-xs;
+    padding: $spacing-xs 0;
   }
 
   .form__label {
