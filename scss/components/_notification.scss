@@ -116,10 +116,13 @@
   @include notification-status($support-04, #FFEBE6);
 }
 
+.notification-wrap {
+  margin: $spacing-xs;
+}
+
 // -------------------------
 // Notification Message
 // -------------------------
 .notification-message {
   @include notification-message;
 }
-
