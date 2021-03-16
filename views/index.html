@@ -1371,6 +1371,80 @@
   </div>
 
   <div class="component-variation">
+    <span class="component-variation__name">Default Checkbox - vertical</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: lg</p>
+            <div class="component-examle__item-group">
+              <div class="checkboxs checkboxs--vertical">
+                <!-- default -->
+                <div class="checkbox checkbox--lg">
+                  <input id="check-05" type="checkbox" class="checkbox__input" value="label" />
+                  <label for="check-05" class="checkbox__label">label</label>
+                </div>
+                <!-- checked -->
+                <div class="checkbox checkbox--lg">
+                  <input id="check-06" type="checkbox" class="checkbox__input" value="label" checked />
+                  <label for="check-06" class="checkbox__label">label</label>
+                </div>
+                <!-- indeterminate -->
+                <div class="checkbox checkbox--lg checkbox--indeterminate">
+                  <input id="check-07" type="checkbox" class="checkbox__input" value="label" />
+                  <label for="check-07" class="checkbox__label">label</label>
+                </div>
+                <!-- disabled -->
+                <div class="checkbox checkbox--lg checkbox--disabled">
+                  <input id="check-04" type="checkbox" class="checkbox__input" value="label" disabled />
+                  <label for="check-04" class="checkbox__label">label</label>
+                </div>
+                <!-- checked + disabled -->
+                <div class="checkbox checkbox--lg checkbox--disabled">
+                  <input id="check-04" type="checkbox" class="checkbox__input" value="label" checked disabled />
+                  <label for="check-04" class="checkbox__label">label</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: md</p>
+            <div class="component-examle__item-group">
+              <div class="checkboxs checkboxs--vertical">
+                <!-- default -->
+                <div class="checkbox">
+                  <input id="check-01" type="checkbox" class="checkbox__input" value="label" />
+                  <label for="check-01" class="checkbox__label">label</label>
+                </div>
+                <!-- checked -->
+                <div class="checkbox">
+                  <input id="check-02" type="checkbox" class="checkbox__input" value="label" checked />
+                  <label for="check-02" class="checkbox__label">label</label>
+                </div>
+                <!-- indeterminate -->
+                <div class="checkbox checkbox--indeterminate">
+                  <input id="check-03" type="checkbox" class="checkbox__input" value="label" />
+                  <label for="check-03" class="checkbox__label">label</label>
+                </div>
+                <!-- disabled -->
+                <div class="checkbox checkbox--disabled">
+                  <input id="check-04" type="checkbox" class="checkbox__input" value="label" disabled />
+                  <label for="check-04" class="checkbox__label">label</label>
+                </div>
+                <!-- checked + disabled -->
+                <div class="checkbox checkbox--disabled">
+                  <input id="check-04" type="checkbox" class="checkbox__input" value="label" checked disabled />
+                  <label for="check-04" class="checkbox__label">label</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
     <span class="component-variation__name">Studio Checkbox</span>
     <div class="component-example">
       <div class="component-example__live">
@@ -5228,6 +5302,65 @@
   </div>
 
   <div class="component-variation">
+    <span class="component-variation__name">Search List - has title</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <div class="list" style="width: 520px; height: 140px;">
+            <div class="list__head">
+              <div class="list__head-title">title</div>
+              <div class="list__head-toolbar">
+                <div class="text-input-group">
+                  <span class="text-input-group__icon">
+                    <svg class="svg-icon">
+                      <use xlink:href="#search"></use>
+                    </svg>
+                  </span>
+                  <input type="text" class="text-input" placeholder="검색어를 입력해주세요" />
+                  <button class="text-input-group__clear-button">
+                    <svg class="svg-icon">
+                      <use xlink:href="#close"></use>
+                    </svg>
+                  </button>
+                </div>
+                <button type="button" class="button button--link p-0" title="리스트 정보 새로고침">
+                  <svg class="svg-icon">
+                    <use xlink:href="#refresh"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="list__body">
+              <ul class="list__list">
+                <li class="list__item">
+                  <button type="button" class="list__button">
+                    <span class="list__text">list item text <mark class="filter-highlight">filter highlight</mark></span>
+                  </button>
+                </li>
+                <li class="list__item">
+                  <button type="button" class="list__button">
+                    <span class="list__text">list item text</span>
+                  </button>
+                </li>
+                <li class="list__item">
+                  <button type="button" class="list__button">
+                    <span class="list__text">list item text</span>
+                  </button>
+                </li>
+                <li class="list__item">
+                  <button type="button" class="list__button">
+                    <span class="list__text">list item text</span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
     <span class="component-variation__name">Selectable List</span>
     <div class="component-example">
       <div class="component-example__live">
@@ -5527,46 +5660,54 @@
       <div class="component-example__live">
         <div style="width: 600px">
           <!-- info -->
-          <div class="notification notification--info">
-            <svg class="notification__icon svg-icon">
-              <use xlink:href="#info-fill"></use>
-            </svg>
-            <div class="notification__contents">
-              <p class="notification__title">Notification Title</p>
-              <p class="notification__text">Notification Text Here.</p>
+          <div class="notification-wrap">
+            <div class="notification notification--info">
+              <svg class="notification__icon svg-icon">
+                <use xlink:href="#info-fill"></use>
+              </svg>
+              <div class="notification__contents">
+                <p class="notification__title">Notification Title</p>
+                <p class="notification__text">Notification Text Here.</p>
+              </div>
             </div>
           </div>
           <!-- success -->
-          <div class="notification notification--success">
-            <svg class="notification__icon svg-icon">
-              <use xlink:href="#checkmark-fill"></use>
-            </svg>
-            <div class="notification__contents">
-              <p class="notification__title">Notification Title</p>
-              <p class="notification__text">Notification Text Here.</p>
+          <div class="notification-wrap">
+            <div class="notification notification--success">
+              <svg class="notification__icon svg-icon">
+                <use xlink:href="#checkmark-fill"></use>
+              </svg>
+              <div class="notification__contents">
+                <p class="notification__title">Notification Title</p>
+                <p class="notification__text">Notification Text Here.</p>
+              </div>
             </div>
           </div>
           <!-- warning -->
-          <div class="notification notification--warning">
-            <svg class="notification__icon svg-icon">
-              <use xlink:href="#warning-fill"></use>
-            </svg>
-            <div class="notification__contents">
-              <p class="notification__title">Notification Title</p>
-              <p class="notification__text">Notification Text Here.</p>
+          <div class="notification-wrap">
+            <div class="notification notification--warning">
+              <svg class="notification__icon svg-icon">
+                <use xlink:href="#warning-fill"></use>
+              </svg>
+              <div class="notification__contents">
+                <p class="notification__title">Notification Title</p>
+                <p class="notification__text">Notification Text Here.</p>
+              </div>
             </div>
           </div>
           <!-- error -->
-          <div class="notification notification--error">
-            <svg class="notification__icon svg-icon">
-              <use xlink:href="#issue-fill"></use>
-            </svg>
-            <div class="notification__contents">
-              <p class="notification__title">Notification Title</p>
-              <p class="notification__text">
-                Notification Text Here Notification Text Here Notification Text Here Notification Text Here Notification
-                Text Here Notification Text Here Notification Text Here Notification Text Here.
-              </p>
+          <div class="notification-wrap">
+            <div class="notification notification--error">
+              <svg class="notification__icon svg-icon">
+                <use xlink:href="#issue-fill"></use>
+              </svg>
+              <div class="notification__contents">
+                <p class="notification__title">Notification Title</p>
+                <p class="notification__text">
+                  Notification Text Here Notification Text Here Notification Text Here Notification Text Here Notification
+                  Text Here Notification Text Here Notification Text Here Notification Text Here.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -8060,6 +8201,62 @@
               <button class="tag tag--sm tag--selected" style="margin-left: 16px" disabled>
                 <span class="tag__label">TAG1</span>
               </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Default Tag Align</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Align: horizontal</p>
+            <div class="component-examle__item-group">
+              <div class="tags tags--horizontal">
+                <!-- default -->
+                <button class="tag tag--lg">
+                  <span class="tag__label">TAG1</span>
+                </button>
+                <!-- selected -->
+                <button class="tag tag--lg tag--selected">
+                  <span class="tag__label">TAG1</span>
+                </button>
+                <!-- disabled -->
+                <button class="tag tag--lg" disabled>
+                  <span class="tag__label">TAG1</span>
+                </button>
+                <!-- selected + disabled -->
+                <button class="tag tag--lg tag--selected" disabled>
+                  <span class="tag__label">TAG1</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Align: vertical</p>
+            <div class="component-examle__item-group">
+              <div class="tags tags--vertical">
+                <!-- default -->
+                <button class="tag">
+                  <span class="tag__label">TAG1</span>
+                </button>
+                <!-- selected -->
+                <button class="tag tag--selected">
+                  <span class="tag__label">TAG1</span>
+                </button>
+                <!-- disabled -->
+                <button class="tag" disabled>
+                  <span class="tag__label">TAG1</span>
+                </button>
+                <!-- selected + disabled -->
+                <button class="tag tag--selected" disabled>
+                  <span class="tag__label">TAG1</span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
