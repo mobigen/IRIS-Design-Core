@@ -30,6 +30,10 @@
   display: flex;
 }
 
+.list__head-toolbar .text-input-group {
+  width: 100%;
+}
+
 .list__item {
   border-bottom: 1px solid $hover-row;
 
