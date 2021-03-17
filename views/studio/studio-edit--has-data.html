@@ -62,7 +62,7 @@
       <button class="select-selector__button" type="button">
         <span class="select-selector__title">카테고리</span>
         <svg class="svg-icon select-selector__icon">
-          <use xlink:href="#object-chevron-down-medium"></use>
+          <use xlink:href="#chevron-down-medium"></use>
         </svg>
       </button>
     </div>
@@ -277,15 +277,16 @@
     <div style="display:block;position:relative;width:100%;height:100%;">
       <div style="display:block;position:relative;width:100%;height:100%;">
         <div id="canvas-area" style="width: 100%; height: 100%; background-color: rgb(255, 255, 255);">
-          <div class="canvas-object data canvas-object--active unconnected" style="width: 300px; height: 150px;transform: translate(30px, 20px);">
+          <div class="canvas-object data canvas-object--active canvas-object--unconnected" style="width: 300px; height: 150px;transform: translate(30px, 20px);">
           </div>
-          <div class="canvas-object object-area unconnected" style="width: 300px; height: 150px;transform: translate(340px, 20px);">
+          <div class="canvas-object object-area canvas-object--unconnected" style="width: 300px; height: 150px;transform: translate(340px, 20px);">
           </div>
 
           <!-- old -->
           <!--  차트  -->
           <span style="position: absolute; top: 30px; left: 50px;">차트(빈 영역)</span>
-          <div class="canvas-object object-area" style="top: 50px;left: 50px;width: 200px;height: 150px;">
+          <!-- svg icon 적용 -->
+          <!-- <div class="canvas-object object-area" style="display: none; top: 50px;left: 50px;width: 200px;height: 150px;">
             <div style="width: 100%; height: 100%;">
               <div class="canvas-object-inner">
                 <svg class="canvas-object-inner__icon svg-icon">
@@ -293,16 +294,17 @@
                 </svg>
               </div>
             </div>
+          </div> -->
+
+          <!-- background-image 적용 -->
+          <div class="canvas-object object-area" style="top: 50px;left: 50px;width: 200px;height: 150px;">
+            <div style="width: 100%; height: 100%;">
+            </div>
           </div>
 
           <!-- 박스 클릭 시 사이즈 조절 박스 활성화 -->
           <span style="position: absolute; top: 30px; left: 260px;">차트(selected/활성화)</span>
           <div class="canvas-object object-area canvas-object--active chart-bg-none" style="top: 50px;left: 260px;width: 200px;height: 150px;">
-            <div class="canvas-object-inner">
-              <svg class="canvas-object-inner__icon svg-icon">
-                <use xlink:href="#object-chart"></use>
-              </svg>
-            </div>
             <!-- 크기 조절 상자 -->
             <span class="tl"></span>
             <span class="tc"></span>
@@ -1304,11 +1306,6 @@
           <!-- image 1/6: Normal-Active -->
           <span style="position: absolute; top: 710px; left: 1220px;">image: select</span>
           <div class="canvas-object object-image canvas-object--active" style="top: 730px;left: 1220px;width: 200px;height: 150px;">
-            <div class="canvas-object-inner">
-              <svg class="canvas-object-inner__icon svg-icon">
-                <use xlink:href="#object-image"></use>
-              </svg>
-            </div>
             <!-- 크기 조절 상자 -->
             <span class="tl"></span>
             <span class="tc"></span>
@@ -1325,11 +1322,6 @@
           <!-- image 2/6: Normal -->
           <span style="position: absolute; top: 710px; left: 1430px;">image</span>
           <div class="canvas-object object-image" style="top: 730px;left: 1430px;width: 200px;height: 150px;">
-            <div class="canvas-object-inner">
-              <svg class="canvas-object-inner__icon svg-icon">
-                <use xlink:href="#object-image"></use>
-              </svg>
-            </div>
             <!-- 크기 조절 상자 -->
             <span class="tl"></span>
             <span class="tc"></span>
@@ -1343,18 +1335,13 @@
           </div>
           <!-- //image 2/6: Normal -->
 
-          <!-- image 3/6: Error-Active (is-error 클래스 추가 필요 없음) -->
+          <!-- image 3/6: Error-Active (object-image--error 클래스 추가 필요 없음) -->
           <span style="position: absolute; top: 900px; left: 1220px;">image</span>
-          <div class="canvas-object object-image is-error canvas-object--active" style="top: 920px;left: 1220px;width: 200px;height: 150px;">
+          <div class="canvas-object object-image object-image--error canvas-object--active" style="top: 920px;left: 1220px;width: 200px;height: 150px;">
             <!-- <div class="mui-noti mui-noti-error">
               <i class="mu-icon err-circle mui-noti-icon"></i>
               <p class="mui-noti-text">이미지를 표시할 수 없습니다</p>
             </div> -->
-            <div class="canvas-object-inner">
-              <svg class="canvas-object-inner__icon svg-icon">
-                <use xlink:href="#object-no-image"></use>
-              </svg>
-            </div>
             <!-- 크기 조절 상자 -->
             <span class="tl"></span>
             <span class="tc"></span>
@@ -1366,20 +1353,15 @@
             <span class="br"></span>
             <!-- //크기 조절 상자 -->
           </div>
-          <!-- //image 3/6: Error-Active (is-error 클래스 추가) -->
+          <!-- //image 3/6: Error-Active (object-image--error 클래스 추가) -->
 
-          <!-- image 4/6: Error (is-error 클래스 추가) -->
+          <!-- image 4/6: Error (object-image--error 클래스 추가) -->
           <span style="position: absolute; top: 900px; left: 1430px;">image canvas-object--deselected</span>
-          <div class="canvas-object object-image is-error canvas-object--deselected" style="top: 920px;left: 1430px;width: 200px;height: 150px;">
+          <div class="canvas-object object-image object-image--error canvas-object--deselected" style="top: 920px;left: 1430px;width: 200px;height: 150px;">
             <!-- <div class="mui-noti mui-noti-error">
               <i class="mu-icon err-circle mui-noti-icon"></i>
               <p class="mui-noti-text">이미지를 표시할 수 없습니다</p>
             </div> -->
-            <div class="canvas-object-inner">
-              <svg class="canvas-object-inner__icon svg-icon">
-                <use xlink:href="#object-no-image"></use>
-              </svg>
-            </div>
             <div class="checkbox">
               <input class="checkbox__input" type="checkbox" id="img-select-ckb">
               <label class="checkbox__label" for="img-select-ckb"></label>
@@ -1395,7 +1377,7 @@
             <span class="br"></span>
             <!-- //크기 조절 상자 -->
           </div>
-          <!-- //image 4/6: Error (is-error 클래스 추가) -->
+          <!-- //image 4/6: Error (object-image--error 클래스 추가) -->
           <!-- //image -->
 
           <!-- 주기설정 활성화 -->
@@ -1405,11 +1387,6 @@
               <i class="mu-icon err-circle mui-noti-icon"></i>
               <p class="mui-noti-text">이미지를 표시할 수 없습니다</p>
             </div> -->
-            <div class="canvas-object-inner">
-              <svg class="canvas-object-inner__icon svg-icon">
-                <use xlink:href="#object-renew"></use>
-              </svg>
-            </div>
             <!-- 크기 조절 상자 -->
             <span class="tl"></span>
             <span class="tc"></span>
@@ -1430,11 +1407,6 @@
               <i class="mu-icon err-circle mui-noti-icon"></i>
               <p class="mui-noti-text">이미지를 표시할 수 없습니다</p>
             </div> -->
-            <div class="canvas-object-inner">
-              <svg class="canvas-object-inner__icon svg-icon">
-                <use xlink:href="#object-renew"></use>
-              </svg>
-            </div>
             <!-- 크기 조절 상자 -->
             <span class="tl"></span>
             <span class="tc"></span>
@@ -2469,11 +2441,6 @@
           <!-- 맵  -->
           <span style="position: absolute; top: 700px; left: 890px;"></span>
           <div class="canvas-object object-map" style="top: 720px;left: 890px;width: 300px;height: 250px;">
-            <div class="canvas-object-inner">
-              <svg class="canvas-object-inner__icon svg-icon">
-                <use xlink:href="#map"></use>
-              </svg>
-            </div>
             <!-- 레이어 이름 요소 -->
             <!-- <div class="object-map__layer-name-wrap">
               <span class="object-map__layer-name">layer name</span>
@@ -2483,7 +2450,7 @@
             <div class="object-map__move-buttons">
               <button type="button" class="button button--tertiary">
                 <svg class="svg-icon">
-                  <use xlink:href="#globe"></use>
+                  <use xlink:href="#global"></use>
                 </svg>
                 <span class="button__text">지도 이동</span>
               </button>
@@ -2588,7 +2555,7 @@
             </div>
           </div>
 
-          <p style="position: absolute; top: 1240px; left: 890px;">연결 상태 <span class="highlight">.connected</span></p>
+          <p style="position: absolute; top: 1240px; left: 890px;">연결 상태 <span class="highlight">.canvas-object--connected</span></p>
           <div class="canvas-object object-hidden object-hidden--loaded canvas-object--connected" style="top: 1260px; left: 890px; width: 200px; height: 30px;">
             <svg class="object-hidden__icon svg-icon">
               <use xlink:href="#data"></use>
@@ -2598,7 +2565,7 @@
             </div>
           </div>
 
-          <p style="position: absolute; top: 1240px; left: 1100px;">미연결 상태 <span class="highlight">.unconnected</span></p>
+          <p style="position: absolute; top: 1240px; left: 1100px;">미연결 상태 <span class="highlight">.canvas-object--unconnected</span></p>
           <div class="canvas-object object-hidden object-hidden--loaded canvas-object--unconnected" style="top: 1260px; left: 1100px; width: 200px; height: 30px;">
             <svg class="object-hidden__icon svg-icon">
               <use xlink:href="#data"></use>
@@ -2641,7 +2608,7 @@
             <!-- //크기 조절 상자 -->
           </div>
 
-          <p style="position: absolute; top: 1310px; left: 470px;">데이터가 연결된 상태 <span class="highlight">.loaded</span></p>
+          <p style="position: absolute; top: 1310px; left: 470px;">데이터가 연결된 상태 <span class="highlight">.canvas-object--loaded</span></p>
           <div class="canvas-object object-hidden object-hidden--loaded" style="top: 1330px; left: 470px; width: 200px; height: 30px;">
             <svg class="object-hidden__icon svg-icon">
               <use xlink:href="#object-hidden-input"></use>
@@ -2651,7 +2618,7 @@
             </div>
           </div>
 
-          <p style="position: absolute; top: 1310px; left: 890px;">연결 상태 <span class="highlight">.connected</span></p>
+          <p style="position: absolute; top: 1310px; left: 890px;">연결 상태 <span class="highlight">.canvas-object--connected</span></p>
           <div class="canvas-object object-hidden object-hidden--loaded canvas-object--connected" style="top: 1330px; left: 890px; width: 200px; height: 30px;">
             <svg class="object-hidden__icon svg-icon">
               <use xlink:href="#object-hidden-input"></use>
@@ -2661,7 +2628,7 @@
             </div>
           </div>
 
-          <p style="position: absolute; top: 1310px; left: 1100px;">미연결 상태 <span class="highlight">.unconnected</span></p>
+          <p style="position: absolute; top: 1310px; left: 1100px;">미연결 상태 <span class="highlight">.canvas-object--unconnected</span></p>
           <div class="canvas-object object-hidden object-hidden--loaded canvas-object--unconnected" style="top: 1330px; left: 1100px; width: 200px; height: 30px;">
             <svg class="object-hidden__icon svg-icon">
               <use xlink:href="#object-hidden-input"></use>
@@ -2741,7 +2708,7 @@
             </div>
           </div>
 
-          <p style="position: absolute; top: 1380px; left: 890px;">연결 상태 <span class="highlight">.connected</span></p>
+          <p style="position: absolute; top: 1380px; left: 890px;">연결 상태 <span class="highlight">.canvas-object--connected</span></p>
           <!-- NOTE: 데이터 연결시 object-hidden--loaded 클래스 추가 -->
           <div class="canvas-object object-hidden object-hidden--loaded canvas-object--connected" style="top: 1400px; left: 890px; width: 200px; height: 50px;">
             <svg class="object-hidden__icon svg-icon">
@@ -2757,7 +2724,7 @@
             </button>
           </div>
 
-          <p style="position: absolute; top: 1380px; left: 1100px;">미연결 상태 <span class="highlight">.unconnected</span></p>
+          <p style="position: absolute; top: 1380px; left: 1100px;">미연결 상태 <span class="highlight">.canvas-object--unconnected</span></p>
           <!-- NOTE: 데이터 연결시 object-hidden--loaded 클래스 추가 -->
           <div class="canvas-object object-hidden object-hidden--loaded canvas-object--unconnected" style="top: 1400px; left: 1100px; width: 200px; height: 50px;">
             <svg class="object-hidden__icon svg-icon">
@@ -2841,8 +2808,8 @@
             </div>
           </div>
 
-          <p style="position: absolute; top: 1470px; left: 890px;">연결 상태 <span class="highlight">.connected</span></p>
-          <div class="canvas-object object-hidden object-visible object-hidden--loaded connected" style="top: 1490px; left: 890px; width: 200px; height: 50px;">
+          <p style="position: absolute; top: 1470px; left: 890px;">연결 상태 <span class="highlight">.canvas-object--connected</span></p>
+          <div class="canvas-object object-hidden object-visible object-hidden--loaded canvas-object--connected" style="top: 1490px; left: 890px; width: 200px; height: 50px;">
             <svg class="object-hidden__icon svg-icon">
               <use xlink:href="#object-portlet"></use>
             </svg>
@@ -2856,8 +2823,8 @@
             </button>
           </div>
 
-          <p style="position: absolute; top: 1470px; left: 1100px;">미연결 상태 <span class="highlight">.unconnected</span></p>
-          <div class="canvas-object object-hidden object-visible object-hidden--loaded unconnected" style="top: 1490px; left: 1100px; width: 200px; height: 50px;">
+          <p style="position: absolute; top: 1470px; left: 1100px;">미연결 상태 <span class="highlight">.canvas-object--unconnected</span></p>
+          <div class="canvas-object object-hidden object-visible object-hidden--loaded canvas-object--unconnected" style="top: 1490px; left: 1100px; width: 200px; height: 50px;">
             <svg class="object-hidden__icon svg-icon">
               <use xlink:href="#object-portlet"></use>
             </svg>
@@ -3483,14 +3450,14 @@
                   <div class="side-panel-tab__play-button">
                     <button type="button" class="button button--secondary play-button">
                       <svg class="svg-icon">
-                        <use xlink:href="#setting"></use>
+                        <use xlink:href="#play"></use>
                       </svg>
                       <span class="button__text">실행</span>
                     </button>
                     <!-- 토글 -->
                     <button type="button" class="button button--secondary play-button" style="display: none;">
                       <svg class="svg-icon">
-                        <use xlink:href="#setting"></use>
+                        <use xlink:href="#stop"></use>
                       </svg>
                       <span class="button__text">중지</span>
                     </button>
