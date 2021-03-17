@@ -97,7 +97,12 @@
 
 .notification__title {
   @include font-weight("medium");
+  @include font-size("14");
   margin-right: $spacing-2xs;
+}
+
+.notification__text {
+  @include font-size("14");
 }
 
 .notification--info {
