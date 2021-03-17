@@ -112,9 +112,10 @@
 // -------------------------
 // form--vertical
 // -------------------------
-.form--vertical {
+.form__head.form--vertical {
   margin-top: $spacing-xs;
-
+}
+.form--vertical {
   .form__item {
     flex-direction: column;
     align-items: flex-start;
