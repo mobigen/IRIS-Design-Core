@@ -206,3 +206,47 @@
     border-color: $text-03;
   }
 }
+
+// -------------------------
+// theme: primary
+// -------------------------
+.canvas-object .checkbox--primary {
+  .checkbox__label:hover::before {
+    border-color: $primary;
+  }
+
+  // checked 상태
+  .checkbox__input:checked + .checkbox__label::before {
+    background-color: $primary;
+    border-color: $primary;
+  }
+
+  // disabled 상태
+  .checkbox--disabled .checkbox__label {
+    &:hover {
+      &::before,
+      &::after {
+        border-color: $text-03;
+      }
+    }
+  }
+  
+  .checkbox--disabled .checkbox__input:checked + .checkbox__label {
+    &:hover {
+      &::before{
+        border-color: $primary;
+      }
+    }
+  }
+  
+  // 부분 선택 상태
+  .checkbox--indeterminate .checkbox__input + .checkbox__label::before,
+  .checkbox__input:indeterminate + .checkbox__label::before {
+    border-color: $primary;
+  }
+  
+  .checkbox--indeterminate .checkbox__input + .checkbox__label::after,
+  .checkbox__input:indeterminate + .checkbox__label::after {
+    border-color: $primary;
+  }
+}

@@ -26,6 +26,7 @@
   padding-left: rem(23px); //width of radio 17px + 6px of padding
   min-height: rem(24px);
   color: $text-02;
+  white-space: nowrap;
   user-select: none;
   cursor: pointer;
 }
