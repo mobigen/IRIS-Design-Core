@@ -29,7 +29,7 @@
   color: $primary;
 }
 
-.tab__item--selected::after {
+.tab__item--selected .tab__button::after {
   content: "";
   position: absolute;
   background-color: $primary;
@@ -109,7 +109,7 @@
     border-bottom: 2px solid $ui-04;
   }
 
-  .tab__item--selected::after {
+  .tab__item--selected .tab__button::after {
     bottom: -2px;
     left: 0;
     width: 100%;
@@ -131,7 +131,7 @@
     border-right: 2px solid $ui-04;
   }
 
-  .tab__item--selected::after {
+  .tab__item--selected .tab__button::after {
     top: 0;
     right: -2px;
     width: 2px;
@@ -178,6 +178,9 @@
     }
 
     &::after {
+    }
+
+    .tab__button::after {
       display: none;
     }
   }
