@@ -178,6 +178,9 @@
     }
 
     &::after {
+    }
+
+    .tab__button::after {
       display: none;
     }
   }
