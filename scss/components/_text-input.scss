@@ -45,6 +45,9 @@
     ~ .text-input-group__button {
       display: none;
     }
+    ~ .text-input-group__clear-button {
+      display: none;
+    }
   }
 
   &[readonly],
@@ -96,6 +99,12 @@
 // 1. .text-input-group__input -> .text-input 으로 변경
 .text-input-group {
   position: relative;
+
+  &:hover {
+    .text-input-group__clear-button {
+      display: flex;
+    }
+  }
 }
 
 .text-input-group__input {
@@ -134,6 +143,7 @@
   background-color: transparent;
   z-index: z("float");
   cursor: pointer;
+  display: none;
 
   .svg-icon {
     position: absolute;
@@ -202,7 +212,7 @@
 // -------------------------
 // input + suffix
 // -------------------------
-// 
+//
 .text-input-wrap {
   display: flex;
   align-items: center;
