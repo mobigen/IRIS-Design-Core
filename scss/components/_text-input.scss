@@ -96,6 +96,12 @@
 // 1. .text-input-group__input -> .text-input 으로 변경
 .text-input-group {
   position: relative;
+
+  &:hover {
+    .text-input-group__button {
+      display: flex;
+    }
+  }
 }
 
 .text-input-group__input {
@@ -125,7 +131,7 @@
   }
 }
 
-.text-input-group__clear-button {
+.text-input-group__button {
   @include button-normal;
   @include position-right-center(6px);
   width: $spacing-md;
@@ -134,6 +140,7 @@
   background-color: transparent;
   z-index: z("float");
   cursor: pointer;
+  display: none;
 
   .svg-icon {
     position: absolute;
@@ -180,7 +187,7 @@
     }
   }
 
-  .text-input-group__clear-button {
+  .text-input-group__button {
     right: 4px;
     width: 14px;
     height: 14px;
@@ -190,7 +197,7 @@
 .text-input-group--disabled {
   cursor: not-allowed;
 
-  .text-input-group__clear-button {
+  .text-input-group__button {
     opacity: 0.4;
     cursor: not-allowed;
   }
@@ -202,7 +209,7 @@
 // -------------------------
 // input + suffix
 // -------------------------
-// 
+//
 .text-input-wrap {
   display: flex;
   align-items: center;
