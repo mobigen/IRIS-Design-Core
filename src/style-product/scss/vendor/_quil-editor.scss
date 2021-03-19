@@ -1,0 +1,16 @@
+.editor-layout {
+  .ql-toolbar.ql-snow {
+    border-width: 0 0 1px 0;
+  }
+  
+  .ql-container.ql-snow {
+    border: 0;
+  }
+
+  .quil-editor>div {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+  }
+}
+

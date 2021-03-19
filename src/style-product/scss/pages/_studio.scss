@@ -385,6 +385,71 @@
   background: none;
 }
 
+// check-and-radio
+.object-check-and-radio {
+}
+
+.vertical-align-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+}
+
+.vertical-align-inner {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.vertical-align-inner__table-cell {
+  display: table-cell;
+  position: relative;
+}
+
+.vertical-align-inner__table-cell.col .checkbox,
+.vertical-align-inner__table-cell.col .radio {
+  display: inline-flex;
+}
+
+.vertical-align-inner__table-cell.top {
+  vertical-align: top;
+}
+
+.vertical-align-inner__table-cell.middle {
+  vertical-align: middle;
+}
+
+.vertical-align-inner__table-cell.bottom {
+  vertical-align: bottom;
+}
+
+// combo
+.object-combo-box {
+}
+
+.object-combo-box .select,
+.object-combo-box .select-selector {
+  width: 100%;
+  height: 100%;
+}
+
+// datetime-range-picker
+.object-datetime-range-picker {
+}
+
+.object-datetime-range-picker .division-line {
+  margin-top: $spacing-xs;
+}
+
+.date-picker-selector__input-separator {
+  margin: 0 $spacing-2xs;
+  color: $text-02;
+}
+
+
 // html
 // TODO: BEM 적용 및 개선 필요
 .html-view {
@@ -696,7 +761,7 @@
 
 .canvas-object--select::after {
   background-color: rgba($ui-02, 0.6);
-  z-index: 9999;
+  // z-index: 9999;
   border: solid 1px $secondary;
   margin: -1px;
 }
