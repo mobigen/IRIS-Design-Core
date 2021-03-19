@@ -45,9 +45,6 @@
     ~ .text-input-group__button {
       display: none;
     }
-    ~ .text-input-group__clear-button {
-      display: none;
-    }
   }
 
   &[readonly],
@@ -101,7 +98,7 @@
   position: relative;
 
   &:hover {
-    .text-input-group__clear-button {
+    .text-input-group__button {
       display: flex;
     }
   }
@@ -134,7 +131,7 @@
   }
 }
 
-.text-input-group__clear-button {
+.text-input-group__button {
   @include button-normal;
   @include position-right-center(6px);
   width: $spacing-md;
@@ -190,7 +187,7 @@
     }
   }
 
-  .text-input-group__clear-button {
+  .text-input-group__button {
     right: 4px;
     width: 14px;
     height: 14px;
@@ -200,7 +197,7 @@
 .text-input-group--disabled {
   cursor: not-allowed;
 
-  .text-input-group__clear-button {
+  .text-input-group__button {
     opacity: 0.4;
     cursor: not-allowed;
   }
