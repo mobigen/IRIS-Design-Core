@@ -96,12 +96,6 @@
 // 1. .text-input-group__input -> .text-input 으로 변경
 .text-input-group {
   position: relative;
-
-  &:hover {
-    .text-input-group__button {
-      display: flex;
-    }
-  }
 }
 
 .text-input-group__input {
@@ -140,7 +134,6 @@
   background-color: transparent;
   z-index: z("float");
   cursor: pointer;
-  display: none;
 
   .svg-icon {
     position: absolute;
@@ -218,4 +211,19 @@
 .text-input-wrap__suffix {
   margin-left: $spacing-2xs;
   color: $text-02;
+}
+
+// -------------------------
+// input hidable
+// -------------------------
+//
+.text-input-group--hidable {
+  .text-input-group__button {
+    display: none;
+  }
+  &:hover {
+    .text-input-group__button {
+      display: flex;
+    }
+  }
 }
