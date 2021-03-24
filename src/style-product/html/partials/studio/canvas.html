@@ -58,10 +58,10 @@
           <span style="position: absolute; top: 230px; left: 50px;">리스트(빈 영역 / 타이틀이 없는 경우)</span>
           <div class="canvas-object object-list" style="top: 250px;left: 50px;width: 200px;height: 150px;">
             <div class="list">
-              <!-- 타이틀 사용하지 않는 경우 list__head-title--hide 클래스 추가
-                검색창을 사용하지 않는 경우 list__head--hide 클래스 추가  -->
-              <div class="list__head list__head--hide">
-                <span class="list__head-title list__head-title--hide" title="title">title</span>
+              <!-- 타이틀 사용하지 않는 경우 list__head--title-hide 클래스 추가
+              검색창을 사용하지 않는 경우 list__head--toolbar-hide 클래스 추가 -->
+              <div class="list__head">
+                <span class="list__head-title list__head--title-hide" title="title">title</span>
                 <div class="list__head-toolbar">
                   <div class="text-input-group">
                     <span class="text-input-group__icon">
@@ -89,13 +89,13 @@
             </div>
           </div>
 
-          <span style="position: absolute; top: 410px; left: 50px;">리스트(빈 영역) - 선택시</span>
+          <span style="position: absolute; top: 410px; left: 50px;">리스트(빈 영역) - 검색 기능 미사용</span>
           <div class="canvas-object object-list canvas-object--active" style="top: 430px;left: 50px;width: 200px;height: 150px">
             <div class="list">
-              <!-- 타이틀 사용하지 않는 경우 list__head-title--hide 클래스 추가
-              검색창을 사용하지 않는 경우 list__head--hide 클래스 추가 -->
-              <div class="list__head">
-                <span class="list__head-title list__head-title--hide" title="title">title</span>
+              <!-- 타이틀 사용하지 않는 경우 list__head--title-hide 클래스 추가
+              검색창을 사용하지 않는 경우 list__head--toolbar-hide 클래스 추가 -->
+              <div class="list__head list__head--title-hide list__head--toolbar-hide">
+                <span class="list__head-title" title="title">title</span>
                 <div class="list__head-toolbar">
                   <div class="text-input-group">
                     <span class="text-input-group__icon">
@@ -157,10 +157,10 @@
           <span style="position: absolute; top: 230px; left: 260px;">리스트 title 없는 경우</span>
           <div class="canvas-object object-list" style="top: 250px;left: 260px;width: 200px;height: 300px;">
             <div class="list">
-              <!-- 타이틀 사용하지 않는 경우 list__head-title--hide 클래스 추가
+              <!-- 타이틀 사용하지 않는 경우 list__head--title-hide 클래스 추가
               검색창을 사용하지 않는 경우 list__head--hide 클래스 추가 -->
-              <div class="list__head">
-                <span class="list__head-title list__head--hide" title="title">title</span>
+              <div class="list__head list__head--toolbar-hide">
+                <span class="list__head-title" title="title">title</span>
                 <div class="list__head-toolbar">
                   <div class="text-input-group">
                     <span class="text-input-group__icon">
@@ -212,8 +212,8 @@
           <span style="position: absolute; top: 230px; left: 470px;">리스트 title 있는 경우</span>
           <div class="canvas-object object-list" style="top: 250px;left: 470px;width: 200px;height: 150px;">
             <div class="list">
-              <!-- 타이틀 사용하지 않는 경우 list__head-title--hide 클래스 추가
-              검색창을 사용하지 않는 경우 list__head--hide 클래스 추가 -->
+              <!-- 타이틀 사용하지 않는 경우 list__head--title-hide 클래스 추가
+              검색창을 사용하지 않는 경우 list__head--toolbar-hide 클래스 추가 -->
               <div class="list__head">
                 <span class="list__head-title" title="title">title</span>
                 <div class="list__head-toolbar">
@@ -578,7 +578,7 @@
           <!-- HTML -->
           <span style="position: absolute; top: 30px; left: 1320px;">영역 안에서 HTML 코드를 입력</span>
           <div class="canvas-object object-html canvas-object--active" style="top: 50px;left: 1320px;width: 250px;height: 450px;">
-            <div class="html-view">
+            <div class="object-html__view">
               <!-- //html display -->
               <div class="html-draw">
                 <div style="width: 800px; height: 430px;">
@@ -684,7 +684,7 @@
                   <b>Badge</b>
                 </div>
               </div>
-              <div class="layer-button">
+              <div class="object-html__layer-button">
                 <!-- HTML 코드보기 : HTML 그리기, 버튼토글 -->
                 <button type="button" class="button button--tertiary button--sm">
                   <svg class="svg-icon">
@@ -717,7 +717,7 @@
 
           <span style="position: absolute; top: 30px; left: 1590px;">HTML 코드보기 화면</span>
           <div class="canvas-object object-html" style="top: 50px;left: 1590px;width: 250px;height: 450px;">
-            <div class="html-view">
+            <div class="object-html__view">
               <!-- //html code view -->
               <pre>
               &lt;!DOCTYPE html&gt;
@@ -753,7 +753,7 @@
                     &lt;/div&gt;
                   &lt;/nav&gt;
               </pre>
-              <div class="layer-button">
+              <div class="object-html__layer-button">
                 <!-- HTML 코드보기 : HTML 그리기, 버튼토글 -->
                 <button type="button" class="button button--tertiary button--sm">
                   <svg class="svg-icon">
@@ -2200,9 +2200,9 @@
           <span style="position: absolute; top: 700px; left: 890px;"></span>
           <div class="canvas-object object-map" style="top: 720px;left: 890px;width: 300px;height: 250px;">
             <!-- 레이어 이름 요소 -->
-            <!-- <div class="object-map__layer-name-wrap">
-              <span class="object-map__layer-name">layer name</span>
-            </div> -->
+            <div class="object-map__layer-name">
+              <span class="object-map__layer-name-text">layer name</span>
+          </div>
             <!-- // 레이어 이름 요소 -->
             <!-- 객체 이동 버튼: 지도 이동, 객체 이동 토글 -->
             <div class="object-map__move-buttons">
@@ -2225,33 +2225,56 @@
             <!-- MAP 레이어 보기/숨기기 -->
             <div class="leaflet-top leaflet-left">
               <div class="leaflet-layers on leaflet-control" style="top: 100px; left: 10px;">
-                <!-- TODO: 개발 서버에 적용하며 정리 겸 개선 -->
-                <button type="button" class="leaflet-view-layers"></button>
-                <div class="map-layers-popup">
-                  <ul class="mu-selectbox-list">
-                    <div class="format-rule-delete">
-                      <button type="button" class="mu-btn mu-btn-icon">
-                        <i class="mu-icon cancel"></i>
+                <button type="button" class="leaflet-layers__button">
+                  <svg class="svg-icon">
+                    <use xlink:href="#layers"></use>
+                  </svg>
+                </button>
+                <div class="context-menu leaflet-layers__context-menu">
+                  <ul class="context-menu__list">
+                    <div class="leaflet-layers__context-menu-close-button">
+                      <button class="button button--link button--sm">
+                        <svg class="svg-icon">
+                          <use xlink:href="#close"></use>
+                        </svg>
                       </button>
                     </div>
-                    <li>
-                      <span class="mu-selectbox-text ellipsis-end">Layer 01 Layer 01
-                        LayerLayerLayerLayerLayer</span>
-                      <button class="mu-btn-icon" type="button" title="표시">
-                        <i class="mu-icon eye"></i>
+                    <li class="context-menu__item">
+                      <button class="context-menu__button">
+                        <span class="context-menu__text">Layer 01 Layer 01
+                          LayerLayerLayerLayerLayer</span>
                       </button>
+                      <div class="context-menu__action-buttons">
+                        <button class="context-menu__action-button" type="button" title="표시">
+                          <svg class="svg-icon">
+                            <use xlink:href="#eye"></use>
+                          </svg>
+                        </button>
+                      </div>
                     </li>
-                    <li>
-                      <span class="mu-selectbox-text ellipsis-end">Layer 01</span>
-                      <button class="mu-btn-icon" type="button" title="표시">
-                        <i class="mu-icon eye-slash"></i>
+                    <li class="context-menu__item">
+                      <button class="context-menu__button">
+                        <span class="context-menu__text">Layer 01</span>
                       </button>
+                      <div class="context-menu__action-buttons">
+                        <button class="context-menu__action-button" type="button" title="표시">
+                          <svg class="svg-icon">
+                            <use xlink:href="#eye-hide"></use>
+                          </svg>
+                        </button>
+                      </div>
                     </li>
-                    <li>
-                      <span class="mu-selectbox-text ellipsis-end">Layer 01</span>
-                      <button class="mu-btn-icon" type="button" title="표시">
-                        <i class="mu-icon eye-slash"></i>
+                    <li class="context-menu__item">
+                      <button class="context-menu__button">
+                        <span class="context-menu__text">Layer 02</span>
                       </button>
+                      <div class="context-menu__action-buttons">
+                        <button class="context-menu__action-button" type="button" title="표시">
+                          <svg class="svg-icon">
+                            <use xlink:href="#eye-hide"></use>
+                          </svg>
+                        </button>
+                      </div>
                     </li>
                   </ul>
                 </div>
