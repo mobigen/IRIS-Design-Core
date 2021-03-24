@@ -12,23 +12,29 @@
   background-color: $ui-01;
 }
 
-.list__head--hide {
-  display: none;
-}
-
 .list__head-title {
   @include font-weight("medium");
+  @include text-overflow(100%);
   color: $text-02;
   margin-bottom: $spacing-3xs;
-}
-
-.list__head-title--hide {
-  display: none;
 }
 
 .list__head-toolbar {
   display: flex;
 }
+
+.list__head--toolbar-hide.list__head--title-hide {
+  padding: 0;
+}
+
+.list__head--toolbar-hide .list__head-toolbar {
+  display: none;
+}
+
+.list__head--title-hide .list__head-title {
+  display: none;
+}
+
 
 .list__head-toolbar .text-input-group {
   width: 100%;

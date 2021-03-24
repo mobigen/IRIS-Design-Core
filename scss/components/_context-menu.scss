@@ -1,14 +1,14 @@
 .context-menu {
   @include list;
   color: $text-02;
+  box-shadow: 0px 0px 8px rgba(206, 211, 217, 0.7);
+  border-radius: $field-border-radius;
 }
 
 .context-menu__list {
   min-width: rem(130px);
   overflow: hidden;
   background-color: $ui-02;
-  box-shadow: 0px 0px 8px rgba(206, 211, 217, 0.7);
-  border-radius: $field-border-radius;
 }
 
 // -------------------------
