@@ -197,8 +197,7 @@
                 </div>
               </div>
               <!-- select--open 클래스 추가시 open -->
-              <div class="select select--lg select--disabled"
-                style="min-width: 160px; max-width: 230px;margin-left: 8px">
+              <div class="select select--lg select--disabled" style="min-width: 160px; max-width: 230px;margin-left: 8px">
                 <div class="select-selector">
                   <button class="select-selector__button" type="button">
                     <span class="select-selector__title">SelectContent</span>
@@ -598,8 +597,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="select select--sm select--disabled"
-                style="min-width: 160px; max-width: 230px;margin-left: 8px">
+              <div class="select select--sm select--disabled" style="min-width: 160px; max-width: 230px;margin-left: 8px">
                 <div class="select-selector">
                   <button class="select-selector__button" type="button">
                     <span class="select-selector__title">SelectContent</span>
@@ -641,8 +639,10 @@
               <!-- select--open 클래스 추가시 open -->
               <div class="select select--lg" style="min-width: 160px; max-width: 230px;">
                 <div class="select-selector">
-                  <input type="text" class="text-input select-selector__input" placeholder="placeholder text"
-                    value="일치 단어">
+                  <div class="text-input-group select-selector__input">
+                    <label class="hidden">Input</label>
+                    <input type="text" class="text-input text-input--lg" placeholder="placeholder text" value="일치 단어" />
+                  </div>
                   <svg class="svg-icon select-selector__icon">
                     <use xlink:href="#chevron-down-medium"></use>
                   </svg>
@@ -685,8 +685,10 @@
               <!-- select--open 클래스 추가시 open -->
               <div class="select select--disabled" style="min-width: 160px; max-width: 230px;">
                 <div class="select-selector">
-                  <input type="text" class="text-input select-selector__input" placeholder="placeholder text"
-                    value="input filled" disabled>
+                  <div class="text-input-group select-selector__input">
+                    <label class="hidden">Input</label>
+                    <input type="text" class="text-input" placeholder="placeholder text" value="일치 단어" disabled />
+                  </div>
                   <svg class="svg-icon select-selector__icon">
                     <use xlink:href="#chevron-down-medium"></use>
                   </svg>
@@ -728,8 +730,10 @@
             <div class="component-examle__item-group">
               <div class="select select--sm select--open" style="min-width: 160px; max-width: 230px;">
                 <div class="select-selector">
-                  <input type="text" class="text-input text-input--sm select-selector__input" placeholder="placeholder text"
-                    value="일치 단어">
+                  <div class="text-input-group select-selector__input">
+                    <label class="hidden">Input</label>
+                    <input type="text" class="text-input text-input--sm" placeholder="placeholder text" value="일치 단어" />
+                  </div>
                   <svg class="svg-icon select-selector__icon">
                     <use xlink:href="#chevron-down-medium"></use>
                   </svg>

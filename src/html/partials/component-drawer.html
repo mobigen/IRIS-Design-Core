@@ -40,16 +40,16 @@
                     전체 복원
                   </button>
                 </div>
-                <div class="form form--vertical">
+                <form class="form form--vertical">
                   <div class="form__head">
                     <strong class="form__head-title"> 그룹 기본설정 </strong>
                   </div>
                   <div class="form__body">
                     <div class="form__list">
                       <div class="form__item">
-                        <label class="form__label">
+                        <div class="form__label">
                           <span class="form__label-text">이미지</span>
-                        </label>
+                        </div>
                         <div class="form__detail">
                           <ul class="form__detail-list">
                             <li class="form__detail-item">
@@ -186,15 +186,15 @@
                         </div>
                       </div>
                       <div class="form__item">
-                        <label class="form__label">
+                        <div class="form__label">
                           <span class="form__label-text">배경 컨셉 설명</span>
-                        </label>
+                        </div>
                         <div class="form__detail">
                           <textarea type="text" class="form__detail-textarea text-area text-area--fixed" placeholder="내용을 입력해주세요"></textarea>
                         </div>
                       </div>
                       <div class="form__item">
-                        <label class="form__label">
+                        <div class="form__label">
                           <span class="form__label-text">로그인 폼 문구</span>
                           <button class="form__label-clear-button button button--icon button--link button--sm" type="button">
                             <svg class="svg-icon">
@@ -202,15 +202,15 @@
                             </svg>
                           </button>
                           <span class="form__label-subtext"> *TAG입력 </span>
-                        </label>
+                        </div>
                         <div class="form__detail">
                           <textarea type="text" class="form__detail-textarea text-area text-area--fixed" placeholder="내용을 입력해주세요"></textarea>
                         </div>
                       </div>
                       <div class="form__item">
-                        <label class="form__label">
+                        <div class="form__label">
                           <span class="form__label-text">회원가입 버튼 사용 여부</span>
-                        </label>
+                        </div>
                         <div class="form__detail">
                           <div class="radios">
                             <div class="radio">
@@ -227,19 +227,12 @@
                         </div>
                       </div>
                       <div class="form__item">
-                        <label class="form__label">
+                        <div class="form__label">
                           <span class="form__label-text"> 컬러 </span>
-                        </label>
+                        </div>
                         <div class="form__detail">
                           <div class="table table--secondary">
                             <table>
-                              <!-- <colgroup>
-                                <col />
-                                <col width="130" />
-                                <col width="130" />
-                                <col width="130" />
-                                <col width="40" />
-                              </colgroup> -->
                               <thead>
                                 <tr>
                                   <th>영역/케이스</th>
@@ -257,7 +250,10 @@
                                       <button type="button" class="table__color-picker-button">
                                         <span class="table__color-picker-inner" style="background-color: #c4c4c4"></span>
                                       </button>
-                                      <input type="text" class="text-input table__color-picker-input" placeholder="" />
+                                      <div class="text-input-group">
+                                        <label class="hidden">Input</label>
+                                        <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                      </div>
                                     </div>
                                   </td>
                                   <td>
@@ -265,7 +261,10 @@
                                       <button type="button" class="table__color-picker-button">
                                         <span class="table__color-picker-inner" style="background-color: #2678e1"></span>
                                       </button>
-                                      <input type="text" class="text-input table__color-picker-input" placeholder="" />
+                                      <div class="text-input-group">
+                                        <label class="hidden">Input</label>
+                                        <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                      </div>
                                     </div>
                                   </td>
                                   <td>
@@ -273,7 +272,10 @@
                                       <button type="button" class="table__color-picker-button">
                                         <span class="table__color-picker-inner" style="background-color: #ff7e75"></span>
                                       </button>
-                                      <input type="text" class="text-input table__color-picker-input" placeholder="" />
+                                      <div class="text-input-group">
+                                        <label class="hidden">Input</label>
+                                        <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                      </div>
                                     </div>
                                   </td>
                                   <td>
@@ -284,6 +286,7 @@
                                     </button>
                                   </td>
                                 </tr>
+                                </tr>
                                 <tr>
                                   <td>로그인 버튼 텍스트</td>
                                   <td>
@@ -291,7 +294,10 @@
                                       <button type="button" class="table__color-picker-button">
                                         <span class="table__color-picker-inner" style="background-color: #c4c4c4"></span>
                                       </button>
-                                      <input type="text" class="text-input table__color-picker-input" placeholder="" />
+                                      <div class="text-input-group">
+                                        <label class="hidden">Input</label>
+                                        <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                      </div>
                                     </div>
                                   </td>
                                   <td>
@@ -299,7 +305,10 @@
                                       <button type="button" class="table__color-picker-button">
                                         <span class="table__color-picker-inner" style="background-color: #2678e1"></span>
                                       </button>
-                                      <input type="text" class="text-input table__color-picker-input" placeholder="" />
+                                      <div class="text-input-group">
+                                        <label class="hidden">Input</label>
+                                        <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                      </div>
                                     </div>
                                   </td>
                                   <td>
@@ -307,7 +316,10 @@
                                       <button type="button" class="table__color-picker-button">
                                         <span class="table__color-picker-inner" style="background-color: #ff7e75"></span>
                                       </button>
-                                      <input type="text" class="text-input table__color-picker-input" placeholder="" />
+                                      <div class="text-input-group">
+                                        <label class="hidden">Input</label>
+                                        <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                      </div>
                                     </div>
                                   </td>
                                   <td>
@@ -325,7 +337,10 @@
                                       <button type="button" class="table__color-picker-button">
                                         <span class="table__color-picker-inner" style="background-color: #c4c4c4"></span>
                                       </button>
-                                      <input type="text" class="text-input table__color-picker-input" placeholder="" />
+                                      <div class="text-input-group">
+                                        <label class="hidden">Input</label>
+                                        <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                      </div>
                                     </div>
                                   </td>
                                   <td>
@@ -333,7 +348,10 @@
                                       <button type="button" class="table__color-picker-button">
                                         <span class="table__color-picker-inner" style="background-color: #2678e1"></span>
                                       </button>
-                                      <input type="text" class="text-input table__color-picker-input" placeholder="" />
+                                      <div class="text-input-group">
+                                        <label class="hidden">Input</label>
+                                        <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                      </div>
                                     </div>
                                   </td>
                                   <td>
@@ -341,7 +359,10 @@
                                       <button type="button" class="table__color-picker-button">
                                         <span class="table__color-picker-inner" style="background-color: #ff7e75"></span>
                                       </button>
-                                      <input type="text" class="text-input table__color-picker-input" placeholder="" />
+                                      <div class="text-input-group">
+                                        <label class="hidden">Input</label>
+                                        <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                      </div>
                                     </div>
                                   </td>
                                   <td>
@@ -359,7 +380,10 @@
                                       <button type="button" class="table__color-picker-button">
                                         <span class="table__color-picker-inner" style="background-color: #c4c4c4"></span>
                                       </button>
-                                      <input type="text" class="text-input table__color-picker-input" placeholder="" />
+                                      <div class="text-input-group">
+                                        <label class="hidden">Input</label>
+                                        <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                      </div>
                                     </div>
                                   </td>
                                   <td>
@@ -367,7 +391,10 @@
                                       <button type="button" class="table__color-picker-button">
                                         <span class="table__color-picker-inner" style="background-color: #2678e1"></span>
                                       </button>
-                                      <input type="text" class="text-input table__color-picker-input" placeholder="" />
+                                      <div class="text-input-group">
+                                        <label class="hidden">Input</label>
+                                        <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                      </div>
                                     </div>
                                   </td>
                                   <td>
@@ -375,7 +402,10 @@
                                       <button type="button" class="table__color-picker-button">
                                         <span class="table__color-picker-inner" style="background-color: #ff7e75"></span>
                                       </button>
-                                      <input type="text" class="text-input table__color-picker-input" placeholder="" />
+                                      <div class="text-input-group">
+                                        <label class="hidden">Input</label>
+                                        <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                      </div>
                                     </div>
                                   </td>
                                   <td>
@@ -393,7 +423,10 @@
                                       <button type="button" class="table__color-picker-button">
                                         <span class="table__color-picker-inner" style="background-color: #c4c4c4"></span>
                                       </button>
-                                      <input type="text" class="text-input table__color-picker-input" placeholder="" />
+                                      <div class="text-input-group">
+                                        <label class="hidden">Input</label>
+                                        <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                      </div>
                                     </div>
                                   </td>
                                   <td>
@@ -401,7 +434,10 @@
                                       <button type="button" class="table__color-picker-button">
                                         <span class="table__color-picker-inner" style="background-color: #2678e1"></span>
                                       </button>
-                                      <input type="text" class="text-input table__color-picker-input" placeholder="" />
+                                      <div class="text-input-group">
+                                        <label class="hidden">Input</label>
+                                        <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                      </div>
                                     </div>
                                   </td>
                                   <td>
@@ -409,7 +445,10 @@
                                       <button type="button" class="table__color-picker-button">
                                         <span class="table__color-picker-inner" style="background-color: #ff7e75"></span>
                                       </button>
-                                      <input type="text" class="text-input table__color-picker-input" placeholder="" />
+                                      <div class="text-input-group">
+                                        <label class="hidden">Input</label>
+                                        <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                      </div>
                                     </div>
                                   </td>
                                   <td>
@@ -427,7 +466,10 @@
                                       <button type="button" class="table__color-picker-button">
                                         <span class="table__color-picker-inner" style="background-color: #c4c4c4"></span>
                                       </button>
-                                      <input type="text" class="text-input table__color-picker-input" placeholder="" />
+                                      <div class="text-input-group">
+                                        <label class="hidden">Input</label>
+                                        <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                      </div>
                                     </div>
                                   </td>
                                   <td>
@@ -435,7 +477,10 @@
                                       <button type="button" class="table__color-picker-button">
                                         <span class="table__color-picker-inner" style="background-color: #2678e1"></span>
                                       </button>
-                                      <input type="text" class="text-input table__color-picker-input" placeholder="" />
+                                      <div class="text-input-group">
+                                        <label class="hidden">Input</label>
+                                        <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                      </div>
                                     </div>
                                   </td>
                                   <td>
@@ -443,7 +488,10 @@
                                       <button type="button" class="table__color-picker-button">
                                         <span class="table__color-picker-inner" style="background-color: #ff7e75"></span>
                                       </button>
-                                      <input type="text" class="text-input table__color-picker-input" placeholder="" />
+                                      <div class="text-input-group">
+                                        <label class="hidden">Input</label>
+                                        <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                      </div>
                                     </div>
                                   </td>
                                   <td>
@@ -461,7 +509,10 @@
                                       <button type="button" class="table__color-picker-button">
                                         <span class="table__color-picker-inner" style="background-color: #c4c4c4"></span>
                                       </button>
-                                      <input type="text" class="text-input table__color-picker-input" placeholder="" />
+                                      <div class="text-input-group">
+                                        <label class="hidden">Input</label>
+                                        <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                      </div>
                                     </div>
                                   </td>
                                   <td>
@@ -469,7 +520,10 @@
                                       <button type="button" class="table__color-picker-button">
                                         <span class="table__color-picker-inner" style="background-color: #2678e1"></span>
                                       </button>
-                                      <input type="text" class="text-input table__color-picker-input" placeholder="" />
+                                      <div class="text-input-group">
+                                        <label class="hidden">Input</label>
+                                        <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                      </div>
                                     </div>
                                   </td>
                                   <td>
@@ -477,7 +531,10 @@
                                       <button type="button" class="table__color-picker-button">
                                         <span class="table__color-picker-inner" style="background-color: #ff7e75"></span>
                                       </button>
-                                      <input type="text" class="text-input table__color-picker-input" placeholder="" />
+                                      <div class="text-input-group">
+                                        <label class="hidden">Input</label>
+                                        <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                      </div>
                                     </div>
                                   </td>
                                   <td>
@@ -495,7 +552,10 @@
                                       <button type="button" class="table__color-picker-button">
                                         <span class="table__color-picker-inner" style="background-color: #c4c4c4"></span>
                                       </button>
-                                      <input type="text" class="text-input table__color-picker-input" placeholder="" />
+                                      <div class="text-input-group">
+                                        <label class="hidden">Input</label>
+                                        <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                      </div>
                                     </div>
                                   </td>
                                   <td>
@@ -503,7 +563,10 @@
                                       <button type="button" class="table__color-picker-button">
                                         <span class="table__color-picker-inner" style="background-color: #2678e1"></span>
                                       </button>
-                                      <input type="text" class="text-input table__color-picker-input" placeholder="" />
+                                      <div class="text-input-group">
+                                        <label class="hidden">Input</label>
+                                        <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                      </div>
                                     </div>
                                   </td>
                                   <td>
@@ -511,7 +574,10 @@
                                       <button type="button" class="table__color-picker-button">
                                         <span class="table__color-picker-inner" style="background-color: #ff7e75"></span>
                                       </button>
-                                      <input type="text" class="text-input table__color-picker-input" placeholder="" />
+                                      <div class="text-input-group">
+                                        <label class="hidden">Input</label>
+                                        <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                      </div>
                                     </div>
                                   </td>
                                   <td>
@@ -529,7 +595,10 @@
                                       <button type="button" class="table__color-picker-button">
                                         <span class="table__color-picker-inner" style="background-color: #c4c4c4"></span>
                                       </button>
-                                      <input type="text" class="text-input table__color-picker-input" placeholder="" />
+                                      <div class="text-input-group">
+                                        <label class="hidden">Input</label>
+                                        <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                      </div>
                                     </div>
                                   </td>
                                   <td>
@@ -537,7 +606,10 @@
                                       <button type="button" class="table__color-picker-button">
                                         <span class="table__color-picker-inner" style="background-color: #2678e1"></span>
                                       </button>
-                                      <input type="text" class="text-input table__color-picker-input" placeholder="" />
+                                      <div class="text-input-group">
+                                        <label class="hidden">Input</label>
+                                        <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                      </div>
                                     </div>
                                   </td>
                                   <td>
@@ -545,7 +617,10 @@
                                       <button type="button" class="table__color-picker-button">
                                         <span class="table__color-picker-inner" style="background-color: #ff7e75"></span>
                                       </button>
-                                      <input type="text" class="text-input table__color-picker-input" placeholder="" />
+                                      <div class="text-input-group">
+                                        <label class="hidden">Input</label>
+                                        <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                      </div>
                                     </div>
                                   </td>
                                   <td>
@@ -562,17 +637,17 @@
                         </div>
                       </div>
                       <div class="form__item">
-                        <label class="form__label">
+                        <div class="form__label">
                           <span class="form__label-text">Copyrights</span>
                           <span class="form__label-subtext"> *TAG입력 </span>
-                        </label>
+                        </div>
                         <div class="form__detail">
                           <textarea type="text" class="form__detail-textarea text-area text-area--fixed" placeholder="내용을 입력해주세요"></textarea>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                </form>
               </div>
               <div class="drawer__foot">
                 <button class="button button--tertiary button--lg" type="button">
@@ -700,16 +775,16 @@
                 </div>
               </div>
               <div class="drawer__body" style="height: 900px">
-                <div class="form">
+                <form class="form">
                   <div class="form__head">
                     <strong class="form__head-title"> 그룹 기본설정 </strong>
                   </div>
                   <div class="form__body">
                     <div class="form__list">
                       <div class="form__item">
-                        <label class="form__label">
+                        <div class="form__label">
                           <span class="form__label-text">그룹 메뉴 아이콘</span>
-                        </label>
+                        </div>
                         <div class="form__detail">
                           <div class="upload-preview">
                             <div class="upload-preview__thumbnail">
@@ -735,69 +810,94 @@
                         </div>
                       </div>
                       <div class="form__item">
-                        <label class="form__label">
-                          <span class="form__label-text">그룹명</span>
-                          <span class="form__label-subtext">(한국어)</span></label>
-                        <div class="form__detail">
-                          <input type="text" class="text-input" placeholder="그룹명을 입력해주세요." />
-                        </div>
-                      </div>
-                      <div class="form__item">
-                        <label class="form__label">
-                          <span class="form__label-text">그룹 설명</span>
-                          <span class="form__label-subtext">(한국어)</span></label>
-                        <div class="form__detail">
-                          <input type="text" class="text-input" placeholder="그룹명을 입력해주세요." />
-                        </div>
-                      </div>
-                      <div class="form__item">
-                        <label class="form__label">
-                          <span class="form__label-text">그룹명</span>
-                          <span class="form__label-subtext">(한국어)</span></label>
-                        <div class="form__detail">
-                          <input type="text" class="text-input" placeholder="그룹명을 입력해주세요." />
-                        </div>
-                      </div>
-                      <div class="form__item">
-                        <label class="form__label">
+                        <div class="form__label">
                           <span class="form__label-text">그룹명</span>
                           <span class="form__label-subtext">(한국어)</span>
-                        </label>
+                        </div>
                         <div class="form__detail">
-                          <input type="text" class="text-input" placeholder="그룹명을 입력해주세요." />
+                          <div class="text-input-group">
+                            <label class="hidden">Input</label>
+                            <input type="text" class="text-input" placeholder="placeholder text" />
+                          </div>
                         </div>
                       </div>
                       <div class="form__item">
-                        <label class="form__label">
+                        <div class="form__label">
                           <span class="form__label-text">그룹 설명</span>
-                          <span class="form__label-subtext">(한국어)</span></label>
+                          <span class="form__label-subtext">(한국어)</span>
+                        </div>
                         <div class="form__detail">
-                          <input type="text" class="text-input" placeholder="그룹명을 입력해주세요." />
+                          <div class="text-input-group">
+                            <label class="hidden">Input</label>
+                            <input type="text" class="text-input" placeholder="placeholder text" />
+                          </div>
                         </div>
                       </div>
                       <div class="form__item">
-                        <label class="form__label">
+                        <div class="form__label">
                           <span class="form__label-text">그룹명</span>
                           <span class="form__label-subtext">(한국어)</span>
-                        </label>
+                        </div>
                         <div class="form__detail">
-                          <input type="text" class="text-input" placeholder="그룹명을 입력해주세요." />
+                          <div class="text-input-group">
+                            <label class="hidden">Input</label>
+                            <input type="text" class="text-input" placeholder="placeholder text" />
+                          </div>
                         </div>
                       </div>
                       <div class="form__item">
-                        <label class="form__label">
-                          <span class="form__label-text">그룹 설명</span>
+                        <div class="form__label">
+                          <span class="form__label-text">그룹명</span>
                           <span class="form__label-subtext">(한국어)</span>
-                        </label>
+                        </div>
                         <div class="form__detail">
-                          <input type="text" class="text-input" placeholder="그룹명을 입력해주세요." />
+                          <div class="text-input-group">
+                            <label class="hidden">Input</label>
+                            <input type="text" class="text-input" placeholder="placeholder text" />
+                          </div>
                         </div>
                       </div>
                       <div class="form__item">
-                        <label class="form__label">
+                        <div class="form__label">
                           <span class="form__label-text">그룹 설명</span>
                           <span class="form__label-subtext">(한국어)</span>
-                        </label>
+                        </div>
+                        <div class="form__detail">
+                          <div class="text-input-group">
+                            <label class="hidden">Input</label>
+                            <input type="text" class="text-input" placeholder="placeholder text" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__item">
+                        <div class="form__label">
+                          <span class="form__label-text">그룹명</span>
+                          <span class="form__label-subtext">(한국어)</span>
+                        </div>
+                        <div class="form__detail">
+                          <div class="text-input-group">
+                            <label class="hidden">Input</label>
+                            <input type="text" class="text-input" placeholder="placeholder text" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__item">
+                        <div class="form__label">
+                          <span class="form__label-text">그룹 설명</span>
+                          <span class="form__label-subtext">(한국어)</span>
+                        </div>
+                        <div class="form__detail">
+                          <div class="text-input-group">
+                            <label class="hidden">Input</label>
+                            <input type="text" class="text-input" placeholder="placeholder text" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__item">
+                        <div class="form__label">
+                          <span class="form__label-text">그룹 설명</span>
+                          <span class="form__label-subtext">(한국어)</span>
+                        </div>
                         <div class="form__detail">
                           <div class="checkbox">
                             <input id="formChekcbox-01" type="checkbox" class="checkbox__input" value="label" />
@@ -807,17 +907,17 @@
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="form">
+                </form>
+                <form class="form">
                   <div class="form__head">
                     <strong class="form__head-title"> 그룹 기본설정 </strong>
                   </div>
                   <div class="form__body">
                     <div class="form__list">
                       <div class="form__item">
-                        <label class="form__label">
+                        <div class="form__label">
                           <span class="form__label-text">그룹 타입</span>
-                        </label>
+                        </div>
                         <div class="form__detail">
                           <!-- select--open 클래스 추가시 open -->
                           <div class="select">
@@ -877,9 +977,9 @@
                         </div>
                       </div>
                       <div class="form__item">
-                        <label class="form__label">
+                        <div class="form__label">
                           <span class="form__label-text">그룹 메뉴 아이콘</span>
-                        </label>
+                        </div>
                         <div class="form__detail">
                           <div class="upload-preview">
                             <div class="upload-preview__thumbnail">
@@ -906,7 +1006,7 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </form>
               </div>
               <div class="drawer__foot">
                 <button class="button button--tertiary button--lg" type="button">

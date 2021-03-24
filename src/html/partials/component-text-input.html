@@ -23,20 +23,36 @@
             <p class="component-example__size-label">Size: lg</p>
             <div class="component-examle__item-group component-examle__item-group--row">
               <!-- default -->
-              <input type="text" class="text-input text-input--lg" placeholder="placeholder text" />
+              <div class="text-input-group">
+                <label class="hidden">Input</label>
+                <input type="text" class="text-input text-input--lg" placeholder="placeholder text" />
+              </div>
               <!-- filled -->
-              <input type="text" class="text-input text-input--lg" placeholder="placeholder text" value="input filled" />
+              <div class="text-input-group">
+                <label class="hidden">Input</label>
+                <input type="text" class="text-input text-input--lg" placeholder="placeholder text" value="input filled" />
+              </div>
               <!-- disabled -->
-              <input type="text" class="text-input text-input--lg" placeholder="placeholder text" disabled />
+              <div class="text-input-group">
+                <label class="hidden">Input</label>
+                <input type="text" class="text-input text-input--lg" placeholder="placeholder text" disabled />
+              </div>
               <!-- filled + disabled -->
-              <input type="text" class="text-input text-input--lg" placeholder="placeholder text" value="input filled" disabled />
+              <div class="text-input-group">
+                <label class="hidden">Input</label>
+                <input type="text" class="text
+              -input text-input--lg" placeholder="placeholder text" value="input filled" disabled />
+              </div>
             </div>
           </div>
           <div class="component-example__row">
             <p class="component-example__size-label">Size: md</p>
             <div class="component-examle__item-group component-examle__item-group--row">
               <!-- default -->
-              <input type="text" class="text-input" placeholder="placeholder text" />
+              <div class="text-input-group">
+                <label class="hidden">Input</label>
+                <input type="text" class="text-input" placeholder="placeholder text" />
+              </div>
               <div class="notification-message notification-message--error" style="align-self: flex-start">
                 <svg class="notification-message__icon svg-icon">
                   <use xlink:href="#issue-fill"></use>
@@ -44,7 +60,10 @@
                 <span class="notification-message__text">Notification Message</span>
               </div>
               <!-- filled -->
-              <input type="text" class="text-input" placeholder="placeholder text" value="input filled" />
+              <div class="text-input-group">
+                <label class="hidden">Input</label>
+                <input type="text" class="text-input" placeholder="placeholder text" value="input filled" />
+              </div>
               <div class="notification-message notification-message--info" style="align-self: flex-start">
                 <svg class="notification-message__icon svg-icon">
                   <use xlink:href="#info-fill"></use>
@@ -52,22 +71,40 @@
                 <span class="notification-message__text">Notification Message</span>
               </div>
               <!-- disabled -->
-              <input type="text" class="text-input" placeholder="placeholder text" disabled />
+              <div class="text-input-group">
+                <label class="hidden">Input</label>
+                <input type="text" class="text-input" placeholder="placeholder text" disabled />
+              </div>
               <!-- filled + disabled -->
-              <input type="text" class="text-input" placeholder="placeholder text" value="input filled" disabled />
+              <div class="text-input-group">
+                <label class="hidden">Input</label>
+                <input type="text" class="text-input" placeholder="placeholder text" value="input filled" disabled />
+              </div>
             </div>
           </div>
           <div class="component-example__row">
             <p class="component-example__size-label">Size: sm</p>
             <div class="component-examle__item-group component-examle__item-group--row">
               <!-- default -->
-              <input type="text" class="text-input text-input--sm" placeholder="placeholder text" />
+              <div class="text-input-group">
+                <label class="hidden">Input</label>
+                <input type="text" class="text-input text-input--sm" placeholder="placeholder text" />
+              </div>
               <!-- filled -->
-              <input type="text" class="text-input text-input--sm" placeholder="placeholder text" value="input filled" />
+              <div class="text-input-group">
+                <label class="hidden">Input</label>
+                <input type="text" class="text-input text-input--sm" placeholder="placeholder text" value="input filled" />
+              </div>
               <!-- disabled -->
-              <input type="text" class="text-input text-input--sm" placeholder="placeholder text" disabled />
+              <div class="text-input-group">
+                <label class="hidden">Input</label>
+                <input type="text" class="text-input text-input--sm" placeholder="placeholder text" disabled />
+              </div>
               <!-- filled + disabled -->
-              <input type="text" class="text-input text-input--sm" placeholder="placeholder text" value="input filled" disabled />
+              <div class="text-input-group">
+                <label class="hidden">Input</label>
+                <input type="text" class="text-input text-input--sm" placeholder="placeholder text" value="input filled" disabled />
+              </div>
             </div>
           </div>
         </div>
@@ -90,6 +127,7 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
+                <label class="hidden">Input</label>
                 <input type="text" class="text-input" placeholder="placeholder text" />
               </div>
               <!-- filled -->
@@ -99,6 +137,7 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
+                <label class="hidden">Input</label>
                 <input type="text" class="text-input" placeholder="placeholder text" value="input filled" />
               </div>
               <!-- disabled -->
@@ -108,6 +147,7 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
+                <label class="hidden">Input</label>
                 <input type="text" class="text-input" placeholder="placeholder text" disabled />
               </div>
               <!-- filled + disabled -->
@@ -117,6 +157,7 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
+                <label class="hidden">Input</label>
                 <input type="text" class="text-input" placeholder="placeholder text" value="input filled" disabled />
               </div>
             </div>
@@ -131,6 +172,7 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
+                <label class="hidden">Input</label>
                 <input type="text" class="text-input" placeholder="placeholder text" />
               </div>
               <!-- filled -->
@@ -140,6 +182,7 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
+                <label class="hidden">Input</label>
                 <input type="text" class="text-input" placeholder="placeholder text" value="input filled" />
               </div>
               <!-- disabled -->
@@ -149,6 +192,7 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
+                <label class="hidden">Input</label>
                 <input type="text" class="text-input" placeholder="placeholder text" disabled />
               </div>
               <!-- filled + disabled -->
@@ -158,6 +202,7 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
+                <label class="hidden">Input</label>
                 <input type="text" class="text-input" placeholder="placeholder text" value="input filled" disabled />
               </div>
             </div>
@@ -172,6 +217,7 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
+                <label class="hidden">Input</label>
                 <input type="text" class="text-input" placeholder="placeholder text" />
               </div>
               <!-- filled -->
@@ -181,6 +227,7 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
+                <label class="hidden">Input</label>
                 <input type="text" class="text-input" placeholder="placeholder text" value="input filled" />
               </div>
               <!-- disabled -->
@@ -190,6 +237,7 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
+                <label class="hidden">Input</label>
                 <input type="text" class="text-input" placeholder="placeholder text" disabled />
               </div>
               <!-- filled + disabled -->
@@ -199,6 +247,7 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
+                <label class="hidden">Input</label>
                 <input type="text" class="text-input" placeholder="placeholder text" value="input filled" disabled />
               </div>
             </div>
@@ -223,6 +272,7 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
+                <label class="hidden">Input</label>
                 <input type="text" class="text-input" placeholder="placeholder text" />
                 <button class="text-input-group__clear-button">
                   <svg class="svg-icon">
@@ -237,6 +287,7 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
+                <label class="hidden">Input</label>
                 <input type="text" class="text-input" placeholder="placeholder text" value="input filled" />
                 <button class="text-input-group__clear-button">
                   <svg class="svg-icon">
@@ -251,6 +302,7 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
+                <label class="hidden">Input</label>
                 <input type="text" class="text-input" placeholder="placeholder text" disabled />
                 <button class="text-input-group__clear-button">
                   <svg class="svg-icon">
@@ -265,6 +317,7 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
+                <label class="hidden">Input</label>
                 <input type="text" class="text-input" placeholder="placeholder text" value="input filled" disabled />
                 <button class="text-input-group__clear-button">
                   <svg class="svg-icon">
@@ -284,6 +337,7 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
+                <label class="hidden">Input</label>
                 <input type="text" class="text-input" placeholder="placeholder text" />
                 <button class="text-input-group__clear-button">
                   <svg class="svg-icon">
@@ -298,6 +352,7 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
+                <label class="hidden">Input</label>
                 <input type="text" class="text-input" placeholder="placeholder text" value="input filled" />
                 <button class="text-input-group__clear-button">
                   <svg class="svg-icon">
@@ -312,6 +367,7 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
+                <label class="hidden">Input</label>
                 <input type="text" class="text-input" placeholder="placeholder text" disabled />
                 <button class="text-input-group__clear-button">
                   <svg class="svg-icon">
@@ -326,6 +382,7 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
+                <label class="hidden">Input</label>
                 <input type="text" class="text-input" placeholder="placeholder text" value="input filled" disabled />
                 <button class="text-input-group__clear-button">
                   <svg class="svg-icon">
@@ -345,6 +402,7 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
+                <label class="hidden">Input</label>
                 <input type="text" class="text-input" placeholder="placeholder text" />
                 <button class="text-input-group__clear-button">
                   <svg class="svg-icon">
@@ -359,6 +417,7 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
+                <label class="hidden">Input</label>
                 <input type="text" class="text-input" placeholder="placeholder text" value="input filled" />
                 <button class="text-input-group__clear-button">
                   <svg class="svg-icon">
@@ -373,6 +432,7 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
+                <label class="hidden">Input</label>
                 <input type="text" class="text-input" placeholder="placeholder text" disabled />
                 <button class="text-input-group__clear-button">
                   <svg class="svg-icon">
@@ -387,6 +447,7 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
+                <label class="hidden">Input</label>
                 <input type="text" class="text-input" placeholder="placeholder text" value="input filled" disabled />
                 <button class="text-input-group__clear-button">
                   <svg class="svg-icon">
@@ -416,6 +477,7 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
+                <label class="hidden">Input</label>
                 <input type="text" class="text-input" placeholder="placeholder text" />
                 <button class="text-input-group__button">
                   <svg class="svg-icon">
@@ -430,6 +492,7 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
+                <label class="hidden">Input</label>
                 <input type="text" class="text-input" placeholder="placeholder text" value="input filled" />
                 <button class="text-input-group__button">
                   <svg class="svg-icon">
@@ -444,6 +507,7 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
+                <label class="hidden">Input</label>
                 <input type="text" class="text-input" placeholder="placeholder text" disabled />
                 <button class="text-input-group__button">
                   <svg class="svg-icon">
@@ -458,6 +522,7 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
+                <label class="hidden">Input</label>
                 <input type="text" class="text-input" placeholder="placeholder text" value="input filled" disabled />
                 <button class="text-input-group__button">
                   <svg class="svg-icon">
@@ -477,6 +542,7 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
+                <label class="hidden">Input</label>
                 <input type="text" class="text-input" placeholder="placeholder text" />
                 <button class="text-input-group__button">
                   <svg class="svg-icon">
@@ -491,6 +557,7 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
+                <label class="hidden">Input</label>
                 <input type="text" class="text-input" placeholder="placeholder text" value="input filled" />
                 <button class="text-input-group__button">
                   <svg class="svg-icon">
@@ -505,6 +572,7 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
+                <label class="hidden">Input</label>
                 <input type="text" class="text-input" placeholder="placeholder text" disabled />
                 <button class="text-input-group__button">
                   <svg class="svg-icon">
@@ -519,6 +587,7 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
+                <label class="hidden">Input</label>
                 <input type="text" class="text-input" placeholder="placeholder text" value="input filled" disabled />
                 <button class="text-input-group__button">
                   <svg class="svg-icon">
@@ -538,6 +607,7 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
+                <label class="hidden">Input</label>
                 <input type="text" class="text-input" placeholder="placeholder text" />
                 <button class="text-input-group__button">
                   <svg class="svg-icon">
@@ -552,6 +622,7 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
+                <label class="hidden">Input</label>
                 <input type="text" class="text-input" placeholder="placeholder text" value="input filled" />
                 <button class="text-input-group__button">
                   <svg class="svg-icon">
@@ -566,6 +637,7 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
+                <label class="hidden">Input</label>
                 <input type="text" class="text-input" placeholder="placeholder text" disabled />
                 <button class="text-input-group__button">
                   <svg class="svg-icon">
@@ -580,6 +652,7 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
+                <label class="hidden">Input</label>
                 <input type="text" class="text-input" placeholder="placeholder text" value="input filled" disabled />
                 <button class="text-input-group__button">
                   <svg class="svg-icon">
@@ -603,20 +676,35 @@
             <p class="component-example__size-label">Size: lg</p>
             <div class="component-examle__item-group component-examle__item-group--row">
               <!-- default -->
-              <div class="text-input-wrap"><input type="text" class="text-input text-input--lg" placeholder="placeholder text" /><span class="text-input-wrap__suffix">suffix</span></div>
+              <div class="text-input-wrap">
+                <label class="hidden">Input</label>
+                <input type="text" class="text-input text-input--lg" placeholder="placeholder text" /><span class="text-input-wrap__suffix">suffix</span>
+              </div>
               <!-- filled -->
-              <div class="text-input-wrap" style="margin-top: 0.5rem;"><input type="text" class="text-input text-input--lg" placeholder="placeholder text" value="input filled" /><span class="text-input-wrap__suffix">suffix</span></div>
+              <div class="text-input-wrap" style="margin-top: 0.5rem;">
+                <label class="hidden">Input</label>
+                <input type="text" class="text-input text-input--lg" placeholder="placeholder text" value="input filled" /><span class="text-input-wrap__suffix">suffix</span>
+              </div>
               <!-- disabled -->
-              <div class="text-input-wrap" style="margin-top: 0.5rem;"><input type="text" class="text-input text-input--lg" placeholder="placeholder text" disabled /><span class="text-input-wrap__suffix">suffix</span></div>
+              <div class="text-input-wrap" style="margin-top: 0.5rem;">
+                <label class="hidden">Input</label>
+                <input type="text" class="text-input text-input--lg" placeholder="placeholder text" disabled /><span class="text-input-wrap__suffix">suffix</span>
+              </div>
               <!-- filled + disabled -->
-              <div class="text-input-wrap" style="margin-top: 0.5rem;"><input type="text" class="text-input text-input--lg" placeholder="placeholder text" value="input filled" disabled /><span class="text-input-wrap__suffix">suffix</span></div>
+              <div class="text-input-wrap" style="margin-top: 0.5rem;">
+                <label class="hidden">Input</label>
+                <input type="text" class="text-input text-input--lg" placeholder="placeholder text" value="input filled" disabled /><span class="text-input-wrap__suffix">suffix</span>
+              </div>
             </div>
           </div>
           <div class="component-example__row">
             <p class="component-example__size-label">Size: md</p>
             <div class="component-examle__item-group component-examle__item-group--row">
               <!-- default -->
-              <div class="text-input-wrap"><input type="text" class="text-input" placeholder="placeholder text" /><span class="text-input-wrap__suffix">suffix</span></div>
+              <div class="text-input-wrap">
+                <label class="hidden">Input</label>
+                <input type="text" class="text-input" placeholder="placeholder text" /><span class="text-input-wrap__suffix">suffix</span>
+              </div>
               <div class="notification-message notification-message--error" style="align-self: flex-start">
                 <svg class="notification-message__icon svg-icon">
                   <use xlink:href="#issue-fill"></use>
@@ -624,7 +712,10 @@
                 <span class="notification-message__text">Notification Message</span>
               </div>
               <!-- filled -->
-              <div class="text-input-wrap" style="margin-top: 0.5rem;"><input type="text" class="text-input" placeholder="placeholder text" value="input filled" /><span class="text-input-wrap__suffix">suffix</span></div>
+              <div class="text-input-wrap" style="margin-top: 0.5rem;">
+                <label class="hidden">Input</label>
+                <input type="text" class="text-input" placeholder="placeholder text" value="input filled" /><span class="text-input-wrap__suffix">suffix</span>
+              </div>
               <div class="notification-message notification-message--info" style="align-self: flex-start">
                 <svg class="notification-message__icon svg-icon">
                   <use xlink:href="#info-fill"></use>
@@ -632,22 +723,40 @@
                 <span class="notification-message__text">Notification Message</span>
               </div>
               <!-- disabled -->
-              <div class="text-input-wrap" style="margin-top: 0.5rem;"><input type="text" class="text-input" placeholder="placeholder text" disabled /><span class="text-input-wrap__suffix">suffix</span></div>
+              <div class="text-input-wrap" style="margin-top: 0.5rem;">
+                <label class="hidden">Input</label>
+                <input type="text" class="text-input" placeholder="placeholder text" disabled /><span class="text-input-wrap__suffix">suffix</span>
+              </div>
               <!-- filled + disabled -->
-              <div class="text-input-wrap" style="margin-top: 0.5rem;"><input type="text" class="text-input" placeholder="placeholder text" value="input filled" disabled /><span class="text-input-wrap__suffix">suffix</span></div>
+              <div class="text-input-wrap" style="margin-top: 0.5rem;">
+                <label class="hidden">Input</label>
+                <input type="text" class="text-input" placeholder="placeholder text" value="input filled" disabled /><span class="text-input-wrap__suffix">suffix</span>
+              </div>
             </div>
           </div>
           <div class="component-example__row">
             <p class="component-example__size-label">Size: sm</p>
             <div class="component-examle__item-group component-examle__item-group--row">
               <!-- default -->
-              <div class="text-input-wrap"><input type="text" class="text-input text-input--sm" placeholder="placeholder text" /><span class="text-input-wrap__suffix">suffix</span></div>
+              <div class="text-input-wrap">
+                <label class="hidden">Input</label>
+                <input type="text" class="text-input text-input--sm" placeholder="placeholder text" /><span class="text-input-wrap__suffix">suffix</span>
+              </div>
               <!-- filled -->
-              <div class="text-input-wrap" style="margin-top: 0.5rem;"><input type="text" class="text-input text-input--sm" placeholder="placeholder text" value="input filled" /><span class="text-input-wrap__suffix">suffix</span></div>
+              <div class="text-input-wrap" style="margin-top: 0.5rem;">
+                <label class="hidden">Input</label>
+                <input type="text" class="text-input text-input--sm" placeholder="placeholder text" value="input filled" /><span class="text-input-wrap__suffix">suffix</span>
+              </div>
               <!-- disabled -->
-              <div class="text-input-wrap" style="margin-top: 0.5rem;"><input type="text" class="text-input text-input--sm" placeholder="placeholder text" disabled /><span class="text-input-wrap__suffix">suffix</span></div>
+              <div class="text-input-wrap" style="margin-top: 0.5rem;">
+                <label class="hidden">Input</label>
+                <input type="text" class="text-input text-input--sm" placeholder="placeholder text" disabled /><span class="text-input-wrap__suffix">suffix</span>
+              </div>
               <!-- filled + disabled -->
-              <div class="text-input-wrap" style="margin-top: 0.5rem;"><input type="text" class="text-input text-input--sm" placeholder="placeholder text" value="input filled" disabled /><span class="text-input-wrap__suffix">suffix</span></div>
+              <div class="text-input-wrap" style="margin-top: 0.5rem;">
+                <label class="hidden">Input</label>
+                <input type="text" class="text-input text-input--sm" placeholder="placeholder text" value="input filled" disabled /><span class="text-input-wrap__suffix">suffix</span>
+              </div>
             </div>
           </div>
         </div>
