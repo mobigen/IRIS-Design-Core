@@ -236,6 +236,7 @@
 .text-input-wrap__suffix {
   margin-left: $spacing-2xs;
   color: $text-02;
+  flex-shrink: 0;
 }
 
 // -------------------------
