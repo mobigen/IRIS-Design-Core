@@ -249,3 +249,7 @@
 .font-size-11 {
   @include font-size("11");
 }
+
+.text-center {
+  text-align: center;
+}
