@@ -2476,7 +2476,7 @@
             <!-- 레이어 이름 요소 -->
             <div class="object-map__layer-name">
               <span class="object-map__layer-name-text">layer name</span>
-          </div>
+            </div>
             <!-- // 레이어 이름 요소 -->
             <!-- 객체 이동 버튼: 지도 이동, 객체 이동 토글 -->
             <div class="object-map__move-buttons">
@@ -2498,8 +2498,13 @@
             <!-- // 객체 이동 버튼: 지도 이동, 객체 이동 토글 -->
             <!-- MAP 레이어 보기/숨기기 -->
             <div class="leaflet-top leaflet-left">
+              <button class="leaflet-goto-home leaflet-control button button--tertiary">
+                <svg class="svg-icon">
+                  <use xlink:href="#map"></use>
+                </svg>
+              </button>
               <div class="leaflet-layers on leaflet-control" style="top: 100px; left: 10px;">
-                <button type="button" class="leaflet-layers__button">
+                <button type="button" class="leaflet-layers__button button button--tertiary">
                   <svg class="svg-icon">
                     <use xlink:href="#layers"></use>
                   </svg>
@@ -2555,6 +2560,11 @@
               </div>
             </div>
             <!-- //MAP 레이어 보기/숨기기 -->
+            <div class="object-map__loading-bar">
+              <!-- loading 부분 -->
+              <div class="loading-bar">
+              </div>
+            </div>
           </div>
           <!-- //맵  -->
 
@@ -3091,6 +3101,36 @@
                 <use xlink:href="#chevron-right"></use>
               </svg>
             </button>
+            <!-- 크기 조절 상자 -->
+            <span class="tl"></span>
+            <span class="tc"></span>
+            <span class="tr"></span>
+            <span class="cl"></span>
+            <span class="cr"></span>
+            <span class="bl"></span>
+            <span class="bc"></span>
+            <span class="br"></span>
+            <!-- //크기 조절 상자 -->
+          </div>
+
+          <span style="position: absolute; top: 1900px; left: 570px;">IMA .object-ima</span>
+          <div class="canvas-object object-ima canvas-object--active" style="top: 1920px; left: 570px; width: 500px; height: 280px;">
+            <div class="object-ima__move-buttons">
+              <button class="object-ima__move-button" type="button">
+                <svg class="svg-icon">
+                  <use xlink:href="#move"></use>
+                </svg>
+              </button>
+              <!-- 두개 버튼 토글 -->
+              <button class="object-ima__move-button" type="button">
+                <svg class="svg-icon">
+                  <use xlink:href="#ima"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="object-ima__layer-name-wrap">
+              <span class="object-ima__layer-name">layer name</span>
+            </div>
             <!-- 크기 조절 상자 -->
             <span class="tl"></span>
             <span class="tc"></span>

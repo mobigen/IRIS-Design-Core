@@ -271,7 +271,8 @@
 .object-area,
 .object-image,
 .object-renew,
-.object-map {
+.object-map,
+.object-ima {
   background: $odd-row;
   border: 1px solid transparent;
 
@@ -382,7 +383,8 @@
   background: none;
 }
 
-.object-area--active:not([preview]).object-area--bg-none {
+.object-area--active:not([preview]).object-area--bg-none,
+.canvas-object--active:not([preview]).object-renew--filled {
   background: none;
 }
 
@@ -481,7 +483,7 @@
 
 .renew-time__info-time {
   @include font-weight("regular");
-  margin-left: $spacing-xs;
+  margin-left: $spacing-2xs;
 }
 
 // label
@@ -542,6 +544,52 @@
   padding: 0 $spacing-sm;
 }
 
+.object-ima__move-buttons {
+  position: absolute;
+  bottom: 160px;
+  left: 16px;
+  z-index: 6;
+}
+
+.object-ima__move-button {
+  width: 40px;
+  height: 40px;
+  background-color: #757c95;
+  border: 0;
+  border-radius: 2px;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.06), 0px 3px 2px rgba(0, 0, 0, 0.12), 0px 2px 8px rgba(0, 0, 0, 0.08), inset 0px -2px 1px rgba(0, 0, 0, 0.04), inset 0px 38px 0px rgba(255, 255, 255, 0.16);
+  }
+
+  &:active {
+    box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.24), inset 0px 100px 16px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.object-ima__move-button .svg-icon {
+  width: rem(24px);
+  height: rem(24px);
+  fill: $text-04;
+}
+
+.object-ima__layer-name-wrap {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 6;
+}
+
+.object-ima__layer-name {
+  display: inline-block;
+  padding: $spacing-2xs;
+  background-color: rgba($ui-02, 0.8);
+  border-radius: 2px;
+  color: #242e3d;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.07), 0px 2px 2px rgba(0, 0, 0, 0.06);
+}
+
 .object-map__move-buttons {
   position: absolute;
   top: 12px;
@@ -566,24 +614,20 @@
   padding: $spacing-3xs $spacing-2xs;
 }
 
+.leaflet-layers {
+  position: relative;
+  display: inline-block;
+}
+
 .leaflet-layers__button {
   width: 34px;
   height: 34px;
-  padding: 0;
-  background: $ui-02;
-  border: 2px solid rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  cursor: pointer;
 }
 
-.leaflet-layers__button .svg-icon {
+.leaflet-layers__button .svg-icon,
+.leaflet-goto-home .svg-icon {
   width: 22px;
   height: 22px;
-}
-
-.leaflet-layers__button:hover,
-.leaflet-layers__button:active {
-  background-color: #f4f4f4;
 }
 
 .leaflet-layers.on .context-menu {
@@ -607,14 +651,31 @@
   justify-content: flex-end;
 }
 
+.leaflet-goto-home {
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+}
+
+.object-map__loading-bar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: auto;
+  z-index: 4;
+}
+
 .object-hidden {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: $spacing-2xs $spacing-sm;
-  background-color: $ui-01;
-  border: 1px dashed $ui-04;
   color: $text-05;
+
+  &:not([preview]) {
+    padding: $spacing-2xs $spacing-sm;
+    background-color: $ui-01;
+    border: 1px dashed $ui-04;
+  }
 
   &:hover:not([preview]) {
     border: 1px solid $secondary;
@@ -625,6 +686,14 @@
   }
 }
 
+.object-hidden__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
 .object-hidden__popout-button {
   display: none;
   padding: 0;
@@ -633,13 +702,21 @@
   .svg-icon {
     fill: $secondary;
   }
+
+  &:hover .svg-icon {
+    fill: $hover-secondary;
+  }
+}
+
+.object-hidden__icon {
+  margin-right: $spacing-3xs;
 }
 
 .object-hidden__text {
   @include text-overflow;
 }
 
-.object-hidden--loaded {
+.object-hidden__inner--loaded {
   color: $secondary;
 
   .object-hidden__icon {
@@ -651,15 +728,20 @@
   }
 }
 
-.object-visible {
-  border-style: solid;
-}
-
 .object-hidden-input .text-input {
   width: 100%;
   height: 100%;
   border-color: $ui-04;
   border-style: dashed;
+
+  &[readonly]:hover,
+  &[readonly]:focus {
+    border-color: darken($ui-04, 15%);
+  }
+}
+
+.object-visible {
+  border-style: solid;
 }
 
 // html
@@ -706,7 +788,6 @@
 
 // label
 .object-label {
-
 }
 
 .object-label .text-area {
@@ -837,7 +918,7 @@
 
 .canvas-object--unconnected::after {
   background-color: rgba($ui-02, 0.6);
-  // NOTE: editor 객체에서 리사이즈 박스보다 위에 뜨는 문제로 10 -> 4로 수정 
+  // NOTE: editor 객체에서 리사이즈 박스보다 위에 뜨는 문제로 10 -> 4로 수정
   z-index: 4; // TODO: z-index function 적용
 }
 
