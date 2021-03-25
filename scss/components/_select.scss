@@ -118,6 +118,7 @@
   margin-top: -10px;
   right: $spacing-xs;
   transform: none;
+  pointer-events: none;
 }
 
 .svg-icon + .select-selector__title {
