@@ -203,6 +203,10 @@
   @include form__detail;
 }
 
+.dynamic-form__list--line + .dynamic-form__list--line {
+  border-top: 1px solid $ui-04;
+}
+
 .dynamic-form__action-buttons {
   display: flex;
   align-items: center;
