@@ -92,7 +92,8 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding: $spacing-md $spacing-lg $spacing-md 0
+  padding: $spacing-md $spacing-lg $spacing-md 0;
+  color: $text-01;
 }
 
 .notification__title {
@@ -103,7 +104,6 @@
 
 .notification__text {
   @include font-size("14");
-  color: $text-01;
 }
 
 .notification--info {

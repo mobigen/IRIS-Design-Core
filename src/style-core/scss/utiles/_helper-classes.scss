@@ -110,6 +110,10 @@
 // -------------------------
 // flex box
 // -------------------------
+.d-flex {
+  display: flex;
+}
+
 .ml-auto {
   margin-left: auto;
 }
@@ -249,3 +253,61 @@
 .font-size-11 {
   @include font-size("11");
 }
+
+// -------------------------
+// font-style
+// -------------------------
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.text-line {
+  text-decoration: line-through;
+}
+
+.text-two-line {
+  text-decoration: underline line-through;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+<<<<<<< Updated upstream
+.justify-center {
+  justify-content: center;
+}
+=======
+.text-right {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-top {
+  vertical-align: top;
+}
+
+.text-middle {
+  vertical-align: middle;
+}
+
+.text-bottom {
+  vertical-align: bottom;
+}
+>>>>>>> Stashed changes
