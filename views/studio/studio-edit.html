@@ -320,7 +320,7 @@
 
           <span style="position: absolute; top: 30px; left: 470px;">차트(loading)</span>
           <div class="canvas-object object-area" style="top: 50px;left: 470px;width: 200px;height: 150px;">
-            <div class="loader-overlay">
+            <div class="loader-overlay loader-overlay--mono">
               <div class="loader loader--sm">
                 <div class="loader__spinner"></div>
               </div>
@@ -1925,7 +1925,7 @@
                 <input type="text" class="date-picker-selector__input" placeholder="yyyy/mm/dd hh:mm:ss" autocomplete="off" readonly="">
                 <button class="date-picker-selector__button">
                   <svg class="svg-icon">
-                    <use xlink:href="#calendar"></use>
+                    <use xlink:href="#date-time"></use>
                   </svg>
                 </button>
               </div>
@@ -2346,7 +2346,7 @@
           </div>
 
           <span style="position: absolute; top: 420px; left: 680px;">Tab 세로형</span>
-          <div class="canvas-object tab" style="top: 440px;left: 680px;width: 100px;height: 250px;">
+          <div class="canvas-object object-tab" style="top: 440px;left: 680px;width: 100px;height: 250px;">
             <div class="tab tab--container tab--vertical">
               <ul class="tab__bar">
                 <li class="tab__item" style="height: 20%;">
@@ -2562,7 +2562,7 @@
             <!-- //MAP 레이어 보기/숨기기 -->
             <div class="object-map__loading-bar">
               <!-- loading 부분 -->
-              <div class="loading-bar">
+              <div class="loading-bar loading-bar--mono">
               </div>
             </div>
           </div>
@@ -2904,55 +2904,123 @@
           </div>
           <!-- // 보고서 가져오기(포틀릿) -->
 
-          <!-- grid-chart-pagination -->
-          <span style="position: absolute; top: 1600px; left: 50px;">Grid-table-chart: Pagination</span>
-          <div class="canvas-object object-area" style="top: 1620px; left: 50px; width: 1100px; height: 260px;">
-            <div class="grid-chart">
+          <!-- Grid chart 2단 출력 -->
+          <span style="position: absolute; top: 1600px; left: 50px;">Grid chart 2단 출력</span>
+          <div class="canvas-object object-area" style="top: 1620px; left: 50px; width: 700px; height: 260px;">
+            <!-- 1단 출력 설정시 row-1 클래스 추가 -->
+            <div class="object-area__grid-chart-container">
               <!-- 필터 그룹 (페이지네이션, 서치바 그룹) -->
-
-              <div class="grid-chart-filter-wrap">
+              <!-- .grid-chart-filter-wrap -> .grid-chart-toolbar -->
+              <div class="grid-chart-toolbar">
                 <!-- 목록 개수 -->
-                <div class="grid-perpage mr5">
-                  <label for="">목록 개수</label>
-                  <div class="mu-selectbox">
-                    <button class="mu-value">5</button>
-                    <ul class="mu-selectbox-list">
-                      <li class="tl active">5</li>
-                      <li class="tl">10</li>
-                      <li class="tl">20</li>
+                <!-- .grid-perpage -> .grid-chart-toolbar__perpage -->
+                <div class="grid-chart-toolbar__perpage">
+                  <label class="grid-chart-toolbar__perpage-label" for="perpage">목록 개수</label>
+                  <div class="select" id="perpage">
+                    <div class="select-selector">
+                      <button class="select-selector__button">
+                        <span class="select-selector__title">5</span>
+                        <svg class="svg-icon select-selector__icon">
+                          <use xlink:href="#chevron-down-medium"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="select-container">
+                      <ul class="select-container__list">
+                        <li class="select-container__item select-container__item--selected">
+                          <button class="select-container__button">
+                            <span class="select-container__text">5</span>
+                          </button>
+                        </li>
+                        <li class="select-container__item">
+                          <button class="select-container__button">
+                            <span class="select-container__text">10</span>
+                          </button>
+                        </li>
+                        <li class="select-container__item">
+                          <button class="select-container__button">
+                            <span class="select-container__text">20</span>
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- grid-chart-toolbar__count -->
+                <div class="grid-chart-toolbar__count"> 데이터 개수 : 500 </div>
+                <!-- TODO: svg icon으로 변경 필요 -->
+                <!-- grid-chart-toolbar__acc-icon -->
+                <svg class="svg-icon grid-chart-toolbar__acc-icon">
+                  <use xlink:href="#time"></use>
+                </svg>
+                <!-- //목록 개수 -->
+                <!-- 이미지 다운로드 버튼 -->
+                <div class="select grid-chart-toolbar__download">
+                  <div class="select-selector">
+                    <button class="select-selector__button">
+                      <span class="select-selector__title">
+                        <svg class="svg-icon select-selector__title-icon">
+                          <use xlink:href="#download"></use>
+                        </svg>
+                      </span>
+                      <svg class="svg-icon select-selector__icon">
+                        <use xlink:href="#chevron-down-medium"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="select-container">
+                    <ul class="select-container__list">
+                      <li class="select-container__item select-container__item--selected">
+                        <button class="select-container__button">
+                          <span class="select-container__text">CSV 다운로드</span>
+                        </button>
+                      </li>
+                      <li class="select-container__item">
+                        <button class="select-container__button">
+                          <span class="select-container__text">PNG 다운로드</span>
+                        </button>
+                      </li>
                     </ul>
                   </div>
                 </div>
-                <!-- //목록 개수 -->
-                <!-- 데이터 개수 -->
-                <div class="mr5 mb5">데이터 개수 : 500</div>
-                <!-- //데이터 개수 -->
                 <!-- 차트 데이터 다운로드 버튼 -->
-                <button class="mu-btn mu-btn-default new" type="button">
-                  <i class="mu-icon-img download-new"></i>
+                <button class="button button--tertiary px-6 grid-chart-toolbar__button" type="button">
+                  <svg class="svg-icon">
+                    <use xlink:href="#download"></use>
+                  </svg>
                 </button>
                 <!-- //차트 데이터 다운로드 버튼 -->
                 <!-- 새 창으로 열기 버튼 -->
-                <button class="mu-btn mu-btn-default new" type="button">
-                  <i class="mu-icon-img new-open-new"></i>
+                <button class="button button--tertiary px-6 grid-chart-toolbar__button" type="button">
+                  <svg class="svg-icon">
+                    <use xlink:href="#popout"></use>
+                  </svg>
                 </button>
                 <!-- //새 창으로 열기 버튼 -->
                 <!-- 검색 -->
-                <div class="grid-chart-input-search">
-                  <div class="mu-input-icon">
-                    <input type="text" class="mu-input" />
-                    <i class="mu-icon search"></i>
-                  </div>
+                <div class="text-input-group grid-chart-toolbar__search">
+                  <span class="text-input-group__icon">
+                    <svg class="svg-icon">
+                      <use xlink:href="#search"></use>
+                    </svg>
+                  </span>
+                  <input type="text" class="text-input" placeholder="placeholder text" value="input filled">
                 </div>
                 <!-- //검색 -->
               </div>
-
               <!-- //필터 그룹 -->
               <!-- grid-chart -->
-              <div class="grid-chart-table-wrap">
-                <table class="mu-grid mu-grid-border mu-grid-strip mu-grid-sort">
-                  <thead class="mu-grid-border">
+              <!-- .grid-chart-table-wrap -> .grid-chart-wrap -->
+              <div class="grid-chart-wrap">
+                <table class="table table--primary">
+                  <thead>
                     <tr>
+                      <th class="text-center">
+                        <div class="checkbox checkbox--indeterminate">
+                          <input class="checkbox__input" type="checkbox" id="chk-all">
+                          <label class="checkbox__label" for="chk-all"></label>
+                        </div>
+                      </th>
                       <th class="none">No.</th>
                       <th>SCH_ID</th>
                       <th>JOB_SEQ</th>
@@ -2962,6 +3030,12 @@
                   </thead>
                   <tbody>
                     <tr>
+                      <td class="text-center">
+                        <div class="checkbox">
+                          <input class="checkbox__input" type="checkbox" id="chk-1">
+                          <label class="checkbox__label" for="chk-1"></label>
+                        </div>
+                      </td>
                       <td>1</td>
                       <td>11</td>
                       <td>11</td>
@@ -2969,6 +3043,12 @@
                       <td>root</td>
                     </tr>
                     <tr>
+                      <td class="text-center">
+                        <div class="checkbox">
+                          <input class="checkbox__input" type="checkbox" id="chk-2" checked="">
+                          <label class="checkbox__label" for="chk-2"></label>
+                        </div>
+                      </td>
                       <td>2</td>
                       <td>22</td>
                       <td>SYSLOG_R1</td>
@@ -2976,6 +3056,12 @@
                       <td>root</td>
                     </tr>
                     <tr>
+                      <td class="text-center">
+                        <div class="checkbox">
+                          <input class="checkbox__input" type="checkbox" id="chk-3">
+                          <label class="checkbox__label" for="chk-3"></label>
+                        </div>
+                      </td>
                       <td>3</td>
                       <td>33</td>
                       <td>SYSLOG_R1</td>
@@ -2983,6 +3069,12 @@
                       <td>root</td>
                     </tr>
                     <tr>
+                      <td class="text-center">
+                        <div class="checkbox">
+                          <input class="checkbox__input" type="checkbox" id="chk-2">
+                          <label class="checkbox__label" for="chk-2"></label>
+                        </div>
+                      </td>
                       <td>4</td>
                       <td>44</td>
                       <td>44</td>
@@ -2990,6 +3082,12 @@
                       <td>root</td>
                     </tr>
                     <tr>
+                      <td class="text-center">
+                        <div class="checkbox">
+                          <input class="checkbox__input" type="checkbox" id="chk-5">
+                          <label class="checkbox__label" for="chk-5"></label>
+                        </div>
+                      </td>
                       <td>5</td>
                       <td>55</td>
                       <td>SYSLOG_R1</td>
@@ -2997,6 +3095,12 @@
                       <td>root</td>
                     </tr>
                     <tr>
+                      <td class="text-center">
+                        <div class="checkbox">
+                          <input class="checkbox__input" type="checkbox" id="chk-6">
+                          <label class="checkbox__label" for="chk-6"></label>
+                        </div>
+                      </td>
                       <td>6</td>
                       <td>66</td>
                       <td>SYSLOG_R1</td>
@@ -3007,33 +3111,333 @@
                 </table>
               </div>
               <!-- //grid-chart -->
-
               <!-- 페이지네이션 -->
-              <div class="pagination-new">
-                <button type="button" class="mu-btn mu-btn-icon" disabled="disabled">
-                  <i class="iriscon double-angle-left"></i>
+              <!-- .pagination-new -> .input-pagination -->
+              <div class="input-pagination object-area__pagination">
+                <button type="button" class="button button--link p-4" disabled="disabled">
+                  <svg class="svg-icon">
+                    <use xlink:href="#chevron-double-left-medium"></use>
+                  </svg>
                 </button>
-                <button type="button" class="mu-btn mu-btn-icon" disabled="disabled">
-                  <i class="iriscon angle-left"></i>
+                <button type="button" class="button button--link p-4">
+                  <svg class="svg-icon">
+                    <use xlink:href="#chevron-left-medium"></use>
+                  </svg>
                 </button>
-                <ul>
-                  <li>
-                    <span role="textbox" contenteditable="" class="mu-input">10000</span>
-                  </li>
-                  <li class="pagination-slash">/</li>
-                  <li><span>100</span></li>
-                </ul>
-                <button type="button" class="mu-btn mu-btn-icon">
-                  <i class="iriscon angle-right"></i>
+                <span class="input-pagination__input text-input" role="textbox" contenteditable="">160</span>
+                <span class="input-pagination__dash">-</span>
+                <span class="input-pagination__last-page">270</span>
+                <button type="button" class="button button--link p-4">
+                  <svg class="svg-icon">
+                    <use xlink:href="#chevron-right-medium"></use>
+                  </svg>
                 </button>
-                <button type="button" class="mu-btn mu-btn-icon">
-                  <i class="iriscon double-angle-right"></i>
+                <button type="button" class="button button--link p-4" disabled="disabled">
+                  <svg class="svg-icon">
+                    <use xlink:href="#chevron-double-right-medium"></use>
+                  </svg>
                 </button>
               </div>
               <!-- //페이지네이션 -->
             </div>
           </div>
-          <!-- //grid-chart-paginaiton -->
+          <!-- //Grid chart 2단 출력 -->
+
+          <!-- Grid chart 1단 출력 -->
+          <span style="position: absolute; top: 1600px; left: 770px;">Grid chart 1단 출력</span>
+          <div class="canvas-object object-area" style="top: 1620px; left: 770px; width: 700px; height: 260px;">
+            <div class="object-area__grid-chart-container">
+              <!-- 필터 그룹 (페이지네이션, 서치바 그룹) -->
+              <!-- 1단 출력 설정시 row-1 클래스 추가 -->
+              <!-- .grid-chart-filter-wrap -> .grid-chart-toolbar -->
+              <div class="grid-chart-toolbar row-1">
+                <!-- 목록 개수 -->
+                <!-- .grid-perpage -> .grid-chart-toolbar__perpage -->
+                <div class="grid-chart-toolbar__perpage">
+                  <label class="grid-chart-toolbar__perpage-label" for="perpage">목록 개수</label>
+                  <div class="select" id="perpage">
+                    <div class="select-selector">
+                      <button class="select-selector__button">
+                        <span class="select-selector__title">5</span>
+                        <svg class="svg-icon select-selector__icon">
+                          <use xlink:href="#chevron-down-medium"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="select-container">
+                      <ul class="select-container__list">
+                        <li class="select-container__item select-container__item--selected">
+                          <button class="select-container__button">
+                            <span class="select-container__text">5</span>
+                          </button>
+                        </li>
+                        <li class="select-container__item">
+                          <button class="select-container__button">
+                            <span class="select-container__text">10</span>
+                          </button>
+                        </li>
+                        <li class="select-container__item">
+                          <button class="select-container__button">
+                            <span class="select-container__text">20</span>
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- grid-chart-toolbar__count -->
+                <div class="grid-chart-toolbar__count"> 데이터 개수 : 500 </div>
+                <!-- TODO: svg icon으로 변경 필요 -->
+                <!-- grid-chart-toolbar__acc-icon -->
+                <svg class="svg-icon grid-chart-toolbar__acc-icon">
+                  <use xlink:href="#time"></use>
+                </svg>
+                <!-- //목록 개수 -->
+                <!-- 이미지 다운로드 버튼 -->
+                <div class="select grid-chart-toolbar__download">
+                  <div class="select-selector">
+                    <button class="select-selector__button">
+                      <span class="select-selector__title">
+                        <svg class="svg-icon select-selector__title-icon">
+                          <use xlink:href="#download"></use>
+                        </svg>
+                      </span>
+                      <svg class="svg-icon select-selector__icon">
+                        <use xlink:href="#chevron-down-medium"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="select-container">
+                    <ul class="select-container__list">
+                      <li class="select-container__item select-container__item--selected">
+                        <button class="select-container__button">
+                          <span class="select-container__text">CSV 다운로드</span>
+                        </button>
+                      </li>
+                      <li class="select-container__item">
+                        <button class="select-container__button">
+                          <span class="select-container__text">PNG 다운로드</span>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- 차트 데이터 다운로드 버튼 -->
+                <button class="button button--tertiary px-6 grid-chart-toolbar__button" type="button">
+                  <svg class="svg-icon">
+                    <use xlink:href="#download"></use>
+                  </svg>
+                </button>
+                <!-- //차트 데이터 다운로드 버튼 -->
+                <!-- 새 창으로 열기 버튼 -->
+                <button class="button button--tertiary px-6 grid-chart-toolbar__button" type="button">
+                  <svg class="svg-icon">
+                    <use xlink:href="#popout"></use>
+                  </svg>
+                </button>
+                <!-- //새 창으로 열기 버튼 -->
+                <!-- 검색 -->
+                <div class="text-input-group grid-chart-toolbar__search">
+                  <span class="text-input-group__icon">
+                    <svg class="svg-icon">
+                      <use xlink:href="#search"></use>
+                    </svg>
+                  </span>
+                  <input type="text" class="text-input" placeholder="placeholder text" value="input filled">
+                </div>
+                <!-- //검색 -->
+              </div>
+              <!-- //필터 그룹 -->
+              <!-- grid-chart -->
+              <!-- .grid-chart-table-wrap -> .grid-chart-wrap -->
+              <div class="grid-chart-wrap">
+                <table class="table table--primary">
+                  <thead>
+                    <tr>
+                      <th class="text-center">
+                        <div class="checkbox checkbox--indeterminate">
+                          <input class="checkbox__input" type="checkbox" id="chk-all">
+                          <label class="checkbox__label" for="chk-all"></label>
+                        </div>
+                      </th>
+                      <th class="none">No.</th>
+                      <th>SCH_ID</th>
+                      <th>JOB_SEQ</th>
+                      <th>JOB_ID</th>
+                      <th>JOB</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-center">
+                        <div class="checkbox">
+                          <input class="checkbox__input" type="checkbox" id="chk-1">
+                          <label class="checkbox__label" for="chk-1"></label>
+                        </div>
+                      </td>
+                      <td>1</td>
+                      <td>11</td>
+                      <td>11</td>
+                      <td>HDFS</td>
+                      <td>root</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">
+                        <div class="checkbox">
+                          <input class="checkbox__input" type="checkbox" id="chk-2" checked="">
+                          <label class="checkbox__label" for="chk-2"></label>
+                        </div>
+                      </td>
+                      <td>2</td>
+                      <td>22</td>
+                      <td>SYSLOG_R1</td>
+                      <td>LOCAL</td>
+                      <td>root</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">
+                        <div class="checkbox">
+                          <input class="checkbox__input" type="checkbox" id="chk-3">
+                          <label class="checkbox__label" for="chk-3"></label>
+                        </div>
+                      </td>
+                      <td>3</td>
+                      <td>33</td>
+                      <td>SYSLOG_R1</td>
+                      <td>GLOBAL</td>
+                      <td>root</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">
+                        <div class="checkbox">
+                          <input class="checkbox__input" type="checkbox" id="chk-2">
+                          <label class="checkbox__label" for="chk-2"></label>
+                        </div>
+                      </td>
+                      <td>4</td>
+                      <td>44</td>
+                      <td>44</td>
+                      <td>HDFS</td>
+                      <td>root</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">
+                        <div class="checkbox">
+                          <input class="checkbox__input" type="checkbox" id="chk-5">
+                          <label class="checkbox__label" for="chk-5"></label>
+                        </div>
+                      </td>
+                      <td>5</td>
+                      <td>55</td>
+                      <td>SYSLOG_R1</td>
+                      <td>LOCAL</td>
+                      <td>root</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">
+                        <div class="checkbox">
+                          <input class="checkbox__input" type="checkbox" id="chk-6">
+                          <label class="checkbox__label" for="chk-6"></label>
+                        </div>
+                      </td>
+                      <td>6</td>
+                      <td>66</td>
+                      <td>SYSLOG_R1</td>
+                      <td>GLOBAL</td>
+                      <td>root</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //grid-chart -->
+              <!-- 페이지네이션 -->
+              <!-- .pagination-new -> .input-pagination -->
+              <div class="input-pagination object-area__pagination">
+                <button type="button" class="button button--link p-4" disabled="disabled">
+                  <svg class="svg-icon">
+                    <use xlink:href="#chevron-double-left-medium"></use>
+                  </svg>
+                </button>
+                <button type="button" class="button button--link p-4">
+                  <svg class="svg-icon">
+                    <use xlink:href="#chevron-left-medium"></use>
+                  </svg>
+                </button>
+                <span class="input-pagination__input text-input" role="textbox" contenteditable="">160</span>
+                <span class="input-pagination__dash">-</span>
+                <span class="input-pagination__last-page">270</span>
+                <button type="button" class="button button--link p-4">
+                  <svg class="svg-icon">
+                    <use xlink:href="#chevron-right-medium"></use>
+                  </svg>
+                </button>
+                <button type="button" class="button button--link p-4" disabled="disabled">
+                  <svg class="svg-icon">
+                    <use xlink:href="#chevron-double-right-medium"></use>
+                  </svg>
+                </button>
+              </div>
+              <!-- //페이지네이션 -->
+            </div>
+          </div>
+          <!-- // Grid chart 1단 출력-->
+
+          <!-- Area toolbar -->
+          <span style="position: absolute; top: 1600px; left: 1490px;">Area toolbar</span>
+          <div class="canvas-object object-area" style="top: 1620px; left: 1490px; width: 400px; height: 260px;">
+            <div class="object-area-toolbar">
+              <span class="object-area-toolbar__count">데이터 개수 : 500</span>
+              <svg class="svg-icon object-area-toolbar__acc-icon">
+                <use xlink:href="#time"></use>
+              </svg>
+              <div class="object-area-toolbar__buttons">
+                <!-- 리스트 오픈일 경우 Select-open 클래스 추가 -->
+                <div class="select object-area-toolbar__download">
+                  <div class="select-selector">
+                    <button class="select-selector__button">
+                      <span class="select-selector__title">
+                        <svg class="svg-icon select-selector__title-icon">
+                          <use xlink:href="#download"></use>
+                        </svg>
+                      </span>
+                      <svg class="svg-icon select-selector__icon">
+                        <use xlink:href="#chevron-down-medium"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="select-container">
+                    <ul class="select-container__list">
+                      <li class="select-container__item select-container__item--selected">
+                        <button class="select-container__button">
+                          <span class="select-container__text">CSV 다운로드</span>
+                        </button>
+                      </li>
+                      <li class="select-container__item">
+                        <button class="select-container__button">
+                          <span class="select-container__text">PNG 다운로드</span>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <button class="button button--tertiary px-6 object-area-toolbar__button" type="button">
+                  <svg class="svg-icon">
+                    <use xlink:href="#popout"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- // Area toolbar-->
+
+          <!-- object-area__single-value -->
+          <span style="position: absolute; top: 1900px; left: 1170px;">area: 단일값</span>
+          <div class="canvas-object object-area" style="top: 1920px; left: 1170px; width: 80px; height: 40px;">
+            <div class="object-area__single-value">
+              <p class="object-area__single-value-text">123123</p>
+            </div>
+          </div>
+          <!-- //object-area__single-value -->
 
           <span style="position: absolute; top: 1900px; left: 50px;">기간 설정 .object-datetime-range-picker</span>
           <div class="canvas-object object-datetime-range-picker canvas-object--active" style="top: 1920px; left: 50px; width: 500px; height: 40px;">
@@ -3131,6 +3535,36 @@
             <div class="object-ima__layer-name-wrap">
               <span class="object-ima__layer-name">layer name</span>
             </div>
+            <!-- 크기 조절 상자 -->
+            <span class="tl"></span>
+            <span class="tc"></span>
+            <span class="tr"></span>
+            <span class="cl"></span>
+            <span class="cr"></span>
+            <span class="bl"></span>
+            <span class="bc"></span>
+            <span class="br"></span>
+            <!-- //크기 조절 상자 -->
+          </div>
+
+          <span style="position: absolute; top: 1960px; left: 70px;">Text area</span>
+          <div class="canvas-object canvas-object--active" style="top: 1980px; left: 70px; width: 200px; height: 40px;">
+            <textarea class="text-area" name="textarea" id="textarea" cols="30" rows="10"></textarea>
+            <!-- 크기 조절 상자 -->
+            <span class="tl"></span>
+            <span class="tc"></span>
+            <span class="tr"></span>
+            <span class="cl"></span>
+            <span class="cr"></span>
+            <span class="bl"></span>
+            <span class="bc"></span>
+            <span class="br"></span>
+            <!-- //크기 조절 상자 -->
+          </div>
+
+          <span style="position: absolute; top: 1960px; left: 270px;">Text area</span>
+          <div class="canvas-object" style="top: 1980px; left: 280px; width: 200px; height: 40px;">
+            <textarea class="text-area" name="textarea" id="textarea" cols="30" rows="10"></textarea>
             <!-- 크기 조절 상자 -->
             <span class="tl"></span>
             <span class="tc"></span>

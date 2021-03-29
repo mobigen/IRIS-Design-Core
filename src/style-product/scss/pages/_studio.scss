@@ -13,54 +13,6 @@
 }
 
 .object-area {
-  // 단일값
-  .single-value {
-    width: 100%;
-    height: 100%;
-    background: $ui-02;
-    padding: 8px 4px;
-    text-align: center;
-  }
-
-  .single-value::before {
-    content: "";
-    display: inline-block;
-    width: 0;
-    height: 100%;
-    vertical-align: middle;
-    margin-right: -4px;
-  }
-
-  .single-value span {
-    vertical-align: middle;
-  }
-
-  // 차트
-  .chart-container {
-    width: 100%;
-    height: 100%;
-    background-color: $ui-02;
-  }
-
-  .chart-container .chart {
-    padding: $spacing-2xs;
-    width: 100%;
-    height: 100%;
-  }
-
-  // motion chart
-  .motion-chart,
-  .sankey-chart {
-    width: 100%;
-    height: 100%;
-    background: $ui-01;
-    padding: 8px 12px 12px;
-  }
-
-  .motion-chart .chart {
-    margin-top: 29px;
-  }
-
   // studio 모션 차트 옵션 설정 스타일
   .motion-chart-btn-group {
     display: flex;
@@ -73,21 +25,197 @@
   .motion-chart-btn-group + .chart-option-btn {
     margin-left: $spacing-md;
   }
-
-  // grid
-  .grid-chart {
-    color: $text-01;
-    display: flex;
-    flex-flow: column;
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    background: $ui-02;
-    overflow-y: hidden;
-    overflow-x: auto;
-  }
 }
 
+.object-area__single-value {
+  width: 100%;
+  height: 100%;
+  background: $ui-02;
+  padding: $spacing-xs $spacing-2xs;
+
+  // &::before {
+  //   content: "";
+  //   display: inline-block;
+  //   width: 0;
+  //   height: 100%;
+  //   vertical-align: middle;
+  //   margin-right: -4px;
+  // }
+}
+
+.object-area__single-value-text {
+  display: table-cell;
+}
+
+// 차트
+.object-area__chart-container {
+  width: 100%;
+  height: 100%;
+  background-color: $ui-02;
+}
+
+.object-area__chart {
+  width: 100%;
+  height: 100%;
+}
+
+.object-area__chart-container--bg-none {
+  background-color: transparent;
+}
+
+.object-area__motion-chart-container,
+.object-area__sankey-chart-container {
+  width: 100%;
+  height: 100%;
+  background: $ui-01;
+  padding: 8px 12px 12px;
+}
+
+.object-area__motion-chart {
+  margin-top: 29px;
+}
+
+// grid
+.object-area__pagination {
+  margin-top: $spacing-2xs;
+}
+
+.object-area__grid-chart-container {
+  color: $text-01;
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  height: 100%;
+  padding: $spacing-xs;
+  background: $ui-02;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+.grid-chart-toolbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.grid-chart-toolbar .select {
+  margin-left: $spacing-xs;
+}
+
+.grid-chart-toolbar__perpage {
+  display: flex;
+  align-items: center;
+  margin-bottom: $spacing-xs;
+}
+
+.grid-chart-toolbar__perpage-label {
+  white-space: nowrap;
+  color: $text-02;
+}
+
+.grid-chart-toolbar__count {
+  margin-left: $spacing-xs;
+  margin-bottom: $spacing-xs;
+  color: $text-02;
+  white-space: nowrap;
+}
+
+.grid-chart-toolbar__download {
+  margin-bottom: $spacing-xs;
+}
+
+.grid-chart-toolbar__download .select-container {
+  min-width: rem(118px);
+  max-width: rem(128px);
+  right: 0;
+  left: auto;
+}
+
+.grid-chart-toolbar__button {
+  margin-bottom: $spacing-xs;
+  margin-left: $spacing-xs;
+}
+
+.grid-chart-toolbar__search {
+  margin-bottom: $spacing-xs;
+  width: 100%;
+  min-width: 120px;
+}
+
+.grid-chart-toolbar__acc-icon {
+  margin-left: $spacing-xs;
+  margin-bottom: $spacing-xs;
+}
+
+// .grid-chart-toolbar *:first-child:not(.grid-chart-toolbar__perpage),
+.grid-chart-toolbar__perpage + .grid-chart-toolbar__count,
+.grid-chart-toolbar__perpage + .grid-chart-toolbar__download,
+.grid-chart-toolbar__perpage + .grid-chart-toolbar__button,
+.grid-chart-toolbar__perpage + .grid-chart-toolbar__acc-icon,
+.grid-chart-toolbar__perpage + .grid-chart-toolbar__search {
+  margin-left: auto;
+}
+
+// 1단으로 설정(row-1 클래스 추가) 상황
+.grid-chart-toolbar.row-1 {
+  flex-wrap: nowrap;
+}
+
+.grid-chart-toolbar.row-1 .grid-chart-toolbar__search {
+  max-width: 300px;
+  margin-left: $spacing-xs;
+}
+
+.grid-chart-wrap {
+  overflow: auto;
+  height: 100%;
+}
+
+// 2019-08-27 MOD KHY
+.grid-chart-wrap .ag-theme-default {
+  height: 100%;
+}
+
+.grid-chart-wrap .ag-theme-default.is-fixed {
+  table-layout: fixed;
+}
+
+.object-area-toolbar {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: $spacing-xs;
+  top: $spacing-xs;
+  right: $spacing-xs;
+}
+
+.object-area-toolbar__count {
+  line-height: 1;
+  margin-right: $spacing-xs;
+}
+
+.object-area-toolbar__buttons {
+  display: flex;
+  margin-left: auto;
+}
+
+.object-area-toolbar__button {
+  margin-left: $spacing-xs;
+}
+
+.object-area-toolbar__motion-buttons {
+  display: flex;
+}
+
+.object-area-toolbar__motion-buttons .button + .button {
+  margin-left: $spacing-2xs;
+}
+
+.object-area-toolbar__motion-buttons + .object-area-toolbar__button {
+  margin-left: $spacing-md;
+}
 // TODO: IAP 등 서비스 만들 떄 재사용 가능한 부분이 있다면 ../layout/common.scss 파일로 분리해야함.
 .editor-layout {
   display: flex;
@@ -242,20 +370,6 @@
   user-select: none;
 }
 
-.canvas-object--active::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 1px solid $secondary;
-  border-radius: 0;
-  z-index: 4;
-  pointer-events: none;
-  margin: -1px;
-}
-
 .canvas-object-inner {
   position: absolute;
   top: 0;
@@ -301,6 +415,26 @@
   &:hover:not([preview]) {
     border: 1px solid $secondary;
   }
+}
+
+.object-tag::after,
+.object-tab::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid transparent;
+  border-radius: 0;
+  z-index: 4;
+  pointer-events: none;
+  margin: -1px;
+}
+
+.object-tag:hover:not([preview])::after,
+.object-tab:hover:not([preview])::after {
+  border: 1px solid $secondary;
 }
 
 // background-image를 사용하는 유형 area, image, period
@@ -381,6 +515,10 @@
 
 .object-area--bg-none {
   background: none;
+
+  &:hover {
+    background: none;
+  }
 }
 
 .object-area--active:not([preview]).object-area--bg-none,
@@ -487,7 +625,7 @@
 }
 
 // label
-.object-label {
+.object-label:not([preview]) {
   border: 1px dashed $ui-04;
 
   &:hover:not([preview]) {
@@ -495,8 +633,19 @@
   }
 }
 
-.object-label__align-box[contenteditable] {
-  user-select: text;
+.object-label__writing-mode-box {
+  display: table;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.object-label__align-box {
+  display: table-cell;
+
+  &[contenteditable] {
+    user-select: text;
+  }
 }
 
 // ellipse
@@ -504,12 +653,14 @@
   border-radius: 50%;
 }
 
+.object-editor {
+  box-sizing: content-box;
+}
+
 .object-select {
 }
 
-.object-select .select,
-.object-datetime-picker .date-picker,
-.object-datetime-picker .date-picker-selector {
+.object-select .select {
   width: 100%;
   height: 100%;
 }
@@ -607,7 +758,7 @@
 .object-map__layer-name-text {
   @include font-size("13");
   display: inline-block;
-  background-color: rgba($ui-02, 0.6);
+  background-color: $overlay-02;
   border: 1px solid rgba($ui-04, 0.9);
   color: $text-01;
   font-weight: 400;
@@ -786,16 +937,6 @@
   border: 1px solid transparent;
 }
 
-// label
-.object-label {
-}
-
-.object-label .text-area {
-  padding: 0;
-  border-color: transparent;
-  background-color: transparent;
-}
-
 // -------------------------
 // canvas-object별 재정의
 // -------------------------
@@ -811,6 +952,10 @@
   height: 100%;
   padding: $spacing-2xs;
   overflow: auto;
+}
+
+.canvas-object .text-area {
+  height: 100%;
 }
 
 // -------------------------
@@ -888,6 +1033,20 @@
   margin: 0 -4px -4px 0;
 }
 
+.canvas-object--active::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid $secondary;
+  border-radius: 0;
+  z-index: 4;
+  pointer-events: none;
+  margin: -1px;
+}
+
 .canvas-object--connected::after,
 .canvas-object--unconnected::after,
 .canvas-object--select::after,
@@ -905,19 +1064,18 @@
 }
 
 .canvas-object--deselect::after {
-  background-color: rgba($ui-02, 0.6);
+  background-color: $overlay-02;
   // box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%); //TODO: 디자인 가이드 적용 필요
 }
 
 .canvas-object--select::after {
-  background-color: rgba($ui-02, 0.6);
+  background-color: $overlay-02;
   // z-index: 9999;
-  border: solid 1px $secondary;
-  margin: -1px;
+  // margin: -1px;
 }
 
 .canvas-object--unconnected::after {
-  background-color: rgba($ui-02, 0.6);
+  background-color: $overlay-02;
   // NOTE: editor 객체에서 리사이즈 박스보다 위에 뜨는 문제로 10 -> 4로 수정
   z-index: 4; // TODO: z-index function 적용
 }
@@ -995,7 +1153,6 @@
   width: rem(300px);
   padding: $spacing-sm;
   background-color: $ui-02;
-  border-top: 1px solid $ui-04;
   z-index: 5;
 }
 
