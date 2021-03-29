@@ -17,11 +17,12 @@ $icon-02: #005acd !default;
 $inverse-01: #ffffff !default;
 $field-bg: #ffffff !default;
 $field-border: #dce1e8 !default;
-$support-01: #0747A6 !default;
+$support-01: #0747a6 !default;
 $support-02: #00875a !default;
 $support-03: #ffab00 !default;
 $support-04: #de350b !default;
-$overlay-01: rgba(#242e3d, .5) !default;
+$overlay-01: rgba(#242e3d, 0.5) !default;
+$overlay-02: rgba($ui-02, 0.6) !default;
 
 // Interactive Tokesn
 $focus: $secondary !default;
