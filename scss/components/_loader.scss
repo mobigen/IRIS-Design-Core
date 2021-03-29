@@ -53,6 +53,29 @@
   }
 }
 
+@keyframes mono-loading-spinner-colors {
+  0% {
+    border-color: $mono-loader-start;
+    border-bottom-color: transparent;
+  }
+  25% {
+    border-color: $mono-loader-25;
+    border-bottom-color: transparent;
+  }
+  50% {
+    border-color: $mono-loader-50;
+    border-bottom-color: transparent;
+  }
+  75% {
+    border-color: $mono-loader-75;
+    border-bottom-color: transparent;
+  }
+  100% {
+    border-color: $mono-loader-end;
+    border-bottom-color: transparent;
+  }
+}
+
 // Loading overlay
 .loader-overlay {
   position: absolute;
@@ -60,8 +83,16 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: $overlay-01;
   z-index: z("overlay");
+  background-color: $overlay-02;
+}
+
+.loader-overlay--dark {
+  background-color: $overlay-01;
+}
+
+.loader-overlay--mono {
+  background-color: rgba($ui-02, 0.75);
 }
 
 .loader-overlay .loader {
@@ -122,8 +153,12 @@
 }
 
 .button .loader__spinner::after,
-.loader-overlay .loader__spinner::after {
+.loader-overlay--dark .loader__spinner::after {
   animation: loading-spinner-duration 1s linear infinite, inverse-loading-spinner-colors 3s linear infinite;
+}
+
+.loader-overlay--mono .loader__spinner::after {
+  animation: loading-spinner-duration 1s linear infinite, mono-loading-spinner-colors 3s linear infinite;
 }
 
 // Loading bar
@@ -160,7 +195,7 @@
   background-color: $hover-ui-accent;
 }
 
-.loading-bar:before {
+.loading-bar::before {
   content: "";
   position: absolute;
   display: block;
@@ -171,4 +206,8 @@
   width: 102%;
   background-color: $primary;
   animation: loading-bar 1.5s cubic-bezier(0.52, 0.04, 0.06, 0.93) infinite;
+}
+
+.loading-bar--mono::before {
+  background-color: $icon-01;
 }

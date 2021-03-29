@@ -111,6 +111,12 @@
   color: $text-02;
 }
 
+.select-selector__title-icon {
+  width: rem(20px);
+  height: rem(20px);
+  vertical-align: middle;
+}
+
 .select-selector__icon {
   @include svg-icon-size(20px);
   position: absolute;
@@ -118,6 +124,7 @@
   margin-top: -10px;
   right: $spacing-xs;
   transform: none;
+  pointer-events: none;
 }
 
 .svg-icon + .select-selector__title {
