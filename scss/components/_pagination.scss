@@ -58,3 +58,26 @@
   display: block;
   padding: 0 $spacing-xs;
 }
+
+.input-pagination {
+  display: flex;
+  align-items: center;
+}
+
+.input-pagination__input {
+  @include font-weight("medium");
+  width: auto;
+  height: rem(28px);
+  padding: $spacing-2xs $spacing-xs;
+  line-height: rem(18px);
+  border-color: transparent;
+}
+
+.input-pagination__dash {
+  @include line-height("heading");
+  margin-right: $spacing-2xs;
+}
+
+.input-pagination__last-page {
+  @include line-height("heading");
+}
