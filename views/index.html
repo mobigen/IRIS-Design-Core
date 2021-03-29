@@ -5728,15 +5728,34 @@
   <p class="page__desc">로더</p>
   <div class="page__usage md">
     <ul>
-      <li>
-        로더는 3개 사이즈로 구분합니다
-        <ul>
-          <li><code class="code-inline">loader--sm</code>: 버튼 등 Form 요소나 텍스트 수준 영역 로딩</li>
-          <li><code class="code-inline">loader--md</code>: 카드 수준의 블록 영역 로딩</li>
-          <li><code class="code-inline">loader--sm</code>: 페이지 영역 로딩</li>
-        </ul>
-      </li>
-      <li><code class="code-inline">loader-overlay</code>는 loader 아래에 있는 컨텐츠를 조작할 수 없는 경우 사용합니다.</li>
+      <li>로더는 스피너 형태와 바 형태 2개로 구분합니다.</li>
+      <ul>
+        <li>스피너형 로더
+          <ul>
+            <li>
+              로더는 3개 사이즈로 구분합니다.
+              <ul>
+                <li><code class="code-inline">loader--sm</code>: 버튼 등 Form 요소나 텍스트 수준 영역 로딩</li>
+                <li><code class="code-inline">loader--md</code>: 카드 수준의 블록 영역 로딩</li>
+                <li><code class="code-inline">loader--sm</code>: 페이지 영역 로딩</li>
+              </ul>
+            </li>
+            <li><code class="code-inline">loader-overlay</code>는 loader 아래에 있는 컨텐츠를 조작할 수 없는 경우 사용합니다.</li>
+            <li>
+              로더는 오버레이는 3개 스타일로 구분합니다.
+              <ul>
+                <li><code class="code-inline">loader-overlay--dark</code></li>
+                <li><code class="code-inline">loader-overlay--mono</code></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>바형 로더
+          <ul>
+            <li>바형 로더는 2개 스타일로 구분합니다</li>
+          </ul>
+        </li>
+      </ul>
     </ul>
   </div>
 
@@ -5775,11 +5794,41 @@
   </div>
 
   <div class="component-variation">
-    <span class="component-variation__name">Loader - overlay</span>
+    <span class="component-variation__name">Loader Overlay - Default</span>
     <div class="component-example">
       <div class="component-example__live">
         <div>
           <div class="loader-overlay">
+            <div class="loader loader--md">
+              <div class="loader__spinner"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Loader Overlay - Dark</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <div class="loader-overlay loader-overlay--dark">
+            <div class="loader loader--md">
+              <div class="loader__spinner"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Loader Overlay - Mono</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <div class="loader-overlay loader-overlay--mono">
             <div class="loader loader--md">
               <div class="loader__spinner"></div>
             </div>
@@ -5810,6 +5859,30 @@
                 <span class="button__text">Button</span>
               </button>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Loader Bar Type - Default</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div style="width: 400px;">
+          <div class="loading-bar">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Loader Bar Type - Mono</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div style="width: 400px;">
+          <div class="loading-bar loading-bar--mono">
           </div>
         </div>
       </div>
@@ -9183,8 +9256,7 @@
               <!-- filled + disabled -->
               <div class="text-input-group">
                 <label class="hidden">Input</label>
-                <input type="text" class="text
-              -input text-input--lg" placeholder="placeholder text" value="input filled" disabled />
+                <input type="text" class="text-input text-input--lg" placeholder="placeholder text" value="input filled" disabled />
               </div>
             </div>
           </div>
