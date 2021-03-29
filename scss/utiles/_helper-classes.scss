@@ -122,6 +122,10 @@
   align-self: flex-start;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 // .seaching-select-disable 클래스를 개선
 .disabled-div {
   position: absolute;
@@ -286,11 +290,6 @@
   text-align: center;
 }
 
-<<<<<<< Updated upstream
-.justify-center {
-  justify-content: center;
-}
-=======
 .text-right {
   text-align: right;
 }
@@ -310,4 +309,3 @@
 .text-bottom {
   vertical-align: bottom;
 }
->>>>>>> Stashed changes
