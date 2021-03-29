@@ -99,9 +99,23 @@
 }
 
 .select-selector__input .text-input {
+  @include font-weight("regular");
   width: 100%;
   height: 100%;
   padding-right: $spacing-xl;
+  color: $text-02;
+}
+
+.select-selector__input-icon {
+  position: absolute;
+  left: rem(13px);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: z("float");
+}
+
+.select-selector__input-icon + .text-input {
+  padding-left: rem(35px);
 }
 
 .select-selector__title {
@@ -128,7 +142,7 @@
 }
 
 .svg-icon + .select-selector__title {
-  margin-left: $spacing-3xs;
+  margin-left: $spacing-2xs;
 }
 
 // select panel(dropdown)
@@ -136,7 +150,7 @@
   @include list;
   @include layer("overlay");
   display: none;
-  z-index: z("float");
+  z-index: z("floating");
   position: absolute;
   top: calc(100% + 2px);
   left: 0;
