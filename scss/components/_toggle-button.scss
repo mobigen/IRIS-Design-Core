@@ -18,7 +18,10 @@
 
   &:disabled,
   &:disabled:hover,
-  &:disabled:focus {
+  &:disabled:focus,
+  &--disabled,
+  &--disabled:hover,
+  &--disabled:focus {
     background-color: $text-05;
   }
 }
@@ -65,7 +68,10 @@
 
   &:disabled,
   &:disabled:hover,
-  &:disabled:focus {
+  &:disabled:focus,
+  &--disabled,
+  &--disabled:hover,
+  &--disabled:focus {
     background-color: $ui-02;
     opacity: 0.5;
     color: $text-02;
