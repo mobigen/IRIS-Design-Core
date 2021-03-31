@@ -150,7 +150,7 @@
   @include list;
   @include layer("overlay");
   display: none;
-  z-index: z("floating");
+  z-index: z("dropdown");
   position: absolute;
   top: calc(100% + 2px);
   left: 0;
