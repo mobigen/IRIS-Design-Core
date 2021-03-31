@@ -1189,3 +1189,120 @@
 .img-icon--map-type.map-ngii {
   background-position-x: -96px;
 }
+
+.color-preview-option {
+  display: inline-block;
+  position: relative;
+  border-radius: 2px;
+  width: rem(40px);
+  height: rem(26px);
+  border: 1px solid $ui-04;
+}
+
+.color-transparent::after {
+  position: absolute;
+  width: 44px;
+  height: 100%;
+  content: "";
+  border-top: 1px solid $support-04;
+  transform: translateX(-9px) translateY(10px) rotate(30deg);
+}
+
+.color-palette {
+  position: relative;
+  display: flex;
+  width: 100%;
+  padding: $spacing-2xs 0;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.color-palette__item {
+  position: relative;
+  width: calc(100% / 10);
+  height: 8px;
+}
+
+.space-filter-content__thumbnail {
+  position: relative;
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 8px;
+  width: 64px;
+  height: 48px;
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.space-filter-content__thumbnail-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -15px;
+  margin-left: -14px;
+  width: 30px;
+  height: 28px;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.border-prop {
+  width: 100%;
+  height: auto;
+  border: 1px solid $text-02;
+  border-width: 1px 0 0 0;
+}
+
+.border-prop--preview {
+  width: rem(110px);
+}
+
+.select-selector__title .border-prop {
+  position: absolute;
+  top: 50%;
+  width: calc(100% - 44px);
+  transform: translateY(-50%);
+}
+
+.select-container__text .border-prop {
+  position: absolute;
+  top: 50%;
+  width: calc(100% - 16px);
+  transform: translateY(-50%);
+}
+
+.border-prop--thickness-1 {
+  border-top-width: 1px;
+}
+
+.border-prop--thickness-2 {
+  border-top-width: 2px;
+}
+
+.border-prop--thickness-3 {
+  border-top-width: 3px;
+}
+
+.border-prop--thickness-4 {
+  border-top-width: 4px;
+}
+
+.border-prop--thickness-5 {
+  border-top-width: 5px;
+}
+
+.border-prop--thickness-6 {
+  border-top-width: 6px;
+}
+
+.border-prop--solid {
+  border-style: solid;
+}
+
+.border-prop--dotted {
+  border-style: dotted;
+}
+
+.border-prop--dashed {
+  border-style: dashed;
+}
