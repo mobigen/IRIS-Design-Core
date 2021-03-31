@@ -95,16 +95,16 @@
 // spacing
 // -------------------------
 .p-0 {
-  padding: 0;
+  padding: 0 !important;
 }
 
 .p-4 {
-  padding: rem(4px);
+  padding: rem(4px) !important;
 }
 
 .px-6 {
-  padding-right: rem(6px);
-  padding-left: rem(6px);
+  padding-right: rem(6px) !important;
+  padding-left: rem(6px) !important;
 }
 
 // -------------------------
@@ -149,95 +149,95 @@
 //   xl   ||  1180px
 //   ==========================================
 .w-80 {
-  width: rem(80px);
+  width: rem(80px) !important;
 }
 
 .w-112 {
-  width: rem(112px);
+  width: rem(112px) !important;
 }
 
 .w-120 {
-  width: rem(120px);
+  width: rem(120px) !important;
 }
 
 .w-160 {
-  width: rem(160px);
+  width: rem(160px) !important;
 }
 
 .w-350 {
-  width: rem(350px);
+  width: rem(350px) !important;
 }
 
 .w-480 {
-  width: rem(480px);
+  width: rem(480px) !important;
 }
 
 .w-600 {
-  width: rem(600px);
+  width: rem(600px) !important;
 }
 
 .w-900 {
-  width: rem(900px);
+  width: rem(900px) !important;
 }
 
 .w-1180 {
-  width: rem(1180px);
+  width: rem(1180px) !important;
 }
 
 .h-84 {
-  height: rem(84px);
+  height: rem(84px) !important;
 }
 
 .w-1-12 {
-  width: 8.3333333333%;
+  width: 8.3333333333% !important;
 }
 
 .w-2_12 {
-  width: 16.6666666667%;
+  width: 16.6666666667% !important;
 }
 
 .w-3_12 {
-  width: 25%;
+  width: 25% !important;
 }
 
 .w-4_12 {
-  width: 33.3333333333%;
+  width: 33.3333333333% !important;
 }
 
 .w-5_12 {
-  width: 41.6666666667%;
+  width: 41.6666666667% !important;
 }
 
 .w-6_12 {
-  width: 50%;
+  width: 50% !important;
 }
 
 .w-7_12 {
-  width: 58.3333333333%;
+  width: 58.3333333333% !important;
 }
 
 .w-8_12 {
-  width: 66.6666666667%;
+  width: 66.6666666667% !important;
 }
 
 .w-9_12 {
-  width: 75%;
+  width: 75% !important;
 }
 
 .w-10_12 {
-  width: 83.3333333333%;
+  width: 83.3333333333% !important;
 }
 
 .w-11_12 {
-  width: 91.6666666667%;
+  width: 91.6666666667% !important;
 }
 
 .w-12_12 {
-  width: 100%;
+  width: 100% !important;
 }
 
 .mh-600 {
-  max-height: 600px;
+  max-height: 600px !important;
 }
 
 // -------------------------
@@ -312,4 +312,14 @@
 
 .text-bottom {
   vertical-align: bottom;
+}
+
+.layer-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $overlay-01;
+  z-index: z("overlay");
 }

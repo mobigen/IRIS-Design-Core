@@ -39,6 +39,7 @@
   &__item {
     display: flex;
     align-items: center;
+    position: relative;
 
     &:hover {
       background-color: $ui-01;
