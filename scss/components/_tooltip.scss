@@ -1,13 +1,14 @@
 .tooltip {
-  z-index: z("tooltip");
+  z-index: z("overlay");
   position: absolute;
+  max-width: rem(350px);
   padding: $spacing-xs;
   background-color: $text-03;
   border-radius: 4px;
   box-shadow: 0px 0px 8px rgba(206, 211, 217, 0.7);
   transition-duration: $duration-fast-02;
   transition-timing-function: ease-in-out;
-  white-space: nowrap;
+  // white-space: nowrap;
 
   &:after {
     content: '';
@@ -124,7 +125,8 @@
 }
 
 .tooltip__text {
-  @include font-size("14");
-  display: block;
+  @include font-size("13");
+  @include line-height("body");
+  display: inline-block;
   color: $ui-02;
 }

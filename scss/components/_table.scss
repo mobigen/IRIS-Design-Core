@@ -15,6 +15,7 @@
 .table td {
   @include font-weight("regular");
   @include font-size("14");
+  position: relative;
   height: $button-height-lg;
   padding: $spacing-xs $spacing-xs;
   color: $text-02;
