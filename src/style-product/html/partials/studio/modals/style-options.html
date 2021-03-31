@@ -1,0 +1,178 @@
+<!-- 꾸미기 옵션 모달 -->
+<div class="modal modal--sm" style="position: static;">
+  <div class="modal__head">
+    <div class="modal__head-title">
+      <span class="modal__head-title-text">꾸미기 옵션</span>
+      <!-- <span class="modal__head-subtitle">subtitle</span> -->
+    </div>
+    <span class="modal__head-close-button">
+      <button class="button button--icon button--link button--xs">
+        <svg class="svg-icon">
+          <use xlink:href="#close"></use>
+        </svg>
+      </button>
+    </span>
+  </div>
+  <div class="modal__body">
+    <div class="tab tab--horizontal">
+      <ul class="tab__bar">
+        <li class="tab__item">
+          <button type="button" class="tab__button">
+            <span class="tab__button-text">테두리</span>
+          </button>
+        </li>
+        <!-- 선택된 항목에 tab__item--selected 클래스 추가 -->
+        <li class="tab__item tab__item--selected">
+          <button type="button" class="tab__button">
+            <span class="tab__button-text">채우기</span>
+          </button>
+        </li>
+        <li class="tab__item tab__item--disabled">
+          <button type="button" class="tab__button">
+            <span class="tab__button-text">그림자</span>
+          </button>
+        </li>
+      </ul>
+      <div class="tab__panel">
+        <div class="tab__contents tab__contents--active">
+          <!-- 복잡도가 높은 form 요소에 form--complex 스타일 추가 -->
+          <div class="form form--complex">
+            <div class="form__body">
+              <div class="form__list">
+                <div class="form__item">
+                  <label class="form__label">
+                    <span class="form__label-text">
+                      색상
+                    </span>
+                  </label>
+                  <div class="form__detail">
+                    <div class="text-input-wrap">
+                      <input type="text" class="text-input" placeholder="행 번호를 입력 해주세요" value="#">
+                      <div class="checkbox">
+                        <input id="formChekcbox-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="formChekcbox-01" class="checkbox__label">표시</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__item">
+                  <label class="form__label">
+                    <span class="form__label-text">
+                      두께
+                    </span>
+                  </label>
+                  <div class="form__detail">
+                    <div class="form__detail-inner">
+                      <div class="select w-160">
+                        <div class="select-selector">
+                          <button class="select-selector__button">
+                            <span class="select-selector__title">
+                              <span class="border-style border-style--thickness-1"></span>
+                            </span>
+                            <svg class="svg-icon select-selector__icon">
+                              <use xlink:href="#chevron-down-medium"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="select-container">
+                          <ul class="select-container__list">
+                            <li class="select-container__item">
+                              <button class="select-container__button" type="button">
+                                <span class="select-container__text">
+                                  <span class="border-style border-style--thickness-1"></span>
+                                </span>
+                              </button>
+                            </li>
+                            <li class="select-container__item">
+                              <button class="select-container__button" type="button">
+                                <span class="select-container__text">
+                                  <span class="border-style border-style--thickness-2"></span>
+                                </span>
+                              </button>
+                            </li>
+                            <li class="select-container__item">
+                              <button class="select-container__button" type="button">
+                                <span class="select-container__text"><span class="border-style border-style--thickness-3"></span></span>
+                              </button>
+                            </li>
+                            <li class="select-container__item">
+                              <button class="select-container__button" type="button">
+                                <span class="select-container__text"><span class="border-style border-style--thickness-4"></span></span>
+                              </button>
+                            </li>
+                            <li class="select-container__item">
+                              <button class="select-container__button" type="button">
+                                <span class="select-container__text"><span class="border-style border-style--thickness-5"></span></span>
+                              </button>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__item">
+                  <label class="form__label">
+                    <span class="form__label-text">
+                      종류
+                    </span>
+                  </label>
+                  <div class="form__detail">
+                    <div class="form__detail-inner">
+                      <div class="select w-160">
+                        <div class="select-selector">
+                          <button class="select-selector__button">
+                            <span class="select-selector__title">
+                              <span class="border-style border-style--dashed"></span>
+                            </span>
+                            <svg class="svg-icon select-selector__icon">
+                              <use xlink:href="#chevron-down-medium"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="select-container">
+                          <ul class="select-container__list">
+                            <li class="select-container__item">
+                              <button class="select-container__button" type="button">
+                                <span class="select-container__text">
+                                  <span class="border-style border-style--thickness-2 border-style--solid"></span>
+                                </span>
+                              </button>
+                            </li>
+                            <li class="select-container__item">
+                              <button class="select-container__button" type="button">
+                                <span class="select-container__text">
+                                  <span class="border-style border-style--thickness-2 border-style--dotted"></span>
+                                </span>
+                              </button>
+                            </li>
+                            <li class="select-container__item">
+                              <button class="select-container__button" type="button">
+                                <span class="select-container__text"><span class="border-style border-style--thickness-2 border-style--dashed"></span></span>
+                              </button>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal__foot">
+    <div class="modal__foot-main-buttons">
+      <button class="button button--link button--lg" type="button">
+        <span>취소</span>
+      </button>
+      <button class="button button--primary button--lg" type="button">
+        <span>저장</span>
+      </button>
+    </div>
+  </div>
+</div>
+<!-- // 꾸미기 옵션 모달 -->

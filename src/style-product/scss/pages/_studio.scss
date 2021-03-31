@@ -1246,63 +1246,63 @@
   border-radius: 2px;
 }
 
-.border-prop {
+.border-style {
   width: 100%;
   height: auto;
   border: 1px solid $text-02;
   border-width: 1px 0 0 0;
 }
 
-.border-prop--preview {
+.border-style--preview {
   width: rem(110px);
 }
 
-.select-selector__title .border-prop {
+.select-selector__title .border-style {
   position: absolute;
   top: 50%;
   width: calc(100% - 44px);
   transform: translateY(-50%);
 }
 
-.select-container__text .border-prop {
+.select-container__text .border-style {
   position: absolute;
   top: 50%;
   width: calc(100% - 16px);
   transform: translateY(-50%);
 }
 
-.border-prop--thickness-1 {
+.border-style--thickness-1 {
   border-top-width: 1px;
 }
 
-.border-prop--thickness-2 {
+.border-style--thickness-2 {
   border-top-width: 2px;
 }
 
-.border-prop--thickness-3 {
+.border-style--thickness-3 {
   border-top-width: 3px;
 }
 
-.border-prop--thickness-4 {
+.border-style--thickness-4 {
   border-top-width: 4px;
 }
 
-.border-prop--thickness-5 {
+.border-style--thickness-5 {
   border-top-width: 5px;
 }
 
-.border-prop--thickness-6 {
+.border-style--thickness-6 {
   border-top-width: 6px;
 }
 
-.border-prop--solid {
+.border-style--solid {
   border-style: solid;
 }
 
-.border-prop--dotted {
+.border-style--dotted {
   border-style: dotted;
 }
 
-.border-prop--dashed {
+.border-style--dashed {
   border-style: dashed;
 }
