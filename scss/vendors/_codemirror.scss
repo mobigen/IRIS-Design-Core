@@ -1,0 +1,9 @@
+.CodeMirror {
+  @include font-family("mono");
+  font-size: 12px;
+  height: 480px;
+}
+
+.CodeMirror pre {
+  padding: 1px 4px;
+}
