@@ -2,10 +2,12 @@
 .alert {
   @include layer("pop-out");
   display: flex;
+  position: absolute;
   flex-direction: column;
   border-radius: $field-border-radius;
   min-width: rem(280px);
   max-width: rem(520px);
+  z-index: z("modal");
 }
 
 .alert__foot {
@@ -27,6 +29,7 @@
 .alert__body {
   display: flex;
   padding: $layout-sm $layout-md;
+  background-color: $ui-02;
 }
 
 .alert__icon {
@@ -50,7 +53,7 @@
 
 .alert__text {
   @include line-height("body");
-  color: $text-05;
+  color: $text-03;
 }
 
 // -------------------------
