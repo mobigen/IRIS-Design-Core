@@ -1,11 +1,11 @@
 .tooltip {
+  @include layer("overlay");
   z-index: z("overlay");
   position: absolute;
   max-width: rem(350px);
   padding: $spacing-xs;
   background-color: $text-03;
   border-radius: 4px;
-  box-shadow: 0px 0px 8px rgba(206, 211, 217, 0.7);
   transition-duration: $duration-fast-02;
   transition-timing-function: ease-in-out;
   // white-space: nowrap;

@@ -64,6 +64,10 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  & > *:not(:last-child) {
+    margin-bottom: $spacing-2xs;
+  }
 }
 
 .h-group {
@@ -114,16 +118,38 @@
   display: flex;
 }
 
-.ml-auto {
-  margin-left: auto;
-}
-
 .self-start {
   align-self: flex-start;
 }
 
 .justify-center {
   justify-content: center;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.mb-auto {
+  margin-bottom: auto;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my-auto {
+  margin-bottom: auto;
+  margin-top: auto;
 }
 
 // .seaching-select-disable 클래스를 개선
