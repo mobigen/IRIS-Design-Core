@@ -1,10 +1,27 @@
+@function chevronDownMedium($color) {
+  $color: "%23" + $color;
+  $icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 32 32'%3E%3Cpath fill='#{$color}' d='M8.293 11.293a1 1 0 011.414 0L16 17.586l6.293-6.293a1 1 0 011.414 1.414l-7 7a1 1 0 01-1.414 0l-7-7a1 1 0 010-1.414z' clip-rule='evenodd'/%3E%3C/svg%3E%0A";
+  @return url($icon);
+}
+
 .sp-replacer {
   display: flex;
   flex-shrink: 0;
+  position: relative;
   padding: $spacing-2xs;
   border-radius: $field-border-radius;
   border-color: $ui-04;
   background-color: $ui-02;
+}
+
+.sp-replacer::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 24px;
+  height: 32px;
+  background: transparent chevronDownMedium(77889a) no-repeat center;
+  content: "";
 }
 
 .sp-replacer:hover {
@@ -33,5 +50,10 @@
 .sp-preview {
   width: rem(30px);
   height: rem(22px);
+  margin-right: rem(20px);
   border-color: $ui-04;
+}
+
+.sp-dd {
+  display: none;
 }
