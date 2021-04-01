@@ -52,8 +52,10 @@ $font-weights: (
     line-height: 1.75;
   } @else if $el == "body" {
     line-height: 1.5;
+  } @else if $el == "title" {
+    line-height: 1.2;
   } @else {
-    @warn '@mixin line-height($el) 을 사용할 수 없습니다. 'heading' 또는 'body'를 사용해 주세요.';
+    @warn '@mixin line-height($el) 을 사용할 수 없습니다. 'heading', 'body' 또는 'title'를 사용해 주세요.';
   }
 }
 
