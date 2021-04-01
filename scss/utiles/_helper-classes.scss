@@ -73,15 +73,17 @@
 .h-group {
   display: flex;
   align-items: center;
-
-  & > *:not(:last-child) {
-    margin-right: $spacing-2xs;
-  }
 }
 
+.h-group > *:not(:last-child) {
+  margin-right: $spacing-2xs;
+}
+
+.h-group ~ .h-group,
 .h-group .select {
   width: auto;
 }
+
 
 .h-group--half .h-group__item {
   width: 50%;
@@ -120,6 +122,10 @@
 
 .self-start {
   align-self: flex-start;
+}
+
+.items-center {
+  align-items: center;
 }
 
 .justify-center {
