@@ -1632,10 +1632,89 @@
                           <tr>
                             <th>미리설정</th>
                             <td>
-                              <div class="checkbox">
-                                <input id="tableCheck02" type="checkbox" class="checkbox__input" value="label">
-                                <label for="tableCheck02" class="checkbox__label">그림자 없음</label>
+                              <div class="d-flex items-center">
+                                <!-- <span class="shadow-style"></span><span>그림자 없음</span> -->
+                                <span class="shadow-style shadow-style--right-top"></span><span>오른쪽 위</span>
                               </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>그림자 설정</th>
+                            <td>
+                              <div class="select">
+                                <div class="select-selector">
+                                  <button class="select-selector__button">
+                                    <span class="shadow-style"></span>
+                                    <span class="select-selector__title">그림자 없음</span>
+                                    <svg class="svg-icon select-selector__icon">
+                                      <use xlink:href="#chevron-down-medium"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                                <div class="select-container">
+                                  <ul class="select-container__list">
+                                    <li class="select-container__item">
+                                      <button type="button" class="select-container__button">
+                                        <span class="shadow-style"></span>
+                                        <span class="select-container__text"">그림자 없음</span>
+                                      </button>
+                                    <li class="select-container__item">
+                                      <button type="button" class="select-container__button">
+                                        <span class="shadow-style shadow-style--right-bottom"></span>
+                                        <span class="select-container__text"">오른쪽 아래</span>
+                                      </button>
+                                    </li>
+                                    <li class="select-container__item">
+                                      <button type="button" class="select-container__button">
+                                        <span class="shadow-style shadow-style--center-bottom"></span>
+                                        <span class="select-container__text"">가운데 아래</span>
+                                      </button>
+                                    </li>
+                                    <li class="select-container__item">
+                                      <button type="button" class="select-container__button">
+                                        <span class="shadow-style shadow-style--left-bottom"></span>
+                                        <span class="select-container__text"">왼쪽 아래</span>
+                                      </button>
+                                    </li>
+                                    <li class="select-container__item">
+                                      <button type="button" class="select-container__button">
+                                        <span class="shadow-style shadow-style--right"></span>
+                                        <span class="select-container__text"">오른쪽</span>
+                                      </button>
+                                    </li>
+                                    <li class="select-container__item">
+                                      <button type="button" class="select-container__button">
+                                        <span class="shadow-style shadow-style--center"></span>
+                                        <span class="select-container__text"">가운데</span>
+                                      </button>
+                                    </li>
+                                    <li class="select-container__item">
+                                      <button type="button" class="select-container__button">
+                                        <span class="shadow-style shadow-style--left"></span>
+                                        <span class="select-container__text"">왼쪽</span>
+                                      </button>
+                                    </li>
+                                    <li class="select-container__item">
+                                      <button type="button" class="select-container__button">
+                                        <span class="shadow-style shadow-style--right-top"></span>
+                                        <span class="select-container__text"">오른쪽 위</span>
+                                      </button>
+                                    </li>
+                                    <li class="select-container__item">
+                                      <button type="button" class="select-container__button">
+                                        <span class="shadow-style shadow-style--center-top"></span>
+                                        <span class="select-container__text"">가운데 위</span>
+                                      </button>
+                                    </li>
+                                    <li class="select-container__item">
+                                      <button type="button" class="select-container__button">
+                                        <span class="shadow-style shadow-style--left-top"></span>
+                                        <span class="select-container__text"">왼쪽 위</span>
+                                      </button>
+                                    </li>
+                                  </ul>
+                                </div>
+                             </div>
                             </td>
                           </tr>
                           <tr>
@@ -1645,7 +1724,7 @@
                           <tr>
                             <th>색상</th>
                             <td>
-                              <span class="color-preview-option" style="background-color: rgb(199, 199, 199);"></span>
+                              <span class=" color-preview-option" style="background-color: rgb(199, 199, 199);"></span>
                             </td>
                           </tr>
                           <tr>
