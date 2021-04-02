@@ -10,6 +10,7 @@
   display: flex;
   flex-direction: column;
   position: absolute;
+  min-height: rem(320px);
   border-radius: $field-border-radius;
   background-color: $ui-02;
   z-index: z("modal");

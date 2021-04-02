@@ -34,13 +34,13 @@ $layer-shadows: (base: none,
 }
 
 $z-indexes: (
-  modal: 9000,
-  overlay: 8000,
-  dropdown: 9100,
+  tooltip: 9000,
+  dropdown: 8100,
+  modal: 8000,
+  overlay: 7000,
   header: 6000,
   footer: 5000,
   layer: 510,
-  tooltip: 500,
   float: 1,
   hidden: - 1,
   overflowHidden: - 1,
