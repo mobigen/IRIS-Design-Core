@@ -256,3 +256,9 @@
 .table-scroll thead {
   border-bottom: 1px solid $ui-04;
 }
+
+th .button {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: - rem(4px);
+}
