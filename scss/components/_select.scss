@@ -155,10 +155,12 @@
   top: calc(100% + 2px);
   left: 0;
   right: 0;
+  max-height: rem(320px);
   padding: $spacing-2xs 0;
   background-color: $ui-02;
   border-radius: $field-border-radius;
   border: 1px solid $ui-04;
+  overflow: auto;
 }
 
 .select-container__list {
