@@ -52,6 +52,7 @@
 }
 
 .alert__text {
+  @include font-size("14");
   @include line-height("body");
   color: $text-03;
 }
