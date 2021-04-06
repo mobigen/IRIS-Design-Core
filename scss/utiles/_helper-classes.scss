@@ -204,6 +204,10 @@
   width: rem(200px) !important;
 }
 
+.w-260 {
+  width: rem(260px) !important;
+}
+
 .w-350 {
   width: rem(350px) !important;
 }
@@ -276,8 +280,16 @@
   width: 100% !important;
 }
 
+.mh-320 {
+  max-height: rem(320px) !important;
+}
+
 .mh-400 {
   max-height: rem(400px) !important;
+}
+
+.mh-480 {
+  max-height: rem(480px) !important;
 }
 
 .mh-560 {
@@ -384,12 +396,34 @@
   white-space: pre-wrap;
 }
 
-.layer-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: $overlay-01;
-  z-index: z("overlay");
+.break-normal {
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.break-words {
+  overflow-wrap: break-word;
+}
+
+.break-all {
+  word-break: break-all;
+}
+
+
+.ellipsis-end {
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.ellipsis-end--two-line {
+  display: inline-block;
+  overflow: hidden;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  line-height: 1.25;
+  max-height: 2rem;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }

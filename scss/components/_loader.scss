@@ -77,7 +77,7 @@
 }
 
 // Loading overlay
-.loader-overlay {
+.overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -87,15 +87,15 @@
   background-color: $overlay-02;
 }
 
-.loader-overlay--dark {
+.overlay--dark {
   background-color: $overlay-01;
 }
 
-.loader-overlay--mono {
+.overlay--mono {
   background-color: rgba($ui-02, 0.75);
 }
 
-.loader-overlay .loader {
+.overlay .loader {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -153,11 +153,11 @@
 }
 
 .button .loader__spinner::after,
-.loader-overlay--dark .loader__spinner::after {
+.overlay--dark .loader__spinner::after {
   animation: loading-spinner-duration 1s linear infinite, inverse-loading-spinner-colors 3s linear infinite;
 }
 
-.loader-overlay--mono .loader__spinner::after {
+.overlay--mono .loader__spinner::after {
   animation: loading-spinner-duration 1s linear infinite, mono-loading-spinner-colors 3s linear infinite;
 }
 

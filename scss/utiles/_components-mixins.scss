@@ -107,15 +107,25 @@
     border-radius: $field-border-radius;
     background-color: transparent;
 
+    .button__text {
+      @include font-size("13");
+      margin-left: $spacing-xs;
+      color: $text-03;
+    }
+
     &:hover:not(:disabled) {
       background-color: $hover-row;
     }
 
-    &:active {
+    &:active:not(:disabled) {
       background-color: $hover-row;
 
       .svg-icon {
         fill: $primary
+      }
+
+      .button__text {
+        color: $primary;
       }
     }
 
@@ -241,6 +251,10 @@
   &__item--selected &__button:active &__icon,
   &__item--selected &__button:active .svg-icon {
     fill: $primary;
+  }
+
+  &__item--selected &__action-button .button__text {
+    color: $primary;
   }
 }
 
