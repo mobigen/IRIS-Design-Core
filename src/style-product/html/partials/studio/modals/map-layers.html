@@ -1,0 +1,168 @@
+
+<!-- 다른 이름으로 저장 모달 -->
+<div class="modal modal--sm" style="position: static;">
+  <div class="modal__head">
+    <div class="modal__head-title">
+      <span class="modal__head-title-text">레이어 관리</span>
+    </div>
+    <span class="modal__head-close-button">
+      <button class="button button--icon button--link button--xs">
+        <svg class="svg-icon">
+          <use xlink:href="#close"></use>
+        </svg>
+      </button>
+    </span>
+  </div>
+  <div class="modal__body modal__body--sm">
+    <div class="table-wrap">
+      <div class="table__toolbar">
+        <!-- 새 레이어 -->
+        <button class="button button--support" type="button">
+          <svg class="svg-icon" aria-hidden="true">
+            <use xlink:href="#plus"></use>
+          </svg>
+          <span class="button__text">새 레이어</span>
+        </button>
+        <div class="table__toolbar-right-box">
+          <!-- 모두 삭제 -->
+          <button class="button button--danger" type="button" title="모두 삭제">
+            <svg class="svg-icon" aria-hidden="true">
+              <use xlink:href="#trash"></use>
+            </svg>
+            <span class="button__text">모두 삭제</span>
+          </button>
+        </div>
+      </div>
+      <div class="table-scroll">
+        <table class="table table--secondary">
+          <colgroup>
+            <col width="85px">
+            <col width="240px">
+            <col width="65px">
+            <col width="*">
+          </colgroup>
+          <thead>
+            <tr>
+              <th>순서</th>
+              <th>이름</th>
+              <th>표시</th>
+              <th>삭제</th>
+            </tr>
+          </thead>
+        </table>
+        <div class="overflow-y" style="max-height: 200px;">
+          <table class="table table--secondary td--gap-sm">
+            <colgroup>
+              <col width="85px">
+              <col width="240px">
+              <col width="65px">
+              <col width="*">
+            </colgroup>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="table__action-buttons">
+                    <button class="button button--icon button--tertiary" type="button">
+                      <svg class="svg-icon">
+                        <use xlink:href="#chevron-up-medium"></use>
+                      </svg>
+                    </button>
+                    <button class="button button--icon button--tertiary" type="button">
+                      <svg class="svg-icon">
+                        <use xlink:href="#chevron-down-medium"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </td>
+                <td>
+                  <input class="text-input">
+                </td>
+                <td>
+                  <button class="button button--icon button--link button--sm mx-auto" type="button" title="숨기기">
+                    <svg class="svg-icon">
+                      <use xlink:href="#eye-hide"></use>
+                    </svg>
+                  </button>
+                </td>
+                <td>
+                  <div>
+                    <button class="button button--icon button--link button--sm mx-auto" type="button" title="삭제">
+                      <svg class="svg-icon">
+                        <use xlink:href="#close"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                  <div class="h-group">
+                    <span>Base Map</span>
+                    <button class="button button--icon button--link button--xs" type="button">
+                      <svg class="svg-icon">
+                        <use xlink:href="#help-outline"></use>
+                      </svg>
+                    </button>
+                    <div class="mu-tooltip" mu-tooltip="report.ttip.map-layer.name" style="display: none;">
+                      <div class="arrow"></div>
+                      <div class="mu-tooltip-inner">
+                        <span>
+                          layer map은 화면에 지도 이미지를 출력하는 지도 레이어를 말합니다.<br>이 레이어는 항상 최하단에 위치하면서 지도 정보만을 표현합니다.
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <button class="button button--icon button--link button--sm mx-auto" type="button" title="표시">
+                      <svg class="svg-icon">
+                        <use xlink:href="#eye"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </td>
+                <td>
+                  <!-- 삭제 -->
+                  <!-- ngIf: !$last -->
+                </td>
+              </tr>
+              <!-- 표시할 데이터 없음 -->
+              <tr>
+                <td colspan="4">
+                  <div class="notification-message notification-message--info">
+                    <svg class="notification-message__icon svg-icon" aria-hidden="true">
+                      <use xlink:href="#info-fill"></use>
+                    </svg>
+                    <span class="notification-message__text">데이터가 없습니다.</span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal__foot">
+    <div class="toggle-switch">
+      <label for="toggleSwitch1" class="toggle-switch__label">레이어 보기/숨기기 기능</label>
+      <button id="toggleSwitch1" class="toggle-switch__switch toggle-switch__switch--selected" type="button">
+        <span class="toggle-switch__handle">
+          <span class="ir-pm"></span>
+        </span>
+      </button>
+    </div>
+    <div class="modal__foot-main-buttons">
+      <button class="button button--link button--lg" type="button">
+        <span>취소</span>
+      </button>
+      <button class="button button--primary button--lg" type="button">
+        <span>저장</span>
+      </button>
+    </div>
+  </div>
+</div>
+<!-- // 다른 이름으로 저장 모달 -->

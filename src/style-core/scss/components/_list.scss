@@ -35,9 +35,12 @@
   display: none;
 }
 
-
 .list__head-toolbar .text-input-group {
   width: 100%;
+}
+
+.list__head-checkbox {
+  display: inline-flex;
 }
 
 .list__item {
@@ -58,4 +61,101 @@
 
 .list__body {
   overflow: auto;
+}
+
+.list__summary {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.list__details {
+  display: none;
+  width: 100%;
+  color: $text-01;
+  background-color: darken($ui-01, 1.4%);
+}
+
+.list__details-inner {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: $spacing-md;
+}
+
+.list__details-list {
+  width: 100%;
+}
+
+.list__details-item {
+  display: flex;
+  align-items: center;
+  padding: $spacing-xs $spacing-md;
+  color: $text-02;
+}
+
+.list__details-item:not(:last-child) {
+  border-bottom: 1px solid rgba($ui-04, .75);
+}
+
+.list__details-item-trigger {
+  @include make-col(4);
+  @include font-size("13");
+  display: flex;
+  flex-direction: column;
+  margin-right: $spacing-xs;
+}
+
+.list__details-item-trigger-layer {
+  @include text-overflow;
+  @include font-size("12");
+  color: $text-03;
+}
+
+.list__details-item-trigger-text {
+  @include text-overflow;
+}
+
+.list__details-item-component {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  margin-left: $spacing-2xs;
+  overflow: hidden;
+}
+
+.list__details-item-component-text {
+  @include text-overflow;
+  margin-left: $spacing-2xs;
+}
+
+.list__details-action-buttons {
+  display: flex;
+  margin-left: $spacing-xs;
+}
+
+.list--expandable .list__head {
+  display: flex;
+  align-items: center;
+  padding-top: $spacing-3xs;
+  padding-bottom: $spacing-3xs;
+  background-color: $ui-02;
+  border-bottom: 1px solid $ui-04;
+}
+
+.list--expandable .list__item {
+  flex-direction: column;
+}
+
+
+.list__head-right-box {
+  margin-left: auto;
+}
+
+.list__item--selected .list__details {
+  display: flex;
+}
+
+.list__item--selected .list__expand-icon {
+  transform: rotate(180deg);
 }

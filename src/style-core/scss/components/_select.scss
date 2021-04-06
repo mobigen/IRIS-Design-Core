@@ -153,8 +153,8 @@
   z-index: z("dropdown");
   position: absolute;
   top: calc(100% + 2px);
-  left: 0;
-  right: 0;
+  // left: 0;
+  width: 100%;
   max-height: rem(320px);
   padding: $spacing-2xs 0;
   background-color: $ui-02;
@@ -213,5 +213,11 @@
     .select-container__text {
       @include font-size("12");
     }
+  }
+}
+
+.select--right {
+  .select-container {
+    right: 0;
   }
 }

@@ -18,12 +18,8 @@
     display: flex;
   }
 
-  .motion-chart-btn-group .mu-btn + .mu-btn {
+  .motion-chart-btn-group .button + .button {
     margin-left: $spacing-2xs;
-  }
-
-  .motion-chart-btn-group + .chart-option-btn {
-    margin-left: $spacing-md;
   }
 }
 
@@ -198,6 +194,7 @@
 
 .object-area-toolbar__buttons {
   display: flex;
+  align-items: center;
   margin-left: auto;
 }
 
