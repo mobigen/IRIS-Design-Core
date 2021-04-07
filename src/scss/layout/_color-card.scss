@@ -119,6 +119,10 @@
   .overlay-01 {
     @include color-vars($overlay-01);
   }
+
+  .overlay-02 {
+    @include color-vars($overlay-02);
+  }
 }
 
 .color-card__example {
