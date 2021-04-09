@@ -13,48 +13,55 @@
 // ----------------------------
 // 장: 테마 변경시, product/index.scss 파일에 themes 선언 순서에 따라 전체 테마/부분 테마 변경 가능
 // 단: core의 image, font 경로가 지저분해짐 → 변수로 지정시, 각 프로젝트마다 필요한 변수를 재선언 하여 유지할 수 있음
-import '../style-product/scss/product-index.scss'
+import "../style-product/scss/product-index.scss";
 
 // ****************************
 // svg icon
 // ****************************
 
-const requireSvgAll = (r) => {
+const requireSvgAll = r => {
   r.keys().forEach(r);
-}
-requireSvgAll(require.context('../style-core/images/icon/', true, /\.svg$/));
-requireSvgAll(require.context('../style-product/images/icon/', true, /\.svg$/));
+};
+requireSvgAll(require.context("../style-core/images/icon/", true, /\.svg$/));
+requireSvgAll(require.context("../style-product/images/icon/", true, /\.svg$/));
 
 // ****************************
 // png img
 // ****************************
 
-const requirePngAll = (r) => {
+const requirePngAll = r => {
   r.keys().forEach(r);
-}
-requirePngAll(require.context('../style-core/images/common/', true, /\.png$/));
-requirePngAll(require.context('../style-product/images/common/', true, /\.png$/));
+};
+requirePngAll(require.context("../style-core/images/common/", true, /\.png$/));
+requirePngAll(
+  require.context("../style-product/images/common/", true, /\.png$/)
+);
+requirePngAll(
+  require.context("../style-product/images/studio/", true, /\.png$/)
+);
 
 // ****************************
 // UI Event
 // ****************************
 
 // toggle variation
-const beforeSelectElement = document.querySelectorAll(".toggle-switch__switch, .toggle-button__item");
+const beforeSelectElement = document.querySelectorAll(
+  ".toggle-switch__switch, .toggle-button__item"
+);
 const afterSelectSuffix = "--selected";
-const beforeOpenElement = document.querySelectorAll(".accordion__head, .select, .time-picker");
+const beforeOpenElement = document.querySelectorAll(
+  ".accordion__head, .select, .time-picker"
+);
 const afterOpenSuffix = "--open";
 
 // 토글 버튼 클릭시 --selected 추가
 const toggleSelect = () => {
-
   if (window.NodeList && !NodeList.prototype.forEach) {
     NodeList.prototype.forEach = Array.prototype.forEach;
   }
 
-  beforeSelectElement.forEach((i) => {
-
-    i.addEventListener('click', (event) => {
+  beforeSelectElement.forEach(i => {
+    i.addEventListener("click", event => {
       event.preventDefault();
       let afterSelectButton = i.classList[0].concat(afterSelectSuffix);
 
@@ -63,21 +70,18 @@ const toggleSelect = () => {
       console.log(`Element + "--selected" => ${afterSelectButton}`);
 
       i.classList.toggle(afterSelectButton);
-
-    })
-  })
-}
+    });
+  });
+};
 
 // 열리기 class 추가
 const toggleOpen = () => {
-
   if (window.NodeList && !NodeList.prototype.forEach) {
     NodeList.prototype.forEach = Array.prototype.forEach;
   }
 
-  beforeOpenElement.forEach((i) => {
-
-    i.addEventListener('click', (event) => {
+  beforeOpenElement.forEach(i => {
+    i.addEventListener("click", event => {
       event.preventDefault();
       let afterOpenButton = i.classList[0].concat(afterOpenSuffix);
 
@@ -86,14 +90,13 @@ const toggleOpen = () => {
       console.log(`Element + "--open" => ${afterOpenButton}`);
 
       i.classList.toggle(afterOpenButton);
-
-    })
-  })
-}
+    });
+  });
+};
 
 const init = () => {
   toggleSelect();
   toggleOpen();
-}
+};
 
 init();

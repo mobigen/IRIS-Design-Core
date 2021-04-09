@@ -5,13 +5,13 @@ const path = require("path"),
 
 module.exports = {
   entry: {
-    main: "./src/js/studio.js",
+    main: "./src/js/studio.js"
   },
 
   output: {
     path: path.resolve(__dirname, "./dist"),
     filename: "./js/[name].bundle.js",
-    publicPath: "../../",
+    publicPath: "../../"
   },
 
   module: {
@@ -29,13 +29,13 @@ module.exports = {
                 {
                   targets: {
                     chrome: "58",
-                    ie: "11",
-                  },
-                },
-              ],
-            ],
-          },
-        },
+                    ie: "11"
+                  }
+                }
+              ]
+            ]
+          }
+        }
       },
 
       // Font
@@ -46,10 +46,10 @@ module.exports = {
           {
             loader: "file-loader",
             options: {
-              name: "fonts/[name].[ext]",
-            },
-          },
-        ],
+              name: "fonts/[name].[ext]"
+            }
+          }
+        ]
       },
 
       // SCSS - Core
@@ -72,8 +72,8 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           "css-loader", // css를 읽어들이기
           "postcss-loader", // 벤더프리픽스 대응
-          "sass-loader", // scss to css
-        ],
+          "sass-loader" // scss to css
+        ]
       },
 
       // Image(png) - Core
@@ -86,9 +86,9 @@ module.exports = {
             outputPath: "./",
             name: "[path][name].[ext]",
             // 가져올 경로에서 해당 경로만 지우고 가져온다.
-            context: "src/style-core",
-          },
-        },
+            context: "src/style-core"
+          }
+        }
       },
 
       // Image(png) - Product
@@ -101,9 +101,24 @@ module.exports = {
             outputPath: "./",
             name: "[path][name].[ext]",
             // 가져올 경로에서 해당 경로만 지우고 가져온다.
-            context: "src/style-product",
-          },
-        },
+            context: "src/style-product"
+          }
+        }
+      },
+
+      // Image(png) - Product
+      {
+        test: /\.(png|jp(e*)g|gif|ico)$/,
+        include: path.resolve(__dirname, "./src/style-product/images/studio"),
+        use: {
+          loader: "file-loader",
+          options: {
+            outputPath: "./",
+            name: "[path][name].[ext]",
+            // 가져올 경로에서 해당 경로만 지우고 가져온다.
+            context: "src/style-product"
+          }
+        }
       },
 
       // Image(svg) - Core
@@ -116,9 +131,9 @@ module.exports = {
             outputPath: "./",
             name: "[path][name].[ext]",
             // 가져올 경로에서 해당 경로만 지우고 가져온다.
-            context: "src/style-core",
-          },
-        },
+            context: "src/style-core"
+          }
+        }
       },
 
       // Image(svg) - Product
@@ -131,30 +146,32 @@ module.exports = {
             outputPath: "./",
             name: "[path][name].[ext]",
             // 가져올 경로에서 해당 경로만 지우고 가져온다.
-            context: "src/style-core",
-          },
-        },
-      },
-    ],
+            context: "src/style-core"
+          }
+        }
+      }
+    ]
   },
 
   plugins: [
     // index.js에 포함된 css를 별도의 .css 파일 형식으로 추출한다.
     new MiniCssExtractPlugin({
-      filename: "css/[name]/style.min.css",
+      filename: "css/[name]/style.min.css"
     }),
 
     // 공통 컴포넌트 영역 모듈화
     new FileIncludeWebpackPlugin({
       source: "./src/style-product/html/pages",
-      replace: [{
-        regex: /\[\[FILE_VERSION]]/g,
-        to: "v=1.0.0",
-      }, ],
+      replace: [
+        {
+          regex: /\[\[FILE_VERSION]]/g,
+          to: "v=1.0.0"
+        }
+      ],
       loader: "prettier-loader",
-      destination: "../views",
+      destination: "../views"
     }),
 
-    new SvgSpriteLoaderPlugin({}),
-  ],
+    new SvgSpriteLoaderPlugin({})
+  ]
 };
