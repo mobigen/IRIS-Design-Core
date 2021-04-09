@@ -1374,10 +1374,236 @@
   margin-left: $spacing-3xs;
 }
 
-
 .data-color-select__preview-item {
   display: inline-flex;
   width: 11px;
   height: 11px;
   flex-shrink: 0;
+}
+
+// Map - heatmap: 그라디언트
+.select .gradient-palette {
+  margin-right: $spacing-xs;
+}
+
+.gradient-palette {
+  width: 100px;
+  height: 18px;
+  border-radius: 2px;
+
+  &.jet {
+    background: linear-gradient(to right, rgb(0, 0, 131) 0%, rgb(0, 60, 170) 12.5%, rgb(5, 255, 255) 37.5%, rgb(255, 255, 0) 62.5%, rgb(255, 0, 0) 87.5%, rgb(128, 0, 0) 100%);
+  }
+
+  &.hsv {
+    background: linear-gradient(
+      to right,
+      rgb(255, 0, 0) 0%,
+      rgb(253, 255, 2) 16.9%,
+      rgb(247, 255, 2) 17.3%,
+      rgb(0, 252, 4) 33.7%,
+      rgb(0, 252, 10) 34.1%,
+      rgb(1, 249, 255) 50.6%,
+      rgb(2, 0, 253) 67.1%,
+      rgb(8, 0, 253) 67.5%,
+      rgb(255, 0, 251) 83.9%,
+      rgb(255, 0, 245) 84.3%,
+      rgb(255, 0, 6) 100%
+    );
+  }
+
+  &.hot {
+    background: linear-gradient(to right, rgb(0, 0, 0) 0%, rgb(230, 0, 0) 30%, rgb(255, 210, 0) 60%, rgb(255, 255, 255) 100%);
+  }
+
+  &.cool {
+    background: linear-gradient(
+      to right,
+      rgb(125, 0, 179) 0%,
+      rgb(116, 0, 218) 13%,
+      rgb(98, 74, 237) 25%,
+      rgb(68, 146, 231) 38%,
+      rgb(0, 204, 197) 50%,
+      rgb(0, 247, 146) 63%,
+      rgb(0, 255, 88) 75%,
+      rgb(40, 255, 8) 88%,
+      rgb(147, 255, 0) 100%
+    );
+  }
+
+  &.greys {
+    background: linear-gradient(to right, rgb(0, 0, 0) 0%, rgb(255, 255, 255) 100%);
+  }
+
+  &.yignbu {
+    background: linear-gradient(
+      to right,
+      rgb(8, 29, 88) 0%,
+      rgb(37, 52, 148) 12.5%,
+      rgb(34, 94, 168) 25%,
+      rgb(29, 145, 192) 37.5%,
+      rgb(65, 182, 196) 50%,
+      rgb(127, 205, 187) 62.5%,
+      rgb(199, 233, 180) 75%,
+      rgb(237, 248, 217) 87.5%,
+      rgb(255, 255, 217) 100%
+    );
+  }
+
+  &.yiorrd {
+    background: linear-gradient(
+      to right,
+      rgb(128, 0, 38) 0%,
+      rgb(189, 0, 38) 12.5%,
+      rgb(227, 26, 28) 25%,
+      rgb(252, 78, 42) 37.5%,
+      rgb(253, 141, 60) 50%,
+      rgb(254, 178, 76) 62.5%,
+      rgb(254, 217, 118) 75%,
+      rgb(255, 237, 160) 87.5%,
+      rgb(255, 255, 204) 100%
+    );
+  }
+
+  &.rdbu {
+    background: linear-gradient(to right, rgb(5, 10, 172) 0%, rgb(106, 137, 247) 35%, rgb(190, 190, 190) 50%, rgb(220, 170, 132) 60%, rgb(230, 145, 90) 70%, rgb(178, 10, 28) 100%);
+  }
+
+  &.rainbow {
+    background: linear-gradient(
+      to right,
+      rgb(150, 0, 90) 0%,
+      rgb(0, 0, 200) 12.5%,
+      rgb(0, 25, 255) 25%,
+      rgb(0, 152, 255) 37.5%,
+      rgb(44, 255, 150) 50%,
+      rgb(151, 255, 0) 62.5%,
+      rgb(255, 234, 0) 75%,
+      rgb(255, 111, 0) 87.5%,
+      rgb(255, 0, 0) 100%
+    );
+  }
+
+  &.portland {
+    background: linear-gradient(to right, rgb(12, 51, 131) 0%, rgb(10, 136, 186) 25%, rgb(242, 211, 56) 50%, rgb(242, 143, 56) 75%, rgb(217, 30, 30) 100%);
+  }
+
+  &.oxygen {
+    background: linear-gradient(
+      to right,
+      rgb(64, 5, 5) 0%,
+      rgb(106, 6, 15) 13%,
+      rgb(144, 26, 7) 25%,
+      rgb(168, 64, 3) 38%,
+      rgb(188, 100, 4) 50%,
+      rgb(206, 136, 11) 63%,
+      rgb(220, 174, 25) 75%,
+      rgb(231, 215, 44) 88%,
+      rgb(248, 254, 105) 100%
+    );
+  }
+}
+
+.leaflet-bottom {
+  z-index: 900;
+}
+
+.map-legend {
+  padding: $spacing-2xs;
+  border: 1px solid $ui-04;
+  border-radius: $field-border-radius;
+  background-color: $ui-02;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.25);
+}
+
+// 임계치
+.map-legend__item {
+  display: flex;
+  align-items: center;
+}
+
+.map-legend__item:not(:last-child) {
+  margin-bottom: $spacing-2xs;
+}
+
+.map-legend__color-chip {
+  width: 14px;
+  height: 14px;
+}
+
+.map-legend__color-chip + .map-legend__item-text {
+  margin-left: $spacing-2xs;
+}
+
+.map-legend__gradient {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-width: 168px;
+  height: 28px;
+
+  .gradient-palette {
+    width: 100%;
+    min-width: 150px;
+    height: 100%;
+  }
+}
+
+.map-legend__gradient-text {
+  margin-left: $spacing-2xs;
+}
+
+.map-legend__gradient-subtext-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-top: $spacing-2xs;
+}
+
+.map-legend__gradient-subtext {
+  @include font-size("11");
+}
+
+.color-button {
+  @include button-normal;
+  @include button--tertiary;
+  width: rem(26px);
+  height: rem(26px);
+  padding: $spacing-3xs;
+}
+
+.color-button--selected {
+  border-color: $secondary;
+  background-color: $hover-ui-accent;
+}
+
+.color-button__color-chip {
+  width: rem(20px);
+  height: rem(20px);
+  border-radius: $field-border-radius;
+}
+
+.color-button__color-chip--red {
+  background-color: red;
+}
+
+.color-button__color-chip--green {
+  background-color: green;
+}
+
+.color-button__color-chip--blue {
+  background-color: blue;
+}
+
+.color-button__color-chip--highlight {
+  background-color: yellow;
+}
+
+.marker-preview {
+  display: flex;
+  align-items: center;
+}
+
+.marker-preview__image {
+  width: rem(20px);
+  margin-left: $spacing-sm;
 }

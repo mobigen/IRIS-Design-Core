@@ -2286,6 +2286,51 @@
               </div>
             </div>
             <!-- //MAP 레이어 보기/숨기기 -->
+            <!-- Map 색상에 대한 범례 -->
+            <div class="leaflet-bottom leaflet-left" style="position: absolute; bottom: 0;left: 0;">
+              <!-- 그라디언트 -->
+              <div class="leaflet-control map-legend">
+                <div class="map-legend__gradient">
+                  <div class="gradient-palette" style="background: linear-gradient(to right, #000083 0%, #003caa 12.5%, #05ffff 37.5%, yellow 62.5%, red 87.5%, maroon 100%)"></div>
+                </div>
+                <div class="map-legend__gradient-subtext-wrap">
+                  <span class="map-legend__gradient-subtext">최소값</span>
+                  <span class="map-legend__gradient-subtext">최대값</span>
+                </div>
+              </div>
+              <!-- // 그라디언트 -->
+              <!-- 임계치 -->
+              <div class="leaflet-control map-legend">
+                <ul class="map-legend__list">
+                  <li class="map-legend__item">
+                    <div class="map-legend__color-chip" style="background-color: #4DCC46;"></div>
+                    <span class="map-legend__item-text">CQI <= 3.8</span>
+                  </li>
+                  <li class="map-legend__item">
+                    <div class="map-legend__color-chip" style="background-color: #F6DA1E;"></div>
+                    <span class="map-legend__item-text">CQI <= 4</span>
+                  </li>
+                  <li class="map-legend__item">
+                    <div class="map-legend__color-chip" style="background-color: #FF9F00;"></div>
+                    <span class="map-legend__item-text">CQI <= 4.5</span>
+                  </li>
+                  <li class="map-legend__item">
+                    <div class="map-legend__color-chip" style="background-color: #FA5252;"></div>
+                    <span class="map-legend__item-text">최대값</span>
+                  </li>
+                </ul>
+              </div>
+              <!-- 임계치 -->
+              <!-- 프리셋 그라디언트 -->
+              <div class="leaflet-control map-legend">
+                <div class="map-legend__gradient">
+                  <div class="gradient-palette jet"></div>
+                  <span class="map-legend__gradient-text">jet</span>
+                </div>
+              </div>
+              <!-- //프리셋 그라디언트 -->
+            </div>
+            <!-- //Map 색상에 대한 범례 -->
             <div class="object-map__loading-bar">
               <!-- loading 부분 -->
               <div class="loading-bar loading-bar--mono">
