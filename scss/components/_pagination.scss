@@ -76,6 +76,7 @@
 .input-pagination__dash {
   @include line-height("heading");
   margin-right: $spacing-2xs;
+  margin-left: $spacing-2xs;
 }
 
 .input-pagination__last-page {
