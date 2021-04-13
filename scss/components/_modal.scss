@@ -10,9 +10,9 @@
 }
 
 .modal__head {
-  @include stable-padding($spacing-2xs, $spacing-md);
   display: flex;
   align-items: center;
+  padding: $spacing-2xs $spacing-sm $spacing-2xs $spacing-md;
   min-height: rem(38px);
   border-bottom: 1px solid $ui-04;
 }
@@ -94,6 +94,7 @@
 
 .modal--sm {
   width: rem(480px);
+  min-height: rem(240px);
 }
 
 .modal--md {
@@ -140,8 +141,4 @@
 .modal .tab__contents {
   padding-right: $spacing-md;
   padding-left: $spacing-md;
-}
-
-.modal__body .list {
-  border: 0;
 }
