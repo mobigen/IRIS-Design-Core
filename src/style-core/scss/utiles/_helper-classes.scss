@@ -97,6 +97,10 @@
   display: flex;
 }
 
+.item-group > *:not(:last-child) {
+  margin-right: $spacing-2xs;
+}
+
 // -------------------------
 // spacing
 // -------------------------
@@ -232,7 +236,7 @@
   height: rem(84px) !important;
 }
 
-.w-1-12 {
+.w-1_12 {
   width: 8.3333333333% !important;
 }
 
