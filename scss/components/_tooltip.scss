@@ -1,7 +1,7 @@
 .tooltip {
   z-index: z("tooltip");
   position: absolute;
-  max-width: rem(350px);
+  max-width: rem(480px);
   padding: $spacing-sm;
   background-color: $text-03;
   border-radius: 4px;
