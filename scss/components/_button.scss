@@ -191,7 +191,7 @@
     }
   }
 
-  .loader + .button__text {
+  .loader:not(.ng-hide) + .button__text {
     margin-left: $spacing-2xs;
   }
 
