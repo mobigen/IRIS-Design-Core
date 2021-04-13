@@ -2196,149 +2196,6 @@
           <!-- //대상으로 설정된 상태 -->
           <!-- //버튼  -->
 
-          <!-- 맵  -->
-          <span style="position: absolute; top: 700px; left: 890px;"></span>
-          <div class="canvas-object object-map" style="top: 720px;left: 890px;width: 300px;height: 250px;">
-            <!-- 레이어 이름 요소 -->
-            <div class="object-map__layer-name">
-              <span class="object-map__layer-name-text">layer name</span>
-            </div>
-            <!-- // 레이어 이름 요소 -->
-            <!-- 객체 이동 버튼: 지도 이동, 객체 이동 토글 -->
-            <div class="object-map__move-buttons">
-              <button type="button" class="button button--tertiary">
-                <svg class="svg-icon">
-                  <use xlink:href="#global"></use>
-                </svg>
-                <span class="button__text">지도 이동</span>
-              </button>
-            </div>
-            <div class="object-map__move-buttons" style="top: 40px;">
-              <button type="button" class="button button--tertiary">
-                <svg class="svg-icon">
-                  <use xlink:href="#move"></use>
-                </svg>
-                <span class="button__text">객체 이동</span>
-              </button>
-            </div>
-            <!-- // 객체 이동 버튼: 지도 이동, 객체 이동 토글 -->
-            <!-- MAP 레이어 보기/숨기기 -->
-            <div class="leaflet-top leaflet-left">
-              <button class="leaflet-goto-home leaflet-control button button--tertiary">
-                <svg class="svg-icon">
-                  <use xlink:href="#map"></use>
-                </svg>
-              </button>
-              <div class="leaflet-layers on leaflet-control" style="top: 100px; left: 10px;">
-                <button type="button" class="leaflet-layers__button button button--tertiary">
-                  <svg class="svg-icon">
-                    <use xlink:href="#layers"></use>
-                  </svg>
-                </button>
-                <div class="context-menu leaflet-layers__context-menu">
-                  <ul class="context-menu__list">
-                    <div class="leaflet-layers__context-menu-close-button">
-                      <button class="button button--link button--sm">
-                        <svg class="svg-icon">
-                          <use xlink:href="#close"></use>
-                        </svg>
-                      </button>
-                    </div>
-                    <li class="context-menu__item">
-                      <button class="context-menu__button">
-                        <span class="context-menu__text">Layer 01 Layer 01
-                          LayerLayerLayerLayerLayer</span>
-                      </button>
-                      <div class="context-menu__action-buttons">
-                        <button class="context-menu__action-button" type="button" title="표시">
-                          <svg class="svg-icon">
-                            <use xlink:href="#eye"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </li>
-                    <li class="context-menu__item">
-                      <button class="context-menu__button">
-                        <span class="context-menu__text">Layer 01</span>
-                      </button>
-                      <div class="context-menu__action-buttons">
-                        <button class="context-menu__action-button" type="button" title="표시">
-                          <svg class="svg-icon">
-                            <use xlink:href="#eye-hide"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </li>
-                    <li class="context-menu__item">
-                      <button class="context-menu__button">
-                        <span class="context-menu__text">Layer 02</span>
-                      </button>
-                      <div class="context-menu__action-buttons">
-                        <button class="context-menu__action-button" type="button" title="표시">
-                          <svg class="svg-icon">
-                            <use xlink:href="#eye-hide"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <!-- //MAP 레이어 보기/숨기기 -->
-            <!-- Map 색상에 대한 범례 -->
-            <div class="leaflet-bottom leaflet-left" style="position: absolute; bottom: 0;left: 0;">
-              <!-- 그라디언트 -->
-              <div class="leaflet-control map-legend">
-                <div class="map-legend__gradient">
-                  <div class="gradient-palette" style="background: linear-gradient(to right, #000083 0%, #003caa 12.5%, #05ffff 37.5%, yellow 62.5%, red 87.5%, maroon 100%)"></div>
-                </div>
-                <div class="map-legend__gradient-subtext-wrap">
-                  <span class="map-legend__gradient-subtext">최소값</span>
-                  <span class="map-legend__gradient-subtext">최대값</span>
-                </div>
-              </div>
-              <!-- // 그라디언트 -->
-              <!-- 임계치 -->
-              <div class="leaflet-control map-legend">
-                <ul class="map-legend__list">
-                  <li class="map-legend__item">
-                    <div class="map-legend__color-chip" style="background-color: #4DCC46;"></div>
-                    <span class="map-legend__item-text">CQI <= 3.8</span>
-                  </li>
-                  <li class="map-legend__item">
-                    <div class="map-legend__color-chip" style="background-color: #F6DA1E;"></div>
-                    <span class="map-legend__item-text">CQI <= 4</span>
-                  </li>
-                  <li class="map-legend__item">
-                    <div class="map-legend__color-chip" style="background-color: #FF9F00;"></div>
-                    <span class="map-legend__item-text">CQI <= 4.5</span>
-                  </li>
-                  <li class="map-legend__item">
-                    <div class="map-legend__color-chip" style="background-color: #FA5252;"></div>
-                    <span class="map-legend__item-text">최대값</span>
-                  </li>
-                </ul>
-              </div>
-              <!-- 임계치 -->
-              <!-- 프리셋 그라디언트 -->
-              <div class="leaflet-control map-legend">
-                <div class="map-legend__gradient">
-                  <div class="gradient-palette jet"></div>
-                  <span class="map-legend__gradient-text">jet</span>
-                </div>
-              </div>
-              <!-- //프리셋 그라디언트 -->
-            </div>
-            <!-- //Map 색상에 대한 범례 -->
-            <div class="object-map__loading-bar">
-              <!-- loading 부분 -->
-              <div class="loading-bar loading-bar--mono">
-              </div>
-            </div>
-          </div>
-          <!-- //맵  -->
-
           <!-- 데이터 객체  -->
           <p style="position: absolute; top: 1240px; left: 50px;">데이터 객체</p>
           <div class="canvas-object object-hidden" style="top: 1260px; left: 50px; width: 200px; height: 30px;">
@@ -3209,6 +3066,143 @@
             </div>
           </div>
           <!-- //object-area__single-value -->
+
+
+          <!-- 맵  -->
+          <span style="position: absolute; top: 1900px; left: 1280px;"></span>
+          <div class="canvas-object object-map" style="top: 1920px;left: 1280px;width: 300px;height: 500px;">
+            <!-- 레이어 이름 요소 -->
+            <div class="object-map__layer-name">
+              <span class="object-map__layer-name-text">layer name</span>
+            </div>
+            <!-- // 레이어 이름 요소 -->
+            <!-- 객체 이동 버튼: 지도 이동, 객체 이동 토글 -->
+            <div class="object-map__move-buttons">
+              <button type="button" class="button button--tertiary">
+                <svg class="svg-icon">
+                  <use xlink:href="#global"></use>
+                </svg>
+                <span class="button__text">지도 이동</span>
+              </button>
+            </div>
+            <div class="object-map__move-buttons" style="top: 40px;">
+              <button type="button" class="button button--tertiary">
+                <svg class="svg-icon">
+                  <use xlink:href="#move"></use>
+                </svg>
+                <span class="button__text">객체 이동</span>
+              </button>
+            </div>
+            <!-- // 객체 이동 버튼: 지도 이동, 객체 이동 토글 -->
+            <!-- MAP 레이어 보기/숨기기 -->
+            <div class="leaflet-top leaflet-left">
+              <button class="leaflet-goto-home leaflet-control" type="button"></button>
+              <div class="leaflet-layers on leaflet-control" style="top: 100px; left: 10px;">
+                <button type="button" class="leaflet-view-layers">
+                </button>
+                <div class="context-menu leaflet-layers__context-menu">
+                  <ul class="context-menu__list">
+                    <div class="leaflet-layers__context-menu-close-button">
+                      <button class="button button--link button--sm">
+                        <svg class="svg-icon">
+                          <use xlink:href="#close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <li class="context-menu__item">
+                      <button class="context-menu__button">
+                        <span class="context-menu__text">Layer 01 Layer 01
+                          LayerLayerLayerLayerLayer</span>
+                      </button>
+                      <div class="context-menu__action-buttons">
+                        <button class="context-menu__action-button" type="button" title="표시">
+                          <svg class="svg-icon">
+                            <use xlink:href="#eye"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="context-menu__item">
+                      <button class="context-menu__button">
+                        <span class="context-menu__text">Layer 01</span>
+                      </button>
+                      <div class="context-menu__action-buttons">
+                        <button class="context-menu__action-button" type="button" title="표시">
+                          <svg class="svg-icon">
+                            <use xlink:href="#eye-hide"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="context-menu__item">
+                      <button class="context-menu__button">
+                        <span class="context-menu__text">Layer 02</span>
+                      </button>
+                      <div class="context-menu__action-buttons">
+                        <button class="context-menu__action-button" type="button" title="표시">
+                          <svg class="svg-icon">
+                            <use xlink:href="#eye-hide"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- //MAP 레이어 보기/숨기기 -->
+            <!-- Map 색상에 대한 범례 -->
+            <div class="leaflet-bottom leaflet-left" style="position: absolute; bottom: 0;left: 0;">
+              <!-- 그라디언트 -->
+              <div class="leaflet-control map-legend">
+                <div class="map-legend__gradient">
+                  <div class="gradient-palette" style="background: linear-gradient(to right, #000083 0%, #003caa 12.5%, #05ffff 37.5%, yellow 62.5%, red 87.5%, maroon 100%)"></div>
+                </div>
+                <div class="map-legend__gradient-subtext-wrap">
+                  <span class="map-legend__gradient-subtext">최소값</span>
+                  <span class="map-legend__gradient-subtext">최대값</span>
+                </div>
+              </div>
+              <!-- // 그라디언트 -->
+              <!-- 임계치 -->
+              <div class="leaflet-control map-legend">
+                <ul class="map-legend__list">
+                  <li class="map-legend__item">
+                    <div class="map-legend__color-chip" style="background-color: #4DCC46;"></div>
+                    <span class="map-legend__item-text">CQI <= 3.8</span>
+                  </li>
+                  <li class="map-legend__item">
+                    <div class="map-legend__color-chip" style="background-color: #F6DA1E;"></div>
+                    <span class="map-legend__item-text">CQI <= 4</span>
+                  </li>
+                  <li class="map-legend__item">
+                    <div class="map-legend__color-chip" style="background-color: #FF9F00;"></div>
+                    <span class="map-legend__item-text">CQI <= 4.5</span>
+                  </li>
+                  <li class="map-legend__item">
+                    <div class="map-legend__color-chip" style="background-color: #FA5252;"></div>
+                    <span class="map-legend__item-text">최대값</span>
+                  </li>
+                </ul>
+              </div>
+              <!-- 임계치 -->
+              <!-- 프리셋 그라디언트 -->
+              <div class="leaflet-control map-legend">
+                <div class="map-legend__gradient">
+                  <div class="gradient-palette jet"></div>
+                  <span class="map-legend__gradient-text">jet</span>
+                </div>
+              </div>
+              <!-- //프리셋 그라디언트 -->
+            </div>
+            <!-- //Map 색상에 대한 범례 -->
+            <div class="object-map__loading-bar">
+              <!-- loading 부분 -->
+              <div class="loading-bar loading-bar--mono">
+              </div>
+            </div>
+          </div>
+          <!-- //맵  -->
 
           <span style="position: absolute; top: 1900px; left: 50px;">기간 설정 .object-datetime-range-picker</span>
           <div class="canvas-object object-datetime-range-picker canvas-object--active" style="top: 1920px; left: 50px; width: 500px; height: 40px;">

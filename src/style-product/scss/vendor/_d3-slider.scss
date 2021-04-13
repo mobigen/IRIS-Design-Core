@@ -1,0 +1,15 @@
+.motion-slider {
+  height: rem(4px);
+  border: 0;
+  background-color: $ui-03;
+  z-index: 0;
+}
+
+.d3-slider-handle {
+  @include layer("raised");
+  top: -9px;
+  width: 21px;
+  height: 21px;
+  background-color: $ui-02;
+  border: 1px solid $ui-04;
+}
