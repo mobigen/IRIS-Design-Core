@@ -1,6 +1,7 @@
 .context-menu {
   @include list;
   @include layer("pop-out");
+  position: absolute;
   color: $text-02;
   border-radius: $field-border-radius;
   z-index: z("overlay");
