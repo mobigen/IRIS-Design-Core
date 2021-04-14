@@ -145,7 +145,7 @@
   @include line-height("body");
   max-width: rem(800px);
   color: $text-01;
-  word-wrap: break-word;
+  word-wrap: normal;
   font-weight: 600;
   padding-bottom: $layout-sm;
   
