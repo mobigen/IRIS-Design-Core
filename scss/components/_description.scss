@@ -26,9 +26,11 @@
 }
 
 .description__title {
-  @include text-overflow(140px);
   @include font-weight('medium');
+  width: rem(140px);
+  margin-right: $spacing-2xs;
   color: $text-02;
+  word-break: normal;
 }
 
 .description__text {
