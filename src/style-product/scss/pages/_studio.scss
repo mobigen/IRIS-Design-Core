@@ -283,6 +283,11 @@
 .editor-layout-head__object-list-item {
   margin-right: $spacing-2xs;
   border-radius: $button-border-radius;
+
+  // 메뉴바 상단의 얇은 아이콘 두껍게 보이도록 처리
+  .svg-icon {
+    @include svg-icon-stroke($icon-01);
+  }
 }
 
 .editor-layout-head__object-list-item--selected {

@@ -98,20 +98,16 @@
   </div>
   <!-- 객체 목록 -->
   <ul class="editor-layout-head__object-list">
+    <!-- 선택된 객체에 editor-layout-head__object-list-item--selected 클래스 추가 -->
+    <!-- data -->
     <li class="editor-layout-head__object-list-item editor-layout-head__object-list-item--selected">
       <button class="button button--icon button--link">
         <svg class="svg-icon">
-          <use xlink:href="#object-button"></use>
+          <use xlink:href="#object-data"></use>
         </svg>
       </button>
     </li>
-    <li class="editor-layout-head__object-list-item">
-      <button class="button button--icon button--link">
-        <svg class="svg-icon">
-          <use xlink:href="#object-calendar-setting"></use>
-        </svg>
-      </button>
-    </li>
+    <!-- chart -->
     <li class="editor-layout-head__object-list-item">
       <button class="button button--icon button--link">
         <svg class="svg-icon">
@@ -119,76 +115,7 @@
         </svg>
       </button>
     </li>
-    <li class="editor-layout-head__object-list-item">
-      <button class="button button--icon button--link">
-        <svg class="svg-icon">
-          <use xlink:href="#object-checkbox-selected"></use>
-        </svg>
-      </button>
-    </li>
-    <li class="editor-layout-head__object-list-item">
-      <button class="button button--icon button--link">
-        <svg class="svg-icon">
-          <use xlink:href="#object-circle"></use>
-        </svg>
-      </button>
-    </li>
-    <li class="editor-layout-head__object-list-item">
-      <button class="button button--icon button--link">
-        <svg class="svg-icon">
-          <use xlink:href="#object-combobox"></use>
-        </svg>
-      </button>
-    </li>
-    <li class="editor-layout-head__object-list-item">
-      <button class="button button--icon button--link">
-        <svg class="svg-icon">
-          <use xlink:href="#object-date-time"></use>
-        </svg>
-      </button>
-    </li>
-    <li class="editor-layout-head__object-list-item">
-      <button class="button button--icon button--link">
-        <svg class="svg-icon">
-          <use xlink:href="#object-html"></use>
-        </svg>
-      </button>
-    </li>
-    <li class="editor-layout-head__object-list-item">
-      <button class="button button--icon button--link">
-        <svg class="svg-icon">
-          <use xlink:href="#object-edit-box"></use>
-        </svg>
-      </button>
-    </li>
-    <li class="editor-layout-head__object-list-item">
-      <button class="button button--icon button--link">
-        <svg class="svg-icon">
-          <use xlink:href="#object-hidden-input"></use>
-        </svg>
-      </button>
-    </li>
-    <li class="editor-layout-head__object-list-item">
-      <button class="button button--icon button--link">
-        <svg class="svg-icon">
-          <use xlink:href="#object-image"></use>
-        </svg>
-      </button>
-    </li>
-    <li class="editor-layout-head__object-list-item">
-      <button class="button button--icon button--link">
-        <svg class="svg-icon">
-          <use xlink:href="#object-label"></use>
-        </svg>
-      </button>
-    </li>
-    <li class="editor-layout-head__object-list-item">
-      <button class="button button--icon button--link">
-        <svg class="svg-icon">
-          <use xlink:href="#object-list"></use>
-        </svg>
-      </button>
-    </li>
+    <!-- map -->
     <li class="editor-layout-head__object-list-item">
       <button class="button button--icon button--link">
         <svg class="svg-icon">
@@ -196,20 +123,23 @@
         </svg>
       </button>
     </li>
+    <!-- image -->
     <li class="editor-layout-head__object-list-item">
       <button class="button button--icon button--link">
         <svg class="svg-icon">
-          <use xlink:href="#object-popup"></use>
+          <use xlink:href="#object-ima"></use>
         </svg>
       </button>
     </li>
+    <!-- label -->
     <li class="editor-layout-head__object-list-item">
       <button class="button button--icon button--link">
         <svg class="svg-icon">
-          <use xlink:href="#object-portlet"></use>
+          <use xlink:href="#object-label"></use>
         </svg>
       </button>
     </li>
+    <!-- shape - rectangle -->
     <li class="editor-layout-head__object-list-item">
       <button class="button button--icon button--link">
         <svg class="svg-icon">
@@ -217,27 +147,31 @@
         </svg>
       </button>
     </li>
+    <!-- shape - circle -->
     <li class="editor-layout-head__object-list-item">
       <button class="button button--icon button--link">
         <svg class="svg-icon">
-          <use xlink:href="#object-renew"></use>
+          <use xlink:href="#object-circle"></use>
         </svg>
       </button>
     </li>
+    <!-- image -->
     <li class="editor-layout-head__object-list-item">
       <button class="button button--icon button--link">
         <svg class="svg-icon">
-          <use xlink:href="#object-tab"></use>
+          <use xlink:href="#object-image"></use>
         </svg>
       </button>
     </li>
+    <!-- text-input -->
     <li class="editor-layout-head__object-list-item">
       <button class="button button--icon button--link">
         <svg class="svg-icon">
-          <use xlink:href="#object-tag"></use>
+          <use xlink:href="#object-text-input"></use>
         </svg>
       </button>
     </li>
+    <!-- text-area -->
     <li class="editor-layout-head__object-list-item">
       <button class="button button--icon button--link">
         <svg class="svg-icon">
@@ -245,10 +179,139 @@
         </svg>
       </button>
     </li>
+    <!-- combo -->
     <li class="editor-layout-head__object-list-item">
       <button class="button button--icon button--link">
         <svg class="svg-icon">
-          <use xlink:href="#object-text-input"></use>
+          <use xlink:href="#object-combobox"></use>
+        </svg>
+      </button>
+    </li>
+    <!-- check and radio -->
+    <li class="editor-layout-head__object-list-item">
+      <button class="button button--icon button--link">
+        <svg class="svg-icon">
+          <use xlink:href="#object-checkbox-selected"></use>
+        </svg>
+      </button>
+    </li>
+    <!-- date-picker -->
+    <li class="editor-layout-head__object-list-item">
+      <button class="button button--icon button--link">
+        <svg class="svg-icon">
+          <use xlink:href="#object-date-time"></use>
+        </svg>
+      </button>
+    </li>
+    <!-- date-time-range-picker -->
+    <li class="editor-layout-head__object-list-item">
+      <button class="button button--icon button--link">
+        <svg class="svg-icon">
+          <use xlink:href="#object-calendar-setting"></use>
+        </svg>
+      </button>
+    </li>
+    <!-- editor -->
+    <li class="editor-layout-head__object-list-item">
+      <button class="button button--icon button--link">
+        <svg class="svg-icon">
+          <use xlink:href="#object-edit-box"></use>
+        </svg>
+      </button>
+    </li>
+    <!-- button -->
+    <li class="editor-layout-head__object-list-item">
+      <button class="button button--icon button--link">
+        <svg class="svg-icon">
+          <use xlink:href="#object-button"></use>
+        </svg>
+      </button>
+    </li>
+    <!-- tab -->
+    <li class="editor-layout-head__object-list-item">
+      <button class="button button--icon button--link">
+        <svg class="svg-icon">
+          <use xlink:href="#object-tab"></use>
+        </svg>
+      </button>
+    </li>
+    <!-- list -->
+    <li class="editor-layout-head__object-list-item">
+      <button class="button button--icon button--link">
+        <svg class="svg-icon">
+          <use xlink:href="#object-list"></use>
+        </svg>
+      </button>
+    </li>
+    <!-- tag -->
+    <li class="editor-layout-head__object-list-item">
+      <button class="button button--icon button--link">
+        <svg class="svg-icon">
+          <use xlink:href="#object-tag"></use>
+        </svg>
+      </button>
+    </li>
+    <!-- period-setting -->
+    <li class="editor-layout-head__object-list-item">
+      <button class="button button--icon button--link">
+        <svg class="svg-icon">
+          <use xlink:href="#object-renew"></use>
+        </svg>
+      </button>
+    </li>
+    <!-- object-url -->
+    <li class="editor-layout-head__object-list-item">
+      <button class="button button--icon button--link">
+        <svg class="svg-icon">
+          <use xlink:href="#object-url"></use>
+        </svg>
+      </button>
+    </li>
+    <!-- html -->
+    <li class="editor-layout-head__object-list-item">
+      <button class="button button--icon button--link">
+        <svg class="svg-icon">
+          <use xlink:href="#object-html"></use>
+        </svg>
+      </button>
+    </li>
+    <!-- popup -->
+    <li class="editor-layout-head__object-list-item">
+      <button class="button button--icon button--link">
+        <svg class="svg-icon">
+          <use xlink:href="#object-popup"></use>
+        </svg>
+      </button>
+    </li>
+    <!-- portlet -->
+    <li class="editor-layout-head__object-list-item">
+      <button class="button button--icon button--link">
+        <svg class="svg-icon">
+          <use xlink:href="#object-portlet"></use>
+        </svg>
+      </button>
+    </li>
+    <!-- hidden-input -->
+    <li class="editor-layout-head__object-list-item">
+      <button class="button button--icon button--link">
+        <svg class="svg-icon">
+          <use xlink:href="#object-hidden-input"></use>
+        </svg>
+      </button>
+    </li>
+    <!-- upload -->
+    <li class="editor-layout-head__object-list-item">
+      <button class="button button--icon button--link">
+        <svg class="svg-icon">
+          <use xlink:href="#object-upload"></use>
+        </svg>
+      </button>
+    </li>
+    <!-- condition -->
+    <li class="editor-layout-head__object-list-item">
+      <button class="button button--icon button--link">
+        <svg class="svg-icon">
+          <use xlink:href="#object-condition"></use>
         </svg>
       </button>
     </li>
