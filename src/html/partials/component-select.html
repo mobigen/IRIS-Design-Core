@@ -8,10 +8,23 @@
   <div class="page__usage md">
     <ul>
       <li>
-        컨텍스트 메뉴는 <em class="text-emphasis">4개</em>가 있으며 <em class="text-emphasis">3개</em> 크기로
-        구분합니다.<br />
+        컨텍스트 메뉴는 <em class="text-emphasis">4개</em> 종류가 있으며 <em class="text-emphasis">3개</em> 크기로 구분합니다.
+        <ul>
+          <li>텍스트</li>
+          <li>아이콘 + 텍스트</li>
+          <li>텍스트 + 추가 기능 버튼</li>
+          <li>체크 박스 + 텍스트</li>
+        </ul>
       </li>
-      <li>텍스트만 사용하거나, 아이콘과 텍스트를 사용한 UI</li>
+      <li>
+        컨텍스트 메뉴 상태 클래스
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+      </li>
     </ul>
   </div>
 
@@ -27,7 +40,7 @@
                 select--open 클래스 추가시 open
                 select--up 클래스 추가시 컨테이너가 위로 열림
                -->
-              <div class="select select--lg select--up" style="min-width: 160px; max-width: 230px;">
+              <div class="select select--lg" style="min-width: 160px; max-width: 230px;">
                 <div class="select-selector">
                   <button class="select-selector__button" type="button">
                     <span class="select-selector__title">SelectContentUpSelectContentUpSelectContentUp</span>
@@ -66,11 +79,10 @@
                   </ul>
                 </div>
               </div>
-              <!-- select--open 클래스 추가시 open -->
-              <div class="select select--lg select--up" style="min-width: 160px; max-width: 230px;margin-left: 8px">
+              <div class="select select--lg select--disabled" style="min-width: 160px; max-width: 230px;">
                 <div class="select-selector">
                   <button class="select-selector__button" type="button">
-                    <span class="select-selector__title">SelectContentUp</span>
+                    <span class="select-selector__title">SelectContentUpSelectContentUpSelectContentUp</span>
                     <svg class="svg-icon select-selector__icon">
                       <use xlink:href="#chevron-down-medium"></use>
                     </svg>
@@ -80,145 +92,27 @@
                   <ul class="select-container__list">
                     <li class="select-container__item">
                       <button class="select-container__button" type="button">
-                        <svg class="svg-icon select-container__icon">
-                          <use xlink:href="#link"></use>
-                        </svg>
                         <span class="select-container__text">URL 관리</span>
                       </button>
                     </li>
                     <li class="select-container__item">
                       <button class="select-container__button" type="button">
-                        <svg class="svg-icon select-container__icon">
-                          <use xlink:href="#key"></use>
-                        </svg>
                         <span class="select-container__text">권한 설정</span>
                       </button>
                     </li>
                     <li class="select-container__item">
                       <button class="select-container__button" type="button">
-                        <svg class="svg-icon select-container__icon">
-                          <use xlink:href="#copy"></use>
-                        </svg>
                         <span class="select-container__text">사본으로 저장</span>
                       </button>
                     </li>
                     <li class="select-container__item">
                       <button class="select-container__button" type="button">
-                        <svg class="svg-icon select-container__icon">
-                          <use xlink:href="#write"></use>
-                        </svg>
                         <span class="select-container__text">정보 변경</span>
                       </button>
                     </li>
                     <li class="select-container__item">
                       <button class="select-container__button" type="button">
-                        <svg class="svg-icon select-container__icon">
-                          <use xlink:href="#popout"></use>
-                        </svg>
                         <span class="select-container__text">목록으로 나가기</span>
-                      </button>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <!-- select--open 클래스 추가시 open -->
-              <div class="select select--lg select--up" style="min-width: 160px; max-width: 230px;margin-left: 8px">
-                <div class="select-selector">
-                  <button class="select-selector__button" type="button">
-                    <svg class="svg-icon">
-                      <use xlink:href="#data"></use>
-                    </svg>
-                    <span class="select-selector__title">SelectContentUp</span>
-                    <svg class="svg-icon select-selector__icon">
-                      <use xlink:href="#chevron-down-medium"></use>
-                    </svg>
-                  </button>
-                </div>
-                <div class="select-container">
-                  <ul class="select-container__list">
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">URL 관리</span>
-                      </button>
-                      <div class="select-container__action-buttons">
-                        <button class="select-container__action-button" type="button" title="icon">
-                          <svg class="svg-icon select-container__icon">
-                            <use xlink:href="#write"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </li>
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">권한 설정</span>
-                      </button>
-                      <div class="select-container__action-buttons">
-                        <button class="select-container__action-button" type="button" title="icon">
-                          <svg class="svg-icon select-container__icon">
-                            <use xlink:href="#write"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </li>
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">사본으로 저장</span>
-                      </button>
-                      <div class="select-container__action-buttons">
-                        <button class="select-container__action-button" type="button" title="icon">
-                          <svg class="svg-icon select-container__icon">
-                            <use xlink:href="#write"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </li>
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">정보 변경</span>
-                      </button>
-                      <div class="select-container__action-buttons">
-                        <button class="select-container__action-button" type="button" title="icon">
-                          <svg class="svg-icon select-container__icon">
-                            <use xlink:href="#write"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </li>
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">목록으로 나가기</span>
-                      </button>
-                      <div class="select-container__action-buttons">
-                        <button class="select-container__action-button" type="button" title="icon">
-                          <svg class="svg-icon select-container__icon">
-                            <use xlink:href="#write"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <!-- select--open 클래스 추가시 open -->
-              <div class="select select--lg select--up select--disabled" style="min-width: 160px; max-width: 230px;margin-left: 8px">
-                <div class="select-selector">
-                  <button class="select-selector__button" type="button">
-                    <span class="select-selector__title">SelectContentUp</span>
-                    <svg class="svg-icon select-selector__icon">
-                      <use xlink:href="#chevron-down-medium"></use>
-                    </svg>
-                  </button>
-                </div>
-                <div class="select-container">
-                  <ul class="select-container__list">
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">URL 관리</span>
-                      </button>
-                    </li>
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">URL 관리</span>
                       </button>
                     </li>
                   </ul>
@@ -230,10 +124,97 @@
             <p class="component-example__size-label">Size: md</p>
             <div class="component-examle__item-group">
               <!-- select--open 클래스 추가시 open -->
-              <div class="select select--open" style="min-width: 160px; max-width: 230px;">
+              <div class="select" style="min-width: 160px; max-width: 230px;">
                 <div class="select-selector">
                   <button class="select-selector__button" type="button">
-                    <span class="select-selector__title">SelectContent Open</span>
+                    <span class="select-selector__title">텍스트 유형</span>
+                    <svg class="svg-icon select-selector__icon">
+                      <use xlink:href="#chevron-down-medium"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="select-container">
+                  <ul class="select-container__list">
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">URL 관리</span>
+                      </button>
+                    </li>
+                    <!-- 선택 된 객체에 select-container__item--selected 클래스 추가 -->
+                    <li class="select-container__item select-container__item--selected">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">권한 설정</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">다른 이름으로 저장</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">정보 변경</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">목록으로 나가기</span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- 비활성 상태 -->
+              <!-- select--open 클래스 추가시 open -->
+              <div class="select select--disabled" style="min-width: 160px; max-width: 230px;">
+                <div class="select-selector">
+                  <button class="select-selector__button" type="button">
+                    <span class="select-selector__title">텍스트 유형</span>
+                    <svg class="svg-icon select-selector__icon">
+                      <use xlink:href="#chevron-down-medium"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="select-container">
+                  <ul class="select-container__list">
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">URL 관리</span>
+                      </button>
+                    </li>
+                    <!-- 선택 된 객체에 select-container__item--selected 클래스 추가 -->
+                    <li class="select-container__item select-container__item--selected">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">권한 설정</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">다른 이름으로 저장</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">정보 변경</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">목록으로 나가기</span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: sm</p>
+            <div class="component-examle__item-group">
+              <div class="select select--sm select--open" style="min-width: 160px; max-width: 230px;">
+                <div class="select-selector">
+                  <button class="select-selector__button" type="button">
+                    <span class="select-selector__title">SelectContent</span>
                     <svg class="svg-icon select-selector__icon">
                       <use xlink:href="#chevron-down-medium"></use>
                     </svg>
@@ -269,11 +250,68 @@
                   </ul>
                 </div>
               </div>
-              <!-- select--open 클래스 추가시 open -->
-              <div class="select" style="min-width: 160px; max-width: 230px;margin-left: 8px">
+              <div class="select select--sm select--disabled" style="min-width: 160px; max-width: 230px;">
                 <div class="select-selector">
                   <button class="select-selector__button" type="button">
                     <span class="select-selector__title">SelectContent</span>
+                    <svg class="svg-icon select-selector__icon">
+                      <use xlink:href="#chevron-down-medium"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="select-container">
+                  <ul class="select-container__list">
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">URL 관리</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">권한 설정</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">사본으로 저장</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">정보 변경</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">목록으로 나가기</span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Icon + Text Select</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: lg</p>
+            <div class="component-examle__item-group">
+              <!-- select--open 클래스 추가시 open -->
+              <div class="select select--lg" style="min-width: 160px; max-width: 230px;margin-left: 8px">
+                <div class="select-selector">
+                  <button class="select-selector__button" type="button">
+                    <svg class="svg-icon">
+                      <use xlink:href="#key"></use>
+                    </svg>
+                    <span class="select-selector__title">권한 설정</span>
                     <svg class="svg-icon select-selector__icon">
                       <use xlink:href="#chevron-down-medium"></use>
                     </svg>
@@ -289,7 +327,7 @@
                         <span class="select-container__text">URL 관리</span>
                       </button>
                     </li>
-                    <li class="select-container__item">
+                    <li class="select-container__item select-container__item--selected">
                       <button class="select-container__button" type="button">
                         <svg class="svg-icon select-container__icon">
                           <use xlink:href="#key"></use>
@@ -325,13 +363,325 @@
                 </div>
               </div>
               <!-- select--open 클래스 추가시 open -->
+              <div class="select select--lg select--disabled" style="min-width: 160px; max-width: 230px;margin-left: 8px">
+                <div class="select-selector">
+                  <button class="select-selector__button" type="button">
+                    <svg class="svg-icon">
+                      <use xlink:href="#key"></use>
+                    </svg>
+                    <span class="select-selector__title">권한 설정</span>
+                    <svg class="svg-icon select-selector__icon">
+                      <use xlink:href="#chevron-down-medium"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="select-container">
+                  <ul class="select-container__list">
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <svg class="svg-icon select-container__icon">
+                          <use xlink:href="#link"></use>
+                        </svg>
+                        <span class="select-container__text">URL 관리</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item select-container__item--selected">
+                      <button class="select-container__button" type="button">
+                        <svg class="svg-icon select-container__icon">
+                          <use xlink:href="#key"></use>
+                        </svg>
+                        <span class="select-container__text">권한 설정</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <svg class="svg-icon select-container__icon">
+                          <use xlink:href="#copy"></use>
+                        </svg>
+                        <span class="select-container__text">사본으로 저장</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <svg class="svg-icon select-container__icon">
+                          <use xlink:href="#write"></use>
+                        </svg>
+                        <span class="select-container__text">정보 변경</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <svg class="svg-icon select-container__icon">
+                          <use xlink:href="#popout"></use>
+                        </svg>
+                        <span class="select-container__text">목록으로 나가기</span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: md</p>
+            <div class="component-examle__item-group">
+              <!-- select--open 클래스 추가시 open -->
               <div class="select" style="min-width: 160px; max-width: 230px;margin-left: 8px">
                 <div class="select-selector">
                   <button class="select-selector__button" type="button">
                     <svg class="svg-icon">
-                      <use xlink:href="#data"></use>
+                      <use xlink:href="#key"></use>
                     </svg>
-                    <span class="select-selector__title">SelectContent</span>
+                    <span class="select-selector__title">권한 설정</span>
+                    <svg class="svg-icon select-selector__icon">
+                      <use xlink:href="#chevron-down-medium"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="select-container">
+                  <ul class="select-container__list">
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <svg class="svg-icon select-container__icon">
+                          <use xlink:href="#link"></use>
+                        </svg>
+                        <span class="select-container__text">URL 관리</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item select-container__item--selected">
+                      <button class="select-container__button" type="button">
+                        <svg class="svg-icon select-container__icon">
+                          <use xlink:href="#key"></use>
+                        </svg>
+                        <span class="select-container__text">권한 설정</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <svg class="svg-icon select-container__icon">
+                          <use xlink:href="#copy"></use>
+                        </svg>
+                        <span class="select-container__text">사본으로 저장</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <svg class="svg-icon select-container__icon">
+                          <use xlink:href="#write"></use>
+                        </svg>
+                        <span class="select-container__text">정보 변경</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <svg class="svg-icon select-container__icon">
+                          <use xlink:href="#popout"></use>
+                        </svg>
+                        <span class="select-container__text">목록으로 나가기</span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- select--open 클래스 추가시 open -->
+              <div class="select select--disabled" style="min-width: 160px; max-width: 230px;margin-left: 8px">
+                <div class="select-selector">
+                  <button class="select-selector__button" type="button">
+                    <svg class="svg-icon">
+                      <use xlink:href="#key"></use>
+                    </svg>
+                    <span class="select-selector__title">권한 설정</span>
+                    <svg class="svg-icon select-selector__icon">
+                      <use xlink:href="#chevron-down-medium"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="select-container">
+                  <ul class="select-container__list">
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <svg class="svg-icon select-container__icon">
+                          <use xlink:href="#link"></use>
+                        </svg>
+                        <span class="select-container__text">URL 관리</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item select-container__item--selected">
+                      <button class="select-container__button" type="button">
+                        <svg class="svg-icon select-container__icon">
+                          <use xlink:href="#key"></use>
+                        </svg>
+                        <span class="select-container__text">권한 설정</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <svg class="svg-icon select-container__icon">
+                          <use xlink:href="#copy"></use>
+                        </svg>
+                        <span class="select-container__text">사본으로 저장</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <svg class="svg-icon select-container__icon">
+                          <use xlink:href="#write"></use>
+                        </svg>
+                        <span class="select-container__text">정보 변경</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <svg class="svg-icon select-container__icon">
+                          <use xlink:href="#popout"></use>
+                        </svg>
+                        <span class="select-container__text">목록으로 나가기</span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: sm</p>
+            <div class="component-examle__item-group">
+              <!-- select--open 클래스 추가시 open -->
+              <div class="select select--sm" style="min-width: 160px; max-width: 230px;margin-left: 8px">
+                <div class="select-selector">
+                  <button class="select-selector__button" type="button">
+                    <svg class="svg-icon">
+                      <use xlink:href="#key"></use>
+                    </svg>
+                    <span class="select-selector__title">권한 설정</span>
+                    <svg class="svg-icon select-selector__icon">
+                      <use xlink:href="#chevron-down-medium"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="select-container">
+                  <ul class="select-container__list">
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <svg class="svg-icon select-container__icon">
+                          <use xlink:href="#link"></use>
+                        </svg>
+                        <span class="select-container__text">URL 관리</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item select-container__item--selected">
+                      <button class="select-container__button" type="button">
+                        <svg class="svg-icon select-container__icon">
+                          <use xlink:href="#key"></use>
+                        </svg>
+                        <span class="select-container__text">권한 설정</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <svg class="svg-icon select-container__icon">
+                          <use xlink:href="#copy"></use>
+                        </svg>
+                        <span class="select-container__text">사본으로 저장</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <svg class="svg-icon select-container__icon">
+                          <use xlink:href="#write"></use>
+                        </svg>
+                        <span class="select-container__text">정보 변경</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <svg class="svg-icon select-container__icon">
+                          <use xlink:href="#popout"></use>
+                        </svg>
+                        <span class="select-container__text">목록으로 나가기</span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- select--open 클래스 추가시 open -->
+              <div class="select select--sm select--disabled" style="min-width: 160px; max-width: 230px;margin-left: 8px">
+                <div class="select-selector">
+                  <button class="select-selector__button" type="button">
+                    <svg class="svg-icon">
+                      <use xlink:href="#key"></use>
+                    </svg>
+                    <span class="select-selector__title">권한 설정</span>
+                    <svg class="svg-icon select-selector__icon">
+                      <use xlink:href="#chevron-down-medium"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="select-container">
+                  <ul class="select-container__list">
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <svg class="svg-icon select-container__icon">
+                          <use xlink:href="#link"></use>
+                        </svg>
+                        <span class="select-container__text">URL 관리</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item select-container__item--selected">
+                      <button class="select-container__button" type="button">
+                        <svg class="svg-icon select-container__icon">
+                          <use xlink:href="#key"></use>
+                        </svg>
+                        <span class="select-container__text">권한 설정</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <svg class="svg-icon select-container__icon">
+                          <use xlink:href="#copy"></use>
+                        </svg>
+                        <span class="select-container__text">사본으로 저장</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <svg class="svg-icon select-container__icon">
+                          <use xlink:href="#write"></use>
+                        </svg>
+                        <span class="select-container__text">정보 변경</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <svg class="svg-icon select-container__icon">
+                          <use xlink:href="#popout"></use>
+                        </svg>
+                        <span class="select-container__text">목록으로 나가기</span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Select with Additional Action Button</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: lg</p>
+            <div class="component-examle__item-group">
+              <!-- select--open 클래스 추가시 open -->
+              <div class="select select--lg" style="min-width: 160px; max-width: 230px;margin-left: 8px">
+                <div class="select-selector">
+                  <button class="select-selector__button" type="button">
+                    <span class="select-selector__title">권한 설정</span>
                     <svg class="svg-icon select-selector__icon">
                       <use xlink:href="#chevron-down-medium"></use>
                     </svg>
@@ -351,7 +701,7 @@
                         </button>
                       </div>
                     </li>
-                    <li class="select-container__item">
+                    <li class="select-container__item select-container__item--selected">
                       <button class="select-container__button" type="button">
                         <span class="select-container__text">권한 설정</span>
                       </button>
@@ -402,10 +752,11 @@
                   </ul>
                 </div>
               </div>
-              <div class="select select--disabled" style="min-width: 160px; max-width: 230px;margin-left: 8px">
+              <!-- select--open 클래스 추가시 open -->
+              <div class="select select--lg select--disabled" style="min-width: 160px; max-width: 230px;margin-left: 8px">
                 <div class="select-selector">
                   <button class="select-selector__button" type="button">
-                    <span class="select-selector__title">SelectContent</span>
+                    <span class="select-selector__title">권한 설정</span>
                     <svg class="svg-icon select-selector__icon">
                       <use xlink:href="#chevron-down-medium"></use>
                     </svg>
@@ -417,11 +768,1623 @@
                       <button class="select-container__button" type="button">
                         <span class="select-container__text">URL 관리</span>
                       </button>
+                      <div class="select-container__action-buttons">
+                        <button class="select-container__action-button" type="button" title="icon">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#write"></use>
+                          </svg>
+                        </button>
+                      </div>
                     </li>
+                    <li class="select-container__item select-container__item--selected">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">권한 설정</span>
+                      </button>
+                      <div class="select-container__action-buttons">
+                        <button class="select-container__action-button" type="button" title="icon">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#write"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">사본으로 저장</span>
+                      </button>
+                      <div class="select-container__action-buttons">
+                        <button class="select-container__action-button" type="button" title="icon">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#write"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">정보 변경</span>
+                      </button>
+                      <div class="select-container__action-buttons">
+                        <button class="select-container__action-button" type="button" title="icon">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#write"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">목록으로 나가기</span>
+                      </button>
+                      <div class="select-container__action-buttons">
+                        <button class="select-container__action-button" type="button" title="icon">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#write"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: md</p>
+            <div class="component-examle__item-group">
+              <!-- select--open 클래스 추가시 open -->
+              <div class="select" style="min-width: 160px; max-width: 230px;margin-left: 8px">
+                <div class="select-selector">
+                  <button class="select-selector__button" type="button">
+                    <span class="select-selector__title">권한 설정</span>
+                    <svg class="svg-icon select-selector__icon">
+                      <use xlink:href="#chevron-down-medium"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="select-container">
+                  <ul class="select-container__list">
                     <li class="select-container__item">
                       <button class="select-container__button" type="button">
                         <span class="select-container__text">URL 관리</span>
                       </button>
+                      <div class="select-container__action-buttons">
+                        <button class="select-container__action-button" type="button" title="icon">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#write"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="select-container__item select-container__item--selected">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">권한 설정</span>
+                      </button>
+                      <div class="select-container__action-buttons">
+                        <button class="select-container__action-button" type="button" title="icon">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#write"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">사본으로 저장</span>
+                      </button>
+                      <div class="select-container__action-buttons">
+                        <button class="select-container__action-button" type="button" title="icon">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#write"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">정보 변경</span>
+                      </button>
+                      <div class="select-container__action-buttons">
+                        <button class="select-container__action-button" type="button" title="icon">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#write"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">목록으로 나가기</span>
+                      </button>
+                      <div class="select-container__action-buttons">
+                        <button class="select-container__action-button" type="button" title="icon">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#write"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- select--open 클래스 추가시 open -->
+              <div class="select select--disabled" style="min-width: 160px; max-width: 230px;margin-left: 8px">
+                <div class="select-selector">
+                  <button class="select-selector__button" type="button">
+                    <span class="select-selector__title">권한 설정</span>
+                    <svg class="svg-icon select-selector__icon">
+                      <use xlink:href="#chevron-down-medium"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="select-container">
+                  <ul class="select-container__list">
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">URL 관리</span>
+                      </button>
+                      <div class="select-container__action-buttons">
+                        <button class="select-container__action-button" type="button" title="icon">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#write"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="select-container__item select-container__item--selected">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">권한 설정</span>
+                      </button>
+                      <div class="select-container__action-buttons">
+                        <button class="select-container__action-button" type="button" title="icon">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#write"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">사본으로 저장</span>
+                      </button>
+                      <div class="select-container__action-buttons">
+                        <button class="select-container__action-button" type="button" title="icon">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#write"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">정보 변경</span>
+                      </button>
+                      <div class="select-container__action-buttons">
+                        <button class="select-container__action-button" type="button" title="icon">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#write"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">목록으로 나가기</span>
+                      </button>
+                      <div class="select-container__action-buttons">
+                        <button class="select-container__action-button" type="button" title="icon">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#write"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: sm</p>
+            <div class="component-examle__item-group">
+              <!-- select--open 클래스 추가시 open -->
+              <div class="select select--sm" style="min-width: 160px; max-width: 230px;margin-left: 8px">
+                <div class="select-selector">
+                  <button class="select-selector__button" type="button">
+                    <span class="select-selector__title">권한 설정</span>
+                    <svg class="svg-icon select-selector__icon">
+                      <use xlink:href="#chevron-down-medium"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="select-container">
+                  <ul class="select-container__list">
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">URL 관리</span>
+                      </button>
+                      <div class="select-container__action-buttons">
+                        <button class="select-container__action-button" type="button" title="icon">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#write"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="select-container__item select-container__item--selected">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">권한 설정</span>
+                      </button>
+                      <div class="select-container__action-buttons">
+                        <button class="select-container__action-button" type="button" title="icon">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#write"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">사본으로 저장</span>
+                      </button>
+                      <div class="select-container__action-buttons">
+                        <button class="select-container__action-button" type="button" title="icon">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#write"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">정보 변경</span>
+                      </button>
+                      <div class="select-container__action-buttons">
+                        <button class="select-container__action-button" type="button" title="icon">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#write"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">목록으로 나가기</span>
+                      </button>
+                      <div class="select-container__action-buttons">
+                        <button class="select-container__action-button" type="button" title="icon">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#write"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- select--open 클래스 추가시 open -->
+              <div class="select select--sm select--disabled" style="min-width: 160px; max-width: 230px;margin-left: 8px">
+                <div class="select-selector">
+                  <button class="select-selector__button" type="button">
+                    <span class="select-selector__title">권한 설정</span>
+                    <svg class="svg-icon select-selector__icon">
+                      <use xlink:href="#chevron-down-medium"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="select-container">
+                  <ul class="select-container__list">
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">URL 관리</span>
+                      </button>
+                      <div class="select-container__action-buttons">
+                        <button class="select-container__action-button" type="button" title="icon">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#write"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="select-container__item select-container__item--selected">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">권한 설정</span>
+                      </button>
+                      <div class="select-container__action-buttons">
+                        <button class="select-container__action-button" type="button" title="icon">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#write"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">사본으로 저장</span>
+                      </button>
+                      <div class="select-container__action-buttons">
+                        <button class="select-container__action-button" type="button" title="icon">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#write"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">정보 변경</span>
+                      </button>
+                      <div class="select-container__action-buttons">
+                        <button class="select-container__action-button" type="button" title="icon">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#write"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">목록으로 나가기</span>
+                      </button>
+                      <div class="select-container__action-buttons">
+                        <button class="select-container__action-button" type="button" title="icon">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#write"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Select with Checkbox</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: lg</p>
+            <div class="component-examle__item-group">
+              <div class="select select--lg" style="min-width: 160px; max-width: 230px;">
+                <div class="select-selector">
+                  <button class="select-selector__button" type="button">
+                    <span class="select-selector__title">전체</span>
+                    <svg class="svg-icon select-selector__icon">
+                      <use xlink:href="#chevron-down-medium"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="select-container w-260">
+                  <ul class="select-container__list">
+                    <li class="select-container__item">
+                      <div class="checkbox checkbox--indeterminate">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <span class="select-container__text">전체 선택</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item select-container__item--selected">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label" checked="">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#data"></use>
+                          </svg>
+                          <span class="select-container__text">데이터</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-chart"></use>
+                          </svg>
+                          <span class="select-container__text">차트</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-map"></use>
+                          </svg>
+                          <span class="select-container__text">map</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-button"></use>
+                          </svg>
+                          <span class="select-container__text">button</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-rectangle"></use>
+                          </svg>
+                          <span class="select-container__text">rectangle</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-circle"></use>
+                          </svg>
+                          <span class="select-container__text">circle</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-tab"></use>
+                          </svg>
+                          <span class="select-container__text">tab</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-image"></use>
+                          </svg>
+                          <span class="select-container__text">image</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-label"></use>
+                          </svg>
+                          <span class="select-container__text">label</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-combobox"></use>
+                          </svg>
+                          <span class="select-container__text">combobox</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-checkbox-selected"></use>
+                          </svg>
+                          <span class="select-container__text">checkbox-selected</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-calendar-setting"></use>
+                          </svg>
+                          <span class="select-container__text">calendar-setting</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-date-time"></use>
+                          </svg>
+                          <span class="select-container__text">date-time</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-edit-box"></use>
+                          </svg>
+                          <span class="select-container__text">edit-box</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-list"></use>
+                          </svg>
+                          <span class="select-container__text">list</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-tag"></use>
+                          </svg>
+                          <span class="select-container__text">tag</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-renew"></use>
+                          </svg>
+                          <span class="select-container__text">renew</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-url"></use>
+                          </svg>
+                          <span class="select-container__text">url</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-html"></use>
+                          </svg>
+                          <span class="select-container__text">html</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-popup"></use>
+                          </svg>
+                          <span class="select-container__text">popup</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-portlet"></use>
+                          </svg>
+                          <span class="select-container__text">portlet</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-hidden-input"></use>
+                          </svg>
+                          <span class="select-container__text">hidden-input</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-upload"></use>
+                          </svg>
+                          <span class="select-container__text">upload</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-text-input"></use>
+                          </svg>
+                          <span class="select-container__text">text-input</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-text-field"></use>
+                          </svg>
+                          <span class="select-container__text">text-field</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-condition"></use>
+                          </svg>
+                          <span class="select-container__text">condition</span>
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="select select--lg select--disabled" style="min-width: 160px; max-width: 230px;">
+                <div class="select-selector">
+                  <button class="select-selector__button" type="button">
+                    <span class="select-selector__title">전체</span>
+                    <svg class="svg-icon select-selector__icon">
+                      <use xlink:href="#chevron-down-medium"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="select-container w-260">
+                  <ul class="select-container__list">
+                    <li class="select-container__item">
+                      <div class="checkbox checkbox--indeterminate">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <span class="select-container__text">전체 선택</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item select-container__item--selected">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label" checked="">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#data"></use>
+                          </svg>
+                          <span class="select-container__text">데이터</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-chart"></use>
+                          </svg>
+                          <span class="select-container__text">차트</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-map"></use>
+                          </svg>
+                          <span class="select-container__text">map</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-button"></use>
+                          </svg>
+                          <span class="select-container__text">button</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-rectangle"></use>
+                          </svg>
+                          <span class="select-container__text">rectangle</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-circle"></use>
+                          </svg>
+                          <span class="select-container__text">circle</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-tab"></use>
+                          </svg>
+                          <span class="select-container__text">tab</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-image"></use>
+                          </svg>
+                          <span class="select-container__text">image</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-label"></use>
+                          </svg>
+                          <span class="select-container__text">label</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-combobox"></use>
+                          </svg>
+                          <span class="select-container__text">combobox</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-checkbox-selected"></use>
+                          </svg>
+                          <span class="select-container__text">checkbox-selected</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-calendar-setting"></use>
+                          </svg>
+                          <span class="select-container__text">calendar-setting</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-date-time"></use>
+                          </svg>
+                          <span class="select-container__text">date-time</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-edit-box"></use>
+                          </svg>
+                          <span class="select-container__text">edit-box</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-list"></use>
+                          </svg>
+                          <span class="select-container__text">list</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-tag"></use>
+                          </svg>
+                          <span class="select-container__text">tag</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-renew"></use>
+                          </svg>
+                          <span class="select-container__text">renew</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-url"></use>
+                          </svg>
+                          <span class="select-container__text">url</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-html"></use>
+                          </svg>
+                          <span class="select-container__text">html</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-popup"></use>
+                          </svg>
+                          <span class="select-container__text">popup</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-portlet"></use>
+                          </svg>
+                          <span class="select-container__text">portlet</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-hidden-input"></use>
+                          </svg>
+                          <span class="select-container__text">hidden-input</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-upload"></use>
+                          </svg>
+                          <span class="select-container__text">upload</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-text-input"></use>
+                          </svg>
+                          <span class="select-container__text">text-input</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-text-field"></use>
+                          </svg>
+                          <span class="select-container__text">text-field</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-condition"></use>
+                          </svg>
+                          <span class="select-container__text">condition</span>
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: md</p>
+            <div class="component-examle__item-group">
+              <div class="select" style="min-width: 160px; max-width: 230px;">
+                <div class="select-selector">
+                  <button class="select-selector__button" type="button">
+                    <span class="select-selector__title">전체</span>
+                    <svg class="svg-icon select-selector__icon">
+                      <use xlink:href="#chevron-down-medium"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="select-container w-260">
+                  <ul class="select-container__list">
+                    <li class="select-container__item">
+                      <div class="checkbox checkbox--indeterminate">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <span class="select-container__text">전체 선택</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item select-container__item--selected">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label" checked="">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#data"></use>
+                          </svg>
+                          <span class="select-container__text">데이터</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-chart"></use>
+                          </svg>
+                          <span class="select-container__text">차트</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-map"></use>
+                          </svg>
+                          <span class="select-container__text">map</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-button"></use>
+                          </svg>
+                          <span class="select-container__text">button</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-rectangle"></use>
+                          </svg>
+                          <span class="select-container__text">rectangle</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-circle"></use>
+                          </svg>
+                          <span class="select-container__text">circle</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-tab"></use>
+                          </svg>
+                          <span class="select-container__text">tab</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-image"></use>
+                          </svg>
+                          <span class="select-container__text">image</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-label"></use>
+                          </svg>
+                          <span class="select-container__text">label</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-combobox"></use>
+                          </svg>
+                          <span class="select-container__text">combobox</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-checkbox-selected"></use>
+                          </svg>
+                          <span class="select-container__text">checkbox-selected</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-calendar-setting"></use>
+                          </svg>
+                          <span class="select-container__text">calendar-setting</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-date-time"></use>
+                          </svg>
+                          <span class="select-container__text">date-time</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-edit-box"></use>
+                          </svg>
+                          <span class="select-container__text">edit-box</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-list"></use>
+                          </svg>
+                          <span class="select-container__text">list</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-tag"></use>
+                          </svg>
+                          <span class="select-container__text">tag</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-renew"></use>
+                          </svg>
+                          <span class="select-container__text">renew</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-url"></use>
+                          </svg>
+                          <span class="select-container__text">url</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-html"></use>
+                          </svg>
+                          <span class="select-container__text">html</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-popup"></use>
+                          </svg>
+                          <span class="select-container__text">popup</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-portlet"></use>
+                          </svg>
+                          <span class="select-container__text">portlet</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-hidden-input"></use>
+                          </svg>
+                          <span class="select-container__text">hidden-input</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-upload"></use>
+                          </svg>
+                          <span class="select-container__text">upload</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-text-input"></use>
+                          </svg>
+                          <span class="select-container__text">text-input</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-text-field"></use>
+                          </svg>
+                          <span class="select-container__text">text-field</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-condition"></use>
+                          </svg>
+                          <span class="select-container__text">condition</span>
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="select select--disabled" style="min-width: 160px; max-width: 230px;">
+                <div class="select-selector">
+                  <button class="select-selector__button" type="button">
+                    <span class="select-selector__title">전체</span>
+                    <svg class="svg-icon select-selector__icon">
+                      <use xlink:href="#chevron-down-medium"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="select-container w-260">
+                  <ul class="select-container__list">
+                    <li class="select-container__item">
+                      <div class="checkbox checkbox--indeterminate">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <span class="select-container__text">전체 선택</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item select-container__item--selected">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label" checked="">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#data"></use>
+                          </svg>
+                          <span class="select-container__text">데이터</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-chart"></use>
+                          </svg>
+                          <span class="select-container__text">차트</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-map"></use>
+                          </svg>
+                          <span class="select-container__text">map</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-button"></use>
+                          </svg>
+                          <span class="select-container__text">button</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-rectangle"></use>
+                          </svg>
+                          <span class="select-container__text">rectangle</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-circle"></use>
+                          </svg>
+                          <span class="select-container__text">circle</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-tab"></use>
+                          </svg>
+                          <span class="select-container__text">tab</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-image"></use>
+                          </svg>
+                          <span class="select-container__text">image</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-label"></use>
+                          </svg>
+                          <span class="select-container__text">label</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-combobox"></use>
+                          </svg>
+                          <span class="select-container__text">combobox</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-checkbox-selected"></use>
+                          </svg>
+                          <span class="select-container__text">checkbox-selected</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-calendar-setting"></use>
+                          </svg>
+                          <span class="select-container__text">calendar-setting</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-date-time"></use>
+                          </svg>
+                          <span class="select-container__text">date-time</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-edit-box"></use>
+                          </svg>
+                          <span class="select-container__text">edit-box</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-list"></use>
+                          </svg>
+                          <span class="select-container__text">list</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-tag"></use>
+                          </svg>
+                          <span class="select-container__text">tag</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-renew"></use>
+                          </svg>
+                          <span class="select-container__text">renew</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-url"></use>
+                          </svg>
+                          <span class="select-container__text">url</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-html"></use>
+                          </svg>
+                          <span class="select-container__text">html</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-popup"></use>
+                          </svg>
+                          <span class="select-container__text">popup</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-portlet"></use>
+                          </svg>
+                          <span class="select-container__text">portlet</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-hidden-input"></use>
+                          </svg>
+                          <span class="select-container__text">hidden-input</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-upload"></use>
+                          </svg>
+                          <span class="select-container__text">upload</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-text-input"></use>
+                          </svg>
+                          <span class="select-container__text">text-input</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-text-field"></use>
+                          </svg>
+                          <span class="select-container__text">text-field</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-condition"></use>
+                          </svg>
+                          <span class="select-container__text">condition</span>
+                        </label>
+                      </div>
                     </li>
                   </ul>
                 </div>
@@ -434,192 +2397,615 @@
               <div class="select select--sm" style="min-width: 160px; max-width: 230px;">
                 <div class="select-selector">
                   <button class="select-selector__button" type="button">
-                    <span class="select-selector__title">SelectContent</span>
+                    <span class="select-selector__title">전체</span>
                     <svg class="svg-icon select-selector__icon">
                       <use xlink:href="#chevron-down-medium"></use>
                     </svg>
                   </button>
                 </div>
-                <div class="select-container">
+                <div class="select-container w-260">
                   <ul class="select-container__list">
                     <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">URL 관리</span>
-                      </button>
+                      <div class="checkbox checkbox--indeterminate">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <span class="select-container__text">전체 선택</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item select-container__item--selected">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label" checked="">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#data"></use>
+                          </svg>
+                          <span class="select-container__text">데이터</span>
+                        </label>
+                      </div>
                     </li>
                     <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">권한 설정</span>
-                      </button>
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-chart"></use>
+                          </svg>
+                          <span class="select-container__text">차트</span>
+                        </label>
+                      </div>
                     </li>
                     <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">사본으로 저장</span>
-                      </button>
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-map"></use>
+                          </svg>
+                          <span class="select-container__text">map</span>
+                        </label>
+                      </div>
                     </li>
                     <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">정보 변경</span>
-                      </button>
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-button"></use>
+                          </svg>
+                          <span class="select-container__text">button</span>
+                        </label>
+                      </div>
                     </li>
                     <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">목록으로 나가기</span>
-                      </button>
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-rectangle"></use>
+                          </svg>
+                          <span class="select-container__text">rectangle</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-circle"></use>
+                          </svg>
+                          <span class="select-container__text">circle</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-tab"></use>
+                          </svg>
+                          <span class="select-container__text">tab</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-image"></use>
+                          </svg>
+                          <span class="select-container__text">image</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-label"></use>
+                          </svg>
+                          <span class="select-container__text">label</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-combobox"></use>
+                          </svg>
+                          <span class="select-container__text">combobox</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-checkbox-selected"></use>
+                          </svg>
+                          <span class="select-container__text">checkbox-selected</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-calendar-setting"></use>
+                          </svg>
+                          <span class="select-container__text">calendar-setting</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-date-time"></use>
+                          </svg>
+                          <span class="select-container__text">date-time</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-edit-box"></use>
+                          </svg>
+                          <span class="select-container__text">edit-box</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-list"></use>
+                          </svg>
+                          <span class="select-container__text">list</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-tag"></use>
+                          </svg>
+                          <span class="select-container__text">tag</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-renew"></use>
+                          </svg>
+                          <span class="select-container__text">renew</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-url"></use>
+                          </svg>
+                          <span class="select-container__text">url</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-html"></use>
+                          </svg>
+                          <span class="select-container__text">html</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-popup"></use>
+                          </svg>
+                          <span class="select-container__text">popup</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-portlet"></use>
+                          </svg>
+                          <span class="select-container__text">portlet</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-hidden-input"></use>
+                          </svg>
+                          <span class="select-container__text">hidden-input</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-upload"></use>
+                          </svg>
+                          <span class="select-container__text">upload</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-text-input"></use>
+                          </svg>
+                          <span class="select-container__text">text-input</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-text-field"></use>
+                          </svg>
+                          <span class="select-container__text">text-field</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-condition"></use>
+                          </svg>
+                          <span class="select-container__text">condition</span>
+                        </label>
+                      </div>
                     </li>
                   </ul>
                 </div>
               </div>
-              <div class="select select--sm" style="min-width: 160px; max-width: 230px;margin-left: 8px">
-                <!-- select--open 클래스 추가시 open -->
+              <div class="select select--sm select--disabled" style="min-width: 160px; max-width: 230px;">
                 <div class="select-selector">
                   <button class="select-selector__button" type="button">
-                    <span class="select-selector__title">SelectContent</span>
+                    <span class="select-selector__title">전체</span>
                     <svg class="svg-icon select-selector__icon">
                       <use xlink:href="#chevron-down-medium"></use>
                     </svg>
                   </button>
                 </div>
-                <div class="select-container">
+                <div class="select-container w-260">
                   <ul class="select-container__list">
                     <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <svg class="svg-icon select-container__icon">
-                          <use xlink:href="#link"></use>
-                        </svg>
-                        <span class="select-container__text">URL 관리</span>
-                      </button>
+                      <div class="checkbox checkbox--indeterminate">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <span class="select-container__text">전체 선택</span>
+                        </label>
+                      </div>
                     </li>
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <svg class="svg-icon select-container__icon">
-                          <use xlink:href="#key"></use>
-                        </svg>
-                        <span class="select-container__text">권한 설정</span>
-                      </button>
-                    </li>
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <svg class="svg-icon select-container__icon">
-                          <use xlink:href="#copy"></use>
-                        </svg>
-                        <span class="select-container__text">사본으로 저장</span>
-                      </button>
-                    </li>
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <svg class="svg-icon select-container__icon">
-                          <use xlink:href="#write"></use>
-                        </svg>
-                        <span class="select-container__text">정보 변경</span>
-                      </button>
-                    </li>
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <svg class="svg-icon select-container__icon">
-                          <use xlink:href="#popout"></use>
-                        </svg>
-                        <span class="select-container__text">목록으로 나가기</span>
-                      </button>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="select select--sm" style="min-width: 160px; max-width: 230px;margin-left: 8px">
-                <!-- select--open 클래스 추가시 open -->
-                <div class="select-selector">
-                  <button class="select-selector__button" type="button">
-                    <span class="select-selector__title">SelectContent</span>
-                    <svg class="svg-icon select-selector__icon">
-                      <use xlink:href="#chevron-down-medium"></use>
-                    </svg>
-                  </button>
-                </div>
-                <div class="select-container">
-                  <ul class="select-container__list">
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">URL 관리</span>
-                      </button>
-                      <div class="select-container__action-buttons">
-                        <button class="select-container__action-button" type="button" title="icon">
+                    <li class="select-container__item select-container__item--selected">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label" checked="">
+                        <label for="list-check-01" class="checkbox__label">
                           <svg class="svg-icon select-container__icon">
-                            <use xlink:href="#write"></use>
+                            <use xlink:href="#data"></use>
                           </svg>
-                        </button>
+                          <span class="select-container__text">데이터</span>
+                        </label>
                       </div>
                     </li>
                     <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">권한 설정</span>
-                      </button>
-                      <div class="select-container__action-buttons">
-                        <button class="select-container__action-button" type="button" title="icon">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
                           <svg class="svg-icon select-container__icon">
-                            <use xlink:href="#write"></use>
+                            <use xlink:href="#object-chart"></use>
                           </svg>
-                        </button>
+                          <span class="select-container__text">차트</span>
+                        </label>
                       </div>
                     </li>
                     <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">사본으로 저장</span>
-                      </button>
-                      <div class="select-container__action-buttons">
-                        <button class="select-container__action-button" type="button" title="icon">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
                           <svg class="svg-icon select-container__icon">
-                            <use xlink:href="#write"></use>
+                            <use xlink:href="#object-map"></use>
                           </svg>
-                        </button>
+                          <span class="select-container__text">map</span>
+                        </label>
                       </div>
                     </li>
                     <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">정보 변경</span>
-                      </button>
-                      <div class="select-container__action-buttons">
-                        <button class="select-container__action-button" type="button" title="icon">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
                           <svg class="svg-icon select-container__icon">
-                            <use xlink:href="#write"></use>
+                            <use xlink:href="#object-button"></use>
                           </svg>
-                        </button>
+                          <span class="select-container__text">button</span>
+                        </label>
                       </div>
                     </li>
                     <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">목록으로 나가기</span>
-                      </button>
-                      <div class="select-container__action-buttons">
-                        <button class="select-container__action-button" type="button" title="icon">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
                           <svg class="svg-icon select-container__icon">
-                            <use xlink:href="#write"></use>
+                            <use xlink:href="#object-rectangle"></use>
                           </svg>
-                        </button>
+                          <span class="select-container__text">rectangle</span>
+                        </label>
                       </div>
                     </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="select select--sm select--disabled" style="min-width: 160px; max-width: 230px;margin-left: 8px">
-                <div class="select-selector">
-                  <button class="select-selector__button" type="button">
-                    <span class="select-selector__title">SelectContent</span>
-                    <svg class="svg-icon select-selector__icon">
-                      <use xlink:href="#chevron-down-medium"></use>
-                    </svg>
-                  </button>
-                </div>
-                <div class="select-container">
-                  <ul class="select-container__list">
                     <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">URL 관리</span>
-                      </button>
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-circle"></use>
+                          </svg>
+                          <span class="select-container__text">circle</span>
+                        </label>
+                      </div>
                     </li>
                     <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">URL 관리</span>
-                      </button>
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-tab"></use>
+                          </svg>
+                          <span class="select-container__text">tab</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-image"></use>
+                          </svg>
+                          <span class="select-container__text">image</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-label"></use>
+                          </svg>
+                          <span class="select-container__text">label</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-combobox"></use>
+                          </svg>
+                          <span class="select-container__text">combobox</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-checkbox-selected"></use>
+                          </svg>
+                          <span class="select-container__text">checkbox-selected</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-calendar-setting"></use>
+                          </svg>
+                          <span class="select-container__text">calendar-setting</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-date-time"></use>
+                          </svg>
+                          <span class="select-container__text">date-time</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-edit-box"></use>
+                          </svg>
+                          <span class="select-container__text">edit-box</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-list"></use>
+                          </svg>
+                          <span class="select-container__text">list</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-tag"></use>
+                          </svg>
+                          <span class="select-container__text">tag</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-renew"></use>
+                          </svg>
+                          <span class="select-container__text">renew</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-url"></use>
+                          </svg>
+                          <span class="select-container__text">url</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-html"></use>
+                          </svg>
+                          <span class="select-container__text">html</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-popup"></use>
+                          </svg>
+                          <span class="select-container__text">popup</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-portlet"></use>
+                          </svg>
+                          <span class="select-container__text">portlet</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-hidden-input"></use>
+                          </svg>
+                          <span class="select-container__text">hidden-input</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-upload"></use>
+                          </svg>
+                          <span class="select-container__text">upload</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-text-input"></use>
+                          </svg>
+                          <span class="select-container__text">text-input</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-text-field"></use>
+                          </svg>
+                          <span class="select-container__text">text-field</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="checkbox">
+                        <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                        <label for="list-check-01" class="checkbox__label">
+                          <svg class="svg-icon select-container__icon">
+                            <use xlink:href="#object-condition"></use>
+                          </svg>
+                          <span class="select-container__text">condition</span>
+                        </label>
+                      </div>
                     </li>
                   </ul>
                 </div>
@@ -774,4 +3160,541 @@
       </div>
     </div>
   </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Select Up</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: lg</p>
+            <div class="component-examle__item-group">
+              <!-- 
+                select--open 클래스 추가시 open
+                select--up 클래스 추가시 컨테이너가 위로 열림
+               -->
+              <div class="select select--up select--lg" style="min-width: 160px; max-width: 230px;">
+                <div class="select-selector">
+                  <button class="select-selector__button" type="button">
+                    <span class="select-selector__title">SelectContentUpSelectContentUpSelectContentUp</span>
+                    <svg class="svg-icon select-selector__icon">
+                      <use xlink:href="#chevron-down-medium"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="select-container">
+                  <ul class="select-container__list">
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">URL 관리</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">권한 설정</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">사본으로 저장</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">정보 변경</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">목록으로 나가기</span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="select select--up select--lg select--disabled" style="min-width: 160px; max-width: 230px;">
+                <div class="select-selector">
+                  <button class="select-selector__button" type="button">
+                    <span class="select-selector__title">SelectContentUpSelectContentUpSelectContentUp</span>
+                    <svg class="svg-icon select-selector__icon">
+                      <use xlink:href="#chevron-down-medium"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="select-container">
+                  <ul class="select-container__list">
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">URL 관리</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">권한 설정</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">사본으로 저장</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">정보 변경</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">목록으로 나가기</span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: md</p>
+            <div class="component-examle__item-group">
+              <!-- select--open 클래스 추가시 open -->
+              <div class="select select--up" style="min-width: 160px; max-width: 230px;">
+                <div class="select-selector">
+                  <button class="select-selector__button" type="button">
+                    <span class="select-selector__title">텍스트 유형</span>
+                    <svg class="svg-icon select-selector__icon">
+                      <use xlink:href="#chevron-down-medium"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="select-container">
+                  <ul class="select-container__list">
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">URL 관리</span>
+                      </button>
+                    </li>
+                    <!-- 선택 된 객체에 select-container__item--selected 클래스 추가 -->
+                    <li class="select-container__item select-container__item--selected">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">권한 설정</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">다른 이름으로 저장</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">정보 변경</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">목록으로 나가기</span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- 비활성 상태 -->
+              <!-- select--open 클래스 추가시 open -->
+              <div class="select select--up select--disabled" style="min-width: 160px; max-width: 230px;">
+                <div class="select-selector">
+                  <button class="select-selector__button" type="button">
+                    <span class="select-selector__title">텍스트 유형</span>
+                    <svg class="svg-icon select-selector__icon">
+                      <use xlink:href="#chevron-down-medium"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="select-container">
+                  <ul class="select-container__list">
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">URL 관리</span>
+                      </button>
+                    </li>
+                    <!-- 선택 된 객체에 select-container__item--selected 클래스 추가 -->
+                    <li class="select-container__item select-container__item--selected">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">권한 설정</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">다른 이름으로 저장</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">정보 변경</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">목록으로 나가기</span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: sm</p>
+            <div class="component-examle__item-group">
+              <div class="select select--up select--sm select--open" style="min-width: 160px; max-width: 230px;">
+                <div class="select-selector">
+                  <button class="select-selector__button" type="button">
+                    <span class="select-selector__title">SelectContent</span>
+                    <svg class="svg-icon select-selector__icon">
+                      <use xlink:href="#chevron-down-medium"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="select-container">
+                  <ul class="select-container__list">
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">URL 관리</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">권한 설정</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">사본으로 저장</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">정보 변경</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">목록으로 나가기</span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="select select--up select--sm select--disabled" style="min-width: 160px; max-width: 230px;">
+                <div class="select-selector">
+                  <button class="select-selector__button" type="button">
+                    <span class="select-selector__title">SelectContent</span>
+                    <svg class="svg-icon select-selector__icon">
+                      <use xlink:href="#chevron-down-medium"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="select-container">
+                  <ul class="select-container__list">
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">URL 관리</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">권한 설정</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">사본으로 저장</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">정보 변경</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">목록으로 나가기</span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Select Right</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: lg</p>
+            <div class="component-examle__item-group">
+              <!-- 
+                select--open 클래스 추가시 open
+                select--right 클래스 추가시 컨테이너가 셀렉트 버튼 기준 오른쪽에서 열림
+               -->
+              <div class="select select--right select--lg" style="min-width: 160px; max-width: 230px;">
+                <div class="select-selector">
+                  <button class="select-selector__button" type="button">
+                    <span class="select-selector__title">SelectContentUpSelectContentUpSelectContentUp</span>
+                    <svg class="svg-icon select-selector__icon">
+                      <use xlink:href="#chevron-down-medium"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="select-container w-260">
+                  <ul class="select-container__list">
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">URL 관리</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">권한 설정</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">사본으로 저장</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">정보 변경</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">목록으로 나가기</span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="select select--right select--lg select--disabled" style="min-width: 160px; max-width: 230px;">
+                <div class="select-selector">
+                  <button class="select-selector__button" type="button">
+                    <span class="select-selector__title">SelectContentUpSelectContentUpSelectContentUp</span>
+                    <svg class="svg-icon select-selector__icon">
+                      <use xlink:href="#chevron-down-medium"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="select-container w-260">
+                  <ul class="select-container__list">
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">URL 관리</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">권한 설정</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">사본으로 저장</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">정보 변경</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">목록으로 나가기</span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: md</p>
+            <div class="component-examle__item-group">
+              <!-- select--open 클래스 추가시 open -->
+              <div class="select select--right" style="min-width: 160px; max-width: 230px;">
+                <div class="select-selector">
+                  <button class="select-selector__button" type="button">
+                    <span class="select-selector__title">텍스트 유형</span>
+                    <svg class="svg-icon select-selector__icon">
+                      <use xlink:href="#chevron-down-medium"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="select-container w-260">
+                  <ul class="select-container__list">
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">URL 관리</span>
+                      </button>
+                    </li>
+                    <!-- 선택 된 객체에 select-container__item--selected 클래스 추가 -->
+                    <li class="select-container__item select-container__item--selected">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">권한 설정</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">다른 이름으로 저장</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">정보 변경</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">목록으로 나가기</span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- 비활성 상태 -->
+              <!-- select--open 클래스 추가시 open -->
+              <div class="select select--right select--disabled" style="min-width: 160px; max-width: 230px;">
+                <div class="select-selector">
+                  <button class="select-selector__button" type="button">
+                    <span class="select-selector__title">텍스트 유형</span>
+                    <svg class="svg-icon select-selector__icon">
+                      <use xlink:href="#chevron-down-medium"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="select-container w-260">
+                  <ul class="select-container__list">
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">URL 관리</span>
+                      </button>
+                    </li>
+                    <!-- 선택 된 객체에 select-container__item--selected 클래스 추가 -->
+                    <li class="select-container__item select-container__item--selected">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">권한 설정</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">다른 이름으로 저장</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">정보 변경</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">목록으로 나가기</span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: sm</p>
+            <div class="component-examle__item-group">
+              <div class="select select--right select--sm select--open" style="min-width: 160px; max-width: 230px;">
+                <div class="select-selector">
+                  <button class="select-selector__button" type="button">
+                    <span class="select-selector__title">SelectContent</span>
+                    <svg class="svg-icon select-selector__icon">
+                      <use xlink:href="#chevron-down-medium"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="select-container w-260">
+                  <ul class="select-container__list">
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">URL 관리</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">권한 설정</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">사본으로 저장</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">정보 변경</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">목록으로 나가기</span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="select select--right select--sm select--disabled" style="min-width: 160px; max-width: 230px;">
+                <div class="select-selector">
+                  <button class="select-selector__button" type="button">
+                    <span class="select-selector__title">SelectContent</span>
+                    <svg class="svg-icon select-selector__icon">
+                      <use xlink:href="#chevron-down-medium"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="select-container w-260">
+                  <ul class="select-container__list">
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">URL 관리</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">권한 설정</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">사본으로 저장</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">정보 변경</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">목록으로 나가기</span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
