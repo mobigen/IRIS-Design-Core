@@ -50,21 +50,12 @@
   justify-content: center;
 }
 
-.pagination__list .text-input {
-  width: rem(32px);
-}
-
 .pagination__ellipsis {
   display: block;
   padding: 0 $spacing-xs;
 }
 
-.input-pagination {
-  display: flex;
-  align-items: center;
-}
-
-.input-pagination__input {
+.pagination__input {
   @include font-weight("medium");
   width: auto;
   height: rem(28px);
@@ -73,12 +64,14 @@
   border-color: transparent;
 }
 
-.input-pagination__dash {
+.pagination__dash {
   @include line-height("heading");
   margin-right: $spacing-2xs;
   margin-left: $spacing-2xs;
 }
 
-.input-pagination__last-page {
+.pagination__last-page {
   @include line-height("heading");
+  margin-right: $spacing-2xs;
+  margin-left: $spacing-2xs;
 }
