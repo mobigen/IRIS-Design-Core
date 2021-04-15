@@ -65,6 +65,11 @@
     @include svg-icon-size(20px);
   }
 
+  .context-submenu__button {
+    @include stable-padding($spacing-2xs, $spacing-sm);
+    height: $button-height-lg;
+  }
+
   .checkbox {
     @include stable-padding($spacing-2xs, $spacing-sm);
     height: $button-height-lg;
@@ -109,6 +114,16 @@
   }
 
   .context-menu__text {
+    @include font-size("12");
+  }
+
+  .context-submenu__button {
+    @include stable-padding($spacing-3xs, $spacing-xs);
+    height: $button-height-sm;
+    line-height: 9px;
+  }
+  
+  .context-submenu__text {
     @include font-size("12");
   }
 }
