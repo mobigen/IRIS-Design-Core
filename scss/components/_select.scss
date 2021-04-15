@@ -221,3 +221,11 @@
     right: 0;
   }
 }
+
+.select--up {
+  .select-container {
+    top: auto;
+    bottom: calc(100% + 2px);
+    box-shadow: 0 0 8px 0 $box-shadow;
+  }
+}
