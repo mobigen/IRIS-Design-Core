@@ -70,6 +70,14 @@
     }
   }
 
+  &__notification {
+    @include stable-padding($spacing-2xs, $spacing-xs);
+    display: flex;
+    flex: 1;
+    height: $button-height-md;
+    cursor: default;
+  }
+
   &__icon {
     vertical-align: middle;
     flex-shrink: 0;
