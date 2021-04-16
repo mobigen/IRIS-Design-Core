@@ -1060,11 +1060,13 @@
 
 .canvas-object--deselect::after {
   background-color: $overlay-02;
+  border: 1px solid green;
   // box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%); //TODO: 디자인 가이드 적용 필요
 }
 
 .canvas-object--select::after {
   background-color: $overlay-02;
+  border: 1px solid red;
   // z-index: 9999;
   // margin: -1px;
 }
