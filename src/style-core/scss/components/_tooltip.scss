@@ -56,28 +56,36 @@
   }
 }
 
-.tooltip--left-bottom {
+.tooltip--top-right {
   .tooltip__arrow {
-    top: -4px;
-    left: 12px;
+    top: calc(100% - 4px);
+    right: 12px;
   }
 }
 
-.tooltip--left-top {
+
+.tooltip--top-left {
   .tooltip__arrow {
     top: calc(100% - 4px);
     left: 12px;
   }
 }
 
-.tooltip--top-left {
+.tooltip--bottom-right {
   .tooltip__arrow {
-    top: rem(8px);
-    right: -4px;
+    top: -4px;
+    right: 12px;
   }
 }
 
-.tooltip--top-right {
+.tooltip--bottom-left {
+  .tooltip__arrow {
+    top: -4px;
+    left: 12px;
+  }
+}
+
+.tooltip--right-top {
   .tooltip__arrow {
     top: rem(8px);
     left: -4px;
@@ -86,29 +94,22 @@
 
 .tooltip--right-bottom {
   .tooltip__arrow {
-    top: -4px;
-    right: 12px;
-  }
-}
-
-.tooltip--right-top {
-  .tooltip__arrow {
-    top: calc(100% - 4px);
-    right: 12px;
-  }
-}
-
-.tooltip--bottom-left {
-  .tooltip__arrow {
     bottom: rem(8px);
+    left: -4px;
+  }
+}
+
+.tooltip--left-top {
+  .tooltip__arrow {
+    top: rem(8px);
     right: -4px;
   }
 }
 
-.tooltip--bottom-right {
+.tooltip--left-bottom {
   .tooltip__arrow {
     bottom: rem(8px);
-    left: -4px;
+    right: -4px;
   }
 }
 
