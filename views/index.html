@@ -6742,15 +6742,6 @@
           <li>체크 박스 + 텍스트</li>
         </ul>
       </li>
-      <li>
-        컨텍스트 메뉴 상태 클래스
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-      </li>
     </ul>
   </div>
 
@@ -6850,7 +6841,7 @@
             <p class="component-example__size-label">Size: md</p>
             <div class="component-examle__item-group">
               <!-- select--open 클래스 추가시 open -->
-              <div class="select" style="min-width: 160px; max-width: 230px;">
+              <div class="select select--open" style="min-width: 160px; max-width: 230px;">
                 <div class="select-selector">
                   <button class="select-selector__button" type="button">
                     <span class="select-selector__title">텍스트 유형</span>
@@ -6886,6 +6877,26 @@
                       <button class="select-container__button" type="button">
                         <span class="select-container__text">목록으로 나가기</span>
                       </button>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="select-container__notification">
+                        <div class="notification-message notification-message--info">
+                          <svg class="notification-message__icon svg-icon">
+                            <use xlink:href="#info-fill"></use>
+                          </svg>
+                          <span class="notification-message__text">데이터가 없습니다</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="select-container__item">
+                      <div class="select-container__notification">
+                        <div class="notification-message notification-message--inline notification-message--loading">
+                          <div class="loader loader--xs">
+                            <div class="loader__spinner"></div>
+                          </div>
+                          <span class="notification-message__text">데이터를 불러오는 중...</span>
+                        </div>
+                      </div>
                     </li>
                   </ul>
                 </div>
@@ -6937,7 +6948,7 @@
           <div class="component-example__row">
             <p class="component-example__size-label">Size: sm</p>
             <div class="component-examle__item-group">
-              <div class="select select--sm select--open" style="min-width: 160px; max-width: 230px;">
+              <div class="select select--sm" style="min-width: 160px; max-width: 230px;">
                 <div class="select-selector">
                   <button class="select-selector__button" type="button">
                     <span class="select-selector__title">SelectContent</span>
