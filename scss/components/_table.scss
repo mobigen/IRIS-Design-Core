@@ -20,7 +20,8 @@
   padding: $spacing-xs $spacing-xs;
   color: $text-02;
   vertical-align: middle;
-  word-break: normal;
+  overflow-wrap: break-word;
+  word-break: keep-all;
   line-height: 1.3;
 }
 
