@@ -114,7 +114,6 @@
   .dynamic-form__form-label-text {
     @include font-weight("regular");
     @include font-size("13");
-    @include line-height("heading");
   }
 
   .form__label-subtext {
