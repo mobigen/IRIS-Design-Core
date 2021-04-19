@@ -20,7 +20,8 @@
   @include line-height("title");
   padding-right: $spacing-2xs;
   color: $text-02;
-  word-break: normal;
+  overflow-wrap: break-word;
+  word-break: keep-all;
 }
 
 @mixin form__detail {
