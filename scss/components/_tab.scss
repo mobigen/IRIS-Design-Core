@@ -107,6 +107,7 @@
 // modifier: horizontal
 // -------------------------
 .tab--horizontal {
+  flex: 1;
   flex-direction: column;
 
   .tab__bar:after {
