@@ -1608,3 +1608,16 @@
   width: rem(20px);
   margin-left: $spacing-sm;
 }
+
+// 조건부 서식 from, to 입력 input
+.from-to-input {
+  display: flex;
+
+  .text-input {
+    width: rem(80px);
+  }
+
+  .text-input + .text-input {
+    margin-left: $spacing-2xs;
+  }
+}
