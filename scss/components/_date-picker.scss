@@ -4,6 +4,7 @@
 
 // dropdown container
 .time-picker-container {
+  z-index: z("overlay");
   .ui-datepicker {
     display: block;
     position: static;
@@ -13,6 +14,7 @@
 }
 
 .date-picker-container {
+  z-index: z("overlay");
   .ui-datepicker {
     display: block;
     position: static;
