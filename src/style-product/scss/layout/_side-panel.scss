@@ -4,6 +4,11 @@
   position: relative;
 }
 
+// TODO: Range 스타일링 후 제거 필요
+.side-panel input[type="range"] {
+  width: 100%;
+}
+
 .side-panel-tab {
   height: 100%;
 }

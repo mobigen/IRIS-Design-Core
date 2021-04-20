@@ -579,7 +579,8 @@
 }
 
 .object-combo-box .select,
-.object-combo-box .select-selector {
+.object-combo-box .select-selector,
+.object-combo-box .select-selector__input {
   width: 100%;
   height: 100%;
 }
@@ -1078,7 +1079,7 @@
 }
 
 .canvas-object--connected {
-  color: $secondary;
+  // color: $secondary;
 
   &::after {
     background-color: rgba($secondary, 0.1);
