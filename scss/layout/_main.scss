@@ -16,3 +16,9 @@ html, body {
   width: 100%;
   overflow: auto;
 }
+
+.service-container section {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
