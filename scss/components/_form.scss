@@ -20,7 +20,8 @@
   @include line-height("title");
   padding-right: $spacing-2xs;
   color: $text-02;
-  word-break: normal;
+  overflow-wrap: break-word;
+  word-break: keep-all;
 }
 
 @mixin form__detail {
@@ -94,9 +95,11 @@
   width: 100%;
 }
 
-.form__detail .text-input + .button {
-  margin-left: $spacing-2xs;
-}
+// h-group으로 대체 하는게 좋을듯 하여 주석처리
+// .form__detail .text-input + .button {
+//   margin-left: $spacing-2xs;
+// }
+
 // -------------------------
 // Size overwrite
 // -------------------------
@@ -219,7 +222,6 @@
 
 .dynamic-form__action-buttons {
   display: flex;
-  align-items: center;
   margin-left: $spacing-3xs;
 }
 
