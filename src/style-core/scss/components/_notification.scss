@@ -81,6 +81,15 @@
   &__text {
     @include line-height("heading");
     @include font-size("24");
+    color: $text-02;
+  }
+
+  &__subtext {
+    @include font-size("18");
+    @include font-weight("light");
+    margin-top: $spacing-lg;
+    color: $text-03;
+    text-align: center;
   }
 
   &--info {
