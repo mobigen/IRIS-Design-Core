@@ -134,15 +134,16 @@
     align-items: flex-start;
     padding: $spacing-sm 0;
 
-    .form__detail-item + .form__detail-item {
-      margin-top: $spacing-sm;
+    & + .form__item {
+      margin-top: $spacing-xs;
     }
   }
 
   .form__label {
     width: 100%;
-    padding: 0;
     height: auto;
+    padding: 0;
+    margin-bottom: $spacing-3xs;
   }
 
   .form__label-subtext {
