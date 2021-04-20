@@ -69,6 +69,21 @@
               </div>
             </div>
           </div>
+          <!-- normal -->
+          <div class="notification-wrap">
+            <div class="notification notification--normal">
+              <svg class="notification__icon svg-icon">
+                <use xlink:href="#subtract"></use>
+              </svg>
+              <div class="notification__contents">
+                <p class="notification__title">Notification Title</p>
+                <p class="notification__text">
+                  Notification Text Here Notification Text Here Notification Text Here Notification Text Here Notification
+                  Text Here Notification Text Here Notification Text Here Notification Text Here.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -128,6 +143,24 @@
           <div class="notification notification--error">
             <svg class="notification__icon svg-icon">
               <use xlink:href="#issue-fill"></use>
+            </svg>
+            <div class="notification__contents">
+              <p class="notification__title">Notification Title</p>
+              <p class="notification__text">
+                Notification Text Here Notification Text Here Notification Text Here Notification Text Here Notification
+                Text Here Notification Text Here Notification Text Here Notification Text Here.
+              </p>
+            </div>
+            <button class="notification__close-button">
+              <svg class="svg-icon">
+                <use xlink:href="#close"></use>
+              </svg>
+            </button>
+          </div>
+          <!-- normal -->
+          <div class="notification notification--normal">
+            <svg class="notification__icon svg-icon">
+              <use xlink:href="#subtract"></use>
             </svg>
             <div class="notification__contents">
               <p class="notification__title">Notification Title</p>
@@ -236,4 +269,50 @@
       </div>
     </div>
   </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Full</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <!-- info -->
+          <div class="notification-full notification-full--info">
+            <svg class="notification-full__icon svg-icon">
+              <use xlink:href="#info-fill"></use>
+            </svg>
+            <span class="notification-full__text">정보 메세지를 입력해주세요.</span>
+          </div>
+          <!-- success -->
+          <div class="notification-full notification-full--success">
+            <svg class="notification-full__icon svg-icon">
+              <use xlink:href="#checkmark-fill"></use>
+            </svg>
+            <span class="notification-full__text">성공 메세지를 입력해주세요.</span>
+          </div>
+          <!-- warning -->
+          <div class="notification-full notification-full--warning">
+            <svg class="notification-full__icon svg-icon">
+              <use xlink:href="#warning-fill"></use>
+            </svg>
+            <span class="notification-full__text">경고 메세지를 입력해주세요.</span>
+          </div>
+          <!-- error -->
+          <div class="notification-full notification-full--error">
+            <svg class="notification-full__icon svg-icon">
+              <use xlink:href="#issue-fill"></use>
+            </svg>
+            <span class="notification-full__text">에러 메세지를 입력해주세요.</span>
+          </div>
+          <!-- loading -->
+          <div class="notification-full notification-full--loading">
+            <div class="loader loader--md">
+              <div class="loader__spinner"></div>
+            </div>
+            <span class="notification-full__text">로딩 중 메세지를 입력해주세요.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
