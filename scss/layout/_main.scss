@@ -1,16 +1,18 @@
-.top-content{
-  padding: 15px;
-  background-color: $ui-01;
+html, body {
+  height: 100%;
 }
 
-.title{
-  display: block;
-  font-size: 18px;
-  font-weight: bold;
+.service-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
 }
 
-.text{
-  display: block;
-  font-size: 15px;
-  color: $text-03;
+.service-content {
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
 }
