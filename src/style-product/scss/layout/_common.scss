@@ -1,19 +1,7 @@
-html, body {
-  height: 100%;
-}
-
 .content-wrap {
   width: 1200px;
   margin: 30px auto;
   height: auto;
-}
-
-.service-container {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  height: 100%;
-  overflow: hidden;
 }
 
 // TODO: section 태그 꼭 있어야 하는가?
@@ -21,11 +9,4 @@ html, body {
   display: flex;
   flex-direction: column;
   height: 100%;
-}
-
-.service-content {
-  flex: 1;
-  height: 100%;
-  width: 100%;
-  overflow: auto;
 }
