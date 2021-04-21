@@ -1083,8 +1083,6 @@
 }
 
 .canvas-object--connected {
-  // color: $secondary;
-
   &::after {
     background-color: rgba($secondary, 0.1);
     border: 1px solid $secondary;
@@ -1093,6 +1091,10 @@
 
   .object-hidden__icon {
     fill: $secondary;
+  }
+
+  .object-hidden__text {
+    color: $secondary;
   }
 }
 
