@@ -75,6 +75,10 @@
   padding-bottom: $spacing-xl;
 }
 
+.motion-chart .chart {
+  margin-top: $spacing-md;
+}
+
 // grid
 .object-area__pagination {
   margin-top: $spacing-2xs;
@@ -1621,4 +1625,32 @@
   .text-input + .text-input {
     margin-left: $spacing-2xs;
   }
+}
+
+.ima-line-style {
+  display: inline-block;
+  background: url("#{$img-path}/studio/img-ima-line-style.png") no-repeat 0 0;
+  width: 100%;
+  height: rem(20px);
+  vertical-align: middle;
+}
+
+.ima-line-style.line-dotted-dual {
+  background-position: 0 0;
+}
+
+.ima-line-style.line-dotted-lg {
+  background-position: 0 -20px;
+}
+
+.ima-line-style.line-dotted-md {
+  background-position: 0 -40px;
+}
+
+.ima-line-style.line-dotted-sm {
+  background-position: 0 -60px;
+}
+
+.ima-line-style.line-flat {
+  background-position: 0 -80px;
 }
