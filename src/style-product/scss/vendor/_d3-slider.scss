@@ -1,7 +1,59 @@
+.motion-chart text {
+  color: $text-01;
+}
+
+.motion-chart .axis path,
+.motion-chart .axis line {
+  fill: none;
+  stroke: $ui-04;
+  shape-rendering: crispEdges;
+}
+
+.motion-chart .axis path.domain {
+  stroke: $ui-04;
+  shape-rendering: inherit;
+}
+
+.motion-chart .circles > circle {
+  opacity: 0.8;
+  stroke: $text-02;
+  stroke-width: 1px;
+}
+
+.motion-chart .circles > circle:hover {
+  opacity: 1;
+  stroke: $text-02;
+  stroke-width: 3px;
+}
+
+.motion-chart .chart-tooltip {
+  @include layer("pop-out");
+  position: absolute;
+  visibility: visible;
+  padding: 15px;
+  pointer-events: none;
+  border: 1px solid $ui-01;
+  border-radius: 4px;
+  background-color: $ui-02;
+  font-size: 12px;
+  line-height: 1.4;
+  filter: alpha(opacity=0); /*opacity:0;*/
+}
+
+.motion-chart .chart-tooltip > table > tbody > tr > td {
+  height: 22px;
+  vertical-align: middle;
+}
+
+.motion-chart .chart-tooltip > table > tbody > tr > td.data-key {
+  padding-right: 20px;
+  text-transform: capitalize;
+}
+
 .motion-slider {
   height: rem(4px);
   border: 0;
-  background-color: $ui-03;
+  background-color: $ui-04;
   z-index: 0;
 }
 
@@ -12,4 +64,12 @@
   height: 21px;
   background-color: $ui-02;
   border: 1px solid $ui-04;
+
+  &:active {
+    cursor: move;
+  }
+}
+
+.d3-slider-horizontal .d3-slider-handle {
+  top: -9px;
 }
