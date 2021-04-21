@@ -156,7 +156,16 @@
     width: 100%;
   }
 
+  .accordion {
+    border-color: $ui-04;
+  }
+
   .accordion__head {
     background-color: darken($hover-row, 1%);
+    border-bottom-color: $ui-04;
+  }
+
+  .accordion__body {
+    border-bottom-color: $ui-04;
   }
 }
