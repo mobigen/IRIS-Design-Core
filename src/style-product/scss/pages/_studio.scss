@@ -1065,13 +1065,11 @@
 
 .canvas-object--deselect::after {
   background-color: $overlay-02;
-  border: 1px solid green;
   // box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%); //TODO: 디자인 가이드 적용 필요
 }
 
 .canvas-object--select::after {
   background-color: $overlay-02;
-  border: 1px solid red;
   // z-index: 9999;
   // margin: -1px;
 }
@@ -1079,7 +1077,7 @@
 .canvas-object--unconnected::after {
   background-color: $overlay-02;
   // NOTE: editor 객체에서 리사이즈 박스보다 위에 뜨는 문제로 10 -> 4로 수정
-  z-index: 4; // TODO: z-index function 적용
+  z-index: 6; // TODO: z-index function 적용
 }
 
 .canvas-object--connected {
@@ -1631,7 +1629,7 @@
 
 .ima-line-style {
   display: inline-block;
-  background: url("#{$img-path}/studio/img-ima-line-style.png") no-repeat 0 0;
+  background: url("#{$img-path}/studio/img_ima-line-style.png") no-repeat 0 0;
   width: 100%;
   height: rem(20px);
   vertical-align: middle;
@@ -1655,4 +1653,151 @@
 
 .ima-line-style.line-flat {
   background-position: 0 -80px;
+}
+
+.ima-flag {
+  display: inline-block;
+  background: url("#{$img-path}/studio/icon_ima-flag.png") no-repeat 0 0;
+  width: rem(20px);
+  height: rem(20px);
+  vertical-align: middle;
+}
+.ima-flag.flag-1 {
+  background-position: 0 0;
+}
+
+.ima-flag.flag-2 {
+  background-position: -20px 0;
+}
+
+.ima-flag.flag-3 {
+  background-position: -40px 0;
+}
+
+.ima-flag.flag-4 {
+  background-position: -60px 0;
+}
+
+.ima-flag.flag-5 {
+  background-position: -80px 0;
+}
+
+.ima-flag.flag-6 {
+  background-position: -100px 0;
+}
+
+.ima-flag.flag-7 {
+  background-position: -120px 0;
+}
+
+.ima-flag.flag-8 {
+  background-position: 0 -20px;
+}
+
+.ima-flag.flag-9 {
+  background-position: -20px -20px;
+}
+
+.ima-flag.flag-10 {
+  background-position: -40px -20px;
+}
+
+.ima-flag.flag-11 {
+  background-position: -60px -20px;
+}
+
+.ima-flag.flag-12 {
+  background-position: -80px -20px;
+}
+
+.ima-flag.flag-13 {
+  background-position: -100px -20px;
+}
+
+.ima-flag.flag-14 {
+  background-position: -120px -20px;
+}
+
+.ima-flag.flag-15 {
+  background-position: 0 -40px;
+}
+
+.ima-flag.flag-16 {
+  background-position: -20px -40px;
+}
+
+.ima-flag.flag-17 {
+  background-position: -40px -40px;
+}
+
+.ima-flag.flag-18 {
+  background-position: -60px -40px;
+}
+
+.ima-flag.flag-19 {
+  background-position: -80px -40px;
+}
+
+.ima-flag.flag-20 {
+  background-position: -100px -40px;
+}
+
+.ima-flag.flag-21 {
+  background-position: -120px -40px;
+}
+
+.ima-flag.flag-22 {
+  background-position: 0 -60px;
+}
+
+.ima-flag.flag-23 {
+  background-position: -20px -60px;
+}
+
+.ima-flag.flag-24 {
+  background-position: -40px -60px;
+}
+
+.ima-flag.flag-25 {
+  background-position: -60px -60px;
+}
+
+.ima-flag.flag-26 {
+  background-position: -80px -60px;
+}
+
+.ima-flag.flag-27 {
+  background-position: -100px -60px;
+}
+
+.ima-flag.flag-28 {
+  background-position: -120px -60px;
+}
+
+.ima-flag.flag-29 {
+  background-position: 0 -80px;
+}
+
+.ima-flag.flag-30 {
+  background-position: -20px -80px;
+}
+
+.ima-flag.flag-31 {
+  background-position: -40px -80px;
+}
+
+.ima-flag.flag-32 {
+  background-position: -60px -80px;
+}
+
+.ima-flag.flag-33 {
+  background-position: -80px -80px;
+}
+
+.ima-flag.flag-34 {
+  background-position: -100px -80px;
+}
+
+.ima-flag.flag-35 {
+  background-position: -120px -80px;
 }
