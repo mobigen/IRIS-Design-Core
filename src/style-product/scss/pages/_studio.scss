@@ -1801,3 +1801,90 @@
 .ima-flag.flag-35 {
   background-position: -120px -80px;
 }
+
+.period-setting {
+  width: rem(320px);
+}
+
+.preset-period {
+  padding: $spacing-lg 0;
+}
+
+.preset-period__col + .preset-period__col {
+  border-left: 1px solid $ui-04;
+}
+
+.preset-period__list {
+  padding: 0 $spacing-lg;
+}
+
+.preset-period__list + .preset-period__list {
+  margin-top: $spacing-sm;
+}
+
+.preset-period__item:not(:last-child) {
+  margin-bottom: $spacing-2xs;
+}
+
+.preset-period__link {
+  text-decoration: none;
+}
+
+.preset-period__link--selected {
+  text-decoration: underline;
+  color: $secondary;
+}
+
+.date-time-range {
+  display: flex;
+  flex-wrap: wrap;
+  padding: $spacing-md;
+
+  .date-picker-panel {
+    width: 100%;
+    padding: $spacing-xs $spacing-sm $spacing-sm;
+    background-color: rgba($secondary, 0.15);
+    border-radius: 0 0 $field-border-radius $field-border-radius;
+  }
+
+  .ui-datepicker {
+    display: block;
+    position: static;
+    border: none;
+    box-shadow: none;
+    width: auto;
+  }
+}
+
+.date-time-range__dates {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  width: 45%;
+  padding: $spacing-xs;
+}
+
+.date-time-range__dates--selected {
+  background-color: rgba($secondary, 0.15);
+  border-radius: $field-border-radius $field-border-radius 0 0;
+
+  .date-time-range__title {
+    color: $primary;
+  }
+}
+
+.date-time-range__title {
+  margin-right: $spacing-2xs;
+  margin-bottom: $spacing-2xs;
+}
+
+.date-time-range__text-area {
+  min-width: rem(100px);
+  max-height: rem(48px);
+  resize: none;
+}
+
+.date-time-range__icon {
+  align-self: center;
+  margin: 0 $spacing-2xs;
+}
