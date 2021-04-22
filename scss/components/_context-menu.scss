@@ -47,6 +47,38 @@
   display: block;
 }
 
+.context-menu__head {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  height: $button-height-md;
+  padding: $spacing-2xs $spacing-sm;
+  background-color: $hover-row;
+}
+
+.context-menu__head-title {
+  @include text-overflow;
+  @include font-size("14");
+  @include font-weight("medium");
+  flex: 1;
+  text-align: left;
+  color: $text-02;
+}
+
+.context-menu__foot {
+  @include stable-padding($spacing-xs, $spacing-sm);
+  display: flex;
+  background-color: $ui-01;
+}
+
+.context-menu__foot-main-buttons {
+  display: flex;
+  margin-left: auto;
+}
+
+.context-menu__foot .button + .button {
+  margin-left: $spacing-xs;
+}
 // -------------------------
 // Size overwrite
 // -------------------------

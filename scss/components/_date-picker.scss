@@ -50,6 +50,7 @@
 
 .date-picker-panel__foot {
   padding: 0 $spacing-xs $spacing-sm $spacing-xs;
+  background-color: $ui-02;
 
   .time-picker-selector {
     width: 100%;
@@ -126,6 +127,10 @@
   border-color: $text-03;
   border-style: solid;
   content: "";
+}
+.ui-datepicker-prev.ui-state-hover,
+.ui-datepicker-next.ui-state-hover {
+  background-color: transparent;
 }
 .ui-datepicker-prev::after {
   border-width: 1px 0 0 1px;
