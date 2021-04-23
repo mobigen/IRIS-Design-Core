@@ -1,4 +1,5 @@
 .accordion {
+  border: 1px solid $hover-row;
 }
 
 .accordion-vertical {
@@ -10,8 +11,8 @@
   width: rem(400px);
 }
 
-.accordion-container+.accordion-container .accordion__head {
-  border-top: transparent;
+.accordion__item:last-child .accordion__body {
+  border-bottom: 0;
 }
 
 .accordion__head {
@@ -19,9 +20,8 @@
   justify-content: flex-start;
   width: 100%;
   height: $button-height-md;
-  padding: $spacing-2xs $spacing-sm;
+  padding: $spacing-2xs $spacing-xs;
   background-color: $ui-01;
-  border: 1px solid $hover-row;
 }
 
 .accordion__head-icon {
@@ -38,7 +38,7 @@
   color: $text-02;
 }
 
-.accordion__head-icon+.accordion__head-title {
+.accordion__head-icon + .accordion__head-title {
   margin-left: $spacing-2xs;
 }
 
@@ -49,12 +49,7 @@
 .accordion__body {
   display: none;
   background-color: $ui-02;
-}
-
-.accordion-vertical__list,
-.accordion-horizontal__list {
-  border: 1px solid $hover-row;
-  border-top: transparent;
+  border-bottom: 1px solid $hover-row;
 }
 
 .accordion-vertical__text {
@@ -63,7 +58,7 @@
   margin: 0;
 }
 
-.accordion-vertical__item+.accordion-vertical__item {
+.accordion-vertical__item + .accordion-vertical__item {
   border-top: 1px solid $hover-row;
 }
 
@@ -78,6 +73,6 @@
   transform: rotate(180deg);
 }
 
-.accordion__head--open+.accordion__body {
+.accordion__head--open + .accordion__body {
   display: block;
 }
