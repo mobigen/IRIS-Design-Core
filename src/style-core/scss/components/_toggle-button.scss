@@ -72,9 +72,10 @@
   &--disabled,
   &--disabled:hover,
   &--disabled:focus {
-    background-color: $ui-02;
+    background-color: $ui-02 !important;
     opacity: 0.5;
     color: $text-02;
+    cursor: not-allowed;
 
     .svg-icon {
       fill: $text-02;
