@@ -67,6 +67,12 @@
   @include form__detail;
 }
 
+.form__detail-item {
+  & + & {
+    margin-top: $spacing-sm;
+  }
+}
+
 .form__detail-helper-text {
   @include font-size("12");
   @include line-height("heading");
