@@ -10,7 +10,13 @@
 }
 
 .tab__item {
+  @include stable-padding(0, $spacing-sm);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   position: relative;
+  width: 100%;
+  height: $button-height-lg;
   background-color: $ui-02;
   transition-duration: $duration-fast-02;
   transition-timing-function: ease-in-out;
@@ -37,9 +43,8 @@
 }
 
 .tab__item--disabled {
-  opacity: 0.6;
-
   .tab__button {
+    opacity: 0.6;
     cursor: not-allowed;
   }
 
@@ -47,22 +52,15 @@
     .tab__button-text {
       color: $text-02;
     }
-    .tab__remove-button {
-      background-color: transparent;
-    }
-    .tab__remove-button:active {
-      background-color: transparent;
-      fill: $icon-01;
-    }
   }
 }
 
 .tab__button {
   @include button-normal;
-  @include stable-padding(0, $spacing-sm);
-  width: 100%;
-  height: $button-height-lg;
+  flex: 1;
+  height: 100%;
   background-color: transparent;
+  padding: 0;
 }
 
 .tab__button-text {
@@ -87,9 +85,11 @@
 }
 
 .tab__remove-button {
-  width: 14px;
-  height: 14px;
-  margin-left: $spacing-3xs;
+  @include button-normal;
+  background-color: $ui-02;
+  width: rem(18px);
+  height: rem(18px);
+  margin-left: $spacing-2xs;
   border-radius: $field-border-radius;
   fill: $icon-01;
 
@@ -99,7 +99,10 @@
 
   &:active {
     background-color: $hover-row;
-    fill: $primary;
+
+    .svg-icon {
+      fill: $primary;
+    }
   }
 }
 
@@ -209,6 +212,7 @@
   }
 
   .tab__button-text {
+    margin-top: 2px;
     color: rgba($text-04, 0.85);
   }
 
