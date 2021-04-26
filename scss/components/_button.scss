@@ -289,5 +289,5 @@
 
 .button--icon.button--link.button--xs {
   @include button--icon(1px, 16px);
-  height: 16px;
+  // height: 16px;
 }
