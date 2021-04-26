@@ -958,6 +958,73 @@
   height: 100%;
 }
 
+.canvas-object {
+  .tab {
+    width: 100%;
+    height: 100%;
+  }
+
+  .tab__bar {
+    width: 100%;
+    height: 100%;
+  }
+
+  .tab__button {
+    width: 100%;
+    height: 100%;
+  }
+
+  .tab--container {
+    .tab__item {
+      height: 100%;
+      border: 0;
+      background-color: $hover-row;
+
+      &:hover {
+        .tab__button-text {
+          color: $text-03;
+        }
+      }
+    }
+
+    .tab__button-text {
+      color: $ui-03;
+    }
+
+    .tab__item--selected {
+      background-color: $ui-03;
+
+      .tab__button-text {
+        color: $text-04;
+      }
+
+      &:hover {
+        background-color: $ui-03;
+
+        .tab__button-text {
+          color: $text-04;
+        }
+      }
+    }
+  }
+
+  .tab--horizontal.tab--container {
+    .tab__item {
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+      border: 0;
+    }
+  }
+
+  .tab--vertical {
+    .tab__item {
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+    }
+  }
+}
+
+
 // -------------------------
 // canvas-object status
 // -------------------------
