@@ -2332,36 +2332,39 @@
           </div>
           <!-- // 텍스트 변환 객체 - hidden-input  -->
 
-
           <!-- 보고서 가져오기(팝업) -->
           <p style="position: absolute; top: 1380px; left: 50px;">보고서 가져오기(팝업)</p>
           <div class="canvas-object object-hidden" style="top: 1400px; left: 50px; width: 200px; height: 50px;">
-            <svg class="object-hidden__icon svg-icon">
-              <use xlink:href="#object-popup"></use>
-            </svg>
-            <div class="object-hidden__text">
-              <span>Popup</span>
-            </div>
-            <button class="object-hidden__popout-button button button--link" type="button">
-              <svg class="svg-icon">
-                <use xlink:href="#popout"></use>
+            <div class="object-hidden__inner">
+              <svg class="object-hidden__icon svg-icon">
+                <use xlink:href="#object-popup"></use>
               </svg>
-            </button>
+              <div class="object-hidden__text">
+                <span>Popup</span>
+              </div>
+              <button class="object-hidden__popout-button button button--link" type="button">
+                <svg class="svg-icon">
+                  <use xlink:href="#popout"></use>
+                </svg>
+              </button>
+            </div>
           </div>
 
           <p style="position: absolute; top: 1380px; left: 260px;">박스 클릭 상태 <span class="highlight">.canvas-object--active</span></p>
           <div class="canvas-object object-hidden canvas-object--active" style="top: 1400px; left: 260px; width: 200px; height: 50px;">
-            <svg class="object-hidden__icon svg-icon">
-              <use xlink:href="#object-popup"></use>
-            </svg>
-            <div class="object-hidden__text">
-              <span>PopupPopupPopupPopupPopupPopup</span>
-            </div>
-            <button class="object-hidden__popout-button button button--link" type="button">
-              <svg class="svg-icon">
-                <use xlink:href="#popout"></use>
+            <div class="object-hidden__inner">
+              <svg class="object-hidden__icon svg-icon">
+                <use xlink:href="#object-popup"></use>
               </svg>
-            </button>
+              <div class="object-hidden__text">
+                <span>PopupPopupPopupPopupPopupPopup</span>
+              </div>
+              <button class="object-hidden__popout-button button button--link" type="button">
+                <svg class="svg-icon">
+                  <use xlink:href="#popout"></use>
+                </svg>
+              </button>
+            </div>
             <!-- 크기 조절 상자 -->
             <span class="tl"></span>
             <span class="tc"></span>
@@ -2377,91 +2380,103 @@
           <p style="position: absolute; top: 1380px; left: 470px;">불러오기로 데이터에 연결된 상태<span class="highlight">.loaded</span></p>
           <!-- NOTE: 데이터 연결시 object-hidden--loaded 클래스 추가 -->
           <div class="canvas-object object-hidden object-hidden--loaded" style="top: 1400px; left: 470px; width: 200px; height: 50px;">
-            <svg class="object-hidden__icon svg-icon">
-              <use xlink:href="#object-popup"></use>
-            </svg>
-            <div class="object-hidden__text">
-              <span>PopupPopupPopupPopupPopupPopup</span>
-            </div>
-            <button class="object-hidden__popout-button button button--link" type="button">
-              <svg class="svg-icon">
-                <use xlink:href="#popout"></use>
+            <div class="object-hidden__inner object-hidden__inner--loaded">
+              <svg class="object-hidden__icon svg-icon">
+                <use xlink:href="#object-popup"></use>
               </svg>
-            </button>
+              <div class="object-hidden__text">
+                <span>PopupPopupPopupPopupPopupPopup</span>
+              </div>
+              <button class="object-hidden__popout-button button button--link" type="button">
+                <svg class="svg-icon">
+                  <use xlink:href="#popout"></use>
+                </svg>
+              </button>
+            </div>
           </div>
 
           <p style="position: absolute; top: 1380px; left: 680px;">보고서 연결 실패 상태</p>
           <!-- NOTE: 데이터 연결시 object-hidden--loaded 클래스 추가 -->
           <div class="canvas-object object-hidden object-visible" style="top: 1400px; left: 680px; width: 200px; height: 50px;">
-            <div class="notification-message notification-message--error">
-              <svg class="notification-message__icon svg-icon">
-                <use xlink:href="#issue-fill"></use>
-              </svg>
-              <span class="notification-message__text">보고서가 존재하지 않습니다</span>
+            <div class="object-hidden__inner">
+              <div class="notification-message notification-message--error">
+                <svg class="notification-message__icon svg-icon">
+                  <use xlink:href="#issue-fill"></use>
+                </svg>
+                <span class="notification-message__text">보고서가 존재하지 않습니다</span>
+              </div>
             </div>
           </div>
 
           <p style="position: absolute; top: 1380px; left: 890px;">연결 상태 <span class="highlight">.canvas-object--connected</span></p>
-          <!-- NOTE: 데이터 연결시 object-hidden--loaded 클래스 추가 -->
           <div class="canvas-object object-hidden object-hidden--loaded canvas-object--connected" style="top: 1400px; left: 890px; width: 200px; height: 50px;">
-            <svg class="object-hidden__icon svg-icon">
-              <use xlink:href="#object-popup"></use>
-            </svg>
-            <div class="object-hidden__text">
-              <span>Popup</span>
-            </div>
-            <button class="object-hidden__popout-button button button--link" type="button">
-              <svg class="svg-icon">
-                <use xlink:href="#popout"></use>
+            <!-- NOTE: 데이터 연결시 object-hidden--loaded 클래스 추가 -->
+            <div class="object-hidden__inner object-hidden__inner--loaded">
+              <svg class="object-hidden__icon svg-icon">
+                <use xlink:href="#object-popup"></use>
               </svg>
-            </button>
+              <div class="object-hidden__text">
+                <span>Popup</span>
+              </div>
+              <button class="object-hidden__popout-button button button--link" type="button">
+                <svg class="svg-icon">
+                  <use xlink:href="#popout"></use>
+                </svg>
+              </button>
+            </div>
           </div>
 
           <p style="position: absolute; top: 1380px; left: 1100px;">미연결 상태 <span class="highlight">.canvas-object--unconnected</span></p>
-          <!-- NOTE: 데이터 연결시 object-hidden--loaded 클래스 추가 -->
           <div class="canvas-object object-hidden object-hidden--loaded canvas-object--unconnected" style="top: 1400px; left: 1100px; width: 200px; height: 50px;">
-            <svg class="object-hidden__icon svg-icon">
-              <use xlink:href="#object-popup"></use>
-            </svg>
-            <div class="object-hidden__text">
-              <span>Popup</span>
-            </div>
-            <button class="object-hidden__popout-button button button--link" type="button">
-              <svg class="svg-icon">
-                <use xlink:href="#popout"></use>
+            <!-- NOTE: 데이터 연결시 object-hidden--loaded 클래스 추가 -->
+            <div class="object-hidden__inner object-hidden__inner--loaded">
+              <svg class="object-hidden__icon svg-icon">
+                <use xlink:href="#object-popup"></use>
               </svg>
-            </button>
+              <div class="object-hidden__text">
+                <span>Popup</span>
+              </div>
+              <button class="object-hidden__popout-button button button--link" type="button">
+                <svg class="svg-icon">
+                  <use xlink:href="#popout"></use>
+                </svg>
+              </button>
+            </div>
           </div>
           <!-- // 보고서 가져오기(팝업) -->
 
           <!-- 보고서 가져오기(포틀릿) -->
           <p style="position: absolute; top: 1470px; left: 50px;">보고서 가져오기(포틀릿)</p>
           <div class="canvas-object object-hidden object-visible" style="top: 1490px; left: 50px; width: 200px; height: 50px;">
-            <svg class="object-hidden__icon svg-icon">
-              <use xlink:href="#object-portlet"></use>
-            </svg>
-            <div class="object-hidden__text">
-              <span>Portlet</span>
-            </div>
-            <button class="object-hidden__popout-button button button--link" type="button">
-              <svg class="svg-icon">
-                <use xlink:href="#popout"></use>
+            <div class="object-hidden__inner">
+              <svg class="object-hidden__icon svg-icon">
+                <use xlink:href="#object-portlet"></use>
               </svg>
-            </button>
+              <div class="object-hidden__text">
+                <span>Portlet</span>
+              </div>
+              <button class="object-hidden__popout-button button button--link" type="button">
+                <svg class="svg-icon">
+                  <use xlink:href="#popout"></use>
+                </svg>
+              </button>
+            </div>
           </div>
           <!-- 박스 클릭 시 사이즈 조절 박스 활성화 -->
           <div class="canvas-object object-hidden object-visible canvas-object--active" style="top: 1490px; left: 260px; width: 200px; height: 50px;">
-            <svg class="object-hidden__icon svg-icon">
-              <use xlink:href="#object-portlet"></use>
-            </svg>
-            <div class="object-hidden__text">
-              <span>Portlet</span>
-            </div>
-            <button class="object-hidden__popout-button button button--link" type="button">
-              <svg class="svg-icon">
-                <use xlink:href="#popout"></use>
+            <div class="object-hidden__inner">
+              <svg class="object-hidden__icon svg-icon">
+                <use xlink:href="#object-portlet"></use>
               </svg>
-            </button>
+              <div class="object-hidden__text">
+                <span>Portlet</span>
+              </div>
+              <button class="object-hidden__popout-button button button--link" type="button">
+                <svg class="svg-icon">
+                  <use xlink:href="#popout"></use>
+                </svg>
+              </button>
+            </div>
             <!-- 크기 조절 상자 -->
             <span class="tl"></span>
             <span class="tc"></span>
@@ -2475,13 +2490,108 @@
           </div>
 
           <p style="position: absolute; top: 1470px; left: 470px;">불러오기로 데이터에 연결된 상태<span class="highlight">.loaded</span></p>
-          <!-- NOTE: 데이터 연결시 object-hidden--loaded 클래스 추가 -->
-          <div class="canvas-object object-hidden object-visible object-hidden--loaded" style="top: 1490px; left: 470px; width: 200px; height: 50px;">
+          
+          <div class="canvas-object object-hidden object-visible" style="top: 1490px; left: 470px; width: 200px; height: 50px;">
+            <!-- NOTE: 데이터 연결시 object-hidden__inner--loaded 클래스 추가 -->
+            <div class="object-hidden__inner object-hidden__inner--loaded">
+              <svg class="object-hidden__icon svg-icon">
+                <use xlink:href="#object-portlet"></use>
+              </svg>
+              <div class="object-hidden__text">
+                <span>PortletPortletPortletPortletPortlet</span>
+              </div>
+              <button class="object-hidden__popout-button button button--link" type="button">
+                <svg class="svg-icon">
+                  <use xlink:href="#popout"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <p style="position: absolute; top: 1470px; left: 680px;">보고서 연결 실패 상태</p>
+          <div class="canvas-object object-hidden object-visible" style="top: 1490px; left: 680px; width: 200px; height: 50px;">
+            <div class="object-hidden__inner">
+              <div class="notification-message notification-message--error">
+                <svg class="notification-message__icon svg-icon">
+                  <use xlink:href="#issue-fill"></use>
+                </svg>
+                <span class="notification-message__text">보고서가 존재하지 않습니다</span>
+              </div>
+            </div>
+          </div>
+
+          <p style="position: absolute; top: 1470px; left: 890px;">연결 상태 <span class="highlight">.canvas-object--connected</span></p>
+          <div class="canvas-object object-hidden object-visible object-hidden--loaded canvas-object--connected" style="top: 1490px; left: 890px; width: 200px; height: 50px;">
+            <div class="object-hidden__inner object-hidden__inner--loaded">
+              <svg class="object-hidden__icon svg-icon">
+                <use xlink:href="#object-portlet"></use>
+              </svg>
+              <div class="object-hidden__text">
+                <span>Portlet</span>
+              </div>
+              <button class="object-hidden__popout-button button button--link" type="button">
+                <svg class="svg-icon">
+                  <use xlink:href="#popout"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <p style="position: absolute; top: 1470px; left: 1100px;">미연결 상태 <span class="highlight">.canvas-object--unconnected</span></p>
+          <div class="canvas-object object-hidden object-visible object-hidden--loaded canvas-object--unconnected" style="top: 1490px; left: 1100px; width: 200px; height: 50px;">
+            <div class="object-hidden__inner">
+              <svg class="object-hidden__icon svg-icon">
+                <use xlink:href="#object-portlet"></use>
+              </svg>
+              <div class="object-hidden__text">
+                <span>Portlet</span>
+              </div>
+              <button class="object-hidden__popout-button button button--link" type="button">
+                <svg class="svg-icon">
+                  <use xlink:href="#popout"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <!-- // 보고서 가져오기(포틀릿) -->
+
+          <!-- 조건 검사 -->
+          <p style="position: absolute; top: 1560px; left: 50px;">조건 검사</p>
+          <div class="canvas-object object-hidden object-visible" style="top: 1580px; left: 50px; width: 200px; height: 50px;">
             <svg class="object-hidden__icon svg-icon">
-              <use xlink:href="#object-portlet"></use>
+              <use xlink:href="#object-condition"></use>
             </svg>
             <div class="object-hidden__text">
-              <span>PortletPortletPortletPortletPortlet</span>
+              <span>Condition</span>
+            </div>
+          </div>
+          <!-- 박스 클릭 시 사이즈 조절 박스 활성화 -->
+          <div class="canvas-object object-hidden object-visible canvas-object--active" style="top: 1580px; left: 260px; width: 200px; height: 50px;">
+            <svg class="object-hidden__icon svg-icon">
+              <use xlink:href="#object-condition"></use>
+            </svg>
+            <div class="object-hidden__text">
+              <span>Condition</span>
+            </div>
+            <!-- 크기 조절 상자 -->
+            <span class="tl"></span>
+            <span class="tc"></span>
+            <span class="tr"></span>
+            <span class="cl"></span>
+            <span class="cr"></span>
+            <span class="bl"></span>
+            <span class="bc"></span>
+            <span class="br"></span>
+            <!-- //크기 조절 상자 -->
+          </div>
+
+          <p style="position: absolute; top: 1560px; left: 470px;">불러오기로 데이터에 연결된 상태<span class="highlight">.loaded</span></p>
+          <div class="canvas-object object-hidden object-visible object-hidden--loaded" style="top: 1580px; left: 470px; width: 200px; height: 50px;">
+            <svg class="object-hidden__icon svg-icon">
+              <use xlink:href="#object-condition"></use>
+            </svg>
+            <div class="object-hidden__text">
+              <span>Condition Condition Condition Condition</span>
             </div>
             <button class="object-hidden__popout-button button button--link" type="button">
               <svg class="svg-icon">
@@ -2490,9 +2600,8 @@
             </button>
           </div>
 
-          <p style="position: absolute; top: 1470px; left: 680px;">보고서 연결 실패 상태</p>
-          <!-- NOTE: 데이터 연결시 object-hidden--loaded 클래스 추가 -->
-          <div class="canvas-object object-hidden object-visible" style="top: 1490px; left: 680px; width: 200px; height: 50px;">
+          <p style="position: absolute; top: 1560px; left: 680px;">보고서 연결 실패 상태</p>
+          <div class="canvas-object object-hidden object-visible" style="top: 1580px; left: 680px; width: 200px; height: 50px;">
             <div class="notification-message notification-message--error">
               <svg class="notification-message__icon svg-icon">
                 <use xlink:href="#issue-fill"></use>
@@ -2501,40 +2610,101 @@
             </div>
           </div>
 
-          <p style="position: absolute; top: 1470px; left: 890px;">연결 상태 <span class="highlight">.canvas-object--connected</span></p>
-          <div class="canvas-object object-hidden object-visible object-hidden--loaded canvas-object--connected" style="top: 1490px; left: 890px; width: 200px; height: 50px;">
+          <p style="position: absolute; top: 1560px; left: 890px;">연결 상태 <span class="highlight">.canvas-object--connected</span></p>
+          <div class="canvas-object object-hidden object-visible object-hidden--loaded canvas-object--connected" style="top: 1580px; left: 890px; width: 200px; height: 50px;">
             <svg class="object-hidden__icon svg-icon">
-              <use xlink:href="#object-portlet"></use>
+              <use xlink:href="#object-condition"></use>
             </svg>
             <div class="object-hidden__text">
-              <span>Portlet</span>
+              <span>Condition Condition Condition Condition</span>
             </div>
-            <button class="object-hidden__popout-button button button--link" type="button">
-              <svg class="svg-icon">
-                <use xlink:href="#popout"></use>
-              </svg>
-            </button>
+            <div class="checkbox checkbox--primary">
+              <input id="checkbox-condition-01" class="checkbox__input" type="checkbox" checked>
+              <label for="checkbox-condition-01" class="checkbox__label"></label>
+            </div>
+            <div class="select select--open">
+              <div class="select-selector">
+                <button class="select-selector__button" type="button">
+                  <span class="select-selector__title">전체</span>
+                  <svg class="svg-icon select-selector__icon" aria-hidden="true">
+                    <use xlink:href="#chevron-down-medium"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="select-container">
+                <ul class="select-container__list">
+                  <li class="select-container__item select-container__item--selected">
+                    <button class="select-container__button" type="button">
+                      <span class="select-container__text">전체</span>
+                    </button>
+                  </li>
+                  <li class="select-container__item">
+                    <button class="select-container__button" type="button">
+                      <span class="select-container__text">참</span>
+                    </button>
+                  </li>
+                  <li class="select-container__item">
+                    <button class="select-container__button" type="button">
+                      <span class="select-container__text">거짓</span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
 
-          <p style="position: absolute; top: 1470px; left: 1100px;">미연결 상태 <span class="highlight">.canvas-object--unconnected</span></p>
-          <div class="canvas-object object-hidden object-visible object-hidden--loaded canvas-object--unconnected" style="top: 1490px; left: 1100px; width: 200px; height: 50px;">
+          <p style="position: absolute; top: 1560px; left: 1100px;">미연결 상태 <span class="highlight">.canvas-object--unconnected</span></p>
+          <div class="canvas-object object-hidden object-visible object-hidden--loaded canvas-object--unconnected" style="top: 1580px; left: 1100px; width: 200px; height: 50px;">
             <svg class="object-hidden__icon svg-icon">
-              <use xlink:href="#object-portlet"></use>
+              <use xlink:href="#object-condition"></use>
             </svg>
             <div class="object-hidden__text">
-              <span>Portlet</span>
+              <span>Condition</span>
             </div>
             <button class="object-hidden__popout-button button button--link" type="button">
               <svg class="svg-icon">
                 <use xlink:href="#popout"></use>
               </svg>
             </button>
+            <div class="checkbox checkbox--primary">
+              <input id="checkbox-condition-02" class="checkbox__input" type="checkbox">
+              <label for="checkbox-condition-02" class="checkbox__label"></label>
+            </div>
+            <div class="select">
+              <div class="select-selector">
+                <button class="select-selector__button" type="button">
+                  <span class="select-selector__title">참</span>
+                  <svg class="svg-icon select-selector__icon" aria-hidden="true">
+                    <use xlink:href="#chevron-down-medium"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="select-container">
+                <ul class="select-container__list">
+                  <li class="select-container__item">
+                    <button class="select-container__button" type="button">
+                      <span class="select-container__text">전체</span>
+                    </button>
+                  </li>
+                  <li class="select-container__item select-container__item--selected">
+                    <button class="select-container__button" type="button">
+                      <span class="select-container__text">참</span>
+                    </button>
+                  </li>
+                  <li class="select-container__item">
+                    <button class="select-container__button" type="button">
+                      <span class="select-container__text">거짓</span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <!-- // 보고서 가져오기(포틀릿) -->
+          <!-- // 조건 검사 -->
 
           <!-- Grid chart 2단 출력 -->
-          <span style="position: absolute; top: 1600px; left: 50px;">Grid chart 2단 출력</span>
-          <div class="canvas-object object-area" style="top: 1620px; left: 50px; width: 700px; height: 260px;">
+          <span style="position: absolute; top: 1640px; left: 50px;">Grid chart 2단 출력</span>
+          <div class="canvas-object object-area" style="top: 1660px; left: 50px; width: 700px; height: 260px;">
             <!-- 1단 출력 설정시 row-1 클래스 추가 -->
             <div class="object-area__grid-chart-container">
               <!-- 필터 그룹 (페이지네이션, 서치바 그룹) -->
@@ -2785,8 +2955,8 @@
           <!-- //Grid chart 2단 출력 -->
 
           <!-- Grid chart 1단 출력 -->
-          <span style="position: absolute; top: 1600px; left: 770px;">Grid chart 1단 출력</span>
-          <div class="canvas-object object-area" style="top: 1620px; left: 770px; width: 700px; height: 260px;">
+          <span style="position: absolute; top: 1640px; left: 770px;">Grid chart 1단 출력</span>
+          <div class="canvas-object object-area" style="top: 1660px; left: 770px; width: 700px; height: 260px;">
             <div class="object-area__grid-chart-container">
               <!-- 필터 그룹 (페이지네이션, 서치바 그룹) -->
               <!-- 1단 출력 설정시 row-1 클래스 추가 -->
@@ -3036,8 +3206,8 @@
           <!-- // Grid chart 1단 출력-->
 
           <!-- Area toolbar -->
-          <span style="position: absolute; top: 1600px; left: 1490px;">Area toolbar</span>
-          <div class="canvas-object object-area" style="top: 1620px; left: 1490px; width: 400px; height: 260px;">
+          <span style="position: absolute; top: 1640px; left: 1490px;">Area toolbar</span>
+          <div class="canvas-object object-area" style="top: 1660px; left: 1490px; width: 400px; height: 260px;">
             <div class="object-area-toolbar">
               <span class="object-area-toolbar__count">데이터 개수 : 500</span>
               <svg class="svg-icon object-area-toolbar__acc-icon">
@@ -3084,8 +3254,8 @@
           <!-- // Area toolbar-->
 
           <!-- object-area__single-value -->
-          <span style="position: absolute; top: 1900px; left: 1170px;">area: 단일값</span>
-          <div class="canvas-object object-area" style="top: 1920px; left: 1170px; width: 80px; height: 40px;">
+          <span style="position: absolute; top: 1940px; left: 1170px;">area: 단일값</span>
+          <div class="canvas-object object-area" style="top: 1960px; left: 1170px; width: 80px; height: 40px;">
             <div class="object-area__single-value">
               <p class="object-area__single-value-text">123123</p>
             </div>
@@ -3094,8 +3264,8 @@
 
 
           <!-- 맵  -->
-          <span style="position: absolute; top: 1900px; left: 1280px;"></span>
-          <div class="canvas-object object-map" style="top: 1920px;left: 1280px;width: 300px;height: 500px;">
+          <span style="position: absolute; top: 1940px; left: 1280px;"></span>
+          <div class="canvas-object object-map" style="top: 1960px;left: 1280px;width: 300px;height: 500px;">
             <!-- 레이어 이름 요소 -->
             <div class="object-map__layer-name">
               <span class="object-map__layer-name-text">layer name</span>
@@ -3229,8 +3399,8 @@
           </div>
           <!-- //맵  -->
 
-          <span style="position: absolute; top: 1900px; left: 50px;">기간 설정 .object-datetime-range-picker</span>
-          <div class="canvas-object object-datetime-range-picker canvas-object--active" style="top: 1920px; left: 50px; width: 500px; height: 40px;">
+          <span style="position: absolute; top: 1940px; left: 50px;">기간 설정 .object-datetime-range-picker</span>
+          <div class="canvas-object object-datetime-range-picker canvas-object--active" style="top: 1960px; left: 50px; width: 500px; height: 40px;">
             <div class="select select--open">
               <div class="select-selector">
                 <button class="select-selector__button" type="button">
@@ -3307,8 +3477,8 @@
             <!-- //크기 조절 상자 -->
           </div>
 
-          <span style="position: absolute; top: 1900px; left: 570px;">IMA .object-ima</span>
-          <div class="canvas-object object-ima canvas-object--active" style="top: 1920px; left: 570px; width: 500px; height: 280px;">
+          <span style="position: absolute; top: 1940px; left: 570px;">IMA .object-ima</span>
+          <div class="canvas-object object-ima canvas-object--active" style="top: 1960px; left: 570px; width: 500px; height: 280px;">
             <div class="object-ima__move-buttons">
               <button class="object-ima__move-button" type="button">
                 <svg class="svg-icon">
@@ -3337,8 +3507,8 @@
             <!-- //크기 조절 상자 -->
           </div>
 
-          <span style="position: absolute; top: 1960px; left: 70px;">Text area</span>
-          <div class="canvas-object canvas-object--active" style="top: 1980px; left: 70px; width: 200px; height: 40px;">
+          <span style="position: absolute; top: 2010px; left: 70px;">Text area</span>
+          <div class="canvas-object canvas-object--active" style="top: 2030px; left: 70px; width: 200px; height: 40px;">
             <textarea class="text-area" name="textarea" id="textarea" cols="30" rows="10"></textarea>
             <!-- 크기 조절 상자 -->
             <span class="tl"></span>
@@ -3352,8 +3522,8 @@
             <!-- //크기 조절 상자 -->
           </div>
 
-          <span style="position: absolute; top: 1960px; left: 270px;">Text area</span>
-          <div class="canvas-object" style="top: 1980px; left: 280px; width: 200px; height: 40px;">
+          <span style="position: absolute; top: 2010px; left: 270px;">Text area</span>
+          <div class="canvas-object" style="top: 2030px; left: 280px; width: 200px; height: 40px;">
             <textarea class="text-area" name="textarea" id="textarea" cols="30" rows="10"></textarea>
             <!-- 크기 조절 상자 -->
             <span class="tl"></span>

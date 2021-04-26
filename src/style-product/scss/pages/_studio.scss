@@ -891,6 +891,14 @@
   }
 }
 
+.object-hidden > .select {
+  position: absolute;
+  top: rem(6px);
+  left: rem(28px);
+  color: $text-01;
+  z-index: 11;
+}
+
 .object-visible {
   border-style: solid;
 }

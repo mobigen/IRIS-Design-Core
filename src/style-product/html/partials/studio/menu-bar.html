@@ -284,6 +284,40 @@
   <div class="editor-layout-head__additinal-buttons">
     <button class="button button--link" type="button">메시지관리</button>
   </div>
+  <!-- 객체 관련 기능 셀렉트 박스 -->
+  <div class="select select--right select--open">
+    <div class="select-selector">
+      <button class="select-selector__button" type="button">
+        <span class="select-selector__title">객체</span>
+        <svg class="svg-icon select-selector__icon" aria-hidden="true">
+          <use xlink:href="#chevron-down-medium"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="select-container w-200">
+      <ul class="select-container__list">
+        <li class="select-container__item">
+          <button class="select-container__button" type="button">
+            <span class="select-container__text">객체목록 보기</span>
+            <span class="select-container__subtext">Ctrl + F8</span>
+          </button>
+        </li>
+        <!-- 선택 된 객체에 select-container__item--selected 클래스 추가 -->
+        <li class="select-container__item">
+          <button class="select-container__button" type="button">
+            <span class="select-container__text">히든객체 숨김</span>
+            <span class="select-container__subtext">Ctrl + F9</span>
+          </button>
+        </li>
+        <li class="select-container__item">
+          <button class="select-container__button" type="button">
+            <span class="select-container__text">전체변수명 보기</span>
+            <span class="select-container__subtext">Ctrl + F10</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
   <div class="toggle-button">
     <button class="toggle-button__item toggle-button__item--icon toggle-button__item--selected" type="button">
       <svg class="svg-icon">
