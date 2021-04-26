@@ -292,6 +292,6 @@ a.ui-button:active,
   width: 114%;
   height: 31px;
   transform: translateY(-50%);
-  background-color: rgba($secondary, 0.6);
+  background-color: lighten($secondary, 14%);
   content: "";
 }
