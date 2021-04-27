@@ -6817,9 +6817,10 @@
   <div class="page__usage md">
     <ul>
       <li>
-        컨텍스트 메뉴는 <em class="text-emphasis">4개</em> 종류가 있으며 <em class="text-emphasis">3개</em> 크기로 구분합니다.
+        셀렉트 <em class="text-emphasis">5개</em> 종류가 있으며 <em class="text-emphasis">3개</em> 크기로 구분합니다.
         <ul>
           <li>텍스트</li>
+          <li>텍스트 + 서브 텍스트</li>
           <li>아이콘 + 텍스트</li>
           <li>텍스트 + 추가 기능 버튼</li>
           <li>체크 박스 + 텍스트</li>
@@ -7104,6 +7105,111 @@
                     <li class="select-container__item">
                       <button class="select-container__button" type="button">
                         <span class="select-container__text">목록으로 나가기</span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Text + Subtext Select</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: md</p>
+            <div class="component-examle__item-group">
+              <div class="select select--right" style="min-width: 160px; max-width: 230px;">
+                <div class="select-selector">
+                  <button class="select-selector__button" type="button">
+                    <span class="select-selector__title">서브 텍스트 유형</span>
+                    <svg class="svg-icon select-selector__icon" aria-hidden="true">
+                      <use xlink:href="#chevron-down-medium"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="select-container w-200">
+                  <ul class="select-container__list">
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">URL 관리</span>
+                        <span class="select-container__subtext">Subtext</span>
+                      </button>
+                    </li>
+                    <!-- 선택 된 객체에 select-container__item--selected 클래스 추가 -->
+                    <li class="select-container__item select-container__item--selected">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">권한 설정</span>
+                        <span class="select-container__subtext">Subtext</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">다른 이름으로 저장</span>
+                        <span class="select-container__subtext">Subtext</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">정보 변경</span>
+                        <span class="select-container__subtext">Subtext</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">목록으로 나가기</span>
+                        <span class="select-container__subtext">Subtext</span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="select" style="min-width: 160px; max-width: 230px;">
+                <div class="select-selector">
+                  <button class="select-selector__button" type="button">
+                    <span class="select-selector__title">서브 텍스트 유형</span>
+                    <svg class="svg-icon select-selector__icon" aria-hidden="true">
+                      <use xlink:href="#chevron-down-medium"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="select-container">
+                  <ul class="select-container__list">
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">URL 관리</span>
+                        <span class="select-container__subtext">Subtext</span>
+                      </button>
+                    </li>
+                    <!-- 선택 된 객체에 select-container__item--selected 클래스 추가 -->
+                    <li class="select-container__item select-container__item--selected">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">권한 설정</span>
+                        <span class="select-container__subtext">Subtext</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">다른 이름으로 저장</span>
+                        <span class="select-container__subtext">Subtext</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">정보 변경</span>
+                        <span class="select-container__subtext">Subtext</span>
+                      </button>
+                    </li>
+                    <li class="select-container__item">
+                      <button class="select-container__button" type="button">
+                        <span class="select-container__text">목록으로 나가기</span>
+                        <span class="select-container__subtext">Subtext</span>
                       </button>
                     </li>
                   </ul>
