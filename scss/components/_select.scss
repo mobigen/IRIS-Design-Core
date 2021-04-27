@@ -167,6 +167,12 @@
   background-color: $ui-02;
 }
 
+.select-container__subtext {
+  @include font-size("12");
+  color: $text-03;
+  margin-left: auto;
+}
+
 // -------------------------
 // Size overwrite
 // -------------------------
