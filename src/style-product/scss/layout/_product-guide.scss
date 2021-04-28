@@ -1,0 +1,24 @@
+.content-wrap {
+  width: 1200px;
+  margin: 30px auto;
+  height: auto;
+}
+
+.header__update-info-text {
+  @include font-family("mono");
+  @include font-size("13");
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: $layout-sm;
+}
+
+.gnb {
+  margin-left: auto;
+}
+
+.update-info {
+  margin-bottom: $layout-2xs;
+}

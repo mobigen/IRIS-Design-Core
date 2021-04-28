@@ -4,8 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IRIS</title>
+  <title>IRIS | Design Product Guide</title>
   <link rel="stylesheet" href="../dist/css/main/style.min.css" />
+  <link rel="stylesheet" href="../dist/css/guide/style.min.css" />
 </head>
 
 <body>
@@ -15,12 +16,50 @@
     위 기준으로 경로를 지정하면 됩니다.
   -->
   <div class="content-wrap">
-    <header>
+    <header class="header">
       @@include('../partials/index/header.html')
     </header>
     <main>
-      <h1>component guide~</h1>
-      @@include('../partials/index/top-content.html')
+      <p class="update-info">
+        <span class="update-info-text">Last Update:</span>
+        <strong class="update-info-text">2021-04-28</strong>
+      </p>
+      <section>
+        <table class="table table--primary">
+          <thead>
+            <th>서비스</th>
+            <th>구분</th>
+            <th>파일명</th>
+            <th>화면 내용</th>
+            <th>비고</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="4">Studio</td>
+              <td>Modal</td>
+              <td><a href="/views/studio/studio-modals.html" target="_blank">studio-modals</a></td>
+              <td>스튜디오에 사용하는 모달</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td rowspan="3">Edit</td>
+              <td><a href="/views/studio/studio-edit.html" target="_blank">studio-edit</a></td>
+              <td>스튜디오 편집 화면</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><a href="/views/studio/studio-edit--has-data.html" target="_blank">studio-edit--has-data</a></td>
+              <td>스튜디오 편집 화면 - 사이드 패널에 데이터 실행 버튼</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><a href="/views/studio/studio-preview.html" target="_blank">studio-preview</a></td>
+              <td>스튜디오 실행 화면</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
       <section>
         <strong class="component-title">이곳은 컴포넌트 섹션!</strong>
         <span>
@@ -35,35 +74,10 @@
           </svg>
         </span>
       </section>
-      @@include('../partials/index/top-content.html')
-      <section>
-        <strong class="component-title">sherman에서만 사용할 컴포넌트</strong>
-        <span>전체 테마가 아닌, sherman에만 테마 적용이 가능함</span>
-        <div class="product-panel">
-          <ul>
-            <li>item1</li>
-            <li>item2</li>
-            <li>item3</li>
-          </ul>
-        </div>
-      </section>
-      @@include('../partials/index/top-content.html')
-      <section>
-        <strong class="component-title">이곳은 컴포넌트 섹션!3</strong>
-      </section>
-      @@include('../partials/index/top-content.html')
-      <section>
-        <strong class="component-title">이곳은 컴포넌트 섹션!4</strong>
-        <span>
-          <img src="../dist/images/common/img1.png" alt="test">
-        </span>
-      </section>
-      @@include('../partials/index/top-content.html')
-      <section>
-        <strong class="component-title">이곳은 컴포넌트 섹션!5</strong>
-      </section>
     </main>
-    <footer>@@include('../partials/index/footer.html')</footer>
+    <footer class="footer">
+      @@include('../partials/index/footer.html')
+    </footer>
   </div>
   <script src="../dist/js/main.bundle.js"></script>
 </body>

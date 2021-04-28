@@ -5,7 +5,8 @@ const path = require("path"),
 
 module.exports = {
   entry: {
-    main: "./src/js/studio.js"
+    main: "./src/js/studio.js",
+    guide: "./src/js/guide.js"
   },
 
   output: {
