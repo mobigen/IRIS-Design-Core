@@ -36,6 +36,13 @@
 // list
 // -------------------------
 @mixin list {
+  &__list + &__list::before {
+    content: "";
+    display: block;
+    border-top: 1px solid $ui-04;
+    margin: $spacing-2xs 0;
+  }
+
   &__item {
     display: flex;
     align-items: center;
