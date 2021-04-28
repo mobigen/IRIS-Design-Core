@@ -4398,6 +4398,343 @@
                       </div>
                     </div>
                   </div>
+                  <div class="side-panel-content">
+                    <div class="side-panel-content__head">
+                      <strong class="side-panel-content__head-title">조건부객체 폼 유형</strong>
+                    </div>
+                    <div class="side-panel-content__body">
+                      <div class="dynamic-form dynamic-form--condition">
+                        <!-- 세로 스크롤을 위한 overflow-y 클래스. 해당 요소에 max-height를 지정해줘야합니다. -->
+                        <!-- <ul class="dynamic-form__list overflow-y" style="max-height: 120px;"> -->
+                        <ul class="dynamic-form__list" style="">
+                          <li class="dynamic-form__item">
+                            <div class="dynamic-form__handler">
+                              <button class="button button--icon button--tertiary button--sm">
+                                <svg class="svg-icon">
+                                  <use xlink:href="#chevron-up"></use>
+                                </svg>
+                              </button>
+                              <button class="button button--icon button--tertiary button--sm">
+                                <svg class="svg-icon">
+                                  <use xlink:href="#chevron-down"></use>
+                                </svg>
+                              </button>
+                            </div>
+                            <div class="dynamic-form__forms">
+                            <div class="dynamic-form__form">
+  <label class="dynamic-form__form-label">
+    <span class="dynamic-form__form-label-text">값</span>
+  </label>
+  <div class="dynamic-form__form-detail">
+    <textarea type="text" class="text-area" placeholder="placeholder text"></textarea>
+  </div>
+</div>
+<div class="dynamic-form__form">
+  <label class="dynamic-form__form-label">
+    <span class="dynamic-form__form-label-text">조건</span>
+  </label>
+  <div class="dynamic-form__form-detail">
+    <div class="select">
+      <div class="select-selector">
+        <button class="select-selector__button" type="button">
+          <span class="select-selector__title">-- 검사 조건 --</span>
+          <svg class="svg-icon select-selector__icon">
+            <use xlink:href="#chevron-down-medium"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="select-container">
+        <ul class="select-container__list">
+          <li class="select-container__item">
+            <button class="select-container__button" type="button">
+              <span class="select-container__text">비어있음</span>
+            </button>
+          </li>
+          <!-- 선택 된 객체에 select-container__item--selected 클래스 추가 -->
+          <li class="select-container__item select-container__item--selected">
+            <button class="select-container__button" type="button">
+              <span class="select-container__text">비어있지 않음</span>
+            </button>
+          </li>
+          <li class="select-container__item">
+            <button class="select-container__button" type="button">
+              <span class="select-container__text">텍스트에 포함</span>
+            </button>
+          </li>
+          <li class="select-container__item">
+            <button class="select-container__button" type="button">
+              <span class="select-container__text">텍스트에 포함되지 않음</span>
+            </button>
+          </li>
+          <li class="select-container__item">
+            <button class="select-container__button" type="button">
+              <span class="select-container__text">초과</span>
+            </button>
+          </li>
+          <li class="select-container__item">
+            <button class="select-container__button" type="button">
+              <span class="select-container__text">이상</span>
+            </button>
+          </li>
+          <li class="select-container__item">
+            <button class="select-container__button" type="button">
+              <span class="select-container__text">이하</span>
+            </button>
+          </li>
+          <li class="select-container__item">
+            <button class="select-container__button" type="button">
+              <span class="select-container__text">미만</span>
+            </button>
+          </li>
+          <li class="select-container__item">
+            <button class="select-container__button" type="button">
+              <span class="select-container__text">같음</span>
+            </button>
+          </li>
+          <li class="select-container__item">
+            <button class="select-container__button" type="button">
+              <span class="select-container__text">같지 않음</span>
+            </button>
+          </li>
+          <li class="select-container__item">
+            <button class="select-container__button" type="button">
+              <span class="select-container__text">범위</span>
+            </button>
+          </li>
+          <li class="select-container__item">
+            <button class="select-container__button" type="button">
+              <span class="select-container__text">범위에 있지 않음</span>
+            </button>
+          </li>
+          <li class="select-container__item">
+            <button class="select-container__button" type="button">
+              <span class="select-container__text">길이제한</span>
+            </button>
+          </li>
+          <li class="select-container__item">
+            <button class="select-container__button" type="button">
+              <span class="select-container__text">정규식</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="dynamic-form__form">
+  <label class="dynamic-form__form-label">
+  </label>
+  <div class="h-group">
+      <input type="number" class="text-input" placeholder="탭 값을 입력해주세요.">
+      <span> ~ </span>
+      <input type="number" class="text-input" placeholder="탭 값을 입력해주세요.">
+  </div>
+</div>
+<div class="dynamic-form__form">
+  <label class="dynamic-form__form-label">
+    <span class="dynamic-form__form-label-text"></span>
+  </label>
+  <div class="dynamic-form__form-detail">
+      <input type="text" class="text-input" placeholder="탭 값을 입력해주세요.">
+  </div>
+</div>
+<div class="dynamic-form__form">
+  <label class="dynamic-form__form-label">
+    <span class="dynamic-form__form-label-text"></span>
+  </label>
+  <div class="dynamic-form__form-detail">
+      <input type="number" class="text-input" placeholder="탭 값을 입력해주세요.">
+  </div>
+</div>
+<div class="dynamic-form__form">
+  <label class="dynamic-form__form-label">
+  </label>
+  <div class="v-group">
+    <div class="h-group">
+        <input type="number" class="text-input" placeholder="탭 값을 입력해주세요.">
+        <span>자</span><span> ~ </span>
+        <input type="number" class="text-input" placeholder="탭 값을 입력해주세요.">
+        <span>자</span>
+    </div>
+    <div class="notification-message notification-message--error">
+      <svg class="notification-message__icon svg-icon" aria-hidden="true">
+        <use xlink:href="#issue-fill"></use>
+      </svg>
+      <span class="notification-message__text">Notification Message</span>
+    </div>
+  </div>
+</div>
+<div class="dynamic-form__form">
+  <div class="text-area-wrap">
+    <div class="text-area-wrap__foot-buttons">
+      <button class="button button--link button--sm ml-auto">미리보기</button>
+    </div>
+  </div>  
+</div>
+<div class="dynamic-form__form">
+  <label class="dynamic-form__form-label">
+    <span class="dynamic-form__form-label-text">처리</span>
+  </label>
+  <div class="dynamic-form__form-detail">
+    <div class="toggle-button">
+      <!-- toggle-button__item--selected 클래스 추가시 버튼 활성화 -->
+      <button class="toggle-button__item" type="button">
+        <span class="toggle-button__text">다음</span>
+      </button>
+      <button class="toggle-button__item" type="button">
+        <span class="toggle-button__text">종료</span>
+      </button>
+      <button class="toggle-button__item toggle-button__item--selected" type="button">
+        <span class="toggle-button__text">경고</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="dynamic-form__form">
+  <label class="dynamic-form__form-label">
+    <span class="dynamic-form__form-label-text">경고<br>메세지</span>
+  </label>
+  <div class="dynamic-form__form-detail">
+    <div class="select">
+      <div class="select-selector">
+        <button class="select-selector__button" type="button">
+          <span class="select-selector__title">-- 메세지 선택 --</span>
+          <svg class="svg-icon select-selector__icon">
+            <use xlink:href="#chevron-down-medium"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="select-container">
+        <ul class="select-container__list">
+          <li class="select-container__item">
+            <button class="select-container__button" type="button">
+              <span class="select-container__text">비어있음</span>
+            </button>
+          </li>
+          <!-- 선택 된 객체에 select-container__item--selected 클래스 추가 -->
+          <li class="select-container__item select-container__item--selected">
+            <button class="select-container__button" type="button">
+              <span class="select-container__text">비어있지 않음</span>
+            </button>
+          </li>
+        </ul>
+        <ul class="select-container__list">
+          <li class="select-container__item">
+            <button class="select-container__button" type="button">
+              <span class="select-container__text">텍스트에 포함</span>
+            </button>
+          </li>
+          <li class="select-container__item">
+            <button class="select-container__button" type="button">
+              <span class="select-container__text">텍스트에 포함되지 않음</span>
+            </button>
+          </li>
+        </ul>
+        <ul class="select-container__list">
+          <li class="select-container__item">
+            <button class="select-container__button" type="button">
+              <span class="select-container__text">초과</span>
+            </button>
+          </li>
+          <li class="select-container__item">
+            <button class="select-container__button" type="button">
+              <span class="select-container__text">이상</span>
+            </button>
+          </li>
+          <li class="select-container__item">
+            <button class="select-container__button" type="button">
+              <span class="select-container__text">이하</span>
+            </button>
+          </li>
+          <li class="select-container__item">
+            <button class="select-container__button" type="button">
+              <span class="select-container__text">미만</span>
+            </button>
+          </li>
+          <li class="select-container__item">
+            <button class="select-container__button" type="button">
+              <span class="select-container__text">같음</span>
+            </button>
+          </li>
+          <li class="select-container__item">
+            <button class="select-container__button" type="button">
+              <span class="select-container__text">같지 않음</span>
+            </button>
+          </li>
+          <li class="select-container__item">
+            <button class="select-container__button" type="button">
+              <span class="select-container__text">범위</span>
+            </button>
+          </li>
+          <li class="select-container__item">
+            <button class="select-container__button" type="button">
+              <span class="select-container__text">범위에 있지 않음</span>
+            </button>
+          </li>
+        </ul>
+        <ul class="select-container__list">
+          <li class="select-container__item">
+            <button class="select-container__button" type="button">
+              <span class="select-container__text">길이제한</span>
+            </button>
+          </li>
+        </ul>
+        <ul class="select-container__list">
+          <li class="select-container__item">
+            <button class="select-container__button" type="button">
+              <span class="select-container__text">정규식</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="dynamic-form__form">
+  <div class="notification notification--success">
+    <svg class="notification__icon svg-icon" aria-hidden="true">
+      <use xlink:href="#checkmark-fill"></use>
+    </svg>
+    <div class="notification__contents">
+      <p class="notification__text">테스트 결과 : 참</p>
+    </div>
+  </div>
+</div>
+<div class="dynamic-form__form">
+  <div class="notification notification--error">
+    <svg class="notification__icon svg-icon" aria-hidden="true">
+      <use xlink:href="#issue-fill"></use>
+    </svg>
+    <div class="notification__contents">
+      <p class="notification__text">
+        테스트 결과 : 거짓
+      </p>
+    </div>
+  </div>
+</div>
+
+                            </div>
+                            <div class="dynamic-form__action-buttons">
+                              <button class="button button--icon button--link button--xs">
+                                <svg class="svg-icon">
+                                  <use xlink:href="#close"></use>
+                                </svg>
+                              </button>
+                            </div>
+                          </li>
+                        </ul>
+                        <div class="dynamic-form__foot">
+                          <button class="button button--support">
+                            <svg class="svg-icon">
+                              <use xlink:href="#plus"></use>
+                            </svg>
+                            <span class="button__text">탭 추가</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                   <!-- 실행 버튼 -->
                   <div class="side-panel-tab__play-button">
                     <button type="button" class="button button--secondary play-button">

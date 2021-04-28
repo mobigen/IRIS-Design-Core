@@ -93,6 +93,51 @@
                       </div>
                     </div>
                   </div>
+                  <div class="side-panel-content">
+                    <div class="side-panel-content__head">
+                      <strong class="side-panel-content__head-title">조건부객체 폼 유형</strong>
+                    </div>
+                    <div class="side-panel-content__body">
+                      <div class="dynamic-form dynamic-form--condition">
+                        <!-- 세로 스크롤을 위한 overflow-y 클래스. 해당 요소에 max-height를 지정해줘야합니다. -->
+                        <!-- <ul class="dynamic-form__list overflow-y" style="max-height: 120px;"> -->
+                        <ul class="dynamic-form__list" style="">
+                          <li class="dynamic-form__item">
+                            <div class="dynamic-form__handler">
+                              <button class="button button--icon button--tertiary button--sm">
+                                <svg class="svg-icon">
+                                  <use xlink:href="#chevron-up"></use>
+                                </svg>
+                              </button>
+                              <button class="button button--icon button--tertiary button--sm">
+                                <svg class="svg-icon">
+                                  <use xlink:href="#chevron-down"></use>
+                                </svg>
+                              </button>
+                            </div>
+                            <div class="dynamic-form__forms">
+                            @@include('../partials/common/dynamic-form__form.html')
+                            </div>
+                            <div class="dynamic-form__action-buttons">
+                              <button class="button button--icon button--link button--xs">
+                                <svg class="svg-icon">
+                                  <use xlink:href="#close"></use>
+                                </svg>
+                              </button>
+                            </div>
+                          </li>
+                        </ul>
+                        <div class="dynamic-form__foot">
+                          <button class="button button--support">
+                            <svg class="svg-icon">
+                              <use xlink:href="#plus"></use>
+                            </svg>
+                            <span class="button__text">탭 추가</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                   <!-- 실행 버튼 -->
                   <div class="side-panel-tab__play-button">
                     <button type="button" class="button button--secondary play-button">
