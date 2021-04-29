@@ -92,7 +92,7 @@
 // Status
 // -------------------------
 .table tr:hover > td {
-  background: $hover-row;
+  background-color: $hover-row;
 }
 
 .table .tr--selected td,
@@ -106,6 +106,10 @@
 // -------------------------
 .table--primary tr:nth-child(2n + 1) td {
   background-color: $odd-row;
+}
+
+.table--primary tr:nth-child(2n + 1):hover td {
+  background-color: $hover-row;
 }
 
 .table--primary th {
