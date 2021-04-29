@@ -21,17 +21,16 @@
   color: $text-02;
   vertical-align: middle;
   overflow-wrap: break-word;
+  word-break: keep-all;
   line-height: 1.3;
 }
 
 .table th {
   position: relative;
-  word-break: keep-all;
 }
 
 .table td {
   background-color: $ui-02;
-  word-break: break-all;
 }
 
 .table__action-buttons {
