@@ -7,7 +7,7 @@
   @include font-size("14");
   @include font-weight("regular");
   position: relative;
-  background-color: rgba($ui-02, 0.8);
+  background-color: $ui-02;
   width: 100%;
   height: rem(32px);
   padding: 0 $spacing-sm;
@@ -18,7 +18,6 @@
   outline: none;
 
   &:hover {
-    background-color: rgba($ui-02, 1);
     border-color: darken($ui-04, 15%);
   }
 
@@ -37,7 +36,7 @@
   &[disabled]:hover,
   &[disabled]:focus {
     cursor: not-allowed;
-    background-color: rgba($ui-02, 0.8);
+    background-color: $ui-02;
     border-color: $ui-04;
     opacity: 0.5;
     box-shadow: none;
@@ -52,7 +51,7 @@
   &[readonly]:focus {
     cursor: default;
     border-color: transparent;
-    background-color: rgba($ui-02, 0.8);
+    background-color: $ui-02;
     box-shadow: none;
   }
 

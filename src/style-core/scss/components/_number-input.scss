@@ -24,7 +24,7 @@
 .number-input__input {
   @include font-size("14");
   position: relative;
-  background-color: rgba($ui-02, 0.8);
+  background-color: $ui-02;
   width: 100%;
   height: rem(32px);
   padding: 0 $spacing-xl 0 $spacing-sm;
