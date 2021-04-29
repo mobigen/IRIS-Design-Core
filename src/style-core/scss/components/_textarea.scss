@@ -34,7 +34,7 @@
   &[disabled]:focus {
     cursor: not-allowed;
     border-color: $ui-04;
-    background-color: rgba($ui-02, 0.8);
+    background-color: $ui-02;
     opacity: 0.5;
     box-shadow: none;
 
@@ -48,7 +48,7 @@
   &[readonly]:focus {
     cursor: default;
     border-color: $ui-04;
-    background-color: rgba($ui-02, 0.8);
+    background-color: $ui-02;
     box-shadow: none;
   }
 
