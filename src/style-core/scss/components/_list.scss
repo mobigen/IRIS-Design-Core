@@ -248,11 +248,11 @@
   align-items: center;
   position: relative;
   overflow: hidden;
-  height: 32px;
 }
 
 .dynamic-list__form {
   flex: 1;
+  position: relative;
 }
 
 .dynamic-list__buttons {
@@ -273,4 +273,5 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  line-height: 2rem;
 }
