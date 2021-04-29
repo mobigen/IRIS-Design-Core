@@ -47,13 +47,13 @@
 .alert__title {
   @include font-weight("medium");
   @include font-size("16");
-  margin-bottom: $spacing-xs;
   color: $text-02;
 }
 
 .alert__text {
   @include font-size("14");
   @include line-height("body");
+  margin-top: $spacing-xs;
   color: $text-03;
 }
 
