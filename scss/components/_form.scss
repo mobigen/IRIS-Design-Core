@@ -139,10 +139,6 @@
     flex-direction: column;
     align-items: flex-start;
     padding: $spacing-sm 0;
-
-    & + .form__item {
-      margin-top: $spacing-xs;
-    }
   }
 
   .form__label {
@@ -150,6 +146,10 @@
     height: auto;
     padding: 0;
     margin-bottom: $spacing-3xs;
+  }
+
+  .form__label-text {
+    font-size: 15px;
   }
 
   .form__label-subtext {
@@ -259,7 +259,7 @@
   .dynamic-form__handler + .dynamic-form__forms {
     margin-left: 0;
   }
-  
+
   .toggle-button__item {
     flex-grow: 1;
   }
@@ -283,7 +283,7 @@
     @include font-size("13");
   }
 
-  .text-input[type=number] {
+  .text-input[type="number"] {
     min-width: unset;
   }
 }
