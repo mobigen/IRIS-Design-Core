@@ -183,3 +183,94 @@
 .list--border-reset {
   border: 0;
 }
+
+.dynamic-list {
+  padding: $spacing-sm;
+}
+
+.dynamic-list__no-contents {
+  display: flex;
+  height: 100%;
+  background-color: $ui-01;
+}
+
+.dynamic-list__toolbar {
+  display: flex;
+  margin-bottom: $spacing-sm;
+}
+
+.dynamic-list__items {
+  min-height: 480px;
+  max-height: 480px;
+  padding-right: $spacing-xs;
+  overflow-y: auto;
+  position: relative;
+}
+
+.dynamic-list__item {
+  border: 1px solid $ui-04;
+  background-color: $odd-row;
+}
+
+.dynamic-list__item:not(:last-child) {
+  margin-bottom: $spacing-md;
+}
+
+.dynamic-list__item .dynamic-list__head {
+  display: flex;
+  align-items: flex-start;
+  padding: $spacing-xs;
+  background-color: $ui-02;
+  border-bottom: 1px solid $ui-04;
+}
+
+.dynamic-list__filter {
+  flex: 1;
+}
+
+.dynamic-list__body {
+  padding: $spacing-2xs 0;
+}
+
+.dynamic-list__body-row {
+  padding: $spacing-3xs 0;
+}
+
+.dynamic-list__lang {
+  padding: 0 $spacing-xs 0 $spacing-sm;
+  font-weight: 500;
+  color: $text-02;
+}
+
+.dynamic-list__contents {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  height: 32px;
+}
+
+.dynamic-list__form {
+  flex: 1;
+}
+
+.dynamic-list__buttons {
+  .button--link {
+    padding: 0 $spacing-xs 0 $spacing-2xs;
+  }
+
+  .button--icon {
+    padding: 0;
+  }
+}
+
+.dynamic-list__button {
+  margin-top: $spacing-2xs;
+}
+
+.dynamic-list__text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
