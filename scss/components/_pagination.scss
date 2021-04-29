@@ -27,7 +27,7 @@
     background-color: $primary;
     color: $ui-02;
 
-    svg {
+    .svg-icon {
       fill: $ui-02;
     }
   }
@@ -36,11 +36,10 @@
     background-color: $primary;
     color: $ui-02;
 
-    svg {
+    .svg-icon {
       fill: $ui-02;
     }
   }
-
 }
 
 .pagination__list {

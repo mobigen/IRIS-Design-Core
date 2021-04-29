@@ -50,7 +50,7 @@
       border-left-color: $disabled-01;
       color: $disabled-02;
 
-      svg {
+      .svg-icon {
         fill: $disabled-02;
       }
     }
@@ -92,7 +92,7 @@
   border-left: 1px solid $ui-04;
   color: $text-02;
 
-  svg {
+  .svg-icon {
     fill: $text-02;
   }
 
@@ -201,7 +201,7 @@
   align-items: center;
   justify-content: flex-start;
 
-  svg {
+  .svg-icon {
     @include svg-icon-size(22px);
     fill: $ui-02;
   }
@@ -241,7 +241,7 @@
   border: 1px solid $ui-04;
   border-radius: $field-border-radius;
 
-  svg {
+  .svg-icon {
     @include svg-icon-size(40px);
     margin-bottom: $spacing-xs;
     fill: $ui-03;
@@ -286,7 +286,7 @@
   border: 1px solid $ui-04;
   border-radius: $field-border-radius;
 
-  svg {
+  .svg-icon {
     @include svg-icon-size(20px);
     fill: $primary;
     color: $primary;
@@ -312,7 +312,7 @@
     border: 1px solid #ef594f;
   }
 
-  svg {
+  .svg-icon {
     @include svg-icon-size(20px);
     fill: $negative;
     color: $negative;
@@ -337,7 +337,7 @@
   }
 
   .upload-preview__file-label {
-    svg {
+    .svg-icon {
       fill: $negative;
     }
   }
