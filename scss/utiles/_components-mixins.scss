@@ -364,7 +364,7 @@
     padding: 0 $spacing-xl 0 $spacing-sm;
     border: 1px solid $ui-04;
     border-radius: $field-border-radius;
-    background-color: rgba($ui-02, 0.8);
+    background-color: $ui-02;
     transition: all $duration-fast-01 motion(standard, productive);
 
     &:hover {
@@ -407,7 +407,7 @@
     &[disabled]:hover,
     &[disabled]:focus {
       cursor: not-allowed;
-      background-color: rgba($ui-02, 0.8);
+      background-color: $ui-02;
       // border-color: $ui-04;
       // opacity: 0.5;
       box-shadow: none;
