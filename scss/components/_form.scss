@@ -240,3 +240,50 @@
 .dynamic-form__foot .button {
   width: 100%;
 }
+
+// -------------------------
+// dynamic-from--condition
+// -------------------------
+.dynamic-form--condition {
+  .dynamic-form__form-label {
+    width: 20%;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .dynamic-form__form-label-text {
+    text-align: right;
+    padding-right: $spacing-xs;
+  }
+
+  .dynamic-form__handler + .dynamic-form__forms {
+    margin-left: 0;
+  }
+  
+  .toggle-button__item {
+    flex-grow: 1;
+  }
+
+  .notification {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .notification__icon {
+    width: 18px;
+    height: 18px;
+    margin: $spacing-xs;
+  }
+
+  .notification__contents {
+    padding: $spacing-xs 0;
+  }
+
+  .notification__text {
+    @include font-size("13");
+  }
+
+  .text-input[type=number] {
+    min-width: unset;
+  }
+}
