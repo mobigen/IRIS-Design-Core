@@ -75,8 +75,6 @@
   }
 
   .form {
-    padding-top: $spacing-xs;
-
     & + .form {
       padding-top: $spacing-xl;
     }
