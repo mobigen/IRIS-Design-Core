@@ -4,12 +4,12 @@
   justify-content: flex-start;
 }
 
-.breadcrumb__link {
+.breadcrumb__text {
   @include font-size("14");
   position: relative;
   padding-right: 28px;
-  text-decoration: none;
   color: $text-05;
+  user-select: none;
 
   &:hover {
     color: $text-05;
