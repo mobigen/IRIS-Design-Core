@@ -57,8 +57,9 @@
 .tab__button {
   @include button-normal;
   // flex: 1;
+  justify-content: flex-start;
   height: 100%;
-  // width: 100%;
+  width: 100%;
   background-color: transparent;
   padding: 0;
 }
@@ -89,7 +90,7 @@
   background-color: $ui-02;
   width: rem(18px);
   height: rem(18px);
-  margin-left: $spacing-2xs;
+  margin-left: - $spacing-xs;
   padding: 0;
   border-radius: $field-border-radius;
   fill: $icon-01;
