@@ -1,0 +1,66 @@
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.breadcrumb__link {
+  @include font-size("14");
+  position: relative;
+  padding-right: 28px;
+  text-decoration: none;
+  color: $text-05;
+
+  &:hover {
+    color: $text-05;
+  }
+
+  &:after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid $text-05; /* 선 두께 */
+    border-right: 2px solid $text-05; /* 선 두께 */
+    display: inline-block;
+    transform: rotate(45deg); /* 각도 */
+    position: absolute;
+    top: 50%;
+    margin-top: -3px;
+    right: 13px;
+    border-radius: 2px;
+  }
+
+  &:nth-last-child(2) {
+    &:after {
+      border-top-color: $text-02;
+      border-right-color: $text-02;
+    }
+  }
+
+  &:last-child {
+    padding-right: 0;
+    color: $text-02;
+
+    &:after {
+      content: none;
+    }
+  }
+}
+
+.breadcrumb__item.breadcrumb__item--selected {
+  .breadcrumb__link {
+    color: $text-02;
+  }
+
+  &:hover {
+    .breadcrumb__link {
+      color: $text-02;
+    }
+  }
+}
+
+.breadcrumb__item.breadcrumb__item--link {
+  .breadcrumb__text {
+    cursor: pointer;
+  }
+}
