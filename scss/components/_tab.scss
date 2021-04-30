@@ -56,9 +56,9 @@
 
 .tab__button {
   @include button-normal;
-  flex: 1;
+  // flex: 1;
   height: 100%;
-  width: 100%;
+  // width: 100%;
   background-color: transparent;
   padding: 0;
 }
@@ -90,6 +90,7 @@
   width: rem(18px);
   height: rem(18px);
   margin-left: $spacing-2xs;
+  padding: 0;
   border-radius: $field-border-radius;
   fill: $icon-01;
 
@@ -217,6 +218,7 @@
   }
 
   &.tab--horizontal .tab__item {
+    justify-content: center;
     border-left: 1px solid $ui-04;
 
     &:first-child {
