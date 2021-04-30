@@ -46,21 +46,3 @@
     }
   }
 }
-
-.breadcrumb__item.breadcrumb__item--selected {
-  .breadcrumb__link {
-    color: $text-02;
-  }
-
-  &:hover {
-    .breadcrumb__link {
-      color: $text-02;
-    }
-  }
-}
-
-.breadcrumb__item.breadcrumb__item--link {
-  .breadcrumb__text {
-    cursor: pointer;
-  }
-}
