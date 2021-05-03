@@ -81,7 +81,7 @@
 .tab__panel {
   display: flex;
   flex-direction: column;
-  flex: 1;
+  flex-grow: 1;
   width: 100%;
 }
 
@@ -112,7 +112,7 @@
 // modifier: horizontal
 // -------------------------
 .tab--horizontal {
-  flex: 1;
+  flex-grow: 1;
   flex-direction: column;
 
   .tab__bar:after {
