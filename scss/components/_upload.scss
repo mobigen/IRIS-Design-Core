@@ -146,14 +146,6 @@
         }
       }
     }
-
-    .upload-alt__file-icon-download {
-      display: none !important;
-    }
-
-    .upload-alt__file-icon-remove {
-      display: block !important;
-    }
   }
 }
 
@@ -180,6 +172,22 @@
   background-color: $hover-field-border;
 }
 
+.upload-alt__file-button.upload-alt__file-button--selected {
+  background-color: $primary;
+  border-color: $primary;
+
+  &:hover {
+    background-color: darken($primary, 10%);
+  }
+
+  .upload-alt__file-icon .upload-alt__file-icon-download {
+    display: none;
+  }
+
+  .upload-alt__file-icon .upload-alt__file-icon-remove {
+    display: block;
+  }
+}
 .upload-alt__file-title {
   @include text-overflow(100%);
   @include font-size("14");
