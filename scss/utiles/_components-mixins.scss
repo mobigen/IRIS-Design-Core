@@ -347,14 +347,6 @@
 @mixin picker {
   position: relative;
 
-  &-container {
-    display: none;
-  }
-
-  &--open &-container {
-    display: flex;
-  }
-
   &-selector {
     @include font-size("14");
     position: relative;
@@ -434,8 +426,10 @@
 
   &-container {
     @include layer("overlay");
+    display: none;
     position: absolute;
     top: 100%;
+    left: 0;
     margin-top: $spacing-2xs;
     background-color: $ui-02;
     border: 1px solid $ui-04;
@@ -444,6 +438,10 @@
   // -------------------------
   // Modifier: focused, open
   // -------------------------
+  &--open &-container {
+    display: flex;
+  }
+
   &--focused:hover,
   &--open:hover {
     border-color: $secondary;
