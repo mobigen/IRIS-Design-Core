@@ -1,0 +1,523 @@
+
+<!-- 메시지관리 모달 -->
+<div class="modal modal--md" style="position: static;">
+  <div class="modal__head">
+    <div class="modal__head-title">
+      <span class="modal__head-title-text">메시지관리</span>
+    </div>
+    <div class="modal__head-close-button">
+      <button class="button button--icon button--link button--sm">
+        <svg class="svg-icon">
+          <use xlink:href="#close"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div class="modal__body">
+    <div class="dynamic-list">
+      <div class="dynamic-list__toolbar">
+        <div class="dynamic-list__filter h-group">
+          <div class="select select">
+            <div class="select-selector">
+              <button class="select-selector__button" type="button">
+                <span class="select-selector__title">유형</span>
+                <svg class="svg-icon select-selector__icon" aria-hidden="true">
+                  <use xlink:href="#chevron-down-medium"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="select-container">
+              <ul class="select-container__list">
+                <li class="select-container__item">
+                  <button class="select-container__button" type="button">
+                    <span class="select-container__text">전체</span>
+                  </button>
+                </li>
+                <li class="select-container__item select-container__item--selected">
+                  <button class="select-container__button" type="button">
+                    <span class="select-container__text">사용</span>
+                  </button>
+                </li>
+                <li class="select-container__item">
+                  <button class="select-container__button" type="button">
+                    <span class="select-container__text">미사용</span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="text-input-group">
+            <input type="text" class="text-input" placeholder="placeholder text" value="alert 03">
+            <button class="text-input-group__clear-button">
+              <svg class="svg-icon" aria-hidden="true">
+                <use xlink:href="#close"></use>
+              </svg>
+            </button>
+          </div>
+          <span>총 n개 항목</span>
+        </div>
+        <button class="button button--primary" type="button">
+          <span class="button__text">새 메시지 추가</span>
+        </button>
+      </div>
+      <div class="dynamic-list__wrap">
+        <div class="dynamic-list__items">
+          <div class="dynamic-list__item">
+            <div class="dynamic-list__head h-group">
+              <div class="dynamic-list__button">
+                <!-- 메시지 선택 지정 여부 -->
+                <button class="tag">
+                  <span class="tag__label">미사용</span>
+                </button>
+                <button class="tag tag--teal" style="display: none;">
+                  <span class="tag__label">사용</span>
+                  <svg class="tag__remove-button">
+                    <use xlink:href="#close"></use>
+                  </svg>
+                </button>
+                <!-- // 메시지 선택 지정 여부 -->
+              </div>
+              <div class="dynamic-list__contents">
+                <div class="dynamic-list__form">
+                  <input type="text" class="text-input" placeholder="placeholder text" value="alert 03">
+                  <button class="text-input-group__clear-button">
+                    <svg class="svg-icon" aria-hidden="true">
+                      <use xlink:href="#close"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="dynamic-list__buttons h-group">
+                <div class="select select" style="">
+                  <div class="select-selector">
+                    <button class="select-selector__button" type="button">
+                      <span class="select-selector__title">유형</span>
+                      <svg class="svg-icon select-selector__icon" aria-hidden="true">
+                        <use xlink:href="#chevron-down-medium"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="select-container">
+                    <ul class="select-container__list">
+                      <li class="select-container__item">
+                        <button class="select-container__button" type="button">
+                          <span class="select-container__text">성공</span>
+                        </button>
+                      </li>
+                      <!-- 선택 된 객체에 select-container__item--selected 클래스 추가 -->
+                      <li class="select-container__item select-container__item--selected">
+                        <button class="select-container__button" type="button">
+                          <span class="select-container__text">실패</span>
+                        </button>
+                      </li>
+                      <li class="select-container__item">
+                        <button class="select-container__button" type="button">
+                          <span class="select-container__text">기타</span>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <button class="button button--danger" type="button">삭제</button>
+              </div>
+            </div>
+            <ul class="dynamic-list__body">
+              <li class="dynamic-list__body-row h-group">
+                <span class="dynamic-list__lang">
+                  한
+                </span>
+                <div class="dynamic-list__contents">
+                  <div class="dynamic-list__form">
+                    <input type="text" class="text-input">
+                    <button class="text-input-group__clear-button">
+                      <svg class="svg-icon" aria-hidden="true">
+                        <use xlink:href="#close"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="dynamic-list__buttons">
+                  <button class="button button--link" type="button">미리보기</button>
+                </div>
+              </li>
+              <li class="dynamic-list__body-row h-group">
+                <div class="dynamic-list__lang">
+                  영
+                </div>
+                <div class="dynamic-list__contents">
+                  <div class="dynamic-list__form">
+                    <input type="text" class="text-input">
+                    <button class="text-input-group__clear-button">
+                      <svg class="svg-icon" aria-hidden="true">
+                        <use xlink:href="#close"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="dynamic-list__buttons">
+                  <button class="button button--link" type="button">미리보기</button>
+                </div>
+              </li>
+              <li class="dynamic-list__body-row h-group">
+                <div class="dynamic-list__lang">
+                  중
+                </div>
+                <div class="dynamic-list__contents">
+                  <div class="dynamic-list__form">
+                    <input type="text" class="text-input">
+                    <button class="text-input-group__clear-button">
+                      <svg class="svg-icon" aria-hidden="true">
+                        <use xlink:href="#close"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="dynamic-list__buttons">
+                  <button class="button button--link" type="button">미리보기</button>
+                </div>
+              </li>
+              <li class="dynamic-list__body-row h-group">
+                <div class="dynamic-list__lang">
+                  일
+                </div>
+                <div class="dynamic-list__contents">
+                  <div class="dynamic-list__form">
+                    <input type="text" class="text-input">
+                    <button class="text-input-group__clear-button">
+                      <svg class="svg-icon" aria-hidden="true">
+                        <use xlink:href="#close"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="dynamic-list__buttons">
+                  <button class="button button--link" type="button">미리보기</button>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="dynamic-list__item">
+            <div class="dynamic-list__head h-group">
+              <div class="dynamic-list__button">
+                <!-- 메시지 선택 지정 여부 -->
+                <button class="tag" style="display: none;">
+                  <span class="tag__label">미사용</span>
+                </button>
+                <button class="tag tag--teal">
+                  <span class="tag__label">사용</span>
+                </button>
+                <!-- // 메시지 선택 지정 여부 -->
+              </div>
+              <div class="dynamic-list__contents v-group">
+                <div class="dynamic-list__form w-12_12">
+                  <input type="text" class="text-input" placeholder="placeholder text" value="alert 02">
+                  <button class="text-input-group__clear-button">
+                    <svg class="svg-icon" aria-hidden="true">
+                      <use xlink:href="#close"></use>
+                    </svg>
+                  </button>
+                </div>
+                <!-- 제목을 쓰지 않은 상태에서 저장 시 출력되는 메세지입니다. -->
+                <div class="notification-message notification-message--error">
+                  <svg class="notification-message__icon svg-icon" aria-hidden="true">
+                    <use xlink:href="#issue-fill"></use>
+                  </svg>
+                  <span class="notification-message__text">제목을 반드시 입력하세요.</span>
+                </div>
+                <!-- // 제목을 쓰지 않은 상태에서 저장 시 출력되는 메세지입니다. -->
+              </div>
+              <div class="dynamic-list__buttons h-group">
+                <!-- 수정 버튼 활성화 하였을 때 -->
+                <button class="button button--tertiary" type="button">취소</button>
+                <button class="button button--support" type="button">완료</button>
+                <!-- 수정 버튼 활성화 하였을 때 -->
+                <div class="select select">
+                  <div class="select-selector">
+                    <button class="select-selector__button" type="button">
+                      <span class="select-selector__title">유형</span>
+                      <svg class="svg-icon select-selector__icon" aria-hidden="true">
+                        <use xlink:href="#chevron-down-medium"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="select-container">
+                    <ul class="select-container__list">
+                      <li class="select-container__item">
+                        <button class="select-container__button" type="button">
+                          <span class="select-container__text">성공</span>
+                        </button>
+                      </li>
+                      <!-- 선택 된 객체에 select-container__item--selected 클래스 추가 -->
+                      <li class="select-container__item select-container__item--selected">
+                        <button class="select-container__button" type="button">
+                          <span class="select-container__text">실패</span>
+                        </button>
+                      </li>
+                      <li class="select-container__item">
+                        <button class="select-container__button" type="button">
+                          <span class="select-container__text">기타</span>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <button class="button button--danger" type="button">삭제</button>
+              </div>
+            </div>
+            <ul class="dynamic-list__body">
+              <li class="dynamic-list__body-row h-group">
+                <div class="dynamic-list__lang">
+                  한
+                </div>
+                <div class="dynamic-list__contents">
+                  <div class="dynamic-list__form">
+                    <input type="text" class="text-input" placeholder="placeholder text" value="메시지를 수정할 수 있습니다.">
+                    <button class="text-input-group__clear-button">
+                      <svg class="svg-icon" aria-hidden="true">
+                        <use xlink:href="#close"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="dynamic-list__buttons h-group">
+                  <!-- 수정 버튼 활성화 하였을 때 -->
+                  <button class="button button--tertiary" type="button">취소</button>
+                  <button class="button button--support" type="button">완료</button>
+                  <button class="button button--link" type="button">미리보기</button>
+                </div>
+                <!-- // 수정 버튼 활성화 하였을 때 -->
+              </li>
+              <li class="dynamic-list__body-row h-group">
+                <div class="dynamic-list__lang">
+                  영
+                </div>
+                <div class="dynamic-list__contents">
+                  <div class="notification-message notification-message--warning">
+                    <svg class="notification-message__icon svg-icon" aria-hidden="true">
+                      <use xlink:href="#warning-fill"></use>
+                    </svg>
+                    <span class="notification-message__text">메시지 내용이 삭제됩니다. 계속하시겠습니까?</span>
+                  </div>
+                </div>
+                <div class="dynamic-list__buttons h-group">
+                  <!-- 삭제 버튼 활성화 하였을 때 -->
+                  <button class="button button--tertiary" type="button">취소</button>
+                  <button class="button button--danger" type="button">삭제</button>
+                  <button class="button button--link" type="button">미리보기</button>
+                  <!-- // 삭제 버튼 활성화 하였을 때 -->
+                </div>
+              </li>
+              <li class="dynamic-list__body-row h-group">
+                <div class="dynamic-list__lang">
+                  중
+                </div>
+                <div class="dynamic-list__contents">
+                  <div class="dynamic-list__form">
+                    <input type="text" class="text-input">
+                    <button class="text-input-group__clear-button">
+                      <svg class="svg-icon" aria-hidden="true">
+                        <use xlink:href="#close"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="dynamic-list__buttons h-group">
+                  <!-- 수정 버튼 활성화 하였을 때 -->
+                  <button class="button button--tertiary" type="button">취소</button>
+                  <button class="button button--support" type="button">완료</button>
+                  <!-- // 수정 버튼 활성화 하였을 때 -->
+                  <button class="button button--link" type="button">미리보기</button>
+                </div>
+              </li>
+              <li class="dynamic-list__body-row h-group">
+                <div class="dynamic-list__lang">
+                  일
+                </div>
+                <div class="dynamic-list__contents">
+                  <p class="dynamic-list__text">こちらにメッセージを入力してください こちらにメッセージを入力してください</p>
+                </div>
+                <div class="dynamic-list__buttons h-group">
+                  <button class="button button--icon button--link button--sm" type="button">
+                    <svg class="svg-icon" aria-hidden="true">
+                      <use xlink:href="#pen"></use>
+                    </svg>
+                  </button>
+                  <button class="button button--icon button--link button--sm" type="button">
+                    <svg class="svg-icon" aria-hidden="true">
+                      <use xlink:href="#trash"></use>
+                    </svg>
+                  </button>
+                  <button class="button button--link" type="button">미리보기</button>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="dynamic-list__item">
+            <div class="dynamic-list__head h-group">
+              <div class="dynamic-list__button">
+                <!-- 메시지 선택 지정 여부 -->
+                <button class="tag" style="display: none;">
+                  <span class="tag__label">미사용</span>
+                </button>
+                <button class="tag tag--teal">
+                  <span class="tag__label">사용</span>
+                </button>
+                <!-- // 메시지 선택 지정 여부 -->
+              </div>
+              <div class="dynamic-list__contents">
+                <p class="dynamic-list__text">alert 01 </p>
+              </div>
+              <div class="dynamic-list__buttons h-group">
+                <!-- 수정 버튼 활성화 하였을 때 -->
+                <button class="button button--icon button--link button--sm" type="button">
+                  <svg class="svg-icon" aria-hidden="true">
+                    <use xlink:href="#pen"></use>
+                  </svg>
+                </button>
+                <!-- 수정 버튼 활성화 하였을 때 -->
+                <div class="select select">
+                  <div class="select-selector">
+                    <button class="select-selector__button" type="button">
+                      <span class="select-selector__title">유형</span>
+                      <svg class="svg-icon select-selector__icon" aria-hidden="true">
+                        <use xlink:href="#chevron-down-medium"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="select-container">
+                    <ul class="select-container__list">
+                      <li class="select-container__item">
+                        <button class="select-container__button" type="button">
+                          <span class="select-container__text">성공</span>
+                        </button>
+                      </li>
+                      <!-- 선택 된 객체에 select-container__item--selected 클래스 추가 -->
+                      <li class="select-container__item select-container__item--selected">
+                        <button class="select-container__button" type="button">
+                          <span class="select-container__text">실패</span>
+                        </button>
+                      </li>
+                      <li class="select-container__item">
+                        <button class="select-container__button" type="button">
+                          <span class="select-container__text">기타</span>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <button class="button button--danger" type="button">삭제</button>
+              </div>
+            </div>
+            <ul class="dynamic-list__body">
+              <li class="dynamic-list__body-row h-group">
+                <div class="dynamic-list__lang">
+                  한
+                </div>
+                <div class="dynamic-list__contents">
+                  <p class="dynamic-list__text">사용자가 입력한 메세지가 출력됩니다.</p>
+                </div>
+                <div class="dynamic-list__buttons h-group">
+                  <button class="button button--icon button--link button--sm" type="button">
+                    <svg class="svg-icon" aria-hidden="true">
+                      <use xlink:href="#pen"></use>
+                    </svg>
+                  </button>
+                  <button class="button button--icon button--link button--sm" type="button">
+                    <svg class="svg-icon" aria-hidden="true">
+                      <use xlink:href="#trash"></use>
+                    </svg>
+                  </button>
+                  <button class="button button--link" type="button">미리보기</button>
+                </div>
+              </li>
+              <li class="dynamic-list__body-row h-group">
+                <div class="dynamic-list__lang">
+                  영
+                </div>
+                <div class="dynamic-list__contents">
+                  <p class="dynamic-list__text">Et sunt et eiusmod dolor ipsum ipsum occaecat sint ipsum nisi amet sint.</p>
+                </div>
+                <div class="dynamic-list__buttons h-group">
+                  <button class="button button--icon button--link button--sm" type="button">
+                    <svg class="svg-icon" aria-hidden="true">
+                      <use xlink:href="#pen"></use>
+                    </svg>
+                  </button>
+                  <button class="button button--icon button--link button--sm" type="button">
+                    <svg class="svg-icon" aria-hidden="true">
+                      <use xlink:href="#trash"></use>
+                    </svg>
+                  </button>
+                  <button class="button button--link" type="button">미리보기</button>
+                </div>
+              </li>
+              <li class="dynamic-list__body-row h-group">
+                <div class="dynamic-list__lang">
+                  중
+                </div>
+                <div class="dynamic-list__contents">
+                  <p class="dynamic-list__text">大家好 请在这里输入信息 大家好 请在这里输入信息</p>
+                </div>
+                <div class="dynamic-list__buttons h-group">
+                  <button class="button button--icon button--link button--sm" type="button">
+                    <svg class="svg-icon" aria-hidden="true">
+                      <use xlink:href="#pen"></use>
+                    </svg>
+                  </button>
+                  <button class="button button--icon button--link button--sm" type="button">
+                    <svg class="svg-icon" aria-hidden="true">
+                      <use xlink:href="#trash"></use>
+                    </svg>
+                  </button>
+                  <button class="button button--link" type="button">미리보기</button>
+                </div>
+              </li>
+              <li class="dynamic-list__body-row h-group">
+                <div class="dynamic-list__lang">
+                  일
+                </div>
+                <div class="dynamic-list__contents">
+                  <p class="dynamic-list__text">こちらにメッセージを入力してください</p>
+                </div>
+                <div class="dynamic-list__buttons h-group">
+                  <button class="button button--icon button--link button--sm" type="button">
+                    <svg class="svg-icon" aria-hidden="true">
+                      <use xlink:href="#pen"></use>
+                    </svg>
+                  </button>
+                  <button class="button button--icon button--link button--sm" type="button">
+                    <svg class="svg-icon" aria-hidden="true">
+                      <use xlink:href="#trash"></use>
+                    </svg>
+                  </button>
+                  <button class="button button--link" type="button">미리보기</button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="dynamic-list__overlay">
+          <div class="overlay">
+            <div class="loader loader--md">
+              <div class="loader__spinner"></div>
+            </div>
+          </div>
+        </div>
+      </div>    
+    </div>
+  </div>
+  <div class="modal__foot">
+    <button class="button button--tertiary button--lg" type="button">
+      <span>초기화</span>
+    </button>
+    <div class="modal__foot-main-buttons">
+      <button class="button button--link button--lg" type="button">
+        <span>취소</span>
+      </button>
+      <button class="button button--primary button--lg" type="button">
+        <span>저장</span>
+      </button>
+    </div>
+  </div>
+</div>
+<!-- // 객체 편의기능 모달 -->
