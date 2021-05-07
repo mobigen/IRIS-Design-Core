@@ -20,6 +20,28 @@
   content: "";
 }
 
+.tooltip__inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.tooltip__title {
+  @include font-size("14");
+  @include font-weight("medium");
+  @include line-height("heading");
+  color: $text-04;
+}
+
+.tooltip__text {
+  @include font-size("13");
+  @include line-height("body");
+  color: $text-04;
+}
+
+.tooltip__text a {
+  color: $text-04;
+}
+
 // Tooltip 위로 위치
 .tooltip--top {
   .tooltip__arrow {
@@ -111,22 +133,4 @@
     bottom: rem(8px);
     right: -4px;
   }
-}
-
-.tooltip__inner {
-  display: flex;
-  flex-direction: column;
-}
-
-.tooltip__title {
-  @include font-size("14");
-  @include font-weight("medium");
-  @include line-height("heading");
-  color: $text-04;
-}
-
-.tooltip__text {
-  @include font-size("13");
-  @include line-height("body");
-  color: $text-04;
 }
