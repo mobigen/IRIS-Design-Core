@@ -4,6 +4,7 @@
 
 .select {
   position: relative;
+  flex-shrink: 0;
   min-width: rem(64px);
 }
 
