@@ -105,7 +105,7 @@
 }
 
 .list__details-item:not(:last-child) {
-  border-bottom: 1px solid rgba($ui-04, .75);
+  border-bottom: 1px solid rgba($ui-04, 0.75);
 }
 
 .list__details-item-trigger {
@@ -157,7 +157,6 @@
   flex-direction: column;
 }
 
-
 .list__head-right-box {
   margin-left: auto;
 }
@@ -182,6 +181,19 @@
 
 .list--border-reset {
   border: 0;
+}
+
+// list--hidable
+.list.list--hidable {
+  .list__action-buttons {
+    display: none;
+  }
+
+  .list__item:hover {
+    .list__action-buttons {
+      display: flex;
+    }
+  }
 }
 
 .dynamic-list {
