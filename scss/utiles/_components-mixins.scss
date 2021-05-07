@@ -376,11 +376,12 @@
 
   &-selector__input {
     @include font-family("sans");
-    width: 100%;
+    width: rem(127px);
     line-height: 1.5;
     padding: 0;
     border: 0;
     outline: 0;
+    background-color: $ui-02;
     color: $text-02;
 
     &::placeholder {
