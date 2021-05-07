@@ -3,7 +3,7 @@
 }
 
 .checkboxs {
-  display: flex
+  display: flex;
 }
 
 .checkboxs .checkbox:not(:last-of-type) {
@@ -113,7 +113,7 @@
 
 .checkbox--disabled .checkbox__input:checked + .checkbox__label {
   &:hover {
-    &::before{
+    &::before {
       border-color: $primary;
     }
     &::after {
@@ -160,93 +160,5 @@
     width: rem(10px);
     border-left-width: 0;
     border-bottom-width: rem(3px);
-  }
-}
-
-// -------------------------
-// Studio 컴포넌트 스타일 overwrite
-// -------------------------
-.canvas-object {
-  .checkbox__label:hover::before {
-    border-color: $text-02;
-  }
-
-  // checked 상태
-  .checkbox__input:checked + .checkbox__label::before {
-    background-color: $text-03;
-    border-color: $text-03;
-  }
-
-  // disabled 상태
-  .checkbox--disabled .checkbox__label {
-    &:hover {
-      &::before,
-      &::after {
-        border-color: $text-03;
-      }
-    }
-  }
-  
-  .checkbox--disabled .checkbox__input:checked + .checkbox__label {
-    &:hover {
-      &::before{
-        border-color: $text-03;
-      }
-    }
-  }
-  
-  // 부분 선택 상태
-  .checkbox--indeterminate .checkbox__input + .checkbox__label::before,
-  .checkbox__input:indeterminate + .checkbox__label::before {
-    border-color: $text-03;
-  }
-  
-  .checkbox--indeterminate .checkbox__input + .checkbox__label::after,
-  .checkbox__input:indeterminate + .checkbox__label::after {
-    border-color: $text-03;
-  }
-}
-
-// -------------------------
-// theme: primary
-// -------------------------
-.canvas-object .checkbox--primary {
-  .checkbox__label:hover::before {
-    border-color: $primary;
-  }
-
-  // checked 상태
-  .checkbox__input:checked + .checkbox__label::before {
-    background-color: $primary;
-    border-color: $primary;
-  }
-
-  // disabled 상태
-  .checkbox--disabled .checkbox__label {
-    &:hover {
-      &::before,
-      &::after {
-        border-color: $text-03;
-      }
-    }
-  }
-  
-  .checkbox--disabled .checkbox__input:checked + .checkbox__label {
-    &:hover {
-      &::before{
-        border-color: $primary;
-      }
-    }
-  }
-  
-  // 부분 선택 상태
-  .checkbox--indeterminate .checkbox__input + .checkbox__label::before,
-  .checkbox__input:indeterminate + .checkbox__label::before {
-    border-color: $primary;
-  }
-  
-  .checkbox--indeterminate .checkbox__input + .checkbox__label::after,
-  .checkbox__input:indeterminate + .checkbox__label::after {
-    border-color: $primary;
   }
 }
