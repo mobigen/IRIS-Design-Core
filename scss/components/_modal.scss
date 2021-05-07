@@ -18,14 +18,19 @@
 }
 
 .modal__head-close-button {
-  margin-left: $spacing-lg;
+  margin-left: auto;
 }
 
 .modal__head-title {
-  flex: 1;
+  @include text-overflow;
+  display: flex;
+  flex: 1 0 auto;
+  align-items: center;
+  width: calc(100% - 40px);
 }
 
 .modal__head-subtitle {
+  @include text-overflow;
   @include line-height("body");
   @include font-size("13");
   margin-left: $spacing-2xs;

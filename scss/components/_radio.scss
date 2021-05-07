@@ -99,23 +99,3 @@
 .radio__input:checked:disabled + .radio__label:hover::before {
   border-color: $primary;
 }
-
-// -------------------------
-// Studio 컴포넌트 스타일 overwrite
-// -------------------------
-.canvas-object {
-  .radio__label:hover::before {
-    border-color: $text-02;
-  }
-
-  // checked 상태
-  .radio__input:checked + .radio__label::before {
-    background-color: $text-03;
-    border-color: $text-03;
-  }
-
-  // checked + disabled 상태
-  .radio__input:checked:disabled + .radio__label:hover::before {
-    border-color: $text-03; 
-  }
-}
