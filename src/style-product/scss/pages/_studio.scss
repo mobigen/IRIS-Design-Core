@@ -258,9 +258,11 @@
 
 .editor-layout-head__title {
   @include line-height("heading");
+  max-width: rem(400px);
 }
 
 .editor-layout-head__title-text {
+  @include text-overflow;
   @include font-weight("medium");
 }
 
@@ -1063,6 +1065,7 @@
   .tab__button {
     width: 100%;
     height: 100%;
+    justify-content: center;
   }
 
   .tab--container {
@@ -1113,6 +1116,186 @@
       border-bottom-left-radius: 3px;
     }
   }
+}
+
+
+// -------------------------
+// Studio 컴포넌트 스타일 overwrite
+// -------------------------
+.canvas-object {
+  .checkbox__label:hover::before {
+    border-color: $text-02;
+  }
+
+  // checked 상태
+  .checkbox__input:checked + .checkbox__label::before {
+    background-color: $text-03;
+    border-color: $text-03;
+  }
+
+  // disabled 상태
+  .checkbox--disabled .checkbox__label {
+    &:hover {
+      &::before,
+      &::after {
+        border-color: $text-03;
+      }
+    }
+  }
+
+  .checkbox--disabled .checkbox__input:checked + .checkbox__label {
+    &:hover {
+      &::before{
+        border-color: $text-03;
+      }
+    }
+  }
+
+  // 부분 선택 상태
+  .checkbox--indeterminate .checkbox__input + .checkbox__label::before,
+  .checkbox__input:indeterminate + .checkbox__label::before {
+    border-color: $text-03;
+  }
+
+  .checkbox--indeterminate .checkbox__input + .checkbox__label::after,
+  .checkbox__input:indeterminate + .checkbox__label::after {
+    border-color: $text-03;
+  }
+}
+
+// -------------------------
+// theme: primary
+// -------------------------
+.canvas-object .checkbox--primary {
+  .checkbox__label:hover::before {
+    border-color: $primary;
+  }
+
+  // checked 상태
+  .checkbox__input:checked + .checkbox__label::before {
+    background-color: $primary;
+    border-color: $primary;
+  }
+
+  // disabled 상태
+  .checkbox--disabled .checkbox__label {
+    &:hover {
+      &::before,
+      &::after {
+        border-color: $text-03;
+      }
+    }
+  }
+
+  .checkbox--disabled .checkbox__input:checked + .checkbox__label {
+    &:hover {
+      &::before{
+        border-color: $primary;
+      }
+    }
+  }
+
+  // 부분 선택 상태
+  .checkbox--indeterminate .checkbox__input + .checkbox__label::before,
+  .checkbox__input:indeterminate + .checkbox__label::before {
+    border-color: $primary;
+  }
+
+  .checkbox--indeterminate .checkbox__input + .checkbox__label::after,
+  .checkbox__input:indeterminate + .checkbox__label::after {
+    border-color: $primary;
+  }
+}
+
+
+// -------------------------
+// Studio 컴포넌트 스타일 overwrite
+// -------------------------
+.canvas-object {
+  .radio__label:hover::before {
+    border-color: $text-02;
+  }
+
+  // checked 상태
+  .radio__input:checked + .radio__label::before {
+    background-color: $text-03;
+    border-color: $text-03;
+  }
+
+  // checked + disabled 상태
+  .radio__input:checked:disabled + .radio__label:hover::before {
+    border-color: $text-03;
+  }
+}
+
+// -------------------------
+// Studio 컴포넌트 스타일 overwrite
+// -------------------------
+.canvas-object {
+  .tag {
+    &:hover:not(:disabled) {
+      color: $text-03;
+    }
+  }
+
+  .tag--selected {
+    background-color: $text-03;
+    color: $text-04;
+
+    &:hover:not(:disabled) {
+      background-color: lighten($text-03, 5%);
+      color: $text-04;
+    }
+
+    &:disabled {
+      .tag__remove-button:hover {
+        fill: $text-04;
+        background-color: transparent;
+      }
+    }
+  }
+
+  .tag__remove-button {
+    &:hover {
+      background-color: rgba($ui-02, 0.25);
+      fill: $text-03;
+    }
+  }
+
+  .tag--selected .tag__remove-button {
+    fill: $text-04;
+
+    &:hover {
+      fill: $text-04;
+    }
+  }
+}
+
+.tags {
+  display: flex;
+  align-content: flex-start;
+}
+
+.tags--horizontal {
+  flex-wrap: wrap;
+}
+
+.tags--horizontal .tag + .tag {
+  margin-left: $spacing-2xs;
+}
+
+.tags--vertical {
+  flex-direction: column;
+}
+
+.tags--vertical .tag + .tag {
+  margin-top: $spacing-2xs;
+}
+
+.tags__item {
+  flex-shrink: 0;
+  margin-right: $spacing-2xs;
+  margin-bottom: $spacing-2xs;
 }
 
 
@@ -1265,6 +1448,7 @@
   position: absolute;
   top: rem(3px);
   left: rem(4px);
+  line-height: 0;
   z-index: 11;
 }
 

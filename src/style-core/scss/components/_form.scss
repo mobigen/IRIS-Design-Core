@@ -28,7 +28,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex: 1 1 auto;
+  flex: 1 1 100%;
   min-height: rem(32px);
 }
 
@@ -42,8 +42,17 @@
   margin-top: $spacing-md;
 }
 
+.form__body {
+  width: 100%;
+}
+
+.form__list {
+  width: 100%;
+}
+
 .form__item {
   @include form__item($spacing-xs);
+  width: 100%;
 }
 
 .form__label {
@@ -200,7 +209,7 @@
 }
 
 .dynamic-form__forms {
-  flex: 1;
+  flex: 1 0;
 }
 
 .dynamic-form__handler + .dynamic-form__forms {
@@ -209,6 +218,11 @@
 
 .dynamic-form__form {
   @include form__item($spacing-3xs);
+  width: 100%;
+}
+
+.dynamic-form__form .v-group {
+  width: 100%;
 }
 
 .dynamic-form__form-label {

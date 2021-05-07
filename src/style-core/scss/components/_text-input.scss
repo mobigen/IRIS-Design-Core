@@ -100,7 +100,6 @@
 // 1. .text-input-group__input -> .text-input 으로 변경
 .text-input-group {
   position: relative;
-  height: 100%;
 }
 
 .text-input-group__input {
@@ -228,7 +227,6 @@
 // -------------------------
 // input + suffix
 // -------------------------
-//
 .text-input-wrap {
   display: flex;
   align-items: center;
@@ -243,7 +241,6 @@
 // -------------------------
 // input hidable
 // -------------------------
-//
 .text-input-group--hidable {
   .text-input-group__button {
     display: none;
@@ -253,4 +250,11 @@
       display: flex;
     }
   }
+}
+
+// -------------------------
+// input with range
+// -------------------------
+input[type="range"] + .text-input-wrap .text-input {
+  width: rem(80px);
 }
