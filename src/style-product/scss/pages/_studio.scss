@@ -283,6 +283,7 @@
   display: flex;
   background-color: $ui-02;
   padding: $spacing-xs $spacing-xs $spacing-xs $spacing-sm;
+  overflow: auto;
 }
 
 .editor-layout-head__menu-bar .select {
