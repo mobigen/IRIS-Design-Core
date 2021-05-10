@@ -579,7 +579,7 @@
   }
 }
 
-.growth-rate-group {
+.growth-rate{
   display: flex;
   flex-direction: column;
   overflow: auto;
@@ -588,27 +588,27 @@
   padding: $spacing-2xs;
 }
 
-.growth-rate-items {
+.growth-rate__items {
   display: flex;
 }
 
-.growth-rate-items + .growth-rate-items {
+.growth-rate__items + .growth-rate__items {
   margin-top: $spacing-2xs;
 }
 
- .growth-rate-item {
+ .growth-rate__item {
   margin-right: $spacing-sm;
 }
 
- .growth-rate-items.up {
+ .growth-rate__items--up {
   color: $primary;
 }
 
- .growth-rate-items.zero {
+ .growth-rate__items--zero {
   color: $text-01;
 }
 
- .growth-rate-items.down {
+ .growth-rate__items--down {
   color: $negative;
 }
 
