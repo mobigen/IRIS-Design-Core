@@ -235,6 +235,7 @@
 
 .dynamic-form__form-detail {
   @include form__detail;
+  flex: 1 1 100%;
 }
 
 .dynamic-form__list--line + .dynamic-form__list--line {
