@@ -29,6 +29,12 @@
   position: relative;
 }
 
+th .button {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -4px;
+}
+
 .table td {
   background-color: $ui-02;
 }
@@ -257,10 +263,8 @@
   border-bottom: 1px solid $ui-04;
 }
 
-th .button {
-  display: inline-block;
-  vertical-align: middle;
-  margin-top: -4px;
+.table-scroll td {
+  word-break: break-all;
 }
 
 // -------------------------
