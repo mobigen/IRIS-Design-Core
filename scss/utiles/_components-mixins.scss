@@ -376,8 +376,9 @@
 
   &-selector__input {
     @include font-family("sans");
+    @include font-size("14");
+    @include line-height("body");
     width: rem(127px);
-    line-height: 1.5;
     padding: 0;
     border: 0;
     outline: 0;
