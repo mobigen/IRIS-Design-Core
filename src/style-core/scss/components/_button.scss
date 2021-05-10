@@ -51,7 +51,7 @@
     }
   }
 
-  .button__text {
+  &__text {
     & + .svg-icon {
       margin-left: $spacing-2xs;
     }
