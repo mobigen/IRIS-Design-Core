@@ -107,10 +107,14 @@
 }
 
 .modal--lg {
-  width: rem(900px);
+  width: rem(720px);
 }
 
 .modal--xl {
+  width: rem(900px);
+}
+
+.modal--2xl {
   width: rem(1180px);
 }
 
@@ -120,6 +124,14 @@
 
 .modal .form__item {
   padding: $spacing-sm / 2 0;
+}
+
+.modal .form--lg .form__item {
+  padding: $spacing-sm 0;
+}
+
+.modal .form--lg .form__item:first-child {
+  padding-top: 0;
 }
 
 .modal .form__label-text {
