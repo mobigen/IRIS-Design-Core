@@ -1,5 +1,6 @@
 .list {
   @include list;
+  @include list--hidable;
   display: flex;
   flex-direction: column;
   border: 1px solid $ui-04;
@@ -182,19 +183,6 @@
 
 .list--border-reset {
   border: 0;
-}
-
-// list--hidable
-.list.list--hidable {
-  .list__action-buttons {
-    display: none;
-  }
-
-  .list__item:hover {
-    .list__action-buttons {
-      display: flex;
-    }
-  }
 }
 
 .dynamic-list {
