@@ -127,6 +127,10 @@
     padding: $spacing-xs 0;
   }
 
+  .form__item:first-child {
+    padding-top: 0;
+  }
+
   .form__label {
     height: rem(40px);
   }
