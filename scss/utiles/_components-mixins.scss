@@ -136,7 +136,7 @@
       background-color: $hover-row;
 
       .svg-icon {
-        fill: $primary
+        fill: $primary;
       }
 
       .button__text {
@@ -270,6 +270,15 @@
 
   &__item--selected &__action-button .button__text {
     color: $primary;
+  }
+}
+
+@mixin list--hidable {
+  &--hidable &__action-buttons {
+    display: none;
+  }
+  &--hidable &__item:not(.list__item--disabled):hover &__action-buttons {
+    display: flex;
   }
 }
 
