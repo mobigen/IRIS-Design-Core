@@ -283,7 +283,6 @@
   display: flex;
   background-color: $ui-02;
   padding: $spacing-xs $spacing-xs $spacing-xs $spacing-sm;
-  overflow: auto;
 }
 
 .editor-layout-head__menu-bar .select {
@@ -2243,6 +2242,8 @@
 }
 
 .code__pre {
+  @include font-family("mono");
+  @include font-size("13");
   background-color: $odd-row;
   border: 1px solid $ui-04;
   padding: $spacing-2xs;
