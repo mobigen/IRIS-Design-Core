@@ -312,3 +312,30 @@
     width: 15%;
   }
 }
+
+.dynamic-form--responsive {
+  padding-top: $spacing-sm;
+  
+  .dynamic-form__item + .dynamic-form__item {
+    padding-top: $spacing-xs;
+    border-top: 1px solid $ui-04;
+  }
+
+  .select {
+    display: flex;
+    flex: 1;
+  }
+
+  .select-selector {
+    flex: 1;
+  }
+  
+  .dynamic-form__action-buttons {
+    width: 68px;
+    margin-left: 0;
+  }
+
+  .dynamic-form__action-buttons > *:not(:first-child) {
+    margin-left: $spacing-2xs;
+  }
+}
