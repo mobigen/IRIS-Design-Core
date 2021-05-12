@@ -4124,29 +4124,31 @@
           <!-- background-image 적용 -->
           <div class="canvas-object object-growth-rate object-growth-rate--bg-none" style="top: 2470px;left: 50px;width: 200px;height: 150px;">
             <div class="growth-rate">
-              <div class="growth-rate__items growth-rate__items--up">
-                <div class="growth-rate__item growth-rate__item--now">100</div>
-                <div class="growth-rate__item growth-rate__item--amount">
-                  <span class="growth-rate__mark">▲</span>
-                  <span class="growth-rate__ value">50</span>
-                </div>
-                <div class="growth-rate__item growth-rate__item--zero">100.0%</div>
+              <div class="growth-rate__items">
+                <div class="growth-rate__item growth-rate__item--up">100</div>
+                <div class="growth-rate__item growth-rate__item--zero">50</div>
+                <div class="growth-rate__item growth-rate__item--down">50</div>
               </div>
-              <div class="growth-rate__items growth-rate__items--zero">
-                <div class="growth-rate__item growth-rate__item--now">50</div>
-                <div class="growth-rate__item growth-rate__item--amount">
-                  <span class="growth-rate__mark">⁃</span>
-                  <span class="growth-rate__ value">0</span>
+              <div class="growth-rate__items">
+                <div class="growth-rate__amount-group">
+                  <div class="growth-rate__item growth-rate__item--up">
+                    <span class="growth-rate__mark">▲</span>
+                    <span class="growth-rate__value">50</span>
+                  </div>
+                  <div class="growth-rate__item growth-rate__item--zero">
+                    <span class="growth-rate__mark">⁃</span>
+                    <span class="growth-rate__value">0</span>
+                  </div>
+                  <div class="growth-rate__item growth-rate__item--down">
+                    <span class="growth-rate__mark">▼</span>
+                    <span class="growth-rate__value">50</span>
+                  </div>
                 </div>
-                <div class="growth-rate__item growth-rate__item--zero">0.0%</div>
               </div>
-              <div class="growth-rate__items growth-rate__items--down">
-                <div class="growth-rate__item growth-rate__item--now">50</div>
-                <div class="growth-rate__item growth-rate__item--amount">
-                  <span class="growth-rate__mark">▼</span>
-                  <span class="growth-rate__ value">50</span>
-                </div>
+              <div class="growth-rate__items">
+                <div class="growth-rate__item growth-rate__item--up">100.0%</div>
                 <div class="growth-rate__item growth-rate__item--zero">50.0%</div>
+                <div class="growth-rate__item growth-rate__item--down">0.0%</div>
               </div>
             </div>
           </div>
@@ -4155,29 +4157,31 @@
           <span style="position: absolute; top: 2450px; left: 260px;">증감률 클릭된 상태</span>
           <div class="canvas-object object-growth-rate canvas-object--active object-growth-rate--bg-none" style="top: 2470px;left: 260px;width: 200px;height: 150px;">
             <div class="growth-rate">
-              <div class="growth-rate__items growth-rate__items--up">
-                <div class="growth-rate__item growth-rate__item--now">100</div>
-                <div class="growth-rate__item growth-rate__item--amount">
-                  <span class="growth-rate__mark">▲</span>
-                  <span class="growth-rate__ value">50</span>
-                </div>
-                <div class="growth-rate__item growth-rate__item--zero">100.0%</div>
+              <div class="growth-rate__items">
+                <div class="growth-rate__item growth-rate__item--up">100</div>
+                <div class="growth-rate__item growth-rate__item--zero">50</div>
+                <div class="growth-rate__item growth-rate__item--down">50</div>
               </div>
-              <div class="growth-rate__items growth-rate__items--zero">
-                <div class="growth-rate__item growth-rate__item--now">50</div>
-                <div class="growth-rate__item growth-rate__item--amount">
-                  <span class="growth-rate__mark">⁃</span>
-                  <span class="growth-rate__ value">0</span>
+              <div class="growth-rate__items">
+                <div class="growth-rate__amount-group">
+                  <div class="growth-rate__item growth-rate__item--up">
+                    <span class="growth-rate__mark">▲</span>
+                    <span class="growth-rate__value">50</span>
+                  </div>
+                  <div class="growth-rate__item growth-rate__item--zero">
+                    <span class="growth-rate__mark">⁃</span>
+                    <span class="growth-rate__value">0</span>
+                  </div>
+                  <div class="growth-rate__item growth-rate__item--down">
+                    <span class="growth-rate__mark">▼</span>
+                    <span class="growth-rate__value">50</span>
+                  </div>
                 </div>
-                <div class="growth-rate__item growth-rate__item--zero">0.0%</div>
               </div>
-              <div class="growth-rate__items growth-rate__items--down">
-                <div class="growth-rate__item growth-rate__item--now">50</div>
-                <div class="growth-rate__item growth-rate__item--amount">
-                  <span class="growth-rate__mark">▼</span>
-                  <span class="growth-rate__ value">50</span>
-                </div>
+              <div class="growth-rate__items">
+                <div class="growth-rate__item growth-rate__item--up">100.0%</div>
                 <div class="growth-rate__item growth-rate__item--zero">50.0%</div>
+                <div class="growth-rate__item growth-rate__item--down">0.0%</div>
               </div>
             </div>
             <!-- 크기 조절 상자 -->
@@ -4196,53 +4200,49 @@
           <span style="position: absolute; top: 2450px; left: 470px;">증감률 스크롤 상태</span>
           <div class="canvas-object object-growth-rate object-growth-rate--bg-none" style="top: 2470px;left: 470px;width: 200px;height: 150px;">
             <div class="growth-rate">
-              <div class="growth-rate__items growth-rate__items--up">
-                <div class="growth-rate__item growth-rate__item--now">100</div>
-                <div class="growth-rate__item growth-rate__item--amount">
-                  <span class="growth-rate__mark">▲</span>
-                  <span class="growth-rate__ value">50</span>
-                </div>
-                <div class="growth-rate__item growth-rate__item--zero">100.0%</div>
+              <div class="growth-rate__items">
+                <div class="growth-rate__item growth-rate__item--up">100000000000000</div>
+                <div class="growth-rate__item growth-rate__item--zero">50</div>
+                <div class="growth-rate__item growth-rate__item--down">50</div>
+                <div class="growth-rate__item growth-rate__item--up">100</div>
+                <div class="growth-rate__item growth-rate__item--zero">50</div>
+                <div class="growth-rate__item growth-rate__item--down">50</div>
               </div>
-              <div class="growth-rate__items growth-rate__items--zero">
-                <div class="growth-rate__item growth-rate__item--now">50</div>
-                <div class="growth-rate__item growth-rate__item--amount">
-                  <span class="growth-rate__mark">⁃</span>
-                  <span class="growth-rate__ value">0</span>
+              <div class="growth-rate__items">
+                <div class="growth-rate__amount-group">
+                  <div class="growth-rate__item growth-rate__item--up">
+                    <span class="growth-rate__mark">▲</span>
+                    <span class="growth-rate__value">50000</span>
+                  </div>
+                  <div class="growth-rate__item growth-rate__item--zero">
+                    <span class="growth-rate__mark">⁃</span>
+                    <span class="growth-rate__value">0</span>
+                  </div>
+                  <div class="growth-rate__item growth-rate__item--down">
+                    <span class="growth-rate__mark">▼</span>
+                    <span class="growth-rate__value">50</span>
+                  </div>
+                  <div class="growth-rate__item growth-rate__item--up">
+                    <span class="growth-rate__mark">▲</span>
+                    <span class="growth-rate__value">50</span>
+                  </div>
+                  <div class="growth-rate__item growth-rate__item--zero">
+                    <span class="growth-rate__mark">⁃</span>
+                    <span class="growth-rate__value">0</span>
+                  </div>
+                  <div class="growth-rate__item growth-rate__item--down">
+                    <span class="growth-rate__mark">▼</span>
+                    <span class="growth-rate__value">50</span>
+                  </div>
                 </div>
-                <div class="growth-rate__item growth-rate__item--zero">0.0%</div>
               </div>
-              <div class="growth-rate__items growth-rate__items--down">
-                <div class="growth-rate__item growth-rate__item--now">50</div>
-                <div class="growth-rate__item growth-rate__item--amount">
-                  <span class="growth-rate__mark">▼</span>
-                  <span class="growth-rate__ value">50</span>
-                </div>
+              <div class="growth-rate__items">
+                <div class="growth-rate__item growth-rate__item--up">100.0%</div>
                 <div class="growth-rate__item growth-rate__item--zero">50.0%</div>
-              </div>
-              <div class="growth-rate__items growth-rate__items--up">
-                <div class="growth-rate__item growth-rate__item--now">100</div>
-                <div class="growth-rate__item growth-rate__item--amount">
-                  <span class="growth-rate__mark">▲</span>
-                  <span class="growth-rate__ value">50</span>
-                </div>
-                <div class="growth-rate__item growth-rate__item--zero">100.0%</div>
-              </div>
-              <div class="growth-rate__items growth-rate__items--zero">
-                <div class="growth-rate__item growth-rate__item--now">50</div>
-                <div class="growth-rate__item growth-rate__item--amount">
-                  <span class="growth-rate__mark">⁃</span>
-                  <span class="growth-rate__ value">0</span>
-                </div>
-                <div class="growth-rate__item growth-rate__item--zero">0.0%</div>
-              </div>
-              <div class="growth-rate__items growth-rate__items--down">
-                <div class="growth-rate__item growth-rate__item--now">50</div>
-                <div class="growth-rate__item growth-rate__item--amount">
-                  <span class="growth-rate__mark">▼</span>
-                  <span class="growth-rate__ value">50</span>
-                </div>
+                <div class="growth-rate__item growth-rate__item--down">0.0%</div>
+                <div class="growth-rate__item growth-rate__item--up">100.0%</div>
                 <div class="growth-rate__item growth-rate__item--zero">50.0%</div>
+                <div class="growth-rate__item growth-rate__item--down">0.0%</div>
               </div>
             </div>
           </div>
@@ -4251,29 +4251,31 @@
           <!-- background-image 적용 -->
           <div class="canvas-object object-growth-rate object-growth-rate--bg-none canvas-object--deselect" style="top: 2470px;left: 680px;width: 200px;height: 150px;">
             <div class="growth-rate">
-              <div class="growth-rate__items growth-rate__items--up">
-                <div class="growth-rate__item growth-rate__item--now">100</div>
-                <div class="growth-rate__item growth-rate__item--amount">
-                  <span class="growth-rate__mark">▲</span>
-                  <span class="growth-rate__ value">50</span>
-                </div>
-                <div class="growth-rate__item growth-rate__item--zero">100.0%</div>
+              <div class="growth-rate__items">
+                <div class="growth-rate__item growth-rate__item--up">100</div>
+                <div class="growth-rate__item growth-rate__item--zero">50</div>
+                <div class="growth-rate__item growth-rate__item--down">50</div>
               </div>
-              <div class="growth-rate__items growth-rate__items--zero">
-                <div class="growth-rate__item growth-rate__item--now">50</div>
-                <div class="growth-rate__item growth-rate__item--amount">
-                  <span class="growth-rate__mark">⁃</span>
-                  <span class="growth-rate__ value">0</span>
+              <div class="growth-rate__items">
+                <div class="growth-rate__amount-group">
+                  <div class="growth-rate__item growth-rate__item--up">
+                    <span class="growth-rate__mark">▲</span>
+                    <span class="growth-rate__value">50</span>
+                  </div>
+                  <div class="growth-rate__item growth-rate__item--zero">
+                    <span class="growth-rate__mark">⁃</span>
+                    <span class="growth-rate__value">0</span>
+                  </div>
+                  <div class="growth-rate__item growth-rate__item--down">
+                    <span class="growth-rate__mark">▼</span>
+                    <span class="growth-rate__value">50</span>
+                  </div>
                 </div>
-                <div class="growth-rate__item growth-rate__item--zero">0.0%</div>
               </div>
-              <div class="growth-rate__items growth-rate__items--down">
-                <div class="growth-rate__item growth-rate__item--now">50</div>
-                <div class="growth-rate__item growth-rate__item--amount">
-                  <span class="growth-rate__mark">▼</span>
-                  <span class="growth-rate__ value">50</span>
-                </div>
+              <div class="growth-rate__items">
+                <div class="growth-rate__item growth-rate__item--up">100.0%</div>
                 <div class="growth-rate__item growth-rate__item--zero">50.0%</div>
+                <div class="growth-rate__item growth-rate__item--down">0.0%</div>
               </div>
             </div>
             <div class="checkbox checkbox--primary">
@@ -4286,29 +4288,31 @@
           <!-- background-image 적용 -->
           <div class="canvas-object object-growth-rate object-growth-rate--bg-none canvas-object--select" style="top: 2470px;left: 890px;width: 200px;height: 150px;">
             <div class="growth-rate">
-              <div class="growth-rate__items growth-rate__items--up">
-                <div class="growth-rate__item growth-rate__item--now">100</div>
-                <div class="growth-rate__item growth-rate__item--amount">
-                  <span class="growth-rate__mark">▲</span>
-                  <span class="growth-rate__ value">50</span>
-                </div>
-                <div class="growth-rate__item growth-rate__item--zero">100.0%</div>
+              <div class="growth-rate__items">
+                <div class="growth-rate__item growth-rate__item--up">100</div>
+                <div class="growth-rate__item growth-rate__item--zero">50</div>
+                <div class="growth-rate__item growth-rate__item--down">50</div>
               </div>
-              <div class="growth-rate__items growth-rate__items--zero">
-                <div class="growth-rate__item growth-rate__item--now">50</div>
-                <div class="growth-rate__item growth-rate__item--amount">
-                  <span class="growth-rate__mark">⁃</span>
-                  <span class="growth-rate__ value">0</span>
+              <div class="growth-rate__items">
+                <div class="growth-rate__amount-group">
+                  <div class="growth-rate__item growth-rate__item--up">
+                    <span class="growth-rate__mark">▲</span>
+                    <span class="growth-rate__value">50</span>
+                  </div>
+                  <div class="growth-rate__item growth-rate__item--zero">
+                    <span class="growth-rate__mark">⁃</span>
+                    <span class="growth-rate__value">0</span>
+                  </div>
+                  <div class="growth-rate__item growth-rate__item--down">
+                    <span class="growth-rate__mark">▼</span>
+                    <span class="growth-rate__value">50</span>
+                  </div>
                 </div>
-                <div class="growth-rate__item growth-rate__item--zero">0.0%</div>
               </div>
-              <div class="growth-rate__items growth-rate__items--down">
-                <div class="growth-rate__item growth-rate__item--now">50</div>
-                <div class="growth-rate__item growth-rate__item--amount">
-                  <span class="growth-rate__mark">▼</span>
-                  <span class="growth-rate__ value">50</span>
-                </div>
+              <div class="growth-rate__items">
+                <div class="growth-rate__item growth-rate__item--up">100.0%</div>
                 <div class="growth-rate__item growth-rate__item--zero">50.0%</div>
+                <div class="growth-rate__item growth-rate__item--down">0.0%</div>
               </div>
             </div>
             <div class="checkbox checkbox--primary">
