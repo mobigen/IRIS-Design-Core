@@ -4,6 +4,7 @@
 
 .transfer-list {
   @include list;
+  @include list--hidable;
   display: flex;
   flex-direction: column;
   border: 1px solid $ui-04;
