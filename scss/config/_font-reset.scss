@@ -11,6 +11,7 @@ body {
   background-color: $ui-02;
 }
 
+pre,
 code {
   @include font-family("mono");
 }
