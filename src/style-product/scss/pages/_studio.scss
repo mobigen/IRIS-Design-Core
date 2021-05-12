@@ -2246,7 +2246,6 @@
 }
 
 .code__pre {
-  @include font-family("mono");
   @include font-size("13");
   background-color: $odd-row;
   border: 1px solid $ui-04;
