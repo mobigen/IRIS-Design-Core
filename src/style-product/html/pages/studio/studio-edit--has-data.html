@@ -122,6 +122,22 @@
                   </div>
                   <div class="side-panel-content">
                     <div class="side-panel-content__head">
+                      <strong class="side-panel-content__head-title">다이나믹 폼 유형 (4)</strong>
+                      <div class="toggle-switch toggle-switch--sm">
+                        <label for="toggleSwitch1" class="toggle-switch__label">label</label>
+                        <button id="toggleSwitch1" class="toggle-switch__switch" type="button">
+                          <span class="toggle-switch__handle">
+                            <span class="ir-pm"></span>
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="side-panel-content__body">
+                      @@include('../partials/common/dynamic-form--responsive.html')
+                    </div>
+                  </div>
+                  <div class="side-panel-content">
+                    <div class="side-panel-content__head">
                       <strong class="side-panel-content__head-title">조건부객체 폼 유형</strong>
                     </div>
                     <div class="side-panel-content__body">
@@ -190,9 +206,6 @@
       </div>
     </section>
   </div>
-  <!-- 편집화면 조건부객체 미리보기 영역 -->
-  @@include('../partials/studio/condition-preview.html')
-  <!-- // 편집화면 조건부객체 미리보기 영역 -->
   <script src="../../dist/js/main.bundle.js"></script>
 </body>
 

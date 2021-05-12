@@ -39,6 +39,94 @@
       </svg>
     </button>
   </div>
+  <div class="editor-layout-head__responsive">
+    <div class="h-group">
+      <div class="select">
+        <div class="select-selector">
+          <button class="select-selector__button" type="button">
+            <svg class="svg-icon" aria-hidden="true">
+              <use xlink:href="#zoom"></use>
+            </svg>
+            <span class="select-selector__title">100%</span>
+            <svg class="svg-icon select-selector__icon">
+              <use xlink:href="#chevron-down-medium"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="select-container">
+          <ul class="select-container__list">
+            <li class="select-container__item select-container__item--selected">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">100%</span>
+              </button>
+            </li>
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">80%</span>
+              </button>
+            </li>
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">60%</span>
+              </button>
+            </li>
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">40%</span>
+              </button>
+            </li>
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">20%</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>  
+      <div class="select">
+        <div class="select-selector">
+          <button class="select-selector__button" type="button">
+            <svg class="svg-icon" aria-hidden="true">
+              <use xlink:href="#responsive"></use>
+            </svg>
+            <span class="select-selector__title">1920px</span>
+            <svg class="svg-icon select-selector__icon">
+              <use xlink:href="#chevron-down-medium"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="select-container">
+          <ul class="select-container__list">
+            <li class="select-container__item select-container__item--selected">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">1920px</span>
+              </button>
+            </li>
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">1366px</span>
+              </button>
+            </li>
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">1024px</span>
+              </button>
+            </li>
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">768px</span>
+              </button>
+            </li>
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">320px</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="editor-layout-head__action-buttons">
     <button class="button button--support" type="button">보기</button>
     <span class="division-line"></span>
@@ -4465,7 +4553,11 @@
               <!-- //크기 조절 상자 -->
             </div>
             <!-- // slider: select -->
-  
+
+            <!-- 반응형 가이드라인 -->
+            <span style="position:absolute;top:2840px;left:50px;">반응형 : 가이드라인</span>
+            <div class="responsive__guide-line" style="top:2870px;left:0;"></div>
+            <!-- // 반응형 가이드라인 -->
             
           </div>
         </div>
@@ -5091,6 +5183,480 @@
                   </div>
                   <div class="side-panel-content">
                     <div class="side-panel-content__head">
+                      <strong class="side-panel-content__head-title">다이나믹 폼 유형 (4)</strong>
+                      <div class="toggle-switch toggle-switch--sm">
+                        <label for="toggleSwitch1" class="toggle-switch__label">label</label>
+                        <button id="toggleSwitch1" class="toggle-switch__switch" type="button">
+                          <span class="toggle-switch__handle">
+                            <span class="ir-pm"></span>
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="side-panel-content__body">
+                      <div class="dynamic-form dynamic-form--responsive">
+  <div class="dynamic-form__item v-group">
+    <div class="h-group">
+      <div class="select">
+        <div class="select-selector">
+          <button class="select-selector__button" type="button">
+            <span class="select-selector__title">1920 X 900 (px)</span>
+            <svg class="svg-icon select-selector__icon">
+              <use xlink:href="#chevron-down-medium"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="select-container">
+          <ul class="select-container__list">
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">1366 X 620 (px)</span>
+              </button>
+            </li>
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">1024 X 768 (px)</span>
+              </button>
+            </li>
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">768 X auto (px)</span>
+              </button>
+            </li>
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">480 X auto (px)</span>
+              </button>
+            </li>
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">375 X auto (px)</span>
+              </button>
+            </li>
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">사용자 지정 (px)</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="dynamic-form__action-buttons">
+        <button class="button button--icon button--support" type="button">
+          <svg class="svg-icon" aria-hidden="true">
+            <use xlink:href="#plus"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="dynamic-form__item v-group">
+    <div class="h-group">
+      <div class="select">
+        <div class="select-selector">
+          <button class="select-selector__button" type="button">
+            <span class="select-selector__title">사용자 지정 (px)</span>
+            <svg class="svg-icon select-selector__icon">
+              <use xlink:href="#chevron-down-medium"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="select-container">
+          <ul class="select-container__list">
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">1920 X 900 (px)</span>
+              </button>
+            </li>
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">1366 X 620 (px)</span>
+              </button>
+            </li>
+            </li>
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">1024 X 768 (px)</span>
+              </button>
+            </li>
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">768 X auto (px)</span>
+              </button>
+            </li>
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">480 X auto (px)</span>
+              </button>
+            </li>
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">375 X auto (px)</span>
+              </button>
+          </ul>
+        </div>
+      </div>
+      <div class="dynamic-form__action-buttons">
+        <button class="button button--icon button--support" type="button">
+          <svg class="svg-icon" aria-hidden="true">
+            <use xlink:href="#plus"></use>
+          </svg>
+        </button>
+        <button class="button button--icon button--danger" type="button">
+          <svg class="svg-icon">
+            <use xlink:href="#minus"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="form">
+      <div class="form__list">
+        <div class="form__item">
+          <label class="form__label">
+            <span class="form__label-text">가로 크기</span>
+          </label>
+          <div class="form__detail">
+            <div class="form__detail-inner">
+              <div class="text-input-wrap">
+                <input type="number" class="text-input col-5" max="100" min="0" step="1">
+                <span class="text-input-wrap__suffix">px</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form__item">
+          <label class="form__label">
+            <span class="form__label-text">세로 크기</span>
+          </label>
+          <div class="form__detail">
+            <div class="form__detail-inner">
+              <div class="text-input-wrap">
+                <input type="number" class="text-input col-5" max="100" min="0" step="1">
+                <span class="text-input-wrap__suffix">px</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="notification-message notification-message--warning">
+        <svg class="notification-message__icon svg-icon" aria-hidden="true">
+          <use xlink:href="#warning-fill"></use>
+        </svg>
+        <span class="notification-message__text">중복된 가로크기 입니다.</span>
+      </div>
+    </div>
+  </div>
+  <div class="dynamic-form__item v-group">
+    <div class="h-group">
+      <div class="select">
+        <div class="select-selector">
+          <button class="select-selector__button" type="button">
+            <span class="select-selector__title">1366 X 620 (px)</span>
+            <svg class="svg-icon select-selector__icon">
+              <use xlink:href="#chevron-down-medium"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="select-container">
+          <ul class="select-container__list">
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">1920 X 900 (px)</span>
+              </button>
+            </li>
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">1024 X 768 (px)</span>
+              </button>
+            </li>
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">768 X auto (px)</span>
+              </button>
+            </li>
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">480 X auto (px)</span>
+              </button>
+            </li>
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">375 X auto (px)</span>
+              </button>
+            </li>
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">사용자 지정 (px)</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="dynamic-form__action-buttons">
+        <button class="button button--icon button--support" type="button">
+          <svg class="svg-icon" aria-hidden="true">
+            <use xlink:href="#plus"></use>
+          </svg>
+        </button>
+        <button class="button button--icon button--danger" type="button">
+          <svg class="svg-icon">
+            <use xlink:href="#minus"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="dynamic-form__item v-group">
+    <div class="h-group">
+      <div class="select">
+        <div class="select-selector">
+          <button class="select-selector__button" type="button">
+            <span class="select-selector__title">1024 X 768 (px)</span>
+            <svg class="svg-icon select-selector__icon">
+              <use xlink:href="#chevron-down-medium"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="select-container">
+          <ul class="select-container__list">
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">1920 X 900 (px)</span>
+              </button>
+            </li>
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">1366 X 620 (px)</span>
+              </button>
+            </li>
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">768 X auto (px)</span>
+              </button>
+            </li>
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">480 X auto (px)</span>
+              </button>
+            </li>
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">375 X auto (px)</span>
+              </button>
+            </li>
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">사용자 지정 (px)</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="dynamic-form__action-buttons">
+        <button class="button button--icon button--support" type="button">
+          <svg class="svg-icon" aria-hidden="true">
+            <use xlink:href="#plus"></use>
+          </svg>
+        </button>
+        <button class="button button--icon button--danger" type="button">
+          <svg class="svg-icon">
+            <use xlink:href="#minus"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="dynamic-form__item v-group">
+    <div class="h-group">
+      <div class="select">
+        <div class="select-selector">
+          <button class="select-selector__button" type="button">
+            <span class="select-selector__title">768 X auto (px)</span>
+            <svg class="svg-icon select-selector__icon">
+              <use xlink:href="#chevron-down-medium"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="select-container">
+          <ul class="select-container__list">
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">1920 X 900 (px)</span>
+              </button>
+            </li>
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">1366 X 620 (px)</span>
+              </button>
+            </li>
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">1024 X 768 (px)</span>
+              </button>
+            </li>
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">480 X auto (px)</span>
+              </button>
+            </li>
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">375 X auto (px)</span>
+              </button>
+            </li>
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">사용자 지정 (px)</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="dynamic-form__action-buttons">
+        <button class="button button--icon button--support" type="button">
+          <svg class="svg-icon" aria-hidden="true">
+            <use xlink:href="#plus"></use>
+          </svg>
+        </button>
+        <button class="button button--icon button--danger" type="button">
+          <svg class="svg-icon">
+            <use xlink:href="#minus"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="dynamic-form__item v-group">
+    <div class="h-group">
+      <div class="select">
+        <div class="select-selector">
+          <button class="select-selector__button" type="button">
+            <span class="select-selector__title">480 X auto (px)</span>
+            <svg class="svg-icon select-selector__icon">
+              <use xlink:href="#chevron-down-medium"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="select-container">
+          <ul class="select-container__list">
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">1920 X 900 (px)</span>
+              </button>
+            </li>
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">1366 X 620 (px)</span>
+              </button>
+            </li>
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">1024 X 768 (px)</span>
+              </button>
+            </li>
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">768 X auto (px)</span>
+              </button>
+            </li>
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">375 X auto (px)</span>
+              </button>
+            </li>
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">사용자 지정 (px)</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="dynamic-form__action-buttons">
+        <button class="button button--icon button--support" type="button">
+          <svg class="svg-icon" aria-hidden="true">
+            <use xlink:href="#plus"></use>
+          </svg>
+        </button>
+        <button class="button button--icon button--danger" type="button">
+          <svg class="svg-icon">
+            <use xlink:href="#minus"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="dynamic-form__item v-group">
+    <div class="h-group">
+      <div class="select">
+        <div class="select-selector">
+          <button class="select-selector__button" type="button">
+            <span class="select-selector__title">375 X auto (px)</span>
+            <svg class="svg-icon select-selector__icon">
+              <use xlink:href="#chevron-down-medium"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="select-container">
+          <ul class="select-container__list">
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">1920 X 900 (px)</span>
+              </button>
+            </li>
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">1366 X 620 (px)</span>
+              </button>
+            </li>
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">1024 X 768 (px)</span>
+              </button>
+            </li>
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">768 X auto (px)</span>
+              </button>
+            </li>
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">480 X auto (px)</span>
+              </button>
+            </li>
+            <li class="select-container__item">
+              <button class="select-container__button" type="button">
+                <span class="select-container__text">사용자 지정 (px)</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="dynamic-form__action-buttons">
+        <button class="button button--icon button--support" type="button">
+          <svg class="svg-icon" aria-hidden="true">
+            <use xlink:href="#plus"></use>
+          </svg>
+        </button>
+        <button class="button button--icon button--danger" type="button">
+          <svg class="svg-icon">
+            <use xlink:href="#minus"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="notification-message notification-message--warning">
+      <svg class="notification-message__icon svg-icon" aria-hidden="true">
+        <use xlink:href="#warning-fill"></use>
+      </svg>
+      <span class="notification-message__text">중복된 가로크기 입니다.</span>
+    </div>
+  </div>
+</div>
+                    </div>
+                  </div>
+                  <div class="side-panel-content">
+                    <div class="side-panel-content__head">
                       <strong class="side-panel-content__head-title">조건부객체 폼 유형</strong>
                     </div>
                     <div class="side-panel-content__body">
@@ -5396,59 +5962,6 @@
       </div>
     </section>
   </div>
-  <!-- 편집화면 조건부객체 미리보기 영역 -->
-  <div class="modal modal--sm" style="position: absolute; top: 360px; right: 310px;">
-  <div class="modal__body modal__body--sm">
-    <div class="condition__body">
-      <form class="form form--vertical">
-        <div class="form__item">
-          <label class="form__label">
-            <span class="form__label-text">값</span>
-          </label>
-          <div class="form__detail">
-            <div class="code__pre h-120">
-  <pre>{% if input_1 %}
-abc
-{% else %}
-efg
-{% endif %}</pre>
-          </div>
-          </div>
-        </div>
-        <div class="form__item">
-          <label class="form__label">
-            <span class="form__label-text">조건</span>
-          </label>
-          <div class="form__detail">
-            <div class="code__pre h-84">
-  <pre>텍스트에 포함
-ab</pre>
-            </div>
-          </div>
-        </div>
-        <div class="form__item">
-          <label class="form__label">
-            <span class="form__label-text">결과</span>
-          </label>
-          <div class="form__detail">
-            <div class="code__pre h-84">
-  <pre>거짓</pre>
-            </div>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
-  <div class="modal__foot">
-    <div class="modal__foot-main-buttons">
-      <button class="button button--tertiary button--lg" type="button">
-        <span>닫기</span>
-      </button>
-    </div>
-  </div>
-</div>
-
-  <!-- // 편집화면 조건부객체 미리보기 영역 -->
   <script src="../../dist/js/main.bundle.js"></script>
 </body>
 

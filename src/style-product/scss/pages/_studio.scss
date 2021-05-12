@@ -313,6 +313,10 @@
   display: flex;
 }
 
+.editor-layout-head__responsive {
+  margin-right: $spacing-sm;
+}
+
 .editor-layout-body {
   display: flex;
   flex: 1;
@@ -2249,4 +2253,10 @@
   padding: $spacing-2xs;
   word-break: break-all;
   overflow: auto;
+}
+
+.responsive__guide-line {
+  position: absolute;
+  border-bottom: 1px solid $primary;
+  width: 100%;
 }
