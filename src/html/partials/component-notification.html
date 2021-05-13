@@ -281,15 +281,22 @@
               <use xlink:href="#info-fill"></use>
             </svg>
             <p class="notification-full__text">정보 메세지를 입력해주세요.</p>
-            <span class="notification-full__subtext">서버 재시작 중 IRIS 사용이 중단되며, 저장하지 않은 데이터는 삭제됩니다. 문제 발생 시, 담당자에게 연락바랍니다.</span>
+            <div class="notification-full__detail">
+              <span class="notification-full__subtext">서버 재시작 중 IRIS 사용이 중단되며, 저장하지 않은 데이터는 삭제됩니다. 문제 발생 시, 담당자에게 연락바랍니다.</span>
+            </div>
           </div>
           <!-- success -->
           <div class="notification-full notification-full--success">
             <svg class="notification-full__icon svg-icon" aria-hidden="true">
               <use xlink:href="#checkmark-fill"></use>
             </svg>
-            <p class="notification-full__text">성공 메세지를 입력해주세요.</p>
-            <span class="notification-full__subtext">서버 재시작 중 IRIS 사용이 중단되며, 저장하지 않은 데이터는 삭제됩니다. 문제 발생 시, 담당자에게 연락바랍니다.</span>
+            <p class="notification-full__text">시스템 설정 적용 및
+              서버 재시작이 완료되었습니다.</p>
+            <div class="notification-full__detail">
+              <button class="button button--primary button--lg" type="button" style="width: 150px;">
+                <span class="button__text">확인</span>
+              </button>
+            </div>
           </div>
           <!-- warning -->
           <div class="notification-full notification-full--warning">
@@ -297,7 +304,9 @@
               <use xlink:href="#warning-fill"></use>
             </svg>
             <p class="notification-full__text">경고 메세지를 입력해주세요.</p>
-            <span class="notification-full__subtext">서버 재시작 중 IRIS 사용이 중단되며, 저장하지 않은 데이터는 삭제됩니다. 문제 발생 시, 담당자에게 연락바랍니다.</span>
+            <div class="notification-full__detail">
+              <span class="notification-full__subtext">서버 재시작 중 IRIS 사용이 중단되며, 저장하지 않은 데이터는 삭제됩니다. 문제 발생 시, 담당자에게 연락바랍니다.</span>
+            </div>
           </div>
           <!-- error -->
           <div class="notification-full notification-full--error">
@@ -305,7 +314,17 @@
               <use xlink:href="#issue-fill"></use>
             </svg>
             <p class="notification-full__text">에러 메세지를 입력해주세요.</p>
-            <span class="notification-full__subtext">서버 재시작 중 IRIS 사용이 중단되며, 저장하지 않은 데이터는 삭제됩니다. 문제 발생 시, 담당자에게 연락바랍니다.</span>
+            <div class="notification-full__detail">
+              <div class="notification notification--normal" style="width: 450px;">
+                <svg class="notification__icon svg-icon" aria-hidden="true">
+                  <use xlink:href="#subtract"></use>
+                </svg>
+                <div class="notification__contents">
+                  <p class="notification__title">담당자에게 연락 바랍니다.</p>
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
           <!-- loading -->
           <div class="notification-full notification-full--loading">
