@@ -84,12 +84,20 @@
     color: $text-02;
   }
 
+  &__detail {
+    margin-top: $spacing-xl;
+    text-align: center;
+
+    .notification {
+      justify-content: center;
+    }
+  }
+
   &__subtext {
     @include font-size("18");
     @include font-weight("light");
-    margin-top: $spacing-lg;
+
     color: $text-03;
-    text-align: center;
   }
 
   &--info {
