@@ -140,6 +140,10 @@
   & .tab__item--selected + .tab__item {
     border-left-color: transparent;
   }
+
+  .tab__button {
+    justify-content: center;
+  }
 }
 
 // -------------------------
