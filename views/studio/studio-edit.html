@@ -16,7 +16,7 @@
       <div class="service-content editor-layout">
         <!-- 상단 영역 -->
         <div class="editor-layout-head">
-
+          
 <!-- 상단 바 -->
 <div class="editor-layout-head__top-bar">
   <div class="editor-layout-head__title-wrap">
@@ -82,7 +82,7 @@
             </li>
           </ul>
         </div>
-      </div>
+      </div>  
       <div class="select">
         <div class="select-selector">
           <button class="select-selector__button" type="button">
@@ -141,7 +141,7 @@
   </div>
 </div>
 
-
+          
 <!-- 객체 메뉴바 -->
 <div class="editor-layout-head__menu-bar">
   <!-- 객체 카테고리 -->
@@ -2762,6 +2762,44 @@
             </svg>
             <div class="object-hidden__text">
               <span>common_data_1</span>
+            </div>
+            <div class="checkbox checkbox--primary">
+              <input id="checkbox-condition-01" class="checkbox__input" type="checkbox" checked="">
+              <label for="checkbox-condition-01" class="checkbox__label"></label>
+            </div>
+            <div class="select select--open">
+              <div class="select-selector">
+                <button class="select-selector__button" type="button">
+                  <span class="select-selector__title">데이터</span>
+                  <svg class="svg-icon select-selector__icon" aria-hidden="true">
+                    <use xlink:href="#chevron-down-medium"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="select-container">
+                <ul class="select-container__list">
+                  <li class="select-container__item">
+                    <button class="select-container__button" type="button">
+                      <span class="select-container__text">전체</span>
+                    </button>
+                  </li>
+                  <li class="select-container__item">
+                    <button class="select-container__button" type="button">
+                      <span class="select-container__text">성공</span>
+                    </button>
+                  </li>
+                  <li class="select-container__item">
+                    <button class="select-container__button" type="button">
+                      <span class="select-container__text">실패</span>
+                    </button>
+                  </li>
+                  <li class="select-container__item select-container__item--selected">
+                    <button class="select-container__button" type="button">
+                      <span class="select-container__text">데이터</span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
 
@@ -5423,11 +5461,11 @@
                           <div class="form__item">
                             <label class="form__label">
                               <span class="form__label-text">시간 간격</span>
-                            </label>text-input w-6_12
+                            </label>
                             <div class="form__detail">
                               <div class="form__detail-inner">
                                 <div class="text-input-wrap">
-                                  <input type="number" class="text-input col-5" max="100" min="0" step="1" value="3">
+                                  <input type="number" class="text-input w-6_12" max="100" min="0" step="1" value="3">
                                   <span class="text-input-wrap__suffix">초</span>
                                 </div>
                               </div>
@@ -6278,7 +6316,7 @@
                             </tr>
                           </tbody>
                         </table>
-                        <div class="table__foot">
+                        <div class="table__footbar">
                           <div class="toggle-switch toggle-switch--sm">
                             <label for="toggleSwitch1" class="toggle-switch__label">label</label>
                             <button id="toggleSwitch1" class="toggle-switch__switch" type="button">
@@ -6491,11 +6529,11 @@
                             <div class="h-group">
                               <input type="text" class="text-input" placeholder="경도를 입력해주세요.">
                               <button class="button button--tertiary" title="적용">적용</button>
-                            </div>text-input w-6_12
+                            </div>
                           </div>
                           <div class="form__item">
                             <div class="text-input-wrap">
-                              <input type="number" class="text-input col-5" max="100" min="0" step="1" value="">
+                              <input type="number" class="text-input w-6_12" max="100" min="0" step="1" value="">
                               <span class="text-input-wrap__suffix">px</span>
                             </div>
                           </div>
@@ -6940,7 +6978,7 @@
     </section>
   </div>
   <!-- 편집화면 컨텍스트 메뉴 영역 -->
-
+  
 <div class="context-menu" style="position: absolute; top: 100px; left: 10px;">
   <ul class="context-menu__list">
     <li class="context-menu__item context-menu__item--submenu">
@@ -6983,7 +7021,7 @@
   </ul>
 </div>
 
-
+  
 <div class="context-menu period-setting" style="position: absolute; top: 250px; left: 10px;">
   <div class="context-menu__head">
     <div class="context-menu__head-title">
@@ -7132,7 +7170,7 @@
           </div>
           <div class="date-picker-panel">
             <div class="date-picker-panel__body">
-
+              
 <div class="ui-datepicker-inline ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="display: block;">
   <div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all"><a class="ui-datepicker-prev ui-corner-all" data-handler="prev" data-event="click" title="Prev"><span class="ui-icon ui-icon-circle-triangle-w">Prev</span></a><a class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title="Next"><span class="ui-icon ui-icon-circle-triangle-e">Next</span></a>
     <div class="ui-datepicker-title"><span class="ui-datepicker-year">2021</span>년&nbsp;<span class="ui-datepicker-month">1월</span></div>
@@ -7210,7 +7248,7 @@
 
             </div>
             <div class="date-picker-panel__foot">
-
+              
 <div class="time-picker time-picker--focused time-picker--open">
   <div class="time-picker-selector">
     <input type="text" class="time-picker-selector__input" placeholder="hh:mm:ss" value="03:04:07" autocomplete="off">
