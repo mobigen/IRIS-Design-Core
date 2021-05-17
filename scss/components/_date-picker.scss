@@ -258,13 +258,17 @@
 ----------------------------------*/
 .ui-state-hover,
 .ui-widget-content .ui-state-hover,
-.ui-widget-header .ui-state-hover,
+// .ui-widget-header .ui-state-hover,
 .ui-state-focus,
 .ui-widget-content .ui-state-focus,
 .ui-widget-header .ui-state-focus,
 .ui-button:hover,
 .ui-button:focus {
   background: rgba($secondary, 0.2);
+}
+
+.ui-widget-header .ui-state-hover {
+  background-color: transparent;
 }
 
 .ui-state-active,
