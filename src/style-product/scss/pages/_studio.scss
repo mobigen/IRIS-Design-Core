@@ -385,6 +385,10 @@
   height: 100%;
   border: none;
   overflow: hidden;
+
+  body {
+    overflow: hidden;
+  }
 }
 
 // -------------------------
