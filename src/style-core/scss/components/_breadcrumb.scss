@@ -8,15 +8,12 @@
 }
 
 .breadcrumb__text {
-  @include font-size("14");
   position: relative;
   padding-right: 28px;
   color: $text-05;
+  font-size: 13px;
   user-select: none;
-
-  &:hover {
-    color: $text-05;
-  }
+  letter-spacing: -0.2px;
 
   &:after {
     content: "";
