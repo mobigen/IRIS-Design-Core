@@ -7022,12 +7022,13 @@
 </div>
 
   
-<div class="context-menu period-setting" style="position: absolute; top: 250px; left: 10px;">
-  <div class="context-menu__head">
-    <div class="context-menu__head-title">
-      <span class="context-menu__head-title-text">비교 기간</span>
+<div class="tooltip tooltip--light tooltip--left period-setting-tooltip" style="position: absolute; top: 250px; left: 10px;">
+  <span class="tooltip__arrow"></span>
+  <div class="period-setting-tooltip__head">
+    <div class="period-setting-tooltip__head-title">
+      <span class="period-setting-tooltip__head-title-text">비교 기간</span>
     </div>
-    <span class="context-menu__head-close-button">
+    <span class="period-setting-tooltip__head-close-button">
       <button class="button button--icon button--link button--sm">
         <svg class="svg-icon" aria-hidden="true">
           <use xlink:href="#close"></use>
@@ -7491,14 +7492,14 @@
       </div>
     </div>
   </div>
-  <div class="context-menu__foot">
+  <div class="period-setting-tooltip__foot">
     <div class="notification-message notification-message--error">
       <svg class="notification-message__icon svg-icon" aria-hidden="true">
         <use xlink:href="#issue-fill"></use>
       </svg>
       <span class="notification-message__text">Notification Message</span>
     </div>
-    <div class="context-menu__foot-main-buttons">
+    <div class="period-setting-tooltip__foot-main-buttons">
       <button class="button button--primary button--lg">선택</button>
     </div>
   </div>

@@ -2171,8 +2171,42 @@
   background-position: -120px -80px;
 }
 
-.period-setting {
+.period-setting-tooltip {
+  padding: 0;
   width: rem(320px);
+}
+
+.period-setting-tooltip__head {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  height: $button-height-md;
+  padding: $spacing-2xs $spacing-sm;
+  background-color: $hover-row;
+}
+
+.period-setting-tooltip__head-title {
+  @include text-overflow;
+  @include font-size("14");
+  @include font-weight("medium");
+  flex: 1;
+  text-align: left;
+  color: $text-02;
+}
+
+.period-setting-tooltip__foot {
+  @include stable-padding($spacing-xs, $spacing-sm);
+  display: flex;
+  background-color: $ui-01;
+}
+
+.period-setting-tooltip__foot-main-buttons {
+  display: flex;
+  margin-left: auto;
+}
+
+.period-setting-tooltip__foot .button + .button {
+  margin-left: $spacing-xs;
 }
 
 .preset-period {
@@ -2245,6 +2279,7 @@
 .date-time-range__title {
   margin-right: $spacing-2xs;
   margin-bottom: $spacing-2xs;
+  color: $text-02;
 }
 
 .date-time-range__text-area {
