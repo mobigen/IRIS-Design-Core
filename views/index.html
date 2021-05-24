@@ -272,10 +272,10 @@
   <h3 class="page-header__title">Accordion</h3>
 </div>
 <div class="page-content">
-  <p class="page__desc">아코디언</p>
+  <p class="page__desc">아코디언은 관련 콘텐츠를 축소 및 확장할 수 있는 수직 적층 구조 목록입니다.</p>
   <div class="page__usage md">
     <ul>
-      <li>아코디언 메뉴는 <em class="text-emphasis">2개</em>가 있습니다.</li>
+      <li>아코디언 메뉴의 종류는 크게 <em class="text-emphasis">2개</em>가 있습니다.</li>
     </ul>
   </div>
 
@@ -544,7 +544,7 @@
   <h3 class="page-header__title">Alert</h3>
 </div>
 <div class="page-content">
-  <p class="page__desc">얼럿</p>
+  <p class="page__desc">얼럿은 사용자에게 경고와 같은 피드백을 주기 위해 사용합니다.</p>
   <div class="page__usage md">
     <ul>
       <li>
@@ -792,12 +792,7 @@
   <h3 class="page-header__title">Breacrumb</h3>
 </div>
 <div class="page-content">
-  <p class="page__desc">브레드크럼</p>
-  <div class="page__usage md">
-    <ul>
-      <li>브레드 크럼은 아래와 같습니다.</li>
-    </ul>
-  </div>
+  <p class="page__desc">브레드크럼은 메뉴 위계 구조 안에서 사용자의 현재 위치를 나타냅니다. </p>
 
   <div class="component-variation">
     <span class="component-variation__name">Breadcrumb</span>
@@ -821,6 +816,7 @@
     </div>
   </div>
 </div>
+
         </div>
         <div class="page" id="page--button">
           
@@ -843,6 +839,7 @@
 
   <div class="component-variation">
     <span class="component-variation__name">Primary Button</span>
+    <p class="component-variation__desc">화면에서 가장 주요한 액션에 사용하는 버튼입니다. 한 화면에 한번만 사용하는걸 기본으로 합니다.</p>
     <div class="component-example">
       <div class="component-example__live">
         <div>
@@ -916,6 +913,7 @@
 
   <div class="component-variation">
     <span class="component-variation__name">Secondary Button</span>
+    <p class="component-variation__desc">primary와 default 버튼의 중간 정도 위계를 갖는 액션에 사용합니다. </p>
     <div class="component-example">
       <div class="component-example__live">
         <div>
@@ -984,6 +982,7 @@
 
   <div class="component-variation">
     <span class="component-variation__name">Tertiary Button</span>
+    <p class="component-variation__desc">가장 기본이 되는 버튼입니다. 일반적인 상황에 사용합니다.</p>
     <div class="component-example">
       <div class="component-example__live">
         <div>
@@ -1052,6 +1051,7 @@
 
   <div class="component-variation">
     <span class="component-variation__name">Link Button</span>
+    <p class="component-variation__desc">링크와 같이 명확한 페이지 이동 등의 액션에 사용합니다.</p>
     <div class="component-example">
       <div class="component-example__live">
         <div>
@@ -1120,6 +1120,7 @@
 
   <div class="component-variation">
     <span class="component-variation__name">Support Button</span>
+    <p class="component-variation__desc">입력이나 행위 중 긍정적인 액션에 사용합니다.</p>
     <div class="component-example">
       <div class="component-example__live">
         <div>
@@ -1188,6 +1189,7 @@
 
   <div class="component-variation">
     <span class="component-variation__name">Danger Button</span>
+    <p class="component-variation__desc">삭제 또는 탈퇴 등 주의를 요하는 행위에 사용하는 버튼입니다. </p>
     <div class="component-example">
       <div class="component-example__live">
         <div>
@@ -1256,6 +1258,7 @@
 
   <div class="component-variation">
     <span class="component-variation__name">Negative Button</span>
+    <p class="component-variation__desc">삭제 또는 탈퇴 등 주의를 요하는 행위에 사용하는 버튼입니다. <br/> Danger 버튼 보다 더 강한 환기가 필요할 때 사용합니다. <br/> 한 화면에 한번만 사용하는걸 기본으로 합니다.</p>
     <div class="component-example">
       <div class="component-example__live">
         <div>
@@ -1332,7 +1335,7 @@
   <h3 class="page-header__title">Check Box</h3>
 </div>
 <div class="page-content">
-  <p class="page__desc">체크 박스</p>
+  <p class="page__desc">체크 박스는 목록 중 선택할 항목이 여러개 있을때 사용합니다.</p>
   <div class="page__usage md">
     <ul>
       <li>체크박스는 <em class="text-emphasis">2개</em> 크기로 구분합니다.</li>
@@ -1340,6 +1343,7 @@
         체크박스는 default, hover, checked, indeterminate, disabled <em class="text-emphasis">총 5개</em> 상태를
         갖습니다.
       </li>
+      <li>체크박스를 하나만 사용하는 경우 <code class="code-inline">toggle-switch</code>를 사용해 두 상태를 전환하는 것과 같습니다.<br/>두개의 차이는 Switch는 상태 변경이 직접 반영되며, Checkbox는 상태 변경 후 Submit 동작을 수행해야 반영됩니다. </li>
     </ul>
   </div>
 
@@ -1568,14 +1572,12 @@
   <h3 class="page-header__title">Context Menu</h3>
 </div>
 <div class="page-content">
-  <p class="page__desc">특정 버튼을 클릭했을 경우 뜨는 리스트 형태의 메뉴입니다.</p>
+  <p class="page__desc">특정 버튼을 클릭하거나 우클릭 등의 동작에 뜨는 리스트 형태의 메뉴입니다.</p>
   <div class="page__usage md">
     <ul>
-      <li>
-        컨텍스트 메뉴는 <em class="text-emphasis">4개</em>가 있으며 <em class="text-emphasis">3개</em> 크기로
-        구분합니다.<br />
-      </li>
-      <li>텍스트만 사용하거나, 아이콘과 텍스트를 사용한 UI</li>
+      <li> 컨텍스트 메뉴는 크개 일반 컨텍스트 메뉴와 서브 메뉴가 있는 경우로 구분합니다.</li>
+      <li>컨텍스트 메뉴의 세부 종류는 <em class="text-emphasis">4개</em>가 있으며 <em class="text-emphasis">3개</em> 크기로
+        구분합니다. </li>
     </ul>
   </div>
 
@@ -1742,14 +1744,7 @@
                   </li>
                   <li class="context-menu__item context-menu__item--selected context-menu__item--disabled">
                     <div class="checkbox checkbox--disabled">
-                      <input
-                        id="context-check-05"
-                        type="checkbox"
-                        class="checkbox__input"
-                        value="label"
-                        checked
-                        disabled
-                      />
+                      <input id="context-check-05" type="checkbox" class="checkbox__input" value="label" checked disabled />
                       <label for="context-check-05" class="checkbox__label">
                         <svg class="svg-icon context-menu__icon" aria-hidden="true">
                           <use xlink:href="#data"></use>
@@ -1920,14 +1915,7 @@
                   </li>
                   <li class="context-menu__item context-menu__item--selected context-menu__item--disabled">
                     <div class="checkbox checkbox--disabled">
-                      <input
-                        id="context-check-05"
-                        type="checkbox"
-                        class="checkbox__input"
-                        value="label"
-                        checked
-                        disabled
-                      />
+                      <input id="context-check-05" type="checkbox" class="checkbox__input" value="label" checked disabled />
                       <label for="context-check-05" class="checkbox__label">
                         <svg class="svg-icon context-menu__icon" aria-hidden="true">
                           <use xlink:href="#data"></use>
@@ -2244,7 +2232,7 @@
   <h3 class="page-header__title">Date Picker</h3>
 </div>
 <div class="page-content">
-  <p class="page__desc">날짜 선택형 필드</p>
+  <p class="page__desc">날짜와 시간을 선택할수 있는 필드입니다. 단일 날짜 혹은 범위 날짜와 시간을 선택할 수 있습니다.</p>
 
   <div class="component-variation">
     <span class="component-variation__name">Date picker</span>
@@ -3406,6 +3394,7 @@
     </div>
   </div>
 </div>
+
         </div>
         <div class="page" id="page--description">
           <!-- context menu -->
@@ -3414,7 +3403,7 @@
   <h3 class="page-header__title">Description</h3>
 </div>
 <div class="page-content">
-  <p class="page__desc">디스크립션</p>
+  <p class="page__desc">디스크립션은 read-only 필드를 보여줍니다.</p>
   <div class="page__usage md">
     <ul>
       <li>디스크립션는 <em class="text-emphasis">2개</em>의 사이즈가 있습니다.</li>
@@ -3548,7 +3537,7 @@
   <h3 class="page-header__title">Drawer</h3>
 </div>
 <div class="page-content">
-  <p class="page__desc">디스크립션</p>
+  <p class="page__desc">드로워는 화면 가장자리에서 안으로 슬라이딩 되는 패널입니다.<br/>사용자가 현재 페이지를 벗어나지 않고 드로워로 인터랙션할 수 있으므로 동일한 컨텍스트 내에서 작업을 보다 효율적으로 수행할 수 있습니다.</p>
   <div class="page__usage md">
     <ul>
       <li>
@@ -4473,10 +4462,15 @@
   <h3 class="page-header__title">Form</h3>
 </div>
 <div class="page-content">
-  <p class="page__desc">폼</p>
+  <p class="page__desc">폼은 사용자가 데이터를 입력하거나 옵션을 구성할 수 있는 입력 컨트롤 그룹입니다.<br/> 폼은 많이 단순할 수도, 복잡할 수도 있습니다.</p>
   <div class="page__usage md">
     <ul>
-      <li>폼 <em class="text-emphasis">2개</em>의 사이즈가 있습니다.</li>
+      <li>폼은  <em class="text-emphasis">2개</em> 유형과 <em class="text-emphasis">2개</em>의 사이즈가 있습니다.
+        <ul>
+          <li>Default(horizontal)</li>
+          <li>Vertical</li>
+        </ul>
+      </li>
     </ul>
   </div>
 
@@ -5309,6 +5303,7 @@
     </div>
   </div>
 </div>
+
         </div>
         <div class="page" id="page--list">
           <!-- list -->
@@ -5317,7 +5312,7 @@
   <h3 class="page-header__title">List</h3>
 </div>
 <div class="page-content">
-  <p class="page__desc">리스트</p>
+  <p class="page__desc">리스트는 관련 내용을 구조화하여 표시합니다. <br/> 내용의 유형은 여러 요소로 다양하게 표현될 수 있습니다.</p>
   <div class="page__usage md">
     <ul>
       <li>리스트</li>
@@ -5796,7 +5791,7 @@
   <h3 class="page-header__title">Loader</h3>
 </div>
 <div class="page-content">
-  <p class="page__desc">로더</p>
+  <p class="page__desc">로더는 데이터를 검색하거나 화면이 느리게 뜨는 경우 사용합니다.<br/> 사용자에게 프로세스가 진행중임을 알리는데에 도움이 됩니다.</p>
   <div class="page__usage md">
     <ul>
       <li>로더는 스피너 형태와 바 형태 2개로 구분합니다.</li>
@@ -5969,7 +5964,7 @@
   <h3 class="page-header__title">Modal</h3>
 </div>
 <div class="page-content">
-  <p class="page__desc">모달</p>
+  <p class="page__desc">모달은 페이지의 제일 상단의 창으로 사용자의 주의를 하나의 작업이나 정보에 집중시킵니다.</p>
   <div class="page__usage md">
     <ul>
       <li>
@@ -6037,7 +6032,7 @@
   <h3 class="page-header__title">Notification</h3>
 </div>
 <div class="page-content">
-  <p class="page__desc">알림 메시지</p>
+  <p class="page__desc">노티피케이션은 사용자에게 정보를 전달하는 알림 메시지입니다.</p>
   <div class="page__usage md">
     <ul>
       <li>노티피케이션은 화면 일부를 가리며 나타나는 일반적인 유형과 메시지만 표시해주는 두가지 유형으로 구분합니다</li>
@@ -6309,7 +6304,7 @@
       <div class="component-example__live">
         <div>
           <!-- info -->
-          <div class="notification-full notification-full--info">
+          <div class="notification-full notification-full--info" style="margin-bottom: 60px;">
             <svg class="notification-full__icon svg-icon" aria-hidden="true">
               <use xlink:href="#info-fill"></use>
             </svg>
@@ -6319,7 +6314,7 @@
             </div>
           </div>
           <!-- success -->
-          <div class="notification-full notification-full--success">
+          <div class="notification-full notification-full--success" style="margin-bottom: 60px;">
             <svg class="notification-full__icon svg-icon" aria-hidden="true">
               <use xlink:href="#checkmark-fill"></use>
             </svg>
@@ -6332,7 +6327,7 @@
             </div>
           </div>
           <!-- warning -->
-          <div class="notification-full notification-full--warning">
+          <div class="notification-full notification-full--warning" style="margin-bottom: 60px;">
             <svg class="notification-full__icon svg-icon" aria-hidden="true">
               <use xlink:href="#warning-fill"></use>
             </svg>
@@ -6342,7 +6337,7 @@
             </div>
           </div>
           <!-- error -->
-          <div class="notification-full notification-full--error">
+          <div class="notification-full notification-full--error" style="margin-bottom: 60px;">
             <svg class="notification-full__icon svg-icon" aria-hidden="true">
               <use xlink:href="#issue-fill"></use>
             </svg>
@@ -6372,6 +6367,7 @@
   </div>
 
 </div>
+
         </div>
         <div class="page" id="page--number-input">
           <!-- number-input -->
@@ -6380,7 +6376,7 @@
   <h3 class="page-header__title">Number Input</h3>
 </div>
 <div class="page-content">
-  <p class="page__desc">숫자 입력 필드</p>
+  <p class="page__desc">숫자 입력 필드입니다.</p>
   <div class="page__usage md">
     <ul>
       <li>숫자 입력 필드는 <em class="text-emphasis">1개</em> 유형이 있으며 <em class="text-emphasis">3개</em> 크기로 구분합니다.</li>
@@ -6598,6 +6594,7 @@
     </div>
   </div>
 </div>
+
         </div>
         <div class="page" id="page--pagination">
           
@@ -6607,7 +6604,7 @@
   <h3 class="page-header__title">Pagination</h3>
 </div>
 <div class="page-content">
-  <p class="page__desc">페이지네이션</p>
+  <p class="page__desc">페이지네이션은 긴 목록을 여러 페이지로 분할하는 데 사용하며,<br/> 다음 페이지 또는 이전 페이지로 이용하는데 사용합니다.</p>
   <div class="page__usage md">
     <ul>
       <li>페이지네이션은 <em class="text-emphasis">3개</em> 유형이 있습니다.</li>
@@ -6788,10 +6785,10 @@
   <h3 class="page-header__title">Progressbar</h3>
 </div>
 <div class="page-content">
-  <p class="page__desc">프로그래스바</p>
+  <p class="page__desc">프로그래스바는 작업 프로세스의 진행률을 표시합니다.<br/> 작업의 수행 비율을 표시해야 하는 경우 사용합니다.</p>
   <div class="page__usage md">
     <ul>
-      <li>프로그래스바 <em class="text-emphasis">4개</em>가 있습니다.</li>
+      <li>프로그래스바는 <em class="text-emphasis">4개</em> 스타일이 있습니다.</li>
     </ul>
   </div>
 
@@ -6863,6 +6860,7 @@
     </div>
   </div>
 </div>
+
         </div>
         <div class="page" id="page--radio">
           <!-- radio -->
@@ -6871,7 +6869,7 @@
   <h3 class="page-header__title">Radio</h3>
 </div>
 <div class="page-content">
-  <p class="page__desc">라디오 버튼</p>
+  <p class="page__desc">라디오 버튼은 여러 항목 그룹이 있고 그 그룹에서 하나만 선택할 수 있을때 사용합니다.</p>
   <div class="page__usage md">
     <ul>
       <li>라디오는 <em class="text-emphasis">1개</em> 크기로 구분합니다.</li>
@@ -10851,12 +10849,7 @@
   <h3 class="page-header__title">Tab</h3>
 </div>
 <div class="page-content">
-  <p class="page__desc">탭</p>
-  <div class="page__usage md">
-    <ul>
-      <li>탭</li>
-    </ul>
-  </div>
+  <p class="page__desc">탭은 서로 다른 화면을 쉽게 전환하는데 사용합니다.</p>
 
   <div class="component-variation">
     <span class="component-variation__name">Default Tab - horizontal</span>
@@ -11147,6 +11140,7 @@
     </div>
   </div>
 </div>
+
         </div>
         <div class="page" id="page--table">
           <!-- context menu -->
@@ -11156,10 +11150,11 @@
   <h3 class="page-header__title">Table</h3>
 </div>
 <div class="page-content">
-  <p class="page__desc">테이블</p>
+  <p class="page__desc">테이블은 데이터를 효율적으로 구성하고 표시하는데 사용됩니다.</p>
   <div class="page__usage md">
     <ul>
-      <li>테이블은!!!</li>
+      <li>테이블은 <em class="text-emphasis">2개</em> 스타일로 구분합니다.</li>
+      <li>thead를 고정하고 tbody만 스크롤 되도록 구조를 분리할 수 있습니다.</li>
     </ul>
   </div>
 
@@ -13927,7 +13922,7 @@
   <h3 class="page-header__title">Toggle Button</h3>
 </div>
 <div class="page-content">
-  <p class="page__desc">토글 버튼</p>
+  <p class="page__desc">토글 버튼은 여러 항목 중 하나만 선택할 수 있을때 사용합니다.</p>
   <div class="page__usage md">
     <ul>
       <li>토글 버튼은 <em class="text-emphasis">2개</em>의 사이즈가 있습니다.</li>
@@ -14299,7 +14294,7 @@
   <h3 class="page-header__title">Toggle Switch</h3>
 </div>
 <div class="page-content">
-  <p class="page__desc">토글 스위치</p>
+  <p class="page__desc">토글 스위치는 두 상태 사이를 빠르게 전환하는데 사용합니다.<br/> 일반적으로 On/Off 기능에 사용합니다.</p>
   <div class="page__usage md">
     <ul>
       <li>토글 스위치는 <code class="code-inline">label</code> 없이 사용하는 경우와 함께 사용하는 경우를 고려하여 구현 되었습니다.</li>
@@ -14420,10 +14415,9 @@
   <h3 class="page-header__title">Tooltip</h3>
 </div>
 <div class="page-content">
-  <p class="page__desc">툴팁</p>
+  <p class="page__desc">툴팁은 간단한 설명 텍스트를 띄우는데 사용합니다.<br/> 주로 아이콘 버튼을 hover, focus, click 했을 때 메시지를 표시합니다.</p>
   <div class="page__usage md">
     <ul>
-      <li>툴팁은 <em class="text-emphasis">2개</em> 사이즈가 있습니다.</li>
       <li>툴팁은 <em class="text-emphasis">dark(default), light 2개</em> 테마가 있습니다.</li>
     </ul>
   </div>
@@ -14637,12 +14631,7 @@
   <h3 class="page-header__title">Transfer</h3>
 </div>
 <div class="page-content">
-  <p class="page__desc">트랜스퍼</p>
-  <div class="page__usage md">
-    <ul>
-      <li>트랜스퍼</li>
-    </ul>
-  </div>
+  <p class="page__desc">트랜스퍼는 두개의 목록에서 항목을 선택해 데이터를 이동하는데 사용합니다.<br/>기본적으로 여러 항목을 선택할 수 있는 선택형 컨트롤러입니다.</p>
 
   <div class="component-variation">
     <span class="component-variation__name">Basic</span>
@@ -15678,10 +15667,17 @@
   <h3 class="page-header__title">Upload</h3>
 </div>
 <div class="page-content">
-  <p class="page__desc">업로드</p>
+  <p class="page__desc">업로드를 사용하여 서버에 업로드할 파일을 선택할 수 있습니다.</p>
   <div class="page__usage md">
     <ul>
-      <li>업로드는 <em class="text-emphasis">2개</em>의 사이즈가 있습니다.</li>
+      <li>업로드는 <em class="text-emphasis">4개</em> 스타일이 있습니다.
+        <ul>
+          <li>기본형</li>
+          <li>업로드 및 삭제형</li>
+          <li>이미지형</li>
+          <li>드래그 앤 드랍 형</li>
+        </ul>
+      </li>
     </ul>
   </div>
 
