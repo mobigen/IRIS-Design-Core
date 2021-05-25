@@ -93,7 +93,7 @@
 .form__foot {
   display: flex;
   align-items: center;
-  margin-top: $spacing-sm;
+  padding-top: $spacing-sm;
 }
 
 .form__foot-main-buttons {
@@ -315,7 +315,7 @@
 
 .dynamic-form--responsive {
   padding-top: $spacing-sm;
-  
+
   .dynamic-form__item + .dynamic-form__item {
     padding-top: $spacing-xs;
     border-top: 1px solid $ui-04;
@@ -329,7 +329,7 @@
   .select-selector {
     flex: 1;
   }
-  
+
   .dynamic-form__action-buttons {
     width: 68px;
     margin-left: 0;
