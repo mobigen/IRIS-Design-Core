@@ -169,6 +169,8 @@
 
 @mixin button--underline {
   @include button-theme(transparent, $text-02, transparent, transparent);
+  text-decoration: underline;
+  padding: 0;
   // link 예외 사항
   &:hover {
     color: $text-03;
@@ -189,6 +191,9 @@
 
 @mixin button--underline-support {
   @include button-theme(transparent, $primary, transparent, transparent);
+  text-decoration: underline;
+  padding: 0;
+
   // link 예외 사항
   &:hover {
     color: $hover-primary;
@@ -209,6 +214,9 @@
 
 @mixin button--underline-negative {
   @include button-theme(transparent, $negative, transparent, transparent);
+    padding: 0;
+    padding: 0;
+
   // link 예외 사항
   &:hover {
     color: $hover-negative;
