@@ -2,7 +2,7 @@
 // @button-base                    || 모든 버튼에 사용되는 공통 스타일 믹스인
 // 1. Type 별 Button 클래스          || 형태를 결정하는 버튼 유형 클래스 (기본은 md 사이즈)
 // button                          || 기본 버튼
-// button--icon                     || 아이콘 버튼
+// button--icon                    || 아이콘 버튼
 // 2. 6개 Theme별 Button 클래스
 // @button-theme                   || 믹스인
 // button--primary
@@ -12,6 +12,9 @@
 // button--support
 // button--danger
 // button--negative
+// button--underline
+// button--underline-create
+// button--underline-delete
 // 3. Size별 Button 클래스            || 버튼 사이즈를 결정하는 클래스 (버튼 유형마다 여백이 달라짐)
 // button--lg
 // button--md
@@ -162,6 +165,27 @@
 
 @mixin button--negative {
   @include button-theme($negative, $text-04, $hover-negative, $active-negative);
+}
+
+.button--underline {
+  @include button-normal;
+  padding: 0;
+  background-color: transparent;
+  color: $disabled-02;
+  text-decoration: underline;
+
+  &:hover,
+  &:active {
+    color: $disabled-02;
+  }
+
+  &.button--underline-create {
+    color: $primary;
+  }
+
+  &.button--underline-delete {
+    color: $negative;
+  }
 }
 
 // -------------------------
