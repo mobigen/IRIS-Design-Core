@@ -167,27 +167,6 @@
   @include button-theme($negative, $text-04, $hover-negative, $active-negative);
 }
 
-.button--underline {
-  @include button-normal;
-  padding: 0;
-  background-color: transparent;
-  color: $disabled-02;
-  text-decoration: underline;
-
-  &:hover,
-  &:active {
-    color: $disabled-02;
-  }
-
-  &.button--underline-create {
-    color: $primary;
-  }
-
-  &.button--underline-delete {
-    color: $negative;
-  }
-}
-
 // -------------------------
 // button-size
 // -------------------------
@@ -276,6 +255,28 @@
 
 .button--negative {
   @include button--negative;
+}
+
+// TODO: mixin으로 정리 필요
+.button--underline {
+  @include button-normal;
+  padding: 0;
+  background-color: transparent;
+  color: $disabled-02;
+  text-decoration: underline;
+
+  &:hover,
+  &:active {
+    color: $disabled-02;
+  }
+
+  &.button--underline-create {
+    color: $primary;
+  }
+
+  &.button--underline-delete {
+    color: $negative;
+  }
 }
 
 .button--lg {
