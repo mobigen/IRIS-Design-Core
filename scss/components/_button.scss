@@ -13,8 +13,8 @@
 // button--danger
 // button--negative
 // button--underline
-// button--underline-create
-// button--underline-delete
+// button--underline-support
+// button--underline-negative
 // 3. Size별 Button 클래스            || 버튼 사이즈를 결정하는 클래스 (버튼 유형마다 여백이 달라짐)
 // button--lg
 // button--md
@@ -167,6 +167,70 @@
   @include button-theme($negative, $text-04, $hover-negative, $active-negative);
 }
 
+@mixin button--underline {
+  @include button-theme(transparent, $text-02, transparent, transparent);
+  // link 예외 사항
+  &:hover {
+    color: $text-03;
+
+    .svg-icon {
+      fill: $text-03;
+    }
+  }
+
+  &:active {
+    color: darken($text-02, 0.25);
+
+    .svg-icon {
+      fill: darken($text-02, 0.25);
+    }
+  }
+}
+
+@mixin button--underline-support {
+  @include button-theme(transparent, $primary, transparent, transparent);
+  // link 예외 사항
+  &:hover {
+    color: $hover-primary;
+
+    .svg-icon {
+      fill: $hover-primary;
+    }
+  }
+
+  &:active {
+    color: darken($primary, 0.25);
+
+    .svg-icon {
+      fill: darken($primary, 0.25);
+    }
+  }
+}
+
+@mixin button--underline-negative {
+  @include button-theme(transparent, $negative, transparent, transparent);
+  // link 예외 사항
+  &:hover {
+    color: $hover-negative;
+
+    .svg-icon {
+      fill: $hover-negative;
+    }
+  }
+
+  &:active {
+    color: darken($negative, 0.25);
+
+    .svg-icon {
+      fill: darken($negative, 0.25);
+    }
+  }
+}
+
+@mixin button--negative {
+  @include button-theme($negative, $text-04, $hover-negative, $active-negative);
+}
+
 // -------------------------
 // button-size
 // -------------------------
@@ -257,26 +321,16 @@
   @include button--negative;
 }
 
-// TODO: mixin으로 정리 필요
 .button--underline {
-  @include button-normal;
-  padding: 0;
-  background-color: transparent;
-  color: $disabled-02;
-  text-decoration: underline;
+  @include button--underline;
+}
 
-  &:hover,
-  &:active {
-    color: $disabled-02;
-  }
+.button--underline-support {
+  @include button--underline-support;
+}
 
-  &.button--underline-create {
-    color: $primary;
-  }
-
-  &.button--underline-delete {
-    color: $negative;
-  }
+.button--underline-negative {
+  @include button--underline-negative;
 }
 
 .button--lg {
