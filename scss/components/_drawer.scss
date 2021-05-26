@@ -39,6 +39,7 @@
   @include font-weight("medium");
   @include text-overflow;
   @include font-size("18");
+  flex: 1;
 }
 
 .drawer__body {
