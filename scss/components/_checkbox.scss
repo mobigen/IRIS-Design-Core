@@ -45,7 +45,7 @@
   left: 0;
   top: rem(2px);
   background-color: $ui-01;
-  border: 2px solid $text-03;
+  border: 1px solid $text-03;
 }
 
 .checkbox__label::after {
@@ -143,6 +143,7 @@
     height: rem(20px);
     margin: rem(2px);
     top: rem(2px);
+    border-width: rem(2px);
   }
 
   .checkbox__label::after {
