@@ -81,6 +81,12 @@
   width: 100%;
 }
 
+.list__summary-content {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+}
+
 .list__details {
   display: none;
   width: 100%;
@@ -157,6 +163,15 @@
 
 .list--expandable .list__item {
   flex-direction: column;
+}
+
+.list--expandable .checkbox {
+  flex-grow: 0;
+  padding-right: 0;
+}
+
+.list--expandable .list__button {
+  padding-left: 0;
 }
 
 .list__head-right-box {
