@@ -2297,3 +2297,11 @@
   border-bottom: 1px solid $primary;
   width: 100%;
 }
+
+.ag-root-wrapper .progressbar {
+  @include line-height("body");
+  display: inline-block;
+  width: 100%;
+  height: rem(12px);
+  border-radius: 2px;
+}
