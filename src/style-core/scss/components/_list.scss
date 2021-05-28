@@ -67,6 +67,11 @@
   @include line-height("body");
 }
 
+.list__subtext {
+  margin-left: $spacing-2xs;
+  color: $text-03;
+}
+
 .list__checkmark {
   vertical-align: middle;
 }
@@ -79,6 +84,12 @@
   display: flex;
   align-items: center;
   width: 100%;
+}
+
+.list__summary-content {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
 }
 
 .list__details {
@@ -157,6 +168,15 @@
 
 .list--expandable .list__item {
   flex-direction: column;
+}
+
+.list--expandable .checkbox {
+  flex-grow: 0;
+  padding-right: 0;
+}
+
+.list--expandable .list__button {
+  padding-left: 0;
 }
 
 .list__head-right-box {
