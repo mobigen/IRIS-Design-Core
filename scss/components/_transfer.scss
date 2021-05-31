@@ -84,6 +84,10 @@
   overflow: auto;
 }
 
+.transfer-list__toggle-switch {
+  z-index: z("overlay") + 1;
+}
+
 .transfer-list--disabled {
   border-color: rgba($ui-04, 0.6);
   &::after {
