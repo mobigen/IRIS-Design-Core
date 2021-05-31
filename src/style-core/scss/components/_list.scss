@@ -67,6 +67,11 @@
   @include line-height("body");
 }
 
+.list__subtext {
+  margin-left: $spacing-2xs;
+  color: $text-03;
+}
+
 .list__checkmark {
   vertical-align: middle;
 }
