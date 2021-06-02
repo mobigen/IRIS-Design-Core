@@ -449,3 +449,15 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
+
+.caption-out {
+  @include caption-out;
+}
+
+.right-position {
+  @include right-position;
+}
+
+.not-scroll {
+  @include not-scroll;
+}
