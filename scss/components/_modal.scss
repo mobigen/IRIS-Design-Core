@@ -136,6 +136,7 @@
 
 .modal .form__label-text {
   @include font-weight("regular");
+  letter-spacing: -1px;
 }
 
 .modal .form__label {
