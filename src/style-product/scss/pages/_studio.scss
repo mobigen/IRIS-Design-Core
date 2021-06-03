@@ -652,6 +652,7 @@
 .vertical-align-inner__table-cell.col .checkbox,
 .vertical-align-inner__table-cell.col .radio {
   display: inline-flex;
+  vertical-align: middle;
 }
 
 .vertical-align-inner__table-cell.top {
