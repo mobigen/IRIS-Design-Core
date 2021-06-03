@@ -142,6 +142,21 @@
   pointer-events: none;
 }
 
+.select-selector__icon-button {
+  @include button-normal;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+}
+
+.select-selector__icon-button .select-selector__icon {
+  position: static;
+  margin-top: 0;
+}
+
 .svg-icon + .select-selector__title {
   margin-left: $spacing-2xs;
 }
