@@ -22,7 +22,6 @@
   color: $text-02;
   overflow-wrap: break-word;
   word-break: keep-all;
-  white-space: nowrap;
 }
 
 @mixin form__detail {
@@ -71,6 +70,10 @@
   color: $text-03;
   word-break: normal;
   white-space: nowrap;
+}
+
+.form__label-text + .button--link {
+  margin-right: $spacing-2xs;
 }
 
 .form__detail {
