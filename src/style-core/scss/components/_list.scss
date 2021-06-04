@@ -67,6 +67,11 @@
   @include line-height("body");
 }
 
+.list__item-notification {
+  @include stable-padding($spacing-2xs, $spacing-xs);
+  margin: 0 auto;
+}
+
 .list__subtext {
   margin-left: $spacing-2xs;
   color: $text-03;
