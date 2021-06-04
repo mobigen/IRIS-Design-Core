@@ -69,6 +69,7 @@
 
 .upload__input {
   @include text-input;
+  @include text-overflow;
   height: 100%;
   border-radius: 0;
 
