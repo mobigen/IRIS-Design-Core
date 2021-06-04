@@ -101,6 +101,7 @@
 
 .select-selector__input .text-input {
   @include font-weight("regular");
+  @include text-overflow;
   width: 100%;
   height: 100%;
   padding-right: $spacing-xl;
