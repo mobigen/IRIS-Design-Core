@@ -14,7 +14,6 @@ body {
 pre,
 code {
   @include font-family("mono");
-  @include font-size("13");
 }
 
 strong {
