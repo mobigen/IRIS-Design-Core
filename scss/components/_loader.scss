@@ -91,6 +91,10 @@
   position: fixed;
 }
 
+.overlay--alert {
+  z-index: z("alert-overlay");
+}
+
 .overlay--dark {
   background-color: $overlay-01;
 }
