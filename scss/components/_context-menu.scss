@@ -14,7 +14,7 @@
 }
 
 .context-menu__text {
-  flex: 1;
+  flex-grow: 1;
 }
 
 .context-submenu {
@@ -154,7 +154,7 @@
     height: $button-height-sm;
     line-height: 9px;
   }
-  
+
   .context-submenu__text {
     @include font-size("12");
   }
