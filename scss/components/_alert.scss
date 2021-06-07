@@ -7,7 +7,7 @@
   border-radius: $field-border-radius;
   min-width: rem(280px);
   max-width: rem(520px);
-  z-index: z("modal");
+  z-index: z("alert");
 }
 
 .alert__foot {
