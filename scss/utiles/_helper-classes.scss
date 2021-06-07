@@ -68,6 +68,10 @@
   & > *:not(:last-child) {
     margin-bottom: $spacing-2xs;
   }
+
+  & + & {
+    margin-top: $spacing-2xs;
+  }
 }
 
 .h-group {
@@ -146,6 +150,10 @@
 
 .mr-auto {
   margin-right: auto !important;
+}
+
+.mr-0 {
+  margin-right: 0 !important;
 }
 
 .mt-auto {
