@@ -35,6 +35,8 @@ $layer-shadows: (base: none,
 
 $z-indexes: (
   tooltip: 9000,
+  alert: 8500,
+  alert-overlay: 8400,
   dropdown: 8100,
   modal: 8000,
   overlay: 7000,
