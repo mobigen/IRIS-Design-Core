@@ -284,37 +284,32 @@ th .button {
 // -------------------------
 // table summary, details
 // -------------------------
-.table__summary-target {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
+.table__summary {
+  .table__summary-target {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover .table__summary-icon {
+      display: inline-flex;
+    }
+  }
+
+  .table__summary-target-text:hover {
+    text-decoration: underline;
+  }
 }
 
 .table__summary-target-text {
   @include text-overflow;
 }
 
-.table__summary-target-text:hover {
-  text-decoration: underline;
-}
-
 .table__summary-icon {
   display: none;
-}
-
-.table__details {
-  display: none;
-}
-
-.table__summary:hover .table__summary-icon {
-  display: inline-flex;
+  margin-left: auto;
 }
 
 .table__summary--selected .table__summary-icon {
   display: inline-flex;
   transform: rotate(-180deg);
-}
-
-.table__summary--selected + .table__details {
-  display: table-row;
 }
