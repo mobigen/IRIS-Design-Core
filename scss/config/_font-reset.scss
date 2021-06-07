@@ -11,8 +11,10 @@ body {
   background-color: $ui-02;
 }
 
+pre,
 code {
   @include font-family("mono");
+  @include font-size("13");
 }
 
 strong {

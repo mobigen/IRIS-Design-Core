@@ -17,6 +17,11 @@
   transition: all $duration-fast-01 motion(standard, productive);
   outline: none;
 
+  //IE에서 input focus 시 생기는 clear button 제거
+  &::-ms-clear {
+    display: none;
+  }
+
   &:hover {
     border-color: darken($ui-04, 15%);
   }
@@ -127,17 +132,15 @@
 .text-input-group__clear-button {
   @include button-normal;
   @include position-right-center(6px);
-  width: $spacing-md;
-  height: $spacing-md;
+  width: rem(20px);
+  height: rem(20px);
+  padding: 0;
   border: 0;
   background-color: transparent;
   z-index: z("float");
   cursor: pointer;
 
   .svg-icon {
-    position: absolute;
-    width: 100%;
-    height: 100%;
     fill: lighten($icon-01, 18%);
   }
 
@@ -152,15 +155,13 @@
   @include position-right-center(8px);
   width: rem(20px);
   height: rem(20px);
+  padding: 0;
   border: 0;
   background-color: transparent;
   z-index: z("float");
   cursor: pointer;
 
   .svg-icon {
-    position: absolute;
-    width: 100%;
-    height: 100%;
     fill: lighten($icon-01, 18%);
   }
 
@@ -226,7 +227,6 @@
 // -------------------------
 // input + suffix
 // -------------------------
-//
 .text-input-wrap {
   display: flex;
   align-items: center;
@@ -241,7 +241,6 @@
 // -------------------------
 // input hidable
 // -------------------------
-//
 .text-input-group--hidable {
   .text-input-group__button {
     display: none;
@@ -251,4 +250,11 @@
       display: flex;
     }
   }
+}
+
+// -------------------------
+// input with range
+// -------------------------
+input[type="range"] + .text-input-wrap .text-input {
+  width: rem(80px);
 }

@@ -45,7 +45,7 @@
 }
 
 .date-picker-panel__body {
-  flex: 1;
+  flex: 1 0 auto;
 }
 
 .date-picker-panel__foot {
@@ -53,7 +53,7 @@
   background-color: $ui-02;
 
   .time-picker-selector {
-    width: 100%;
+    width: rem(240px); // IE 대응을 위해 추가한 고정값
   }
 }
 
@@ -258,13 +258,17 @@
 ----------------------------------*/
 .ui-state-hover,
 .ui-widget-content .ui-state-hover,
-.ui-widget-header .ui-state-hover,
+// .ui-widget-header .ui-state-hover,
 .ui-state-focus,
 .ui-widget-content .ui-state-focus,
 .ui-widget-header .ui-state-focus,
 .ui-button:hover,
 .ui-button:focus {
   background: rgba($secondary, 0.2);
+}
+
+.ui-widget-header .ui-state-hover {
+  background-color: transparent;
 }
 
 .ui-state-active,

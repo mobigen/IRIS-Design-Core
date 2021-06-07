@@ -68,6 +68,10 @@
   & > *:not(:last-child) {
     margin-bottom: $spacing-2xs;
   }
+
+  & + & {
+    margin-top: $spacing-2xs;
+  }
 }
 
 .h-group {
@@ -146,6 +150,10 @@
 
 .mr-auto {
   margin-right: auto !important;
+}
+
+.mr-0 {
+  margin-right: 0 !important;
 }
 
 .mt-auto {
@@ -322,6 +330,10 @@
   max-height: rem(600px) !important;
 }
 
+.mw-480 {
+  max-width: rem(480px) !important;
+}
+
 // -------------------------
 // overflow
 // -------------------------
@@ -444,4 +456,16 @@
   max-height: 2rem;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+}
+
+.caption-out {
+  @include caption-out;
+}
+
+.right-position {
+  @include right-position;
+}
+
+.not-scroll {
+  @include not-scroll;
 }

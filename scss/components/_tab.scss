@@ -56,7 +56,6 @@
 
 .tab__button {
   @include button-normal;
-  // flex: 1;
   justify-content: flex-start;
   height: 100%;
   width: 100%;
@@ -141,6 +140,10 @@
   & .tab__item--selected + .tab__item {
     border-left-color: transparent;
   }
+
+  .tab__button {
+    justify-content: center;
+  }
 }
 
 // -------------------------
@@ -183,6 +186,10 @@
     &:hover .tab__button-text {
       color: rgba($text-04, 0.85);
     }
+  }
+
+  .tab__button {
+    justify-content: center;
   }
 
   .tab__item--selected {

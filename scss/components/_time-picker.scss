@@ -23,3 +23,7 @@
 .time-picker-container__button {
   text-align: center;
 }
+
+.time-picker-container__list + .time-picker-container__list::before {
+  display: none;
+}

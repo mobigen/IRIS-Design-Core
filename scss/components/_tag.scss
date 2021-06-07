@@ -76,75 +76,6 @@
 }
 
 // -------------------------
-// Studio 컴포넌트 스타일 overwrite
-// -------------------------
-.canvas-object {
-  .tag {
-    &:hover:not(:disabled) {
-      color: $text-03;
-    }
-  }
-
-  .tag--selected {
-    background-color: $text-03;
-    color: $text-04;
-
-    &:hover:not(:disabled) {
-      background-color: lighten($text-03, 5%);
-      color: $text-04;
-    }
-
-    &:disabled {
-      .tag__remove-button:hover {
-        fill: $text-04;
-        background-color: transparent;
-      }
-    }
-  }
-
-  .tag__remove-button {
-    &:hover {
-      background-color: rgba($ui-02, 0.25);
-      fill: $text-03;
-    }
-  }
-
-  .tag--selected .tag__remove-button {
-    fill: $text-04;
-
-    &:hover {
-      fill: $text-04;
-    }
-  }
-}
-
-.tags {
-  display: flex;
-  align-content: flex-start;
-}
-
-.tags--horizontal {
-  flex-wrap: wrap;
-}
-
-.tags--horizontal .tag + .tag {
-  margin-left: $spacing-2xs;
-}
-
-.tags--vertical {
-  flex-direction: column;
-}
-
-.tags--vertical .tag + .tag {
-  margin-top: $spacing-2xs;
-}
-
-.tags__item {
-  margin-right: $spacing-2xs;
-  margin-bottom: $spacing-2xs;
-}
-
-// -------------------------
 // theme별 mixin
 // -------------------------
 @mixin tag-theme($bg-color, $font-color, $selected-font-color) {
@@ -162,7 +93,7 @@
       background-color: transparent;
     }
   }
-  
+
   .tag__remove-button {
     fill: $font-color;
 
