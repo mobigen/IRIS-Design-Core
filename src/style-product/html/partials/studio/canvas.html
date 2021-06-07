@@ -1,5 +1,5 @@
 <div id="report-canvas" class="editor-layout-body__canvas-wrap">
-  <div class="editor-layout-body__canvas" style="width: 1920px; height: 2300px;">
+  <div class="editor-layout-body__canvas" style="width: 1920px; height: 2950px;">
     <div style="display:block;position:relative;width:100%;height:100%;">
       <div style="display:block;position:relative;width:100%;height:100%;">
         <div id="canvas-area" style="width: 100%; height: 100%; background-color: rgb(255, 255, 255);">
@@ -867,7 +867,7 @@
               <label for="checkbox-select-01" class="checkbox__label"></label>
             </div>
             <!-- 크기 조절 상자 -->
-            <!-- 
+            <!--
             <span class="tl"></span>
             <span class="tc"></span>
             <span class="tr"></span>
@@ -875,7 +875,7 @@
             <span class="cr"></span>
             <span class="bl"></span>
             <span class="bc"></span>
-            <span class="br"></span> 
+            <span class="br"></span>
             -->
             <!-- //크기 조절 상자 -->
           </div>
@@ -904,7 +904,7 @@
             </div>
 
             <!-- 크기 조절 상자 -->
-            <!-- 
+            <!--
               <span class="tl"></span>
               <span class="tc"></span>
               <span class="tr"></span>
@@ -912,7 +912,7 @@
               <span class="cr"></span>
               <span class="bl"></span>
               <span class="bc"></span>
-              <span class="br"></span> 
+              <span class="br"></span>
               -->
             <!-- //크기 조절 상자 -->
           </div>
@@ -941,7 +941,7 @@
             </div>
 
             <!-- 크기 조절 상자 -->
-            <!-- 
+            <!--
             <span class="tl"></span>
             <span class="tc"></span>
             <span class="tr"></span>
@@ -949,7 +949,7 @@
             <span class="cr"></span>
             <span class="bl"></span>
             <span class="bc"></span>
-            <span class="br"></span> 
+            <span class="br"></span>
             -->
             <!-- //크기 조절 상자 -->
           </div>
@@ -977,7 +977,7 @@
               <label for="checkbox-select-04" class="checkbox__label"></label>
             </div>
             <!-- 크기 조절 상자 -->
-            <!-- 
+            <!--
               <span class="tl"></span>
               <span class="tc"></span>
               <span class="tr"></span>
@@ -985,7 +985,7 @@
               <span class="cr"></span>
               <span class="bl"></span>
               <span class="bc"></span>
-              <span class="br"></span> 
+              <span class="br"></span>
               -->
             <!-- //크기 조절 상자 -->
           </div>
@@ -1253,7 +1253,7 @@
           <!-- 라벨 -->
           <span style="position: absolute; top: 900px; left: 1640px;">라벨</span>
           <div class="canvas-object object-label canvas-object--active" style="top: 920px;left: 1640px;width: 250px;height: 60px;">
-            <!-- 
+            <!--
               각 서체별 text-area요소에 적용될 인라인 스타일
               Arial: style="font-family: arial, sans-serif";
               Courier: style="font-family: "Courier New", Courier, monospace";
@@ -1284,7 +1284,7 @@
           </div>
 
           <div class="canvas-object object-label" style="top: 1010px;left: 1640px;width: 250px;height: 60px;">
-            <!-- 
+            <!--
               각 서체별 text-area요소에 적용될 인라인 스타일
               Arial: style="font-family: arial, sans-serif";
               Courier: style="font-family: "Courier New", Courier, monospace";
@@ -1317,10 +1317,10 @@
 
           <!-- 도형 (circle, rectangle) -->
           <span style="position: absolute; top: 710px; left: 1640px;">circle</span>
-          <div class="canvas-object object-ellipse" style="width: 100px;height: 100px;top: 730px;left: 1640px;background-color: #e6e6e6;"></div>
+          <div class="canvas-object object-ellipse" style="width: 100px;height: 100px;top: 730px;left: 1640px;background-color: rgb(220, 225, 232);"></div>
 
           <span style="position: absolute; top: 710px; left: 1750px;">rectangle</span>
-          <div class="canvas-object" style="width: 150px;height: 100px;top: 730px;left: 1750px;background-color: #e6e6e6;"></div>
+          <div class="canvas-object" style="width: 150px;height: 100px;top: 730px;left: 1750px;background-color: rgb(220, 225, 232);"></div>
           <!-- // 도형 (circle, rectangle) -->
 
           <!--  notification -->
@@ -1524,13 +1524,15 @@
 
           <!-- 콤보박스 -->
           <span style="position: absolute; top: 990px; left: 50px;">콤보박스</span>
-          <div class="canvas-object object-select" style="top: 1010px;left: 50px;width: 180px;height: 30px;">
+          <div class="canvas-object object-combo-box" style="top: 1010px;left: 50px;width: 180px;height: 30px;">
             <div class="select">
               <div class="select-selector">
                 <input type="text" class="text-input select-selector__input" placeholder="placeholder text" value="권한 설정">
-                <svg class="svg-icon select-selector__icon">
-                  <use xlink:href="#chevron-down-medium"></use>
-                </svg>
+                <button class="select-selector__icon-button" type="button">
+                  <svg class="svg-icon select-selector__icon">
+                    <use xlink:href="#chevron-down-medium"></use>
+                  </svg>
+                </button>
               </div>
               <div class="select-container">
                 <ul class="select-container__list">
@@ -1579,9 +1581,11 @@
             <div class="select select--open">
               <div class="select-selector">
                 <input type="text" class="text-input select-selector__input" placeholder="placeholder text" value="권한 설정">
-                <svg class="svg-icon select-selector__icon">
-                  <use xlink:href="#chevron-down-medium"></use>
-                </svg>
+                <button class="select-selector__icon-button" type="button">
+                  <svg class="svg-icon select-selector__icon">
+                    <use xlink:href="#chevron-down-medium"></use>
+                  </svg>
+                </button>
               </div>
               <div class="select-container">
                 <ul class="select-container__list">
@@ -2149,14 +2153,14 @@
           <!-- 버튼  -->
           <div class="canvas-object object-button" style="top: 820px;left: 470px;width: 200px;height: 50px;">
             <button class="button button--primary" type="button">
-              btn-primary
+              <p class="btn-p">btn-primary</p>
             </button>
           </div>
 
           <!-- 박스 클릭 시 사이즈 조절 박스 활성화 -->
           <div class="canvas-object object-button canvas-object--active" style="top: 820px;left: 680px;width: 200px;height: 50px;">
             <button class="button button--primary" type="button">
-              btn-primary
+              <p class="btn-p">btn-primary</p>
             </button>
             <!-- 크기 조절 상자 -->
             <span class="tl"></span>
@@ -2170,6 +2174,37 @@
             <!-- //크기 조절 상자 -->
           </div>
           <!-- // 박스 클릭 시 사이즈 조절 박스 활성화 -->
+
+          <!-- 이미지 버튼-->
+          <div class="canvas-object object-button" style="top: 820px;left: 900px;width: 200px;height: 50px;">
+            <div style="
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(https://cdn.pixabay.com/photo/2020/06/28/00/04/chicago-5347435_960_720.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.75;
+            border-radius: 5px;"></div>
+            <button class="button button--primary" type="button" style="background-color: transparent; color: blue;">
+              <p class="btn-p" style="z-index: 9;">btn-primary</p>
+            </button>
+            <!-- 크기 조절 상자 -->
+            <span class="tl"></span>
+            <span class="tc"></span>
+            <span class="tr"></span>
+            <span class="cl"></span>
+            <span class="cr"></span>
+            <span class="bl"></span>
+            <span class="bc"></span>
+            <span class="br"></span>
+            <!-- //크기 조절 상자 -->
+          </div>
+          <!-- // 이미지 버튼-->
           <!-- 대상으로 설정 가능한 상태 -->
           <span style="position: absolute; top: 920px; left: 470px;">대상으로 설정 가능한 상태 <span>.canvas-object--deselect</span></span>
           <div class="canvas-object object-button canvas-object--deselect" style="top: 940px;left: 470px;width: 200px;height: 30px;">
@@ -2255,6 +2290,44 @@
             </svg>
             <div class="object-hidden__text">
               <span>common_data_1</span>
+            </div>
+            <div class="checkbox checkbox--primary">
+              <input id="checkbox-condition-01" class="checkbox__input" type="checkbox" checked="">
+              <label for="checkbox-condition-01" class="checkbox__label"></label>
+            </div>
+            <div class="select select--open">
+              <div class="select-selector">
+                <button class="select-selector__button" type="button">
+                  <span class="select-selector__title">데이터</span>
+                  <svg class="svg-icon select-selector__icon" aria-hidden="true">
+                    <use xlink:href="#chevron-down-medium"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="select-container">
+                <ul class="select-container__list">
+                  <li class="select-container__item">
+                    <button class="select-container__button" type="button">
+                      <span class="select-container__text">전체</span>
+                    </button>
+                  </li>
+                  <li class="select-container__item">
+                    <button class="select-container__button" type="button">
+                      <span class="select-container__text">성공</span>
+                    </button>
+                  </li>
+                  <li class="select-container__item">
+                    <button class="select-container__button" type="button">
+                      <span class="select-container__text">실패</span>
+                    </button>
+                  </li>
+                  <li class="select-container__item select-container__item--selected">
+                    <button class="select-container__button" type="button">
+                      <span class="select-container__text">데이터</span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
 
@@ -2490,7 +2563,7 @@
           </div>
 
           <p style="position: absolute; top: 1470px; left: 470px;">불러오기로 데이터에 연결된 상태<span class="highlight">.loaded</span></p>
-          
+
           <div class="canvas-object object-hidden object-visible" style="top: 1490px; left: 470px; width: 200px; height: 50px;">
             <!-- NOTE: 데이터 연결시 object-hidden__inner--loaded 클래스 추가 -->
             <div class="object-hidden__inner object-hidden__inner--loaded">
@@ -3536,8 +3609,564 @@
             <span class="br"></span>
             <!-- //크기 조절 상자 -->
           </div>
+
+          <!--  증감률  -->
+          <span style="position: absolute; top: 2250px; left: 50px;">증감률(빈 영역)</span>
+          <!-- svg icon 적용 -->
+          <!-- <div class="canvas-object object-growth-rate" style="display: none; top: 2270px;left: 2270px;width: 200px;height: 150px;">
+            <div style="width: 100%; height: 100%;">
+              <div class="canvas-object-inner">
+                <svg class="canvas-object-inner__icon svg-icon">
+                  <use xlink:href="#object-chart"></use>
+                </svg>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- background-image 적용 -->
+          <div class="canvas-object object-growth-rate" style="top: 2270px;left: 50px;width: 200px;height: 150px;">
+            <div style="width: 100%; height: 100%;">
+            </div>
+          </div>
+
+          <!-- 박스 클릭 시 사이즈 조절 박스 활성화 -->
+          <span style="position: absolute; top: 2250px; left: 260px;">증감률(selected/활성화)</span>
+          <div class="canvas-object object-growth-rate canvas-object--active chart-bg-none" style="top: 2270px;left: 260px;width: 200px;height: 150px;">
+            <!-- 크기 조절 상자 -->
+            <span class="tl"></span>
+            <span class="tc"></span>
+            <span class="tr"></span>
+            <span class="cl"></span>
+            <span class="cr"></span>
+            <span class="bl"></span>
+            <span class="bc"></span>
+            <span class="br"></span>
+            <!-- //크기 조절 상자 -->
+          </div>
+          <!-- // 박스 클릭 시 사이즈 조절 박스 활성화 -->
+
+          <span style="position: absolute; top: 2250px; left: 470px;">증감률(loading)</span>
+          <div class="canvas-object object-growth-rate" style="top: 2270px;left: 470px;width: 200px;height: 150px;">
+            <div class="overlay overlay--mono">
+              <div class="loader loader--sm">
+                <div class="loader__spinner"></div>
+              </div>
+            </div>
+          </div>
+
+          <span style="position: absolute; top: 2250px; left: 680px;">증감률(error)</span>
+          <!-- background-image 적용 -->
+          <div class="canvas-object object-growth-rate" style="top: 2270px;left: 680px;width: 200px;height: 150px;">
+            <div style="width: 100%; height: 100%;">
+            </div>
+            <div class="canvas-object-inner">
+              <div class="notification-wrap">
+                <div class="notification notification--error">
+                  <svg class="notification__icon svg-icon" aria-hidden="true">
+                    <use xlink:href="#issue-fill"></use>
+                  </svg>
+                  <div class="notification__contents">
+                    <p class="notification__text">
+                      데이터 형식이 일치하지 않습니다.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <span style="position: absolute; top: 2450px; left: 50px;">증감률 기본 상태</span>
+          <!-- svg icon 적용 -->
+          <!-- <div class="canvas-object object-growth-rate" style="display: none; top: 2270px;left: 2270px;width: 200px;height: 150px;">
+            <div style="width: 100%; height: 100%;">
+              <div class="canvas-object-inner">
+                <svg class="canvas-object-inner__icon svg-icon">
+                  <use xlink:href="#object-chart"></use>
+                </svg>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- background-image 적용 -->
+          <div class="canvas-object object-growth-rate object-growth-rate--bg-none" style="top: 2470px;left: 50px;width: 200px;height: 150px;">
+            <div class="growth-rate">
+              <div class="growth-rate__items">
+                <div class="growth-rate__item" style="color: #005acd;">100</div>
+                <div class="growth-rate__item" style="color: #212121;">50</div>
+                <div class="growth-rate__item" style="color: #ef594f;">50</div>
+              </div>
+              <div class="growth-rate__items growth-rate__amount">
+                <div class="growth-rate__item" style="color: #005acd;">
+                  ▲
+                </div>
+                <div class="growth-rate__item" style="color: #212121;">
+                  ⁃
+                </div>
+                <div class="growth-rate__item" style="color: #ef594f;">
+                  ▼
+                </div>
+              </div>
+              <div class="growth-rate__items">
+                <div class="growth-rate__item" style="color: #005acd;">
+                 50
+                </div>
+                <div class="growth-rate__item" style="color: #212121;">
+                 0
+                </div>
+                <div class="growth-rate__item" style="color: #ef594f;">
+                 50
+                </div>
+              </div>
+              <div class="growth-rate__items">
+                <div class="growth-rate__item" style="color: #005acd;">100.0%</div>
+                <div class="growth-rate__item" style="color: #212121;">50.0%</div>
+                <div class="growth-rate__item" style="color: #ef594f;">0.0%</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 박스 클릭 시 사이즈 조절 박스 활성화 -->
+          <span style="position: absolute; top: 2450px; left: 260px;">증감률 클릭된 상태</span>
+          <div class="canvas-object object-growth-rate canvas-object--active object-growth-rate--bg-none" style="top: 2470px;left: 260px;width: 200px;height: 150px;">
+            <div class="growth-rate">
+              <div class="growth-rate__items">
+                <div class="growth-rate__item" style="color: #005acd;">100</div>
+                <div class="growth-rate__item" style="color: #212121;">50</div>
+                <div class="growth-rate__item" style="color: #ef594f;">50</div>
+              </div>
+              <div class="growth-rate__items growth-rate__amount">
+                <div class="growth-rate__item" style="color: #005acd;">
+                  ▲
+                </div>
+                <div class="growth-rate__item" style="color: #212121;">
+                  ⁃
+                </div>
+                <div class="growth-rate__item" style="color: #ef594f;">
+                  ▼
+                </div>
+              </div>
+              <div class="growth-rate__items">
+                <div class="growth-rate__item" style="color: #005acd;">
+                 50
+                </div>
+                <div class="growth-rate__item" style="color: #212121;">
+                 0
+                </div>
+                <div class="growth-rate__item" style="color: #ef594f;">
+                 50
+                </div>
+              </div>
+              <div class="growth-rate__items">
+                <div class="growth-rate__item" style="color: #005acd;">100.0%</div>
+                <div class="growth-rate__item" style="color: #212121;">50.0%</div>
+                <div class="growth-rate__item" style="color: #ef594f;">0.0%</div>
+              </div>
+            </div>
+            <!-- 크기 조절 상자 -->
+            <span class="tl"></span>
+            <span class="tc"></span>
+            <span class="tr"></span>
+            <span class="cl"></span>
+            <span class="cr"></span>
+            <span class="bl"></span>
+            <span class="bc"></span>
+            <span class="br"></span>
+            <!-- //크기 조절 상자 -->
+          </div>
+          <!-- // 박스 클릭 시 사이즈 조절 박스 활성화 -->
+
+          <span style="position: absolute; top: 2450px; left: 470px;">증감률 스크롤 상태</span>
+          <div class="canvas-object object-growth-rate object-growth-rate--bg-none" style="top: 2470px;left: 470px;width: 200px;height: 150px;">
+            <div class="growth-rate">
+              <div class="growth-rate__items">
+                <div class="growth-rate__item" style="color: #005acd;">100</div>
+                <div class="growth-rate__item" style="color: #212121;">50</div>
+                <div class="growth-rate__item" style="color: #ef594f;">50</div>
+                <div class="growth-rate__item" style="color: #005acd;">100</div>
+                <div class="growth-rate__item" style="color: #212121;">50</div>
+                <div class="growth-rate__item" style="color: #ef594f;">50</div>
+              </div>
+              <div class="growth-rate__items growth-rate__amount">
+                <div class="growth-rate__item" style="color: #005acd;">
+                  ▲
+                </div>
+                <div class="growth-rate__item" style="color: #212121;">
+                  ⁃
+                </div>
+                <div class="growth-rate__item" style="color: #ef594f;">
+                  ▼
+                </div>
+                <div class="growth-rate__item" style="color: #005acd;">
+                  ▲
+                </div>
+                <div class="growth-rate__item" style="color: #212121;">
+                  ⁃
+                </div>
+                <div class="growth-rate__item" style="color: #ef594f;">
+                  ▼
+                </div>
+              </div>
+              <div class="growth-rate__items">
+                <div class="growth-rate__item" style="color: #005acd;">
+                 50
+                </div>
+                <div class="growth-rate__item" style="color: #212121;">
+                 0
+                </div>
+                <div class="growth-rate__item" style="color: #ef594f;">
+                 50
+                </div>
+                <div class="growth-rate__item" style="color: #005acd;">
+                  50
+                 </div>
+                 <div class="growth-rate__item" style="color: #212121;">
+                  0
+                 </div>
+                 <div class="growth-rate__item" style="color: #ef594f;">
+                  50
+                 </div>
+              </div>
+              <div class="growth-rate__items">
+                <div class="growth-rate__item" style="color: #005acd;">100.0%</div>
+                <div class="growth-rate__item" style="color: #212121;">50.0%</div>
+                <div class="growth-rate__item" style="color: #ef594f;">0.0%</div>
+                <div class="growth-rate__item" style="color: #005acd;">100.0%</div>
+                <div class="growth-rate__item" style="color: #212121;">50.0%</div>
+                <div class="growth-rate__item" style="color: #ef594f;">0.0%</div>
+              </div>
+            </div>
+          </div>
+
+          <span style="position: absolute; top: 2450px; left: 680px;">증감률 : deselect</span>
+          <!-- background-image 적용 -->
+          <div class="canvas-object object-growth-rate object-growth-rate--bg-none canvas-object--deselect" style="top: 2470px;left: 680px;width: 200px;height: 150px;">
+            <div class="growth-rate">
+              <div class="growth-rate__items">
+                <div class="growth-rate__item" style="color: #005acd;">100</div>
+                <div class="growth-rate__item" style="color: #212121;">50</div>
+                <div class="growth-rate__item" style="color: #ef594f;">50</div>
+              </div>
+              <div class="growth-rate__items growth-rate__amount">
+                <div class="growth-rate__item" style="color: #005acd;">
+                  ▲
+                </div>
+                <div class="growth-rate__item" style="color: #212121;">
+                  ⁃
+                </div>
+                <div class="growth-rate__item" style="color: #ef594f;">
+                  ▼
+                </div>
+              </div>
+              <div class="growth-rate__items">
+                <div class="growth-rate__item" style="color: #005acd;">
+                 50
+                </div>
+                <div class="growth-rate__item" style="color: #212121;">
+                 0
+                </div>
+                <div class="growth-rate__item" style="color: #ef594f;">
+                 50
+                </div>
+              </div>
+              <div class="growth-rate__items">
+                <div class="growth-rate__item" style="color: #005acd;">100.0%</div>
+                <div class="growth-rate__item" style="color: #212121;">50.0%</div>
+                <div class="growth-rate__item" style="color: #ef594f;">0.0%</div>
+              </div>
+            </div>
+            <div class="checkbox checkbox--primary">
+              <input class="checkbox__input" type="checkbox" id="datetime-picker-ckb2">
+              <label class="checkbox__label" for="datetime-picker-ckb2"></label>
+            </div>
+          </div>
+
+          <span style="position: absolute; top: 2450px; left: 890px;">증감률 : select</span>
+          <!-- background-image 적용 -->
+          <div class="canvas-object object-growth-rate object-growth-rate--bg-none canvas-object--select" style="top: 2470px;left: 890px;width: 200px;height: 150px;">
+            <div class="growth-rate">
+              <div class="growth-rate__items">
+                <div class="growth-rate__item" style="color: #005acd;">100</div>
+                <div class="growth-rate__item" style="color: #212121;">50</div>
+                <div class="growth-rate__item" style="color: #ef594f;">50</div>
+              </div>
+              <div class="growth-rate__items growth-rate__amount">
+                <div class="growth-rate__item" style="color: #005acd;">
+                  ▲
+                </div>
+                <div class="growth-rate__item" style="color: #212121;">
+                  ⁃
+                </div>
+                <div class="growth-rate__item" style="color: #ef594f;">
+                  ▼
+                </div>
+              </div>
+              <div class="growth-rate__items">
+                <div class="growth-rate__item" style="color: #005acd;">
+                 50
+                </div>
+                <div class="growth-rate__item" style="color: #212121;">
+                 0
+                </div>
+                <div class="growth-rate__item" style="color: #ef594f;">
+                 50
+                </div>
+              </div>
+              <div class="growth-rate__items">
+                <div class="growth-rate__item" style="color: #005acd;">100.0%</div>
+                <div class="growth-rate__item" style="color: #212121;">50.0%</div>
+                <div class="growth-rate__item" style="color: #ef594f;">0.0%</div>
+              </div>
+            </div>
+            <div class="checkbox checkbox--primary">
+              <input class="checkbox__input" type="checkbox" id="tag_ckb-02" checked="checked">
+              <label class="checkbox__label" for="tag_ckb-02"></label>
+            </div>
+          </div>
+          <!-- //증감률  -->
+
+          <!-- slider : 초기 enabled 상태 -->
+          <span style="position:absolute;top:2650px;left:50px;">slider : 초기 enabled 상태</span>
+          <div class="canvas-object object-slider" style="top:2670px;left:50px;width:300px;height:102px;">
+            <div class="slider-group">
+              <div id="slider-handles" class="noUi-target noUi-ltr noUi-horizontal noUi-txt-dir-ltr">
+                <div class="noUi-base">
+                  <div class="noUi-connects">
+                  </div>
+                  <div class="noUi-origin" style="transform: translate(-500%, 0px); z-index: 4;">
+                    <div class="noUi-handle noUi-handle-lower">
+                      <div class="noUi-touch-area">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- //slider : 초기 enabled 상태 -->
+          <!-- slider : 가로형 클릭한 상태 -->
+          <span style="position:absolute;top:2650px;left:380px;">slider : 가로형 클릭한 상태</span>
+          <div class="canvas-object object-slider canvas-object--active" style="top:2670px;left:380px;width:300px;height:102px;">
+            <div class="slider-group">
+              <div id="slider-handles" class="noUi-target noUi-ltr noUi-horizontal noUi-txt-dir-ltr">
+                <div class="noUi-base">
+                  <div class="noUi-connects">
+                  </div>
+                  <div class="noUi-origin" style="transform: translate(-500%, 0px); z-index: 4;">
+                    <div class="noUi-handle">
+                      <div class="noUi-touch-area">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="noUi-origin" style="transform: translate(-300%, 0px);z-index: 4;">
+                    <div class="noUi-handle">
+                      <div class="noUi-touch-area">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 크기 조절 상자 -->
+            <span class="tl"></span>
+            <span class="tc"></span>
+            <span class="tr"></span>
+            <span class="cl"></span>
+            <span class="cr"></span>
+            <span class="bl"></span>
+            <span class="bc"></span>
+            <span class="br"></span>
+            <!-- //크기 조절 상자 -->
+          </div>
+          <!-- // slider : 가로형 클릭한 상태 -->
+          <!-- slider : 세로형 클릭한 상태 -->
+          <span style="position:absolute;top:2650px;left:710px;">slider : 세로형 클릭한 상태</span>
+          <div class="canvas-object object-slider canvas-object--active" style="top:2670px;left:710px;width:140px;height:230px;">
+            <div class="slider-group vertical">
+              <div id="slider-vertical" class="noUi-target noUi-ltr noUi-vertical noUi-txt-dir-ltr" style="height: 210px;">
+                <div class="noUi-base">
+                  <div class="noUi-connects">
+                  </div>
+                  <div class="noUi-origin" style="transform: translate(0px, 440%); z-index: 4;">
+                    <div class="noUi-handle noUi-handle-lower active">
+                      <div class="noUi-touch-area">
+                      </div>
+                      <div class="noUi-tooltip">40.00</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="noUi-pips noUi-pips-vertical">
+                    <div class="noUi-marker noUi-marker-vertical noUi-marker-large" style="top: 0%;">
+                    </div>
+                    <div class="noUi-value noUi-value-vertical noUi-value-large" style="top: 0%;">0
+                    </div>
+                    <div class="noUi-marker noUi-marker-vertical noUi-marker-normal" style="top: 4%;"></div>
+                    <div class="noUi-marker noUi-marker-vertical noUi-marker-normal" style="top: 8%;"></div>
+                    <div class="noUi-marker noUi-marker-vertical noUi-marker-normal" style="top: 12%;"></div>
+                    <div class="noUi-marker noUi-marker-vertical noUi-marker-normal" style="top: 16%;"></div>
+                    <div class="noUi-marker noUi-marker-vertical noUi-marker-large" style="top: 20%;"></div>
+                    <div class="noUi-value noUi-value-vertical noUi-value-large" style="top: 20%;">20</div>
+                    <div class="noUi-marker noUi-marker-vertical noUi-marker-normal" style="top: 24%;"></div>
+                    <div class="noUi-marker noUi-marker-vertical noUi-marker-normal" style="top: 28%;"></div>
+                    <div class="noUi-marker noUi-marker-vertical noUi-marker-normal" style="top: 32%;"></div>
+                    <div class="noUi-marker noUi-marker-vertical noUi-marker-normal" style="top: 36%;"></div>
+                    <div class="noUi-marker noUi-marker-vertical noUi-marker-large" style="top: 40%;"></div>
+                    <div class="noUi-value noUi-value-vertical noUi-value-large" style="top: 40%;">40</div>
+                    <div class="noUi-marker noUi-marker-vertical noUi-marker-normal" style="top: 44%;"></div>
+                    <div class="noUi-marker noUi-marker-vertical noUi-marker-normal" style="top: 48%;"></div>
+                    <div class="noUi-marker noUi-marker-vertical noUi-marker-normal" style="top: 52%;"></div>
+                    <div class="noUi-marker noUi-marker-vertical noUi-marker-normal" style="top: 56%;"></div>
+                    <div class="noUi-marker noUi-marker-vertical noUi-marker-large" style="top: 60%;"></div>
+                    <div class="noUi-value noUi-value-vertical noUi-value-large" style="top: 60%;">60</div>
+                    <div class="noUi-marker noUi-marker-vertical noUi-marker-normal" style="top: 64%;"></div>
+                    <div class="noUi-marker noUi-marker-vertical noUi-marker-normal" style="top: 68%;"></div>
+                    <div class="noUi-marker noUi-marker-vertical noUi-marker-normal" style="top: 72%;"></div>
+                    <div class="noUi-marker noUi-marker-vertical noUi-marker-normal" style="top: 76%;"></div>
+                    <div class="noUi-marker noUi-marker-vertical noUi-marker-large" style="top: 80%;"></div>
+                    <div class="noUi-value noUi-value-vertical noUi-value-large" style="top: 80%;">80</div>
+                    <div class="noUi-marker noUi-marker-vertical noUi-marker-normal" style="top: 84%;"></div>
+                    <div class="noUi-marker noUi-marker-vertical noUi-marker-normal" style="top: 88%;"></div>
+                    <div class="noUi-marker noUi-marker-vertical noUi-marker-normal" style="top: 92%;"></div>
+                    <div class="noUi-marker noUi-marker-vertical noUi-marker-normal" style="top: 96%;"></div>
+                    <div class="noUi-marker noUi-marker-vertical noUi-marker-large" style="top: 100%;"></div>
+                    <div class="noUi-value noUi-value-vertical noUi-value-large" style="top: 100%;">100</div>
+                  </div>
+                </div>
+              </div>
+              <!-- 크기 조절 상자 -->
+              <span class="tl"></span>
+              <span class="tc"></span>
+              <span class="tr"></span>
+              <span class="cl"></span>
+              <span class="cr"></span>
+              <span class="bl"></span>
+              <span class="bc"></span>
+              <span class="br"></span>
+              <!-- //크기 조절 상자 -->
+            </div>
+            <!-- // slider : 세로형 클릭한 상태 -->
+            <!-- slider: deselect -->
+            <span style="position:absolute;top:2650px;left:880px;">slider: deselect</span>
+            <div class="canvas-object object-slider canvas-object--deselect" style="top:2670px;left:880px;width:300px;height:102px;">
+              <div class="slider-group">
+                <div id="slider-tooltips" class="noUi-target noUi-ltr noUi-horizontal noUi-txt-dir-ltr">
+                  <div class="noUi-base">
+                    <div class="noUi-connects">
+                    </div>
+                    <div class="noUi-origin" style="transform: translate(-420%, 0px); z-index: 4;">
+                      <div class="noUi-handle noUi-handle-lower">
+                        <div class="noUi-touch-area">
+                        </div>
+                        <div class="noUi-tooltip">60.00</div>
+                      </div>
+                    </div>
+                    <div class="noUi-origin" style="transform: translate(-230%, 0px);z-index: 4;">
+                      <div class="noUi-handle noUi-handle-upper">
+                        <div class="noUi-touch-area">
+                        </div>
+                        <div class="noUi-tooltip">80.00</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="noUi-pips noUi-pips-horizontal">
+                    <div class="noUi-marker noUi-marker-horizontal noUi-marker-large" style="left: 0%;">
+                    </div>
+                    <div class="noUi-value noUi-value-horizontal noUi-value-large" style="left: 0%;">0</div>
+                    <div class="noUi-marker noUi-marker-horizontal noUi-marker-normal" style="left: 4%;"></div>
+                    <div class="noUi-marker noUi-marker-horizontal noUi-marker-normal" style="left: 8%;"></div>
+                    <div class="noUi-marker noUi-marker-horizontal noUi-marker-normal" style="left: 12%;"></div>
+                    <div class="noUi-marker noUi-marker-horizontal noUi-marker-normal" style="left: 16%;"></div>
+                    <div class="noUi-marker noUi-marker-horizontal noUi-marker-large" style="left: 20%;"></div>
+                    <div class="noUi-value noUi-value-horizontal noUi-value-large" style="left: 20%;">20</div>
+                    <div class="noUi-marker noUi-marker-horizontal noUi-marker-normal" style="left: 24%;"></div>
+                    <div class="noUi-marker noUi-marker-horizontal noUi-marker-normal" style="left: 28%;"></div>
+                    <div class="noUi-marker noUi-marker-horizontal noUi-marker-normal" style="left: 32%;"></div>
+                    <div class="noUi-marker noUi-marker-horizontal noUi-marker-normal" style="left: 36%;"></div>
+                    <div class="noUi-marker noUi-marker-horizontal noUi-marker-large" style="left: 40%;"></div>
+                    <div class="noUi-value noUi-value-horizontal noUi-value-large" style="left: 40%;">40</div>
+                    <div class="noUi-marker noUi-marker-horizontal noUi-marker-normal" style="left: 44%;"></div>
+                    <div class="noUi-marker noUi-marker-horizontal noUi-marker-normal" style="left: 48%;"></div>
+                    <div class="noUi-marker noUi-marker-horizontal noUi-marker-normal" style="left: 52%;"></div>
+                    <div class="noUi-marker noUi-marker-horizontal noUi-marker-normal" style="left: 56%;"></div>
+                    <div class="noUi-marker noUi-marker-horizontal noUi-marker-large" style="left: 60%;"></div>
+                    <div class="noUi-value noUi-value-horizontal noUi-value-large" style="left: 60%;">60</div>
+                    <div class="noUi-marker noUi-marker-horizontal noUi-marker-normal" style="left: 64%;"></div>
+                    <div class="noUi-marker noUi-marker-horizontal noUi-marker-normal" style="left: 68%;"></div>
+                    <div class="noUi-marker noUi-marker-horizontal noUi-marker-normal" style="left: 72%;"></div>
+                    <div class="noUi-marker noUi-marker-horizontal noUi-marker-normal" style="left: 76%;"></div>
+                    <div class="noUi-marker noUi-marker-horizontal noUi-marker-large" style="left: 80%;"></div>
+                    <div class="noUi-value noUi-value-horizontal noUi-value-large" style="left: 80%;">80</div>
+                    <div class="noUi-marker noUi-marker-horizontal noUi-marker-normal" style="left: 84%;"></div>
+                    <div class="noUi-marker noUi-marker-horizontal noUi-marker-normal" style="left: 88%;"></div>
+                    <div class="noUi-marker noUi-marker-horizontal noUi-marker-normal" style="left: 92%;"></div>
+                    <div class="noUi-marker noUi-marker-horizontal noUi-marker-normal" style="left: 96%;"></div>
+                    <div class="noUi-marker noUi-marker-horizontal noUi-marker-large" style="left: 100%;"></div>
+                    <div class="noUi-value noUi-value-horizontal noUi-value-large" style="left: 100%;">100</div>
+                  </div>
+                </div>
+              </div>
+              <!-- 크기 조절 상자 -->
+              <!-- <span class="tl"></span>
+              <span class="tc"></span>
+              <span class="tr"></span>
+              <span class="cl"></span>
+              <span class="cr"></span>
+              <span class="bl"></span>
+              <span class="bc"></span>
+              <span class="br"></span> -->
+              <!-- //크기 조절 상자 -->
+              <div class="checkbox checkbox--primary">
+                <input class="checkbox__input" type="checkbox" id="datetime-picker-ckb2">
+                <label class="checkbox__label" for="datetime-picker-ckb2"></label>
+              </div>
+            </div>
+            <!-- // slider: deselect -->
+            <!-- slider: select -->
+            <span style="position:absolute;top:2650px;left:1210px;">slider: select</span>
+            <div class="canvas-object object-slider canvas-object--select" style="top:2670px;left:1210px;width:300px;height:102px;">
+              <div class="slider-group">
+                <div id="slider-handles" class="noUi-target noUi-ltr noUi-horizontal noUi-txt-dir-ltr">
+                  <div class="noUi-base">
+                    <div class="noUi-connects">
+                    </div>
+                    <div class="noUi-origin" style="transform: translate(-500%, 0px); z-index: 4;">
+                      <div class="noUi-handle noUi-handle-lower active">
+                        <div class="noUi-touch-area">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="noUi-origin" style="transform: translate(-314.024%, 0px);z-index: 4;">
+                      <div class="noUi-handle noUi-handle-upper active">
+                        <div class="noUi-touch-area">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="checkbox checkbox--primary">
+                <input class="checkbox__input" type="checkbox" id="tag_ckb-02" checked="checked">
+                <label class="checkbox__label" for="tag_ckb-02"></label>
+              </div>
+              <!-- 크기 조절 상자 -->
+              <!-- <span class="tl"></span>
+              <span class="tc"></span>
+              <span class="tr"></span>
+              <span class="cl"></span>
+              <span class="cr"></span>
+              <span class="bl"></span>
+              <span class="bc"></span>
+              <span class="br"></span> -->
+              <!-- //크기 조절 상자 -->
+            </div>
+            <!-- // slider: select -->
+
+            <!-- 반응형 가이드라인 -->
+            <span style="position:absolute;top:2840px;left:50px;">반응형 : 가이드라인</span>
+            <div class="responsive__guide-line" style="top:2870px;left:0;"></div>
+            <!-- // 반응형 가이드라인 -->
+
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>

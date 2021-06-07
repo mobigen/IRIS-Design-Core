@@ -1,11 +1,13 @@
 .list {
   @include list;
+  @include list--hidable;
   display: flex;
   flex-direction: column;
   border: 1px solid $ui-04;
   background-color: $ui-02;
   color: $text-01;
 }
+
 .list__list {
   width: 100%;
   height: 100%;
@@ -18,9 +20,7 @@
 
 .list__head-title {
   @include font-weight("medium");
-  @include text-overflow(100%);
-  display: flex;
-  align-items: center;
+  @include text-overflow;
   color: $text-02;
   margin-bottom: $spacing-3xs;
 }
@@ -65,6 +65,17 @@
   @include line-height("body");
 }
 
+.list__item-notification {
+  @include stable-padding($spacing-2xs, $spacing-xs);
+  margin: 0 auto;
+  height: rem(40px);
+}
+
+.list__subtext {
+  margin-left: $spacing-2xs;
+  color: $text-03;
+}
+
 .list__checkmark {
   vertical-align: middle;
 }
@@ -77,6 +88,12 @@
   display: flex;
   align-items: center;
   width: 100%;
+}
+
+.list__summary-content {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
 }
 
 .list__details {
@@ -117,13 +134,13 @@
 }
 
 .list__details-item-trigger-layer {
-  @include text-overflow;
+  @include text-overflow(block);
   @include font-size("12");
   color: $text-03;
 }
 
 .list__details-item-trigger-text {
-  @include text-overflow;
+  @include text-overflow(block);
 }
 
 .list__details-item-component {
@@ -135,7 +152,7 @@
 }
 
 .list__details-item-component-text {
-  @include text-overflow;
+  @include text-overflow(block);
   margin-left: $spacing-2xs;
 }
 
@@ -155,6 +172,15 @@
 
 .list--expandable .list__item {
   flex-direction: column;
+}
+
+.list--expandable .checkbox {
+  flex-grow: 0;
+  padding-right: 0;
+}
+
+.list--expandable .list__button {
+  padding-left: 0;
 }
 
 .list__head-right-box {
@@ -185,12 +211,18 @@
 
 .dynamic-list {
   padding: $spacing-sm;
+
+  .notification-full {
+    height: 100%;
+    justify-content: center;
+  }
 }
 
 .dynamic-list__no-contents {
   display: flex;
   height: 100%;
-  background-color: $ui-01;
+  background-color: $odd-row;
+  justify-content: center;
 }
 
 .dynamic-list__toolbar {
@@ -273,17 +305,4 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   line-height: 2rem;
-}
-
-// list--hidable
-.list.list--hidable {
-  .list__action-buttons {
-    display: none;
-  }
-
-  .list__item:hover {
-    .list__action-buttons {
-      display: flex;
-    }
-  }
 }

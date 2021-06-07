@@ -18,14 +18,19 @@
 }
 
 .modal__head-close-button {
-  margin-left: $spacing-lg;
+  margin-left: auto;
 }
 
 .modal__head-title {
-  flex: 1;
+  @include text-overflow;
+  display: flex;
+  flex: 1 0 auto;
+  align-items: center;
+  width: calc(100% - 140px);
 }
 
 .modal__head-subtitle {
+  @include text-overflow;
   @include line-height("body");
   @include font-size("13");
   margin-left: $spacing-2xs;
@@ -102,10 +107,14 @@
 }
 
 .modal--lg {
-  width: rem(900px);
+  width: rem(720px);
 }
 
 .modal--xl {
+  width: rem(900px);
+}
+
+.modal--2xl {
   width: rem(1180px);
 }
 
@@ -117,8 +126,17 @@
   padding: $spacing-sm / 2 0;
 }
 
+.modal .form--lg .form__item {
+  padding: $spacing-sm 0;
+}
+
+.modal .form--lg .form__item:first-child {
+  padding-top: 0;
+}
+
 .modal .form__label-text {
   @include font-weight("regular");
+  letter-spacing: -1px;
 }
 
 .modal .form__label {
@@ -139,7 +157,7 @@
 }
 
 .modal .tab__contents {
-  flex: 1;
+  flex: 1 0 auto;
   padding-right: $spacing-md;
   padding-left: $spacing-md;
 }

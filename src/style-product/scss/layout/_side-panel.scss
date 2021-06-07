@@ -57,6 +57,7 @@
 }
 
 .side-panel-content {
+  flex: 1 0 auto;
   position: relative;
 }
 
@@ -106,6 +107,14 @@
 
 // side-panel 내 요소 재선언
 .side-panel-tab__body {
+  .form {
+    width: 100%;
+  }
+
+  .form__list {
+    width: 100%;
+  }
+
   .form__item {
     padding: $spacing-3xs 0;
     min-height: rem(32px);

@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IRIS | Studio Edit</title>
+  <link rel="stylesheet" href="../../src/style-product/lib/nouislider.css" />
   <link rel="stylesheet" href="../../dist/css/main/style.min.css" />
 </head>
 
@@ -136,6 +137,14 @@
                                   <use xlink:href="#dual-axis"></use>
                                 </svg>
                                 <span class="select-container__text">다중축</span>
+                              </button>
+                            </li>
+                            <li class="select-container__item">
+                              <button class="select-container__button" type="button">
+                                <svg class="svg-icon select-container__icon" aria-hidden="true">
+                                  <use xlink:href="#area-chart"></use>
+                                </svg>
+                                <span class="select-container__text">영역형</span>
                               </button>
                             </li>
                             <li class="select-container__item">
@@ -796,6 +805,43 @@
                   </div>
                   <div class="side-panel-content">
                     <div class="side-panel-content__head">
+                        <span class="side-panel-content__head-title">토글 버튼 라벨 없는 유형 </span>
+                    </div>
+                    <div class="side-panel-content__body">
+                      <div class="form">
+                        <div class="form__list">
+                          <div class="form__item">
+                            <div class="toggle-button row">
+                                <button class="toggle-button__item col-6 toggle-button__item--selected" ng-class="{ 'toggle-button__item--selected' : 'fit' === selectedVisual.imageAlign || !selectedVisual.imageAlign }" ng-click="changeImageAlign('fit')">
+                                    <svg class="svg-icon">
+                                        <use xlink:href="#fit-to-screen"></use>
+                                    </svg>
+                                    <span class="toggle-button__text">영역에 맞춤</span>
+                                </button>
+                                <button class="toggle-button__item col-6" ng-class="{ 'toggle-button__item--selected' : 'original' === selectedVisual.imageAlign }" ng-click="changeImageAlign('original')">
+                                    <svg class="svg-icon">
+                                        <use xlink:href="#original-size"></use>
+                                    </svg>
+                                    <span class="toggle-button__text">원본크기</span>
+                                </button>
+                            </div>
+                          </div>
+                          <div class="form__item">
+                            <div class="toggle-button row">
+                              <button class="toggle-button__item col-6 toggle-button__item--selected">
+                                  <span class="toggle-button__text">영역에 맞춤</span>
+                              </button>
+                              <button class="toggle-button__item col-6">
+                                  <span class="toggle-button__text">원본크기</span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="side-panel-content">
+                    <div class="side-panel-content__head">
                       <strong class="side-panel-content__head-title">기타 유형</strong>
                     </div>
                     <div class="side-panel-content__body">
@@ -843,7 +889,7 @@
                             <div class="form__detail">
                               <div class="form__detail-inner">
                                 <div class="text-input-wrap">
-                                  <input type="number" class="text-input col-5" max="100" min="0" step="1" value="3">
+                                  <input type="number" class="text-input w-6_12" max="100" min="0" step="1" value="3">
                                   <span class="text-input-wrap__suffix">초</span>
                                 </div>
                               </div>
@@ -1667,6 +1713,7 @@
                         <table class="table table--secondary">
                           <colgroup>
                             <col width="140">
+                            <col>
                           </colgroup>
                           <thead>
                             <tr>
@@ -1680,7 +1727,7 @@
                               <td>고급 시각화</td>
                             </tr>
                             <tr>
-                              <td>미인증사용자_중복시간과멤버예시</td>
+                              <td>미인증사용자_중복시간과 멤버예시</td>
                               <td>검색</td>
                             </tr>
                             <tr>
@@ -1693,7 +1740,7 @@
                             </tr>
                           </tbody>
                         </table>
-                        <div class="table__foot">
+                        <div class="table__footbar">
                           <div class="toggle-switch toggle-switch--sm">
                             <label for="toggleSwitch1" class="toggle-switch__label">label</label>
                             <button id="toggleSwitch1" class="toggle-switch__switch" type="button">
@@ -1897,12 +1944,24 @@
                   </div>
                   <div class="side-panel-content">
                     <div class="side-panel-content__head">
-                      <strong class="side-panel-content__head-title">인풋과 버튼 조합 유형</strong>
+                      <strong class="side-panel-content__head-title">인풋 유형</strong>
                     </div>
                     <div class="side-panel-content__body">
-                      <div class="h-group">
-                        <input type="text" class="text-input" placeholder="경도를 입력해주세요.">
-                        <button class="button button--tertiary" title="적용">적용</button>
+                      <div class="form">
+                        <div class="form__list">
+                          <div class="form__item">
+                            <div class="h-group">
+                              <input type="text" class="text-input" placeholder="경도를 입력해주세요.">
+                              <button class="button button--tertiary" title="적용">적용</button>
+                            </div>
+                          </div>
+                          <div class="form__item">
+                            <div class="text-input-wrap">
+                              <input type="number" class="text-input w-6_12" max="100" min="0" step="1" value="">
+                              <span class="text-input-wrap__suffix">px</span>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -2346,6 +2405,9 @@
   @@include('../partials/studio/context-menu.html')
   @@include('../partials/studio/context-menu__period-setting.html')
   <!-- // 편집화면 컨텍스트 메뉴 영역 -->
+  <!-- 편집화면 조건부객체 미리보기 영역 -->
+  @@include('../partials/studio/condition-preview.html')
+  <!-- // 편집화면 조건부객체 미리보기 영역 -->
   <script src="../../dist/js/main.bundle.js"></script>
 </body>
 

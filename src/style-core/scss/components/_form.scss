@@ -28,7 +28,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex: 1 1 auto;
+  flex: 1 0 auto;
   min-height: rem(32px);
 }
 
@@ -42,8 +42,17 @@
   margin-top: $spacing-md;
 }
 
+.form__body {
+  width: 100%;
+}
+
+.form__list {
+  width: 100%;
+}
+
 .form__item {
   @include form__item($spacing-xs);
+  width: 100%;
 }
 
 .form__label {
@@ -61,6 +70,10 @@
   color: $text-03;
   word-break: normal;
   white-space: nowrap;
+}
+
+.form__label-text + .button--link {
+  margin-right: $spacing-2xs;
 }
 
 .form__detail {
@@ -84,7 +97,7 @@
 .form__foot {
   display: flex;
   align-items: center;
-  margin-top: $spacing-sm;
+  padding-top: $spacing-sm;
 }
 
 .form__foot-main-buttons {
@@ -118,6 +131,10 @@
     padding: $spacing-xs 0;
   }
 
+  .form__item:first-child {
+    padding-top: 0;
+  }
+
   .form__label {
     height: rem(40px);
   }
@@ -139,6 +156,14 @@
     flex-direction: column;
     align-items: flex-start;
     padding: $spacing-sm 0;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
   }
 
   .form__label {
@@ -200,7 +225,7 @@
 }
 
 .dynamic-form__forms {
-  flex: 1;
+  flex: 1 0;
 }
 
 .dynamic-form__handler + .dynamic-form__forms {
@@ -209,6 +234,11 @@
 
 .dynamic-form__form {
   @include form__item($spacing-3xs);
+  width: 100%;
+}
+
+.dynamic-form__form .v-group {
+  width: 100%;
 }
 
 .dynamic-form__form-label {
@@ -221,6 +251,7 @@
 
 .dynamic-form__form-detail {
   @include form__detail;
+  flex: 1 1 100%;
 }
 
 .dynamic-form__list--line + .dynamic-form__list--line {
@@ -285,5 +316,38 @@
 
   .text-input[type="number"] {
     min-width: unset;
+  }
+}
+
+.dynamic-form--slider {
+  .dynamic-form__form-label {
+    width: 15%;
+  }
+}
+
+.dynamic-form--responsive {
+  padding-top: $spacing-sm;
+
+  .dynamic-form__item + .dynamic-form__item {
+    padding-top: $spacing-xs;
+    border-top: 1px solid $ui-04;
+  }
+
+  .select {
+    display: flex;
+    flex: 1;
+  }
+
+  .select-selector {
+    flex: 1;
+  }
+
+  .dynamic-form__action-buttons {
+    width: 68px;
+    margin-left: 0;
+  }
+
+  .dynamic-form__action-buttons > *:not(:first-child) {
+    margin-left: $spacing-2xs;
   }
 }

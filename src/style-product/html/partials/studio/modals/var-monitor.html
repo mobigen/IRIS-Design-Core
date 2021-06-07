@@ -1,3 +1,4 @@
+
 <!-- 전체 변수명 보기 다이얼로그 -->
 <div class="modal modal--md" style="position: static;">
   <!-- 내용 -->
@@ -36,11 +37,8 @@
                 <div class="table__summary-target" ng-click="">
                   <span class="table__summary-target-text">
                     {
-                    "code": 0,
-                    "message": "",
-                    "fields": [
-                    { "type": "INTEGER", "name": "no" },
-                    { "type": "TEXT", "name": "agent_id" },
+                    "code": 0
+                    }
                   </span>
                   <button class="button button--icon button--link button--sm table__summary-icon">
                     <svg class="svg-icon">
@@ -50,56 +48,27 @@
                 </div>
               </td>
             </tr>
-            <!-- 아래 화살표 클릭했을때 확장 영역 -->
-            <tr class="table__details">
-              <td colspan="3">
-                <pre class="break-all whitespace-pre-wrap">
-{
-"code": 0,
-"message": "",
-"fields": [
-    { "type": "INTEGER", "name": "no" },
-    { "type": "TEXT", "name": "agent_id" },
-    { "type": "TEXT", "name": "host_name" },
-    { "type": "TEXT", "name": "status" },
-    { "type": "REAL", "name": "cpu" },
-    { "type": "REAL", "name": "mem" },
-    { "type": "TEXT", "name": "path_top1" },
-    { "type": "TEXT", "name": "size_top1" "type": "TEXT", "name": "size_top1" "type": "TEXT", "name": "size_top1" }
-    { "type": "REAL", "name": "usages_top1" },
-    { "type": "REAL", "name": "inodes_top1" }
-],
-"results": [
-    [ 1, "demo_master_01", "gcs1", "invalid", 0, 0, "-", "-", null, null ],
-    [ 2, "demo_data_01", "gcs2", "invalid", 0, 0, "-", "-", null, null ],
-    [ 3, "demo_data_02", "gcs3", "invalid", 0, 0, "-", "-", null, null ],
-    // ... 중략 ...
-]
-}{
-"code": 0,
-"message": "",
-"fields": [
-  { "type": "INTEGER", "name": "no" },
-  { "type": "TEXT", "name": "agent_id" },
-  { "type": "TEXT", "name": "host_name" },
-  { "type": "TEXT", "name": "status" },
-  { "type": "REAL", "name": "cpu" },
-  { "type": "REAL", "name": "mem" },
-  { "type": "TEXT", "name": "path_top1" },
-  { "type": "TEXT", "name": "size_top1" },
-  { "type": "REAL", "name": "usages_top1" },
-  { "type": "REAL", "name": "inodes_top1" }
-],
-"results": [
-  [ 1, "demo_master_01", "gcs1", "invalid", 0, 0, "-", "-", null, null ],
-  [ 2, "demo_data_01", "gcs2", "invalid", 0, 0, "-", "-", null, null ],
-  [ 3, "demo_data_02", "gcs3", "invalid", 0, 0, "-", "-", null, null ],
-  // ... 중략 ...
-]
-}
-                </pre>
+            <tr>
+              <td>
+                row.id | typeIdFromId
+              </td>
+              <td>
+                row.name
+              </td>
+              <td>
+                <div class="table__summary-target" ng-click="">
+                  <span class="table__summary-target-text">
+                    value
+                  </span>
+                  <button class="button button--icon button--link button--sm table__summary-icon">
+                    <svg class="svg-icon">
+                      <use xlink:href="#chevron-down-medium"></use>
+                    </svg>
+                  </button>
+                </div>
               </td>
             </tr>
+            <!-- tr 선택시 table__summary--selected 클래스 추가 -->
             <tr class="table__summary table__summary--selected">
               <td>
                 row.id | typeIdFromId
@@ -128,7 +97,7 @@
             <!-- 아래 화살표 클릭했을때 확장 영역 -->
             <tr class="table__details">
               <td colspan="3">
-                <pre>
+                <pre class="whitespace-pre-wrap">
 {
 "code": 0,
 "message": "",

@@ -23,6 +23,14 @@
   }
 }
 
+.object-area--bg-none {
+  background: none;
+
+  &:hover {
+    background: none;
+  }
+}
+
 .object-area__single-value {
   width: 100%;
   height: 100%;
@@ -250,9 +258,11 @@
 
 .editor-layout-head__title {
   @include line-height("heading");
+  max-width: rem(400px);
 }
 
 .editor-layout-head__title-text {
+  @include text-overflow;
   @include font-weight("medium");
 }
 
@@ -301,6 +311,10 @@
 
 .editor-layout-head__additinal-buttons {
   display: flex;
+}
+
+.editor-layout-head__responsive {
+  margin-right: $spacing-sm;
 }
 
 .editor-layout-body {
@@ -371,6 +385,10 @@
   height: 100%;
   border: none;
   overflow: hidden;
+
+  body {
+    overflow: hidden;
+  }
 }
 
 // -------------------------
@@ -399,7 +417,8 @@
 .object-image,
 .object-renew,
 .object-map,
-.object-ima {
+.object-ima,
+.object-growth-rate {
   background: $odd-row;
   border: 1px solid transparent;
 
@@ -430,6 +449,13 @@
   }
 }
 
+.object-tag:not([preview]),
+.object-url:not([preview]),
+.object-check-and-radio:not([preview]),
+.object-slider:not([preview]) {
+  border: 1px dashed $ui-04;
+}
+
 .object-tag::after,
 .object-tab::after {
   content: "";
@@ -446,7 +472,10 @@
 }
 
 .object-tag:hover:not([preview])::after,
-.object-tab:hover:not([preview])::after {
+.object-tab:hover:not([preview])::after,
+.object-url:hover:not([preview]),
+.object-check-and-radio:hover:not([preview]),
+.object-slider:hover:not([preview]) {
   border: 1px solid $secondary;
 }
 
@@ -473,6 +502,12 @@
 @function renewIcon($color) {
   $color: "%23" + $color;
   $icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 32 32'%3E%3Cpath fill='#{$color}' d='M3 16a16.433 16.433 0 00.001.2M25.388 22.11a.2.2 0 00-.168-.31H21a.8.8 0 110-1.6h5.8a1 1 0 011 1V27a.8.8 0 11-1.6 0v-2.68a.2.2 0 00-.354-.128 12.8 12.8 0 01-22.607-7.18c-.035-.446.328-.812.776-.812.437 0 .79.35.828.786a11.2 11.2 0 0020.545 5.123zM28.8 15.813v-.031l-.001-.169M6.412 9.704a.2.2 0 00.168.31h4.22a.8.8 0 110 1.6H5a1 1 0 01-1-1v-5.8a.8.8 0 111.6 0v2.68a.2.2 0 00.354.127 12.8 12.8 0 0122.607 7.18c.035.446-.328.812-.776.812-.436 0-.79-.35-.828-.786A11.2 11.2 0 006.412 9.704z'/%3E%3Cpath fill='#{$color}' d='M15.5 11.75a.75.75 0 00-1.5 0v5.5c0 .414.336.75.75.75h5.5a.75.75 0 000-1.5H15.5v-4.75z'/%3E%3C/svg%3E%0A";
+  @return url($icon);
+}
+
+@function growthRateIcon($color) {
+  $color: "%23" + $color;
+  $icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath fill='#{$color}' d='M2 9.509a.75.75 0 01.75-.75h11.517a.75.75 0 010 1.5H2.75a.75.75 0 01-.75-.75zM17 9.509a.75.75 0 01.75-.75h11.517a.75.75 0 010 1.5H17.75a.75.75 0 01-.75-.75z' clip-rule='evenodd'/%3E%3Cpath fill-rule='evenodd' fill='#{$color}' d='M8.509 16.017a.75.75 0 01-.75-.75V3.75a.75.75 0 011.5 0v11.517a.75.75 0 01-.75.75zM9 20.485L4.613 28.01h8.777l-4.388-7.524zm.432-2.236a.5.5 0 00-.863 0l-6.13 10.508a.5.5 0 00.432.752H15.13a.5.5 0 00.432-.752l-6.13-10.508zM23 26.532l-4.388-7.523h8.777L23 26.532zm.432 2.236a.5.5 0 01-.863 0l-6.13-10.508a.5.5 0 01.432-.752H29.13a.5.5 0 01.432.753l-6.13 10.507z' clip-rule='evenodd'/%3E%3C/svg%3E";
   @return url($icon);
 }
 
@@ -526,16 +561,67 @@
   }
 }
 
-.object-area--bg-none {
-  background: none;
+// 증감률
+.object-growth-rate {
+  background: $odd-row growthRateIcon(77889a) no-repeat center;
 
-  &:hover {
-    background: none;
+  &:hover:not([preview]) {
+    background: $ui-01 growthRateIcon(4daeff) no-repeat center;
+  }
+
+  &.canvas-object--active {
+    background: $ui-01 growthRateIcon(4daeff) no-repeat center;
   }
 }
 
+.object-growth-rate--bg-none {
+  background: none;
+
+  &:not([preview]) {
+    border: 1px dashed $ui-04;
+    }
+
+  &:hover:not([preview]) {
+    background: none;
+    border: 1px solid $secondary;
+  }
+}
+
+.growth-rate {
+  display: flex;
+  flex-direction: row;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  padding: $spacing-xs;
+}
+
+.growth-rate__items {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.growth-rate__amount {
+  align-items: center;
+}
+
+.growth-rate__items + .growth-rate__items {
+  margin-left: $spacing-lg;
+}
+
+.growth-rate__item {
+  display: flex;
+  align-items: center;
+}
+
+.growth-rate__item + .growth-rate__item {
+  margin-top: $spacing-3xs;
+}
+
 .object-area--active:not([preview]).object-area--bg-none,
-.canvas-object--active:not([preview]).object-renew--filled {
+.canvas-object--active:not([preview]).object-renew--filled,
+.canvas-object--active:not([preview]).object-growth-rate--bg-none {
   background: none;
 }
 
@@ -566,6 +652,7 @@
 .vertical-align-inner__table-cell.col .checkbox,
 .vertical-align-inner__table-cell.col .radio {
   display: inline-flex;
+  vertical-align: middle;
 }
 
 .vertical-align-inner__table-cell.top {
@@ -588,6 +675,10 @@
 .object-combo-box .select-selector,
 .object-combo-box .select-selector__input {
   width: 100%;
+  height: 100%;
+}
+
+.object-combo-box .select-selector__icon-button {
   height: 100%;
 }
 
@@ -615,6 +706,10 @@
   justify-content: center;
   align-items: center;
   background: none;
+
+  &:not([preview]) {
+    border: 1px dotted $ui-04;
+  }
 
   &:hover:not([preview]) {
     background: none;
@@ -669,18 +764,6 @@
 
 .object-editor {
   box-sizing: content-box;
-}
-
-.object-select {
-}
-
-.object-select .select {
-  width: 100%;
-  height: 100%;
-}
-
-.object-select .select-selector {
-  height: 100%;
 }
 
 .object-input .text-input {
@@ -895,7 +978,7 @@
 
 .object-hidden > .select {
   position: absolute;
-  top: rem(6px);
+  top: rem(5px);
   left: rem(28px);
   color: $text-01;
   z-index: 11;
@@ -982,6 +1065,7 @@
   .tab__button {
     width: 100%;
     height: 100%;
+    justify-content: center;
   }
 
   .tab--container {
@@ -1032,6 +1116,186 @@
       border-bottom-left-radius: 3px;
     }
   }
+}
+
+
+// -------------------------
+// Studio 컴포넌트 스타일 overwrite
+// -------------------------
+.canvas-object {
+  .checkbox__label:hover::before {
+    border-color: $text-02;
+  }
+
+  // checked 상태
+  .checkbox__input:checked + .checkbox__label::before {
+    background-color: $text-03;
+    border-color: $text-03;
+  }
+
+  // disabled 상태
+  .checkbox--disabled .checkbox__label {
+    &:hover {
+      &::before,
+      &::after {
+        border-color: $text-03;
+      }
+    }
+  }
+
+  .checkbox--disabled .checkbox__input:checked + .checkbox__label {
+    &:hover {
+      &::before{
+        border-color: $text-03;
+      }
+    }
+  }
+
+  // 부분 선택 상태
+  .checkbox--indeterminate .checkbox__input + .checkbox__label::before,
+  .checkbox__input:indeterminate + .checkbox__label::before {
+    border-color: $text-03;
+  }
+
+  .checkbox--indeterminate .checkbox__input + .checkbox__label::after,
+  .checkbox__input:indeterminate + .checkbox__label::after {
+    border-color: $text-03;
+  }
+}
+
+// -------------------------
+// theme: primary
+// -------------------------
+.canvas-object .checkbox--primary {
+  .checkbox__label:hover::before {
+    border-color: $primary;
+  }
+
+  // checked 상태
+  .checkbox__input:checked + .checkbox__label::before {
+    background-color: $primary;
+    border-color: $primary;
+  }
+
+  // disabled 상태
+  .checkbox--disabled .checkbox__label {
+    &:hover {
+      &::before,
+      &::after {
+        border-color: $text-03;
+      }
+    }
+  }
+
+  .checkbox--disabled .checkbox__input:checked + .checkbox__label {
+    &:hover {
+      &::before{
+        border-color: $primary;
+      }
+    }
+  }
+
+  // 부분 선택 상태
+  .checkbox--indeterminate .checkbox__input + .checkbox__label::before,
+  .checkbox__input:indeterminate + .checkbox__label::before {
+    border-color: $primary;
+  }
+
+  .checkbox--indeterminate .checkbox__input + .checkbox__label::after,
+  .checkbox__input:indeterminate + .checkbox__label::after {
+    border-color: $primary;
+  }
+}
+
+
+// -------------------------
+// Studio 컴포넌트 스타일 overwrite
+// -------------------------
+.canvas-object {
+  .radio__label:hover::before {
+    border-color: $text-02;
+  }
+
+  // checked 상태
+  .radio__input:checked + .radio__label::before {
+    background-color: $text-03;
+    border-color: $text-03;
+  }
+
+  // checked + disabled 상태
+  .radio__input:checked:disabled + .radio__label:hover::before {
+    border-color: $text-03;
+  }
+}
+
+// -------------------------
+// Studio 컴포넌트 스타일 overwrite
+// -------------------------
+.canvas-object {
+  .tag {
+    &:hover:not(:disabled) {
+      color: $text-03;
+    }
+  }
+
+  .tag--selected {
+    background-color: $text-03;
+    color: $text-04;
+
+    &:hover:not(:disabled) {
+      background-color: lighten($text-03, 5%);
+      color: $text-04;
+    }
+
+    &:disabled {
+      .tag__remove-button:hover {
+        fill: $text-04;
+        background-color: transparent;
+      }
+    }
+  }
+
+  .tag__remove-button {
+    &:hover {
+      background-color: rgba($ui-02, 0.25);
+      fill: $text-03;
+    }
+  }
+
+  .tag--selected .tag__remove-button {
+    fill: $text-04;
+
+    &:hover {
+      fill: $text-04;
+    }
+  }
+}
+
+.tags {
+  display: flex;
+  align-content: flex-start;
+}
+
+.tags--horizontal {
+  flex-wrap: wrap;
+}
+
+.tags--horizontal .tag + .tag {
+  margin-left: $spacing-2xs;
+}
+
+.tags--vertical {
+  flex-direction: column;
+}
+
+.tags--vertical .tag + .tag {
+  margin-top: $spacing-2xs;
+}
+
+.tags__item {
+  flex-shrink: 0;
+  margin-right: $spacing-2xs;
+  margin-bottom: $spacing-2xs;
 }
 
 
@@ -1184,6 +1448,7 @@
   position: absolute;
   top: rem(3px);
   left: rem(4px);
+  line-height: 0;
   z-index: 11;
 }
 
@@ -1879,8 +2144,42 @@
   background-position: -120px -80px;
 }
 
-.period-setting {
+.period-setting-tooltip {
+  padding: 0;
   width: rem(320px);
+}
+
+.period-setting-tooltip__head {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  height: $button-height-md;
+  padding: $spacing-2xs $spacing-sm;
+  background-color: $hover-row;
+}
+
+.period-setting-tooltip__head-title {
+  @include text-overflow;
+  @include font-size("14");
+  @include font-weight("medium");
+  flex: 1;
+  text-align: left;
+  color: $text-02;
+}
+
+.period-setting-tooltip__foot {
+  @include stable-padding($spacing-xs, $spacing-sm);
+  display: flex;
+  background-color: $ui-01;
+}
+
+.period-setting-tooltip__foot-main-buttons {
+  display: flex;
+  margin-left: auto;
+}
+
+.period-setting-tooltip__foot .button + .button {
+  margin-left: $spacing-xs;
 }
 
 .preset-period {
@@ -1953,6 +2252,7 @@
 .date-time-range__title {
   margin-right: $spacing-2xs;
   margin-bottom: $spacing-2xs;
+  color: $text-02;
 }
 
 .date-time-range__text-area {
@@ -1964,4 +2264,45 @@
 .date-time-range__icon {
   align-self: center;
   margin: 0 $spacing-2xs;
+}
+
+.condition__body {
+  .form__item {
+    padding: $spacing-md 0;
+  }
+
+  .form__item:last-child{
+    padding: $spacing-md 0 0 0;
+  }
+}
+
+.code__pre {
+  @include font-size("13");
+  background-color: $odd-row;
+  border: 1px solid $ui-04;
+  padding: $spacing-2xs;
+  word-break: break-all;
+  overflow: auto;
+}
+
+.responsive__guide-line {
+  position: absolute;
+  border-bottom: 1px solid $secondary;
+  width: 100%;
+}
+
+.ag-root-wrapper .progressbar {
+  @include line-height("body");
+  display: inline-block;
+  width: 100%;
+  height: rem(12px);
+  border-radius: 2px;
+}
+
+.vs-repeat-repeated-element {
+  height: 40px !important;
+}
+
+.chart-picker-mb {
+  margin-bottom: $spacing-2xs;
 }

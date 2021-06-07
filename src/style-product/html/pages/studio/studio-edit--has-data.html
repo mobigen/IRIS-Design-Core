@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IRIS | Studio Edit</title>
+  <link rel="stylesheet" href="../../src/style-product/lib/nouislider.css" />
   <link rel="stylesheet" href="../../dist/css/main/style.min.css" />
 </head>
 
@@ -91,6 +92,48 @@
                           </button>
                         </div>
                       </div>
+                    </div>
+                  </div>
+                  <div class="side-panel-content">
+                    <div class="side-panel-content__head">
+                      <strong class="side-panel-content__head-title">다이나믹 폼 유형 (3)</strong>
+                    </div>
+                    <div class="side-panel-content__body">
+                      <div class="dynamic-form dynamic-form--slider">
+                        <!-- 세로 스크롤을 위한 overflow-y 클래스. 해당 요소에 max-height를 지정해줘야합니다. -->
+                        <ul class="dynamic-form__list overflow-y" style="max-height: 120px;">
+                          @@include('../partials/common/dynamic-form__item--single-label.html')
+                          @@include('../partials/common/dynamic-form__item--single-label.html')
+                          @@include('../partials/common/dynamic-form__item--single-label.html')
+                          @@include('../partials/common/dynamic-form__item--single-label.html')
+                          @@include('../partials/common/dynamic-form__item--single-label.html')
+                          @@include('../partials/common/dynamic-form__item--single-label.html')
+                        </ul>
+                        <div class="dynamic-form__foot">
+                          <button class="button button--support">
+                            <svg class="svg-icon">
+                              <use xlink:href="#plus"></use>
+                            </svg>
+                            <span class="button__text">탭 추가</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="side-panel-content">
+                    <div class="side-panel-content__head">
+                      <strong class="side-panel-content__head-title">다이나믹 폼 유형 (4)</strong>
+                      <div class="toggle-switch toggle-switch--sm">
+                        <label for="toggleSwitch1" class="toggle-switch__label">label</label>
+                        <button id="toggleSwitch1" class="toggle-switch__switch" type="button">
+                          <span class="toggle-switch__handle">
+                            <span class="ir-pm"></span>
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="side-panel-content__body">
+                      @@include('../partials/common/dynamic-form--responsive.html')
                     </div>
                   </div>
                   <div class="side-panel-content">
