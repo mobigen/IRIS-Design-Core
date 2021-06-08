@@ -215,7 +215,7 @@
 @mixin button--underline-negative {
   @include button-theme(transparent, $negative, transparent, transparent);
     padding: 0;
-    padding: 0;
+    text-decoration: underline;
 
   // link 예외 사항
   &:hover {
