@@ -7,6 +7,7 @@
 .slider-group.vertical {
   padding: $spacing-sm 4rem;
   width: unset;
+  height: 100%;
 }
 
 .noUi-target {
@@ -29,7 +30,7 @@
 
 .noUi-vertical {
   width: 6px;
-  height: 210px;
+  height: 100%;
 }
 
 .noUi-horizontal .noUi-handle {
