@@ -1,5 +1,9 @@
+// core용 이미지 path
 // 3. 2번 방법에서 필요한 내용. 폰트, 이미지 경로 수정
-$font-path: '/src/style-core/fonts/';
+$font-path: "/src/style-core/fonts/";
+$img-path: "/src/style-core/images";
+
+@import "/src/style-core/scss/core-index.scss";
 
 // 1. core와 product scss를 분리해서 import 하는 방법
 // ----------------------------
@@ -17,7 +21,8 @@ $font-path: '/src/style-core/fonts/';
 // @import "/src/style-core/scss/core-index.scss";
 // @import "/src/style-core/scss/themes/pink";
 
-@import "/src/style-core/scss/core-index.scss";
+// product용 이미지 path
+$img-path: "../images";
 
 @import "./layout/layout.scss";
 @import "./vendor/vendor.scss";
