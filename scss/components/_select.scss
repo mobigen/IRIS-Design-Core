@@ -28,6 +28,12 @@
   }
 }
 
+.select--close {
+  .select-container {
+    display: none;
+  }
+}
+
 .select--disabled {
   .select-selector__button {
     border-color: $hover-row !important;
@@ -254,5 +260,14 @@
     top: auto;
     bottom: calc(100% + 2px);
     box-shadow: 0 0 8px 0 $box-shadow;
+  }
+}
+
+.select--borderless {
+  .select-selector__button {
+    border-color: transparent;
+    &:hover {
+      border: 1px solid $ui-04;
+    }
   }
 }
