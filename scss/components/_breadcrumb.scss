@@ -2,9 +2,10 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  height: 28px;
+  height: rem(28px);
   padding: 0 rem(20px);
   background-color: $hover-row;
+  border-bottom: 1px solid $hover-row;
 }
 
 .breadcrumb__text {
