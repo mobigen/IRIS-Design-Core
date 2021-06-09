@@ -28,6 +28,12 @@
   }
 }
 
+.select--close {
+  .select-container {
+    display: none;
+  }
+}
+
 .select--disabled {
   .select-selector__button {
     border-color: $hover-row !important;
