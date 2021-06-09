@@ -755,6 +755,10 @@
   &[contenteditable] {
     user-select: text;
   }
+
+  &:focus-visible {
+    outline: 0
+  }
 }
 
 // ellipse
