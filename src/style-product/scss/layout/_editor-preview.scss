@@ -30,6 +30,11 @@
   z-index: z("float");
 }
 
+.editor-preview-layout__preview-wrap {
+  height: 100%;
+}
+
 .editor-preview-layout__preview {
   position: relative;
+  margin: 0 auto;
 }
