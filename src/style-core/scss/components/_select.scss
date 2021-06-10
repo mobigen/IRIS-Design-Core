@@ -26,6 +26,29 @@
   .select-container {
     display: block;
   }
+
+  &.select--borderless {
+    .select-selector__button {
+      .select-selector__title {
+        color: $secondary;
+      }
+      .select-selector__icon {
+        fill: $secondary;
+      }
+
+      &:hover:not(:disabled) {
+        border-color: transparent;
+        background-color: $ui-02;
+
+        .select-selector__title {
+          color: $secondary;
+        }
+        .select-selector__icon {
+          fill: $secondary;
+        }
+      }
+    }
+  }
 }
 
 .select--close {
@@ -266,8 +289,32 @@
 .select--borderless {
   .select-selector__button {
     border-color: transparent;
+    box-shadow: none;
     &:hover {
-      border: 1px solid $ui-04;
+      background-color: $ui-01;
+
+      .select-selector__title {
+        color: $text-01;
+      }
+      .select-selector__icon {
+        fill: $text-01;
+      }
+    }
+
+    &:active {
+      border-color: transparent !important;
+      box-shadow: none;
+      background-color: $ui-01;
+
+      .select-selector__title {
+        color: $active-secondary;
+      }
+      .select-selector__icon {
+        fill: $active-secondary;
+      }
+    }
+    &:focus {
+      box-shadow: none;
     }
   }
 }
