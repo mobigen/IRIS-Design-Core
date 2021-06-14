@@ -387,7 +387,8 @@
     @include font-family("sans");
     @include font-size("14");
     @include line-height("body");
-    width: rem(127px);
+    min-width: rem(127px);
+    max-width: rem(148px);
     padding: 0;
     border: 0;
     outline: 0;
