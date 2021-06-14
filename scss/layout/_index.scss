@@ -1,0 +1,105 @@
+// index-layout-head
+.index-layout-head {
+  background-color: $ui-02;
+  box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.03);
+}
+
+.index-layout-head__title-bar {
+  display: flex;
+  align-items: center;
+  height: rem(56px);
+  padding: 0 20px;
+}
+
+.index-layout-head__action-buttons {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+
+  .button + .button {
+    margin-left: $spacing-xs;
+  }
+}
+
+// index-layout-body
+.index-layout-body {
+  display: flex;
+  flex-direction: column;
+  background-color: $ui-01;
+}
+
+.index-layout-body__top-bar {
+  display: flex;
+  align-items: center;
+  height: rem(56px);
+  padding: 0 20px 0 40px;
+}
+
+.index-layout-body__filter {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox.index-layout-body__filter-checkbox {
+  width: rem(24px);
+  height: rem(24px);
+}
+
+.index-layout-body__filter-title {
+  @include text-overflow;
+  @include font-weight("regular");
+  font-size: 15px;
+  color: $text-02;
+  letter-spacing: -0.3px;
+  em {
+    @include font-weight("medium");
+  }
+}
+
+.index-layout-body__management {
+  display: flex;
+  align-items: center;
+  margin-left: $spacing-md;
+
+  .button {
+    padding: 0 $spacing-sm;
+  }
+}
+
+.index-layout-body__management-text {
+  display: block;
+  margin-right: $spacing-xs;
+  font-size: rem(15px);
+  color: $active-secondary;
+}
+
+.index-layout-body__controller {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.index-layout-body__controller-select {
+  width: rem(120px);
+  margin-left: $spacing-xs;
+  & + & {
+    width: rem(128px);
+  }
+}
+
+.index-layout-body__controller-search {
+  margin-left: $spacing-xs;
+
+  .text-input-group {
+    width: rem(240px);
+    margin-right: $spacing-xs !important;
+
+    .text-input {
+      padding-right: $spacing-lg;
+    }
+  }
+}
+
+.button.index-layout-body__controller-refresh-button {
+  margin-left: $spacing-xs;
+}
