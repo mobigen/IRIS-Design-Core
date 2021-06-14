@@ -4,6 +4,14 @@
   box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.03);
 }
 
+.index-layout-head__title {
+  @include font-size("18");
+  @include font-weight("medium");
+  white-space: nowrap;
+  color: $text-01;
+  letter-spacing: -0.3px;
+}
+
 .index-layout-head__title-bar {
   display: flex;
   align-items: center;
