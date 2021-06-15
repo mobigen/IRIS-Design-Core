@@ -149,7 +149,7 @@
 
 .modal .form--vertical .form__detail {
   @include line-height("body");
-  margin-top: $spacing-2xs;
+  margin-top: $spacing-xs;
 }
 
 .modal .form--complex .text-input {
