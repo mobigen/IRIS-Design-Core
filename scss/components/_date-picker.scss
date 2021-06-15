@@ -194,13 +194,16 @@
 .ui-datepicker td {
   position: relative;
   border: 0;
-  padding: 1px;
+  padding: 3px;
 }
 .ui-datepicker td span,
 .ui-datepicker td a {
   display: block;
   position: relative;
-  padding: $spacing-sm/2 $spacing-xs;
+  height: 28px;
+  width: 28px;
+  // padding: $spacing-sm/2 $spacing-xs;
+  line-height: 28px;
   text-align: center;
   text-decoration: none;
   border-radius: $field-border-radius;
@@ -222,8 +225,10 @@
 .ui-state-highlight,
 .ui-widget-content .ui-state-highlight,
 .ui-widget-header .ui-state-highlight {
-  background: $hover-row;
+  position: absolute;
+  border: 1px solid darken($secondary, 4%);
 }
+
 .ui-state-disabled,
 .ui-widget-content .ui-state-disabled,
 .ui-widget-header .ui-state-disabled {
@@ -252,6 +257,11 @@
 .ui-datepicker-range a,
 .ui-datepicker-week-end.ui-datepicker-range a {
   color: $text-04;
+}
+
+.ui-datepicker-range .ui-state-highlight {
+  position: absolute;
+  line-height: 26px;
 }
 
 /* Interaction states
@@ -291,11 +301,22 @@ a.ui-button:active,
   position: absolute;
   top: 50%;
   right: 0;
-  left: -2px;
+  left: -4px;
   z-index: 1;
-  width: 114%;
-  height: 31px;
+  width: 121%;
+  height: 28px;
   transform: translateY(-50%);
-  background-color: lighten($secondary, 14%);
+  background-color: lighten($secondary, 16%);
   content: "";
+}
+
+.ui-datepicker-calendar .ui-datepicker-range:first-child::before {
+  left: 4px;
+  width: 100%;
+}
+
+.ui-datepicker-calendar .ui-datepicker-range:last-child::before {
+  right: 2px;
+  left: auto;
+  width: 100%;
 }
