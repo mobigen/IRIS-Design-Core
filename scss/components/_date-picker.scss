@@ -226,7 +226,9 @@
 .ui-widget-content .ui-state-highlight,
 .ui-widget-header .ui-state-highlight {
   position: absolute;
+  line-height: 26px;
   border: 1px solid darken($secondary, 4%);
+  color: darken($secondary, 4%);
 }
 
 .ui-state-disabled,
@@ -261,7 +263,7 @@
 
 .ui-datepicker-range .ui-state-highlight {
   position: absolute;
-  line-height: 26px;
+  color: $text-04;
 }
 
 /* Interaction states
