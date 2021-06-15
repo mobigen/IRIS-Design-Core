@@ -111,3 +111,52 @@
 .button.index-layout-body__controller-refresh-button {
   margin-left: $spacing-xs;
 }
+
+// 내보내기 링크
+.form__label-action-items {
+  margin-left: auto;
+}
+
+.form__reference-text {
+  @include font-size("14");
+  display: block;
+  margin-top: $spacing-2xs;
+  color: $text-05;
+}
+
+.empty-link-group {
+  width: 100%;
+  min-height: rem(80px);
+  padding: $spacing-xs;
+  border: 1px solid $ui-04;
+
+  .notification-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 62px;
+  }
+}
+
+.generate-link-group {
+  .text-area {
+    text-decoration: underline;
+  }
+}
+
+.button--underline {
+  &.button--underline-create {
+    color: $primary;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+  &.button--underline-delete {
+    color: $negative;
+
+    &:hover {
+      color: $negative;
+    }
+  }
+}
