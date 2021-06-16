@@ -37,6 +37,7 @@
   @include font-size("13");
   @include line-height("body");
   color: $text-04;
+  white-space: nowrap;
 }
 
 .tooltip__text a {
