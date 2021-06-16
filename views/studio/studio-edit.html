@@ -6302,15 +6302,112 @@
                                 </div>
                               </td>
                             </tr>
+
                           </tbody>
-                        </table>
+                        </table> 
                       </div>
                     </div>
                   </div>
                   <div class="side-panel-content">
                     <div class="side-panel-content__head">
-                      <!-- 테이블 상단 툴바에 검색 기능 -->
                       <strong class="side-panel-content__head-title">테이블 있는 유형 4</strong>
+                    </div>
+                    <div class="side-panel-content__body">
+                      <div class="table-wrap">
+                      <table class="table table--secondary table--action-buttons-hidable">
+                        <colgroup>
+                          <col width="160px">
+                          <col>
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th>대상 오브젝트 ID</th>
+                            <th>이벤트</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <span class="table__icon">
+                                <svg class="svg-icon" aria-hidden="true">
+                                  <use xlink:href="#object-chart"></use>
+                                </svg>
+                              </span>
+                              <span class="table__subtext">object-chart</span>
+                            </td>
+                            <td>
+                              Data
+                              <br>
+                              Received
+                              <div class="table__action-buttons">
+                                <button class="button button--icon button--link" type="button">
+                                  <svg class="svg-icon" aria-hidden="true">
+                                    <use xlink:href="#popout"></use>
+                                  </svg>
+                                </button>
+                                <button class="button button--icon button--link" type="button">
+                                  <svg class="svg-icon" aria-hidden="true">
+                                    <use xlink:href="#unlink"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" class="table__code">
+                              <textarea type="text" class="text-area h-84" readonly="readonly">
+{% if input_1 %}
+                              </textarea>
+                              <div class="text-area-wrap__foot-buttons">
+                                <button class="button button--link button--sm ml-auto">미리보기</button>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <span class="table__icon">
+                                <svg class="svg-icon" aria-hidden="true">
+                                  <use xlink:href="#object-chart"></use>
+                                </svg>
+                              </span>
+                              <span class="table__subtext">object-chart</span>
+                            </td>
+                            <td>
+                              Data
+                              <br>
+                              Received
+                              <div class="table__action-buttons">
+                                <button class="button button--icon button--link" type="button">
+                                  <svg class="svg-icon" aria-hidden="true">
+                                    <use xlink:href="#popout"></use>
+                                  </svg>
+                                </button>
+                                <button class="button button--icon button--link" type="button">
+                                  <svg class="svg-icon" aria-hidden="true">
+                                    <use xlink:href="#unlink"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" class="table__code">
+                              <textarea type="text" class="text-area h-84" readonly="readonly">
+{% if input_1 %}
+                              </textarea>
+                              <div class="text-area-wrap__foot-buttons">
+                                <button class="button button--link button--sm ml-auto">미리보기</button>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="side-panel-content">
+                    <div class="side-panel-content__head">
+                      <!-- 테이블 상단 툴바에 검색 기능 -->
+                      <strong class="side-panel-content__head-title">테이블 있는 유형 5</strong>
                       <button class="button button--link" type="button">
                         <svg class="svg-icon" aria-hidden="true">
                           <use xlink:href="#refresh"></use>
@@ -6379,7 +6476,7 @@
                   </div>
                   <div class="side-panel-content">
                     <div class="side-panel-content__head">
-                      <strong class="side-panel-content__head-title">테이블이 있는 유형 5</strong>
+                      <strong class="side-panel-content__head-title">테이블이 있는 유형 6</strong>
                     </div>
                     <div class="side-panel-content__body">
                       <table class="table table--secondary table--horizontal table--description">
@@ -7607,6 +7704,29 @@ ab</pre>
 </div>
 
   <!-- // 편집화면 조건부객체 미리보기 영역 -->
+  <!-- 편집화면 코드 미리보기 영역  -->
+  <div class="modal modal--sm" style="position: absolute; top: 890px; right: 310px;">
+  <div class="modal__body modal__body--sm over-flow-auto mh-320">
+    <pre class="whitespace-pre-wrap break-all">
+{% if input_1 %}
+abc
+{% else %}
+efg
+{% endif %}</pre>
+  </div>
+  <div class="modal__foot">
+    <div class="modal__foot-main-buttons">
+      <button class="button button--tertiary button--lg" type="button">
+        닫기
+      </button>
+      <button type="button" class="button button--primary button--lg" ng-click="copyQueryToClipboard()">
+        복사
+      </button>
+    </div>
+  </div>
+</div>
+
+  <!-- // 편집화면 코드 미리보기 영역  -->
   <script src="../../dist/js/main.bundle.js"></script>
 </body>
 
