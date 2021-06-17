@@ -313,11 +313,3 @@ th .button {
   display: inline-flex;
   transform: rotate(-180deg);
 }
-
-.table__code {
-  border-bottom: 1px solid $ui-04;
-}
-
-.table--secondary tr:last-of-type .table__code {
-  border-bottom: 0;
-}
