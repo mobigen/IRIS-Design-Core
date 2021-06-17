@@ -251,6 +251,18 @@
     height: $button-height-sm;
   }
 
+  .select-selector__button {
+    padding-left: $spacing-xs;
+    padding-right: $spacing-lg;
+  }
+
+  .select-selector__icon {
+    right: rem(4px);
+    width: 18px;
+    height: 18px;
+    margin-top: -8px;
+  }
+
   .select-container {
     .select-selector__icon {
       @include svg-icon-size(14px);
