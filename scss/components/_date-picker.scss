@@ -288,8 +288,7 @@
 .ui-widget-header .ui-state-active,
 a.ui-button:active,
 .ui-button:active,
-.ui-button.ui-state-active:hover,
-.ui-state-selected .ui-state-default {
+.ui-button.ui-state-active:hover {
   background: $secondary;
   color: $text-04;
 }
