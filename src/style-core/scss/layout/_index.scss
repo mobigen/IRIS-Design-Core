@@ -160,3 +160,51 @@
     }
   }
 }
+
+// 카테고리 관리
+.list.list--lg {
+  position: relative;
+  height: 280px;
+  overflow-y: auto;
+}
+
+.list__item {
+  height: rem(40px);
+  &:hover {
+    .list__action-buttons {
+      display: flex;
+    }
+  }
+}
+
+.h-group + .notification-message {
+  margin-top: $spacing-2xs;
+}
+
+.list__item-inner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .h-group {
+    padding: $spacing-2xs $spacing-xs;
+    .text-input-group {
+      flex: 1px;
+    }
+  }
+}
+
+.list__action-buttons {
+  display: none;
+}
+
+.list__item--no-data {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  &:hover {
+    background-color: $ui-02;
+  }
+}
