@@ -1,5 +1,5 @@
 <!--
-    modal size: xs(350px),sm(480px), md(620px), lg(900px), xl(1180px)
+    modal size: xs(350px),sm(480px), md(620px), lg(720px), xl(900px), xl(1180px)
     이외 사이즈는 인라인 스타일로 추가
 -->
 <!-- 시각화 옵션 설정 모달 -->
@@ -74,12 +74,41 @@
                 <div class="form__item">
                   <label class="form__label">
                     <span class="form__label-text">
-                      행 높이
+                      헤더 높이
                     </span>
                   </label>
                   <div class="form__detail">
                     <div class="form__detail-inner">
-                      <input type="number" class="text-input" max="100" min="0" step="1" value="3">
+                      <div class="text-input-wrap">
+                        <input type="number" class="text-input" max="100" min="0" step="1" value="">
+                        <span class="text-input-wrap__suffix">px</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__item">
+                  <label class="form__label">
+                    <span class="form__label-text">
+                     행 높이
+                    </span>
+                    <button class="button button--icon button--link button--xs">
+                      <svg class="svg-icon">
+                        <use xlink:href="#help-outline"></use>
+                      </svg>
+                    </button>
+                    <div class="tooltip tooltip--top" style="display: none; left: -73px; top: 100px;">
+                      <div class="tooltip__arrow"></div>
+                      <div class="tooltip__inner">
+                        <span class="tooltip__text">헤더 이하의 전체 행 높이를 설정할 수 있습니다.</span>
+                      </div>
+                    </div>
+                  </label>
+                  <div class="form__detail">
+                    <div class="form__detail-inner">
+                      <div class="text-input-wrap">
+                        <input type="number" class="text-input" max="100" min="0" step="1" value="">
+                        <span class="text-input-wrap__suffix">px</span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -116,7 +145,7 @@
                         <div class="select w-160">
                           <div class="select-selector">
                             <button class="select-selector__button">
-                              <span class="select-selector__title ng-binding">깃발</span>
+                              <span class="select-selector__title">깃발</span>
                               <svg class="svg-icon select-selector__icon">
                                 <use xlink:href="#chevron-down-medium"></use>
                               </svg>
