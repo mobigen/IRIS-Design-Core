@@ -41,3 +41,7 @@ dist/
 
 # Optional npm cache directory
 .npm
+
+# intellij files
+.idea
+*.iml
