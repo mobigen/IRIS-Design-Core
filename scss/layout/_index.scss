@@ -68,10 +68,10 @@
   display: flex;
   align-items: center;
   margin-left: $spacing-md;
+}
 
-  .button {
-    padding: 0 $spacing-sm;
-  }
+.index-layout-body__management .button {
+  padding: 0 $spacing-sm;
 }
 
 .index-layout-body__management-text {
@@ -129,19 +129,17 @@
   min-height: rem(80px);
   padding: $spacing-xs;
   border: 1px solid $ui-04;
-
-  .notification-message {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 62px;
-  }
 }
 
-.generate-link-group {
-  .text-area {
-    text-decoration: underline;
-  }
+.empty-link-group .notification-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 62px;
+}
+
+.generate-link-group .text-area {
+  text-decoration: underline;
 }
 
 .button--underline {
@@ -192,7 +190,6 @@
 }
 
 // project-thumbnail (썸네일 뷰 / 템플릿 뷰)
-
 .project-thumbnail {
   padding: 0 35px $layout-xs 35px;
   flex: 1 0 auto;
