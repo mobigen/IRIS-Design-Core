@@ -436,3 +436,13 @@
     margin-left: $spacing-2xs;
   }
 }
+
+// 더보기 버튼 + 컨텍스트 메뉴
+.project-management .context-menu {
+  min-width: rem(240px);
+  display: none;
+}
+
+.project-management .context-menu--show {
+  display: block;
+}
