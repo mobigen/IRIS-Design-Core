@@ -82,6 +82,7 @@
     @include line-height("heading");
     @include font-size("24");
     color: $text-02;
+    text-align: center;
   }
 
   &__detail {
@@ -101,6 +102,7 @@
     @include font-size("18");
     @include font-weight("light");
     color: $text-03;
+    text-align: center;
 
     + .button {
       margin-top: $spacing-md;
