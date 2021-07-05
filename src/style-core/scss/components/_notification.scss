@@ -79,9 +79,10 @@
   }
 
   &__text {
-    @include line-height("heading");
+    @include line-height("title");
     @include font-size("24");
     color: $text-02;
+    text-align: center;
   }
 
   &__detail {
@@ -89,18 +90,24 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: $spacing-md;
     text-align: center;
 
     .notification {
       justify-content: center;
+      margin-top: $spacing-xl;
+    }
+
+    .button {
+      margin-top: $spacing-xl;
     }
   }
 
   &__subtext {
     @include font-size("18");
     @include font-weight("light");
+    margin-top: $spacing-sm;
     color: $text-03;
+    text-align: center;
 
     + .button {
       margin-top: $spacing-md;
