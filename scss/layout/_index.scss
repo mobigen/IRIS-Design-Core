@@ -418,7 +418,7 @@
     max-width: 40%;
   }
 
-  &:last-child {
+  & + & {
     margin-left: auto;
     max-width: 60%;
   }
