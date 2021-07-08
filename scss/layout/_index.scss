@@ -295,6 +295,7 @@
   border-radius: 2px;
   transition: all $duration-slow-01 $iris-standard-easing;
   text-decoration: none;
+  cursor: pointer;
 
   &:hover {
     box-shadow: 0px 0px 30px rgba(206, 211, 217, 0.8);
