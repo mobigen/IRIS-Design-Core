@@ -365,25 +365,6 @@
   left: rem(8px);
 }
 
-.project-thumbnail-list__details-management {
-  position: absolute;
-  top: rem(6px);
-  right: rem(8px);
-
-  .button.button--icon.button--link {
-    .svg-icon {
-      fill: $ui-02;
-    }
-
-    &:hover,
-    &:active {
-      .svg-icon {
-        fill: $ui-02;
-      }
-    }
-  }
-}
-
 .project-thumbnail-list__detail-delete-button {
   position: absolute;
   top: rem(6px);
@@ -446,4 +427,32 @@
 
 .project-management .context-menu--show {
   display: block;
+}
+
+.project-management.ag-cell__management {
+  position: relative;
+}
+
+.project-management.ag-cell__management .context-menu {
+  top: 10px !important;
+  left: -245px !important;
+}
+
+.project-management.project-thumbnail-list__details-management {
+  position: absolute;
+  top: rem(6px);
+  right: rem(8px);
+
+  .button.button--icon.button--link {
+    .svg-icon {
+      fill: $ui-02;
+    }
+
+    &:hover,
+    &:active {
+      .svg-icon {
+        fill: $ui-02;
+      }
+    }
+  }
 }
