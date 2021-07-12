@@ -421,21 +421,12 @@
 
 // 더보기 버튼 + 컨텍스트 메뉴
 .project-management .context-menu {
-  min-width: rem(240px);
-  display: none;
-}
-
-.project-management .context-menu--show {
   display: block;
+  min-width: rem(240px);
 }
 
 .project-management.ag-cell__management {
   position: relative;
-}
-
-.project-management.ag-cell__management .context-menu {
-  top: 10px !important;
-  left: -245px !important;
 }
 
 .project-management.project-thumbnail-list__details-management {
