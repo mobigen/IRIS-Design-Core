@@ -425,17 +425,12 @@
   display: none;
 }
 
-.project-management .context-menu--show {
+.project-management .context-menu {
   display: block;
 }
 
 .project-management.ag-cell__management {
   position: relative;
-}
-
-.project-management.ag-cell__management .context-menu {
-  top: 10px !important;
-  left: -245px !important;
 }
 
 .project-management.project-thumbnail-list__details-management {
