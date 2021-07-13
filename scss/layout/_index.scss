@@ -202,6 +202,7 @@
   }
 }
 
+
 .project-thumbnail-list {
   @include clearfix;
   margin-left: -$spacing-lg;
@@ -209,8 +210,7 @@
   .desktop {
     &:nth-child(6n) {
       .context-menu {
-        right: auto !important;
-        left: calc(100% - 240px) !important;
+        left: calc(100% - 265px) !important;
       }
     }
   }
@@ -227,7 +227,7 @@
 
     &:nth-child(4n) {
       .context-menu {
-        left: calc(100% - 240px) !important;
+        left: calc(100% - 265px) !important;
       }
     }
   }
@@ -244,13 +244,13 @@
 
     &:nth-child(4n) {
       .context-menu {
-        left: rem(13px);
+        left: rem(25px);
       }
     }
 
     &:nth-child(3n) {
       .context-menu {
-        left: calc(100% - 240px) !important;
+        left: calc(100% - 265px) !important;
       }
     }
   }
