@@ -40,7 +40,7 @@
   display: flex;
   align-items: center;
   height: rem(56px);
-  padding: 0 20px;
+  padding: $spacing-sm 20px;
 }
 
 .index-layout-body__filter {
@@ -446,6 +446,19 @@
       .svg-icon {
         fill: $ui-02;
       }
+    }
+  }
+}
+
+// responsive
+@media all and (max-width: 1280px) {
+  .index-layout-body__top-bar.index-layout-body__top-bar--reponsive-lg{
+    flex-wrap: wrap;
+    height: auto;
+
+    .index-layout-body__controller{
+      margin-left: 0;
+      margin-top: $spacing-sm
     }
   }
 }
