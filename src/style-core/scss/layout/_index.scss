@@ -79,6 +79,8 @@
   margin-right: $spacing-xs;
   font-size: rem(15px);
   color: $active-secondary;
+  white-space: nowrap;
+  word-break: keep-all;
 }
 
 .index-layout-body__controller {
