@@ -456,6 +456,10 @@
     flex-wrap: wrap;
     height: auto;
 
+    .index-layout-body__management{
+      margin-right: 10px;
+    }
+
     .index-layout-body__controller{
       margin-left: 0;
       margin-top: $spacing-sm
