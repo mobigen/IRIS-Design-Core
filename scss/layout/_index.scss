@@ -40,7 +40,7 @@
   display: flex;
   align-items: center;
   height: rem(56px);
-  padding: 0 20px;
+  padding: $spacing-sm 20px;
 }
 
 .index-layout-body__filter {
@@ -79,6 +79,8 @@
   margin-right: $spacing-xs;
   font-size: rem(15px);
   color: $active-secondary;
+  white-space: nowrap;
+  word-break: keep-all;
 }
 
 .index-layout-body__controller {
@@ -202,6 +204,7 @@
   }
 }
 
+
 .project-thumbnail-list {
   @include clearfix;
   margin-left: -$spacing-lg;
@@ -209,8 +212,7 @@
   .desktop {
     &:nth-child(6n) {
       .context-menu {
-        right: auto !important;
-        left: calc(100% - 240px) !important;
+        left: calc(100% - 265px) !important;
       }
     }
   }
@@ -227,7 +229,7 @@
 
     &:nth-child(4n) {
       .context-menu {
-        left: calc(100% - 240px) !important;
+        left: calc(100% - 265px) !important;
       }
     }
   }
@@ -244,13 +246,13 @@
 
     &:nth-child(4n) {
       .context-menu {
-        left: rem(13px);
+        left: rem(25px);
       }
     }
 
     &:nth-child(3n) {
       .context-menu {
-        left: calc(100% - 240px) !important;
+        left: calc(100% - 265px) !important;
       }
     }
   }
@@ -295,6 +297,7 @@
   border-radius: 2px;
   transition: all $duration-slow-01 $iris-standard-easing;
   text-decoration: none;
+  cursor: pointer;
 
   &:hover {
     box-shadow: 0px 0px 30px rgba(206, 211, 217, 0.8);
@@ -364,25 +367,6 @@
   left: rem(8px);
 }
 
-.project-thumbnail-list__details-management {
-  position: absolute;
-  top: rem(6px);
-  right: rem(8px);
-
-  .button.button--icon.button--link {
-    .svg-icon {
-      fill: $ui-02;
-    }
-
-    &:hover,
-    &:active {
-      .svg-icon {
-        fill: $ui-02;
-      }
-    }
-  }
-}
-
 .project-thumbnail-list__detail-delete-button {
   position: absolute;
   top: rem(6px);
@@ -418,7 +402,7 @@
     max-width: 40%;
   }
 
-  &:last-child {
+  & + & {
     margin-left: auto;
     max-width: 60%;
   }
@@ -439,10 +423,46 @@
 
 // 더보기 버튼 + 컨텍스트 메뉴
 .project-management .context-menu {
+  display: block;
   min-width: rem(240px);
-  display: none;
 }
 
-.project-management .context-menu--show {
-  display: block;
+.project-management.ag-cell__management {
+  position: relative;
+}
+
+.project-management.project-thumbnail-list__details-management {
+  position: absolute;
+  top: rem(6px);
+  right: rem(8px);
+
+  .button.button--icon.button--link {
+    .svg-icon {
+      fill: $ui-02;
+    }
+
+    &:hover,
+    &:active {
+      .svg-icon {
+        fill: $ui-02;
+      }
+    }
+  }
+}
+
+// responsive
+@media all and (max-width: 1280px) {
+  .index-layout-body__top-bar.index-layout-body__top-bar--reponsive-lg{
+    flex-wrap: wrap;
+    height: auto;
+
+    .index-layout-body__management{
+      margin-right: 10px;
+    }
+
+    .index-layout-body__controller{
+      margin-left: 0;
+      margin-top: $spacing-sm
+    }
+  }
 }
