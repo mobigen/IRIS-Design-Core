@@ -72,6 +72,12 @@
   white-space: nowrap;
 }
 
+.form__detail-value {
+  @include font-size("13");
+  color: $text-01;
+  width: 40px;
+}
+
 .form__label-text + .button--link {
   margin-right: $spacing-2xs;
 }
