@@ -406,6 +406,11 @@
     margin-left: auto;
     max-width: 60%;
   }
+
+  &.project-thumbnail-list__information-desc-text--right{
+    margin-left: auto;
+    max-width: 100% !important;
+  }
 }
 
 .project-thumbnail-list__tags {
