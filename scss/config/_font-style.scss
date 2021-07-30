@@ -2,6 +2,8 @@
 //  Font Families
 // ------------------------------------------
 
+@use "sass:math";
+
 $font-families: (
   "mono": unquote("Consolas, Menlo, 'SFMono-Regular', Courier, monospace"),
   "sans":
@@ -66,11 +68,11 @@ $font-weights: (
 $base-font-size: 16px !default; // Default
 
 @function rem($px) {
-  @return ($px / $base-font-size) * 1rem;
+  @return math.div($px, $base-font-size) * 1rem;
 }
 
 @function em($px) {
-  @return ($px / $base-font-size) * 1em;
+  @return math.div($px, $base-font-size) * 1em;
 }
 
 // 두꺼운 서체에서 사용되는 font-smoothing
