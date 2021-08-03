@@ -12,7 +12,7 @@
 }
 
 .time-picker-container__list {
-  width: calc(100% / 3);
+  width: 33.33%;
   overflow-y: auto;
 
   &:not(:last-child) {
@@ -27,3 +27,5 @@
 .time-picker-container__list + .time-picker-container__list::before {
   display: none;
 }
+
+

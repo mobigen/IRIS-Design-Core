@@ -2,14 +2,16 @@
 //  Grid System
 // ------------------------------------------
 
+@use "sass:math";
+
 @mixin make-row($gutter: $grid-gutter-width) {
   --gutter-x: #{$gutter};
   --gutter-y: 0;
   display: flex;
   flex-wrap: wrap;
   margin-top: calc(var(--gutter-y) * -1);
-  margin-right: calc(var(--gutter-x) / -2);
-  margin-left: calc(var(--gutter-x) / -2);
+  margin-right: calc(var(--gutter-x) * -0.5);
+  margin-left: calc(var(--gutter-x) * -0.5);
 }
 
 @mixin make-col-ready($gutter: $grid-gutter-width) {
@@ -18,14 +20,14 @@
   flex-shrink: 0;
   width: 100%; // 그리드의 열이 너무 좁아지는것을 방지
   max-width: 100%; // `.col-auto`, `.col` (& responsive variants) 이 그리드를 이탈 하는것을 방지
-  padding-right: calc(var(--gutter-x) / 2);
-  padding-left: calc(var(--gutter-x) / 2);
+  padding-right: calc(var(--gutter-x) * 0.5);
+  padding-left: calc(var(--gutter-x) * 0.5);
   margin-top: var(--gutter-y);
 }
 
 @mixin make-col($size, $columns: $grid-columns) {
   flex: 0 0 auto;
-  width: percentage($size / $columns);
+  width: percentage(math.div($size, $columns));
 }
 
 @mixin make-col-auto() {
@@ -34,7 +36,7 @@
 }
 
 @mixin make-col-offset($size, $columns: $grid-columns) {
-  $num: $size / $columns;
+  $num: math.div($size, $columns);
   margin-left: if($num == 0, 0, percentage($num));
 }
 
@@ -42,7 +44,7 @@
 @mixin row-cols($count) {
   > * {
     flex: 0 0 auto;
-    width: 100% / $count;
+    width: math.div(100%, $count);
   }
 }
 
