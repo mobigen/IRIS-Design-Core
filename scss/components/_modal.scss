@@ -122,8 +122,9 @@
 // modal 하위에 있는 form, tab overwrite
 // -------------------------
 
+// $spacing-sm / 2 = 6px
 .modal .form__item {
-  padding: $spacing-sm / 2 0;
+  padding: $spacing-sm * .5 0;
 }
 
 .modal .form--lg .form__item {
