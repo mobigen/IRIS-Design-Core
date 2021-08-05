@@ -30,7 +30,7 @@
   flex: 1;
   position: relative;
   overflow: auto;
-  padding: $layout-3xs / 2 $layout-3xs $layout-2xs;
+  padding: $layout-3xs * 0.5 $layout-3xs $layout-2xs;
   letter-spacing: -0.3px;
 }
 
