@@ -129,6 +129,16 @@ th .button {
   background-color: $odd-row;
 }
 
+.table--secondary tr td.table__notification {
+  background-color: $ui-02;
+  text-align: left;
+}
+
+.table--secondary .table__notification .notification-message {
+  justify-content: left;
+  padding-left: $spacing-2xs;
+}
+
 .table--secondary tr:hover > td {
   background: $ui-01;
 }
