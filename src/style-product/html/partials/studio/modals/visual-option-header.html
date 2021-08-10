@@ -3,7 +3,7 @@
     이외 사이즈는 인라인 스타일로 추가
 -->
 <!-- 시각화 옵션 설정 모달 -->
-<div class="modal modal--xl" style="position: static; width: 800px">
+<div class="modal modal--xl" style="position: static; width: 820px">
   <div class="modal__head">
     <div class="modal__head-title">
       <span class="modal__head-title-text">시각화 옵션</span>
@@ -318,11 +318,11 @@
                           <col width="72px;">
                           <col width="54px;">
                           <col width="85px;">
-                          <col width="*">
+                          <col width="123px;">
                           <col width="120px;">
                           <col width="104px;">
                           <col width="104px;">
-                          <col width="104px;">
+                          <col width="*;">
                         </colgroup>
                         <thead>
                           <tr>
@@ -371,17 +371,17 @@
                           </tr>
                         </thead>
                       </table>
-                      <div class="overflow-y" style="max-height: 260px;">
+                      <div class="overflow-y" style="max-height: 234px;">
                         <table class="table table--secondary td--gap-sm">
                           <colgroup>
                             <col width="72px;">
                             <col width="54px;">
                             <col width="85px;">
-                            <col width="*">
+                            <col width="123px">
                             <col width="120px;">
                             <col width="104px;">
                             <col width="104px;">
-                            <col width="104px;">
+                            <col width="*">
                           </colgroup>
                           <tbody>
                             <tr>
@@ -771,9 +771,258 @@
                                   </button>
                                 </div>
                               </td>
-                            </tr><!-- end ngRepeat: row in fieldList track by $index -->
+                            </tr>
                             <tr>
-
+                              <td class="td--spacing-sm text-center">
+                                <div class="checkbox">
+                                  <input type="checkbox" class="checkbox__input" id="ckb_co_grid_showcol_1">
+                                  <label class="checkbox__label" for="ckb_co_grid_showcol_1"></label>
+                                </div>
+                              </td>
+                              <!-- 설정 -->
+                              <td class="td--spacing-sm text-center">
+                                <div class="checkbox">
+                                  <input type="checkbox" class="checkbox__input" disabled="disabled">
+                                  <label class="checkbox__label"></label>
+                                </div>
+                              </td>
+                              <!-- 순서 -->
+                              <td class="td--spacing-sm text-center">
+                                <div class="table__action-buttons">
+                                  <button class="button button--icon button--tertiary" type="button">
+                                    <svg class="svg-icon">
+                                      <use xlink:href="#chevron-up-medium"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="button button--icon button--tertiary" type="button">
+                                    <svg class="svg-icon">
+                                      <use xlink:href="#chevron-down-medium"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </td>
+                              <!-- 열 -->
+                              <td>
+                                <span title="LEVEL_INT의 평균">LEVEL_INT의 평균</span>
+                              </td>
+                              <!-- 열 고정 -->
+                              <td>
+                                <div class="select justify-center">
+                                  <div class="select-selector">
+                                    <button class="select-selector__button">
+                                      <span class="select-selector__title">
+                                        고정안함
+                                      </span>
+                                      <svg class="svg-icon select-selector__icon">
+                                        <use xlink:href="#chevron-down-medium"></use>
+                                      </svg>
+                                    </button>
+                                  </div>
+                                  <div class="select-container">
+                                    <ul class="select-container__list">
+                                      <li class="select-container__item">
+                                        <button class="select-container__button" type="button">
+                                          <span class="select-container__text">왼쪽 고정</span>
+                                        </button>
+                                      </li>
+                                      <li class="select-container__item">
+                                        <button class="select-container__button" type="button">
+                                          <span class="select-container__text">오른쪽 고정</span>
+                                        </button>
+                                      </li>
+                                      <li class="select-container__item">
+                                        <button class="select-container__button" type="button">
+                                          <span class="select-container__text">고정안함</span>
+                                        </button>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </td>
+                              <!-- 넓이 -->
+                              <td>
+                                <div class="text-input-wrap w-80">
+                                  <input type="number" class="text-input ">
+                                  <span class="text-input-wrap__suffix">px</span>
+                                </div>
+                              </td>
+                              <!-- 가로 정렬 -->
+                              <td>
+                                <div class="toggle-button justify-center">
+                                  <!-- 왼쪽 정렬 -->
+                                  <button class="toggle-button__item toggle-button__item--icon" title="왼쪽 정렬">
+                                    <svg class="svg-icon">
+                                      <use xlink:href="#text-align-left"></use>
+                                    </svg>
+                                  </button>
+                                  <!-- 가운데 정렬 -->
+                                  <button
+                                    class="toggle-button__item toggle-button__item--icon toggle-button__item--selected"
+                                    title="가운데 정렬">
+                                    <svg class="svg-icon">
+                                      <use xlink:href="#text-align-center"></use>
+                                    </svg>
+                                  </button>
+                                  <!-- 오른쪽 정렬 -->
+                                  <button class="toggle-button__item toggle-button__item--icon" title="오른쪽 정렬">
+                                    <svg class="svg-icon">
+                                      <use xlink:href="#text-align-right"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </td>
+                              <!-- 세로 정렬 -->
+                              <td>
+                                <div class="toggle-button justify-center">
+                                  <!-- 왼쪽 정렬 -->
+                                  <button class="toggle-button__item toggle-button__item--icon" type="button"
+                                    title="수직 상단 정렬">
+                                    <svg class="svg-icon">
+                                      <use xlink:href="#vertical-align-top"></use>
+                                    </svg>
+                                  </button>
+                                  <button
+                                    class="toggle-button__item toggle-button__item--icon toggle-button__item--selected"
+                                    type="button" title="수직 가운데 정렬">
+                                    <svg class="svg-icon">
+                                      <use xlink:href="#vertical-align-middle"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="toggle-button__item toggle-button__item--icon" type="button"
+                                    title="수직 하단 정렬">
+                                    <svg class="svg-icon">
+                                      <use xlink:href="#vertical-align-bottom"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="td--spacing-sm text-center">
+                                <div class="checkbox">
+                                  <input type="checkbox" class="checkbox__input" id="ckb_co_grid_showcol_1">
+                                  <label class="checkbox__label" for="ckb_co_grid_showcol_1"></label>
+                                </div>
+                              </td>
+                              <!-- 설정 -->
+                              <td class="td--spacing-sm text-center">
+                                <div class="checkbox">
+                                  <input type="checkbox" class="checkbox__input" disabled="disabled">
+                                  <label class="checkbox__label"></label>
+                                </div>
+                              </td>
+                              <!-- 순서 -->
+                              <td class="td--spacing-sm text-center">
+                                <div class="table__action-buttons">
+                                  <button class="button button--icon button--tertiary" type="button">
+                                    <svg class="svg-icon">
+                                      <use xlink:href="#chevron-up-medium"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="button button--icon button--tertiary" type="button">
+                                    <svg class="svg-icon">
+                                      <use xlink:href="#chevron-down-medium"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </td>
+                              <!-- 열 -->
+                              <td>
+                                <span title="LEVEL_INT의 평균">LEVEL_INT의 평균</span>
+                              </td>
+                              <!-- 열 고정 -->
+                              <td>
+                                <div class="select justify-center">
+                                  <div class="select-selector">
+                                    <button class="select-selector__button">
+                                      <span class="select-selector__title">
+                                        고정안함
+                                      </span>
+                                      <svg class="svg-icon select-selector__icon">
+                                        <use xlink:href="#chevron-down-medium"></use>
+                                      </svg>
+                                    </button>
+                                  </div>
+                                  <div class="select-container">
+                                    <ul class="select-container__list">
+                                      <li class="select-container__item">
+                                        <button class="select-container__button" type="button">
+                                          <span class="select-container__text">왼쪽 고정</span>
+                                        </button>
+                                      </li>
+                                      <li class="select-container__item">
+                                        <button class="select-container__button" type="button">
+                                          <span class="select-container__text">오른쪽 고정</span>
+                                        </button>
+                                      </li>
+                                      <li class="select-container__item">
+                                        <button class="select-container__button" type="button">
+                                          <span class="select-container__text">고정안함</span>
+                                        </button>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </td>
+                              <!-- 넓이 -->
+                              <td>
+                                <div class="text-input-wrap w-80">
+                                  <input type="number" class="text-input ">
+                                  <span class="text-input-wrap__suffix">px</span>
+                                </div>
+                              </td>
+                              <!-- 가로 정렬 -->
+                              <td>
+                                <div class="toggle-button justify-center">
+                                  <!-- 왼쪽 정렬 -->
+                                  <button class="toggle-button__item toggle-button__item--icon" title="왼쪽 정렬">
+                                    <svg class="svg-icon">
+                                      <use xlink:href="#text-align-left"></use>
+                                    </svg>
+                                  </button>
+                                  <!-- 가운데 정렬 -->
+                                  <button
+                                    class="toggle-button__item toggle-button__item--icon toggle-button__item--selected"
+                                    title="가운데 정렬">
+                                    <svg class="svg-icon">
+                                      <use xlink:href="#text-align-center"></use>
+                                    </svg>
+                                  </button>
+                                  <!-- 오른쪽 정렬 -->
+                                  <button class="toggle-button__item toggle-button__item--icon" title="오른쪽 정렬">
+                                    <svg class="svg-icon">
+                                      <use xlink:href="#text-align-right"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </td>
+                              <!-- 세로 정렬 -->
+                              <td>
+                                <div class="toggle-button justify-center">
+                                  <!-- 왼쪽 정렬 -->
+                                  <button class="toggle-button__item toggle-button__item--icon" type="button"
+                                    title="수직 상단 정렬">
+                                    <svg class="svg-icon">
+                                      <use xlink:href="#vertical-align-top"></use>
+                                    </svg>
+                                  </button>
+                                  <button
+                                    class="toggle-button__item toggle-button__item--icon toggle-button__item--selected"
+                                    type="button" title="수직 가운데 정렬">
+                                    <svg class="svg-icon">
+                                      <use xlink:href="#vertical-align-middle"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="toggle-button__item toggle-button__item--icon" type="button"
+                                    title="수직 하단 정렬">
+                                    <svg class="svg-icon">
+                                      <use xlink:href="#vertical-align-bottom"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
                               <td class="td--spacing-sm text-center">
                                 <div class="checkbox">
                                   <input type="checkbox" class="checkbox__input" id="ckb_co_grid_showcol_2">
