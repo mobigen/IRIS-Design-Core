@@ -1038,9 +1038,11 @@ input[type="radio"] {
     display: flex;
     height: 100%; }*/
 .ag-theme-default .ag-header-cell-label {
-  display: flex;
-  justify-content: center;
+  display: table;
+  table-layout: fixed;
   height: 100%;
+  width: 100%;
+  line-height: 30px;
   padding: 0 8px;
 }
 
@@ -1056,9 +1058,7 @@ input[type="radio"] {
 }
 
 .ag-theme-default .ag-header-cell-label .ag-header-cell-text {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  padding-right: $spacing-2xs;
 }
 
 .ag-theme-default .ag-numeric-header .ag-header-cell-label {
@@ -1121,10 +1121,21 @@ input[type="radio"] {
     padding-left: 11px;
     padding-right: 11px; }*/
 .ag-theme-default .ag-cell {
+  display: table;
+  table-layout: fixed;
   height: 100%;
   line-height: 30px;
   padding-left: 8px;
   padding-right: 8px;
+}
+
+.ag-theme-default .ag-cell > span,
+.ag-theme-default .ag-header-cell-label > span {
+  display: table-cell;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  line-height: 1.25;
 }
 
 .ag-theme-default .ag-row-drag {

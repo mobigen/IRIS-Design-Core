@@ -45,6 +45,13 @@
   letter-spacing: -.5px
 }
 
+.toggle-button__item--selected.toggle-button__item--disabled,
+.toggle-button__item--selected:disabled,
+.toggle-button__item--selected:disabled:hover,
+.toggle-button__item--selected:disabled:focus {
+  background-color: $primary;
+}
+
 // -------------------------
 // Theme
 // -------------------------
