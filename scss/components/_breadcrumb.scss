@@ -4,14 +4,14 @@
   justify-content: flex-start;
   height: rem(28px);
   padding: 0 rem(20px);
-  background-color: $hover-row;
-  border-bottom: 1px solid $hover-row;
+  background-color: $breadcrumb-bg;
+  border-bottom: 1px solid darken($breadcrumb-bg, 8%);
 }
 
 .breadcrumb__text {
   position: relative;
   padding-right: 28px;
-  color: $text-05;
+  color: $breadcrumb-text;
   font-size: 13px;
   user-select: none;
   letter-spacing: -0.2px;
@@ -21,20 +21,20 @@
     content: "";
     width: 6px;
     height: 6px;
-    border-top: 2px solid $icon-01; /* 선 두께 */
-    border-right: 2px solid $icon-01; /* 선 두께 */
+    border-top: 2px solid darken($breadcrumb-text, 10%); /* 선 두께 */
+    border-right: 2px solid darken($breadcrumb-text, 10%); /* 선 두께 */
     display: inline-block;
     transform: rotate(45deg); /* 각도 */
     position: absolute;
     top: 50%;
-    margin-top: -3px;
+    margin-top: -4px;
     right: 13px;
     border-radius: 2px;
   }
 
   &:last-child {
     padding-right: 0;
-    color: $text-02;
+    color: darken($breadcrumb-text, 20%);
 
     &:after {
       content: none;
