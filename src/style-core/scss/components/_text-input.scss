@@ -100,6 +100,13 @@
 // 1. .text-input-group__input -> .text-input 으로 변경
 .text-input-group {
   position: relative;
+
+  .text-input{
+    // 뒤에 button이 있는 경우
+    &:not(&:last-child){
+      padding-right: $spacing-lg;
+    }
+  }
 }
 
 .text-input-group__input {
@@ -132,8 +139,8 @@
 .text-input-group__clear-button {
   @include button-normal;
   @include position-right-center(6px);
-  width: rem(20px);
-  height: rem(20px);
+  width: rem(18px);
+  height: rem(18px);
   padding: 0;
   border: 0;
   background-color: transparent;
@@ -141,6 +148,8 @@
   cursor: pointer;
 
   .svg-icon {
+    width: rem(18px);
+    height: rem(18px);
     fill: lighten($icon-01, 18%);
   }
 
@@ -149,7 +158,22 @@
       fill: $icon-01;
     }
   }
+
+  // 뒤에 search-button 있는 경우
+  &:not(&:last-child){
+    right: $spacing-2xl;
+  }
 }
+
+.text-input-group__search-button {
+  @include position-right-center(1px);
+  z-index: z("float");
+  height: 30px;
+  border-right: transparent;
+  border-top: transparent;
+  border-bottom: transparent;
+}
+
 .text-input-group__button {
   @include button-normal;
   @include position-right-center(8px);
@@ -185,6 +209,23 @@
       padding-left: $icon-spacing;
     }
   }
+  .text-input-group__clear-button{
+    width: rem(20px);
+    height: rem(20px);
+
+    // 뒤에 search-button 있는 경우
+    &:not(&:last-child){
+      right: $spacing-3xl;
+    }
+    .svg-icon{
+      width: rem(20px);
+      height: rem(20px);
+    }
+  }
+
+  .text-input-group__search-button{
+    height: 38px
+  }
 }
 
 .text-input-group--sm {
@@ -206,8 +247,24 @@
   .text-input-group__clear-button,
   .text-input-group__button {
     right: 4px;
-    width: 14px;
-    height: 14px;
+    width: rem(14px);
+    height: rem(14px);
+  }
+
+  .text-input-group__clear-button{
+    // 뒤에 search-button 있는 경우
+    &:not(&:last-child){
+      right: $spacing-xl;
+    }
+
+    .svg-icon{
+      width: rem(14px);
+      height: rem(14px);
+    }
+  }
+
+  .text-input-group__search-button{
+    height: 22px
   }
 }
 
@@ -215,6 +272,7 @@
   cursor: not-allowed;
 
   .text-input-group__clear-button,
+  .text-input-group__search-button,
   .text-input-group__button {
     opacity: 0.4;
     cursor: not-allowed;
@@ -236,6 +294,13 @@
   margin-left: $spacing-2xs;
   color: $text-02;
   flex-shrink: 0;
+}
+
+.text-input-wrap__prefix {
+  padding-right: $spacing-2xs;
+  color: $text-02;
+  overflow-wrap: break-word;
+  word-break: keep-all;
 }
 
 // -------------------------
