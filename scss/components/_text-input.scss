@@ -240,7 +240,6 @@
   .text-input {
     @include text-input--sm;
 
-
     &:nth-last-child(3):not(div){
       padding-right: rem(46px) !important;
     }
