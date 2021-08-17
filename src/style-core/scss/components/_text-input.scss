@@ -296,6 +296,13 @@
   flex-shrink: 0;
 }
 
+.text-input-wrap__prefix {
+  padding-right: $spacing-2xs;
+  color: $text-02;
+  overflow-wrap: break-word;
+  word-break: keep-all;
+}
+
 // -------------------------
 // input hidable
 // -------------------------
