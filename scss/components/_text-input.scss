@@ -106,6 +106,10 @@
     &:not(&:last-child){
       padding-right: $spacing-lg;
     }
+
+    &:nth-last-child(3):not(div){
+      padding-right: rem(62px) !important;
+    }
   }
 }
 
@@ -199,6 +203,10 @@
 .text-input-group--lg {
   .text-input {
     @include text-input--lg;
+
+    &:nth-last-child(3):not(div){
+      padding-right: rem(72px) !important;
+    }
   }
 
   .text-input-group__icon {
@@ -231,6 +239,10 @@
 .text-input-group--sm {
   .text-input {
     @include text-input--sm;
+
+    &:nth-last-child(3):not(div){
+      padding-right: rem(46px) !important;
+    }
   }
 
   .text-input-group__icon {

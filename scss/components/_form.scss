@@ -390,10 +390,17 @@
 }
 
 .form__items-label{
-  @include font-weight("regular");
   width: rem(112px);
   padding-right: $spacing-sm;
-  color: $text-02;
   text-align: right;
+}
+
+.form__items-label-text{
+  @include font-weight("regular");
+  color: $text-02;
   word-break: break-word;
+}
+
+.form__items-detail{
+  flex: 1 0 auto;
 }
