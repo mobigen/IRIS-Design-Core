@@ -300,8 +300,10 @@
 
 .select--borderless {
   .select-selector__button {
+    background-color: transparent;
     border-color: transparent;
     box-shadow: none;
+
     &:hover {
       background-color: $ui-01;
 
