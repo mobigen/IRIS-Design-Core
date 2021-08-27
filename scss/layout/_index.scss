@@ -125,11 +125,11 @@
 }
 
 .index-layout-body__controller-select {
+  width: auto;
   margin-left: $spacing-xs;
 }
 
 .index-layout-body__controller-search {
-  width: auto;
   margin-left: $spacing-xs;
 
   .text-input-group {
