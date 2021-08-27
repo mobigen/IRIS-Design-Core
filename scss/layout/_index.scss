@@ -36,6 +36,41 @@
   background-color: $ui-01;
 }
 
+.index-layout-body__template-inner {
+  transform: translate(0, 0);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: rem(200px);
+  width: 100%;
+  min-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  z-index: z("modal");
+  background: $ui-01;
+  box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.03);
+}
+
+.slide-up {
+  transition: all 0.5s;
+}
+
+.slide-up-enter-active {
+  transition: all 0.5s ease;
+}
+
+.slide-up-leave-active {
+  transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-up-enter,
+.slide-up-leave-active {
+  opacity: 0;
+  transform: translate(0, -100%);
+}
+
 .index-layout-body__top-bar {
   display: flex;
   align-items: center;
