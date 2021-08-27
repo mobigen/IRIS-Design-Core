@@ -127,6 +127,10 @@
 .index-layout-body__controller-select {
   width: auto;
   margin-left: $spacing-xs;
+  
+  &.select--view-all .select-container{
+    max-width: rem(250px);
+  }
 }
 
 .index-layout-body__controller-search {
