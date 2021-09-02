@@ -133,20 +133,21 @@
     @include font-size("16");
   }
 
-  .form__item {
+  .form__item, form__items {
     padding: $spacing-xs 0;
   }
 
-  .form__item:first-child {
+  .form__item:first-child,
+  .form__items:first-child{
     padding-top: 0;
   }
 
-  .form__label {
+  .form__label, .form__items-title {
     height: rem(40px);
   }
 
   .form__label,
-  .form__text {
+  .form__text, .form__items-title-text {
     font-size: rem(15px);
   }
 }
@@ -356,4 +357,50 @@
   .dynamic-form__action-buttons > *:not(:first-child) {
     margin-left: $spacing-2xs;
   }
+}
+
+// -------------------------
+// form__items - 환경설정에 새롭게 추가된 item 유형입니다.
+// -------------------------
+
+.form__items {
+  @include form__item($spacing-xs);
+  width: 100%;
+}
+
+.form__items-title {
+  @include form__label;
+}
+
+.form__items-title-text {
+  @include form__label-text;
+}
+
+.form__items-list{
+  @include form__detail;
+}
+
+.form__items-item{
+  display: flex;
+  align-items: center;
+}
+
+.form__items-item+.form__items-item{
+  margin-top: $spacing-xs;
+}
+
+.form__items-label{
+  width: rem(112px);
+  padding-right: $spacing-sm;
+  text-align: right;
+}
+
+.form__items-label-text{
+  @include font-weight("regular");
+  color: $text-02;
+  word-break: break-word;
+}
+
+.form__items-detail{
+  flex: 1 0 auto;
 }

@@ -1744,8 +1744,10 @@
               산돌고딕 네오 {style="font-family: 'Apple SD Gothic Neo', '애플 SD 산돌고딕 Neo', -apple-system, 'Malgun Gothic', sans-serif;}
               나눔고딕 {style="font-family: 'Nanum Gothic','나눔고딕', sans-serif}
             -->
-            <div class="object-label__writing-mode-box" style="width: 100%; height: 100%; font-family: notokr;">
-              <p class="object-label__align-box text-bold">라벨 컴포넌트 Label component</p>
+            <div class="object-label__writing-mode-box" style="writing-mode: horizontal-tb;">
+              <div class="object-label__align-box">
+                <p class="object-label__text text-bold" style="font-size: 14px; font-family: notokr; text-align: left; vertical-align: top;">라벨 컴포넌트 Label component</p>
+              </div>
             </div>
             <!-- 크기 조절 상자 -->
             <span class="tl"></span>
@@ -4727,206 +4729,218 @@
                       <strong class="side-panel-content__head-title">시각화 유형 셀렉트</strong>
                     </div>
                     <div class="side-panel-content__body">
-                      <div class="select">
-                        <div class="select-selector">
-                          <button class="select-selector__button" type="button">
-                            <svg class="svg-icon" aria-hidden="true">
-                              <use xlink:href="#table"></use>
-                            </svg>
-                            <span class="select-selector__title">테이블</span>
-                            <svg class="svg-icon select-selector__icon">
-                              <use xlink:href="#chevron-down-medium"></use>
-                            </svg>
-                          </button>
+                      <div class="row">
+                        <div class="select">
+                          <div class="select-selector">
+                            <button class="select-selector__button" type="button">
+                              <svg class="svg-icon" aria-hidden="true">
+                                <use xlink:href="#table"></use>
+                              </svg>
+                              <span class="select-selector__title">테이블</span>
+                              <svg class="svg-icon select-selector__icon">
+                                <use xlink:href="#chevron-down-medium"></use>
+                              </svg>
+                            </button>
+                          </div>
+                          <div class="select-container">
+                            <ul class="select-container__list">
+                              <li class="select-container__item select-container__item--selected">
+                                <button class="select-container__button" type="button">
+                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
+                                    <use xlink:href="#table"></use>
+                                  </svg>
+                                  <span class="select-container__text">테이블</span>
+                                </button>
+                              </li>
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
+                                    <use xlink:href="#line-boundaries"></use>
+                                  </svg>
+                                  <span class="select-container__text">꺾은선형</span>
+                                </button>
+                              </li>
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
+                                    <use xlink:href="#dual-axis"></use>
+                                  </svg>
+                                  <span class="select-container__text">다중축</span>
+                                </button>
+                              </li>
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
+                                    <use xlink:href="#area-chart"></use>
+                                  </svg>
+                                  <span class="select-container__text">영역형</span>
+                                </button>
+                              </li>
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
+                                    <use xlink:href="#column"></use>
+                                  </svg>
+                                  <span class="select-container__text">세로막대형</span>
+                                </button>
+                              </li>
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
+                                    <use xlink:href="#hozionbar"></use>
+                                  </svg>
+                                  <span class="select-container__text">가로막대형</span>
+                                </button>
+                              </li>
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
+                                    <use xlink:href="#pie"></use>
+                                  </svg>
+                                  <span class="select-container__text">원형</span>
+                                </button>
+                              </li>
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
+                                    <use xlink:href="#scatter"></use>
+                                  </svg>
+                                  <span class="select-container__text">시계열분포</span>
+                                </button>
+                              </li>
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
+                                    <use xlink:href="#motion"></use>
+                                  </svg>
+                                  <span class="select-container__text">모션</span>
+                                </button>
+                              </li>
+                              <li class="select-container__item--disabled">
+                                <button class="select-container__button" type="button">
+                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
+                                    <use xlink:href="#sankey"></use>
+                                  </svg>
+                                  <span class="select-container__text">Sankey - Old(종료 예정)</span>
+                                </button>
+                              </li>
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
+                                    <use xlink:href="#sankey"></use>
+                                  </svg>
+                                  <span class="select-container__text">Sankey - New</span>
+                                </button>
+                              </li>
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
+                                    <use xlink:href="#heatmap"></use>
+                                  </svg>
+                                  <span class="select-container__text">히트맵</span>
+                                </button>
+                              </li>
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
+                                    <use xlink:href="#single-value"></use>
+                                  </svg>
+                                  <span class="select-container__text">단일값</span>
+                                </button>
+                              </li>
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
+                                    <use xlink:href="#gauge"></use>
+                                  </svg>
+                                  <span class="select-container__text">Gauge</span>
+                                </button>
+                              </li>
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
+                                    <use xlink:href="#treemap"></use>
+                                  </svg>
+                                  <span class="select-container__text">트리맵</span>
+                                </button>
+                              </li>
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
+                                    <use xlink:href="#word-cloud"></use>
+                                  </svg>
+                                  <span class="select-container__text">워드 클라우드</span>
+                                </button>
+                              </li>
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
+                                    <use xlink:href="#anomaly"></use>
+                                  </svg>
+                                  <span class="select-container__text">Anomaly</span>
+                                </button>
+                              </li>
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
+                                    <use xlink:href="#forecast"></use>
+                                  </svg>
+                                  <span class="select-container__text">Forecast</span>
+                                </button>
+                              </li>
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
+                                    <use xlink:href="#outlier"></use>
+                                  </svg>
+                                  <span class="select-container__text">Outlier</span>
+                                </button>
+                              </li>
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
+                                    <use xlink:href="#network"></use>
+                                  </svg>
+                                  <span class="select-container__text">네트워크 그래프</span>
+                                </button>
+                              </li>
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
+                                    <use xlink:href="#bubble"></use>
+                                  </svg>
+                                  <span class="select-container__text">Bubble</span>
+                                </button>
+                              </li>
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
+                                    <use xlink:href="#mirror-bar"></use>
+                                  </svg>
+                                  <span class="select-container__text">Mirror-bar</span>
+                                </button>
+                              </li>
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
+                                    <use xlink:href="#box-plot"></use>
+                                  </svg>
+                                  <span class="select-container__text">Box-plot</span>
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
                         </div>
-                        <div class="select-container">
-                          <ul class="select-container__list">
-                            <li class="select-container__item select-container__item--selected">
-                              <button class="select-container__button" type="button">
-                                <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                  <use xlink:href="#table"></use>
-                                </svg>
-                                <span class="select-container__text">테이블</span>
-                              </button>
-                            </li>
-                            <li class="select-container__item">
-                              <button class="select-container__button" type="button">
-                                <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                  <use xlink:href="#line-boundaries"></use>
-                                </svg>
-                                <span class="select-container__text">꺾은선형</span>
-                              </button>
-                            </li>
-                            <li class="select-container__item">
-                              <button class="select-container__button" type="button">
-                                <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                  <use xlink:href="#dual-axis"></use>
-                                </svg>
-                                <span class="select-container__text">다중축</span>
-                              </button>
-                            </li>
-                            <li class="select-container__item">
-                              <button class="select-container__button" type="button">
-                                <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                  <use xlink:href="#area-chart"></use>
-                                </svg>
-                                <span class="select-container__text">영역형</span>
-                              </button>
-                            </li>
-                            <li class="select-container__item">
-                              <button class="select-container__button" type="button">
-                                <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                  <use xlink:href="#column"></use>
-                                </svg>
-                                <span class="select-container__text">세로막대형</span>
-                              </button>
-                            </li>
-                            <li class="select-container__item">
-                              <button class="select-container__button" type="button">
-                                <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                  <use xlink:href="#hozionbar"></use>
-                                </svg>
-                                <span class="select-container__text">가로막대형</span>
-                              </button>
-                            </li>
-                            <li class="select-container__item">
-                              <button class="select-container__button" type="button">
-                                <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                  <use xlink:href="#pie"></use>
-                                </svg>
-                                <span class="select-container__text">원형</span>
-                              </button>
-                            </li>
-                            <li class="select-container__item">
-                              <button class="select-container__button" type="button">
-                                <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                  <use xlink:href="#scatter"></use>
-                                </svg>
-                                <span class="select-container__text">시계열분포</span>
-                              </button>
-                            </li>
-                            <li class="select-container__item">
-                              <button class="select-container__button" type="button">
-                                <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                  <use xlink:href="#motion"></use>
-                                </svg>
-                                <span class="select-container__text">모션</span>
-                              </button>
-                            </li>
-                            <li class="select-container__item--disabled">
-                              <button class="select-container__button" type="button">
-                                <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                  <use xlink:href="#sankey"></use>
-                                </svg>
-                                <span class="select-container__text">Sankey - Old(종료 예정)</span>
-                              </button>
-                            </li>
-                            <li class="select-container__item">
-                              <button class="select-container__button" type="button">
-                                <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                  <use xlink:href="#sankey"></use>
-                                </svg>
-                                <span class="select-container__text">Sankey - New</span>
-                              </button>
-                            </li>
-                            <li class="select-container__item">
-                              <button class="select-container__button" type="button">
-                                <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                  <use xlink:href="#heatmap"></use>
-                                </svg>
-                                <span class="select-container__text">히트맵</span>
-                              </button>
-                            </li>
-                            <li class="select-container__item">
-                              <button class="select-container__button" type="button">
-                                <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                  <use xlink:href="#single-value"></use>
-                                </svg>
-                                <span class="select-container__text">단일값</span>
-                              </button>
-                            </li>
-                            <li class="select-container__item">
-                              <button class="select-container__button" type="button">
-                                <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                  <use xlink:href="#gauge"></use>
-                                </svg>
-                                <span class="select-container__text">Gauge</span>
-                              </button>
-                            </li>
-                            <li class="select-container__item">
-                              <button class="select-container__button" type="button">
-                                <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                  <use xlink:href="#treemap"></use>
-                                </svg>
-                                <span class="select-container__text">트리맵</span>
-                              </button>
-                            </li>
-                            <li class="select-container__item">
-                              <button class="select-container__button" type="button">
-                                <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                  <use xlink:href="#word-cloud"></use>
-                                </svg>
-                                <span class="select-container__text">워드 클라우드</span>
-                              </button>
-                            </li>
-                            <li class="select-container__item">
-                              <button class="select-container__button" type="button">
-                                <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                  <use xlink:href="#anomaly"></use>
-                                </svg>
-                                <span class="select-container__text">Anomaly</span>
-                              </button>
-                            </li>
-                            <li class="select-container__item">
-                              <button class="select-container__button" type="button">
-                                <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                  <use xlink:href="#forecast"></use>
-                                </svg>
-                                <span class="select-container__text">Forecast</span>
-                              </button>
-                            </li>
-                            <li class="select-container__item">
-                              <button class="select-container__button" type="button">
-                                <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                  <use xlink:href="#outlier"></use>
-                                </svg>
-                                <span class="select-container__text">Outlier</span>
-                              </button>
-                            </li>
-                            <li class="select-container__item">
-                              <button class="select-container__button" type="button">
-                                <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                  <use xlink:href="#network"></use>
-                                </svg>
-                                <span class="select-container__text">네트워크 그래프</span>
-                              </button>
-                            </li>
-                            <li class="select-container__item">
-                              <button class="select-container__button" type="button">
-                                <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                  <use xlink:href="#bubble"></use>
-                                </svg>
-                                <span class="select-container__text">Bubble</span>
-                              </button>
-                            </li>
-                            <li class="select-container__item">
-                              <button class="select-container__button" type="button">
-                                <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                  <use xlink:href="#mirror-bar"></use>
-                                </svg>
-                                <span class="select-container__text">Mirror-bar</span>
-                              </button>
-                            </li>
-                            <li class="select-container__item">
-                              <button class="select-container__button" type="button">
-                                <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                  <use xlink:href="#box-plot"></use>
-                                </svg>
-                                <span class="select-container__text">Box-plot</span>
-                              </button>
-                            </li>
-                          </ul>
+                      </div>
+                      <div class="row">
+                        <!-- info 메세지 -->
+                        <div class="notification-message notification-message--info">
+                          <svg class="notification-message__icon svg-icon" aria-hidden="true">
+                            <use xlink:href="#info-fill"></use>
+                          </svg>
+                          <span class="notification-message__text">Notification Message</span>
                         </div>
+                        <!-- //info 메세지-->
                       </div>
                     </div>
                   </div>
@@ -6707,6 +6721,14 @@
                               <span class="text-input-wrap__suffix">px</span>
                             </div>
                           </div>
+                          <!-- validation 체크 -->
+                          <div class="notification-message notification-message--inline notification-message--error">
+                            <svg class="notification-message__icon svg-icon">
+                              <use xlink:href="#issue-fill"></use>
+                            </svg>
+                            <span class="notification-message__text">Notification Message</span>
+                          </div>
+                          <!-- //validation 체크 -->
                         </div>
                       </div>
                     </div>
@@ -7676,82 +7698,6 @@
 </div>
 
   <!-- // 편집화면 컨텍스트 메뉴 영역 -->
-  <!-- 편집화면 조건부객체 미리보기 영역 -->
-  <div class="modal modal--sm" style="position: absolute; top: 360px; right: 310px;">
-  <div class="modal__body modal__body--sm">
-    <div class="condition__body">
-      <form class="form form--vertical">
-        <div class="form__item">
-          <label class="form__label">
-            <span class="form__label-text">값</span>
-          </label>
-          <div class="form__detail">
-            <div class="code__pre h-120">
-  <pre>{% if input_1 %}
-abc
-{% else %}
-efg
-{% endif %}</pre>
-          </div>
-          </div>
-        </div>
-        <div class="form__item">
-          <label class="form__label">
-            <span class="form__label-text">조건</span>
-          </label>
-          <div class="form__detail">
-            <div class="code__pre h-84">
-  <pre>텍스트에 포함
-ab</pre>
-            </div>
-          </div>
-        </div>
-        <div class="form__item">
-          <label class="form__label">
-            <span class="form__label-text">결과</span>
-          </label>
-          <div class="form__detail">
-            <div class="code__pre h-84">
-  <pre>거짓</pre>
-            </div>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
-  <div class="modal__foot">
-    <div class="modal__foot-main-buttons">
-      <button class="button button--tertiary button--lg" type="button">
-        <span>닫기</span>
-      </button>
-    </div>
-  </div>
-</div>
-
-  <!-- // 편집화면 조건부객체 미리보기 영역 -->
-  <!-- 편집화면 코드 미리보기 영역  -->
-  <div class="modal modal--sm" style="position: absolute; top: 890px; right: 310px;">
-  <div class="modal__body modal__body--sm over-flow-auto mh-320">
-    <pre class="whitespace-pre-wrap break-all">
-{% if input_1 %}
-abc
-{% else %}
-efg
-{% endif %}</pre>
-  </div>
-  <div class="modal__foot">
-    <div class="modal__foot-main-buttons">
-      <button class="button button--tertiary button--lg" type="button">
-        닫기
-      </button>
-      <button type="button" class="button button--primary button--lg" ng-click="copyQueryToClipboard()">
-        복사
-      </button>
-    </div>
-  </div>
-</div>
-
-  <!-- // 편집화면 코드 미리보기 영역  -->
   <script src="../../dist/js/main.bundle.js"></script>
 </body>
 
