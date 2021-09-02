@@ -173,3 +173,19 @@
 .tooltip--light .tooltip__text a {
   color: $text-02;
 }
+
+// -------------------------
+// v-tooltip
+// -------------------------
+
+.v-tooltip{
+  display: flex;
+  height: rem(16px);
+  align-items: center;
+}
+
+.svg-icon.v-tooltip__icon{
+  width: rem(16px);
+  height: rem(16px);
+  fill: $text-03;
+}
