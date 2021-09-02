@@ -185,6 +185,7 @@
 
 .notification__text {
   @include font-size("14");
+  color: $text-02;
 }
 
 .notification--info {

@@ -378,3 +378,14 @@
   @include button--icon(1px, 16px);
   // height: 16px;
 }
+
+// underline 테마 버튼일 때 예외 사항
+.button--lg.button--underline,
+.button--lg.button--underline-support,
+.button--lg.button--underline-negative,
+.button--sm.button--underline,
+.button--sm.button--underline-support,
+.button--sm.button--underline-negative{
+  padding-left: 0;
+  padding-right: 0;
+}
