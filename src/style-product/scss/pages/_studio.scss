@@ -760,14 +760,16 @@
 }
 
 .object-label__writing-mode-box {
-  display: table;
   position: absolute;
   width: 100%;
   height: 100%;
+  overflow-y: auto;
 }
 
 .object-label__align-box {
-  display: table-cell;
+  display: table;
+  width: 100%;
+  height: 100%;
 
   &[contenteditable] {
     user-select: text;
@@ -776,6 +778,12 @@
   &:focus-visible {
     outline: 0;
   }
+}
+
+.object-label__text {
+  display: table-cell;
+  word-break: break-all;
+  overflow: hidden;
 }
 
 // ellipse
