@@ -24,6 +24,18 @@
 
 .tag.tag--not-clickable{
   cursor: default;
+
+  &:hover:not(:disabled) {
+    background-color: $hover-row;
+    color: $text-03;
+  }
+
+  &.tag--selected {
+    &:hover:not(:disabled) {
+      background-color: $primary;
+      color: $text-04;
+    }
+  }
 }
 
 .tag__label {
