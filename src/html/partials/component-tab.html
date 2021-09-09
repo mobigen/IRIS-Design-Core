@@ -137,7 +137,7 @@
     <div class="component-example">
       <div class="component-example__live">
         <div style="width: 700px">
-          <div class="tab tab--horizontal tab--pagination" style="width: 600px; margin: 0 auto;">
+          <div class="tab tab--horizontal tab--pagination" style="width: 400px;">
             <button type="button" class="button button--sm button--link button--icon tab__previous-button">
               <svg class="svg-icon" aria-hidden="true">
                 <use xlink:href="#chevron-left-medium"></use>
@@ -148,40 +148,42 @@
                 <use xlink:href="#chevron-right-medium"></use>
               </svg>
             </button>
-            <ul class="tab__bar">
-              <li class="tab__item">
-                <button type="button" class="tab__button">
-                  <span class="tab__button-text">Tab1</span>
-                </button>
-              </li>
-              <!-- 선택된 항목에 tab__item--selected 클래스 추가 -->
-              <li class="tab__item tab__item--selected">
-                <button type="button" class="tab__button">
-                  <span class="tab__button-text">Tab2</span>
-                </button>
-              </li>
-              <li class="tab__item">
-                <button type="button" class="tab__button">
-                  <span class="tab__button-text">Tab2-2</span>
-                </button>
-              </li>
-              <li class="tab__item">
-                <button type="button" class="tab__button">
-                  <span class="tab__button-text">Tab3 - removable</span>
-                </button>
-              </li>
-              <li class="tab__item">
-                <button type="button" class="tab__button">
-                  <span class="tab__button-text">Tab4 - removable</span>
-                </button>
-              </li>
-              <!-- 비활성 항목에 tab__item--disabled 클래스 추가 -->
-              <li class="tab__item tab__item--disabled">
-                <button type="button" class="tab__button">
-                  <span class="tab__button-text">Tab5 - removable, disabled</span>
-                </button>
-              </li>
-            </ul>
+            <div class="tab__bar-wrap">
+              <ul class="tab__bar">
+                <li class="tab__item">
+                  <button type="button" class="tab__button">
+                    <span class="tab__button-text">Tab1</span>
+                  </button>
+                </li>
+                <!-- 선택된 항목에 tab__item--selected 클래스 추가 -->
+                <li class="tab__item tab__item--selected">
+                  <button type="button" class="tab__button">
+                    <span class="tab__button-text">Tab2</span>
+                  </button>
+                </li>
+                <li class="tab__item">
+                  <button type="button" class="tab__button">
+                    <span class="tab__button-text">Tab2-2</span>
+                  </button>
+                </li>
+                <li class="tab__item">
+                  <button type="button" class="tab__button">
+                    <span class="tab__button-text">Tab3 - removable</span>
+                  </button>
+                </li>
+                <li class="tab__item">
+                  <button type="button" class="tab__button">
+                    <span class="tab__button-text">Tab4 - removable</span>
+                  </button>
+                </li>
+                <!-- 비활성 항목에 tab__item--disabled 클래스 추가 -->
+                <li class="tab__item tab__item--disabled">
+                  <button type="button" class="tab__button">
+                    <span class="tab__button-text">Tab5 - removable, disabled</span>
+                  </button>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
