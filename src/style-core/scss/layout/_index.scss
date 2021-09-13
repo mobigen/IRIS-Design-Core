@@ -36,6 +36,41 @@
   background-color: $ui-01;
 }
 
+.index-layout-body__template-inner {
+  transform: translate(0, 0);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: rem(200px);
+  width: 100%;
+  min-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  z-index: z("modal");
+  background: $ui-01;
+  box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.03);
+}
+
+.slide-up {
+  transition: all 0.5s;
+}
+
+.slide-up-enter-active {
+  transition: all 0.5s ease;
+}
+
+.slide-up-leave-active {
+  transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-up-enter,
+.slide-up-leave-active {
+  opacity: 0;
+  transform: translate(0, -100%);
+}
+
 .index-layout-body__top-bar {
   display: flex;
   align-items: center;
@@ -90,10 +125,11 @@
 }
 
 .index-layout-body__controller-select {
-  width: rem(120px);
+  width: auto;
   margin-left: $spacing-xs;
-  & + & {
-    width: rem(128px);
+  
+  &.select--view-all .select-container{
+    max-width: rem(250px);
   }
 }
 
@@ -195,7 +231,7 @@
   padding: 0 35px $layout-xs 35px;
   flex: 1 0 auto;
   overflow-y: auto;
-  height: calc(100vh - 112px);
+  height: calc(100% - 112px);
 
   &.project-thumbnail--no-blank {
     display: none;
@@ -336,14 +372,6 @@
   fill: $text-03;
 }
 
-//.project-thumbnail-list__thumbnail-img-group{
-//  position: absolute;
-//  left: 0;
-//  top: 0;
-//  right: 0;
-//  bottom: 0;
-//}
-
 .project-thumbnail-list__thumbnail-img {
   position: absolute;
   left: 0;
@@ -351,8 +379,8 @@
   right: 0;
   bottom: 0;
   background-image: url(https://www.fujifilm.com/products/digital_cameras/x/fujifilm_x_t1/sample_images/img/index/ff_x_t1_001.JPG);
-  background-position: 50% 50%;
-  background-size: 100% auto;
+  background-position: 0 0;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -445,7 +473,7 @@
 .project-management.project-thumbnail-list__details-management {
   position: absolute;
   top: 0;
-  right: rem(4px);
+  right: 0;
 
   .button.button--icon.button--link {
     .svg-icon {
