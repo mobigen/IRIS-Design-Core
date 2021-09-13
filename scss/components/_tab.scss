@@ -35,10 +35,10 @@
   color: $primary;
 }
 
-.tab__item--selected::after {
+.tab--horizontal .tab__item--selected::after {
   content: "";
   position: absolute;
-  background-color: $primary;
+  background-color: $primary !important;
 }
 
 .tab__item--disabled {
@@ -114,7 +114,7 @@
   flex-grow: 1;
   flex-direction: column;
 
-  .tab__bar:after {
+  .tab__item:after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -152,14 +152,13 @@
 .tab--vertical {
   .tab__bar {
     flex-direction: column;
+  }
+  .tab__item{
     border-right: 2px solid $ui-04;
   }
 
-  .tab__item--selected::after {
-    top: 0;
-    right: -2px;
-    width: 2px;
-    height: 100%;
+  .tab__item.tab__item--selected {
+    border-color: $primary;
   }
 
   .tab__button {
@@ -171,7 +170,7 @@
 // modifier: container theme
 // -------------------------
 .tab--container {
-  .tab__bar:after {
+  .tab__item:after {
     content: none;
   }
 
@@ -237,4 +236,32 @@
   &.tab--vertical .tab__bar {
     border-right: 0;
   }
+}
+
+// tab--pagination
+.tab--pagination{
+  margin: 0 $spacing-lg;
+}
+
+.tab__previous-button{
+  position: absolute;
+  top: 50%;
+  left: -24px;
+  margin-top: -12px;
+}
+
+.tab__next-button{
+  position: absolute;
+  top: 50%;
+  right: -24px;
+  margin-top: -12px;
+}
+
+.tab--pagination .tab__bar-wrap{
+  overflow: hidden;
+}
+
+.tab--pagination .tab__item{
+  height: rem(32px);
+  flex: 0 1 auto;
 }
