@@ -74,13 +74,7 @@
 // -------------------------
 // button-theme
 // -------------------------
-@mixin button-theme(
-  $bg-color,
-  $font-color,
-  $hover-bg-color,
-  $active-bg-color,
-  $border-color: false
-) {
+@mixin button-theme($bg-color, $font-color, $hover-bg-color, $active-bg-color, $border-color: false) {
   background-color: $bg-color;
   color: $font-color;
 
@@ -106,12 +100,7 @@
 }
 
 @mixin button--secondary {
-  @include button-theme(
-    $secondary,
-    $text-04,
-    $hover-secondary,
-    $active-secondary
-  );
+  @include button-theme($secondary, $text-04, $hover-secondary, $active-secondary);
 }
 
 @mixin button--tertiary {
@@ -214,8 +203,8 @@
 
 @mixin button--underline-negative {
   @include button-theme(transparent, $negative, transparent, transparent);
-    padding: 0;
-    text-decoration: underline;
+  padding: 0;
+  text-decoration: underline;
 
   // link 예외 사항
   &:hover {
@@ -242,12 +231,7 @@
 // -------------------------
 // button-size
 // -------------------------
-@mixin button-size(
-  $font-size,
-  $button-height,
-  $icon-size,
-  $button-width: false
-) {
+@mixin button-size($font-size, $button-height, $icon-size, $button-width: false) {
   height: $button-height;
   font-size: $font-size;
 
@@ -385,7 +369,41 @@
 .button--lg.button--underline-negative,
 .button--sm.button--underline,
 .button--sm.button--underline-support,
-.button--sm.button--underline-negative{
+.button--sm.button--underline-negative {
   padding-left: 0;
   padding-right: 0;
+}
+
+.button-group {
+  display: flex;
+}
+
+.button-group__button.select {
+  min-width: auto;
+}
+
+.button-group__button:first-child,
+.button-group__button:first-child .select-selector__button {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.button-group__button:last-child,
+.button-group__button:first-child .select-selector__button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.button-group__button + .button-group__button,
+.button-group__button + .button-group__button .select-selector__button {
+  border-left-width: 0;
+}
+
+.button-group__button .svg-icon {
+  @include svg-icon-size(20px);
+}
+
+.button-group__button .select-selector__button {
+  padding-left: $spacing-xs;
+  padding-right: $spacing-lg;
 }
