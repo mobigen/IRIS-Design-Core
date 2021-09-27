@@ -55,10 +55,6 @@
   width: 100%;
 }
 
-.form__item:last-child .form__detail-list{
-  border: none;
-}
-
 .form__label {
   @include form__label;
 }
@@ -369,13 +365,16 @@
 
 .form__detail-list{
   @include form__detail;
-  padding-bottom: $spacing-md;
-  border-bottom: 1px solid $hover-row;
 }
 
 .form__detail-item{
   display: flex;
   align-items: center;
+}
+
+.form__detail-item--border:last-child{
+  padding-bottom: $spacing-md;
+  border-bottom: 1px solid $hover-row;
 }
 
 .form__detail-item+.form__detail-item{
@@ -395,5 +394,7 @@
 }
 
 .form__detail-detail{
+  display: flex;
+  align-items: center;
   flex: 1 0 auto;
 }
