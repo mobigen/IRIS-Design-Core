@@ -174,6 +174,10 @@
       + .checkbox__label .svg-icon{
         fill: $primary;
       }
+
+      + .checkbox__label span{
+        color: $primary;
+      }
     }
 
     &.checkbox--disabled,
@@ -199,8 +203,8 @@
         color: $primary;
       }
 
-      + .radio__label .context-menu__icon {
-        fill: $primary;
+      + .checkbox__label span{
+        color: $primary;
       }
     }
 
@@ -255,6 +259,10 @@
   }
 
   &__item--selected {
+    color: $primary;
+  }
+
+  &__item--selected &__text {
     color: $primary;
   }
 
