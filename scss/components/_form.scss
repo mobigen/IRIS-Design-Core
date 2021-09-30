@@ -362,11 +362,6 @@
 // -------------------------
 // form__items - 환경설정에 새롭게 추가된 item 유형입니다.
 // -------------------------
-
-.form__detail-list{
-  @include form__detail;
-}
-
 .form__detail-item{
   display: flex;
   align-items: center;
