@@ -110,7 +110,7 @@
     @include font-size("14");
     @include line-height("heading");
     vertical-align: middle;
-    color: inherit;
+    color: $text-01;
   }
 
   &__action-buttons {
