@@ -861,7 +861,7 @@
 }
 
 .object-ima__layer-name {
-  @include line-height($title);
+  @include line-height("title");
   display: inline-block;
   padding: $spacing-2xs;
   background-color: rgba($ui-02, 0.8);
