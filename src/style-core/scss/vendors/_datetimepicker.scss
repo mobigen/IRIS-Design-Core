@@ -1,0 +1,59 @@
+.mx-input{
+  height: rem(32px);
+  padding-right: $spacing-xl;
+  background-color: $ui-02;
+  border: 1px solid $ui-04;
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+
+.mx-icon-calendar, .mx-icon-clear,
+.mx-btn-text,
+.mx-table-date td,
+.mx-table-date th,
+.mx-table th,
+.mx-time-column .mx-time-item{
+  font-size: 13px;
+  color: $text-03;
+}
+
+.mx-input:hover{
+  border-color: $hover-field-border;
+}
+
+.mx-input:focus,
+.mx-btn:hover,
+.mx-btn:hover{
+  border-color: $secondary;
+}
+
+.mx-calendar-content .cell:hover{
+  background-color: $ui-01;
+}
+
+.mx-calendar-content .cell.active{
+  color: $ui-02;
+  background-color: $secondary;
+}
+
+.mx-calendar-content .cell.disabled{
+  opacity: 0.3;
+  &:hover{
+    background-color: $ui-02;
+    opacity: 0.3;
+  }
+}
+
+.mx-icon-calendar svg{
+  width: rem(15px);
+  height: rem(15px);
+}
+
+.mx-time-column .mx-time-item.active{
+  color: $secondary
+}
+
+.mx-time-column .mx-time-item:hover{
+  color: $text-03;
+  background-color: $ui-01;
+}
