@@ -283,6 +283,12 @@
 // dynamic-from--condition
 // -------------------------
 .dynamic-form--condition {
+  .dynamic-form__item + .dynamic-form__item {
+    margin-top: $spacing-md;
+    padding-top: $spacing-md;
+    border-top: 1px solid $ui-04;
+  }
+
   .dynamic-form__form-label {
     width: 20%;
     justify-content: flex-end;
