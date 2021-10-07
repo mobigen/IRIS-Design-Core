@@ -213,6 +213,11 @@
     }
   }
 
+
+  &.tab--vertical .tab__item.tab__item--selected{
+  border-color: $field-border;
+  }
+
   .tab__item--selected .tab__button-text {
     color: $text-03;
   }
