@@ -85,12 +85,14 @@
     cursor: default;
   }
 
-  &__icon {
+  &__icon,
+  &__subicon{
     vertical-align: middle;
     flex-shrink: 0;
   }
 
-  &__icon + &__text {
+  &__icon + &__text,
+  &__subicon + &__text{
     margin-left: $spacing-2xs;
   }
 
@@ -98,7 +100,8 @@
     color: $primary;
   }
 
-  &__button:active &__icon {
+  &__button:active &__icon,
+  &__button:active &__subicon{
     fill: $primary;
   }
 
@@ -107,7 +110,7 @@
     @include font-size("14");
     @include line-height("heading");
     vertical-align: middle;
-    color: inherit;
+    color: $text-01;
   }
 
   &__action-buttons {
@@ -168,8 +171,12 @@
         color: $primary;
       }
 
-      + .checkbox__label .context-menu__icon {
+      + .checkbox__label .svg-icon{
         fill: $primary;
+      }
+
+      + .checkbox__label span{
+        color: $primary;
       }
     }
 
@@ -196,8 +203,8 @@
         color: $primary;
       }
 
-      + .radio__label .context-menu__icon {
-        fill: $primary;
+      + .checkbox__label span{
+        color: $primary;
       }
     }
 
@@ -229,7 +236,8 @@
     color: inherit;
   }
 
-  &__item--disabled &__button:active &__icon {
+  &__item--disabled &__button:active &__icon,
+  &__item--disabled &__button:active &__subicon{
     fill: $text-03;
   }
 
@@ -238,7 +246,8 @@
     background-color: transparent;
   }
 
-  &__item--disabled &__action-button:active &__icon {
+  &__item--disabled &__action-button:active &__icon,
+  &__item--disabled &__action-button:active &__subicon{
     fill: $text-03;
   }
 
@@ -253,17 +262,23 @@
     color: $primary;
   }
 
+  &__item--selected &__text {
+    color: $primary;
+  }
+
   &__item--selected &__checkmark {
     opacity: 1;
     fill: $primary;
   }
 
   &__item--selected &__icon,
+  &__item--selected &__subicon,
   &__item--selected &__action-button .svg-icon {
     fill: $primary;
   }
 
   &__item--selected &__button:active &__icon,
+  &__item--selected &__button:active &__subicon,
   &__item--selected &__button:active .svg-icon {
     fill: $primary;
   }
@@ -337,7 +352,8 @@
     color: $primary;
   }
 
-  &__button:active &__icon {
+  &__button:active &__icon,
+  &__button:active &__subicon{
     fill: $primary;
   }
 
