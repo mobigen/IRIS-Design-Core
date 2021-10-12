@@ -24,7 +24,8 @@
   @include font-weight("regular");
   position: relative;
   display: flex;
-  padding-left: rem(23px); //width of radio 17px + 6px of padding
+  align-items: center;
+  padding-left: rem(24px); //width of radio 17px + 6px of padding
   min-height: rem(24px);
   color: $text-02;
   white-space: nowrap;
