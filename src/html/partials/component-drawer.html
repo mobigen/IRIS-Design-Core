@@ -1,0 +1,922 @@
+<!-- context menu -->
+<div class="page-header">
+  <h2 class="page-header__lable">component</h2>
+  <h3 class="page-header__title">Drawer</h3>
+</div>
+<div class="page-content">
+  <p class="page__desc">드로워는 화면 가장자리에서 안으로 슬라이딩 되는 패널입니다.<br/>사용자가 현재 페이지를 벗어나지 않고 드로워로 인터랙션할 수 있으므로 동일한 컨텍스트 내에서 작업을 보다 효율적으로 수행할 수 있습니다.</p>
+  <div class="page__usage md">
+    <ul>
+      <li>
+        디스크립션는 <em class="text-emphasis">2개</em>의 사이즈가 있습니다.
+      </li>
+    </ul>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Default</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <div class="component-example__row">
+            <div class="drawer">
+              <div class="drawer__head">
+                <button class="drawer__head-control-button" type="button">
+                  <svg class="svg-icon" aria-hidden="true" aria-hidden="true">
+                    <use xlink:href="#setting"></use>
+                  </svg>
+                </button>
+                <strong class="drawer__head-title">로그인 설정</strong>
+                <div class="drawer__actions">
+                  <div class="checkbox">
+                    <input id="drawerCheck01" type="checkbox" class="checkbox__input" value="label" />
+                    <label for="drawerCheck01" class="checkbox__label">실시간 미리보기</label>
+                  </div>
+                </div>
+              </div>
+              <div class="drawer__body" style="height: 900px">
+                <div class="drawer__content">
+                  <button class="drawer__content-clear-button button button--support" type="button">
+                    전체 복원
+                  </button>
+                </div>
+                <form class="form form--vertical">
+                  <div class="form__body">
+                    <div class="form__list">
+                      <div class="form__item">
+                        <label class="form__label">
+                          <span class="form__label-text">이미지</span>
+                        </label>
+                        <div class="form__detail">
+                          <ul class="form__detail-list">
+                            <li class="form__detail-item">
+                              <div class="upload-alt upload-alt--loaded">
+                                <div class="upload-alt__file">
+                                  <input type="file" class="upload-alt__file-input" />
+                                  <button class="upload-alt__file-button" type="button">
+                                    <strong class="upload-alt__file-title">
+                                      파비콘
+                                    </strong>
+                                    <span class="upload-alt__file-text">
+                                      사용자 지정</span>
+                                    <span class="upload-alt__file-icon">
+                                      <svg class="svg-icon upload-alt__file-icon-download" aria-hidden="true">
+                                        <use xlink:href="#upload"></use>
+                                      </svg>
+                                      <!-- 이미지 select된 경우 보여짐 -->
+                                      <svg class="svg-icon upload-alt__file-icon-remove">
+                                        <use xlink:href="#close"></use>
+                                      </svg>
+                                    </span>
+                                  </button>
+                                </div>
+                                <p class="upload-alt__helper-text">
+                                  * 권장 포맷 : 64x64px, ICO
+                                </p>
+                              </div>
+                            </li>
+                            <li class="form__detail-item">
+                              <div class="upload-alt">
+                                <div class="upload-alt__file">
+                                  <input type="file" class="upload-alt__file-input" />
+                                  <button class="upload-alt__file-button" type="button">
+                                    <strong class="upload-alt__file-title">
+                                      화면 좌측 상단 기업 로고
+                                    </strong>
+                                    <span class="upload-alt__file-text">
+                                      기본
+                                    </span>
+                                    <span class="upload-alt__file-icon">
+                                      <svg class="svg-icon upload-alt__file-icon-download" aria-hidden="true">
+                                        <use xlink:href="#upload"></use>
+                                      </svg>
+                                      <!-- 이미지 select된 경우 보여짐 -->
+                                      <svg class="svg-icon upload-alt__file-icon-remove">
+                                        <use xlink:href="#close"></use>
+                                      </svg>
+                                    </span>
+                                  </button>
+                                </div>
+                                <p class="upload-alt__helper-text">
+                                  * 권장 포맷 : 가로 140px, PNG
+                                </p>
+                              </div>
+                            </li>
+                            <li class="form__detail-item">
+                              <div class="upload-alt">
+                                <div class="upload-alt__file">
+                                  <input type="file" class="upload-alt__file-input" />
+                                  <button class="upload-alt__file-button" type="button">
+                                    <strong class="upload-alt__file-title">
+                                      로그인 폼 상단 솔루션 보고
+                                    </strong>
+                                    <span class="upload-alt__file-text">
+                                      기본
+                                    </span>
+                                    <span class="upload-alt__file-icon">
+                                      <svg class="svg-icon upload-alt__file-icon-download" aria-hidden="true">
+                                        <use xlink:href="#upload"></use>
+                                      </svg>
+                                      <!-- 이미지 select된 경우 보여짐 -->
+                                      <svg class="svg-icon upload-alt__file-icon-remove">
+                                        <use xlink:href="#close"></use>
+                                      </svg>
+                                    </span>
+                                  </button>
+                                </div>
+                                <p class="upload-alt__helper-text">
+                                  * 권장 포맷 : 가로 120 / 혹은 세로 56px, PNG
+                                </p>
+                              </div>
+                            </li>
+                            <li class="form__detail-item">
+                              <div class="upload-alt">
+                                <div class="upload-alt__file">
+                                  <input type="file" class="upload-alt__file-input" />
+                                  <button class="upload-alt__file-button" type="button">
+                                    <strong class="upload-alt__file-title">
+                                      배경 이미지
+                                    </strong>
+                                    <span class="upload-alt__file-text">
+                                      기본
+                                    </span>
+                                    <span class="upload-alt__file-icon">
+                                      <svg class="svg-icon upload-alt__file-icon-download" aria-hidden="true">
+                                        <use xlink:href="#upload"></use>
+                                      </svg>
+                                      <!-- 이미지 select된 경우 보여짐 -->
+                                      <svg class="svg-icon upload-alt__file-icon-remove">
+                                        <use xlink:href="#close"></use>
+                                      </svg>
+                                    </span>
+                                  </button>
+                                </div>
+                                <p class="upload-alt__helper-text"></p>
+                              </div>
+                            </li>
+                            <li class="form__detail-item">
+                              <div class="upload-alt">
+                                <div class="upload-alt__file">
+                                  <input type="file" class="upload-alt__file-input" />
+                                  <button class="upload-alt__file-button" type="button">
+                                    <strong class="upload-alt__file-title">
+                                      로그인 폼 배경 이미지
+                                    </strong>
+                                    <span class="upload-alt__file-text">
+                                      기본
+                                    </span>
+                                    <span class="upload-alt__file-icon">
+                                      <svg class="svg-icon upload-alt__file-icon-download" aria-hidden="true">
+                                        <use xlink:href="#upload"></use>
+                                      </svg>
+                                      <!-- 이미지 select된 경우 보여짐 -->
+                                      <svg class="svg-icon upload-alt__file-icon-remove">
+                                        <use xlink:href="#close"></use>
+                                      </svg>
+                                    </span>
+                                  </button>
+                                </div>
+                                <p class="upload-alt__helper-text"></p>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="form__item">
+                        <label class="form__label">
+                          <span class="form__label-text">배경 컨셉 설명</span>
+                        </label>
+                        <div class="form__detail">
+                          <textarea type="text" class="form__detail-textarea text-area text-area--fixed" placeholder="내용을 입력해주세요"></textarea>
+                        </div>
+                      </div>
+                      <div class="form__item">
+                        <label class="form__label">
+                          <span class="form__label-text">로그인 폼 문구</span>
+                          <button class="form__label-clear-button button button--icon button--link button--sm" type="button">
+                            <svg class="svg-icon" aria-hidden="true">
+                              <use xlink:href="#close"></use>
+                            </svg>
+                          </button>
+                          <span class="form__label-subtext"> *TAG입력 </span>
+                        </label>
+                        <div class="form__detail">
+                          <textarea type="text" class="form__detail-textarea text-area text-area--fixed" placeholder="내용을 입력해주세요"></textarea>
+                        </div>
+                      </div>
+                      <div class="form__item">
+                        <label class="form__label">
+                          <span class="form__label-text">회원가입 버튼 사용 여부</span>
+                        </label>
+                        <div class="form__detail">
+                          <div class="radios">
+                            <div class="radio">
+                              <input type="radio" id="formRadio01" name="radio-group" class="radio__input" value="label" checked="" />
+                              <label for="formRadio01" class="radio__label">사용
+                              </label>
+                            </div>
+                            <div class="radio">
+                              <input type="radio" id="formRadio02" name="radio-group" class="radio__input" value="label" checked="" />
+                              <label for="formRadio02" class="radio__label">사용 안함
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__item">
+                        <label class="form__label">
+                          <span class="form__label-text"> 컬러 </span>
+                        </label>
+                        <div class="form__detail">
+                          <div class="table table--secondary">
+                            <table>
+                              <thead>
+                                <tr>
+                                  <th>영역/케이스</th>
+                                  <th>기본</th>
+                                  <th>롤오버</th>
+                                  <th>클릭/포커스</th>
+                                  <th>복원</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>로그인 버튼</td>
+                                  <td>
+                                    <div class="table__color-picker">
+                                      <button type="button" class="table__color-picker-button">
+                                        <span class="table__color-picker-inner" style="background-color: #c4c4c4"></span>
+                                      </button>
+                                      <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="table__color-picker">
+                                      <button type="button" class="table__color-picker-button">
+                                        <span class="table__color-picker-inner" style="background-color: #2678e1"></span>
+                                      </button>
+                                      <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="table__color-picker">
+                                      <button type="button" class="table__color-picker-button">
+                                        <span class="table__color-picker-inner" style="background-color: #ff7e75"></span>
+                                      </button>
+                                      <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <button class="button button--icon button--link" type="button">
+                                      <svg class="svg-icon" aria-hidden="true">
+                                        <use xlink:href="#close-medium"></use>
+                                      </svg>
+                                    </button>
+                                  </td>
+                                </tr>
+                                </tr>
+                                <tr>
+                                  <td>로그인 버튼 텍스트</td>
+                                  <td>
+                                    <div class="table__color-picker">
+                                      <button type="button" class="table__color-picker-button">
+                                        <span class="table__color-picker-inner" style="background-color: #c4c4c4"></span>
+                                      </button>
+                                      <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="table__color-picker">
+                                      <button type="button" class="table__color-picker-button">
+                                        <span class="table__color-picker-inner" style="background-color: #2678e1"></span>
+                                      </button>
+                                      <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="table__color-picker">
+                                      <button type="button" class="table__color-picker-button">
+                                        <span class="table__color-picker-inner" style="background-color: #ff7e75"></span>
+                                      </button>
+                                      <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <button class="button button--icon button--link" type="button">
+                                      <svg class="svg-icon" aria-hidden="true">
+                                        <use xlink:href="#close-medium"></use>
+                                      </svg>
+                                    </button>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>회원가입 텍스트</td>
+                                  <td>
+                                    <div class="table__color-picker">
+                                      <button type="button" class="table__color-picker-button">
+                                        <span class="table__color-picker-inner" style="background-color: #c4c4c4"></span>
+                                      </button>
+                                      <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="table__color-picker">
+                                      <button type="button" class="table__color-picker-button">
+                                        <span class="table__color-picker-inner" style="background-color: #2678e1"></span>
+                                      </button>
+                                      <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="table__color-picker">
+                                      <button type="button" class="table__color-picker-button">
+                                        <span class="table__color-picker-inner" style="background-color: #ff7e75"></span>
+                                      </button>
+                                      <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <button class="button button--icon button--link" type="button">
+                                      <svg class="svg-icon" aria-hidden="true">
+                                        <use xlink:href="#close-medium"></use>
+                                      </svg>
+                                    </button>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>입력폼 배경</td>
+                                  <td>
+                                    <div class="table__color-picker">
+                                      <button type="button" class="table__color-picker-button">
+                                        <span class="table__color-picker-inner" style="background-color: #c4c4c4"></span>
+                                      </button>
+                                      <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="table__color-picker">
+                                      <button type="button" class="table__color-picker-button">
+                                        <span class="table__color-picker-inner" style="background-color: #2678e1"></span>
+                                      </button>
+                                      <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="table__color-picker">
+                                      <button type="button" class="table__color-picker-button">
+                                        <span class="table__color-picker-inner" style="background-color: #ff7e75"></span>
+                                      </button>
+                                      <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <button class="button button--icon button--link" type="button">
+                                      <svg class="svg-icon" aria-hidden="true">
+                                        <use xlink:href="#close-medium"></use>
+                                      </svg>
+                                    </button>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>입력폼 테두리</td>
+                                  <td>
+                                    <div class="table__color-picker">
+                                      <button type="button" class="table__color-picker-button">
+                                        <span class="table__color-picker-inner" style="background-color: #c4c4c4"></span>
+                                      </button>
+                                      <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="table__color-picker">
+                                      <button type="button" class="table__color-picker-button">
+                                        <span class="table__color-picker-inner" style="background-color: #2678e1"></span>
+                                      </button>
+                                      <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="table__color-picker">
+                                      <button type="button" class="table__color-picker-button">
+                                        <span class="table__color-picker-inner" style="background-color: #ff7e75"></span>
+                                      </button>
+                                      <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <button class="button button--icon button--link" type="button">
+                                      <svg class="svg-icon" aria-hidden="true">
+                                        <use xlink:href="#close-medium"></use>
+                                      </svg>
+                                    </button>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>입력폼 텍스트</td>
+                                  <td>
+                                    <div class="table__color-picker">
+                                      <button type="button" class="table__color-picker-button">
+                                        <span class="table__color-picker-inner" style="background-color: #c4c4c4"></span>
+                                      </button>
+                                      <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="table__color-picker">
+                                      <button type="button" class="table__color-picker-button">
+                                        <span class="table__color-picker-inner" style="background-color: #2678e1"></span>
+                                      </button>
+                                      <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="table__color-picker">
+                                      <button type="button" class="table__color-picker-button">
+                                        <span class="table__color-picker-inner" style="background-color: #ff7e75"></span>
+                                      </button>
+                                      <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <button class="button button--icon button--link" type="button">
+                                      <svg class="svg-icon" aria-hidden="true">
+                                        <use xlink:href="#close-medium"></use>
+                                      </svg>
+                                    </button>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>로그인 내 텍스트</td>
+                                  <td>
+                                    <div class="table__color-picker">
+                                      <button type="button" class="table__color-picker-button">
+                                        <span class="table__color-picker-inner" style="background-color: #c4c4c4"></span>
+                                      </button>
+                                      <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="table__color-picker">
+                                      <button type="button" class="table__color-picker-button">
+                                        <span class="table__color-picker-inner" style="background-color: #2678e1"></span>
+                                      </button>
+                                      <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="table__color-picker">
+                                      <button type="button" class="table__color-picker-button">
+                                        <span class="table__color-picker-inner" style="background-color: #ff7e75"></span>
+                                      </button>
+                                      <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <button class="button button--icon button--link" type="button">
+                                      <svg class="svg-icon" aria-hidden="true">
+                                        <use xlink:href="#close-medium"></use>
+                                      </svg>
+                                    </button>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>체크박스 활성시 배경</td>
+                                  <td>
+                                    <div class="table__color-picker">
+                                      <button type="button" class="table__color-picker-button">
+                                        <span class="table__color-picker-inner" style="background-color: #c4c4c4"></span>
+                                      </button>
+                                      <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="table__color-picker">
+                                      <button type="button" class="table__color-picker-button">
+                                        <span class="table__color-picker-inner" style="background-color: #2678e1"></span>
+                                      </button>
+                                      <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="table__color-picker">
+                                      <button type="button" class="table__color-picker-button">
+                                        <span class="table__color-picker-inner" style="background-color: #ff7e75"></span>
+                                      </button>
+                                      <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <button class="button button--icon button--link" type="button">
+                                      <svg class="svg-icon" aria-hidden="true">
+                                        <use xlink:href="#close-medium"></use>
+                                      </svg>
+                                    </button>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>체크박스 아이콘</td>
+                                  <td>
+                                    <div class="table__color-picker">
+                                      <button type="button" class="table__color-picker-button">
+                                        <span class="table__color-picker-inner" style="background-color: #c4c4c4"></span>
+                                      </button>
+                                      <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="table__color-picker">
+                                      <button type="button" class="table__color-picker-button">
+                                        <span class="table__color-picker-inner" style="background-color: #2678e1"></span>
+                                      </button>
+                                      <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="table__color-picker">
+                                      <button type="button" class="table__color-picker-button">
+                                        <span class="table__color-picker-inner" style="background-color: #ff7e75"></span>
+                                      </button>
+                                      <input type="text" class="text-input table__color-picker-input" placeholder="placeholder text" />
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <button class="button button--icon button--link" type="button">
+                                      <svg class="svg-icon" aria-hidden="true">
+                                        <use xlink:href="#close-medium"></use>
+                                      </svg>
+                                    </button>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__item">
+                        <label class="form__label">
+                          <span class="form__label-text">Copyrights</span>
+                          <span class="form__label-subtext"> *TAG입력 </span>
+                        </label>
+                        <div class="form__detail">
+                          <textarea type="text" class="form__detail-textarea text-area text-area--fixed" placeholder="내용을 입력해주세요"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="drawer__foot">
+                <button class="button button--tertiary button--lg" type="button">
+                  초기화
+                </button>
+                <div class="drawer__foot-main-buttons">
+                  <button class="button button--primary button--lg" type="button">
+                    <span class="button__text">저장</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Description Drawer</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <div class="component-example__row">
+            <div class="drawer" style="width: 600px;">
+              <div class="drawer__head">
+                <button class="drawer__head-control-button" type="button">
+                  <svg class="svg-icon" aria-hidden="true">
+                    <use xlink:href="#setting"></use>
+                  </svg>
+                </button>
+                <strong class="drawer__head-title">사용자 계정 정보</strong>
+                <div class="drawer__actions">
+                  <button class="button button--icon button--link">
+                    <svg class="svg-icon" aria-hidden="true">
+                      <use xlink:href="#close"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="drawer__body">
+                <div class="description">
+                  <div class="description__head">
+                    <strong class="description__head-title">
+                      Information
+                    </strong>
+                  </div>
+                  <div class="description__body">
+                    <ul class="description__list">
+                      <li class="description__item">
+                        <span class="description__title">
+                          아이디아이디아이디아이디아이디
+                        </span>
+                        <span class="description__text"> desirade </span>
+                      </li>
+                      <li class="description__item">
+                        <span class="description__title"> 이름 </span>
+                        <span class="description__text"> 홍길동 </span>
+                      </li>
+                      <li class="description__item">
+                        <span class="description__title"> 역할 </span>
+                        <span class="description__text"> 사용자 </span>
+                      </li>
+                      <li class="description__item">
+                        <span class="description__title"> 그룹 </span>
+                        <span class="description__text">
+                          JIRANSECURITYJIRANSECURITYJIRANSECURITYJIRANSECURITYJIRANSECURITY
+                        </span>
+                      </li>
+                      <li class="description__item">
+                        <span class="description__title"> 전화번호 </span>
+                        <span class="description__text"> 010-1234-5376 </span>
+                      </li>
+                      <li class="description__item">
+                        <span class="description__title"> 그룹 </span>
+                        <span class="description__text"> JIRANSECURITY </span>
+                      </li>
+                      <li class="description__item">
+                        <span class="description__title"> 이메일 </span>
+                        <span class="description__text">
+                          gildong@hotmail.com
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="description__foot">
+                    <div class="description__foot-main-buttons">
+                      <button class="button button--support" type="button">
+                        <span class="button__text"> 수정 </span>
+                      </button>
+                      <button class="button button--negative" type="button">
+                        <span class="button__text"> 삭제 </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Form Drawer</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <div class="component-example__row">
+            <div class="drawer" style="width: 600px;">
+              <div class="drawer__head">
+                <button class="drawer__head-control-button" type="button">
+                  <svg class="svg-icon" aria-hidden="true">
+                    <use xlink:href="#setting"></use>
+                  </svg>
+                </button>
+                <strong class="drawer__head-title">사용자 계정 정보</strong>
+                <div class="drawer__actions">
+                  <button class="button button--icon button--link">
+                    <svg class="svg-icon" aria-hidden="true">
+                      <use xlink:href="#close"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="drawer__body" style="height: 900px">
+                <form class="form">
+                  <div class="form__head">
+                    <strong class="form__head-title"> 그룹 기본설정 </strong>
+                  </div>
+                  <div class="form__body">
+                    <div class="form__list">
+                      <div class="form__item">
+                        <label class="form__label">
+                          <span class="form__label-text">그룹 메뉴 아이콘</span>
+                        </label>
+                        <div class="form__detail">
+                          <div class="upload-preview">
+                            <div class="upload-preview__thumbnail">
+                              <svg class="svg-icon" aria-hidden="true">
+                                <use xlink:href="#object-image"></use>
+                              </svg>
+                              <p class="upload-preview__thumbnail-text">
+                                파일을 선택하시면 이곳에 추가됩니다.
+                                <br />
+                                pdf, jpg, gif up to 10MB
+                              </p>
+                            </div>
+                            <div class="upload-preview__file">
+                              <input type="file" class="upload-preview__file-input" />
+                              <label class="upload-preview__file-label">
+                                <svg class="svg-icon" aria-hidden="true">
+                                  <use xlink:href="#upload"></use>
+                                </svg>
+                                <span class="upload-preview__file-text"> Click To Upload </span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__item">
+                        <label class="form__label">
+                          <span class="form__label-text">그룹명</span>
+                          <span class="form__label-subtext">(한국어)</span>
+                        </label>
+                        <div class="form__detail">
+                          <input type="text" class="text-input" placeholder="placeholder text" />
+                        </div>
+                      </div>
+                      <div class="form__item">
+                        <label class="form__label">
+                          <span class="form__label-text">그룹 설명</span>
+                          <span class="form__label-subtext">(한국어)</span>
+                        </label>
+                        <div class="form__detail">
+                          <input type="text" class="text-input" placeholder="placeholder text" />
+                        </div>
+                      </div>
+                      <div class="form__item">
+                        <label class="form__label">
+                          <span class="form__label-text">그룹명</span>
+                          <span class="form__label-subtext">(한국어)</span>
+                        </label>
+                        <div class="form__detail">
+                          <input type="text" class="text-input" placeholder="placeholder text" />
+                        </div>
+                      </div>
+                      <div class="form__item">
+                        <label class="form__label">
+                          <span class="form__label-text">그룹명</span>
+                          <span class="form__label-subtext">(한국어)</span>
+                        </label>
+                        <div class="form__detail">
+                          <input type="text" class="text-input" placeholder="placeholder text" />
+                        </div>
+                      </div>
+                      <div class="form__item">
+                        <label class="form__label">
+                          <span class="form__label-text">그룹 설명</span>
+                          <span class="form__label-subtext">(한국어)</span>
+                        </label>
+                        <div class="form__detail">
+                          <input type="text" class="text-input" placeholder="placeholder text" />
+                        </div>
+                      </div>
+                      <div class="form__item">
+                        <label class="form__label">
+                          <span class="form__label-text">그룹명</span>
+                          <span class="form__label-subtext">(한국어)</span>
+                        </label>
+                        <div class="form__detail">
+                          <input type="text" class="text-input" placeholder="placeholder text" />
+                        </div>
+                      </div>
+                      <div class="form__item">
+                        <label class="form__label">
+                          <span class="form__label-text">그룹 설명</span>
+                          <span class="form__label-subtext">(한국어)</span>
+                        </label>
+                        <div class="form__detail">
+                          <input type="text" class="text-input" placeholder="placeholder text" />
+                        </div>
+                      </div>
+                      <div class="form__item">
+                        <label class="form__label">
+                          <span class="form__label-text">그룹 설명</span>
+                          <span class="form__label-subtext">(한국어)</span>
+                        </label>
+                        <div class="form__detail">
+                          <div class="checkbox">
+                            <input id="formChekcbox-01" type="checkbox" class="checkbox__input" value="label" />
+                            <label for="formChekcbox-01" class="checkbox__label">첫 그룹으로 설정</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <form class="form">
+                  <div class="form__head">
+                    <strong class="form__head-title"> 그룹 기본설정 </strong>
+                  </div>
+                  <div class="form__body">
+                    <div class="form__list">
+                      <div class="form__item">
+                        <label class="form__label">
+                          <span class="form__label-text">그룹 타입</span>
+                        </label>
+                        <div class="form__detail">
+                          <!-- select--open 클래스 추가시 open -->
+                          <div class="select">
+                            <div class="select-selector">
+                              <button class="select-selector__button" type="button">
+                                <span class="select-selector__title">상단</span>
+                                <svg class="svg-icon select-selector__icon" aria-hidden="true">
+                                  <use xlink:href="#chevron-down-medium"></use>
+                                </svg>
+                              </button>
+                            </div>
+                            <div class="select-container">
+                              <ul class="select-container__list">
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="svg-icon select-container__icon" aria-hidden="true" aria-hidden="true">
+                                      <use xlink:href="#link"></use>
+                                    </svg>
+                                    <span class="select-container__text">URL 관리</span>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="svg-icon select-container__icon" aria-hidden="true">
+                                      <use xlink:href="#key"></use>
+                                    </svg>
+                                    <span class="select-container__text">권한 설정</span>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button" disabled>
+                                    <svg class="svg-icon select-container__icon" aria-hidden="true">
+                                      <use xlink:href="#copy"></use>
+                                    </svg>
+                                    <span class="select-container__text">사본으로 저장</span>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="svg-icon select-container__icon" aria-hidden="true">
+                                      <use xlink:href="#write"></use>
+                                    </svg>
+                                    <span class="select-container__text">정보 변경</span>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="svg-icon select-container__icon" aria-hidden="true">
+                                      <use xlink:href="#popout"></use>
+                                    </svg>
+                                    <span class="select-container__text">목록으로 나가기</span>
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__item">
+                        <label class="form__label">
+                          <span class="form__label-text">그룹 메뉴 아이콘</span>
+                        </label>
+                        <div class="form__detail">
+                          <div class="upload-preview">
+                            <div class="upload-preview__thumbnail">
+                              <svg class="svg-icon" aria-hidden="true">
+                                <use xlink:href="#object-image"></use>
+                              </svg>
+                              <p class="upload-preview__thumbnail-text">
+                                파일을 선택하시면 이곳에 추가됩니다.
+                                <br />
+                                pdf, jpg, gif up to 10MB
+                              </p>
+                            </div>
+                            <div class="upload-preview__file">
+                              <input type="file" class="upload-preview__file-input" />
+                              <label class="upload-preview__file-label">
+                                <svg class="svg-icon" aria-hidden="true">
+                                  <use xlink:href="#upload"></use>
+                                </svg>
+                                <span class="upload-preview__file-text"> Click To Upload </span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="drawer__foot">
+                <button class="button button--tertiary button--lg" type="button">
+                  초기화
+                </button>
+                <div class="drawer__foot-main-buttons">
+                  <button class="button button--primary button--lg" type="button">
+                    <span class="button__text">저장</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
