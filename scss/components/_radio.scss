@@ -1,0 +1,130 @@
+.radio {
+  display: block;
+  position: relative;
+}
+
+.radios {
+  display: flex;
+}
+
+.radios .radio:not(:last-of-type) {
+  margin-right: $spacing-xs;
+}
+
+.radios--vertical {
+  flex-direction: column;
+}
+
+.radio__input {
+  @include hidden;
+}
+
+.radio__label {
+  @include line-height("heading");
+  @include font-weight("regular");
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: rem(24px); //width of radio 17px + 6px of padding
+  min-height: rem(24px);
+  color: $text-02;
+  white-space: nowrap;
+  user-select: none;
+  cursor: pointer;
+}
+
+.radio__label::before,
+.radio__label::after {
+  box-sizing: border-box;
+  transition: all $duration-fast-01 motion(entrance, productive);
+}
+
+.radio__label::before {
+  content: "";
+  width: rem(17px);
+  height: rem(17px);
+  margin: rem(2px);
+  position: absolute;
+  left: 0;
+  top: rem(1px);
+  background-color: transparent;
+  border: 1px solid $text-03;
+  border-radius: 50%;
+}
+
+.radio__label::after {
+  content: "";
+  position: absolute;
+  left: rem(7px);
+  top: rem(8px);
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: $text-04;
+}
+
+// -------------------------
+// 상태별 스타일
+// -------------------------
+// hover 상태
+.radio__label:hover::before {
+  border-color: $primary;
+}
+
+// checked 상태
+.radio__input:checked + .radio__label::before {
+  background-color: $primary;
+  border-color: $primary;
+}
+
+.radio__input:checked + .radio__label:hover::after {
+  background-color: $text-04;
+}
+
+// disabled 상태
+.radio--disabled .radio__label,
+.radio__input:disabled + .radio__label {
+  opacity: 0.4;
+  cursor: not-allowed;
+
+  &:hover {
+    color: $text-03;
+
+    &::before,
+    &::after {
+      border-color: $text-03;
+    }
+  }
+}
+
+// checked + disabled 상태
+.radio__input:checked:disabled + .radio__label:hover::before {
+  border-color: $primary;
+}
+
+// -------------------------
+// 크기별 스타일
+// -------------------------
+.radio--lg {
+  .radio__label {
+    @include font-size("16");
+    padding-left: rem(28px); //width of radio 20px + 8px of padding
+    min-height: rem(28px);
+  }
+
+  .radio__label::before {
+    content: "";
+    width: rem(20px);
+    height: rem(20px);
+    margin: rem(2px);
+    top: rem(2px);
+    border-width: rem(2px);
+  }
+
+  .radio__label::after {
+    left: rem(8px);
+    top: rem(10px);
+    width: rem(8px);
+    height: rem(8px);
+  }
+}
