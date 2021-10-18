@@ -345,6 +345,7 @@
 .select--color-picker{
   .select-selector__button{
     padding-left: $spacing-2xs;
+    padding-right: rem(28px);
   }
 
   .color-picker__color {
