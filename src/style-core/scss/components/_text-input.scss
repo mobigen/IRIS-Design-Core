@@ -347,6 +347,7 @@ input[type="range"] + .text-input-wrap .text-input {
 }
 
 .text-edit__title{
+  @include font-weight("regular");
   @include text-overflow();
 }
 
