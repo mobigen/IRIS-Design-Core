@@ -335,3 +335,21 @@
 input[type="range"] + .text-input-wrap .text-input {
   width: rem(80px);
 }
+
+
+// -------------------------
+// text edit + text input
+// -------------------------
+.text-edit{
+  display: flex;
+  align-items: center;
+  padding: $spacing-2xs 0;
+}
+
+.text-edit__title{
+  @include text-overflow();
+}
+
+.text-edit__button{
+  margin-left: $spacing-2xs;
+}
