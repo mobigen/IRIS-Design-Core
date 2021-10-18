@@ -383,3 +383,24 @@
   height: 100%;
   overflow: auto;
 }
+
+//----------------------------------------------
+// side-panel 추가된 Block Element
+// ---------------------------------------------
+.side-panel__top-bar{
+  display: flex;
+  height: rem(56px);
+  padding: 0 $spacing-sm;
+  align-items: center;
+  background-color: $ui-01;
+}
+
+.side-panel__action-buttons{
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+
+  .button + .button{
+    margin-left: $spacing-2xs;
+  }
+}

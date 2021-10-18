@@ -338,3 +338,20 @@
     width: auto;
   }
 }
+
+// -------------------------
+// select color picker
+// -------------------------
+.select--color-picker{
+  .select-selector__button{
+    padding-left: $spacing-2xs;
+  }
+
+  .color-picker__color {
+    width: rem(36px);
+    height: 100%;
+    border: 1px solid $ui-04;
+  }
+}
+
+
