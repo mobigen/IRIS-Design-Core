@@ -125,6 +125,37 @@
   @include button--icon(6px, 20px);
 }
 
+// tertiary Theme
+.toggle-button--tertiary {
+  .toggle-button__item {
+    @include button-theme($ui-02, $text-02, $ui-01, $ui-03, $ui-04);
+
+    &:not(:first-child) {
+      width: rem(32px);
+      border-left: transparent;
+    }
+  }
+
+  .toggle-button__item--selected,
+  .toggle-button__item--selected.toggle-button__item--disabled,
+  .toggle-button__item--selected:disabled,
+  .toggle-button__item--selected:disabled:hover,
+  .toggle-button__item--selected:disabled:focus {
+    background-color: $ui-03;
+  }
+
+  .toggle-button__item--disabled,
+  .toggle-button__item--disabled:hover,
+  .toggle-button__item--disabled:focus,
+  .toggle-button__item--disabled:disabled,
+  .toggle-button__item--disabled:disabled:hover,
+  .toggle-button__item--disabled:disabled:focus{
+    background-color: $ui-02 !important;
+    opacity: 0.25;
+    cursor: not-allowed;
+  }
+}
+
 // -------------------------
 // Size
 // -------------------------
