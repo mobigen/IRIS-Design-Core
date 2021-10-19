@@ -64,3 +64,11 @@
 .progressbar--major::-webkit-progress-value {
   background-color: #34DCA1;
 }
+
+// -------------------------
+// progressbar--sm
+// -------------------------
+.progressbar--sm,
+.progressbar--sm::-webkit-progress-bar{
+  height: rem(6px);
+}
