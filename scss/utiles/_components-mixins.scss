@@ -226,8 +226,14 @@
     }
   }
 
+  &__item--disabled &__button-icon,
+  &__item--disabled &__button-icon:hover,
+  &__item--disabled &__button-icon:active{
+    fill: $hover-row;
+  }
+
   &__item--disabled &__button,
-  &__item--disabled &__action-button {
+  &__item--disabled &__action-button{
     opacity: 0.4;
     cursor: not-allowed;
   }
@@ -273,7 +279,8 @@
 
   &__item--selected &__icon,
   &__item--selected &__subicon,
-  &__item--selected &__action-button .svg-icon {
+  &__item--selected &__action-button .svg-icon,
+  &__item--selected &__button-icon{
     fill: $primary;
   }
 
