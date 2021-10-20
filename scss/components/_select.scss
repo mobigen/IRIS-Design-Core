@@ -355,4 +355,28 @@
   }
 }
 
+// -------------------------
+// select 화살표 UI 상태에 따른 컬러 값 
+// -------------------------
+.select-container__item:hover,
+.select-container__item:active{
+  .select-container__button-icon{
+    fill: $primary;
+  }
+}
+
+.select-container__item--selected{
+  .select-container__button-icon{
+    fill: $primary;
+  }
+}
+
+.select-container__item--disabled{
+  .select-container__button-icon,
+  .select-container__button-icon:hover,
+  .select-container__button-icon:active{
+    fill: $hover-row;
+  }
+}
+
 
