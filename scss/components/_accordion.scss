@@ -127,3 +127,20 @@
 .accordion__head--open + .accordion__body {
   display: block;
 }
+
+// -------------------------
+// accordion-horizontal--lg
+// -------------------------
+
+.accordion-horizontal--lg {
+  .accordion-horizontal__button {
+    height: rem(74px);
+    padding: $spacing-xs $spacing-2xs;
+  }
+
+  .accordion-horizontal__icon{
+    width: rem(36px);
+    height: rem(36px);
+  }
+}
+

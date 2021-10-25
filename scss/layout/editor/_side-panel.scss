@@ -4,11 +4,6 @@
   position: relative;
 }
 
-// TODO: Range 스타일링 후 제거 필요
-.side-panel input[type="range"] {
-  width: 100%;
-}
-
 .side-panel__component-name-container {
   padding: $spacing-xs $spacing-sm;
   border-bottom: 1px solid $ui-04;
@@ -394,8 +389,6 @@
   padding: 0 $spacing-sm;
   align-items: center;
   background-color: $ui-01;
-  border-left: 1px solid $ui-04;
-  border-right: 1px solid $ui-04;
 }
 
 .side-panel__action-buttons{
