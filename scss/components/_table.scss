@@ -245,6 +245,11 @@ th .button {
   margin-left: auto;
 }
 
+.table__toolbar-filter {
+  display: flex;
+  align-items: center;
+}
+
 .table__toolbar-title {
   @include text-overflow();
   @include font-weight("regular");
