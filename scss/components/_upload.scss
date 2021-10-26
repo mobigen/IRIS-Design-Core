@@ -413,7 +413,6 @@
 
 .upload-drag__description-text {
   @include font-size("18");
-  @include font-weight("bold");
   color: $text-03;
   text-align: center
 }
