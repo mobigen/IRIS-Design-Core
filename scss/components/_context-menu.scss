@@ -2,7 +2,6 @@
   @include list;
   @include layer("pop-out");
   position: absolute;
-  color: $text-02;
   border-radius: $field-border-radius;
   z-index: z("overlay");
 }
@@ -13,8 +12,13 @@
   background-color: $ui-02;
 }
 
+.context-menu__icon{
+  fill: $text-02;
+}
+
 .context-menu__text {
   flex-grow: 1;
+  color: $text-02;
 }
 
 .context-menu__subtext {
