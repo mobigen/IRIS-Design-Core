@@ -258,6 +258,15 @@ th .button {
   color: $text-02;
 }
 
+.table__result-count-text {
+  color: $text-02;
+}
+
+.table__result-count-filtered-text {
+  margin-left: $spacing-xs;
+  color: $text-02;
+}
+
 .table__footbar {
   display: flex;
   margin-top: $spacing-xs;
