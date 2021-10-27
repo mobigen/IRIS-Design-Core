@@ -194,6 +194,7 @@
   }
 
   .form__detail-text{
+    @include font-weight("medium");
     font-size: 15px;
     color: $text-01;
   }
