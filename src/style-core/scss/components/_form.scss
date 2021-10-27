@@ -193,6 +193,11 @@
     margin-top: $spacing-sm;
   }
 
+  .form__detail-text{
+    font-size: 15px;
+    color: $text-01;
+  }
+
   .form__detail-textarea {
     height: 120px;
   }
