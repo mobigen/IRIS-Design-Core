@@ -245,11 +245,25 @@ th .button {
   margin-left: auto;
 }
 
+.table__toolbar-filter {
+  display: flex;
+  align-items: center;
+}
+
 .table__toolbar-title {
   @include text-overflow();
   @include font-weight("regular");
   @include font-size("13");
   @include line-height("heading");
+  color: $text-02;
+}
+
+.table__result-count-text {
+  color: $text-02;
+}
+
+.table__result-count-filtered-text {
+  margin-left: $spacing-xs;
   color: $text-02;
 }
 
