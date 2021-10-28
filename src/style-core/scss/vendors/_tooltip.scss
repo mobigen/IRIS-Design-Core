@@ -1,0 +1,75 @@
+// v-tooltip 사용으로, 별도 scss 파일 필요 (IDC의 tooltip UI 반영 완료)
+//----------------------------------------------
+// Tooltip
+// ---------------------------------------------
+.tooltip {
+  display: block !important;
+
+  .tooltip-inner {
+    // width: 100%;
+    // height: 100%;
+    @include font-size("13");
+    @include line-height("body");
+    color: $text-04;
+  }
+
+  .tooltip-arrow {
+    position: absolute;
+    width: rem(8px);
+    height: rem(8px);
+    background-color: $text-03;
+    transform: rotate(45deg);
+  }
+
+  &[x-placement^="top"] {
+    margin-bottom: 5px;
+
+    .tooltip-arrow {
+      top: calc(100% - 4px);
+      left: 50%;
+      margin-left: -$spacing-2xs;
+    }
+  }
+
+  &[x-placement^="bottom"] {
+    margin-top: 5px;
+
+    .tooltip-arrow {
+      top: -4px;
+      left: 50%;
+      margin-left: -$spacing-2xs;
+    }
+  }
+
+  &[x-placement^="right"] {
+    margin-left: 5px;
+
+    .tooltip-arrow {
+      top: 50%;
+      left: -4px;
+      margin-top: -$spacing-2xs;
+    }
+  }
+
+  &[x-placement^="left"] {
+    margin-right: 5px;
+
+    .tooltip-arrow {
+      top: 50%;
+      right: -4px;
+      margin-top: -$spacing-2xs;
+    }
+  }
+
+  &[aria-hidden="true"] {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.15s, visibility 0.15s;
+  }
+
+  &[aria-hidden="false"] {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.15s;
+  }
+}
