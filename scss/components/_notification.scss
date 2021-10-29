@@ -226,3 +226,26 @@
 .notification-full {
   @include notification-full;
 }
+
+// -------------------------
+// Notification Full - sm
+// -------------------------
+
+.notification-full--sm{
+
+  .notification-full__icon{
+    width: rem(36px);
+    height: rem(36px);
+    margin-bottom: $spacing-md;
+  }
+
+  .notification-full__text{
+    @include font-size("18");
+  }
+
+  .notification-full__subtext{
+    @include font-size("12");
+    margin-top: $spacing-xs;
+  }
+
+}
