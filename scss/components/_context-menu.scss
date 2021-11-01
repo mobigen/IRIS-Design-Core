@@ -169,3 +169,11 @@
     @include font-size("12");
   }
 }
+
+// -------------------------
+// Modifier - division-line
+// -------------------------
+
+.context-menu__item--division-line{
+  border-bottom: 1px solid $ui-04;
+}
