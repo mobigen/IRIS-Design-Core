@@ -186,6 +186,29 @@
   height: 100%;
 }
 
+// grid 차트 체크박스 커스텀 
+.canvas-object.object-area {
+  .ag-theme-default .ag-checkbox-input-wrapper {
+    line-height: 20px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .ag-checkbox-input-wrapper::after {
+    width: 20px;
+    height: 20px;
+    background: url("#{$img-path}/studio/icon_check.png") no-repeat 0 0;
+  }
+
+  .ag-checkbox-input-wrapper.ag-checked::after {
+    background-position: -20px 0;
+  }
+
+  .ag-checkbox-input-wrapper.ag-indeterminate::after {
+    background-position: -40px 0;
+  }
+}
+
 // 2019-08-27 MOD KHY
 .grid-chart-wrap .ag-theme-default {
   height: 100%;
