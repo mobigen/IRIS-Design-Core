@@ -1336,6 +1336,10 @@
       fill: $text-04;
     }
   }
+
+  .object-button__text {
+    width: unset;
+  }
 }
 
 .tags {
