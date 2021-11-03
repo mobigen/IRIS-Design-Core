@@ -3,7 +3,17 @@
 // Tooltip
 // ---------------------------------------------
 .tooltip {
+  z-index: z("tooltip");
+  position: absolute;
+  max-width: rem(480px);
+  padding: $spacing-sm;
+  background-color: $text-03;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.07);
+  transition-duration: $duration-fast-02;
+  transition-timing-function: ease-in-out;
   display: block !important;
+  // white-space: nowrap;
 
   .tooltip-inner {
     // width: 100%;
