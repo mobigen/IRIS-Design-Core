@@ -1908,13 +1908,15 @@
   margin-left: $spacing-2xs;
 }
 
-.map-legend__gradient-subtext-wrap {
+.map-legend__gradient-subtext-wrap,
+.map-gradient__text-box {
   display: flex;
   justify-content: space-between;
   margin-top: $spacing-2xs;
 }
 
-.map-legend__gradient-subtext {
+.map-legend__gradient-subtext,
+.map-gradient__text {
   @include font-size("11");
 }
 
