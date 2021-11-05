@@ -1908,13 +1908,15 @@
   margin-left: $spacing-2xs;
 }
 
-.map-legend__gradient-subtext-wrap {
+.map-legend__gradient-subtext-wrap,
+.map-gradient__text-box {
   display: flex;
   justify-content: space-between;
   margin-top: $spacing-2xs;
 }
 
-.map-legend__gradient-subtext {
+.map-legend__gradient-subtext,
+.map-gradient__text {
   @include font-size("11");
 }
 
@@ -2312,6 +2314,11 @@
 
 .chart-picker-mb {
   margin-bottom: $spacing-2xs;
+}
+
+//studio내 텍스트가 길어질때 툴팁을 벗어나는 문제 방지
+.tooltip-studio__text {
+  white-space: normal;
 }
 
 // -------------------------
