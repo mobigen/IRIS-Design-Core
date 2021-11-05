@@ -2316,6 +2316,11 @@
   margin-bottom: $spacing-2xs;
 }
 
+//studio내 텍스트가 길어질때 툴팁을 벗어나는 문제 방지
+.tooltip-studio__text {
+  white-space: normal;
+}
+
 // -------------------------
 // ui-resizable
 // -------------------------
