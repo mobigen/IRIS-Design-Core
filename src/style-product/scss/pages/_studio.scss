@@ -2321,9 +2321,9 @@
   white-space: normal;
 }
 
-//studio내 overlay가 모달보다 위에 위치하도록 처리
-.modal {
-  z-index: 6500;
+//studio내 overlay가 로딩스피너를 포함하고 있을때 모달보다 위에 위치하도록 처리
+.overlay--loading {
+  z-index: 10000;
 }
 
 // -------------------------
