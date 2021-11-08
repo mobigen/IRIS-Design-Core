@@ -45,7 +45,7 @@
 @media print {
   /* 머리글, 바닥글 제거*/
   @page {
-    margin: 0
+    margin: 0;
   }
 
   /* 모든 배경색, 이미지 보이도록 강제 선언 */
@@ -58,16 +58,20 @@
   /* 인쇄하지 않을 영역 가림 */
   header,
   footer,
-  .editor-preview-layout__capture-button
-  .editor-preview-layout-head{
+  .editor-preview-layout__capture-button,
+  .editor-preview-layout-head {
     display: none;
     visibility: hidden;
     opacity: 0;
   }
 
+  .service-container {
+    min-width: 0;
+  }
+
   /* 인쇄할 영역에 위치 잡고 보여지도록 스타일 선언 */
   #preview-container {
-    overflow: visible;
+    overflow: hidden;
     position: absolute;
     top: 0;
     left: 0;
