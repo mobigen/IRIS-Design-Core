@@ -153,6 +153,10 @@
   margin-top: $spacing-xs;
 }
 
+.modal .form--vertical .form__item{
+    padding: $spacing-sm 0;
+}
+
 .modal .form--complex .text-input {
   width: auto;
 }
