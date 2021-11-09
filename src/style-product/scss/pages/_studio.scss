@@ -168,7 +168,7 @@
 .grid-chart-toolbar__perpage + .grid-chart-toolbar__button,
 .grid-chart-toolbar__perpage + .grid-chart-toolbar__acc-icon,
 .grid-chart-toolbar__perpage + .grid-chart-toolbar__search,
-.grid-chart-toolbar :first-child:not(.grid-chart-toolbar__perpage) {
+.grid-chart-toolbar > :first-child:not(.grid-chart-toolbar__perpage) {
   margin-left: auto;
 }
 
