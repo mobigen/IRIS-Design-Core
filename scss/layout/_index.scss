@@ -129,13 +129,17 @@
 }
 
 .index-layout-body__controller-select {
-  min-width: rem(136px);
   width: auto;
   margin-left: $spacing-xs;
-  
-  &.select--view-all .select-container{
+
+  &.select--view-all.division-element {
     min-width: rem(136px);
     max-width: rem(250px);
+
+    .select-container {
+      min-width: rem(136px);
+      max-width: rem(250px);
+    }
   }
 }
 
