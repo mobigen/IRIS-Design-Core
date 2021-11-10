@@ -5005,37 +5005,212 @@
                       <strong class="side-panel-content__head-title">데이터 모델 셀렉트</strong>
                     </div>
                     <div class="side-panel-content__body">
-                      <div class="select">
-                        <div class="select-selector">
-                          <div class="select-selector__input" style="display: flex;">
-                            <svg class="svg-icon select-selector__input-icon">
-                              <use xlink:href="#data-model"></use>
-                            </svg>
-                            <input type="text" class="text-input" placeholder="placeholder text" value="데이터 모델">
+                      <div class="row">
+                        <!-- 데이터 모델 유형 콤보박스 적용 -->
+                        <div class="select">
+                          <div class="select-selector">
+                            <button class="select-selector__button" type="button">
+                              <span class="select-selector__title">모든 유형</span>
+                              <svg class="svg-icon select-selector__icon">
+                                <use xlink:href="#chevron-down-medium"></use>
+                              </svg>
+                            </button>
                           </div>
-                          <svg class="svg-icon select-selector__icon">
-                            <use xlink:href="#chevron-down-medium"></use>
-                          </svg>
+                          <div class="select-container w-260">
+                            <ul class="select-container__list">
+                              <li class="select-container__item">
+                                <div class="checkbox checkbox--indeterminate">
+                                  <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                                  <label for="list-check-01" class="checkbox__label">
+                                    <span class="select-container__text">모든 유형</span>
+                                  </label>
+                                </div>
+                              </li>
+                            </ul>
+                            <ul class="select-container__list">
+                              <li class="select-container__item select-container__item--selected">
+                                <div class="checkbox">
+                                  <input id="list-check-01" type="checkbox" class="checkbox__input" value="label" checked="">
+                                  <label for="list-check-01" class="checkbox__label">
+                                    <span class="select-container__text">ORACLE</span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="select-container__item">
+                                <div class="checkbox">
+                                  <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                                  <label for="list-check-01" class="checkbox__label">
+                                    <span class="select-container__text">MARIADB</span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="select-container__item">
+                                <div class="checkbox">
+                                  <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                                  <label for="list-check-01" class="checkbox__label">
+                                    <span class="select-container__text">MYSQL</span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="select-container__item">
+                                <div class="checkbox">
+                                  <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                                  <label for="list-check-01" class="checkbox__label">
+                                    <span class="select-container__text">MYSQL5</span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="select-container__item">
+                                <div class="checkbox">
+                                  <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                                  <label for="list-check-01" class="checkbox__label">
+                                    <span class="select-container__text">IRIS</span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="select-container__item">
+                                <div class="checkbox">
+                                  <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                                  <label for="list-check-01" class="checkbox__label">
+                                    <span class="select-container__text">POSTGRESQL</span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="select-container__item">
+                                <div class="checkbox">
+                                  <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                                  <label for="list-check-01" class="checkbox__label">
+                                    <span class="select-container__text">TIBERO</span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="select-container__item">
+                                <div class="checkbox">
+                                  <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                                  <label for="list-check-01" class="checkbox__label">
+                                    <span class="select-container__text">ELASTICSEARCH</span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="select-container__item">
+                                <div class="checkbox">
+                                  <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                                  <label for="list-check-01" class="checkbox__label">
+                                    <span class="select-container__text">VECTORRWISE</span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="select-container__item">
+                                <div class="checkbox">
+                                  <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                                  <label for="list-check-01" class="checkbox__label">
+                                    <span class="select-container__text">DRUID</span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="select-container__item">
+                                <div class="checkbox">
+                                  <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                                  <label for="list-check-01" class="checkbox__label">
+                                    <span class="select-container__text">ALTIBASE</span>
+                                  </label>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
                         </div>
-                        <div class="select-container">
-                          <ul class="select-container__list">
-                            <li class="select-container__item select-container__item--selected">
-                              <button class="select-container__button" type="button">
-                                <svg class="svg-icon select-container__icon" aria-hidden="true">
+                        <!-- //데이터 모델 유형 콤보박스 적용 -->
+                      </div>
+                      <div class="row">
+                        <div class="data-model__body h-group">
+                          <div class="select data-modal__select">
+                            <div class="select-selector">
+                              <div class="select-selector__input">
+                                <svg class="svg-icon select-selector__input-icon">
                                   <use xlink:href="#data-model"></use>
                                 </svg>
-                                <span class="select-container__text"><mark class="filter-highlight">데이터 모델</mark></span>
-                              </button>
-                            </li>
-                            <li class="select-container__item">
-                              <button class="select-container__button" type="button" title="데이터 모델 뷰 데이터 모델 뷰 데이터 모델 뷰">
-                                <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                  <use xlink:href="#data-model-view"></use>
+                                <input type="text" class="text-input" placeholder="placeholder text" value="데이터 모델">
+                              </div>
+                              <svg class="svg-icon select-selector__icon">
+                                <use xlink:href="#chevron-down-medium"></use>
+                              </svg>
+                            </div>
+                            <div class="select-container">
+                              <ul class="select-container__list">
+                                <li class="select-container__item select-container__item--selected">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="svg-icon select-container__icon" aria-hidden="true">
+                                      <use xlink:href="#data-model"></use>
+                                    </svg>
+                                    <span class="select-container__text"><mark class="filter-highlight">데이터 모델</mark></span>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button" title="데이터 모델 뷰 데이터 모델 뷰 데이터 모델 뷰">
+                                    <svg class="svg-icon select-container__icon" aria-hidden="true">
+                                      <use xlink:href="#data-model-view"></use>
+                                    </svg>
+                                    <span class="select-container__text">데이터 모델 뷰 데이터 모델 뷰 데이터 모델 뷰</span>
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <!-- 데이터 필터 아이콘 적용 -->
+                          <div class="select select--right select--borderless select--view-all">
+                            <div class="select-selector">
+                              <button class="select-selector__button button--icon button--link" type="button">
+                                <svg class="svg-icon select-container__icon">
+                                  <use xlink:href="#date-descending"></use>
                                 </svg>
-                                <span class="select-container__text">데이터 모델 뷰 데이터 모델 뷰 데이터 모델 뷰</span>
                               </button>
-                            </li>
-                          </ul>
+                            </div>
+                            <div class="select-container">
+                              <ul class="select-container__list">
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="svg-icon select-container__icon">
+                                      <use xlink:href="#date-descending"></use>
+                                    </svg>
+                                    <span class="select-container__text">
+                                      수정 일시
+                                    </span>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="svg-icon select-container__icon">
+                                      <use xlink:href="#date-ascending"></use>
+                                    </svg>
+                                    <span class="select-container__text">
+                                      수정 일시
+                                    </span>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="svg-icon select-container__icon">
+                                      <use xlink:href="#string-descending"></use>
+                                    </svg>
+                                    <span class="select-container__text">
+                                      모델 이름
+                                    </span>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="svg-icon select-container__icon">
+                                      <use xlink:href="#string-ascending"></use>
+                                    </svg>
+                                    <span class="select-container__text">
+                                      모델 이름
+                                    </span>
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <!-- //데이터 필터 아이콘 적용 -->
                         </div>
                       </div>
                     </div>

@@ -2440,3 +2440,17 @@
   }
 
 }
+
+//데이터 모델 필터 스타일 적용
+.data-model__body .select--borderless {
+  min-width: auto;
+}
+
+.data-model__body .data-modal__select {
+  flex: 1;
+}
+
+.data-model__body .select--borderless .select-selector__button{
+  width: rem(32px);
+  padding: 0 5px;
+ }
