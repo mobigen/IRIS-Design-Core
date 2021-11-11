@@ -90,7 +90,15 @@
 .checkbox.index-layout-body__filter-checkbox {
   width: rem(24px);
   height: rem(24px);
+  line-height: 1;
 }
+
+.checkbox.project-thumbnail-list__details-checkbox .checkbox__label{
+  width: rem(20px);
+  height: rem(20px);
+}
+
+
 
 .index-layout-body__filter-title {
   @include text-overflow;
