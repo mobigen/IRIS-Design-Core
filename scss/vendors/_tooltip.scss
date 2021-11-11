@@ -1,6 +1,5 @@
-// v-tooltip 사용으로, 별도 scss 파일 필요 (IDC의 tooltip UI 반영 완료)
 //----------------------------------------------
-// Tooltip
+// v-tooltip
 // ---------------------------------------------
 .tooltip {
   z-index: z("tooltip");
@@ -82,4 +81,16 @@
     opacity: 1;
     transition: opacity 0.15s;
   }
+}
+
+.v-tooltip{
+  display: flex;
+  height: rem(16px);
+  align-items: center;
+}
+
+.v-tooltip__icon{
+  width: rem(16px);
+  height: rem(16px);
+  fill: $text-03;
 }
