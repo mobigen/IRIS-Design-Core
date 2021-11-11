@@ -417,6 +417,12 @@
   position: absolute;
   top: rem(6px);
   left: rem(8px);
+  line-height: 1;
+}
+
+.checkbox.project-thumbnail-list__details-checkbox .checkbox__label{
+  width: rem(20px);
+  height: rem(20px);
 }
 
 .project-thumbnail-list__detail-delete-button {
