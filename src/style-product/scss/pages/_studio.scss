@@ -1119,6 +1119,11 @@
     width: 100%;
     height: 100%;
   }
+
+  .date-picker-selector__input,
+  .time-picker-selector__input {
+    min-width: rem(115px);
+  }
 }
 
 .canvas-object {
