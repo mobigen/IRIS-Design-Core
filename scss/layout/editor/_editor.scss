@@ -65,6 +65,7 @@
 }
 
 .editor-layout-head__action-buttons {
+  .text-input-group + .button,
   .button + .button,
   .select + .button,
   .button + .select {
