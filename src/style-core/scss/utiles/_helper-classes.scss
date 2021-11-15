@@ -502,3 +502,19 @@
     }
   }
 }
+
+// -------------------------
+// icon fill
+// -------------------------
+
+.svg-icon.svg-icon--primary{
+  fill: $primary;
+}
+
+.svg-icon.svg-icon--secondary{
+  fill: $secondary
+}
+
+.svg-icon.svg-icon--negative{
+  fill: $negative;
+}
