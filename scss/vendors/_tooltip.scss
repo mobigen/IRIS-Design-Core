@@ -1,7 +1,21 @@
-// v-tooltip 사용으로, 별도 scss 파일 필요 (IDC의 tooltip UI 반영 완료)
 //----------------------------------------------
-// Tooltip
+// v-tooltip
 // ---------------------------------------------
+
+// v-tooltip이 뜨기 전에 표시해주는 인포 아이콘 영역
+.v-tooltip{
+  display: flex;
+  height: rem(16px);
+  align-items: center;
+}
+
+.v-tooltip__icon{
+  width: rem(16px);
+  height: rem(16px);
+  fill: $text-03;
+}
+
+// v-tooltip이 화면에 생성되었을 때의 tooltip 영역
 .tooltip {
   z-index: z("tooltip");
   position: absolute;
@@ -32,7 +46,7 @@
   }
 
   &[x-placement^="top"] {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 
     .tooltip-arrow {
       top: calc(100% - 4px);
@@ -42,7 +56,7 @@
   }
 
   &[x-placement^="bottom"] {
-    margin-top: 5px;
+    margin-top: 10px;
 
     .tooltip-arrow {
       top: -4px;
@@ -52,7 +66,7 @@
   }
 
   &[x-placement^="right"] {
-    margin-left: 5px;
+    margin-left: 10px;
 
     .tooltip-arrow {
       top: 50%;
@@ -62,7 +76,7 @@
   }
 
   &[x-placement^="left"] {
-    margin-right: 5px;
+    margin-right: 10px;
 
     .tooltip-arrow {
       top: 50%;
@@ -82,4 +96,22 @@
     opacity: 1;
     transition: opacity 0.15s;
   }
+}
+
+// popover - 기존 tooltip UI와 다른 유형의 tooltip
+
+.popover.tooltip{
+  padding: $spacing-2xs;
+  min-width: rem(380px);
+  background-color: $ui-01;
+  box-shadow: 0 2px 12px 2px rgba(0, 0, 0, 0.14);
+}
+
+.popover.tooltip .table{
+  border: none;
+}
+
+.popover.tooltip .popover-arrow {
+  background-color: $ui-01;
+  border-color: darken($ui-01, 8%);
 }
