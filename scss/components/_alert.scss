@@ -42,6 +42,7 @@
 .alert__contents {
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 
 .alert__title {
@@ -54,6 +55,9 @@
   @include font-size("14");
   @include line-height("body");
   color: $text-03;
+  word-break: keep-all;
+  word-wrap: break-word;
+  white-space: normal;
 }
 
 // -------------------------
