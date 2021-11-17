@@ -774,39 +774,46 @@
 }
 
 // label
-.object-label:not([preview]) {
-  border: 1px dashed $ui-04;
-
-  &:hover:not([preview]) {
-    border: 1px solid $secondary;
+.object-label {
+  .object-label__writing-mode-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+  
+    &:not([preview]) {
+      border: 1px dashed $ui-04;
+    }
   }
-}
-
-.object-label__writing-mode-box {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  overflow-y: auto;
-}
-
-.object-label__align-box {
-  display: table;
-  width: 100%;
-  height: 100%;
-
-  &[contenteditable] {
+  
+  &.canvas-object--active {
+    .object-label__writing-mode-box {
+      border: 1px solid transparent;
+    }
+  }
+  
+  .object-label__align-box {
+    display: table;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .object-label__text {
+    display: table-cell;
+    word-break: break-all;
+    overflow: hidden;
+    -webkit-user-select: text;
     user-select: text;
+  
+    &:focus {
+      outline: 0;
+    }
+  
+    &[contenteditable] {
+      -webkit-user-select: text;
+      user-select: text;
+    }
   }
-
-  &:focus-visible {
-    outline: 0;
-  }
-}
-
-.object-label__text {
-  display: table-cell;
-  word-break: break-all;
-  overflow: hidden;
 }
 
 // ellipse
