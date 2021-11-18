@@ -717,6 +717,10 @@
   height: 100%;
 }
 
+.object-datetime-range-picker .date-picker-selector {
+  padding: 0 rem(44px) 0 $spacing-sm;
+}
+
 .object-datetime-range-picker .select {
   height: 100%;
 
@@ -775,15 +779,15 @@
 
 // label
 .object-label {
+  &:not([preview]) .object-label__writing-mode-box {
+    border: 1px dashed $ui-04;
+  }
+
   .object-label__writing-mode-box {
     position: absolute;
     width: 100%;
     height: 100%;
     overflow-y: auto;
-  
-    &:not([preview]) {
-      border: 1px dashed $ui-04;
-    }
   }
   
   &.canvas-object--active {
