@@ -187,6 +187,26 @@
     min-height: rem(32px);
   }
 
+  .form__label-group {
+    display: flex;
+    align-items: center;
+    flex: 1;
+
+    .form__label {
+      width: unset !important;
+    }
+
+    .button {
+      padding-left: $spacing-2xs;
+    }
+  }
+
+  .form__item-head {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
   .form__label {
     @include make-col(4);
   }
