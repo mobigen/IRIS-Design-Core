@@ -3246,6 +3246,10 @@ input[type="radio"] {
 }
 
 .ag-overlay-no-rows-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   border: 1px solid $ui-04;
   background: $ui-01;
   border-radius: 3px;
