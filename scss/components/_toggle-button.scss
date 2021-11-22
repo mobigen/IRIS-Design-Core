@@ -41,8 +41,12 @@
 
 .toggle-button__text {
   @include font-size("13");
+  width: 100%;
   line-height: 1;
-  letter-spacing: -.5px
+  letter-spacing: -.5px;
+  word-break: keep-all;
+  word-wrap: break-word;
+  white-space: normal;
 }
 
 .toggle-button__item--selected.toggle-button__item--disabled,
