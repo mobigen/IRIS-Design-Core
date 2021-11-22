@@ -251,6 +251,13 @@
 }
 
 // project-thumbnail (썸네일 뷰 / 템플릿 뷰)
+
+// IMA, ISS, ITS 목록화면 공통 클래스
+.project-list {
+  padding: 0 20px;
+  height: calc(100vh - 115px);
+}
+
 .project-thumbnail {
   padding: 0 35px $layout-xs 35px;
   flex: 1 0 auto;
