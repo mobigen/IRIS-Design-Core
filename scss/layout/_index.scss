@@ -220,6 +220,53 @@
   }
 }
 
+.url-group {
+  min-height: 68px;
+  max-height: 235px;
+  overflow-y: auto;
+  background-color: $ui-02;
+  border: 1px solid $ui-04;
+  border-radius: $button-border-radius;
+  padding: $spacing-xs;
+}
+
+.url-group--disabled{
+  cursor: not-allowed;
+  user-select: none;
+  .url-group__text{
+    color: $text-02;
+  }
+  .url-group__url{
+    color: $text-02;
+    cursor: not-allowed !important;
+  }
+}
+
+.url-group__item {
+  + .url-group__item {
+    margin-top: $spacing-md;
+  }
+}
+
+.url-group__text {
+  @include font-size("14");
+  display: block;
+  color: $text-01;
+
+}
+
+.url-group__url {
+  @include line-height("title");
+  @include font-size("14");
+  display: block;
+  margin-top: $spacing-2xs;
+  color: $primary;
+  word-break: break-all;
+  white-space: normal;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 // 카테고리 관리
 .list.list-category-dialog {
   height: 280px;
