@@ -922,11 +922,8 @@
                             </div>
                           </div>
                           <div class="form__item">
-                            <label class="form__label">
-                              <span class="form__label-text">컬러</span>
-                            </label>
                             <div class="h-group">
-                              <div class="text-input-wrap">
+                              <div class="text-input-wrap w-12_12">
                                 <input type="text" class="text-input" step="1" value="#000000">
                               </div>
                               <div class="sp-replacer sp-light chart-picker-size chart-color-picker">
@@ -939,137 +936,12 @@
                             </div>
                           </div>
                           <div class="form__item">
-                            <label class="form__label">
-                              <span class="form__label-text">글꼴 크기</span>
-                            </label>
-                            <div class="select w-8_12">
-                              <div class="select-selector">
-                                <button class="select-selector__button">
-                                  <span class="select-selector__title">14</span>
-                                  <svg class="svg-icon select-selector__icon">
-                                    <use xlink:href="#chevron-down-medium"></use>
-                                  </svg>
-                                </button>
-                              </div>
-                              <div class="select-container">
-                                <ul class="select-container__list">
-                                  <li class="select-container__item">
-                                    <button class="select-container__button">
-                                      <span class="select-container__text">8</span>
-                                    </button>
-                                  </li>
-                                  <li class="select-container__item">
-                                    <button class="select-container__button">
-                                      <span class="select-container__text">9</span>
-                                    </button>
-                                  </li>
-                                  <li class="select-container__item">
-                                    <button class="select-container__button">
-                                      <span class="select-container__text">10</span>
-                                    </button>
-                                  </li>
-                                  <li class="select-container__item">
-                                    <button class="select-container__button">
-                                      <span class="select-container__text">11</span>
-                                    </button>
-                                  </li>
-                                  <li class="select-container__item">
-                                    <button class="select-container__button">
-                                      <span class="select-container__text">12</span>
-                                    </button>
-                                  </li>
-                                  <li class="select-container__item select-container__item--selected">
-                                    <button class="select-container__button">
-                                      <span class="select-container__text">14</span>
-                                    </button>
-                                  </li>
-                                  <li class="select-container__item">
-                                    <button class="select-container__button">
-                                      <span class="select-container__text">16</span>
-                                    </button>
-                                  </li>
-                                  <li class="select-container__item">
-                                    <button class="select-container__button">
-                                      <span class="select-container__text">18</span>
-                                    </button>
-                                  </li>
-                                  <li class="select-container__item">
-                                    <button class="select-container__button">
-                                      <span class="select-container__text">20</span>
-                                    </button>
-                                  </li>
-                                  <li class="select-container__item">
-                                    <button class="select-container__button">
-                                      <span class="select-container__text">24</span>
-                                    </button>
-                                  </li>
-                                  <li class="select-container__item">
-                                    <button class="select-container__button">
-                                      <span class="select-container__text">28</span>
-                                    </button>
-                                  </li>
-                                  <li class="select-container__item">
-                                    <button class="select-container__button">
-                                      <span class="select-container__text">32</span>
-                                    </button>
-                                  </li>
-                                  <li class="select-container__item">
-                                    <button class="select-container__button">
-                                      <span class="select-container__text">36</span>
-                                    </button>
-                                  </li>
-                                  <li class="select-container__item">
-                                    <button class="select-container__button">
-                                      <span class="select-container__text">40</span>
-                                    </button>
-                                  </li>
-                                  <li class="select-container__item">
-                                    <button class="select-container__button">
-                                      <span class="select-container__text">44</span>
-                                    </button>
-                                  </li>
-                                  <li class="select-container__item">
-                                    <button class="select-container__button">
-                                      <span class="select-container__text">48</span>
-                                    </button>
-                                  </li>
-                                  <li class="select-container__item">
-                                    <button class="select-container__button">
-                                      <span class="select-container__text">54</span>
-                                    </button>
-                                  </li>
-                                  <li class="select-container__item">
-                                    <button class="select-container__button">
-                                      <span class="select-container__text">60</span>
-                                    </button>
-                                  </li>
-                                  <li class="select-container__item">
-                                    <button class="select-container__button">
-                                      <span class="select-container__text">66</span>
-                                    </button>
-                                  </li>
-                                  <li class="select-container__item">
-                                    <button class="select-container__button">
-                                      <span class="select-container__text">72</span>
-                                    </button>
-                                  </li>
-                                  <li class="select-container__item">
-                                    <button class="select-container__button">
-                                      <span class="select-container__text">80</span>
-                                    </button>
-                                  </li>
-                                  <li class="select-container__item">
-                                    <button class="select-container__button">
-                                      <span class="select-container__text">88</span>
-                                    </button>
-                                  </li>
-                                  <li class="select-container__item">
-                                    <button class="select-container__button">
-                                      <span class="select-container__text">96</span>
-                                    </button>
-                                  </li>
-                                </ul>
-                              </div>
+                            <div class="h-group">
+                                <input type="range" min="0" max="100">
+                                <div class="text-input-wrap">
+                                    <input class="text-input" type="number" min="0" max="100">
+                                    <span class="text-input-wrap__suffix">%</span>
+                                </div>
                             </div>
                           </div>
                         </div>
@@ -2205,25 +2077,128 @@
                       </button>
                     </div>
                     <div class="side-panel-content__body">
-                      <div class="select">
-                        <div class="select-selector">
-                          <button class="select-selector__button" type="button">
-                            <span class="select-selector__title">테이블</span>
-                            <svg class="svg-icon select-selector__icon">
-                              <use xlink:href="#chevron-down-medium"></use>
-                            </svg>
-                          </button>
-                        </div>
-                        <div class="select-container">
-                          <ul class="select-container__list">
-                            <li class="select-container__item select-container__item--selected">
-                              <button class="select-container__button" type="button">
-                                <span class="select-container__text">테이블</span>
-                              </button>
-                            </li>
-                          </ul>
+                      <div class="form__item">
+                        <div class="select w-12_12">
+                          <div class="select-selector">
+                            <button class="select-selector__button" type="button">
+                              <span class="select-selector__title">테이블</span>
+                              <svg class="svg-icon select-selector__icon">
+                                <use xlink:href="#chevron-down-medium"></use>
+                              </svg>
+                            </button>
+                          </div>
+                          <div class="select-container">
+                            <ul class="select-container__list">
+                              <li class="select-container__item select-container__item--selected">
+                                <button class="select-container__button" type="button">
+                                  <span class="select-container__text">테이블</span>
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
                         </div>
                       </div>
+                      <!-- 선 두께 -->
+                      <div class="form__item">
+                        <div class="select w-12_12">
+                          <div class="select-selector">
+                            <button class="select-selector__button">
+                              <span class="select-selector__title">
+                                <span class="border-style border-style--thickness-3"></span>
+                              </span>
+                              <svg class="svg-icon select-selector__icon">
+                                <use xlink:href="#chevron-down-medium"></use>
+                              </svg>
+                            </button>
+                          </div>
+                          <div class="select-container">
+                            <ul class="select-container__list">
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <span class="border-style border-style--thickness-1"></span>
+                                  <span class="select-container__text ml-8">1</span>
+                                </button>
+                              </li>
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <span class="border-style border-style--thickness-2"></span>
+                                  <span class="select-container__text ml-8">2</span>
+                                </button>
+                              </li>
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <span class="border-style border-style--thickness-3"></span>
+                                  <span class="select-container__text ml-8">3</span>
+                                </button>
+                              </li>
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <span class="border-style border-style--thickness-4"></span>
+                                  <span class="select-container__text ml-8">4</span>
+                                </button>
+                              </li>
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <span class="border-style border-style--thickness-5"></span>
+                                  <span class="select-container__text ml-8">5</span>
+                                </button>
+                              </li>
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <span class="border-style border-style--thickness-6"></span>
+                                  <span class="select-container__text ml-8">6</span>
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- //선 두께 -->
+                      <!-- 선 종류 -->
+                      <div class="form__item">
+                        <div class="select w-12_12">
+                          <div class="select-selector">
+                            <button class="select-selector__button">
+                              <span class="select-selector__title">
+                                <span class="border-style border-style--dashed"></span>
+                              </span>
+                              <svg class="svg-icon select-selector__icon">
+                                <use xlink:href="#chevron-down-medium"></use>
+                              </svg>
+                            </button>
+                          </div>
+                          <div class="select-container">
+                            <ul class="select-container__list">
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <span class="select-container__text">
+                                    <span class="border-style border-style--thickness-2 border-style--solid"></span>
+                                  </span>
+                                </button>
+                              </li>
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <span class="select-container__text">
+                                    <span class="border-style border-style--thickness-2 border-style--dotted"></span>
+                                  </span>
+                                </button>
+                              </li>
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <span class="select-container__text"><span class="border-style border-style--thickness-2 border-style--dashed"></span></span>
+                                </button>
+                              </li>
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <span class="select-container__text"><span class="border-style border-style--thickness-3 border-style--double"></span></span>
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      <!-- 선 종류 -->
+                      </div>
+                      <!-- //선 종류 -->
                     </div>
                   </div>
                   <div class="side-panel-content">
@@ -2239,12 +2214,6 @@
                               <button class="button button--tertiary" title="적용">적용</button>
                             </div>
                           </div>
-                          <div class="form__item">
-                            <div class="text-input-wrap">
-                              <input type="number" class="text-input w-6_12" max="100" min="0" step="1" value="">
-                              <span class="text-input-wrap__suffix">px</span>
-                            </div>
-                          </div>
                           <!-- validation 체크 -->
                           <div class="notification-message notification-message--inline notification-message--error">
                             <svg class="notification-message__icon svg-icon">
@@ -2253,6 +2222,24 @@
                             <span class="notification-message__text">Notification Message</span>
                           </div>
                           <!-- //validation 체크 -->
+                          <div class="form__item">
+                            <label class="form__label">
+                              <span class="form__label-text">길이</span></label>
+                            <div class="form__detail">
+                              <div class="h-group">
+                                <input type="text" class="text-input">
+                                <span class="text-input-wrap__suffix">px</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form__item">
+                            <label class="form__label">
+                              <span class="form__label-text">X</span>
+                            </label>
+                            <div class="form__detail">
+                              <input type="text" class="text-input">
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
