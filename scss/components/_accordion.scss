@@ -1,6 +1,9 @@
 .accordion {
-  border: 1px solid $hover-row;
+  border: 1px solid $ui-04;
 }
+
+
+
 
 .accordion-vertical {
   @include list;
@@ -8,11 +11,41 @@
 
 .accordion-horizontal {
   @include button-list;
-  width: rem(400px);
+  width: 100%;
+}
+
+.accordion-horizontal__item {
+  border-radius: $button-border-radius;
+}
+
+.accordion-horizontal__button {
+  padding: $spacing-xs $spacing-3xs $spacing-xs $spacing-3xs;
+}
+
+.accordion-horizontal__text {
+  @include font-weight("medium");
+  @include line-height("title");
+  margin-top: $spacing-2xs;
+  color: $text-03;
+  overflow: visible;
+  white-space: normal;
+  word-break: keep-all;
+}
+
+.accordion-horizontal__item--selected {
+  border: 1px solid $primary;
+}
+
+.accordion-horizontal__item--selected .accordion-horizontal__text {
+  color: $primary;
+}
+
+.accordion-horizontal__item--selected .accordion-horizontal__icon {
+  fill: $primary;
 }
 
 .accordion__item:last-child .accordion__body {
-  border-bottom: 0;
+  border-bottom-width: 0;
 }
 
 .accordion__head {
@@ -21,7 +54,7 @@
   width: 100%;
   height: $button-height-md;
   padding: $spacing-2xs $spacing-xs;
-  background-color: $ui-01;
+  background-color: $hover-row;
 }
 
 .accordion__head-icon {
@@ -30,11 +63,31 @@
 }
 
 .accordion__head-title {
+  @include font-size("14");
+  @include font-weight("medium");
+  @include line-height("title");
+  display: flex;
+  flex-grow: 1;
+  text-align: left;
+  color: $text-03;
+
+  .v-tooltip {
+    margin-left: $spacing-2xs;
+  }
+}
+
+.accordion__head-title-text {
   @include text-overflow;
   @include font-size("14");
   @include font-weight("medium");
-  flex: 1;
-  text-align: left;
+  @include line-height("title");
+  color: $text-02;
+}
+
+.accordion__head-subtitle {
+  @include font-weight("regular");
+  @include line-height("title");
+  margin-left: $spacing-2xs;
   color: $text-02;
 }
 
@@ -44,12 +97,13 @@
 
 .accordion__head-icon--right {
   margin-left: auto;
+  transform: rotate(180deg);
 }
 
 .accordion__body {
   display: none;
   background-color: $ui-02;
-  border-bottom: 1px solid $hover-row;
+  border-bottom: 1px solid $ui-04;
 }
 
 .accordion-vertical__text {
@@ -59,7 +113,7 @@
 }
 
 .accordion-vertical__item + .accordion-vertical__item {
-  border-top: 1px solid $hover-row;
+  border-top: 1px solid $ui-04;
 }
 
 // -------------------------
@@ -70,9 +124,26 @@
 }
 
 .accordion__head--open .accordion__head-icon--right {
-  transform: rotate(180deg);
+  transform: rotate(0deg);
 }
 
 .accordion__head--open + .accordion__body {
   display: block;
 }
+
+// -------------------------
+// accordion-horizontal--lg
+// -------------------------
+
+.accordion-horizontal--lg {
+  .accordion-horizontal__button {
+    height: rem(74px);
+    padding: $spacing-xs $spacing-2xs;
+  }
+
+  .accordion-horizontal__icon {
+    width: rem(36px);
+    height: rem(36px);
+  }
+}
+
