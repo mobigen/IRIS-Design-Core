@@ -191,8 +191,8 @@
 }
 
 .my-0 {
-  margin-bottom: 0 !important !important;
-  margin-top: 0 !important !important;
+  margin-bottom: 0 !important;
+  margin-top: 0 !important;
 }
 
 // .seaching-select-disable 클래스를 개선
@@ -219,6 +219,10 @@
 
 .w-120 {
   width: rem(120px) !important;
+}
+
+.w-130 {
+  width: rem(130px) !important;
 }
 
 .w-160 {
@@ -501,4 +505,20 @@
       left: -13px;
     }
   }
+}
+
+// -------------------------
+// icon fill
+// -------------------------
+
+.svg-icon.svg-icon--primary{
+  fill: $primary;
+}
+
+.svg-icon.svg-icon--secondary{
+  fill: $secondary
+}
+
+.svg-icon.svg-icon--negative{
+  fill: $negative;
 }
