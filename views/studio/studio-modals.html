@@ -20,7 +20,7 @@
     이외 사이즈는 인라인 스타일로 추가
 -->
 <!-- 시각화 옵션 설정 모달 -->
-<div class="modal modal--xl" style="position: static; width: 820px;">
+<div class="modal modal--lg" style="position: static; width: 800px;">
   <div class="modal__head">
     <div class="modal__head-title">
       <span class="modal__head-title-text">시각화 옵션</span>
@@ -253,22 +253,46 @@
                       <div class="toggle-button">
                         <!-- toggle-button__item--selected 클래스 추가시 버튼 활성화 -->
                         <button class="toggle-button__item" type="button">
-                          <span class="toggle-button__text">Toggle Button</span>
+                          <span class="toggle-button__text">객체 맞춤</span>
                         </button>
                         <button class="toggle-button__item toggle-button__item--selected" type="button">
-                          <span class="toggle-button__text">Toggle Button</span>
+                          <span class="toggle-button__text">사용자 설정</span>
                         </button>
                       </div>
                       <div class="h-group ml-8">
-                        <div class="text-input-wrap w-120">
-                          <span class="text-input-wrap__prefix">가로</span>
+                        <div class="select">
+                          <div class="select-selector">
+                            <button class="select-selector__button" type="button">
+                              <span class="select-selector__title">가로</span>
+                              <svg class="svg-icon select-selector__icon">
+                                <use xlink:href="#chevron-down-medium"></use>
+                              </svg>
+                            </button>
+                          </div>
+                          <div class="select-container">
+                            <ul class="select-container__list">
+                              <li class="select-container__item select-container__item--selected">
+                                <button class="select-container__button" type="button">
+                                  <span class="select-container__text">가로</span>
+                                </button>
+                              </li>
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <span class="select-container__text">세로</span>
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="text-input-wrap w-112">
                           <input type="number" class="text-input" value="">
                           <span class="text-input-wrap__suffix">px</span>
                         </div>
-                        <div class="text-input-wrap w-120 ml-8">
-                          <span class="text-input-wrap__prefix">세로</span>
-                          <input type="number" class="text-input" value="">
-                          <span class="text-input-wrap__suffix">px</span>
+                        <div class="notification-message notification-message--info ml-8">
+                          <svg class="notification-message__icon svg-icon" aria-hidden="true">
+                            <use xlink:href="#info-fill"></use>
+                          </svg>
+                          <span class="notification-message__text">객체 크기보다 작게 설정 할 수 없습니다.</span>
                         </div>
                       </div>
                     </div>
