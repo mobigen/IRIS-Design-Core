@@ -71,6 +71,16 @@
   height: rem(40px);
 }
 
+.list__button .list__icon {
+  width: rem(24px);
+  height: rem(24px);
+}
+
+.list__button .list__subicon {
+  width: rem(20px);
+  height: rem(20px);
+}
+
 .list__subtext {
   margin-left: $spacing-2xs;
   color: $text-03;
@@ -309,4 +319,70 @@
 
 .list--lg .list__item {
   height: rem(40px);
+}
+
+// -------------------------
+// list--stripe
+// -------------------------
+
+.list--stripe {
+  .list__item {
+    border-bottom: none;
+
+    &:nth-child(2n + 1) {
+      .list__button {
+        background: $odd-row;
+      }
+    }
+
+    &:hover {
+      background: $hover-row;
+
+      .list__button {
+        background: $hover-row;
+      }
+    }
+
+    &.list__item--selected {
+      .list__text {
+        color: $primary;
+      }
+    }
+
+    &.list__item--disabled {
+      .list__button {
+        background: transparent;
+      }
+
+      &:hover {
+        background: transparent;
+
+        .list__button {
+          background: transparent;
+        }
+      }
+
+      .list__button {
+        &:active {
+          .list__text {
+            color: $text-03;
+          }
+        }
+      }
+    }
+
+    &.list__item--selected.list__item--disabled{
+      .list__button{
+        &:active{
+          .list__text{
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+
+  .list__text {
+    color: $text-03;
+  }
 }
