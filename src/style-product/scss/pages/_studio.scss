@@ -167,7 +167,8 @@
 .grid-chart-toolbar__perpage + .grid-chart-toolbar__download,
 .grid-chart-toolbar__perpage + .grid-chart-toolbar__button,
 .grid-chart-toolbar__perpage + .grid-chart-toolbar__acc-icon,
-.grid-chart-toolbar__perpage + .grid-chart-toolbar__search {
+.grid-chart-toolbar__perpage + .grid-chart-toolbar__search,
+.grid-chart-toolbar > :first-child:not(.grid-chart-toolbar__perpage) {
   margin-left: auto;
 }
 
@@ -184,6 +185,29 @@
 .grid-chart-wrap {
   overflow: auto;
   height: 100%;
+}
+
+// grid 차트 체크박스 커스텀 
+.canvas-object.object-area {
+  .ag-theme-default .ag-checkbox-input-wrapper {
+    line-height: 20px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .ag-checkbox-input-wrapper::after {
+    width: 20px;
+    height: 20px;
+    background: url("#{$img-path}/studio/icon_check.png") no-repeat 0 0;
+  }
+
+  .ag-checkbox-input-wrapper.ag-checked::after {
+    background-position: -20px 0;
+  }
+
+  .ag-checkbox-input-wrapper.ag-indeterminate::after {
+    background-position: -40px 0;
+  }
 }
 
 // 2019-08-27 MOD KHY
@@ -410,6 +434,7 @@
   width: 100%;
   height: 100%;
   z-index: z("float");
+  overflow: hidden;
 }
 
 // 기본 박스 스타일들
@@ -692,11 +717,16 @@
 .object-datetime-range-picker .date-picker {
   width: 100%;
   height: 100%;
+  min-width: 350px;
+}
+
+.object-datetime-range-picker .date-picker-selector {
+  padding: 0 rem(44px) 0 $spacing-sm;
 }
 
 .object-datetime-range-picker .select {
   height: 100%;
-  
+
   .select-selector {
     height: 100%;
   }
@@ -751,39 +781,46 @@
 }
 
 // label
-.object-label:not([preview]) {
-  border: 1px dashed $ui-04;
-
-  &:hover:not([preview]) {
-    border: 1px solid $secondary;
+.object-label {
+  &:not([preview]) .object-label__writing-mode-box {
+    border: 1px dashed $ui-04;
   }
-}
 
-.object-label__writing-mode-box {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  overflow-y: auto;
-}
-
-.object-label__align-box {
-  display: table;
-  width: 100%;
-  height: 100%;
-
-  &[contenteditable] {
+  .object-label__writing-mode-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+  }
+  
+  &.canvas-object--active {
+    .object-label__writing-mode-box {
+      border: 1px solid transparent;
+    }
+  }
+  
+  .object-label__align-box {
+    display: table;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .object-label__text {
+    display: table-cell;
+    word-break: break-all;
+    overflow: hidden;
+    -webkit-user-select: text;
     user-select: text;
+  
+    &:focus {
+      outline: 0;
+    }
+  
+    &[contenteditable] {
+      -webkit-user-select: text;
+      user-select: text;
+    }
   }
-
-  &:focus-visible {
-    outline: 0;
-  }
-}
-
-.object-label__text {
-  display: table-cell;
-  word-break: break-all;
-  overflow: hidden;
 }
 
 // ellipse
@@ -852,19 +889,25 @@
 }
 
 .object-ima__layer-name-wrap {
+  display: flex;
+  justify-content: center;
   position: absolute;
-  right: 16px;
+  left: 50%;
   bottom: 16px;
+  max-width: calc(100% - 72px);
+  transform: translateX(-50%);
   z-index: 6;
 }
 
 .object-ima__layer-name {
+  @include line-height("title");
   display: inline-block;
   padding: $spacing-2xs;
   background-color: rgba($ui-02, 0.8);
   border-radius: 2px;
   color: #242e3d;
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.07), 0px 2px 2px rgba(0, 0, 0, 0.06);
+  word-break: break-all;
 }
 
 .object-map__move-buttons {
@@ -1122,11 +1165,16 @@
 .canvas-object .time-picker {
   width: 100%;
   height: 100%;
-  
-  .date-picker-selector, 
+
+  .date-picker-selector,
   .time-picker-selector {
     width: 100%;
     height: 100%;
+  }
+
+  .date-picker-selector__input,
+  .time-picker-selector__input {
+    min-width: rem(80px);
   }
 }
 
@@ -1145,12 +1193,14 @@
     width: 100%;
     height: 100%;
     justify-content: center;
+    align-items: center;
   }
 
   .tab--container {
     .tab__item {
       height: 100%;
       border: 0;
+      padding: 0 $spacing-3xs;
       background-color: $hover-row;
 
       &:hover {
@@ -1163,7 +1213,6 @@
     .tab__button-text {
       color: $ui-03;
     }
-
     .tab__item--selected {
       background-color: $ui-03;
 
@@ -1345,6 +1394,10 @@
     &:hover {
       fill: $text-04;
     }
+  }
+
+  .object-button__text {
+    width: unset;
   }
 }
 
@@ -1981,13 +2034,15 @@
   margin-left: $spacing-2xs;
 }
 
-.map-legend__gradient-subtext-wrap {
+.map-legend__gradient-subtext-wrap,
+.map-gradient__text-box {
   display: flex;
   justify-content: space-between;
   margin-top: $spacing-2xs;
 }
 
-.map-legend__gradient-subtext {
+.map-legend__gradient-subtext,
+.map-gradient__text {
   @include font-size("11");
 }
 
@@ -2385,6 +2440,16 @@
 
 .chart-picker-mb {
   margin-bottom: $spacing-2xs;
+}
+
+//studio내 텍스트가 길어질때 툴팁을 벗어나는 문제 방지
+.tooltip-studio__text {
+  white-space: normal;
+}
+
+//studio내 overlay가 로딩스피너를 포함하고 있을때 모달보다 위에 위치하도록 처리
+.overlay--loading {
+  z-index: 8300;
 }
 
 // -------------------------

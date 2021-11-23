@@ -338,3 +338,45 @@
     width: auto;
   }
 }
+
+// -------------------------
+// select color picker
+// -------------------------
+.select--color-picker{
+  .select-selector__button{
+    padding-left: $spacing-2xs;
+    padding-right: rem(28px);
+  }
+
+  .color-picker__color {
+    width: rem(24px);
+    height: 100%;
+    border: 1px solid $ui-04;
+  }
+}
+
+// -------------------------
+// select 화살표 UI 상태에 따른 컬러 값 
+// -------------------------
+.select-container__item:hover,
+.select-container__item:active{
+  .select-container__button-icon{
+    fill: $primary;
+  }
+}
+
+.select-container__item--selected{
+  .select-container__button-icon{
+    fill: $primary;
+  }
+}
+
+.select-container__item--disabled{
+  .select-container__button-icon,
+  .select-container__button-icon:hover,
+  .select-container__button-icon:active{
+    fill: $hover-row;
+  }
+}
+
+

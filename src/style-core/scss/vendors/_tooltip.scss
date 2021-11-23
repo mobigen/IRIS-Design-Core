@@ -1,0 +1,235 @@
+//----------------------------------------------
+// v-tooltip
+// ---------------------------------------------
+
+// v-tooltip이 뜨기 전에 표시해주는 인포 아이콘 영역
+.v-tooltip{
+  display: flex;
+  height: rem(16px);
+  align-items: center;
+}
+
+.v-tooltip__icon{
+  width: rem(16px);
+  height: rem(16px);
+  fill: $text-03;
+}
+
+// v-tooltip이 화면에 생성되었을 때의 tooltip 영역
+.tooltip {
+  z-index: z("tooltip");
+  position: absolute;
+  max-width: rem(480px);
+  padding: $spacing-sm;
+  background-color: $text-03;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.07);
+  transition-duration: $duration-fast-02;
+  transition-timing-function: ease-in-out;
+  display: block !important;
+  // white-space: nowrap;
+
+  .tooltip-inner {
+    // width: 100%;
+    // height: 100%;
+    @include font-size("13");
+    @include line-height("body");
+    color: $text-04;
+  }
+
+  .tooltip-arrow {
+    position: absolute;
+    width: rem(8px);
+    height: rem(8px);
+    background-color: $text-03;
+    transform: rotate(45deg);
+  }
+
+  &[x-placement^="top"] {
+    margin-bottom: 10px;
+
+    .tooltip-arrow {
+      top: calc(100% - 4px);
+      left: 50%;
+      margin-left: -$spacing-2xs;
+    }
+  }
+
+  &[x-placement^="bottom"] {
+    margin-top: 10px;
+
+    .tooltip-arrow {
+      top: -4px;
+      left: 50%;
+      margin-left: -$spacing-2xs;
+    }
+  }
+
+  &[x-placement^="right"] {
+    margin-left: 10px;
+
+    .tooltip-arrow {
+      top: 50%;
+      left: -4px;
+      margin-top: -$spacing-2xs;
+    }
+  }
+
+  &[x-placement^="left"] {
+    margin-right: 10px;
+
+    .tooltip-arrow {
+      top: 50%;
+      right: -4px;
+      margin-top: -$spacing-2xs;
+    }
+  }
+
+  &[aria-hidden="true"] {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.15s, visibility 0.15s;
+  }
+
+  &[aria-hidden="false"] {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.15s;
+  }
+}
+
+// popover - 기존 tooltip UI와 다른 유형의 tooltip
+
+.popover.tooltip{
+  padding: $spacing-2xs;
+  min-width: rem(380px);
+  background-color: $ui-01;
+  box-shadow: 0 2px 12px 2px rgba(0, 0, 0, 0.14);
+}
+
+.popover.tooltip .table{
+  border: none;
+}
+
+.popover.tooltip .popover-arrow {
+  background-color: $ui-01;
+  border-color: darken($ui-01, 8%);
+}
+
+.popover{
+  // Tooltip 위로 위치
+  .tooltip--top {
+    margin-bottom: 10px;
+
+    .tooltip-arrow {
+      top: calc(100% - 4px);
+      left: 50%;
+      margin-left: -$spacing-2xs;
+    }
+  }
+
+  // // Tooltip 아래로 위치
+  .tooltip--bottom {
+    margin-top: 10px;
+
+    .tooltip-arrow {
+      top: -4px;
+      left: 50%;
+      margin-left: -$spacing-2xs;
+    }
+  }
+
+  // Tooltip 왼쪽으로 위치
+  .tooltip--left {
+    margin-right: 10px;
+
+    .tooltip-arrow {
+      top: 50%;
+      right: -4px;
+      margin-top: -$spacing-2xs;
+    }
+  }
+
+  // Tooltip 오른쪽으로 위치
+  .tooltip--right {
+    margin-left: 10px;
+
+    .tooltip-arrow {
+      top: 50%;
+      left: -4px;
+      margin-top: -$spacing-2xs;
+    }
+  }
+
+  .tooltip--top-right {
+    margin-bottom: 10px;
+
+    .tooltip-arrow {
+      top: calc(100% - 4px);
+      right: 12px;
+    }
+  }
+
+  .tooltip--top-left {
+    margin-bottom: 10px;
+
+    .tooltip-arrow {
+      top: calc(100% - 4px);
+      left: 12px;
+    }
+  }
+
+  .tooltip--bottom-right {
+    margin-top: 10px;
+
+    .tooltip-arrow {
+      top: -4px;
+      right: 12px;
+    }
+  }
+
+  .tooltip--bottom-left {
+    margin-top: 10px;
+
+    .tooltip-arrow {
+      top: -4px;
+      left: 12px;
+    }
+  }
+
+  .tooltip--right-top {
+    margin-left: 10px;
+
+    .tooltip-arrow {
+      top: rem(8px);
+      left: -4px;
+    }
+  }
+
+  .tooltip--right-bottom {
+    margin-left: 10px;
+
+    .tooltip-arrow {
+      bottom: rem(8px);
+      left: -4px;
+    }
+  }
+
+  .tooltip--left-top {
+    margin-right: 10px;
+
+    .tooltip-arrow {
+      top: rem(8px);
+      right: -4px;
+    }
+  }
+
+  .tooltip--left-bottom {
+    margin-right: 10px;
+
+    .tooltip-arrow {
+      bottom: rem(8px);
+      right: -4px;
+    }
+  }
+}

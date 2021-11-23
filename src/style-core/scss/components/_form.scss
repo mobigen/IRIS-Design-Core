@@ -193,11 +193,17 @@
     margin-top: $spacing-sm;
   }
 
+  .form__detail-text{
+    @include font-weight("medium");
+    font-size: 15px;
+    color: $text-01;
+  }
+
   .form__detail-textarea {
     height: 120px;
   }
 
-  .form__detail-inner {
+  .form__detail-detail {
     flex: auto;
   }
 }
@@ -283,6 +289,12 @@
 // dynamic-from--condition
 // -------------------------
 .dynamic-form--condition {
+  .dynamic-form__item + .dynamic-form__item {
+    margin-top: $spacing-md;
+    padding-top: $spacing-md;
+    border-top: 1px solid $ui-04;
+  }
+
   .dynamic-form__form-label {
     width: 20%;
     justify-content: flex-end;
@@ -362,45 +374,34 @@
 // -------------------------
 // form__items - 환경설정에 새롭게 추가된 item 유형입니다.
 // -------------------------
-
-.form__items {
-  @include form__item($spacing-xs);
-  width: 100%;
-}
-
-.form__items-title {
-  @include form__label;
-}
-
-.form__items-title-text {
-  @include form__label-text;
-}
-
-.form__items-list{
-  @include form__detail;
-}
-
-.form__items-item{
+.form__detail-item{
   display: flex;
   align-items: center;
 }
 
-.form__items-item+.form__items-item{
+.form__detail-item--border:last-child{
+  padding-bottom: $spacing-md;
+  border-bottom: 1px solid $hover-row;
+}
+
+.form__detail-item+.form__detail-item{
   margin-top: $spacing-xs;
 }
 
-.form__items-label{
+.form__detail-label{
   width: rem(112px);
   padding-right: $spacing-sm;
   text-align: right;
 }
 
-.form__items-label-text{
+.form__detail-label-text{
   @include font-weight("regular");
   color: $text-02;
   word-break: break-word;
 }
 
-.form__items-detail{
+.form__detail-detail{
+  display: flex;
+  align-items: center;
   flex: 1 0 auto;
 }

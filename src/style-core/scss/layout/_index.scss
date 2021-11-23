@@ -36,6 +36,45 @@
   background-color: $ui-01;
 }
 
+.index-layout-body__template-inner {
+  transform: translate(0, 0);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: rem(200px);
+  width: 100%;
+  min-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  z-index: z("modal");
+  background: $ui-01;
+  box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.03);
+}
+
+.index-layout-body__template-inner .project-thumbnail{
+  height: calc(100% - 112px) !important;
+}
+
+.slide-up {
+  transition: all 0.5s;
+}
+
+.slide-up-enter-active {
+  transition: all 0.5s ease;
+}
+
+.slide-up-leave-active {
+  transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-up-enter,
+.slide-up-leave-active {
+  opacity: 0;
+  transform: translate(0, -100%);
+}
+
 .index-layout-body__top-bar {
   display: flex;
   align-items: center;
@@ -51,6 +90,12 @@
 .checkbox.index-layout-body__filter-checkbox {
   width: rem(24px);
   height: rem(24px);
+  line-height: 1;
+}
+
+.checkbox.index-layout-body__filter-checkbox .checkbox__label{
+  width: rem(20px);
+  height: rem(20px);
 }
 
 .index-layout-body__filter-title {
@@ -90,10 +135,25 @@
 }
 
 .index-layout-body__controller-select {
-  width: rem(120px);
+  width: auto;
   margin-left: $spacing-xs;
-  & + & {
-    width: rem(128px);
+
+  &.select--view-all.division-element {
+    min-width: rem(136px);
+    max-width: rem(250px);
+
+    .select-container {
+      min-width: rem(136px);
+      max-width: rem(250px);
+    }
+  }
+
+  &.select--borderless {
+    min-width: rem(120px);
+
+    .select-container {
+      min-width: rem(120px);
+    }
   }
 }
 
@@ -160,6 +220,53 @@
   }
 }
 
+.url-group {
+  min-height: 68px;
+  max-height: 235px;
+  overflow-y: auto;
+  background-color: $ui-02;
+  border: 1px solid $ui-04;
+  border-radius: $button-border-radius;
+  padding: $spacing-xs;
+}
+
+.url-group--disabled{
+  cursor: not-allowed;
+  user-select: none;
+  .url-group__text{
+    color: $text-02;
+  }
+  .url-group__url{
+    color: $text-02;
+    cursor: not-allowed !important;
+  }
+}
+
+.url-group__item {
+  + .url-group__item {
+    margin-top: $spacing-md;
+  }
+}
+
+.url-group__text {
+  @include font-size("14");
+  display: block;
+  color: $text-01;
+
+}
+
+.url-group__url {
+  @include line-height("title");
+  @include font-size("14");
+  display: block;
+  margin-top: $spacing-2xs;
+  color: $primary;
+  word-break: break-all;
+  white-space: normal;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 // 카테고리 관리
 .list.list-category-dialog {
   height: 280px;
@@ -191,6 +298,13 @@
 }
 
 // project-thumbnail (썸네일 뷰 / 템플릿 뷰)
+
+// IMA, ISS, ITS 목록화면 공통 클래스
+.project-list {
+  padding: 0 20px;
+  height: calc(100vh - 115px);
+}
+
 .project-thumbnail {
   padding: 0 35px $layout-xs 35px;
   flex: 1 0 auto;
@@ -336,14 +450,6 @@
   fill: $text-03;
 }
 
-//.project-thumbnail-list__thumbnail-img-group{
-//  position: absolute;
-//  left: 0;
-//  top: 0;
-//  right: 0;
-//  bottom: 0;
-//}
-
 .project-thumbnail-list__thumbnail-img {
   position: absolute;
   left: 0;
@@ -351,8 +457,8 @@
   right: 0;
   bottom: 0;
   background-image: url(https://www.fujifilm.com/products/digital_cameras/x/fujifilm_x_t1/sample_images/img/index/ff_x_t1_001.JPG);
-  background-position: 50% 50%;
-  background-size: 100% auto;
+  background-position: 0 0;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -371,6 +477,12 @@
   position: absolute;
   top: rem(6px);
   left: rem(8px);
+  line-height: 1;
+}
+
+.checkbox.project-thumbnail-list__details-checkbox .checkbox__label{
+  width: rem(20px);
+  height: rem(20px);
 }
 
 .project-thumbnail-list__detail-delete-button {
@@ -445,7 +557,7 @@
 .project-management.project-thumbnail-list__details-management {
   position: absolute;
   top: 0;
-  right: rem(4px);
+  right: 0;
 
   .button.button--icon.button--link {
     .svg-icon {
