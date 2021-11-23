@@ -25,9 +25,14 @@
   @include font-weight("medium");
 }
 
-.editor-preview-layout__capture-button {
+.editor-preview-layout__buttons {
+  display: flex;
   position: absolute;
   z-index: z("float");
+}
+
+.editor-preview-layout__button + .editor-preview-layout__button {
+  margin-left: $spacing-xs;
 }
 
 .editor-preview-layout__preview-wrap {
