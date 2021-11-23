@@ -69,3 +69,9 @@
 .text-area-wrap__foot-buttons {
   display: flex;
 }
+
+.text-area-wrap__foot-text {
+  @include font-size("12");
+  @include line-height("title");
+  color: $text-03;
+}
