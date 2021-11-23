@@ -53,6 +53,12 @@
   box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.03);
 }
 
+.index-layout-body__inner{
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+}
+
 .index-layout-body__template-inner .project-thumbnail{
   height: calc(100% - 112px) !important;
 }
