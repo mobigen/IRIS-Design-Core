@@ -53,6 +53,12 @@
   box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.03);
 }
 
+.index-layout-body__inner{
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+}
+
 .index-layout-body__template-inner .project-thumbnail{
   height: calc(100% - 112px) !important;
 }
@@ -220,6 +226,53 @@
   }
 }
 
+.url-group {
+  min-height: 68px;
+  max-height: 235px;
+  overflow-y: auto;
+  background-color: $ui-02;
+  border: 1px solid $ui-04;
+  border-radius: $button-border-radius;
+  padding: $spacing-xs;
+}
+
+.url-group--disabled{
+  cursor: not-allowed;
+  user-select: none;
+  .url-group__text{
+    color: $text-02;
+  }
+  .url-group__url{
+    color: $text-02;
+    cursor: not-allowed !important;
+  }
+}
+
+.url-group__item {
+  + .url-group__item {
+    margin-top: $spacing-md;
+  }
+}
+
+.url-group__text {
+  @include font-size("14");
+  display: block;
+  color: $text-01;
+
+}
+
+.url-group__url {
+  @include line-height("title");
+  @include font-size("14");
+  display: block;
+  margin-top: $spacing-2xs;
+  color: $primary;
+  word-break: break-all;
+  white-space: normal;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 // 카테고리 관리
 .list.list-category-dialog {
   height: 280px;
@@ -251,6 +304,13 @@
 }
 
 // project-thumbnail (썸네일 뷰 / 템플릿 뷰)
+
+// IMA, ISS, ITS 목록화면 공통 클래스
+.project-list {
+  padding: 0 20px;
+  height: calc(100vh - 115px);
+}
+
 .project-thumbnail {
   padding: 0 35px $layout-xs 35px;
   flex: 1 0 auto;
