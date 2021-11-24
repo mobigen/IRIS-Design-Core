@@ -1,9 +1,6 @@
-/*.ag-theme-default {
-  background-color: white;
-  color: black;
-  font-family: "Helvetica Neue", sans-serif;
-  font-weight: 400;
-  font-size: 14px; }*/
+// -------------------------
+// default Theme Customizing
+// -------------------------
 .ag-theme-default {
   @include font-weight("regular");
   background-color: $ui-02;
@@ -3241,11 +3238,11 @@ input[type="radio"] {
   background-position-y: 0 !important;
 }
 
-.ag-overlay-wrapper {
+.ag-theme-default .ag-overlay-wrapper {
   background-color: rgba($ui-01, 0.6);
 }
 
-.ag-overlay-no-rows-center {
+.ag-theme-default .ag-overlay-no-rows-center {
   position: absolute;
   top: 50%;
   left: 50%;
