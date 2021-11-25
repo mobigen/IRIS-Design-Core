@@ -125,6 +125,10 @@
   }
 
   .ag-ltr .ag-cell {
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
     border: none;
   }
 
