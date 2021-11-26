@@ -37,6 +37,11 @@
   color: $text-02;
 }
 
+.modal__head-tooltip{
+  margin-left: $spacing-3xs;
+  margin-bottom: $spacing-3xs;
+}
+
 .modal__head-toolbar ~ .modal__head-close-button {
   margin-left: $spacing-sm;
 }
