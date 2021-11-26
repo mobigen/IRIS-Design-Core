@@ -65,6 +65,15 @@
     }
   }
 
+  &[x-placement^="bottom-start"] {
+    margin-top: 10px;
+
+    .tooltip-arrow {
+      top: -4px;
+      margin-left: 2px;
+    }
+  }
+
   &[x-placement^="right"] {
     margin-left: 10px;
 
