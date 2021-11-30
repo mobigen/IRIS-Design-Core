@@ -354,13 +354,17 @@
 }
 
 .editor-layout-body__canvas-wrap {
-  flex: 1;
+  float: left;
+  width: calc(100% - 300px);
+  height: 100%;
   padding: $layout-2xs;
   overflow: auto;
   background-color: $ui-04;
 }
 
 .editor-layout-body__canvas {
+  display: inline-block;
+  position: relative;
   background-color: $ui-02;
   border: 1px solid $ui-04;
 }
