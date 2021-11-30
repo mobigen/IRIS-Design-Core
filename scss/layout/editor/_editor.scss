@@ -65,8 +65,8 @@
 }
 
 .editor-layout-head__action-buttons {
-  .text-input-group + .button,
-  .button + .button,
+  .text-input-group + div,
+  div + div,
   .select + .button,
   .button + .select {
     margin-left: $spacing-2xs;
