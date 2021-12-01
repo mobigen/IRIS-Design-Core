@@ -85,7 +85,8 @@
   margin-left: auto;
 }
 
-.modal__foot .button + .button {
+.modal__foot .button + .button,
+.modal__foot div + div{
   margin-left: $spacing-xs;
 }
 
