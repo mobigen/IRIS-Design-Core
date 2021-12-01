@@ -81,7 +81,8 @@
 }
 
 .modal__foot .button + .button,
-.modal__foot div + div{
+.modal__foot div + div,
+.modal__foot .modal__foot-main-buttons div + div{
   margin-left: $spacing-xs;
 }
 
