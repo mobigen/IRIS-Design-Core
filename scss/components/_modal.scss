@@ -80,16 +80,15 @@
   background-color: $ui-01;
 }
 
-.modal__foot-main-buttons {
-  display: flex;
-  margin-left: auto;
-}
-
 .modal__foot .button + .button,
 .modal__foot div + div{
   margin-left: $spacing-xs;
 }
 
+.modal__foot .modal__foot-main-buttons {
+  display: flex;
+  margin-left: auto;
+}
 //   midal size
 //   ==========================================
 //   xs   ||  350px
