@@ -2466,6 +2466,11 @@
   z-index: 8300;
 }
 
+// popup 보고서를 제외한 편집 화면에서 차트 툴팁이 시각화 옵션 위로 올라오지 않도록 방지
+.modal + .highcharts-tooltip-container {
+  z-index: 9998 !important;
+}
+
 // -------------------------
 // ui-resizable
 // -------------------------
