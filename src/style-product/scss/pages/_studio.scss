@@ -703,10 +703,20 @@
 }
 
 .object-combo-box .select,
-.object-combo-box .select-selector,
+.object-combo-box .select-selector{
+  width: 100%;
+  height: 100%;
+}
+
 .object-combo-box .select-selector__input {
   width: 100%;
   height: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.object-combo-box .text-input {
+  padding: 0 $spacing-lg 0 $spacing-sm;
 }
 
 .object-combo-box .select-selector__icon-button {
