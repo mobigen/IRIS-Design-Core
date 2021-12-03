@@ -1,0 +1,1033 @@
+<!-- transfer -->
+<div class="page-header">
+  <h2 class="page-header__lable">component</h2>
+  <h3 class="page-header__title">Transfer</h3>
+</div>
+<div class="page-content">
+  <p class="page__desc">트랜스퍼는 두개의 목록에서 항목을 선택해 데이터를 이동하는데 사용합니다.<br/>기본적으로 여러 항목을 선택할 수 있는 선택형 컨트롤러입니다.</p>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Basic</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <div class="transfer" style="width: 520px;">
+            <div class="transfer-list">
+              <div class="transfer-list__head">
+                <div class="transfer-list__head-title">
+                  <span class="transfer-list__head-title-text">권한 있음</span>
+                  <div class="transfer-list__toggle-switch toggle-switch toggle-switch--sm">
+                    <label for="tranferToggleSwitch01" class="toggle-switch__label">모든 사용자 그룹</label>
+                    <button id="tranferToggleSwitch01" class="toggle-switch__switch" type="button">
+                      <span class="toggle-switch__handle">
+                        <span class="ir-pm"></span>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+                <div class="transfer-list__head-toolbar">
+                  <div class="text-input-group">
+                    <span class="text-input-group__icon">
+                      <svg class="svg-icon" aria-hidden="true">
+                        <use xlink:href="#search"></use>
+                      </svg>
+                    </span>
+                    <input type="text" class="text-input" placeholder="검색어를 입력해주세요">
+                    <button class="text-input-group__clear-button">
+                      <svg class="svg-icon" aria-hidden="true">
+                        <use xlink:href="#close"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <button class="transfer-list__head-toolbar-button button button--secondary">
+                    <span class="button__text">
+                      검색
+                    </span>
+                  </button>
+                </div>
+              </div>
+              <div class="transfer-list__options">
+                <div class="checkbox checkbox--indeterminate">
+                  <input id="transferCheckAll07" type="checkbox" class="checkbox__input" value="label">
+                  <label for="transferCheckAll07" class="checkbox__label">전체</label>
+                </div>
+                <div class="transfer-list__options-count">
+                  <strong class="transfer-list__options-count-selected">3</strong>
+                  <span>/</span>
+                  <span class="transfer-list__options-count-all">20</span>
+                </div>
+              </div>
+              <!-- NOTE: 스크롤 원하는 max-height 클래스 혹은 인라인 스타일 추가 -->
+              <div class="transfer-list__body h-160">
+                <ul class="transfer-list__list">
+                  <li class="transfer-list__item">
+                    <div class="checkbox">
+                      <input id="transferListCheck01" type="checkbox" class="checkbox__input" value="label">
+                      <label for="transferListCheck01" class="checkbox__label">
+                        <span class="transfer-list__text">checkable list item text <mark class="filter-highlight">filter highlight</mark></span>
+                      </label>
+                    </div>
+                  </li>
+                  <li class="transfer-list__item transfer-list__item--selected">
+                    <div class="checkbox checkbox--checked">
+                      <input id="transferListCheck02" type="checkbox" class="checkbox__input" value="label" checked="">
+                      <label for="transferListCheck02" class="checkbox__label">
+                        <span class="transfer-list__text">checkable list item text selected</span>
+                      </label>
+                    </div>
+                  </li>
+                  <li class="transfer-list__item transfer-list__item--disabled">
+                    <div class="checkbox checkbox--disabled">
+                      <input id="transferListCheck03" type="checkbox" class="checkbox__input" value="label" disabled="">
+                      <label for="transferListCheck03" class="checkbox__label">
+                        <span class="transfer-list__text">checkable list item text disabled</span>
+                      </label>
+                    </div>
+                  </li>
+                  <li class="transfer-list__item transfer-list__item--selected transfer-list__item--disabled">
+                    <div class="checkbox checkbox--disabled">
+                      <input id="transferListCheck04" type="checkbox" class="checkbox__input" value="label" checked="" disabled="">
+                      <label for="transferListCheck04" class="checkbox__label">
+                        <span class="transfer-list__text">checkable list item text selected disabled</span>
+                      </label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="transfer__handler">
+              <button class="button button--icon button--tertiary" type="button">
+                <svg class="svg-icon" aria-hidden="true">
+                  <use xlink:href="#chevron-right"></use>
+                </svg>
+              </button>
+              <button class="button button--icon button--tertiary" type="button" disabled>
+                <svg class="svg-icon" aria-hidden="true">
+                  <use xlink:href="#chevron-left"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="transfer-list transfer-list--hidable">
+              <div class="transfer-list__head">
+                <div class="transfer-list__head-title">권한 없음</div>
+                <div class="transfer-list__head-toolbar">
+                  <div class="text-input-group">
+                    <span class="text-input-group__icon">
+                      <svg class="svg-icon" aria-hidden="true">
+                        <use xlink:href="#search"></use>
+                      </svg>
+                    </span>
+                    <input type="text" class="text-input" placeholder="검색어를 입력해주세요">
+                    <button class="text-input-group__clear-button">
+                      <svg class="svg-icon" aria-hidden="true">
+                        <use xlink:href="#close"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <button class="transfer-list__head-toolbar-button button button--secondary">
+                    <span class="button__text">
+                      검색
+                    </span>
+                  </button>
+                </div>
+              </div>
+              <div class="transfer-list__options">
+                <div class="checkbox">
+                  <input id="transferCheckAll02" type="checkbox" class="checkbox__input" value="label">
+                  <label for="transferCheckAll02" class="checkbox__label">전체</label>
+                </div>
+                <div class="transfer-list__options-count">
+                  <strong class="transfer-list__options-count-selected">3</strong>
+                  <span>/</span>
+                  <span class="transfer-list__options-count-all">20</span>
+                </div>
+              </div>
+              <!-- NOTE: 스크롤 원하는 max-height 클래스 혹은 인라인 스타일 추가 -->
+              <div class="transfer-list__body h-160">
+                <ul class="transfer-list__list">
+                  <li class="transfer-list__item">
+                    <div class="checkbox">
+                      <input id="transferListCheck05" type="checkbox" class="checkbox__input" value="label">
+                      <label for="transferListCheck05" class="checkbox__label">
+                        <span class="transfer-list__text">checkable list item text</span>
+                      </label>
+                    </div>
+                  </li>
+                  <li class="transfer-list__item transfer-list__item--selected">
+                    <div class="checkbox checkbox--checked">
+                      <input id="transferListCheck06" type="checkbox" class="checkbox__input" value="label">
+                      <label for="transferListCheck06" class="checkbox__label">
+                        <span class="transfer-list__text">checkable list item text</span>
+                      </label>
+                    </div>
+                  </li>
+                  <li class="transfer-list__item">
+                    <div class="checkbox checkbox--checked">
+                      <input id="transferListCheck02" type="checkbox" class="checkbox__input" value="label">
+                      <label for="transferListCheck02" class="checkbox__label">
+                        <span class="transfer-list__text">checkable list item text</span>
+                      </label>
+                    </div>
+                  </li>
+                  <li class="transfer-list__item">
+                    <div class="checkbox checkbox--checked">
+                      <input id="transferListCheck07" type="checkbox" class="checkbox__input" value="label">
+                      <label for="transferListCheck07" class="checkbox__label">
+                        <span class="transfer-list__text">checkable list item text</span>
+                      </label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">ACL Example</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <div class="modal modal--lg" style="position: static;">
+            <div class="modal__head">
+              <div class="modal__head-title">
+                <span class="modal__head-title-text">권한 설정</span>
+              </div>
+              <span class="modal__head-close-button">
+                <button class="button button--icon button--link button--sm">
+                  <svg class="svg-icon" aria-hidden="true">
+                    <use xlink:href="#close"></use>
+                  </svg>
+                </button>
+              </span>
+            </div>
+            <div class="modal__body modal__body--md">
+              <form class="form form--vertical form--lg">
+                <div class="form__list">
+                  <div class="form__item">
+                    <labe class="form__label">
+                      <span class="form__label-text">사용자 그룹</span>
+                    </labe>
+                    <div class="form__detail">
+                      <div class="transfer">
+                        <!-- transfer-list--hidable 추가시 버튼 show/hide 가능 -->
+                        <div class="transfer-list transfer-list--hidable">
+                          <div class="transfer-list__head">
+                            <div class="transfer-list__head-title">
+                              <span class="transfer-list__head-title-text">권한 있음</span>
+                              <div class="transfer-list__toggle-switch toggle-switch toggle-switch--sm">
+                                <label for="tranferToggleSwitch03" class="toggle-switch__label">모든 사용자 그룹</label>
+                                <button id="tranferToggleSwitch03" class="toggle-switch__switch" type="button">
+                                  <span class="toggle-switch__handle">
+                                    <span class="ir-pm"></span>
+                                  </span>
+                                </button>
+                              </div>
+                            </div>
+                            <div class="transfer-list__head-toolbar">
+                              <div class="text-input-group">
+                                <span class="text-input-group__icon">
+                                  <svg class="svg-icon" aria-hidden="true">
+                                    <use xlink:href="#search"></use>
+                                  </svg>
+                                </span>
+                                <input type="text" class="text-input" placeholder="검색어를 입력해주세요">
+                                <button class="text-input-group__clear-button">
+                                  <svg class="svg-icon" aria-hidden="true">
+                                    <use xlink:href="#close"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                              <button class="transfer-list__head-toolbar-button button button--secondary">
+                                <span class="button__text">
+                                  검색
+                                </span>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="transfer-list__options">
+                            <div class="checkbox checkbox--indeterminate">
+                              <input id="transferCheckAll03" type="checkbox" class="checkbox__input" value="label">
+                              <label for="transferCheckAll03" class="checkbox__label">전체</label>
+                            </div>
+                            <div class="transfer-list__options-count">
+                              <strong class="transfer-list__options-count-selected">3</strong>
+                              <span>/</span>
+                              <span class="transfer-list__options-count-all">20</span>
+                            </div>
+                          </div>
+                          <!-- NOTE: 스크롤 원하는 max-height 클래스 혹은 인라인 스타일 추가 -->
+                          <div class="transfer-list__body h-160">
+                            <ul class="transfer-list__list">
+                              <li class="transfer-list__item">
+                                <div class="checkbox">
+                                  <input id="transferListCheck08" type="checkbox" class="checkbox__input" value="label">
+                                  <label for="transferListCheck08" class="checkbox__label">
+                                    <span class="transfer-list__text">checkable list item text <mark class="filter-highlight">filter highlight</mark></span>
+                                  </label>
+                                </div>
+                                <div class="transfer-list__action-buttons">
+                                  <button class="transfer-list__action-button" type="button" title="위로">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#chevron-up"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="transfer-list__action-button" type="button" title="아래로">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#chevron-down"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="transfer-list__action-button" type="button" title="삭제">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#trash"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </li>
+                              <li class="transfer-list__item">
+                                <div class="checkbox checkbox--checked">
+                                  <input id="transferListCheck09" type="checkbox" class="checkbox__input" value="label">
+                                  <label for="transferListCheck09" class="checkbox__label">
+                                    <span class="transfer-list__text">checkable list item text</span>
+                                  </label>
+                                </div>
+                                <div class="transfer-list__action-buttons">
+                                  <button class="transfer-list__action-button" type="button" title="위로">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#chevron-up"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="transfer-list__action-button" type="button" title="아래로">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#chevron-down"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="transfer-list__action-button" type="button" title="삭제">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#trash"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </li>
+                              <li class="transfer-list__item transfer-list__item--selected">
+                                <div class="checkbox checkbox--checked">
+                                  <input id="transferListCheck10" type="checkbox" class="checkbox__input" value="label" checked="">
+                                  <label for="transferListCheck10" class="checkbox__label">
+                                    <span class="transfer-list__text">checkable list item text selected</span>
+                                  </label>
+                                </div>
+                                <div class="transfer-list__action-buttons">
+                                  <button class="transfer-list__action-button" type="button" title="위로">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#chevron-up"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="transfer-list__action-button" type="button" title="아래로">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#chevron-down"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="transfer-list__action-button" type="button" title="삭제">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#trash"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </li>
+                              <li class="transfer-list__item transfer-list__item--selected">
+                                <div class="checkbox checkbox--checked">
+                                  <input id="transferListCheck11" type="checkbox" class="checkbox__input" value="label" checked="">
+                                  <label for="transferListCheck11" class="checkbox__label">
+                                    <span class="transfer-list__text">checkable list item text selected</span>
+                                  </label>
+                                </div>
+                                <div class="transfer-list__action-buttons">
+                                  <button class="transfer-list__action-button" type="button" title="위로">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#chevron-up"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="transfer-list__action-button" type="button" title="아래로">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#chevron-down"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="transfer-list__action-button" type="button" title="삭제">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#trash"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </li>
+                              <li class="transfer-list__item transfer-list__item--selected">
+                                <div class="checkbox checkbox--checked">
+                                  <input id="transferListCheck12" type="checkbox" class="checkbox__input" value="label" checked="">
+                                  <label for="transferListCheck12" class="checkbox__label">
+                                    <span class="transfer-list__text">checkable list item text selected</span>
+                                  </label>
+                                </div>
+                                <div class="transfer-list__action-buttons">
+                                  <button class="transfer-list__action-button" type="button" title="위로">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#chevron-up"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="transfer-list__action-button" type="button" title="아래로">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#chevron-down"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="transfer-list__action-button" type="button" title="삭제">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#trash"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </li>
+                              <li class="transfer-list__item transfer-list__item--selected">
+                                <div class="checkbox checkbox--checked">
+                                  <input id="transferListCheck13" type="checkbox" class="checkbox__input" value="label" checked="">
+                                  <label for="transferListCheck13" class="checkbox__label">
+                                    <span class="transfer-list__text">checkable list item text selected</span>
+                                  </label>
+                                </div>
+                                <div class="transfer-list__action-buttons">
+                                  <button class="transfer-list__action-button" type="button" title="위로">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#chevron-up"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="transfer-list__action-button" type="button" title="아래로">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#chevron-down"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="transfer-list__action-button" type="button" title="삭제">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#trash"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </li>
+                              <li class="transfer-list__item transfer-list__item--disabled">
+                                <div class="checkbox checkbox--disabled">
+                                  <input id="transferListCheck14" type="checkbox" class="checkbox__input" value="label" disabled="">
+                                  <label for="transferListCheck14" class="checkbox__label">
+                                    <span class="transfer-list__text">checkable list item text disabled</span>
+                                  </label>
+                                </div>
+                                <div class="transfer-list__action-buttons">
+                                  <button class="transfer-list__action-button" type="button" title="위로">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#chevron-up"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="transfer-list__action-button" type="button" title="아래로">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#chevron-down"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="transfer-list__action-button" type="button" title="삭제">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#trash"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </li>
+                              <li class="transfer-list__item transfer-list__item--selected transfer-list__item--disabled">
+                                <div class="checkbox checkbox--disabled">
+                                  <input id="transferListCheck15" type="checkbox" class="checkbox__input" value="label" checked="" disabled="">
+                                  <label for="transferListCheck15" class="checkbox__label">
+                                    <span class="transfer-list__text">checkable list item text selected disabled</span>
+                                  </label>
+                                </div>
+                                <div class="transfer-list__action-buttons">
+                                  <button class="transfer-list__action-button" type="button" title="위로">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#chevron-up"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="transfer-list__action-button" type="button" title="아래로">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#chevron-down"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="transfer-list__action-button" type="button" title="삭제">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#trash"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="transfer__handler">
+                          <button class="button button--icon button--tertiary" type="button">
+                            <svg class="svg-icon" aria-hidden="true">
+                              <use xlink:href="#chevron-right"></use>
+                            </svg>
+                          </button>
+                          <button class="button button--icon button--tertiary" type="button" disabled>
+                            <svg class="svg-icon" aria-hidden="true">
+                              <use xlink:href="#chevron-left"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="transfer-list transfer-list--hidable">
+                          <div class="transfer-list__head">
+                            <div class="transfer-list__head-title">권한 없음</div>
+                            <div class="transfer-list__head-toolbar">
+                              <div class="text-input-group">
+                                <span class="text-input-group__icon">
+                                  <svg class="svg-icon" aria-hidden="true">
+                                    <use xlink:href="#search"></use>
+                                  </svg>
+                                </span>
+                                <input type="text" class="text-input" placeholder="검색어를 입력해주세요">
+                                <button class="text-input-group__clear-button">
+                                  <svg class="svg-icon" aria-hidden="true">
+                                    <use xlink:href="#close"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                              <button class="transfer-list__head-toolbar-button button button--secondary">
+                                <span class="button__text">
+                                  검색
+                                </span>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="transfer-list__options">
+                            <div class="checkbox">
+                              <input id="transferCheckAll04" type="checkbox" class="checkbox__input" value="label">
+                              <label for="transferCheckAll04" class="checkbox__label">전체</label>
+                            </div>
+                            <div class="transfer-list__options-count">
+                              <strong class="transfer-list__options-count-selected">3</strong>
+                              <span>/</span>
+                              <span class="transfer-list__options-count-all">20</span>
+                            </div>
+                          </div>
+                          <div class="transfer-list__body h-160">
+                            <ul class="transfer-list__list">
+                              <li class="transfer-list__item">
+                                <div class="checkbox">
+                                  <input id="transferListCheck16" type="checkbox" class="checkbox__input" value="label">
+                                  <label for="transferListCheck16" class="checkbox__label">
+                                    <span class="transfer-list__text">checkable list item text</span>
+                                  </label>
+                                </div>
+                                <div class="transfer-list__action-buttons">
+                                  <button class="transfer-list__action-button" type="button" title="위로">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#chevron-up"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="transfer-list__action-button" type="button" title="아래로">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#chevron-down"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="transfer-list__action-button" type="button" title="삭제">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#trash"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </li>
+                              <li class="transfer-list__item">
+                                <div class="checkbox checkbox--checked">
+                                  <input id="transferListCheck17" type="checkbox" class="checkbox__input" value="label">
+                                  <label for="transferListCheck17" class="checkbox__label">
+                                    <span class="transfer-list__text">checkable list item text</span>
+                                  </label>
+                                </div>
+                                <div class="transfer-list__action-buttons">
+                                  <button class="transfer-list__action-button" type="button" title="위로">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#chevron-up"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="transfer-list__action-button" type="button" title="아래로">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#chevron-down"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="transfer-list__action-button" type="button" title="삭제">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#trash"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </li>
+                              <li class="transfer-list__item">
+                                <div class="checkbox">
+                                  <input id="transferListCheck18" type="checkbox" class="checkbox__input" value="label">
+                                  <label for="transferListCheck18" class="checkbox__label">
+                                    <span class="transfer-list__text">checkable list item text</span>
+                                  </label>
+                                </div>
+                                <div class="transfer-list__action-buttons">
+                                  <button class="transfer-list__action-button" type="button" title="위로">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#chevron-up"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="transfer-list__action-button" type="button" title="아래로">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#chevron-down"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="transfer-list__action-button" type="button" title="삭제">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#trash"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </li>
+                              <li class="transfer-list__item">
+                                <div class="checkbox">
+                                  <input id="transferListCheck19" type="checkbox" class="checkbox__input" value="label">
+                                  <label for="transferListCheck19" class="checkbox__label">
+                                    <span class="transfer-list__text">checkable list item text</span>
+                                  </label>
+                                </div>
+                                <div class="transfer-list__action-buttons">
+                                  <button class="transfer-list__action-button" type="button" title="위로">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#chevron-up"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="transfer-list__action-button" type="button" title="아래로">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#chevron-down"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="transfer-list__action-button" type="button" title="삭제">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#trash"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </li>
+                              <li class="transfer-list__item">
+                                <div class="checkbox">
+                                  <input id="transferListCheck20" type="checkbox" class="checkbox__input" value="label">
+                                  <label for="transferListCheck20" class="checkbox__label">
+                                    <span class="transfer-list__text">checkable list item text</span>
+                                  </label>
+                                </div>
+                                <div class="transfer-list__action-buttons">
+                                  <button class="transfer-list__action-button" type="button" title="위로">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#chevron-up"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="transfer-list__action-button" type="button" title="아래로">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#chevron-down"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="transfer-list__action-button" type="button" title="삭제">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#trash"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </li>
+                              <li class="transfer-list__item transfer-list__item--disabled">
+                                <div class="checkbox checkbox--disabled">
+                                  <input id="transferListCheck21" type="checkbox" class="checkbox__input" value="label" disabled="">
+                                  <label for="transferListCheck21" class="checkbox__label">
+                                    <span class="transfer-list__text">checkable list item text disabled</span>
+                                  </label>
+                                </div>
+                                <div class="transfer-list__action-buttons">
+                                  <button class="transfer-list__action-button" type="button" title="위로">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#chevron-up"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="transfer-list__action-button" type="button" title="아래로">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#chevron-down"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="transfer-list__action-button" type="button" title="삭제">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#trash"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </li>
+                              <li class="transfer-list__item">
+                                <div class="checkbox">
+                                  <input id="transferListCheck22" type="checkbox" class="checkbox__input" value="label">
+                                  <label for="transferListCheck22" class="checkbox__label">
+                                    <span class="transfer-list__text">checkable list item text</span>
+                                  </label>
+                                </div>
+                                <div class="transfer-list__action-buttons">
+                                  <button class="transfer-list__action-button" type="button" title="위로">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#chevron-up"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="transfer-list__action-button" type="button" title="아래로">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#chevron-down"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="transfer-list__action-button" type="button" title="삭제">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#trash"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form__item">
+                    <labe class="form__label">
+                      <span class="form__label-text">사용자</span>
+                    </labe>
+                    <div class="form__detail">
+                      <div class="transfer">
+                        <div class="transfer-list transfer-list--hidable transfer-list--disabled">
+                          <div class="transfer-list__head">
+                            <div class="transfer-list__head-title">
+                              <span class="transfer-list__head-title-text">권한 있음</span>
+                              <div class="transfer-list__toggle-switch toggle-switch toggle-switch--sm">
+                                <label for="tranferToggleSwitch01" class="toggle-switch__label">모든 사용자</label>
+                                <button id="tranferToggleSwitch01" class="toggle-switch__switch toggle-switch__switch--selected" type="button">
+                                  <span class="toggle-switch__handle">
+                                    <span class="ir-pm"></span>
+                                  </span>
+                                </button>
+                              </div>
+                            </div>
+                            <div class="transfer-list__head-toolbar">
+                              <div class="text-input-group">
+                                <span class="text-input-group__icon">
+                                  <svg class="svg-icon" aria-hidden="true">
+                                    <use xlink:href="#search"></use>
+                                  </svg>
+                                </span>
+                                <input type="text" class="text-input" placeholder="검색어를 입력해주세요">
+                                <button class="text-input-group__clear-button">
+                                  <svg class="svg-icon" aria-hidden="true">
+                                    <use xlink:href="#close"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                              <button class="transfer-list__head-toolbar-button button button--secondary">
+                                <span class="button__text">
+                                  검색
+                                </span>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="transfer-list__options">
+                            <div class="checkbox">
+                              <input id="transferCheckAll05" type="checkbox" class="checkbox__input" value="label" checked="">
+                              <label for="transferCheckAll05" class="checkbox__label">전체</label>
+                            </div>
+                            <div class="transfer-list__options-count">
+                              <strong class="transfer-list__options-count-selected">3</strong>
+                              <span>/</span>
+                              <span class="transfer-list__options-count-all">20</span>
+                            </div>
+                          </div>
+                          <div class="transfer-list__body h-160">
+                            <ul class="transfer-list__list">
+                              <li class="transfer-list__item transfer-list__item--selected">
+                                <div class="checkbox">
+                                  <input id="transferListCheck23" type="checkbox" class="checkbox__input" value="label" checked="">
+                                  <label for="transferListCheck23" class="checkbox__label">
+                                    <span class="transfer-list__text">checkable list item text <mark class="filter-highlight">filter highlight</mark></span>
+                                  </label>
+                                </div>
+                                <div class="transfer-list__action-buttons">
+                                  <button class="transfer-list__action-button" type="button" title="위로">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#chevron-up"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="transfer-list__action-button" type="button" title="아래로">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#chevron-down"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="transfer-list__action-button" type="button" title="삭제">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#trash"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </li>
+                              <li class="transfer-list__item transfer-list__item--selected">
+                                <div class="checkbox checkbox--checked">
+                                  <input id="transferListCheck02" type="checkbox" class="checkbox__input" value="label" checked="">
+                                  <label for="transferListCheck02" class="checkbox__label">
+                                    <span class="transfer-list__text">checkable list item text selected</span>
+                                  </label>
+                                </div>
+                                <div class="transfer-list__action-buttons">
+                                  <button class="transfer-list__action-button" type="button" title="위로">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#chevron-up"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="transfer-list__action-button" type="button" title="아래로">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#chevron-down"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="transfer-list__action-button" type="button" title="삭제">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#trash"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </li>
+                              <li class="transfer-list__item transfer-list__item--selected transfer-list__item--disabled">
+                                <div class="checkbox checkbox--disabled">
+                                  <input id="transferListCheck24" type="checkbox" class="checkbox__input" value="label" checked="" disabled="">
+                                  <label for="transferListCheck24" class="checkbox__label">
+                                    <span class="transfer-list__text">checkable list item text disabled</span>
+                                  </label>
+                                </div>
+                                <div class="transfer-list__action-buttons">
+                                  <button class="transfer-list__action-button" type="button" title="위로">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#chevron-up"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="transfer-list__action-button" type="button" title="아래로">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#chevron-down"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="transfer-list__action-button" type="button" title="삭제">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#trash"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </li>
+                              <li class="transfer-list__item transfer-list__item--selected transfer-list__item--disabled">
+                                <div class="checkbox checkbox--disabled">
+                                  <input id="transferListCheck25" type="checkbox" class="checkbox__input" value="label" checked="" disabled="">
+                                  <label for="transferListCheck25" class="checkbox__label">
+                                    <span class="transfer-list__text">checkable list item text selected disabled</span>
+                                  </label>
+                                </div>
+                                <div class="transfer-list__action-buttons">
+                                  <button class="transfer-list__action-button" type="button" title="위로">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#chevron-up"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="transfer-list__action-button" type="button" title="아래로">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#chevron-down"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="transfer-list__action-button" type="button" title="삭제">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#trash"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="transfer__handler">
+                          <button class="button button--icon button--tertiary" type="button">
+                            <svg class="svg-icon" aria-hidden="true">
+                              <use xlink:href="#chevron-right"></use>
+                            </svg>
+                          </button>
+                          <button class="button button--icon button--tertiary" type="button">
+                            <svg class="svg-icon" aria-hidden="true">
+                              <use xlink:href="#chevron-left"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="transfer-list transfer-list--hidable transfer-list--disabled">
+                          <div class="transfer-list__head">
+                            <div class="transfer-list__head-title">권한 없음</div>
+                            <div class="transfer-list__head-toolbar">
+                              <div class="text-input-group">
+                                <span class="text-input-group__icon">
+                                  <svg class="svg-icon" aria-hidden="true">
+                                    <use xlink:href="#search"></use>
+                                  </svg>
+                                </span>
+                                <input type="text" class="text-input" placeholder="검색어를 입력해주세요">
+                                <button class="text-input-group__clear-button">
+                                  <svg class="svg-icon" aria-hidden="true">
+                                    <use xlink:href="#close"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                              <button class="transfer-list__head-toolbar-button button button--secondary">
+                                <span class="button__text">
+                                  검색
+                                </span>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="transfer-list__options">
+                            <div class="checkbox checkbox--indeterminate">
+                              <input id="transferCheckAll06" type="checkbox" class="checkbox__input" value="label">
+                              <label for="transferCheckAll06" class="checkbox__label">전체</label>
+                            </div>
+                            <div class="transfer-list__options-count">
+                              <strong class="transfer-list__options-count-selected">3</strong>
+                              <span>/</span>
+                              <span class="transfer-list__options-count-all">20</span>
+                            </div>
+                          </div>
+                          <div class="transfer-list__body h-160">
+                            <ul class="transfer-list__list">
+                              <li class="transfer-list__item">
+                                <div class="checkbox">
+                                  <input id="transferListCheck26" type="checkbox" class="checkbox__input" value="label">
+                                  <label for="transferListCheck26" class="checkbox__label">
+                                    <span class="transfer-list__text">checkable list item text</span>
+                                  </label>
+                                </div>
+                                <div class="transfer-list__action-buttons">
+                                  <button class="transfer-list__action-button" type="button" title="위로">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#chevron-up"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="transfer-list__action-button" type="button" title="아래로">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#chevron-down"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="transfer-list__action-button" type="button" title="삭제">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#trash"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </li>
+                              <li class="transfer-list__item transfer-list__item--selected">
+                                <div class="checkbox checkbox--checked">
+                                  <input id="transferListCheck27" type="checkbox" class="checkbox__input" value="label" checked="">
+                                  <label for="transferListCheck27" class="checkbox__label">
+                                    <span class="transfer-list__text">checkable list item text selected</span>
+                                  </label>
+                                </div>
+                                <div class="transfer-list__action-buttons">
+                                  <button class="transfer-list__action-button" type="button" title="위로">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#chevron-up"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="transfer-list__action-button" type="button" title="아래로">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#chevron-down"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="transfer-list__action-button" type="button" title="삭제">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#trash"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </li>
+                              <li class="transfer-list__item transfer-list__item--disabled">
+                                <div class="checkbox checkbox--disabled">
+                                  <input id="transferListCheck28" type="checkbox" class="checkbox__input" value="label" disabled="">
+                                  <label for="transferListCheck28" class="checkbox__label">
+                                    <span class="transfer-list__text">checkable list item text disabled</span>
+                                  </label>
+                                </div>
+                                <div class="transfer-list__action-buttons">
+                                  <button class="transfer-list__action-button" type="button" title="위로">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#chevron-up"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="transfer-list__action-button" type="button" title="아래로">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#chevron-down"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="transfer-list__action-button" type="button" title="삭제">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#trash"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </li>
+                              <li class="transfer-list__item transfer-list__item--selected transfer-list__item--disabled">
+                                <div class="checkbox checkbox--disabled">
+                                  <input id="transferListCheck29" type="checkbox" class="checkbox__input" value="label" checked="" disabled="">
+                                  <label for="transferListCheck29" class="checkbox__label">
+                                    <span class="transfer-list__text">checkable list item text selected disabled</span>
+                                  </label>
+                                </div>
+                                <div class="transfer-list__action-buttons">
+                                  <button class="transfer-list__action-button" type="button" title="위로">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#chevron-up"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="transfer-list__action-button" type="button" title="아래로">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#chevron-down"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="transfer-list__action-button" type="button" title="삭제">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#trash"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal__foot">
+              <button class="button button--tertiary button--lg" type="button">
+                <span>초기화</span>
+              </button>
+              <button class="button button--danger button--lg" type="button">
+                <span>삭제</span>
+              </button>
+              <div class="modal__foot-main-buttons">
+                <button class="button button--link button--lg" type="button">
+                  <span>취소</span>
+                </button>
+                <button class="button button--primary button--lg" type="button">
+                  <span>저장</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
