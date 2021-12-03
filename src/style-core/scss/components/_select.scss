@@ -290,6 +290,12 @@
   }
 }
 
+.select--left {
+  .select-container {
+    left: 0;
+  }
+}
+
 .select--up {
   .select-container {
     top: auto;
