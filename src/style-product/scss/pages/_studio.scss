@@ -2588,3 +2588,12 @@
   }
 
 }
+
+// -------------------------
+// style-core로 옮겨질 검토가 필요한 스타일
+// -------------------------
+
+.tag--teal.tag--not-clickable:hover:not(:disabled) {
+  background-color: #adf0f0;
+  color: #007d79;
+}
