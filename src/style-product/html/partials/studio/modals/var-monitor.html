@@ -3,8 +3,23 @@
 <div class="modal modal--md" style="position: static;">
   <!-- 내용 -->
   <div class="modal__body modal__body--sm">
+    <div class="table__toolbar">
+      <div class="text-input-group ml-auto w-260">
+        <span class="text-input-group__icon">
+          <svg class="svg-icon" aria-hidden="true">
+            <use xlink:href="#search"></use>
+          </svg>
+        </span>
+        <input type="text" class="text-input" placeholder="검색">
+        <button class="text-input-group__clear-button">
+          <svg class="svg-icon" aria-hidden="true">
+            <use xlink:href="#close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
     <div class="table-scroll">
-      <table class="table table--secondary table--sm">
+      <table class="table table--secondary table">
         <colgroup>
           <col width="140px">
           <col width="140px">
@@ -12,9 +27,24 @@
         </colgroup>
         <thead>
           <tr>
-            <th>오브젝트 ID</th>
-            <th>변수 명</th>
-            <th>변수 값</th>
+            <th>
+              오브젝트 ID
+              <svg class="svg-icon">
+                <use xlink:href="#sort"></use>
+              </svg>
+            </th>
+            <th>
+              변수 명
+              <svg class="svg-icon">
+                <use xlink:href="#sort-up"></use>
+              </svg>
+            </th>
+            <th>
+              변수 값
+              <svg class="svg-icon">
+                <use xlink:href="#sort-down"></use>
+              </svg>
+            </th>
           </tr>
         </thead>
       </table>
