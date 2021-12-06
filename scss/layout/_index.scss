@@ -1,3 +1,6 @@
+//-------------------------------------------
+//  목록화면 공통 UI (IMA, Studio, ITS)
+// ------------------------------------------
 // index-layout-head
 .index-layout-head {
   background-color: $ui-02;
@@ -25,7 +28,7 @@
   align-items: center;
 
   .button + .button,
-  div + div{
+  div + div {
     margin-left: $spacing-xs;
   }
 }
@@ -54,13 +57,13 @@
   box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.03);
 }
 
-.index-layout-body__inner{
+.index-layout-body__inner {
   display: flex;
   flex-direction: column;
   flex: 1 0 auto;
 }
 
-.index-layout-body__template-inner .project-thumbnail{
+.index-layout-body__template-inner .project-thumbnail {
   height: calc(100% - 112px) !important;
 }
 
@@ -100,7 +103,7 @@
   line-height: 1;
 }
 
-.checkbox.index-layout-body__filter-checkbox .checkbox__label{
+.checkbox.index-layout-body__filter-checkbox .checkbox__label {
   width: rem(20px);
   height: rem(20px);
 }
@@ -237,13 +240,13 @@
   padding: $spacing-xs;
 }
 
-.url-group--disabled{
+.url-group--disabled {
   cursor: not-allowed;
   user-select: none;
-  .url-group__text{
+  .url-group__text {
     color: $text-02;
   }
-  .url-group__url{
+  .url-group__url {
     color: $text-02;
     cursor: not-allowed !important;
   }
@@ -259,7 +262,6 @@
   @include font-size("14");
   display: block;
   color: $text-01;
-
 }
 
 .url-group__url {
@@ -323,7 +325,6 @@
     padding: 0;
   }
 }
-
 
 .project-thumbnail-list {
   @include clearfix;
@@ -401,8 +402,8 @@
     }
 
     .project-thumbnail-list__thumbnail
-    .project-thumbnail-list__thumbnail-icon
-    .svg-icon {
+      .project-thumbnail-list__thumbnail-icon
+      .svg-icon {
       fill: $secondary;
     }
   }
@@ -487,7 +488,7 @@
   line-height: 1;
 }
 
-.checkbox.project-thumbnail-list__details-checkbox .checkbox__label{
+.checkbox.project-thumbnail-list__details-checkbox .checkbox__label {
   width: rem(20px);
   height: rem(20px);
 }
@@ -532,7 +533,7 @@
     max-width: 60%;
   }
 
-  &.project-thumbnail-list__information-desc-text--right{
+  &.project-thumbnail-list__information-desc-text--right {
     margin-left: auto;
     max-width: 100% !important;
   }
@@ -582,17 +583,17 @@
 
 // responsive
 @media all and (max-width: 1280px) {
-  .index-layout-body__top-bar.index-layout-body__top-bar--reponsive-lg{
+  .index-layout-body__top-bar.index-layout-body__top-bar--reponsive-lg {
     flex-wrap: wrap;
     height: auto;
 
-    .index-layout-body__management{
+    .index-layout-body__management {
       margin-right: 10px;
     }
 
-    .index-layout-body__controller{
+    .index-layout-body__controller {
       margin-left: 0;
-      margin-top: $spacing-sm
+      margin-top: $spacing-sm;
     }
   }
 }

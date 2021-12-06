@@ -109,13 +109,25 @@
 }
 
 .side-panel::before {
-  top: calc(40px + 32px); // side-panel__head의 높이 + side-panel__component-name-container 높이
-  background-image: linear-gradient(0deg, rgba($ui-01, 0) 0, rgba($ui-01, 0.7) 30%, $ui-01);
+  top: calc(
+    40px + 32px
+  ); // side-panel__head의 높이 + side-panel__component-name-container 높이
+  background-image: linear-gradient(
+    0deg,
+    rgba($ui-01, 0) 0,
+    rgba($ui-01, 0.7) 30%,
+    $ui-01
+  );
 }
 
 .side-panel::after {
   bottom: 0;
-  background-image: linear-gradient(180deg, rgba($ui-01, 0) 0, rgba($ui-01, 0.7) 30%, $ui-01);
+  background-image: linear-gradient(
+    180deg,
+    rgba($ui-01, 0) 0,
+    rgba($ui-01, 0.7) 30%,
+    $ui-01
+  );
 }
 
 .side-panel--left::before,
@@ -382,7 +394,7 @@
 //----------------------------------------------
 // side-panel 추가된 Block Element
 // ---------------------------------------------
-.side-panel__top-bar{
+.side-panel__top-bar {
   display: flex;
   height: rem(56px);
   min-height: rem(56px);
@@ -391,12 +403,12 @@
   background-color: $ui-01;
 }
 
-.side-panel__action-buttons{
+.side-panel__action-buttons {
   margin-left: auto;
   display: flex;
   align-items: center;
 
-  div + div{
+  div + div {
     margin-left: $spacing-2xs;
   }
 }
