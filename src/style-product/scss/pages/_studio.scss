@@ -1862,6 +1862,7 @@
 
 .select-container {
   max-height: rem(330px);
+}
   
 .dynamic-form__list::-webkit-scrollbar {
   -webkit-appearance: none;
@@ -3141,6 +3142,15 @@
 .data-model__body .select--borderless {
   min-width: auto;
 }
+  
+.data-model__body .data-modal__select {
+  flex: 1;
+}
+
+.data-model__body .select--borderless .select-selector__button{
+  width: rem(32px);
+  padding: 0 5px;
+ }
 
 // -------------------------
 // style-core로 옮겨질 검토가 필요한 스타일
@@ -3155,12 +3165,3 @@
   max-height: rem(150px);
   overflow-y: auto;
 }
-  
-.data-model__body .data-modal__select {
-  flex: 1;
-}
-
-.data-model__body .select--borderless .select-selector__button{
-  width: rem(32px);
-  padding: 0 5px;
- }
