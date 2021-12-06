@@ -86,6 +86,12 @@
   @include form__detail;
 }
 
+.form__detail-text {
+  @include font-weight("medium");
+  font-size: 15px;
+  color: $text-01;
+}
+
 .form__detail-item {
   & + & {
     margin-top: $spacing-sm;
@@ -194,12 +200,6 @@
   .form__detail {
     width: 100%;
     margin-top: $spacing-sm;
-  }
-
-  .form__detail-text {
-    @include font-weight("medium");
-    font-size: 15px;
-    color: $text-01;
   }
 
   .form__detail-textarea {
