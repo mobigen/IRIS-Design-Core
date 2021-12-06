@@ -2597,3 +2597,8 @@
   background-color: #adf0f0;
   color: #007d79;
 }
+
+.alert__text {
+  max-height: rem(150px);
+  overflow-y: auto;
+}
