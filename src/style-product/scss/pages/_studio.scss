@@ -227,6 +227,7 @@
   left: $spacing-xs;
   top: $spacing-xs;
   right: $spacing-xs;
+  margin-bottom: $spacing-xs;
 }
 
 .object-area-toolbar__count {
@@ -355,13 +356,17 @@
 }
 
 .editor-layout-body__canvas-wrap {
-  flex: 1;
+  float: left;
+  width: calc(100% - 300px);
+  height: 100%;
   padding: $layout-2xs;
   overflow: auto;
   background-color: $ui-04;
 }
 
 .editor-layout-body__canvas {
+  display: inline-block;
+  position: relative;
   background-color: $ui-02;
   border: 1px solid $ui-04;
 }
@@ -1113,10 +1118,20 @@
 }
 
 .object-combo-box .select,
-.object-combo-box .select-selector,
+.object-combo-box .select-selector{
+  width: 100%;
+  height: 100%;
+}
+
 .object-combo-box .select-selector__input {
   width: 100%;
   height: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.object-combo-box .text-input {
+  padding: 0 $spacing-lg 0 $spacing-sm;
 }
 
 .object-combo-box .select-selector__icon-button {
@@ -1845,6 +1860,10 @@
   margin-bottom: $spacing-2xs;
 }
 
+.select-container {
+  max-height: rem(330px);
+}
+  
 .dynamic-form__list::-webkit-scrollbar {
   -webkit-appearance: none;
 }
@@ -3001,6 +3020,11 @@
   z-index: 8300;
 }
 
+// popup 보고서를 제외한 편집 화면에서 차트 툴팁이 시각화 옵션 위로 올라오지 않도록 방지
+.modal + .highcharts-tooltip-container {
+  z-index: 9998 !important;
+}
+
 // -------------------------
 // ui-resizable
 // -------------------------
@@ -3118,7 +3142,7 @@
 .data-model__body .select--borderless {
   min-width: auto;
 }
-
+  
 .data-model__body .data-modal__select {
   flex: 1;
 }
@@ -3127,3 +3151,17 @@
   width: rem(32px);
   padding: 0 5px;
  }
+
+// -------------------------
+// style-core로 옮겨질 검토가 필요한 스타일
+// -------------------------
+
+.tag--teal.tag--not-clickable:hover:not(:disabled) {
+  background-color: #adf0f0;
+  color: #007d79;
+}
+
+.alert__text {
+  max-height: rem(150px);
+  overflow-y: auto;
+}
