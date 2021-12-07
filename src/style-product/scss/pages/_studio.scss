@@ -23,14 +23,6 @@
   }
 }
 
-.object-area--bg-none {
-  background: none;
-
-  &:hover {
-    background: none;
-  }
-}
-
 .object-area__single-value {
   width: 100%;
   height: 100%;
@@ -471,6 +463,14 @@
 
   &.canvas-object--active {
     background-color: $ui-01;
+  }
+}
+
+.object-area--bg-none {
+  background: none;
+
+  &:hover {
+    background: none;
   }
 }
 
