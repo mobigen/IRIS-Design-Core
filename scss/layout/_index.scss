@@ -22,6 +22,10 @@
   padding: 0 20px;
 }
 
+.index-layout-head__title-bar .select--borderless .select-container{
+  min-width: rem(160px);
+}
+
 .index-layout-head__action-buttons {
   margin-left: auto;
   display: flex;
