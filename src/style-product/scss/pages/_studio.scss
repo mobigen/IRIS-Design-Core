@@ -3165,3 +3165,16 @@
   max-height: rem(150px);
   overflow-y: auto;
 }
+
+//테이블 > 시각화 옵션 폼안에 세로로 쌓이는 서브 폼이 올때 유형
+.form__v-group-item {
+  display: flex;
+  align-items: center;
+  height: rem(32px);
+}
+
+.form__v-group-title {
+  width: rem(130px);
+  @include font-size("14");
+  color: $text-02;
+}
