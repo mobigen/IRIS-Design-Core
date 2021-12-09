@@ -62,9 +62,8 @@
       }
 
       &:hover {
-        border-color: transparent;
         .text-input {
-          background-color: transparent;
+          background-color: $ui-02;
           color: $secondary;
         }
 
@@ -75,7 +74,7 @@
 
       &:active {
         .text-input {
-          background-color: $ui-01;
+          background-color: $ui-02;
           color: $secondary;
         }
       }
