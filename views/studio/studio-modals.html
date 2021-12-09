@@ -306,8 +306,15 @@
                   </label>
                   <div class="form__detail v-group">
                     <div class="form__v-group-item">
+                      <div class="form__v-group-title">
+                        <span>표시 설정</span>
+                        <button class="button button--icon button--link button--xs">
+                          <svg class="svg-icon">
+                            <use xlink:href="#help-outline"></use>
+                          </svg>
+                        </button>
+                      </div>
                       <div class="toggle-switch">
-                        <label for="toggleSwitch2" class="toggle-switch__label">표시 설정</label>
                         <button id="toggleSwitch2" class="toggle-switch__switch toggle-switch__switch--selected" type="button">
                           <span class="toggle-switch__handle">
                             <span class="ir-pm"></span>
@@ -317,18 +324,24 @@
                     </div>
                     <div class="v-group">
                       <div class="h-group form__v-group-item">
-                        <span class="form__v-group-title">천 단위 콤마(,) 표시</span>
-                        <div class="checkbox">
-                          <input id="formChekcbox-03" type="checkbox" class="checkbox__input" value="label">
-                          <label for="formChekcbox-03" class="checkbox__label">보이기</label>
+                        <div class="form__v-group-title">
+                          <span>천 단위 콤마(,) 표시</span>
                         </div>
-                        <div class="checkbox">
-                          <input id="formChekcbox-03" type="checkbox" class="checkbox__input" value="label">
-                          <label for="formChekcbox-03" class="checkbox__label">감추기</label>
+                        <div class="radios">
+                          <div class="radio">
+                            <input type="radio" id="use" name="radio-group" class="radio__input" value="label">
+                            <label for="use" class="radio__label">보이기</label>
+                          </div>
+                          <div class="radio">
+                            <input type="radio" id="unuse" name="radio-group" class="radio__input" value="label">
+                            <label for="unuse" class="radio__label">감추기</label>
+                          </div>
                         </div>
                       </div>
-                      <div class="h-group">
-                        <span class="form__v-group-title">소수점 자리 수</span>
+                      <div class="h-group form__v-group-item">
+                        <div class="form__v-group-title">
+                          <span>소수점 자리 수</span>
+                        </div>
                         <div class="text-input-wrap w-112">
                           <input type="number" class="text-input" value="">
                           <span class="text-input-wrap__suffix">px</span>

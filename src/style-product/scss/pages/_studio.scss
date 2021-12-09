@@ -3174,7 +3174,13 @@
 }
 
 .form__v-group-title {
+  display: flex;
+  align-items: center;
   width: rem(130px);
   @include font-size("14");
   color: $text-02;
+}
+
+.form__v-group-title > *:not(:last-child) {
+  margin-right: $spacing-2xs;
 }
