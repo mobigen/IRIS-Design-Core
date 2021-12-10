@@ -220,6 +220,7 @@
 }
 
 .dynamic-list {
+  width: 100%;
   padding: $spacing-sm;
 
   .notification-full {
@@ -246,6 +247,10 @@
   padding-right: $spacing-xs;
   overflow-y: auto;
   position: relative;
+}
+
+.dynamic-list__items .notification-message{
+  height: 480px;
 }
 
 .dynamic-list__item {

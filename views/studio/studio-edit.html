@@ -148,7 +148,7 @@
   <!-- 객체 카테고리 -->
   <!-- select 선택시 select--selected 클래스 추가 -->
   <div class="select">
-    <div class="select-selector">
+    <div class="select-selector w-130">
       <button class="select-selector__button" type="button">
         <span class="select-selector__title">카테고리</span>
         <svg class="svg-icon select-selector__icon">
@@ -508,14 +508,14 @@
           </div> -->
 
           <!-- background-image 적용 -->
-          <div class="canvas-object object-area" style="top: 50px;left: 50px;width: 200px;height: 150px;">
+          <div class="canvas-object object-table" style="top: 50px;left: 50px;width: 200px;height: 150px;">
             <div style="width: 100%; height: 100%;">
             </div>
           </div>
 
           <!-- 박스 클릭 시 사이즈 조절 박스 활성화 -->
           <span style="position: absolute; top: 30px; left: 260px;">차트(selected/활성화)</span>
-          <div class="canvas-object object-area canvas-object--active chart-bg-none" style="top: 50px;left: 260px;width: 200px;height: 150px;">
+          <div class="canvas-object object-table canvas-object--active chart-bg-none" style="top: 50px;left: 260px;width: 200px;height: 150px;">
             <!-- 크기 조절 상자 -->
             <span class="tl"></span>
             <span class="tc"></span>
@@ -2724,7 +2724,7 @@
           <p style="position: absolute; top: 1240px; left: 50px;">데이터 객체</p>
           <div class="canvas-object object-hidden" style="top: 1260px; left: 50px; width: 200px; height: 30px;">
             <svg class="object-hidden__icon svg-icon">
-              <use xlink:href="#data"></use>
+              <use xlink:href="#data-model"></use>
             </svg>
             <div class="object-hidden__text">
               <span>common_data_1</span>
@@ -2734,7 +2734,7 @@
           <p style="position: absolute; top: 1240px; left: 260px;">박스 클릭 상태 <span class="highlight">.active</span></p>
           <div class="canvas-object object-hidden canvas-object--active" style="top: 1260px; left: 260px; width: 200px; height: 30px;">
             <svg class="object-hidden__icon svg-icon">
-              <use xlink:href="#data"></use>
+              <use xlink:href="#data-model"></use>
             </svg>
             <div class="object-hidden__text">
               <span>common_data_1</span>
@@ -2754,7 +2754,7 @@
           <p style="position: absolute; top: 1240px; left: 470px;">데이터가 연결된 상태 <span class="highlight">.loaded</span></p>
           <div class="canvas-object object-hidden object-hidden--loaded" style="top: 1260px; left: 470px; width: 200px; height: 30px;">
             <svg class="object-hidden__icon svg-icon">
-              <use xlink:href="#data"></use>
+              <use xlink:href="#data-model"></use>
             </svg>
             <div class="object-hidden__text">
               <span>common_data_1</span>
@@ -2775,7 +2775,7 @@
           <p style="position: absolute; top: 1240px; left: 890px;">연결 상태 <span class="highlight">.canvas-object--connected</span></p>
           <div class="canvas-object object-hidden object-hidden--loaded canvas-object--connected" style="top: 1260px; left: 890px; width: 200px; height: 30px;">
             <svg class="object-hidden__icon svg-icon">
-              <use xlink:href="#data"></use>
+              <use xlink:href="#data-model"></use>
             </svg>
             <div class="object-hidden__text">
               <span>common_data_1</span>
@@ -2823,7 +2823,7 @@
           <p style="position: absolute; top: 1240px; left: 1100px;">미연결 상태 <span class="highlight">.canvas-object--unconnected</span></p>
           <div class="canvas-object object-hidden object-hidden--loaded canvas-object--unconnected" style="top: 1260px; left: 1100px; width: 200px; height: 30px;">
             <svg class="object-hidden__icon svg-icon">
-              <use xlink:href="#data"></use>
+              <use xlink:href="#data-model"></use>
             </svg>
             <div class="object-hidden__text">
               <span>common_data_1</span>
@@ -4415,6 +4415,39 @@
           </div>
           <!-- //증감률  -->
 
+          <!-- 데이터 유형설정 별 히든객체 예시: 데이터 모델 -->
+          <span style="position: absolute; top: 2500px; left: 1150px;">데이터 모델(기본값)</span>
+          <div class="canvas-object object-hidden" style="top: 2530px; left: 1150px; width: 200px; height: 30px;">
+            <svg class="object-hidden__icon svg-icon">
+              <use xlink:href="#data-model"></use>
+            </svg>
+            <div class="object-hidden__text">
+              <span>common_data_1</span>
+            </div>
+          </div>
+          
+          <!-- 데이터 유형설정 별 히든객체 예시: DSMS -->
+          <span style="position: absolute; top: 2500px; left: 1360px;">DSMS</span>
+          <div class="canvas-object object-hidden" style="top: 2530px; left: 1360px; width: 200px; height: 30px;">
+            <svg class="object-hidden__icon svg-icon">
+              <use xlink:href="#data-storage"></use>
+            </svg>
+            <div class="object-hidden__text">
+              <span>common_data_1</span>
+            </div>
+          </div>
+
+          <!-- 데이터 유형설정 별 히든객체 예시: REST-API -->
+          <span style="position: absolute; top: 2500px; left: 1570px;">REST-API</span>
+          <div class="canvas-object object-hidden" style="top: 2530px; left: 1570px; width: 200px; height: 30px;">
+            <svg class="object-hidden__icon svg-icon">
+              <use xlink:href="#restapi"></use>
+            </svg>
+            <div class="object-hidden__text">
+              <span>common_data_1</span>
+            </div>
+          </div>
+
           <!-- slider : 초기 enabled 상태 -->
           <span style="position:absolute;top:2650px;left:50px;">slider : 초기 enabled 상태</span>
           <div class="canvas-object object-slider" style="top:2670px;left:50px;width:300px;height:102px;">
@@ -5083,37 +5116,212 @@
                       <strong class="side-panel-content__head-title">데이터 모델 셀렉트</strong>
                     </div>
                     <div class="side-panel-content__body">
-                      <div class="select">
-                        <div class="select-selector">
-                          <div class="select-selector__input" style="display: flex;">
-                            <svg class="svg-icon select-selector__input-icon">
-                              <use xlink:href="#data-model"></use>
-                            </svg>
-                            <input type="text" class="text-input" placeholder="placeholder text" value="데이터 모델">
+                      <div class="row">
+                        <!-- 데이터 모델 유형 콤보박스 적용 -->
+                        <div class="select">
+                          <div class="select-selector">
+                            <button class="select-selector__button" type="button">
+                              <span class="select-selector__title">모든 유형</span>
+                              <svg class="svg-icon select-selector__icon">
+                                <use xlink:href="#chevron-down-medium"></use>
+                              </svg>
+                            </button>
                           </div>
-                          <svg class="svg-icon select-selector__icon">
-                            <use xlink:href="#chevron-down-medium"></use>
-                          </svg>
+                          <div class="select-container">
+                            <ul class="select-container__list">
+                              <li class="select-container__item">
+                                <div class="checkbox checkbox--indeterminate">
+                                  <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                                  <label for="list-check-01" class="checkbox__label">
+                                    <span class="select-container__text">모든 유형</span>
+                                  </label>
+                                </div>
+                              </li>
+                            </ul>
+                            <ul class="select-container__list">
+                              <li class="select-container__item select-container__item--selected">
+                                <div class="checkbox">
+                                  <input id="list-check-01" type="checkbox" class="checkbox__input" value="label" checked="">
+                                  <label for="list-check-01" class="checkbox__label">
+                                    <span class="select-container__text">ORACLE</span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="select-container__item">
+                                <div class="checkbox">
+                                  <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                                  <label for="list-check-01" class="checkbox__label">
+                                    <span class="select-container__text">MARIADB</span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="select-container__item">
+                                <div class="checkbox">
+                                  <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                                  <label for="list-check-01" class="checkbox__label">
+                                    <span class="select-container__text">MYSQL</span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="select-container__item">
+                                <div class="checkbox">
+                                  <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                                  <label for="list-check-01" class="checkbox__label">
+                                    <span class="select-container__text">MYSQL5</span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="select-container__item">
+                                <div class="checkbox">
+                                  <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                                  <label for="list-check-01" class="checkbox__label">
+                                    <span class="select-container__text">IRIS</span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="select-container__item">
+                                <div class="checkbox">
+                                  <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                                  <label for="list-check-01" class="checkbox__label">
+                                    <span class="select-container__text">POSTGRESQL</span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="select-container__item">
+                                <div class="checkbox">
+                                  <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                                  <label for="list-check-01" class="checkbox__label">
+                                    <span class="select-container__text">TIBERO</span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="select-container__item">
+                                <div class="checkbox">
+                                  <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                                  <label for="list-check-01" class="checkbox__label">
+                                    <span class="select-container__text">ELASTICSEARCH</span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="select-container__item">
+                                <div class="checkbox">
+                                  <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                                  <label for="list-check-01" class="checkbox__label">
+                                    <span class="select-container__text">VECTORRWISE</span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="select-container__item">
+                                <div class="checkbox">
+                                  <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                                  <label for="list-check-01" class="checkbox__label">
+                                    <span class="select-container__text">DRUID</span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="select-container__item">
+                                <div class="checkbox">
+                                  <input id="list-check-01" type="checkbox" class="checkbox__input" value="label">
+                                  <label for="list-check-01" class="checkbox__label">
+                                    <span class="select-container__text">ALTIBASE</span>
+                                  </label>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
                         </div>
-                        <div class="select-container">
-                          <ul class="select-container__list">
-                            <li class="select-container__item select-container__item--selected">
-                              <button class="select-container__button" type="button">
-                                <svg class="svg-icon select-container__icon" aria-hidden="true">
+                        <!-- //데이터 모델 유형 콤보박스 적용 -->
+                      </div>
+                      <div class="row">
+                        <div class="data-model__body h-group">
+                          <div class="select data-modal__select">
+                            <div class="select-selector">
+                              <div class="select-selector__input">
+                                <svg class="svg-icon select-selector__input-icon">
                                   <use xlink:href="#data-model"></use>
                                 </svg>
-                                <span class="select-container__text"><mark class="filter-highlight">데이터 모델</mark></span>
-                              </button>
-                            </li>
-                            <li class="select-container__item">
-                              <button class="select-container__button" type="button" title="데이터 모델 뷰 데이터 모델 뷰 데이터 모델 뷰">
-                                <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                  <use xlink:href="#data-model-view"></use>
+                                <input type="text" class="text-input" placeholder="placeholder text" value="데이터 모델">
+                              </div>
+                              <svg class="svg-icon select-selector__icon">
+                                <use xlink:href="#chevron-down-medium"></use>
+                              </svg>
+                            </div>
+                            <div class="select-container">
+                              <ul class="select-container__list">
+                                <li class="select-container__item select-container__item--selected">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="svg-icon select-container__icon" aria-hidden="true">
+                                      <use xlink:href="#data-model"></use>
+                                    </svg>
+                                    <span class="select-container__text"><mark class="filter-highlight">데이터 모델</mark></span>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button" title="데이터 모델 뷰 데이터 모델 뷰 데이터 모델 뷰">
+                                    <svg class="svg-icon select-container__icon" aria-hidden="true">
+                                      <use xlink:href="#data-model-view"></use>
+                                    </svg>
+                                    <span class="select-container__text">데이터 모델 뷰 데이터 모델 뷰 데이터 모델 뷰</span>
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <!-- 데이터 필터 아이콘 적용 -->
+                          <div class="select select--right select--borderless select--view-all">
+                            <div class="select-selector">
+                              <button class="select-selector__button button--icon button--link" type="button">
+                                <svg class="svg-icon select-container__icon">
+                                  <use xlink:href="#date-descending"></use>
                                 </svg>
-                                <span class="select-container__text">데이터 모델 뷰 데이터 모델 뷰 데이터 모델 뷰</span>
                               </button>
-                            </li>
-                          </ul>
+                            </div>
+                            <div class="select-container">
+                              <ul class="select-container__list">
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="svg-icon select-container__icon">
+                                      <use xlink:href="#date-descending"></use>
+                                    </svg>
+                                    <span class="select-container__text">
+                                      수정 일시
+                                    </span>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="svg-icon select-container__icon">
+                                      <use xlink:href="#date-ascending"></use>
+                                    </svg>
+                                    <span class="select-container__text">
+                                      수정 일시
+                                    </span>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="svg-icon select-container__icon">
+                                      <use xlink:href="#string-descending"></use>
+                                    </svg>
+                                    <span class="select-container__text">
+                                      모델 이름
+                                    </span>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="svg-icon select-container__icon">
+                                      <use xlink:href="#string-ascending"></use>
+                                    </svg>
+                                    <span class="select-container__text">
+                                      모델 이름
+                                    </span>
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <!-- //데이터 필터 아이콘 적용 -->
                         </div>
                       </div>
                     </div>
@@ -5829,7 +6037,7 @@
                                 <div class="table__action-buttons">
                                   <button class="button button--icon button--link" type="button">
                                     <svg class="svg-icon" aria-hidden="true">
-                                      <use xlink:href="#popout"></use>
+                                      <use xlink:href="#select-move"></use>
                                     </svg>
                                   </button>
                                   <button class="button button--icon button--link" type="button">
@@ -5856,7 +6064,7 @@
                                 <div class="table__action-buttons">
                                   <button class="button button--icon button--link" type="button">
                                     <svg class="svg-icon" aria-hidden="true">
-                                      <use xlink:href="#popout"></use>
+                                      <use xlink:href="#select-move"></use>
                                     </svg>
                                   </button>
                                   <button class="button button--icon button--link" type="button">
@@ -5881,7 +6089,7 @@
                                 <div class="table__action-buttons">
                                   <button class="button button--icon button--link" type="button">
                                     <svg class="svg-icon" aria-hidden="true">
-                                      <use xlink:href="#popout"></use>
+                                      <use xlink:href="#select-move"></use>
                                     </svg>
                                   </button>
                                   <button class="button button--icon button--link" type="button">
@@ -5906,7 +6114,7 @@
                                 <div class="table__action-buttons">
                                   <button class="button button--icon button--link" type="button">
                                     <svg class="svg-icon" aria-hidden="true">
-                                      <use xlink:href="#popout"></use>
+                                      <use xlink:href="#select-move"></use>
                                     </svg>
                                   </button>
                                   <button class="button button--icon button--link" type="button">
@@ -5931,7 +6139,7 @@
                                 <div class="table__action-buttons">
                                   <button class="button button--icon button--link" type="button">
                                     <svg class="svg-icon" aria-hidden="true">
-                                      <use xlink:href="#popout"></use>
+                                      <use xlink:href="#select-move"></use>
                                     </svg>
                                   </button>
                                   <button class="button button--icon button--link" type="button">
@@ -5956,7 +6164,7 @@
                                 <div class="table__action-buttons">
                                   <button class="button button--icon button--link" type="button">
                                     <svg class="svg-icon" aria-hidden="true">
-                                      <use xlink:href="#popout"></use>
+                                      <use xlink:href="#select-move"></use>
                                     </svg>
                                   </button>
                                   <button class="button button--icon button--link" type="button">
@@ -5981,7 +6189,7 @@
                                 <div class="table__action-buttons">
                                   <button class="button button--icon button--link" type="button">
                                     <svg class="svg-icon" aria-hidden="true">
-                                      <use xlink:href="#popout"></use>
+                                      <use xlink:href="#select-move"></use>
                                     </svg>
                                   </button>
                                   <button class="button button--icon button--link" type="button">
@@ -6006,7 +6214,7 @@
                                 <div class="table__action-buttons">
                                   <button class="button button--icon button--link" type="button">
                                     <svg class="svg-icon" aria-hidden="true">
-                                      <use xlink:href="#popout"></use>
+                                      <use xlink:href="#select-move"></use>
                                     </svg>
                                   </button>
                                   <button class="button button--icon button--link" type="button">
@@ -6031,7 +6239,7 @@
                                 <div class="table__action-buttons">
                                   <button class="button button--icon button--link" type="button">
                                     <svg class="svg-icon" aria-hidden="true">
-                                      <use xlink:href="#popout"></use>
+                                      <use xlink:href="#select-move"></use>
                                     </svg>
                                   </button>
                                   <button class="button button--icon button--link" type="button">
@@ -6056,7 +6264,7 @@
                                 <div class="table__action-buttons">
                                   <button class="button button--icon button--link" type="button">
                                     <svg class="svg-icon" aria-hidden="true">
-                                      <use xlink:href="#popout"></use>
+                                      <use xlink:href="#select-move"></use>
                                     </svg>
                                   </button>
                                   <button class="button button--icon button--link" type="button">
@@ -6081,7 +6289,7 @@
                                 <div class="table__action-buttons">
                                   <button class="button button--icon button--link" type="button">
                                     <svg class="svg-icon" aria-hidden="true">
-                                      <use xlink:href="#popout"></use>
+                                      <use xlink:href="#select-move"></use>
                                     </svg>
                                   </button>
                                   <button class="button button--icon button--link" type="button">
@@ -6106,7 +6314,7 @@
                                 <div class="table__action-buttons">
                                   <button class="button button--icon button--link" type="button">
                                     <svg class="svg-icon" aria-hidden="true">
-                                      <use xlink:href="#popout"></use>
+                                      <use xlink:href="#select-move"></use>
                                     </svg>
                                   </button>
                                   <button class="button button--icon button--link" type="button">
@@ -6131,7 +6339,7 @@
                                 <div class="table__action-buttons">
                                   <button class="button button--icon button--link" type="button">
                                     <svg class="svg-icon" aria-hidden="true">
-                                      <use xlink:href="#popout"></use>
+                                      <use xlink:href="#select-move"></use>
                                     </svg>
                                   </button>
                                   <button class="button button--icon button--link" type="button">
@@ -6156,7 +6364,7 @@
                                 <div class="table__action-buttons">
                                   <button class="button button--icon button--link" type="button">
                                     <svg class="svg-icon" aria-hidden="true">
-                                      <use xlink:href="#popout"></use>
+                                      <use xlink:href="#select-move"></use>
                                     </svg>
                                   </button>
                                   <button class="button button--icon button--link" type="button">
@@ -6181,7 +6389,7 @@
                                 <div class="table__action-buttons">
                                   <button class="button button--icon button--link" type="button">
                                     <svg class="svg-icon" aria-hidden="true">
-                                      <use xlink:href="#popout"></use>
+                                      <use xlink:href="#select-move"></use>
                                     </svg>
                                   </button>
                                   <button class="button button--icon button--link" type="button">
@@ -6206,7 +6414,7 @@
                                 <div class="table__action-buttons">
                                   <button class="button button--icon button--link" type="button">
                                     <svg class="svg-icon" aria-hidden="true">
-                                      <use xlink:href="#popout"></use>
+                                      <use xlink:href="#select-move"></use>
                                     </svg>
                                   </button>
                                   <button class="button button--icon button--link" type="button">
@@ -6231,7 +6439,7 @@
                                 <div class="table__action-buttons">
                                   <button class="button button--icon button--link" type="button">
                                     <svg class="svg-icon" aria-hidden="true">
-                                      <use xlink:href="#popout"></use>
+                                      <use xlink:href="#select-move"></use>
                                     </svg>
                                   </button>
                                   <button class="button button--icon button--link" type="button">
@@ -6256,7 +6464,7 @@
                                 <div class="table__action-buttons">
                                   <button class="button button--icon button--link" type="button">
                                     <svg class="svg-icon" aria-hidden="true">
-                                      <use xlink:href="#popout"></use>
+                                      <use xlink:href="#select-move"></use>
                                     </svg>
                                   </button>
                                   <button class="button button--icon button--link" type="button">
@@ -6281,7 +6489,7 @@
                                 <div class="table__action-buttons">
                                   <button class="button button--icon button--link" type="button">
                                     <svg class="svg-icon" aria-hidden="true">
-                                      <use xlink:href="#popout"></use>
+                                      <use xlink:href="#select-move"></use>
                                     </svg>
                                   </button>
                                   <button class="button button--icon button--link" type="button">
@@ -6306,7 +6514,7 @@
                                 <div class="table__action-buttons">
                                   <button class="button button--icon button--link" type="button">
                                     <svg class="svg-icon" aria-hidden="true">
-                                      <use xlink:href="#popout"></use>
+                                      <use xlink:href="#select-move"></use>
                                     </svg>
                                   </button>
                                   <button class="button button--icon button--link" type="button">
@@ -6331,7 +6539,7 @@
                                 <div class="table__action-buttons">
                                   <button class="button button--icon button--link" type="button">
                                     <svg class="svg-icon" aria-hidden="true">
-                                      <use xlink:href="#popout"></use>
+                                      <use xlink:href="#select-move"></use>
                                     </svg>
                                   </button>
                                   <button class="button button--icon button--link" type="button">
@@ -6356,7 +6564,7 @@
                                 <div class="table__action-buttons">
                                   <button class="button button--icon button--link" type="button">
                                     <svg class="svg-icon" aria-hidden="true">
-                                      <use xlink:href="#popout"></use>
+                                      <use xlink:href="#select-move"></use>
                                     </svg>
                                   </button>
                                   <button class="button button--icon button--link" type="button">
@@ -6381,7 +6589,7 @@
                                 <div class="table__action-buttons">
                                   <button class="button button--icon button--link" type="button">
                                     <svg class="svg-icon" aria-hidden="true">
-                                      <use xlink:href="#popout"></use>
+                                      <use xlink:href="#select-move"></use>
                                     </svg>
                                   </button>
                                   <button class="button button--icon button--link" type="button">
@@ -6406,7 +6614,7 @@
                                 <div class="table__action-buttons">
                                   <button class="button button--icon button--link" type="button">
                                     <svg class="svg-icon" aria-hidden="true">
-                                      <use xlink:href="#popout"></use>
+                                      <use xlink:href="#select-move"></use>
                                     </svg>
                                   </button>
                                   <button class="button button--icon button--link" type="button">
@@ -6431,7 +6639,7 @@
                                 <div class="table__action-buttons">
                                   <button class="button button--icon button--link" type="button">
                                     <svg class="svg-icon" aria-hidden="true">
-                                      <use xlink:href="#popout"></use>
+                                      <use xlink:href="#select-move"></use>
                                     </svg>
                                   </button>
                                   <button class="button button--icon button--link" type="button">
@@ -6482,7 +6690,7 @@
                               <div class="table__action-buttons">
                                 <button class="button button--icon button--link" type="button">
                                   <svg class="svg-icon" aria-hidden="true">
-                                    <use xlink:href="#popout"></use>
+                                    <use xlink:href="#select-move"></use>
                                   </svg>
                                 </button>
                                 <button class="button button--icon button--link" type="button">
@@ -6519,7 +6727,7 @@
                               <div class="table__action-buttons">
                                 <button class="button button--icon button--link" type="button">
                                   <svg class="svg-icon" aria-hidden="true">
-                                    <use xlink:href="#popout"></use>
+                                    <use xlink:href="#select-move"></use>
                                   </svg>
                                 </button>
                                 <button class="button button--icon button--link" type="button">
