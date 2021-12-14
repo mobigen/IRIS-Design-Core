@@ -1645,6 +1645,11 @@
     .tab__button-text {
       color: $ui-03;
     }
+
+    .tab__button-text.text-italic {
+      padding-right: rem(5px);
+    }
+    
     .tab__item--selected {
       background-color: $ui-03;
 
