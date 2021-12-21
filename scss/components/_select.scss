@@ -48,6 +48,44 @@
         }
       }
     }
+
+    // borderless - text-input
+    .select-selector__input {
+      box-shadow: none;
+
+      .text-input {
+        color: $secondary;
+      }
+
+      & + .select-selector__icon {
+        fill: $secondary;
+      }
+
+      &:hover {
+        .text-input {
+          background-color: $ui-02;
+          color: $secondary;
+        }
+
+        & + .select-selector__icon {
+          fill: $secondary;
+        }
+      }
+
+      &:active {
+        .text-input {
+          background-color: $ui-02;
+          color: $secondary;
+        }
+      }
+
+      &:focus {
+        .text-input {
+          box-shadow: none;
+          color: $secondary;
+        }
+      }
+    }
   }
 }
 
@@ -82,6 +120,57 @@
 
   .select-selector__icon {
     opacity: 0.5;
+  }
+
+  // borderless - text-input
+  &.select--borderless {
+    .select-selector__input {
+      cursor: not-allowed;
+
+      .text-input {
+        color: $text-05;
+      }
+
+      & + .select-selector__icon {
+        fill: $text-05;
+      }
+
+      &:hover,
+      &:hover:active,
+      &:hover:focus {
+        .text-input {
+          background-color: $ui-02 !important;
+          color: $text-05 !important;
+          cursor: not-allowed;
+        }
+
+        & + .select-selector__icon {
+          fill: $text-05 !important;
+        }
+      }
+
+      &:active {
+        .text-input {
+          background-color: $ui-02 !important;
+          color: $text-05 !important;
+        }
+
+        & + .select-selector__icon {
+          fill: $text-05 !important;
+        }
+      }
+
+      &:focus {
+        .text-input {
+          background-color: $ui-02;
+          color: $text-05;
+        }
+
+        & + .select-selector__icon {
+          fill: $text-05;
+        }
+      }
+    }
   }
 }
 
@@ -337,6 +426,44 @@
       box-shadow: none;
     }
   }
+
+  // borderless - text-input
+  .select-selector__input {
+    .text-input {
+      background-color: transparent;
+      border-color: transparent;
+      box-shadow: none;
+    }
+
+    &:hover {
+      .text-input {
+        background-color: $ui-01;
+        color: $text-01;
+      }
+
+      & + .select-selector__icon {
+        fill: $text-01;
+      }
+    }
+
+    &:active {
+      .text-input {
+        background-color: $ui-01;
+        color: $secondary;
+      }
+
+      & + .select-selector__icon {
+        fill: $secondary;
+      }
+    }
+
+    &:focus {
+      .text-input {
+        box-shadow: none;
+        color: $secondary;
+      }
+    }
+  }
 }
 
 .select--view-all {
@@ -348,8 +475,8 @@
 // -------------------------
 // select color picker
 // -------------------------
-.select--color-picker{
-  .select-selector__button{
+.select--color-picker {
+  .select-selector__button {
     padding-left: $spacing-2xs;
     padding-right: rem(28px);
   }
@@ -362,27 +489,25 @@
 }
 
 // -------------------------
-// select 화살표 UI 상태에 따른 컬러 값 
+// select 화살표 UI 상태에 따른 컬러 값
 // -------------------------
 .select-container__item:hover,
-.select-container__item:active{
-  .select-container__button-icon{
+.select-container__item:active {
+  .select-container__button-icon {
     fill: $primary;
   }
 }
 
-.select-container__item--selected{
-  .select-container__button-icon{
+.select-container__item--selected {
+  .select-container__button-icon {
     fill: $primary;
   }
 }
 
-.select-container__item--disabled{
+.select-container__item--disabled {
   .select-container__button-icon,
   .select-container__button-icon:hover,
-  .select-container__button-icon:active{
+  .select-container__button-icon:active {
     fill: $hover-row;
   }
 }
-
-
