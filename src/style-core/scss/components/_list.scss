@@ -86,10 +86,6 @@
   color: $text-03;
 }
 
-.list__checkmark {
-  vertical-align: middle;
-}
-
 .list__body {
   overflow: auto;
 }
@@ -236,7 +232,7 @@
   justify-content: center;
 }
 
-.dynamic-list__no-contents .notification-message{
+.dynamic-list__no-contents .notification-message {
   height: 480px;
 }
 
@@ -326,6 +322,7 @@
   height: rem(40px);
 }
 
+// <!-- TODO(추후 삭제): IMA 에서만 사용, 해당 프로젝트에 클래스 생성해서 적용할 것 -->
 // -------------------------
 // list--stripe
 // -------------------------
@@ -376,10 +373,10 @@
       }
     }
 
-    &.list__item--selected.list__item--disabled{
-      .list__button{
-        &:active{
-          .list__text{
+    &.list__item--selected.list__item--disabled {
+      .list__button {
+        &:active {
+          .list__text {
             color: $primary;
           }
         }
