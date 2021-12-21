@@ -630,7 +630,7 @@
                   </ul>
                 </li>
                 <li>
-                  Foot은 저장 / 확인 / 닫기 / 취소 문구를 사용합니다.
+                  Foot은 <em class="text-emphasis">저장 / 확인 / 닫기 / 취소</em> 문구를 사용합니다.
                 </li>
               </ul>
             </div>
@@ -815,7 +815,6 @@
 
         </div>
         <div class="page" id="page--button">
-
           <!-- button -->
           <div class="page-header">
             <h2 class="page-header__lable">component</h2>
@@ -826,7 +825,7 @@
             <div class="page__usage md">
               <ul>
                 <li>
-                  버튼은 <em class="text-emphasis">6개</em>가 있으며 <em class="text-emphasis">3개</em> 크기로 구분합니다.<br />이
+                  버튼은 <em class="text-emphasis">3개</em> 크기로 구분합니다.<br />이
                   이외의 버튼 스타일은 사용하지 않습니다. 각 버튼의 설명을 숙지하고 목적에 맞게 사용하도록합니다.
                 </li>
                 <li>버튼에 아이콘을 조합하여 사용할 경우 버튼 텍스트를 <code class="code-inline">span</code>태그로 감싸 <code class="code-inline">button__text</code> 라는 클래스를 추가해 사용합니다.</li>
@@ -3547,7 +3546,7 @@
             <p class="page__desc">디스크립션은 read-only 필드를 보여줍니다.</p>
             <div class="page__usage md">
               <ul>
-                <li>디스크립션는 <em class="text-emphasis">2개</em>의 사이즈가 있습니다.</li>
+                <li>디스크립션은 <em class="text-emphasis">2개</em>의 사이즈가 있습니다.</li>
               </ul>
             </div>
 
@@ -3682,7 +3681,7 @@
             <div class="page__usage md">
               <ul>
                 <li>
-                  디스크립션는 <em class="text-emphasis">2개</em>의 사이즈가 있습니다.
+                  head, body, foot만 사용하고, body 하위 컨텐츠는 단독 컴포넌트를 사용합니다.
                 </li>
               </ul>
             </div>
@@ -3695,11 +3694,13 @@
                     <div class="component-example__row">
                       <div class="drawer">
                         <div class="drawer__head">
-                          <button class="drawer__head-control-button" type="button">
+                          <!-- TODO(추후 삭제): IWP 에서만 사용, 해당 프로젝트에 클래스 생성해서 적용할 것 -->
+                          <button class="drawer__head-control-button" type="button" style="display: none;">
                             <svg class="svg-icon" aria-hidden="true" aria-hidden="true">
                               <use xlink:href="#setting"></use>
                             </svg>
                           </button>
+                          <!-- // IWP 에서만 사용, 해당 프로젝트에 클래스 생성해서 적용할 것 -->
                           <strong class="drawer__head-title">로그인 설정</strong>
                           <div class="drawer__actions">
                             <div class="checkbox">
@@ -3709,11 +3710,13 @@
                           </div>
                         </div>
                         <div class="drawer__body" style="height: 900px">
-                          <div class="drawer__content">
+                          <!-- TODO(추후 삭제): IWP 에서만 사용, 해당 프로젝트에 클래스 생성해서 적용할 것 -->
+                          <div class="drawer__content" style="display: none;">
                             <button class="drawer__content-clear-button button button--support" type="button">
                               전체 복원
                             </button>
                           </div>
+                          <!-- // IWP 에서만 사용, 해당 프로젝트에 클래스 생성해서 적용할 것 -->
                           <form class="form form--vertical">
                             <div class="form__body">
                               <div class="form__list">
@@ -4264,11 +4267,6 @@
                     <div class="component-example__row">
                       <div class="drawer" style="width: 600px;">
                         <div class="drawer__head">
-                          <button class="drawer__head-control-button" type="button">
-                            <svg class="svg-icon" aria-hidden="true">
-                              <use xlink:href="#setting"></use>
-                            </svg>
-                          </button>
                           <strong class="drawer__head-title">사용자 계정 정보</strong>
                           <div class="drawer__actions">
                             <button class="button button--icon button--link">
@@ -4289,7 +4287,7 @@
                               <ul class="description__list">
                                 <li class="description__item">
                                   <span class="description__title">
-                                    아이디아이디아이디아이디아이디
+                                    아이디
                                   </span>
                                   <span class="description__text"> desirade </span>
                                 </li>
@@ -4350,11 +4348,6 @@
                     <div class="component-example__row">
                       <div class="drawer" style="width: 600px;">
                         <div class="drawer__head">
-                          <button class="drawer__head-control-button" type="button">
-                            <svg class="svg-icon" aria-hidden="true">
-                              <use xlink:href="#setting"></use>
-                            </svg>
-                          </button>
                           <strong class="drawer__head-title">사용자 계정 정보</strong>
                           <div class="drawer__actions">
                             <button class="button button--icon button--link">
