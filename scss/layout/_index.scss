@@ -218,7 +218,7 @@
 }
 
 .url-group {
-  min-height: 68px;
+  min-height: rem(80px);
   max-height: 235px;
   overflow-y: auto;
   background-color: $ui-02;
