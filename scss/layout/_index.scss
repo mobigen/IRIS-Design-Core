@@ -217,25 +217,8 @@
   text-decoration: underline;
 }
 
-.button--underline {
-  &.button--underline-create {
-    color: $primary;
-
-    &:hover {
-      color: $primary;
-    }
-  }
-  &.button--underline-delete {
-    color: $negative;
-
-    &:hover {
-      color: $negative;
-    }
-  }
-}
-
 .url-group {
-  min-height: 68px;
+  min-height: rem(80px);
   max-height: 235px;
   overflow-y: auto;
   background-color: $ui-02;
