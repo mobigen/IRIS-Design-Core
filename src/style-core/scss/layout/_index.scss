@@ -22,7 +22,7 @@
   padding: 0 20px;
 }
 
-.index-layout-head__title-bar .select--borderless .select-container{
+.index-layout-head__title-bar .select--borderless .select-container {
   min-width: rem(160px);
 }
 
@@ -195,7 +195,7 @@
 .form__reference-text {
   @include font-size("14");
   display: block;
-  margin-top: $spacing-2xs;
+  margin-top: $spacing-xs;
   color: $text-05;
 }
 
