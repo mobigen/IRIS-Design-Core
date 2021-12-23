@@ -1,5 +1,5 @@
 // 폰트, 이미지 경로 수정
-$font-path: '/src/style-core/fonts/';
+$font-path: "/src/style-core/fonts/";
 
 // 전체 테마를 바꾸고 싶은 경우
 // @import "/src/style-core/scss/themes/pink";
@@ -13,3 +13,5 @@ $font-path: '/src/style-core/fonts/';
 // @import "./layout/common.scss";
 // @import "./pages/pages.scss";
 @import "./layout/layout.scss";
+
+@import "./helper-classes";
