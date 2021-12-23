@@ -8,14 +8,59 @@
   <div class="page__usage md">
     <ul>
       <li>
-        셀렉트 <em class="text-emphasis">5개</em> 종류가 있으며 <em class="text-emphasis">3개</em> 크기로 구분합니다.
+        셀렉트의 <em class="text-emphasis">유형</em>이 2개 있습니다.
         <ul>
-          <li>텍스트</li>
-          <li>텍스트 + 서브 텍스트</li>
-          <li>아이콘 + 텍스트</li>
-          <li>텍스트 + 추가 기능 버튼</li>
-          <li>체크 박스 + 텍스트</li>
+          <li>
+            텍스트 / 아이콘 + 텍스트 / 텍스트 + 서브텍스트
+          </li>
+          <li>
+            멀티 셀렉트 - 다중 선택이 가능한 UI
+          </li>
+          <li>
+            콤보 박스 - 입력 필드와 리스트가 결합한 UI
+          </li>
         </ul>
+      </li>
+      <li>
+        셀렉트의 <em class="text-emphasis">테마가</em> 2개 있습니다.
+        <ul>
+          <li>
+            <code class="code">select</code>
+            - 보더가 있는 UI
+          </li>
+          <li>
+            <code class="code">select--borderless</code>
+            - 보더가 없는 UI
+          </li>
+        </ul>
+      </li>
+      <li>
+        셀렉트의 <em class="text-emphasis">사이즈</em>가 3개 있습니다.
+        <ul>
+          <li>
+            <code class="code">select--lg</code> / <code class="code">select</code> / <code class="code">select--sm</code>
+          </li>
+        </ul>
+      </li>
+      <li>
+        셀렉트의 <em class="text-emphasis">리스트의 방향</em>을 설정할 수 있습니다.
+        <ul>
+          <li>
+            기본 - 셀렉트 버튼을 기준으로 좌측 하단으로 펼쳐지는 UI
+          </li>
+          <li>
+            <code class="code">select--left</code> - 셀렉트 버튼을 기준으로 좌측에서부터 셀렉트 리스트가 나열되는 UI
+          </li>
+          <li>
+            <code class="code">select--up</code> - 셀렉트 버튼을 기준 위로 셀렉트 리스트가 펼쳐지는 UI
+          </li>
+          <li>
+            <code class="code">select--right</code> - 셀렉트 버튼을 기준으로 우측에서부터 셀렉트 리스트가 나열되는 UI
+          </li>
+        </ul>
+      </li>
+      <li>
+        <code class="code">select--view-all</code> 클래스를 추가하면 셀렉트 리스트가 텍스트 길이에 따라 계속해서 늘어납니다.
       </li>
     </ul>
   </div>
@@ -116,7 +161,7 @@
             <p class="component-example__size-label">Size: md</p>
             <div class="component-examle__item-group">
               <!-- select--open 클래스 추가시 open -->
-              <div class="select select--open" style="min-width: 160px; max-width: 230px;">
+              <div class="select" style="min-width: 160px; max-width: 230px;">
                 <div class="select-selector">
                   <button class="select-selector__button" type="button">
                     <span class="select-selector__title">텍스트 유형</span>
@@ -223,10 +268,14 @@
           <div class="component-example__row">
             <p class="component-example__size-label">Size: sm</p>
             <div class="component-examle__item-group">
-              <div class="select select--sm" style="min-width: 160px; max-width: 230px;">
-                <div class="select-selector">
+              <!-- select--open 클래스 추가시 open -->
+              <div class="select select--sm select--open" style="min-width: 160px; max-width: 230px;">
+                <div class=" select-selector">
                   <button class="select-selector__button" type="button">
-                    <span class="select-selector__title">SelectContent</span>
+                    <svg class="svg-icon" aria-hidden="true">
+                      <use xlink:href="#key"></use>
+                    </svg>
+                    <span class="select-selector__title">권한 설정</span>
                     <svg class="svg-icon select-selector__icon" aria-hidden="true">
                       <use xlink:href="#chevron-down-medium"></use>
                     </svg>
@@ -236,26 +285,41 @@
                   <ul class="select-container__list">
                     <li class="select-container__item">
                       <button class="select-container__button" type="button">
+                        <svg class="svg-icon select-container__icon" aria-hidden="true">
+                          <use xlink:href="#link"></use>
+                        </svg>
                         <span class="select-container__text">URL 관리</span>
                       </button>
                     </li>
-                    <li class="select-container__item">
+                    <li class="select-container__item select-container__item--selected">
                       <button class="select-container__button" type="button">
+                        <svg class="svg-icon select-container__icon" aria-hidden="true">
+                          <use xlink:href="#key"></use>
+                        </svg>
                         <span class="select-container__text">권한 설정</span>
                       </button>
                     </li>
                     <li class="select-container__item">
                       <button class="select-container__button" type="button">
+                        <svg class="svg-icon select-container__icon" aria-hidden="true">
+                          <use xlink:href="#copy"></use>
+                        </svg>
                         <span class="select-container__text">사본으로 저장</span>
                       </button>
                     </li>
                     <li class="select-container__item">
                       <button class="select-container__button" type="button">
+                        <svg class="svg-icon select-container__icon" aria-hidden="true">
+                          <use xlink:href="#write"></use>
+                        </svg>
                         <span class="select-container__text">정보 변경</span>
                       </button>
                     </li>
                     <li class="select-container__item">
                       <button class="select-container__button" type="button">
+                        <svg class="svg-icon select-container__icon" aria-hidden="true">
+                          <use xlink:href="#popout"></use>
+                        </svg>
                         <span class="select-container__text">목록으로 나가기</span>
                       </button>
                     </li>
@@ -296,111 +360,6 @@
                     <li class="select-container__item">
                       <button class="select-container__button" type="button">
                         <span class="select-container__text">목록으로 나가기</span>
-                      </button>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="component-variation">
-    <span class="component-variation__name">Text + Subtext Select</span>
-    <div class="component-example">
-      <div class="component-example__live">
-        <div>
-          <div class="component-example__row">
-            <p class="component-example__size-label">Size: md</p>
-            <div class="component-examle__item-group">
-              <div class="select select--right" style="min-width: 160px; max-width: 230px;">
-                <div class="select-selector">
-                  <button class="select-selector__button" type="button">
-                    <span class="select-selector__title">서브 텍스트 유형</span>
-                    <svg class="svg-icon select-selector__icon" aria-hidden="true">
-                      <use xlink:href="#chevron-down-medium"></use>
-                    </svg>
-                  </button>
-                </div>
-                <div class="select-container w-200">
-                  <ul class="select-container__list">
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">URL 관리</span>
-                        <span class="select-container__subtext">Subtext</span>
-                      </button>
-                    </li>
-                    <!-- 선택 된 객체에 select-container__item--selected 클래스 추가 -->
-                    <li class="select-container__item select-container__item--selected">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">권한 설정</span>
-                        <span class="select-container__subtext">Subtext</span>
-                      </button>
-                    </li>
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">다른 이름으로 저장</span>
-                        <span class="select-container__subtext">Subtext</span>
-                      </button>
-                    </li>
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">정보 변경</span>
-                        <span class="select-container__subtext">Subtext</span>
-                      </button>
-                    </li>
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">목록으로 나가기</span>
-                        <span class="select-container__subtext">Subtext</span>
-                      </button>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="select" style="min-width: 160px; max-width: 230px;">
-                <div class="select-selector">
-                  <button class="select-selector__button" type="button">
-                    <span class="select-selector__title">서브 텍스트 유형</span>
-                    <svg class="svg-icon select-selector__icon" aria-hidden="true">
-                      <use xlink:href="#chevron-down-medium"></use>
-                    </svg>
-                  </button>
-                </div>
-                <div class="select-container">
-                  <ul class="select-container__list">
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">URL 관리</span>
-                        <span class="select-container__subtext">Subtext</span>
-                      </button>
-                    </li>
-                    <!-- 선택 된 객체에 select-container__item--selected 클래스 추가 -->
-                    <li class="select-container__item select-container__item--selected">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">권한 설정</span>
-                        <span class="select-container__subtext">Subtext</span>
-                      </button>
-                    </li>
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">다른 이름으로 저장</span>
-                        <span class="select-container__subtext">Subtext</span>
-                      </button>
-                    </li>
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">정보 변경</span>
-                        <span class="select-container__subtext">Subtext</span>
-                      </button>
-                    </li>
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">목록으로 나가기</span>
-                        <span class="select-container__subtext">Subtext</span>
                       </button>
                     </li>
                   </ul>
@@ -588,269 +547,13 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="component-variation">
-    <span class="component-variation__name">Icon + Text Select</span>
-    <div class="component-example">
-      <div class="component-example__live">
-        <div>
-          <div class="component-example__row">
-            <p class="component-example__size-label">Size: lg</p>
-            <div class="component-examle__item-group">
-              <!-- select--open 클래스 추가시 open -->
-              <div class="select select--lg" style="min-width: 160px; max-width: 230px;margin-left: 8px">
-                <div class="select-selector">
-                  <button class="select-selector__button" type="button">
-                    <svg class="svg-icon" aria-hidden="true" aria-hidden="true">
-                      <use xlink:href="#key"></use>
-                    </svg>
-                    <span class="select-selector__title">권한 설정</span>
-                    <svg class="svg-icon select-selector__icon" aria-hidden="true">
-                      <use xlink:href="#chevron-down-medium"></use>
-                    </svg>
-                  </button>
-                </div>
-                <div class="select-container">
-                  <ul class="select-container__list">
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <svg class="svg-icon select-container__icon" aria-hidden="true">
-                          <use xlink:href="#link"></use>
-                        </svg>
-                        <span class="select-container__text">URL 관리</span>
-                      </button>
-                    </li>
-                    <li class="select-container__item select-container__item--selected">
-                      <button class="select-container__button" type="button">
-                        <svg class="svg-icon select-container__icon" aria-hidden="true">
-                          <use xlink:href="#key"></use>
-                        </svg>
-                        <span class="select-container__text">권한 설정</span>
-                      </button>
-                    </li>
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <svg class="svg-icon select-container__icon" aria-hidden="true">
-                          <use xlink:href="#copy"></use>
-                        </svg>
-                        <span class="select-container__text">사본으로 저장</span>
-                      </button>
-                    </li>
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <svg class="svg-icon select-container__icon" aria-hidden="true">
-                          <use xlink:href="#write"></use>
-                        </svg>
-                        <span class="select-container__text">정보 변경</span>
-                      </button>
-                    </li>
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <svg class="svg-icon select-container__icon" aria-hidden="true">
-                          <use xlink:href="#popout"></use>
-                        </svg>
-                        <span class="select-container__text">목록으로 나가기</span>
-                      </button>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <!-- select--open 클래스 추가시 open -->
-              <div class="select select--lg select--disabled" style="min-width: 160px; max-width: 230px;margin-left: 8px">
-                <div class="select-selector">
-                  <button class="select-selector__button" type="button">
-                    <svg class="svg-icon" aria-hidden="true">
-                      <use xlink:href="#key"></use>
-                    </svg>
-                    <span class="select-selector__title">권한 설정</span>
-                    <svg class="svg-icon select-selector__icon" aria-hidden="true">
-                      <use xlink:href="#chevron-down-medium"></use>
-                    </svg>
-                  </button>
-                </div>
-                <div class="select-container">
-                  <ul class="select-container__list">
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <svg class="svg-icon select-container__icon" aria-hidden="true">
-                          <use xlink:href="#link"></use>
-                        </svg>
-                        <span class="select-container__text">URL 관리</span>
-                      </button>
-                    </li>
-                    <li class="select-container__item select-container__item--selected">
-                      <button class="select-container__button" type="button">
-                        <svg class="svg-icon select-container__icon" aria-hidden="true">
-                          <use xlink:href="#key"></use>
-                        </svg>
-                        <span class="select-container__text">권한 설정</span>
-                      </button>
-                    </li>
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <svg class="svg-icon select-container__icon" aria-hidden="true">
-                          <use xlink:href="#copy"></use>
-                        </svg>
-                        <span class="select-container__text">사본으로 저장</span>
-                      </button>
-                    </li>
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <svg class="svg-icon select-container__icon" aria-hidden="true">
-                          <use xlink:href="#write"></use>
-                        </svg>
-                        <span class="select-container__text">정보 변경</span>
-                      </button>
-                    </li>
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <svg class="svg-icon select-container__icon" aria-hidden="true">
-                          <use xlink:href="#popout"></use>
-                        </svg>
-                        <span class="select-container__text">목록으로 나가기</span>
-                      </button>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="component-example__row">
-            <p class="component-example__size-label">Size: md</p>
-            <div class="component-examle__item-group">
-              <!-- select--open 클래스 추가시 open -->
-              <div class="select" style="min-width: 160px; max-width: 230px;margin-left: 8px">
-                <div class="select-selector">
-                  <button class="select-selector__button" type="button">
-                    <svg class="svg-icon" aria-hidden="true">
-                      <use xlink:href="#key"></use>
-                    </svg>
-                    <span class="select-selector__title">권한 설정</span>
-                    <svg class="svg-icon select-selector__icon" aria-hidden="true">
-                      <use xlink:href="#chevron-down-medium"></use>
-                    </svg>
-                  </button>
-                </div>
-                <div class="select-container">
-                  <ul class="select-container__list">
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <svg class="svg-icon select-container__icon" aria-hidden="true">
-                          <use xlink:href="#link"></use>
-                        </svg>
-                        <span class="select-container__text">URL 관리</span>
-                      </button>
-                    </li>
-                    <li class="select-container__item select-container__item--selected">
-                      <button class="select-container__button" type="button">
-                        <svg class="svg-icon select-container__icon" aria-hidden="true">
-                          <use xlink:href="#key"></use>
-                        </svg>
-                        <span class="select-container__text">권한 설정</span>
-                      </button>
-                    </li>
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <svg class="svg-icon select-container__icon" aria-hidden="true">
-                          <use xlink:href="#copy"></use>
-                        </svg>
-                        <span class="select-container__text">사본으로 저장</span>
-                      </button>
-                    </li>
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <svg class="svg-icon select-container__icon" aria-hidden="true">
-                          <use xlink:href="#write"></use>
-                        </svg>
-                        <span class="select-container__text">정보 변경</span>
-                      </button>
-                    </li>
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <svg class="svg-icon select-container__icon" aria-hidden="true">
-                          <use xlink:href="#popout"></use>
-                        </svg>
-                        <span class="select-container__text">목록으로 나가기</span>
-                      </button>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <!-- select--open 클래스 추가시 open -->
-              <div class="select select--disabled" style="min-width: 160px; max-width: 230px;margin-left: 8px">
-                <div class="select-selector">
-                  <button class="select-selector__button" type="button">
-                    <svg class="svg-icon" aria-hidden="true">
-                      <use xlink:href="#key"></use>
-                    </svg>
-                    <span class="select-selector__title">권한 설정</span>
-                    <svg class="svg-icon select-selector__icon" aria-hidden="true">
-                      <use xlink:href="#chevron-down-medium"></use>
-                    </svg>
-                  </button>
-                </div>
-                <div class="select-container">
-                  <ul class="select-container__list">
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <svg class="svg-icon select-container__icon" aria-hidden="true">
-                          <use xlink:href="#link"></use>
-                        </svg>
-                        <span class="select-container__text">URL 관리</span>
-                      </button>
-                    </li>
-                    <li class="select-container__item select-container__item--selected">
-                      <button class="select-container__button" type="button">
-                        <svg class="svg-icon select-container__icon" aria-hidden="true">
-                          <use xlink:href="#key"></use>
-                        </svg>
-                        <span class="select-container__text">권한 설정</span>
-                      </button>
-                    </li>
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <svg class="svg-icon select-container__icon" aria-hidden="true">
-                          <use xlink:href="#copy"></use>
-                        </svg>
-                        <span class="select-container__text">사본으로 저장</span>
-                      </button>
-                    </li>
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <svg class="svg-icon select-container__icon" aria-hidden="true">
-                          <use xlink:href="#write"></use>
-                        </svg>
-                        <span class="select-container__text">정보 변경</span>
-                      </button>
-                    </li>
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <svg class="svg-icon select-container__icon" aria-hidden="true">
-                          <use xlink:href="#popout"></use>
-                        </svg>
-                        <span class="select-container__text">목록으로 나가기</span>
-                      </button>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
           <div class="component-example__row">
             <p class="component-example__size-label">Size: sm</p>
             <div class="component-examle__item-group">
-              <!-- select--open 클래스 추가시 open -->
-              <div class="select select--sm" style="min-width: 160px; max-width: 230px;margin-left: 8px">
+              <div class="select select--view-all select--borderless select--sm select--open" style="min-width: 160px; max-width: 230px;">
                 <div class="select-selector">
                   <button class="select-selector__button" type="button">
-                    <svg class="svg-icon" aria-hidden="true">
-                      <use xlink:href="#key"></use>
-                    </svg>
-                    <span class="select-selector__title">권한 설정</span>
+                    <span class="select-selector__title">보더가 없는 유형</span>
                     <svg class="svg-icon select-selector__icon" aria-hidden="true">
                       <use xlink:href="#chevron-down-medium"></use>
                     </svg>
@@ -860,55 +563,37 @@
                   <ul class="select-container__list">
                     <li class="select-container__item">
                       <button class="select-container__button" type="button">
-                        <svg class="svg-icon select-container__icon" aria-hidden="true">
-                          <use xlink:href="#link"></use>
-                        </svg>
                         <span class="select-container__text">URL 관리</span>
                       </button>
                     </li>
+                    <!-- 선택 된 객체에 select-container__item--selected 클래스 추가 -->
                     <li class="select-container__item select-container__item--selected">
                       <button class="select-container__button" type="button">
-                        <svg class="svg-icon select-container__icon" aria-hidden="true">
-                          <use xlink:href="#key"></use>
-                        </svg>
                         <span class="select-container__text">권한 설정</span>
                       </button>
                     </li>
                     <li class="select-container__item">
                       <button class="select-container__button" type="button">
-                        <svg class="svg-icon select-container__icon" aria-hidden="true">
-                          <use xlink:href="#copy"></use>
-                        </svg>
-                        <span class="select-container__text">사본으로 저장</span>
+                        <span class="select-container__text">다른 이름으로 저장이 길어집니다.</span>
                       </button>
                     </li>
                     <li class="select-container__item">
                       <button class="select-container__button" type="button">
-                        <svg class="svg-icon select-container__icon" aria-hidden="true">
-                          <use xlink:href="#write"></use>
-                        </svg>
                         <span class="select-container__text">정보 변경</span>
                       </button>
                     </li>
                     <li class="select-container__item">
                       <button class="select-container__button" type="button">
-                        <svg class="svg-icon select-container__icon" aria-hidden="true">
-                          <use xlink:href="#popout"></use>
-                        </svg>
                         <span class="select-container__text">목록으로 나가기</span>
                       </button>
                     </li>
                   </ul>
                 </div>
               </div>
-              <!-- select--open 클래스 추가시 open -->
-              <div class="select select--sm select--disabled" style="min-width: 160px; max-width: 230px;margin-left: 8px">
+              <div class="select select--borderless  select--sm " style="min-width: 160px; max-width: 230px;">
                 <div class="select-selector">
                   <button class="select-selector__button" type="button">
-                    <svg class="svg-icon" aria-hidden="true">
-                      <use xlink:href="#key"></use>
-                    </svg>
-                    <span class="select-selector__title">권한 설정</span>
+                    <span class="select-selector__title">보더가 없는 유형 + 말줄임</span>
                     <svg class="svg-icon select-selector__icon" aria-hidden="true">
                       <use xlink:href="#chevron-down-medium"></use>
                     </svg>
@@ -918,41 +603,27 @@
                   <ul class="select-container__list">
                     <li class="select-container__item">
                       <button class="select-container__button" type="button">
-                        <svg class="svg-icon select-container__icon" aria-hidden="true">
-                          <use xlink:href="#link"></use>
-                        </svg>
                         <span class="select-container__text">URL 관리</span>
                       </button>
                     </li>
+                    <!-- 선택 된 객체에 select-container__item--selected 클래스 추가 -->
                     <li class="select-container__item select-container__item--selected">
                       <button class="select-container__button" type="button">
-                        <svg class="svg-icon select-container__icon" aria-hidden="true">
-                          <use xlink:href="#key"></use>
-                        </svg>
                         <span class="select-container__text">권한 설정</span>
                       </button>
                     </li>
                     <li class="select-container__item">
                       <button class="select-container__button" type="button">
-                        <svg class="svg-icon select-container__icon" aria-hidden="true">
-                          <use xlink:href="#copy"></use>
-                        </svg>
-                        <span class="select-container__text">사본으로 저장</span>
+                        <span class="select-container__text">다른 이름으로 저장이 길어집니다 길어요</span>
                       </button>
                     </li>
                     <li class="select-container__item">
                       <button class="select-container__button" type="button">
-                        <svg class="svg-icon select-container__icon" aria-hidden="true">
-                          <use xlink:href="#write"></use>
-                        </svg>
                         <span class="select-container__text">정보 변경</span>
                       </button>
                     </li>
                     <li class="select-container__item">
                       <button class="select-container__button" type="button">
-                        <svg class="svg-icon select-container__icon" aria-hidden="true">
-                          <use xlink:href="#popout"></use>
-                        </svg>
                         <span class="select-container__text">목록으로 나가기</span>
                       </button>
                     </li>
@@ -967,482 +638,7 @@
   </div>
 
   <div class="component-variation">
-    <span class="component-variation__name">Select with Additional Action Button</span>
-    <div class="component-example">
-      <div class="component-example__live">
-        <div>
-          <div class="component-example__row">
-            <p class="component-example__size-label">Size: lg</p>
-            <div class="component-examle__item-group">
-              <!-- select--open 클래스 추가시 open -->
-              <div class="select select--lg" style="min-width: 160px; max-width: 230px;margin-left: 8px">
-                <div class="select-selector">
-                  <button class="select-selector__button" type="button">
-                    <span class="select-selector__title">권한 설정</span>
-                    <svg class="svg-icon select-selector__icon" aria-hidden="true">
-                      <use xlink:href="#chevron-down-medium"></use>
-                    </svg>
-                  </button>
-                </div>
-                <div class="select-container">
-                  <ul class="select-container__list">
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">URL 관리</span>
-                      </button>
-                      <div class="select-container__action-buttons">
-                        <button class="select-container__action-button" type="button" title="icon">
-                          <svg class="svg-icon select-container__icon" aria-hidden="true">
-                            <use xlink:href="#write"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </li>
-                    <li class="select-container__item select-container__item--selected">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">권한 설정</span>
-                      </button>
-                      <div class="select-container__action-buttons">
-                        <button class="select-container__action-button" type="button" title="icon">
-                          <svg class="svg-icon select-container__icon" aria-hidden="true">
-                            <use xlink:href="#write"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </li>
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">사본으로 저장</span>
-                      </button>
-                      <div class="select-container__action-buttons">
-                        <button class="select-container__action-button" type="button" title="icon">
-                          <svg class="svg-icon select-container__icon" aria-hidden="true">
-                            <use xlink:href="#write"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </li>
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">정보 변경</span>
-                      </button>
-                      <div class="select-container__action-buttons">
-                        <button class="select-container__action-button" type="button" title="icon">
-                          <svg class="svg-icon select-container__icon" aria-hidden="true">
-                            <use xlink:href="#write"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </li>
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">목록으로 나가기</span>
-                      </button>
-                      <div class="select-container__action-buttons">
-                        <button class="select-container__action-button" type="button" title="icon">
-                          <svg class="svg-icon select-container__icon" aria-hidden="true">
-                            <use xlink:href="#write"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <!-- select--open 클래스 추가시 open -->
-              <div class="select select--lg select--disabled" style="min-width: 160px; max-width: 230px;margin-left: 8px">
-                <div class="select-selector">
-                  <button class="select-selector__button" type="button">
-                    <span class="select-selector__title">권한 설정</span>
-                    <svg class="svg-icon select-selector__icon" aria-hidden="true">
-                      <use xlink:href="#chevron-down-medium"></use>
-                    </svg>
-                  </button>
-                </div>
-                <div class="select-container">
-                  <ul class="select-container__list">
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">URL 관리</span>
-                      </button>
-                      <div class="select-container__action-buttons">
-                        <button class="select-container__action-button" type="button" title="icon">
-                          <svg class="svg-icon select-container__icon" aria-hidden="true">
-                            <use xlink:href="#write"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </li>
-                    <li class="select-container__item select-container__item--selected">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">권한 설정</span>
-                      </button>
-                      <div class="select-container__action-buttons">
-                        <button class="select-container__action-button" type="button" title="icon">
-                          <svg class="svg-icon select-container__icon" aria-hidden="true">
-                            <use xlink:href="#write"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </li>
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">사본으로 저장</span>
-                      </button>
-                      <div class="select-container__action-buttons">
-                        <button class="select-container__action-button" type="button" title="icon">
-                          <svg class="svg-icon select-container__icon" aria-hidden="true">
-                            <use xlink:href="#write"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </li>
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">정보 변경</span>
-                      </button>
-                      <div class="select-container__action-buttons">
-                        <button class="select-container__action-button" type="button" title="icon">
-                          <svg class="svg-icon select-container__icon" aria-hidden="true">
-                            <use xlink:href="#write"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </li>
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">목록으로 나가기</span>
-                      </button>
-                      <div class="select-container__action-buttons">
-                        <button class="select-container__action-button" type="button" title="icon">
-                          <svg class="svg-icon select-container__icon" aria-hidden="true">
-                            <use xlink:href="#write"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="component-example__row">
-            <p class="component-example__size-label">Size: md</p>
-            <div class="component-examle__item-group">
-              <!-- select--open 클래스 추가시 open -->
-              <div class="select" style="min-width: 160px; max-width: 230px;margin-left: 8px">
-                <div class="select-selector">
-                  <button class="select-selector__button" type="button">
-                    <span class="select-selector__title">권한 설정</span>
-                    <svg class="svg-icon select-selector__icon" aria-hidden="true">
-                      <use xlink:href="#chevron-down-medium"></use>
-                    </svg>
-                  </button>
-                </div>
-                <div class="select-container">
-                  <ul class="select-container__list">
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">URL 관리</span>
-                      </button>
-                      <div class="select-container__action-buttons">
-                        <button class="select-container__action-button" type="button" title="icon">
-                          <svg class="svg-icon select-container__icon" aria-hidden="true">
-                            <use xlink:href="#write"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </li>
-                    <li class="select-container__item select-container__item--selected">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">권한 설정</span>
-                      </button>
-                      <div class="select-container__action-buttons">
-                        <button class="select-container__action-button" type="button" title="icon">
-                          <svg class="svg-icon select-container__icon" aria-hidden="true">
-                            <use xlink:href="#write"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </li>
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">사본으로 저장</span>
-                      </button>
-                      <div class="select-container__action-buttons">
-                        <button class="select-container__action-button" type="button" title="icon">
-                          <svg class="svg-icon select-container__icon" aria-hidden="true">
-                            <use xlink:href="#write"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </li>
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">정보 변경</span>
-                      </button>
-                      <div class="select-container__action-buttons">
-                        <button class="select-container__action-button" type="button" title="icon">
-                          <svg class="svg-icon select-container__icon" aria-hidden="true">
-                            <use xlink:href="#write"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </li>
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">목록으로 나가기</span>
-                      </button>
-                      <div class="select-container__action-buttons">
-                        <button class="select-container__action-button" type="button" title="icon">
-                          <svg class="svg-icon select-container__icon" aria-hidden="true">
-                            <use xlink:href="#write"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <!-- select--open 클래스 추가시 open -->
-              <div class="select select--disabled" style="min-width: 160px; max-width: 230px;margin-left: 8px">
-                <div class="select-selector">
-                  <button class="select-selector__button" type="button">
-                    <span class="select-selector__title">권한 설정</span>
-                    <svg class="svg-icon select-selector__icon" aria-hidden="true">
-                      <use xlink:href="#chevron-down-medium"></use>
-                    </svg>
-                  </button>
-                </div>
-                <div class="select-container">
-                  <ul class="select-container__list">
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">URL 관리</span>
-                      </button>
-                      <div class="select-container__action-buttons">
-                        <button class="select-container__action-button" type="button" title="icon">
-                          <svg class="svg-icon select-container__icon" aria-hidden="true">
-                            <use xlink:href="#write"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </li>
-                    <li class="select-container__item select-container__item--selected">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">권한 설정</span>
-                      </button>
-                      <div class="select-container__action-buttons">
-                        <button class="select-container__action-button" type="button" title="icon">
-                          <svg class="svg-icon select-container__icon" aria-hidden="true">
-                            <use xlink:href="#write"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </li>
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">사본으로 저장</span>
-                      </button>
-                      <div class="select-container__action-buttons">
-                        <button class="select-container__action-button" type="button" title="icon">
-                          <svg class="svg-icon select-container__icon" aria-hidden="true">
-                            <use xlink:href="#write"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </li>
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">정보 변경</span>
-                      </button>
-                      <div class="select-container__action-buttons">
-                        <button class="select-container__action-button" type="button" title="icon">
-                          <svg class="svg-icon select-container__icon" aria-hidden="true">
-                            <use xlink:href="#write"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </li>
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">목록으로 나가기</span>
-                      </button>
-                      <div class="select-container__action-buttons">
-                        <button class="select-container__action-button" type="button" title="icon">
-                          <svg class="svg-icon select-container__icon" aria-hidden="true">
-                            <use xlink:href="#write"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="component-example__row">
-            <p class="component-example__size-label">Size: sm</p>
-            <div class="component-examle__item-group">
-              <!-- select--open 클래스 추가시 open -->
-              <div class="select select--sm" style="min-width: 160px; max-width: 230px;margin-left: 8px">
-                <div class="select-selector">
-                  <button class="select-selector__button" type="button">
-                    <span class="select-selector__title">권한 설정</span>
-                    <svg class="svg-icon select-selector__icon" aria-hidden="true">
-                      <use xlink:href="#chevron-down-medium"></use>
-                    </svg>
-                  </button>
-                </div>
-                <div class="select-container">
-                  <ul class="select-container__list">
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">URL 관리</span>
-                      </button>
-                      <div class="select-container__action-buttons">
-                        <button class="select-container__action-button" type="button" title="icon">
-                          <svg class="svg-icon select-container__icon" aria-hidden="true">
-                            <use xlink:href="#write"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </li>
-                    <li class="select-container__item select-container__item--selected">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">권한 설정</span>
-                      </button>
-                      <div class="select-container__action-buttons">
-                        <button class="select-container__action-button" type="button" title="icon">
-                          <svg class="svg-icon select-container__icon" aria-hidden="true">
-                            <use xlink:href="#write"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </li>
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">사본으로 저장</span>
-                      </button>
-                      <div class="select-container__action-buttons">
-                        <button class="select-container__action-button" type="button" title="icon">
-                          <svg class="svg-icon select-container__icon" aria-hidden="true">
-                            <use xlink:href="#write"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </li>
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">정보 변경</span>
-                      </button>
-                      <div class="select-container__action-buttons">
-                        <button class="select-container__action-button" type="button" title="icon">
-                          <svg class="svg-icon select-container__icon" aria-hidden="true">
-                            <use xlink:href="#write"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </li>
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">목록으로 나가기</span>
-                      </button>
-                      <div class="select-container__action-buttons">
-                        <button class="select-container__action-button" type="button" title="icon">
-                          <svg class="svg-icon select-container__icon" aria-hidden="true">
-                            <use xlink:href="#write"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <!-- select--open 클래스 추가시 open -->
-              <div class="select select--sm select--disabled" style="min-width: 160px; max-width: 230px;margin-left: 8px">
-                <div class="select-selector">
-                  <button class="select-selector__button" type="button">
-                    <span class="select-selector__title">권한 설정</span>
-                    <svg class="svg-icon select-selector__icon" aria-hidden="true">
-                      <use xlink:href="#chevron-down-medium"></use>
-                    </svg>
-                  </button>
-                </div>
-                <div class="select-container">
-                  <ul class="select-container__list">
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">URL 관리</span>
-                      </button>
-                      <div class="select-container__action-buttons">
-                        <button class="select-container__action-button" type="button" title="icon">
-                          <svg class="svg-icon select-container__icon" aria-hidden="true">
-                            <use xlink:href="#write"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </li>
-                    <li class="select-container__item select-container__item--selected">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">권한 설정</span>
-                      </button>
-                      <div class="select-container__action-buttons">
-                        <button class="select-container__action-button" type="button" title="icon">
-                          <svg class="svg-icon select-container__icon" aria-hidden="true">
-                            <use xlink:href="#write"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </li>
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">사본으로 저장</span>
-                      </button>
-                      <div class="select-container__action-buttons">
-                        <button class="select-container__action-button" type="button" title="icon">
-                          <svg class="svg-icon select-container__icon" aria-hidden="true">
-                            <use xlink:href="#write"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </li>
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">정보 변경</span>
-                      </button>
-                      <div class="select-container__action-buttons">
-                        <button class="select-container__action-button" type="button" title="icon">
-                          <svg class="svg-icon select-container__icon" aria-hidden="true">
-                            <use xlink:href="#write"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </li>
-                    <li class="select-container__item">
-                      <button class="select-container__button" type="button">
-                        <span class="select-container__text">목록으로 나가기</span>
-                      </button>
-                      <div class="select-container__action-buttons">
-                        <button class="select-container__action-button" type="button" title="icon">
-                          <svg class="svg-icon select-container__icon" aria-hidden="true">
-                            <use xlink:href="#write"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="component-variation">
-    <span class="component-variation__name">Select with Checkbox</span>
+    <span class="component-variation__name">Multi Select</span>
     <div class="component-example">
       <div class="component-example__live">
         <div>
@@ -2691,7 +1887,7 @@
           <div class="component-example__row">
             <p class="component-example__size-label">Size: sm</p>
             <div class="component-examle__item-group">
-              <div class="select select--sm" style="min-width: 160px; max-width: 230px;">
+              <div class="select select--sm select--open" style="min-width: 160px; max-width: 230px;">
                 <div class="select-selector">
                   <button class="select-selector__button" type="button">
                     <span class="select-selector__title">전체</span>
@@ -2700,7 +1896,7 @@
                     </svg>
                   </button>
                 </div>
-                <div class="select-container w-260">
+                <div class="select-container w-260" style="max-height: 150px;">
                   <ul class="select-container__list">
                     <li class="select-container__item">
                       <div class="checkbox checkbox--indeterminate">
@@ -3315,7 +2511,7 @@
   </div>
 
   <div class="component-variation">
-    <span class="component-variation__name">Input Select</span>
+    <span class="component-variation__name">Combo Box</span>
     <div class="component-example">
       <div class="component-example__live">
         <div>
@@ -3459,7 +2655,7 @@
   </div>
 
   <div class="component-variation">
-    <span class="component-variation__name">Borderless Input Select</span>
+    <span class="component-variation__name">Borderless Combo Box</span>
     <div class="component-example">
       <div class="component-example__live">
         <div>
@@ -3556,7 +2752,7 @@
           <div class="component-example__row">
             <p class="component-example__size-label">Size: sm</p>
             <div class="component-examle__item-group">
-              <div class="select select--sm select--disabled select--borderless" style="min-width: 160px; max-width: 230px;">
+              <div class="select select--sm select--open select--borderless" style="min-width: 160px; max-width: 230px;">
                 <div class="select-selector">
                   <div class="select-selector__input">
                     <input type="text" class="text-input text-input--sm" placeholder="placeholder text" value="일치 단어" />
