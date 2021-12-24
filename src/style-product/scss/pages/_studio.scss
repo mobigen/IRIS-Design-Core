@@ -276,14 +276,23 @@
 
 .editor-layout-head__title {
   @include line-height("heading");
-  max-width: rem(400px);
+  max-width: 100%;
 }
 
 .editor-layout-head__title-text {
   @include text-overflow;
   @include font-weight("medium");
 }
-
+.editor-layout-head__title-input{
+  width: rem(400px);
+}
+.editor-layout-head__title-tooltip{
+  max-width: 99%;
+  display: none;
+}
+.editor-layout-head__title-text:hover + .editor-layout-head__title-tooltip{
+  display: block;
+}
 .editor-layout-head__title-button {
   margin-left: $spacing-2xs;
 }
@@ -333,6 +342,7 @@
 
 .editor-layout-head__responsive {
   margin-right: $spacing-sm;
+  margin-left: $layout-xl;
 }
 
 .editor-layout-body {
