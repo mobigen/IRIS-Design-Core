@@ -61,8 +61,14 @@
 
     .tooltip-arrow {
       top: -4px;
-      left: 50%;
-      margin-left: -$spacing-2xs;
+    }
+  }
+
+  &[x-placement^="bottom-end"] {
+    margin-top: 10px;
+
+    .tooltip-arrow {
+      top: -4px;
     }
   }
 
@@ -71,7 +77,6 @@
 
     .tooltip-arrow {
       top: -4px;
-      margin-left: 2px;
     }
   }
 
