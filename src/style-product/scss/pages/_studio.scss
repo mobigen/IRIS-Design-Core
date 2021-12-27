@@ -282,9 +282,11 @@
   @include text-overflow;
   @include font-weight("medium");
 }
+
 .editor-layout-head__title-input{
   width: rem(400px);
 }
+
 .editor-layout-head__title-button {
   margin-left: $spacing-2xs;
 }
