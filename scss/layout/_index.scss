@@ -153,7 +153,8 @@
   margin-left: $spacing-xs;
 
   &.select--view-all.division-element {
-    width: rem(180px);
+    min-width: rem(136px);
+    max-width: rem(250px);
 
     .select-container {
       min-width: rem(136px);
@@ -174,7 +175,7 @@
   margin-left: $spacing-xs;
 
   .text-input-group {
-    width: rem(320px);
+    width: rem(240px);
 
     .text-input {
       padding-right: $spacing-lg;
