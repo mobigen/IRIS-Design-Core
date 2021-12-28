@@ -16,6 +16,7 @@
   border-radius: $field-border-radius;
   background-color: $hover-row;
   color: $text-03;
+  cursor: default;
 
   &.badge--icon {
     padding: 3px;
