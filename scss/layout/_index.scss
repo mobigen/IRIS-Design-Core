@@ -22,7 +22,7 @@
   padding: 0 20px;
 }
 
-.index-layout-head__title-bar .select--borderless .select-container{
+.index-layout-head__title-bar .select--borderless .select-container {
   min-width: rem(160px);
 }
 
@@ -195,7 +195,7 @@
 .form__reference-text {
   @include font-size("14");
   display: block;
-  margin-top: $spacing-2xs;
+  margin-top: $spacing-xs;
   color: $text-05;
 }
 
@@ -217,25 +217,8 @@
   text-decoration: underline;
 }
 
-.button--underline {
-  &.button--underline-create {
-    color: $primary;
-
-    &:hover {
-      color: $primary;
-    }
-  }
-  &.button--underline-delete {
-    color: $negative;
-
-    &:hover {
-      color: $negative;
-    }
-  }
-}
-
 .url-group {
-  min-height: 68px;
+  min-height: rem(80px);
   max-height: 235px;
   overflow-y: auto;
   background-color: $ui-02;
@@ -543,6 +526,7 @@
   }
 }
 
+// 추후 삭제
 .project-thumbnail-list__tags {
   position: absolute;
   bottom: 6px;
@@ -552,6 +536,19 @@
   align-items: center;
 
   .tag + .tag {
+    margin-left: $spacing-2xs;
+  }
+}
+
+.project-thumbnail-list__badges {
+  position: absolute;
+  bottom: 6px;
+  right: rem(8px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .badge + .badge {
     margin-left: $spacing-2xs;
   }
 }
