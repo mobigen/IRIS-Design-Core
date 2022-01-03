@@ -298,10 +298,10 @@
                           <div class="accordion__item">
                             <!-- accordion__head--open 클래스 추가시 open -->
                             <button class="accordion__head accordion__head--open">
-                              <svg class="accordion__head-icon svg-icon" aria-hidden="true">
-                                <use xlink:href="#chevron-right-medium"></use>
-                              </svg>
                               <span class="accordion__head-title"> Accordion Head Title </span>
+                              <svg class="accordion__head-icon svg-icon" aria-hidden="true">
+                                <use xlink:href="#chevron-left-medium"></use>
+                              </svg>
                             </button>
                             <div class="accordion__body">
                               <div class="accordion-vertical">
@@ -352,10 +352,10 @@
                           <div class="accordion__item">
                             <!-- accordion__head--open 클래스 추가시 open -->
                             <button class="accordion__head accordion__head--open">
-                              <svg class="accordion__head-icon svg-icon" aria-hidden="true">
-                                <use xlink:href="#chevron-right-medium"></use>
-                              </svg>
                               <span class="accordion__head-title"> Accordion Head Title </span>
+                              <svg class="accordion__head-icon svg-icon" aria-hidden="true">
+                                <use xlink:href="#chevron-left-medium"></use>
+                              </svg>
                             </button>
                             <div class="accordion__body">
                               <div class="accordion-vertical">
@@ -451,34 +451,6 @@
                                       </svg>
                                     </button>
                                   </li>
-                                  <li class="accordion-horizontal__item">
-                                    <button class="accordion-horizontal__button">
-                                      <svg class="accordion-horizontal__icon svg-icon" aria-hidden="true">
-                                        <use xlink:href="#data"></use>
-                                      </svg>
-                                    </button>
-                                  </li>
-                                  <li class="accordion-horizontal__item">
-                                    <button class="accordion-horizontal__button">
-                                      <svg class="accordion-horizontal__icon svg-icon" aria-hidden="true">
-                                        <use xlink:href="#data"></use>
-                                      </svg>
-                                    </button>
-                                  </li>
-                                  <li class="accordion-horizontal__item">
-                                    <button class="accordion-horizontal__button">
-                                      <svg class="accordion-horizontal__icon svg-icon" aria-hidden="true">
-                                        <use xlink:href="#data"></use>
-                                      </svg>
-                                    </button>
-                                  </li>
-                                  <li class="accordion-horizontal__item">
-                                    <button class="accordion-horizontal__button">
-                                      <svg class="accordion-horizontal__icon svg-icon" aria-hidden="true">
-                                        <use xlink:href="#data"></use>
-                                      </svg>
-                                    </button>
-                                  </li>
                                 </ul>
                               </div>
                             </div>
@@ -492,16 +464,13 @@
                               </svg>
                             </button>
                             <div class="accordion__body">
-                              <div class="accordion-horizontal">
+                              <div class="accordion-horizontal accordion-horizontal--lg">
                                 <ul class="accordion-horizontal__list">
-                                  <li class="accordion-horizontal__item">
+                                  <li class="accordion-horizontal__item accordion-horizontal__item--selected">
                                     <button class="accordion-horizontal__button">
                                       <svg class="accordion-horizontal__icon svg-icon" aria-hidden="true">
                                         <use xlink:href="#data"></use>
                                       </svg>
-                                      <span class="accordion-horizontal__text">
-                                        list-item-textlist-item-textlist-item-textlist-item-text
-                                      </span>
                                     </button>
                                   </li>
                                   <li class="accordion-horizontal__item">
@@ -509,7 +478,6 @@
                                       <svg class="accordion-horizontal__icon svg-icon" aria-hidden="true">
                                         <use xlink:href="#data"></use>
                                       </svg>
-                                      <span class="accordion-horizontal__text"> list-item-text </span>
                                     </button>
                                   </li>
                                   <li class="accordion-horizontal__item">
@@ -517,7 +485,6 @@
                                       <svg class="accordion-horizontal__icon svg-icon" aria-hidden="true">
                                         <use xlink:href="#data"></use>
                                       </svg>
-                                      <span class="accordion-horizontal__text"> list-item-text </span>
                                     </button>
                                   </li>
                                 </ul>
@@ -547,16 +514,6 @@
                                       <svg class="accordion-horizontal__icon svg-icon" aria-hidden="true">
                                         <use xlink:href="#data"></use>
                                       </svg>
-                                      <span class="accordion-horizontal__text">
-                                        list-item-textlist-item-textlist-item-textlist-item-text
-                                      </span>
-                                    </button>
-                                  </li>
-                                  <li class="accordion-horizontal__item">
-                                    <button class="accordion-horizontal__button">
-                                      <svg class="accordion-horizontal__icon svg-icon" aria-hidden="true">
-                                        <use xlink:href="#data"></use>
-                                      </svg>
                                       <span class="accordion-horizontal__text"> list-item-text </span>
                                     </button>
                                   </li>
@@ -621,7 +578,7 @@
                                         <use xlink:href="#data"></use>
                                       </svg>
                                       <span class="accordion-horizontal__text">
-                                        list-item-textlist-item-textlist-item-textlist-item-text
+                                        list-item-text
                                       </span>
                                     </button>
                                   </li>
@@ -656,7 +613,6 @@
 
         </div>
         <div class="page" id="page--alert">
-
           <!-- alert -->
           <div class="page-header">
             <h2 class="page-header__lable">component</h2>
@@ -676,6 +632,9 @@
                     <li>에러</li>
                   </ul>
                 </li>
+                <li>
+                  Foot은 <em class="text-emphasis">저장 / 확인 / 닫기 / 취소</em> 문구를 사용합니다.
+                </li>
               </ul>
             </div>
 
@@ -690,7 +649,6 @@
                           <use xlink:href="#info-fill"></use>
                         </svg>
                         <div class="alert__contents">
-                          <p class="alert__title">Alert Title</p>
                           <p class="alert__text">Alert Contents Here.</p>
                         </div>
                       </div>
@@ -721,28 +679,7 @@
                           <use xlink:href="#info-fill"></use>
                         </svg>
                         <div class="alert__contents">
-                          <p class="alert__title">Info Alert Title</p>
-                          <p class="alert__text">Info Alert Contents Here.<br />이 얼럿은 사용자에게 정보 상태를 알리기 위해 사용합니다.</p>
-                        </div>
-                      </div>
-                      <div class="alert__foot">
-                        <div class="alert__foot-main-buttons">
-                          <button class="button button--link button--lg" type="button">
-                            <span>취소</span>
-                          </button>
-                          <button class="button button--primary button--lg" type="button">
-                            <span>확인</span>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="alert alert--info" style="position: static; margin-top: 40px;">
-                      <div class="alert__body">
-                        <svg class="alert__icon svg-icon" aria-hidden="true">
-                          <use xlink:href="#info-fill"></use>
-                        </svg>
-                        <div class="alert__contents">
-                          <p class="alert__text">Alert 타이틀 미사용 예제<br />이 얼럿은 사용자에게 정보 상태를 알리기 위해 사용합니다.</p>
+                          <p class="alert__text">Alert<br />이 얼럿은 사용자에게 정보 상태를 알리기 위해 사용합니다.</p>
                         </div>
                       </div>
                       <div class="alert__foot">
@@ -772,28 +709,7 @@
                           <use xlink:href="#checkmark-fill"></use>
                         </svg>
                         <div class="alert__contents">
-                          <p class="alert__title">Success Alert Title</p>
-                          <p class="alert__text">Success Alert Contents Here.<br />이 얼럿은 사용자에게 성공 상태를 알리기 위해 사용합니다.</p>
-                        </div>
-                      </div>
-                      <div class="alert__foot">
-                        <div class="alert__foot-main-buttons">
-                          <button class="button button--link button--lg" type="button">
-                            <span>취소</span>
-                          </button>
-                          <button class="button button--primary button--lg" type="button">
-                            <span>확인</span>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="alert alert--success" style="position: static; margin-top: 40px;">
-                      <div class="alert__body">
-                        <svg class="alert__icon svg-icon" aria-hidden="true">
-                          <use xlink:href="#checkmark-fill"></use>
-                        </svg>
-                        <div class="alert__contents">
-                          <p class="alert__text">Alert title 미사용 예제.<br />이 얼럿은 사용자에게 성공 상태를 알리기 위해 사용합니다.</p>
+                          <p class="alert__text">Alert<br />이 얼럿은 사용자에게 성공 상태를 알리기 위해 사용합니다.</p>
                         </div>
                       </div>
                       <div class="alert__foot">
@@ -823,25 +739,7 @@
                           <use xlink:href="#warning-fill"></use>
                         </svg>
                         <div class="alert__contents">
-                          <p class="alert__title">Warning Alert Title</p>
-                          <p class="alert__text">Warning Alert Contents Here.<br />이 얼럿은 사용자에게 경고 상태를 알리기 위해 사용합니다.</p>
-                        </div>
-                      </div>
-                      <div class="alert__foot">
-                        <div class="alert__foot-main-buttons">
-                          <button class="button button--negative button--lg" type="button">
-                            <span>확인</span>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="alert alert--warning" style="position: static; margin-top: 40px;">
-                      <div class="alert__body">
-                        <svg class="alert__icon svg-icon" aria-hidden="true">
-                          <use xlink:href="#warning-fill"></use>
-                        </svg>
-                        <div class="alert__contents">
-                          <p class="alert__text">Alert title 미사용 예제<br />이 얼럿은 사용자에게 경고 상태를 알리기 위해 사용합니다.</p>
+                          <p class="alert__text">Alert<br />이 얼럿은 사용자에게 경고 상태를 알리기 위해 사용합니다.</p>
                         </div>
                       </div>
                       <div class="alert__foot">
@@ -868,25 +766,7 @@
                           <use xlink:href="#issue-fill"></use>
                         </svg>
                         <div class="alert__contents">
-                          <p class="alert__title">Error Alert Title</p>
-                          <p class="alert__text">Error Alert Contents Here.<br />이 얼럿은 사용자에게 에러 상태를 알리기 위해 사용합니다.</p>
-                        </div>
-                      </div>
-                      <div class="alert__foot">
-                        <div class="alert__foot-main-buttons">
-                          <button class="button button--negative button--lg" type="button">
-                            <span>확인</span>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="alert alert--error" style="position: static; margin-top: 40px;">
-                      <div class="alert__body">
-                        <svg class="alert__icon svg-icon" aria-hidden="true">
-                          <use xlink:href="#issue-fill"></use>
-                        </svg>
-                        <div class="alert__contents">
-                          <p class="alert__text">Alert title 미사용 예제<br />이 얼럿은 사용자에게 에러 상태를 알리기 위해 사용합니다.</p>
+                          <p class="alert__text">Alert<br />이 얼럿은 사용자에게 에러 상태를 알리기 위해 사용합니다.</p>
                         </div>
                       </div>
                       <div class="alert__foot">
@@ -1452,7 +1332,6 @@
 
         </div>
         <div class="page" id="page--button">
-
           <!-- button -->
           <div class="page-header">
             <h2 class="page-header__lable">component</h2>
@@ -1463,7 +1342,7 @@
             <div class="page__usage md">
               <ul>
                 <li>
-                  버튼은 <em class="text-emphasis">6개</em>가 있으며 <em class="text-emphasis">3개</em> 크기로 구분합니다.<br />이
+                  버튼은 <em class="text-emphasis">3개</em> 크기로 구분합니다.<br />이
                   이외의 버튼 스타일은 사용하지 않습니다. 각 버튼의 설명을 숙지하고 목적에 맞게 사용하도록합니다.
                 </li>
                 <li>버튼에 아이콘을 조합하여 사용할 경우 버튼 텍스트를 <code class="code-inline">span</code>태그로 감싸 <code class="code-inline">button__text</code> 라는 클래스를 추가해 사용합니다.</li>
@@ -2195,77 +2074,8 @@
                     <div class="component-example__row">
                       <p class="component-example__size-label">Size: lg</p>
                       <div class="component-examle__item-group">
-                        <!-- default -->
-                        <div class="checkbox checkbox--lg">
-                          <input id="check-05" type="checkbox" class="checkbox__input" value="label" />
-                          <label for="check-05" class="checkbox__label">label</label>
-                        </div>
-                        <!-- checked -->
-                        <div class="checkbox checkbox--lg">
-                          <input id="check-06" type="checkbox" class="checkbox__input" value="label" checked />
-                          <label for="check-06" class="checkbox__label">label</label>
-                        </div>
-                        <!-- indeterminate -->
-                        <div class="checkbox checkbox--lg checkbox--indeterminate">
-                          <input id="check-07" type="checkbox" class="checkbox__input" value="label" />
-                          <label for="check-07" class="checkbox__label">label</label>
-                        </div>
-                        <!-- disabled -->
-                        <div class="checkbox checkbox--lg checkbox--disabled">
-                          <input id="check-04" type="checkbox" class="checkbox__input" value="label" disabled />
-                          <label for="check-04" class="checkbox__label">label</label>
-                        </div>
-                        <!-- checked + disabled -->
-                        <div class="checkbox checkbox--lg checkbox--disabled">
-                          <input id="check-04" type="checkbox" class="checkbox__input" value="label" checked disabled />
-                          <label for="check-04" class="checkbox__label">label</label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="component-example__row">
-                      <p class="component-example__size-label">Size: md</p>
-                      <div class="component-examle__item-group">
-                        <!-- default -->
-                        <div class="checkbox">
-                          <input id="check-01" type="checkbox" class="checkbox__input" value="label" />
-                          <label for="check-01" class="checkbox__label">label</label>
-                        </div>
-                        <!-- checked -->
-                        <div class="checkbox">
-                          <input id="check-02" type="checkbox" class="checkbox__input" value="label" checked />
-                          <label for="check-02" class="checkbox__label">label</label>
-                        </div>
-                        <!-- indeterminate -->
-                        <div class="checkbox checkbox--indeterminate">
-                          <input id="check-03" type="checkbox" class="checkbox__input" value="label" />
-                          <label for="check-03" class="checkbox__label">label</label>
-                        </div>
-                        <!-- disabled -->
-                        <div class="checkbox checkbox--disabled">
-                          <input id="check-04" type="checkbox" class="checkbox__input" value="label" disabled />
-                          <label for="check-04" class="checkbox__label">label</label>
-                        </div>
-                        <!-- checked + disabled -->
-                        <div class="checkbox checkbox--disabled">
-                          <input id="check-04" type="checkbox" class="checkbox__input" value="label" checked disabled />
-                          <label for="check-04" class="checkbox__label">label</label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="component-variation">
-              <span class="component-variation__name">Default Checkbox - vertical</span>
-              <div class="component-example">
-                <div class="component-example__live">
-                  <div>
-                    <div class="component-example__row">
-                      <p class="component-example__size-label">Size: lg</p>
-                      <div class="component-examle__item-group">
-                        <div class="checkboxs checkboxs--vertical">
+                        <!-- 세로 유형인 경우, checkboxs checkboxs--vertical 추가 -->
+                        <div class="checkboxs">
                           <!-- default -->
                           <div class="checkbox checkbox--lg">
                             <input id="check-05" type="checkbox" class="checkbox__input" value="label" />
@@ -2297,7 +2107,8 @@
                     <div class="component-example__row">
                       <p class="component-example__size-label">Size: md</p>
                       <div class="component-examle__item-group">
-                        <div class="checkboxs checkboxs--vertical">
+                        <!-- 세로 유형인 경우, checkboxs checkboxs--vertical 추가 -->
+                        <div class="checkboxs">
                           <!-- default -->
                           <div class="checkbox">
                             <input id="check-01" type="checkbox" class="checkbox__input" value="label" />
@@ -2323,78 +2134,6 @@
                             <input id="check-04" type="checkbox" class="checkbox__input" value="label" checked disabled />
                             <label for="check-04" class="checkbox__label">label</label>
                           </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="component-variation">
-              <span class="component-variation__name">Studio Checkbox</span>
-              <div class="component-example">
-                <div class="component-example__live">
-                  <div class="canvas-object">
-                    <!-- TODO: studio 디자인 개편 반영시 객체, 컴포넌트 네이밍에 따라 변경 예정 -->
-                    <div class="component-example__row">
-                      <p class="component-example__size-label">Size: lg</p>
-                      <div class="component-examle__item-group">
-                        <!-- default -->
-                        <div class="checkbox checkbox--lg">
-                          <input id="studio-check-05" type="checkbox" class="checkbox__input" value="label" />
-                          <label for="studio-check-05" class="checkbox__label">label</label>
-                        </div>
-                        <!-- checked -->
-                        <div class="checkbox checkbox--lg">
-                          <input id="studio-check-06" type="checkbox" class="checkbox__input" value="label" checked />
-                          <label for="studio-check-06" class="checkbox__label">label</label>
-                        </div>
-                        <!-- indeterminate -->
-                        <div class="checkbox checkbox--lg checkbox--indeterminate">
-                          <input id="studio-check-07" type="checkbox" class="checkbox__input" value="label" />
-                          <label for="studio-check-07" class="checkbox__label">label</label>
-                        </div>
-                        <!-- disabled -->
-                        <div class="checkbox checkbox--lg checkbox--disabled">
-                          <input id="check-04" type="checkbox" class="checkbox__input" value="label" disabled />
-                          <label for="check-04" class="checkbox__label">label</label>
-                        </div>
-                        <!-- checked + disabled -->
-                        <div class="checkbox checkbox--lg checkbox--disabled">
-                          <input id="check-04" type="checkbox" class="checkbox__input" value="label" checked disabled />
-                          <label for="check-04" class="checkbox__label">label</label>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="component-example__row">
-                      <p class="component-example__size-label">Size: md</p>
-                      <div class="component-examle__item-group">
-                        <!-- default -->
-                        <div class="checkbox">
-                          <input id="studio-check-01" type="checkbox" class="checkbox__input" value="label" />
-                          <label for="studio-check-01" class="checkbox__label">label</label>
-                        </div>
-                        <!-- checked -->
-                        <div class="checkbox">
-                          <input id="studio-check-02" type="checkbox" class="checkbox__input" value="label" checked />
-                          <label for="studio-check-02" class="checkbox__label">label</label>
-                        </div>
-                        <!-- indeterminate -->
-                        <div class="checkbox checkbox--indeterminate">
-                          <input id="studio-check-03" type="checkbox" class="checkbox__input" value="label" />
-                          <label for="studio-check-03" class="checkbox__label">label</label>
-                        </div>
-                        <!-- disabled -->
-                        <div class="checkbox checkbox--disabled">
-                          <input id="check-04" type="checkbox" class="checkbox__input" value="label" disabled />
-                          <label for="check-04" class="checkbox__label">label</label>
-                        </div>
-                        <!-- checked + disabled -->
-                        <div class="checkbox checkbox--disabled">
-                          <input id="check-04" type="checkbox" class="checkbox__input" value="label" checked disabled />
-                          <label for="check-04" class="checkbox__label">label</label>
                         </div>
                       </div>
                     </div>
@@ -4256,7 +3995,7 @@
             <p class="page__desc">디스크립션은 read-only 필드를 보여줍니다.</p>
             <div class="page__usage md">
               <ul>
-                <li>디스크립션는 <em class="text-emphasis">2개</em>의 사이즈가 있습니다.</li>
+                <li>디스크립션은 <em class="text-emphasis">2개</em>의 사이즈가 있습니다.</li>
               </ul>
             </div>
 
@@ -4275,7 +4014,7 @@
                           <div class="description__body">
                             <ul class="description__list">
                               <li class="description__item">
-                                <span class="description__title"> 아이디아이디아이디아이디아이디 </span>
+                                <span class="description__title"> 아이디 </span>
                                 <span class="description__text"> desirade </span>
                               </li>
                               <li class="description__item">
@@ -4329,7 +4068,7 @@
                           <div class="description__body">
                             <ul class="description__list">
                               <li class="description__item">
-                                <span class="description__title"> description title test description </span>
+                                <span class="description__title"> 아이디 </span>
                                 <span class="description__text"> desirade </span>
                               </li>
                               <li class="description__item">
@@ -4391,7 +4130,7 @@
             <div class="page__usage md">
               <ul>
                 <li>
-                  디스크립션는 <em class="text-emphasis">2개</em>의 사이즈가 있습니다.
+                  head, body, foot만 사용하고, body 하위 컨텐츠는 단독 컴포넌트를 사용합니다.
                 </li>
               </ul>
             </div>
@@ -4404,11 +4143,13 @@
                     <div class="component-example__row">
                       <div class="drawer">
                         <div class="drawer__head">
-                          <button class="drawer__head-control-button" type="button">
+                          <!-- TODO(추후 삭제): IWP 에서만 사용, 해당 프로젝트에 클래스 생성해서 적용할 것 -->
+                          <button class="drawer__head-control-button" type="button" style="display: none;">
                             <svg class="svg-icon" aria-hidden="true" aria-hidden="true">
                               <use xlink:href="#setting"></use>
                             </svg>
                           </button>
+                          <!-- // IWP 에서만 사용, 해당 프로젝트에 클래스 생성해서 적용할 것 -->
                           <strong class="drawer__head-title">로그인 설정</strong>
                           <div class="drawer__actions">
                             <div class="checkbox">
@@ -4418,11 +4159,13 @@
                           </div>
                         </div>
                         <div class="drawer__body" style="height: 900px">
-                          <div class="drawer__content">
+                          <!-- TODO(추후 삭제): IWP 에서만 사용, 해당 프로젝트에 클래스 생성해서 적용할 것 -->
+                          <div class="drawer__content" style="display: none;">
                             <button class="drawer__content-clear-button button button--support" type="button">
                               전체 복원
                             </button>
                           </div>
+                          <!-- // IWP 에서만 사용, 해당 프로젝트에 클래스 생성해서 적용할 것 -->
                           <form class="form form--vertical">
                             <div class="form__body">
                               <div class="form__list">
@@ -4973,11 +4716,6 @@
                     <div class="component-example__row">
                       <div class="drawer" style="width: 600px;">
                         <div class="drawer__head">
-                          <button class="drawer__head-control-button" type="button">
-                            <svg class="svg-icon" aria-hidden="true">
-                              <use xlink:href="#setting"></use>
-                            </svg>
-                          </button>
                           <strong class="drawer__head-title">사용자 계정 정보</strong>
                           <div class="drawer__actions">
                             <button class="button button--icon button--link">
@@ -4998,7 +4736,7 @@
                               <ul class="description__list">
                                 <li class="description__item">
                                   <span class="description__title">
-                                    아이디아이디아이디아이디아이디
+                                    아이디
                                   </span>
                                   <span class="description__text"> desirade </span>
                                 </li>
@@ -5059,11 +4797,6 @@
                     <div class="component-example__row">
                       <div class="drawer" style="width: 600px;">
                         <div class="drawer__head">
-                          <button class="drawer__head-control-button" type="button">
-                            <svg class="svg-icon" aria-hidden="true">
-                              <use xlink:href="#setting"></use>
-                            </svg>
-                          </button>
                           <strong class="drawer__head-title">사용자 계정 정보</strong>
                           <div class="drawer__actions">
                             <button class="button button--icon button--link">
@@ -6263,7 +5996,10 @@
             <p class="page__desc">리스트는 관련 내용을 구조화하여 표시합니다. <br /> 내용의 유형은 여러 요소로 다양하게 표현될 수 있습니다.</p>
             <div class="page__usage md">
               <ul>
-                <li>리스트</li>
+                <li>기본 리스트</li>
+                <li>우측 버튼 기능 그룹이 있는 리스트</li>
+                <li>검색이 가능한 리스트</li>
+                <li>앞에 체크박스가 있는 리스트</li>
               </ul>
             </div>
 
@@ -6301,7 +6037,8 @@
               </div>
             </div>
 
-            <div class="component-variation">
+            <!-- TODO(추후 삭제): IMA 에서만 사용, 해당 프로젝트에 클래스 생성해서 적용할 것 -->
+            <div class="component-variation" style="display: none;">
               <span class="component-variation__name">Stripe List</span>
               <div class="component-example">
                 <div class="component-example__live">
@@ -6354,7 +6091,7 @@
                 </div>
               </div>
             </div>
-
+            <!-- // IMA 에서만 사용, 해당 프로젝트에 클래스 생성해서 적용할 것 -->
             <div class="component-variation">
               <span class="component-variation__name">Action Button List</span>
               <div class="component-example">
@@ -6570,6 +6307,9 @@
                   <div>
                     <div class="list" style="width: 520px">
                       <div class="list__head">
+                        <div class="list__head-title">
+                          <span class="list__head-title-text">title</span>
+                        </div>
                         <div class="text-input-group">
                           <span class="text-input-group__icon">
                             <svg class="svg-icon" aria-hidden="true">
@@ -6629,57 +6369,6 @@
                                 <use xlink:href="#share-filled"></use>
                               </svg>
                               <span class="list__text">list item text</span>
-                            </button>
-                          </li>
-                          <li class="list__item">
-                            <button type="button" class="list__button">
-                              <span class="list__text">list item text</span>
-                            </button>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="component-variation">
-              <span class="component-variation__name">Search List - has title</span>
-              <div class="component-example">
-                <div class="component-example__live">
-                  <div>
-                    <div class="list" style="width: 520px; height: 140px;">
-                      <div class="list__head">
-                        <div class="list__head-title">
-                          <span class="list__head-title-text">title</span>
-                        </div>
-                        <div class="list__head-toolbar">
-                          <div class="text-input-group">
-                            <span class="text-input-group__icon">
-                              <svg class="svg-icon" aria-hidden="true">
-                                <use xlink:href="#search"></use>
-                              </svg>
-                            </span>
-                            <input type="text" class="text-input" placeholder="검색어를 입력해주세요" />
-                            <button class="text-input-group__clear-button">
-                              <svg class="svg-icon" aria-hidden="true">
-                                <use xlink:href="#close"></use>
-                              </svg>
-                            </button>
-                          </div>
-                          <button type="button" class="button button--link p-0" title="리스트 정보 새로고침">
-                            <svg class="svg-icon" aria-hidden="true">
-                              <use xlink:href="#refresh"></use>
-                            </svg>
-                          </button>
-                        </div>
-                      </div>
-                      <div class="list__body">
-                        <ul class="list__list">
-                          <li class="list__item">
-                            <button type="button" class="list__button">
-                              <span class="list__text">list item text <mark class="filter-highlight">filter highlight</mark></span>
                               <span class="list__subtext">subtext</span>
                             </button>
                           </li>
@@ -6687,66 +6376,6 @@
                             <button type="button" class="list__button">
                               <span class="list__text">list item text</span>
                               <span class="list__subtext">subtext</span>
-                            </button>
-                          </li>
-                          <li class="list__item">
-                            <button type="button" class="list__button">
-                              <span class="list__text">list item text</span>
-                              <span class="list__subtext">subtext</span>
-                            </button>
-                          </li>
-                          <li class="list__item">
-                            <button type="button" class="list__button">
-                              <span class="list__text">list item text</span>
-                              <span class="list__subtext">subtext</span>
-                            </button>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="component-variation">
-              <span class="component-variation__name">Selectable List</span>
-              <div class="component-example">
-                <div class="component-example__live">
-                  <div>
-                    <div class="list" style="width: 520px">
-                      <div class="list__body">
-                        <ul class="list__list">
-                          <li class="list__item">
-                            <button type="button" class="list__button">
-                              <svg class="svg-icon list__checkmark" aria-hidden="true">
-                                <use xlink:href="#checkmark"></use>
-                              </svg>
-                              <span class="list__text">selectable list item text</span>
-                            </button>
-                          </li>
-                          <li class="list__item list__item--selected">
-                            <button type="button" class="list__button">
-                              <svg class="svg-icon list__checkmark" aria-hidden="true">
-                                <use xlink:href="#checkmark"></use>
-                              </svg>
-                              <span class="list__text">selectable list item text selected</span>
-                            </button>
-                          </li>
-                          <li class="list__item list__item--disabled">
-                            <button type="button" class="list__button" disabled>
-                              <svg class="svg-icon list__checkmark" aria-hidden="true">
-                                <use xlink:href="#checkmark"></use>
-                              </svg>
-                              <span class="list__text">selectable list item text disabled</span>
-                            </button>
-                          </li>
-                          <li class="list__item list__item--selected list__item--disabled">
-                            <button type="button" class="list__button" disabled>
-                              <svg class="svg-icon list__checkmark" aria-hidden="true">
-                                <use xlink:href="#checkmark"></use>
-                              </svg>
-                              <span class="list__text">selectable list item text selected disabled</span>
                             </button>
                           </li>
                         </ul>
@@ -6822,7 +6451,7 @@
               <div class="component-example">
                 <div class="component-example__live">
                   <div>
-                    <div class="list list--lg list--hidable" style="width: 520px">
+                    <div class="list list--lg" style="width: 520px">
                       <ul class="list__list">
                         <li class="list__item">
                           <button type="button" class="list__button">
@@ -8174,7 +7803,7 @@
             <p class="page__desc">라디오 버튼은 여러 항목 그룹이 있고 그 그룹에서 하나만 선택할 수 있을때 사용합니다.</p>
             <div class="page__usage md">
               <ul>
-                <li>라디오는 <em class="text-emphasis">1개</em> 크기로 구분합니다.</li>
+                <li>라디오는 <em class="text-emphasis">2개</em> 크기로 구분합니다.</li>
                 <li>라디오는 default, hover, checked, disabled <em class="text-emphasis">총 4개</em> 상태를 갖습니다.</li>
               </ul>
             </div>
@@ -8184,58 +7813,58 @@
               <div class="component-example">
                 <div class="component-example__live">
                   <div>
-                    <div class="radios">
-                      <!-- default -->
-                      <div class="radio">
-                        <input type="radio" id="radioId-01" name="radio-group" class="radio__input" value="label" />
-                        <label for="radioId-01" class="radio__label">label </label>
-                      </div>
-                      <!-- checked -->
-                      <div class="radio">
-                        <input type="radio" id="radioId-02" name="radio-group" class="radio__input" value="label" checked />
-                        <label for="radioId-02" class="radio__label">label </label>
-                      </div>
-                      <!-- disabled -->
-                      <div class="radio">
-                        <input type="radio" id="radioId-03" name="radio-group" class="radio__input" value="label" disabled />
-                        <label for="radioId-03" class="radio__label">label </label>
-                      </div>
-                      <!-- checked + disabled -->
-                      <div class="radio">
-                        <input type="radio" id="radioId-03" name="radio-group" class="radio__input" value="label" checked disabled />
-                        <label for="radioId-03" class="radio__label">label </label>
+                    <div class="component-example__row">
+                      <p class="component-example__size-label">Size: lg</p>
+                      <div class="component-examle__item-group">
+                        <div class="radios">
+                          <!-- default -->
+                          <div class="radio radio--lg">
+                            <input type="radio" id="radioId-lg-01" name="radio-group-lg" class="radio__input" value="label" />
+                            <label for="radioId-lg-01" class="radio__label">label </label>
+                          </div>
+                          <!-- checked -->
+                          <div class="radio radio--lg">
+                            <input type="radio" id="radioId-lg-02" name="radio-group-lg" class="radio__input" value="label" checked />
+                            <label for="radioId-lg-02" class="radio__label">label </label>
+                          </div>
+                          <!-- disabled -->
+                          <div class="radio radio--lg">
+                            <input type="radio" id="radioId-lg-03" name="radio-group-lg-disabled" class="radio__input" value="label" disabled />
+                            <label for="radioId-lg-03" class="radio__label">label </label>
+                          </div>
+                          <!-- checked + disabled -->
+                          <div class="radio radio--lg">
+                            <input type="radio" id="radioId-lg-03" name="radio-group-lg-disabled" class="radio__input" value="label" checked disabled />
+                            <label for="radioId-lg-03" class="radio__label">label </label>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="component-variation">
-              <span class="component-variation__name">Studio Radio</span>
-              <div class="component-example">
-                <div class="component-example__live">
-                  <div class="canvas-object">
-                    <div class="radios">
-                      <!-- default -->
-                      <div class="radio">
-                        <input type="radio" id="studio-radio-01" name="studio-radio-group" class="radio__input" value="label" />
-                        <label for="studio-radio-01" class="radio__label">label </label>
-                      </div>
-                      <!-- checked -->
-                      <div class="radio">
-                        <input type="radio" id="studio-radio-02" name="studio-radio-group" class="radio__input" value="label" checked />
-                        <label for="studio-radio-02" class="radio__label">label </label>
-                      </div>
-                      <!-- disabled -->
-                      <div class="radio">
-                        <input type="radio" id="studio-radio-03" name="studio-radio-group" class="radio__input" value="label" disabled />
-                        <label for="studio-radio-03" class="radio__label">label </label>
-                      </div>
-                      <!-- checked + disabled -->
-                      <div class="radio">
-                        <input type="radio" id="studio-radio-03" name="studio-radio-group" class="radio__input" value="label" checked disabled />
-                        <label for="studio-radio-03" class="radio__label">label </label>
+                    <div class="component-example__row">
+                      <p class="component-example__size-label">Size: md</p>
+                      <div class="component-examle__item-group">
+                        <div class="radios">
+                          <!-- default -->
+                          <div class="radio">
+                            <input type="radio" id="radioId-01" name="radio-group" class="radio__input" value="label" />
+                            <label for="radioId-01" class="radio__label">label </label>
+                          </div>
+                          <!-- checked -->
+                          <div class="radio">
+                            <input type="radio" id="radioId-02" name="radio-group" class="radio__input" value="label" checked />
+                            <label for="radioId-02" class="radio__label">label </label>
+                          </div>
+                          <!-- disabled -->
+                          <div class="radio">
+                            <input type="radio" id="radioId-03" name="radio-group-disabled" class="radio__input" value="label" disabled />
+                            <label for="radioId-03" class="radio__label">label </label>
+                          </div>
+                          <!-- checked + disabled -->
+                          <div class="radio">
+                            <input type="radio" id="radioId-03" name="radio-group-disabled" class="radio__input" value="label" checked disabled />
+                            <label for="radioId-03" class="radio__label">label </label>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -8310,14 +7939,59 @@
             <div class="page__usage md">
               <ul>
                 <li>
-                  셀렉트 <em class="text-emphasis">5개</em> 종류가 있으며 <em class="text-emphasis">3개</em> 크기로 구분합니다.
+                  셀렉트의 <em class="text-emphasis">유형</em>이 2개 있습니다.
                   <ul>
-                    <li>텍스트</li>
-                    <li>텍스트 + 서브 텍스트</li>
-                    <li>아이콘 + 텍스트</li>
-                    <li>텍스트 + 추가 기능 버튼</li>
-                    <li>체크 박스 + 텍스트</li>
+                    <li>
+                      텍스트 / 아이콘 + 텍스트 / 텍스트 + 서브텍스트
+                    </li>
+                    <li>
+                      멀티 셀렉트 - 다중 선택이 가능한 UI
+                    </li>
+                    <li>
+                      콤보 박스 - 입력 필드와 리스트가 결합한 UI
+                    </li>
                   </ul>
+                </li>
+                <li>
+                  셀렉트의 <em class="text-emphasis">테마가</em> 2개 있습니다.
+                  <ul>
+                    <li>
+                      <code class="code">select</code>
+                      - 보더가 있는 UI
+                    </li>
+                    <li>
+                      <code class="code">select--borderless</code>
+                      - 보더가 없는 UI
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  셀렉트의 <em class="text-emphasis">사이즈</em>가 3개 있습니다.
+                  <ul>
+                    <li>
+                      <code class="code">select--lg</code> / <code class="code">select</code> / <code class="code">select--sm</code>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  셀렉트의 <em class="text-emphasis">리스트의 방향</em>을 설정할 수 있습니다.
+                  <ul>
+                    <li>
+                      기본 - 셀렉트 버튼을 기준으로 좌측 하단으로 펼쳐지는 UI
+                    </li>
+                    <li>
+                      <code class="code">select--left</code> - 셀렉트 버튼을 기준으로 좌측에서부터 셀렉트 리스트가 나열되는 UI
+                    </li>
+                    <li>
+                      <code class="code">select--up</code> - 셀렉트 버튼을 기준 위로 셀렉트 리스트가 펼쳐지는 UI
+                    </li>
+                    <li>
+                      <code class="code">select--right</code> - 셀렉트 버튼을 기준으로 우측에서부터 셀렉트 리스트가 나열되는 UI
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <code class="code">select--view-all</code> 클래스를 추가하면 셀렉트 리스트가 텍스트 길이에 따라 계속해서 늘어납니다.
                 </li>
               </ul>
             </div>
@@ -8418,7 +8092,7 @@
                       <p class="component-example__size-label">Size: md</p>
                       <div class="component-examle__item-group">
                         <!-- select--open 클래스 추가시 open -->
-                        <div class="select select--open" style="min-width: 160px; max-width: 230px;">
+                        <div class="select" style="min-width: 160px; max-width: 230px;">
                           <div class="select-selector">
                             <button class="select-selector__button" type="button">
                               <span class="select-selector__title">텍스트 유형</span>
@@ -8525,10 +8199,14 @@
                     <div class="component-example__row">
                       <p class="component-example__size-label">Size: sm</p>
                       <div class="component-examle__item-group">
-                        <div class="select select--sm" style="min-width: 160px; max-width: 230px;">
-                          <div class="select-selector">
+                        <!-- select--open 클래스 추가시 open -->
+                        <div class="select select--sm select--open" style="min-width: 160px; max-width: 230px;">
+                          <div class=" select-selector">
                             <button class="select-selector__button" type="button">
-                              <span class="select-selector__title">SelectContent</span>
+                              <svg class="svg-icon" aria-hidden="true">
+                                <use xlink:href="#key"></use>
+                              </svg>
+                              <span class="select-selector__title">권한 설정</span>
                               <svg class="svg-icon select-selector__icon" aria-hidden="true">
                                 <use xlink:href="#chevron-down-medium"></use>
                               </svg>
@@ -8538,26 +8216,41 @@
                             <ul class="select-container__list">
                               <li class="select-container__item">
                                 <button class="select-container__button" type="button">
+                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
+                                    <use xlink:href="#link"></use>
+                                  </svg>
                                   <span class="select-container__text">URL 관리</span>
                                 </button>
                               </li>
-                              <li class="select-container__item">
+                              <li class="select-container__item select-container__item--selected">
                                 <button class="select-container__button" type="button">
+                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
+                                    <use xlink:href="#key"></use>
+                                  </svg>
                                   <span class="select-container__text">권한 설정</span>
                                 </button>
                               </li>
                               <li class="select-container__item">
                                 <button class="select-container__button" type="button">
+                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
+                                    <use xlink:href="#copy"></use>
+                                  </svg>
                                   <span class="select-container__text">사본으로 저장</span>
                                 </button>
                               </li>
                               <li class="select-container__item">
                                 <button class="select-container__button" type="button">
+                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
+                                    <use xlink:href="#write"></use>
+                                  </svg>
                                   <span class="select-container__text">정보 변경</span>
                                 </button>
                               </li>
                               <li class="select-container__item">
                                 <button class="select-container__button" type="button">
+                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
+                                    <use xlink:href="#popout"></use>
+                                  </svg>
                                   <span class="select-container__text">목록으로 나가기</span>
                                 </button>
                               </li>
@@ -8598,111 +8291,6 @@
                               <li class="select-container__item">
                                 <button class="select-container__button" type="button">
                                   <span class="select-container__text">목록으로 나가기</span>
-                                </button>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="component-variation">
-              <span class="component-variation__name">Text + Subtext Select</span>
-              <div class="component-example">
-                <div class="component-example__live">
-                  <div>
-                    <div class="component-example__row">
-                      <p class="component-example__size-label">Size: md</p>
-                      <div class="component-examle__item-group">
-                        <div class="select select--right" style="min-width: 160px; max-width: 230px;">
-                          <div class="select-selector">
-                            <button class="select-selector__button" type="button">
-                              <span class="select-selector__title">서브 텍스트 유형</span>
-                              <svg class="svg-icon select-selector__icon" aria-hidden="true">
-                                <use xlink:href="#chevron-down-medium"></use>
-                              </svg>
-                            </button>
-                          </div>
-                          <div class="select-container w-200">
-                            <ul class="select-container__list">
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <span class="select-container__text">URL 관리</span>
-                                  <span class="select-container__subtext">Subtext</span>
-                                </button>
-                              </li>
-                              <!-- 선택 된 객체에 select-container__item--selected 클래스 추가 -->
-                              <li class="select-container__item select-container__item--selected">
-                                <button class="select-container__button" type="button">
-                                  <span class="select-container__text">권한 설정</span>
-                                  <span class="select-container__subtext">Subtext</span>
-                                </button>
-                              </li>
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <span class="select-container__text">다른 이름으로 저장</span>
-                                  <span class="select-container__subtext">Subtext</span>
-                                </button>
-                              </li>
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <span class="select-container__text">정보 변경</span>
-                                  <span class="select-container__subtext">Subtext</span>
-                                </button>
-                              </li>
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <span class="select-container__text">목록으로 나가기</span>
-                                  <span class="select-container__subtext">Subtext</span>
-                                </button>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                        <div class="select" style="min-width: 160px; max-width: 230px;">
-                          <div class="select-selector">
-                            <button class="select-selector__button" type="button">
-                              <span class="select-selector__title">서브 텍스트 유형</span>
-                              <svg class="svg-icon select-selector__icon" aria-hidden="true">
-                                <use xlink:href="#chevron-down-medium"></use>
-                              </svg>
-                            </button>
-                          </div>
-                          <div class="select-container">
-                            <ul class="select-container__list">
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <span class="select-container__text">URL 관리</span>
-                                  <span class="select-container__subtext">Subtext</span>
-                                </button>
-                              </li>
-                              <!-- 선택 된 객체에 select-container__item--selected 클래스 추가 -->
-                              <li class="select-container__item select-container__item--selected">
-                                <button class="select-container__button" type="button">
-                                  <span class="select-container__text">권한 설정</span>
-                                  <span class="select-container__subtext">Subtext</span>
-                                </button>
-                              </li>
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <span class="select-container__text">다른 이름으로 저장</span>
-                                  <span class="select-container__subtext">Subtext</span>
-                                </button>
-                              </li>
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <span class="select-container__text">정보 변경</span>
-                                  <span class="select-container__subtext">Subtext</span>
-                                </button>
-                              </li>
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <span class="select-container__text">목록으로 나가기</span>
-                                  <span class="select-container__subtext">Subtext</span>
                                 </button>
                               </li>
                             </ul>
@@ -8890,269 +8478,13 @@
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="component-variation">
-              <span class="component-variation__name">Icon + Text Select</span>
-              <div class="component-example">
-                <div class="component-example__live">
-                  <div>
-                    <div class="component-example__row">
-                      <p class="component-example__size-label">Size: lg</p>
-                      <div class="component-examle__item-group">
-                        <!-- select--open 클래스 추가시 open -->
-                        <div class="select select--lg" style="min-width: 160px; max-width: 230px;margin-left: 8px">
-                          <div class="select-selector">
-                            <button class="select-selector__button" type="button">
-                              <svg class="svg-icon" aria-hidden="true" aria-hidden="true">
-                                <use xlink:href="#key"></use>
-                              </svg>
-                              <span class="select-selector__title">권한 설정</span>
-                              <svg class="svg-icon select-selector__icon" aria-hidden="true">
-                                <use xlink:href="#chevron-down-medium"></use>
-                              </svg>
-                            </button>
-                          </div>
-                          <div class="select-container">
-                            <ul class="select-container__list">
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                    <use xlink:href="#link"></use>
-                                  </svg>
-                                  <span class="select-container__text">URL 관리</span>
-                                </button>
-                              </li>
-                              <li class="select-container__item select-container__item--selected">
-                                <button class="select-container__button" type="button">
-                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                    <use xlink:href="#key"></use>
-                                  </svg>
-                                  <span class="select-container__text">권한 설정</span>
-                                </button>
-                              </li>
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                    <use xlink:href="#copy"></use>
-                                  </svg>
-                                  <span class="select-container__text">사본으로 저장</span>
-                                </button>
-                              </li>
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                    <use xlink:href="#write"></use>
-                                  </svg>
-                                  <span class="select-container__text">정보 변경</span>
-                                </button>
-                              </li>
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                    <use xlink:href="#popout"></use>
-                                  </svg>
-                                  <span class="select-container__text">목록으로 나가기</span>
-                                </button>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                        <!-- select--open 클래스 추가시 open -->
-                        <div class="select select--lg select--disabled" style="min-width: 160px; max-width: 230px;margin-left: 8px">
-                          <div class="select-selector">
-                            <button class="select-selector__button" type="button">
-                              <svg class="svg-icon" aria-hidden="true">
-                                <use xlink:href="#key"></use>
-                              </svg>
-                              <span class="select-selector__title">권한 설정</span>
-                              <svg class="svg-icon select-selector__icon" aria-hidden="true">
-                                <use xlink:href="#chevron-down-medium"></use>
-                              </svg>
-                            </button>
-                          </div>
-                          <div class="select-container">
-                            <ul class="select-container__list">
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                    <use xlink:href="#link"></use>
-                                  </svg>
-                                  <span class="select-container__text">URL 관리</span>
-                                </button>
-                              </li>
-                              <li class="select-container__item select-container__item--selected">
-                                <button class="select-container__button" type="button">
-                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                    <use xlink:href="#key"></use>
-                                  </svg>
-                                  <span class="select-container__text">권한 설정</span>
-                                </button>
-                              </li>
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                    <use xlink:href="#copy"></use>
-                                  </svg>
-                                  <span class="select-container__text">사본으로 저장</span>
-                                </button>
-                              </li>
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                    <use xlink:href="#write"></use>
-                                  </svg>
-                                  <span class="select-container__text">정보 변경</span>
-                                </button>
-                              </li>
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                    <use xlink:href="#popout"></use>
-                                  </svg>
-                                  <span class="select-container__text">목록으로 나가기</span>
-                                </button>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="component-example__row">
-                      <p class="component-example__size-label">Size: md</p>
-                      <div class="component-examle__item-group">
-                        <!-- select--open 클래스 추가시 open -->
-                        <div class="select" style="min-width: 160px; max-width: 230px;margin-left: 8px">
-                          <div class="select-selector">
-                            <button class="select-selector__button" type="button">
-                              <svg class="svg-icon" aria-hidden="true">
-                                <use xlink:href="#key"></use>
-                              </svg>
-                              <span class="select-selector__title">권한 설정</span>
-                              <svg class="svg-icon select-selector__icon" aria-hidden="true">
-                                <use xlink:href="#chevron-down-medium"></use>
-                              </svg>
-                            </button>
-                          </div>
-                          <div class="select-container">
-                            <ul class="select-container__list">
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                    <use xlink:href="#link"></use>
-                                  </svg>
-                                  <span class="select-container__text">URL 관리</span>
-                                </button>
-                              </li>
-                              <li class="select-container__item select-container__item--selected">
-                                <button class="select-container__button" type="button">
-                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                    <use xlink:href="#key"></use>
-                                  </svg>
-                                  <span class="select-container__text">권한 설정</span>
-                                </button>
-                              </li>
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                    <use xlink:href="#copy"></use>
-                                  </svg>
-                                  <span class="select-container__text">사본으로 저장</span>
-                                </button>
-                              </li>
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                    <use xlink:href="#write"></use>
-                                  </svg>
-                                  <span class="select-container__text">정보 변경</span>
-                                </button>
-                              </li>
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                    <use xlink:href="#popout"></use>
-                                  </svg>
-                                  <span class="select-container__text">목록으로 나가기</span>
-                                </button>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                        <!-- select--open 클래스 추가시 open -->
-                        <div class="select select--disabled" style="min-width: 160px; max-width: 230px;margin-left: 8px">
-                          <div class="select-selector">
-                            <button class="select-selector__button" type="button">
-                              <svg class="svg-icon" aria-hidden="true">
-                                <use xlink:href="#key"></use>
-                              </svg>
-                              <span class="select-selector__title">권한 설정</span>
-                              <svg class="svg-icon select-selector__icon" aria-hidden="true">
-                                <use xlink:href="#chevron-down-medium"></use>
-                              </svg>
-                            </button>
-                          </div>
-                          <div class="select-container">
-                            <ul class="select-container__list">
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                    <use xlink:href="#link"></use>
-                                  </svg>
-                                  <span class="select-container__text">URL 관리</span>
-                                </button>
-                              </li>
-                              <li class="select-container__item select-container__item--selected">
-                                <button class="select-container__button" type="button">
-                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                    <use xlink:href="#key"></use>
-                                  </svg>
-                                  <span class="select-container__text">권한 설정</span>
-                                </button>
-                              </li>
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                    <use xlink:href="#copy"></use>
-                                  </svg>
-                                  <span class="select-container__text">사본으로 저장</span>
-                                </button>
-                              </li>
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                    <use xlink:href="#write"></use>
-                                  </svg>
-                                  <span class="select-container__text">정보 변경</span>
-                                </button>
-                              </li>
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                    <use xlink:href="#popout"></use>
-                                  </svg>
-                                  <span class="select-container__text">목록으로 나가기</span>
-                                </button>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
                     <div class="component-example__row">
                       <p class="component-example__size-label">Size: sm</p>
                       <div class="component-examle__item-group">
-                        <!-- select--open 클래스 추가시 open -->
-                        <div class="select select--sm" style="min-width: 160px; max-width: 230px;margin-left: 8px">
+                        <div class="select select--view-all select--borderless select--sm select--open" style="min-width: 160px; max-width: 230px;">
                           <div class="select-selector">
                             <button class="select-selector__button" type="button">
-                              <svg class="svg-icon" aria-hidden="true">
-                                <use xlink:href="#key"></use>
-                              </svg>
-                              <span class="select-selector__title">권한 설정</span>
+                              <span class="select-selector__title">보더가 없는 유형</span>
                               <svg class="svg-icon select-selector__icon" aria-hidden="true">
                                 <use xlink:href="#chevron-down-medium"></use>
                               </svg>
@@ -9162,55 +8494,37 @@
                             <ul class="select-container__list">
                               <li class="select-container__item">
                                 <button class="select-container__button" type="button">
-                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                    <use xlink:href="#link"></use>
-                                  </svg>
                                   <span class="select-container__text">URL 관리</span>
                                 </button>
                               </li>
+                              <!-- 선택 된 객체에 select-container__item--selected 클래스 추가 -->
                               <li class="select-container__item select-container__item--selected">
                                 <button class="select-container__button" type="button">
-                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                    <use xlink:href="#key"></use>
-                                  </svg>
                                   <span class="select-container__text">권한 설정</span>
                                 </button>
                               </li>
                               <li class="select-container__item">
                                 <button class="select-container__button" type="button">
-                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                    <use xlink:href="#copy"></use>
-                                  </svg>
-                                  <span class="select-container__text">사본으로 저장</span>
+                                  <span class="select-container__text">다른 이름으로 저장이 길어집니다.</span>
                                 </button>
                               </li>
                               <li class="select-container__item">
                                 <button class="select-container__button" type="button">
-                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                    <use xlink:href="#write"></use>
-                                  </svg>
                                   <span class="select-container__text">정보 변경</span>
                                 </button>
                               </li>
                               <li class="select-container__item">
                                 <button class="select-container__button" type="button">
-                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                    <use xlink:href="#popout"></use>
-                                  </svg>
                                   <span class="select-container__text">목록으로 나가기</span>
                                 </button>
                               </li>
                             </ul>
                           </div>
                         </div>
-                        <!-- select--open 클래스 추가시 open -->
-                        <div class="select select--sm select--disabled" style="min-width: 160px; max-width: 230px;margin-left: 8px">
+                        <div class="select select--borderless  select--sm " style="min-width: 160px; max-width: 230px;">
                           <div class="select-selector">
                             <button class="select-selector__button" type="button">
-                              <svg class="svg-icon" aria-hidden="true">
-                                <use xlink:href="#key"></use>
-                              </svg>
-                              <span class="select-selector__title">권한 설정</span>
+                              <span class="select-selector__title">보더가 없는 유형 + 말줄임</span>
                               <svg class="svg-icon select-selector__icon" aria-hidden="true">
                                 <use xlink:href="#chevron-down-medium"></use>
                               </svg>
@@ -9220,41 +8534,27 @@
                             <ul class="select-container__list">
                               <li class="select-container__item">
                                 <button class="select-container__button" type="button">
-                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                    <use xlink:href="#link"></use>
-                                  </svg>
                                   <span class="select-container__text">URL 관리</span>
                                 </button>
                               </li>
+                              <!-- 선택 된 객체에 select-container__item--selected 클래스 추가 -->
                               <li class="select-container__item select-container__item--selected">
                                 <button class="select-container__button" type="button">
-                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                    <use xlink:href="#key"></use>
-                                  </svg>
                                   <span class="select-container__text">권한 설정</span>
                                 </button>
                               </li>
                               <li class="select-container__item">
                                 <button class="select-container__button" type="button">
-                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                    <use xlink:href="#copy"></use>
-                                  </svg>
-                                  <span class="select-container__text">사본으로 저장</span>
+                                  <span class="select-container__text">다른 이름으로 저장이 길어집니다 길어요</span>
                                 </button>
                               </li>
                               <li class="select-container__item">
                                 <button class="select-container__button" type="button">
-                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                    <use xlink:href="#write"></use>
-                                  </svg>
                                   <span class="select-container__text">정보 변경</span>
                                 </button>
                               </li>
                               <li class="select-container__item">
                                 <button class="select-container__button" type="button">
-                                  <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                    <use xlink:href="#popout"></use>
-                                  </svg>
                                   <span class="select-container__text">목록으로 나가기</span>
                                 </button>
                               </li>
@@ -9269,482 +8569,7 @@
             </div>
 
             <div class="component-variation">
-              <span class="component-variation__name">Select with Additional Action Button</span>
-              <div class="component-example">
-                <div class="component-example__live">
-                  <div>
-                    <div class="component-example__row">
-                      <p class="component-example__size-label">Size: lg</p>
-                      <div class="component-examle__item-group">
-                        <!-- select--open 클래스 추가시 open -->
-                        <div class="select select--lg" style="min-width: 160px; max-width: 230px;margin-left: 8px">
-                          <div class="select-selector">
-                            <button class="select-selector__button" type="button">
-                              <span class="select-selector__title">권한 설정</span>
-                              <svg class="svg-icon select-selector__icon" aria-hidden="true">
-                                <use xlink:href="#chevron-down-medium"></use>
-                              </svg>
-                            </button>
-                          </div>
-                          <div class="select-container">
-                            <ul class="select-container__list">
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <span class="select-container__text">URL 관리</span>
-                                </button>
-                                <div class="select-container__action-buttons">
-                                  <button class="select-container__action-button" type="button" title="icon">
-                                    <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                      <use xlink:href="#write"></use>
-                                    </svg>
-                                  </button>
-                                </div>
-                              </li>
-                              <li class="select-container__item select-container__item--selected">
-                                <button class="select-container__button" type="button">
-                                  <span class="select-container__text">권한 설정</span>
-                                </button>
-                                <div class="select-container__action-buttons">
-                                  <button class="select-container__action-button" type="button" title="icon">
-                                    <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                      <use xlink:href="#write"></use>
-                                    </svg>
-                                  </button>
-                                </div>
-                              </li>
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <span class="select-container__text">사본으로 저장</span>
-                                </button>
-                                <div class="select-container__action-buttons">
-                                  <button class="select-container__action-button" type="button" title="icon">
-                                    <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                      <use xlink:href="#write"></use>
-                                    </svg>
-                                  </button>
-                                </div>
-                              </li>
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <span class="select-container__text">정보 변경</span>
-                                </button>
-                                <div class="select-container__action-buttons">
-                                  <button class="select-container__action-button" type="button" title="icon">
-                                    <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                      <use xlink:href="#write"></use>
-                                    </svg>
-                                  </button>
-                                </div>
-                              </li>
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <span class="select-container__text">목록으로 나가기</span>
-                                </button>
-                                <div class="select-container__action-buttons">
-                                  <button class="select-container__action-button" type="button" title="icon">
-                                    <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                      <use xlink:href="#write"></use>
-                                    </svg>
-                                  </button>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                        <!-- select--open 클래스 추가시 open -->
-                        <div class="select select--lg select--disabled" style="min-width: 160px; max-width: 230px;margin-left: 8px">
-                          <div class="select-selector">
-                            <button class="select-selector__button" type="button">
-                              <span class="select-selector__title">권한 설정</span>
-                              <svg class="svg-icon select-selector__icon" aria-hidden="true">
-                                <use xlink:href="#chevron-down-medium"></use>
-                              </svg>
-                            </button>
-                          </div>
-                          <div class="select-container">
-                            <ul class="select-container__list">
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <span class="select-container__text">URL 관리</span>
-                                </button>
-                                <div class="select-container__action-buttons">
-                                  <button class="select-container__action-button" type="button" title="icon">
-                                    <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                      <use xlink:href="#write"></use>
-                                    </svg>
-                                  </button>
-                                </div>
-                              </li>
-                              <li class="select-container__item select-container__item--selected">
-                                <button class="select-container__button" type="button">
-                                  <span class="select-container__text">권한 설정</span>
-                                </button>
-                                <div class="select-container__action-buttons">
-                                  <button class="select-container__action-button" type="button" title="icon">
-                                    <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                      <use xlink:href="#write"></use>
-                                    </svg>
-                                  </button>
-                                </div>
-                              </li>
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <span class="select-container__text">사본으로 저장</span>
-                                </button>
-                                <div class="select-container__action-buttons">
-                                  <button class="select-container__action-button" type="button" title="icon">
-                                    <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                      <use xlink:href="#write"></use>
-                                    </svg>
-                                  </button>
-                                </div>
-                              </li>
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <span class="select-container__text">정보 변경</span>
-                                </button>
-                                <div class="select-container__action-buttons">
-                                  <button class="select-container__action-button" type="button" title="icon">
-                                    <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                      <use xlink:href="#write"></use>
-                                    </svg>
-                                  </button>
-                                </div>
-                              </li>
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <span class="select-container__text">목록으로 나가기</span>
-                                </button>
-                                <div class="select-container__action-buttons">
-                                  <button class="select-container__action-button" type="button" title="icon">
-                                    <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                      <use xlink:href="#write"></use>
-                                    </svg>
-                                  </button>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="component-example__row">
-                      <p class="component-example__size-label">Size: md</p>
-                      <div class="component-examle__item-group">
-                        <!-- select--open 클래스 추가시 open -->
-                        <div class="select" style="min-width: 160px; max-width: 230px;margin-left: 8px">
-                          <div class="select-selector">
-                            <button class="select-selector__button" type="button">
-                              <span class="select-selector__title">권한 설정</span>
-                              <svg class="svg-icon select-selector__icon" aria-hidden="true">
-                                <use xlink:href="#chevron-down-medium"></use>
-                              </svg>
-                            </button>
-                          </div>
-                          <div class="select-container">
-                            <ul class="select-container__list">
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <span class="select-container__text">URL 관리</span>
-                                </button>
-                                <div class="select-container__action-buttons">
-                                  <button class="select-container__action-button" type="button" title="icon">
-                                    <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                      <use xlink:href="#write"></use>
-                                    </svg>
-                                  </button>
-                                </div>
-                              </li>
-                              <li class="select-container__item select-container__item--selected">
-                                <button class="select-container__button" type="button">
-                                  <span class="select-container__text">권한 설정</span>
-                                </button>
-                                <div class="select-container__action-buttons">
-                                  <button class="select-container__action-button" type="button" title="icon">
-                                    <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                      <use xlink:href="#write"></use>
-                                    </svg>
-                                  </button>
-                                </div>
-                              </li>
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <span class="select-container__text">사본으로 저장</span>
-                                </button>
-                                <div class="select-container__action-buttons">
-                                  <button class="select-container__action-button" type="button" title="icon">
-                                    <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                      <use xlink:href="#write"></use>
-                                    </svg>
-                                  </button>
-                                </div>
-                              </li>
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <span class="select-container__text">정보 변경</span>
-                                </button>
-                                <div class="select-container__action-buttons">
-                                  <button class="select-container__action-button" type="button" title="icon">
-                                    <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                      <use xlink:href="#write"></use>
-                                    </svg>
-                                  </button>
-                                </div>
-                              </li>
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <span class="select-container__text">목록으로 나가기</span>
-                                </button>
-                                <div class="select-container__action-buttons">
-                                  <button class="select-container__action-button" type="button" title="icon">
-                                    <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                      <use xlink:href="#write"></use>
-                                    </svg>
-                                  </button>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                        <!-- select--open 클래스 추가시 open -->
-                        <div class="select select--disabled" style="min-width: 160px; max-width: 230px;margin-left: 8px">
-                          <div class="select-selector">
-                            <button class="select-selector__button" type="button">
-                              <span class="select-selector__title">권한 설정</span>
-                              <svg class="svg-icon select-selector__icon" aria-hidden="true">
-                                <use xlink:href="#chevron-down-medium"></use>
-                              </svg>
-                            </button>
-                          </div>
-                          <div class="select-container">
-                            <ul class="select-container__list">
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <span class="select-container__text">URL 관리</span>
-                                </button>
-                                <div class="select-container__action-buttons">
-                                  <button class="select-container__action-button" type="button" title="icon">
-                                    <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                      <use xlink:href="#write"></use>
-                                    </svg>
-                                  </button>
-                                </div>
-                              </li>
-                              <li class="select-container__item select-container__item--selected">
-                                <button class="select-container__button" type="button">
-                                  <span class="select-container__text">권한 설정</span>
-                                </button>
-                                <div class="select-container__action-buttons">
-                                  <button class="select-container__action-button" type="button" title="icon">
-                                    <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                      <use xlink:href="#write"></use>
-                                    </svg>
-                                  </button>
-                                </div>
-                              </li>
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <span class="select-container__text">사본으로 저장</span>
-                                </button>
-                                <div class="select-container__action-buttons">
-                                  <button class="select-container__action-button" type="button" title="icon">
-                                    <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                      <use xlink:href="#write"></use>
-                                    </svg>
-                                  </button>
-                                </div>
-                              </li>
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <span class="select-container__text">정보 변경</span>
-                                </button>
-                                <div class="select-container__action-buttons">
-                                  <button class="select-container__action-button" type="button" title="icon">
-                                    <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                      <use xlink:href="#write"></use>
-                                    </svg>
-                                  </button>
-                                </div>
-                              </li>
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <span class="select-container__text">목록으로 나가기</span>
-                                </button>
-                                <div class="select-container__action-buttons">
-                                  <button class="select-container__action-button" type="button" title="icon">
-                                    <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                      <use xlink:href="#write"></use>
-                                    </svg>
-                                  </button>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="component-example__row">
-                      <p class="component-example__size-label">Size: sm</p>
-                      <div class="component-examle__item-group">
-                        <!-- select--open 클래스 추가시 open -->
-                        <div class="select select--sm" style="min-width: 160px; max-width: 230px;margin-left: 8px">
-                          <div class="select-selector">
-                            <button class="select-selector__button" type="button">
-                              <span class="select-selector__title">권한 설정</span>
-                              <svg class="svg-icon select-selector__icon" aria-hidden="true">
-                                <use xlink:href="#chevron-down-medium"></use>
-                              </svg>
-                            </button>
-                          </div>
-                          <div class="select-container">
-                            <ul class="select-container__list">
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <span class="select-container__text">URL 관리</span>
-                                </button>
-                                <div class="select-container__action-buttons">
-                                  <button class="select-container__action-button" type="button" title="icon">
-                                    <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                      <use xlink:href="#write"></use>
-                                    </svg>
-                                  </button>
-                                </div>
-                              </li>
-                              <li class="select-container__item select-container__item--selected">
-                                <button class="select-container__button" type="button">
-                                  <span class="select-container__text">권한 설정</span>
-                                </button>
-                                <div class="select-container__action-buttons">
-                                  <button class="select-container__action-button" type="button" title="icon">
-                                    <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                      <use xlink:href="#write"></use>
-                                    </svg>
-                                  </button>
-                                </div>
-                              </li>
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <span class="select-container__text">사본으로 저장</span>
-                                </button>
-                                <div class="select-container__action-buttons">
-                                  <button class="select-container__action-button" type="button" title="icon">
-                                    <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                      <use xlink:href="#write"></use>
-                                    </svg>
-                                  </button>
-                                </div>
-                              </li>
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <span class="select-container__text">정보 변경</span>
-                                </button>
-                                <div class="select-container__action-buttons">
-                                  <button class="select-container__action-button" type="button" title="icon">
-                                    <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                      <use xlink:href="#write"></use>
-                                    </svg>
-                                  </button>
-                                </div>
-                              </li>
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <span class="select-container__text">목록으로 나가기</span>
-                                </button>
-                                <div class="select-container__action-buttons">
-                                  <button class="select-container__action-button" type="button" title="icon">
-                                    <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                      <use xlink:href="#write"></use>
-                                    </svg>
-                                  </button>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                        <!-- select--open 클래스 추가시 open -->
-                        <div class="select select--sm select--disabled" style="min-width: 160px; max-width: 230px;margin-left: 8px">
-                          <div class="select-selector">
-                            <button class="select-selector__button" type="button">
-                              <span class="select-selector__title">권한 설정</span>
-                              <svg class="svg-icon select-selector__icon" aria-hidden="true">
-                                <use xlink:href="#chevron-down-medium"></use>
-                              </svg>
-                            </button>
-                          </div>
-                          <div class="select-container">
-                            <ul class="select-container__list">
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <span class="select-container__text">URL 관리</span>
-                                </button>
-                                <div class="select-container__action-buttons">
-                                  <button class="select-container__action-button" type="button" title="icon">
-                                    <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                      <use xlink:href="#write"></use>
-                                    </svg>
-                                  </button>
-                                </div>
-                              </li>
-                              <li class="select-container__item select-container__item--selected">
-                                <button class="select-container__button" type="button">
-                                  <span class="select-container__text">권한 설정</span>
-                                </button>
-                                <div class="select-container__action-buttons">
-                                  <button class="select-container__action-button" type="button" title="icon">
-                                    <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                      <use xlink:href="#write"></use>
-                                    </svg>
-                                  </button>
-                                </div>
-                              </li>
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <span class="select-container__text">사본으로 저장</span>
-                                </button>
-                                <div class="select-container__action-buttons">
-                                  <button class="select-container__action-button" type="button" title="icon">
-                                    <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                      <use xlink:href="#write"></use>
-                                    </svg>
-                                  </button>
-                                </div>
-                              </li>
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <span class="select-container__text">정보 변경</span>
-                                </button>
-                                <div class="select-container__action-buttons">
-                                  <button class="select-container__action-button" type="button" title="icon">
-                                    <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                      <use xlink:href="#write"></use>
-                                    </svg>
-                                  </button>
-                                </div>
-                              </li>
-                              <li class="select-container__item">
-                                <button class="select-container__button" type="button">
-                                  <span class="select-container__text">목록으로 나가기</span>
-                                </button>
-                                <div class="select-container__action-buttons">
-                                  <button class="select-container__action-button" type="button" title="icon">
-                                    <svg class="svg-icon select-container__icon" aria-hidden="true">
-                                      <use xlink:href="#write"></use>
-                                    </svg>
-                                  </button>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="component-variation">
-              <span class="component-variation__name">Select with Checkbox</span>
+              <span class="component-variation__name">Multi Select</span>
               <div class="component-example">
                 <div class="component-example__live">
                   <div>
@@ -10993,7 +9818,7 @@
                     <div class="component-example__row">
                       <p class="component-example__size-label">Size: sm</p>
                       <div class="component-examle__item-group">
-                        <div class="select select--sm" style="min-width: 160px; max-width: 230px;">
+                        <div class="select select--sm select--open" style="min-width: 160px; max-width: 230px;">
                           <div class="select-selector">
                             <button class="select-selector__button" type="button">
                               <span class="select-selector__title">전체</span>
@@ -11002,7 +9827,7 @@
                               </svg>
                             </button>
                           </div>
-                          <div class="select-container w-260">
+                          <div class="select-container w-260" style="max-height: 150px;">
                             <ul class="select-container__list">
                               <li class="select-container__item">
                                 <div class="checkbox checkbox--indeterminate">
@@ -11617,7 +10442,7 @@
             </div>
 
             <div class="component-variation">
-              <span class="component-variation__name">Input Select</span>
+              <span class="component-variation__name">Combo Box</span>
               <div class="component-example">
                 <div class="component-example__live">
                   <div>
@@ -11761,7 +10586,7 @@
             </div>
 
             <div class="component-variation">
-              <span class="component-variation__name">Borderless Input Select</span>
+              <span class="component-variation__name">Borderless Combo Box</span>
               <div class="component-example">
                 <div class="component-example__live">
                   <div>
@@ -11858,7 +10683,7 @@
                     <div class="component-example__row">
                       <p class="component-example__size-label">Size: sm</p>
                       <div class="component-examle__item-group">
-                        <div class="select select--sm select--disabled select--borderless" style="min-width: 160px; max-width: 230px;">
+                        <div class="select select--sm select--open select--borderless" style="min-width: 160px; max-width: 230px;">
                           <div class="select-selector">
                             <div class="select-selector__input">
                               <input type="text" class="text-input text-input--sm" placeholder="placeholder text" value="일치 단어" />
@@ -13515,7 +12340,7 @@
 
 
             <div class="component-variation">
-              <span class="component-variation__name">Default Tag Not Clickable </span>
+              <span class="component-variation__name">Not Clickable Tag</span>
               <div class="component-example">
                 <div class="component-example__live">
                   <div>
@@ -13524,6 +12349,36 @@
                       <div class="component-examle__item-group">
                         <!-- default -->
                         <button class="tag tag--lg tag--not-clickable">
+                          <span class="tag__label">TAG1</span>
+                        </button>
+                        <button class="tag tag--red tag--lg tag--not-clickable" style="margin-left: 16px">
+                          <span class="tag__label">TAG1</span>
+                        </button>
+                        <button class="tag tag--red-deep tag--lg tag--not-clickable" style="margin-left: 16px">
+                          <span class="tag__label">TAG1</span>
+                        </button>
+                        <button class="tag tag--teal tag--lg tag--not-clickable" style="margin-left: 16px">
+                          <span class="tag__label">TAG1</span>
+                        </button>
+                        <button class="tag tag--teal-deep tag--lg tag--not-clickable" style="margin-left: 16px">
+                          <span class="tag__label">TAG1</span>
+                        </button>
+                        <button class="tag tag--cyan tag--not-clickable tag--lg" style="margin-left: 16px">
+                          <span class="tag__label">TAG1</span>
+                        </button>
+                        <button class="tag tag--cyan-deep tag--not-clickable tag--lg" style="margin-left: 16px">
+                          <span class="tag__label">TAG1</span>
+                        </button>
+                        <button class="tag tag--purple tag--not-clickable tag--lg" style="margin-left: 16px">
+                          <span class="tag__label">TAG1</span>
+                        </button>
+                        <button class="tag tag--purple-deep tag--not-clickable tag--lg" style="margin-left: 16px">
+                          <span class="tag__label">TAG1</span>
+                        </button>
+                        <button class="tag tag--green tag--not-clickable tag--lg" style="margin-left: 16px">
+                          <span class="tag__label">TAG1</span>
+                        </button>
+                        <button class="tag tag--green-deep tag--not-clickable tag--lg" style="margin-left: 16px">
                           <span class="tag__label">TAG1</span>
                         </button>
                       </div>
@@ -13535,6 +12390,36 @@
                         <button class="tag tag--not-clickable">
                           <span class="tag__label">TAG1</span>
                         </button>
+                        <button class="tag tag--red tag--not-clickable" style="margin-left: 16px">
+                          <span class="tag__label">TAG1</span>
+                        </button>
+                        <button class="tag tag--red-deep tag--not-clickable" style="margin-left: 16px">
+                          <span class="tag__label">TAG1</span>
+                        </button>
+                        <button class="tag tag--teal tag--not-clickable" style="margin-left: 16px">
+                          <span class="tag__label">TAG1</span>
+                        </button>
+                        <button class="tag tag--teal-deep tag--not-clickable" style="margin-left: 16px">
+                          <span class="tag__label">TAG1</span>
+                        </button>
+                        <button class="tag tag--cyan tag--not-clickable" style="margin-left: 16px">
+                          <span class="tag__label">TAG1</span>
+                        </button>
+                        <button class="tag tag--cyan-deep tag--not-clickable" style="margin-left: 16px">
+                          <span class="tag__label">TAG1</span>
+                        </button>
+                        <button class="tag tag--purple tag--not-clickable" style="margin-left: 16px">
+                          <span class="tag__label">TAG1</span>
+                        </button>
+                        <button class="tag tag--purple-deep tag--not-clickable" style="margin-left: 16px">
+                          <span class="tag__label">TAG1</span>
+                        </button>
+                        <button class="tag tag--green tag--not-clickable" style="margin-left: 16px">
+                          <span class="tag__label">TAG1</span>
+                        </button>
+                        <button class="tag tag--green-deep tag--not-clickable" style="margin-left: 16px">
+                          <span class="tag__label">TAG1</span>
+                        </button>
                       </div>
                     </div>
                     <div class="component-example__row">
@@ -13544,62 +12429,36 @@
                         <button class="tag tag--not-clickable tag--sm">
                           <span class="tag__label">TAG1</span>
                         </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="component-variation">
-              <span class="component-variation__name">Default Tag Align</span>
-              <div class="component-example">
-                <div class="component-example__live">
-                  <div>
-                    <div class="component-example__row">
-                      <p class="component-example__size-label">Align: horizontal</p>
-                      <div class="component-examle__item-group">
-                        <div class="tags tags--horizontal">
-                          <!-- default -->
-                          <button class="tag tag--lg">
-                            <span class="tag__label">TAG1</span>
-                          </button>
-                          <!-- selected -->
-                          <button class="tag tag--lg tag--selected">
-                            <span class="tag__label">TAG1</span>
-                          </button>
-                          <!-- disabled -->
-                          <button class="tag tag--lg" disabled>
-                            <span class="tag__label">TAG1</span>
-                          </button>
-                          <!-- selected + disabled -->
-                          <button class="tag tag--lg tag--selected" disabled>
-                            <span class="tag__label">TAG1</span>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="component-example__row">
-                      <p class="component-example__size-label">Align: vertical</p>
-                      <div class="component-examle__item-group">
-                        <div class="tags tags--vertical">
-                          <!-- default -->
-                          <button class="tag">
-                            <span class="tag__label">TAG1</span>
-                          </button>
-                          <!-- selected -->
-                          <button class="tag tag--selected">
-                            <span class="tag__label">TAG1</span>
-                          </button>
-                          <!-- disabled -->
-                          <button class="tag" disabled>
-                            <span class="tag__label">TAG1</span>
-                          </button>
-                          <!-- selected + disabled -->
-                          <button class="tag tag--selected" disabled>
-                            <span class="tag__label">TAG1</span>
-                          </button>
-                        </div>
+                        <button class="tag tag--red tag--not-clickable tag--sm" style="margin-left: 16px">
+                          <span class="tag__label">TAG1</span>
+                        </button>
+                        <button class="tag tag--red-deep tag--not-clickable tag--sm" style="margin-left: 16px">
+                          <span class="tag__label">TAG1</span>
+                        </button>
+                        <button class="tag tag--teal tag--not-clickable tag--sm" style="margin-left: 16px">
+                          <span class="tag__label">TAG1</span>
+                        </button>
+                        <button class="tag tag--teal-deep tag--not-clickable tag--sm" style="margin-left: 16px">
+                          <span class="tag__label">TAG1</span>
+                        </button>
+                        <button class="tag tag--cyan tag--not-clickable tag--sm" style="margin-left: 16px">
+                          <span class="tag__label">TAG1</span>
+                        </button>
+                        <button class="tag tag--cyan-deep tag--not-clickable tag--sm" style="margin-left: 16px">
+                          <span class="tag__label">TAG1</span>
+                        </button>
+                        <button class="tag tag--purple tag--not-clickable tag--sm" style="margin-left: 16px">
+                          <span class="tag__label">TAG1</span>
+                        </button>
+                        <button class="tag tag--purple-deep tag--not-clickable tag--sm" style="margin-left: 16px">
+                          <span class="tag__label">TAG1</span>
+                        </button>
+                        <button class="tag tag--green tag--not-clickable tag--sm" style="margin-left: 16px">
+                          <span class="tag__label">TAG1</span>
+                        </button>
+                        <button class="tag tag--green-deep tag--not-clickable tag--sm" style="margin-left: 16px">
+                          <span class="tag__label">TAG1</span>
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -13612,188 +12471,6 @@
               <div class="component-example">
                 <div class="component-example__live">
                   <div>
-                    <div class="component-example__row">
-                      <p class="component-example__size-label">Size: lg</p>
-                      <div class="component-examle__item-group">
-                        <!-- default -->
-                        <button class="tag tag--lg">
-                          <span class="tag__label">TAG1</span>
-                          <svg class="tag__remove-button">
-                            <use xlink:href="#close"></use>
-                          </svg>
-                        </button>
-                        <!-- selected -->
-                        <button class="tag tag--lg tag--selected" style="margin-left: 16px">
-                          <span class="tag__label">TAG1</span>
-                          <svg class="tag__remove-button">
-                            <use xlink:href="#close"></use>
-                          </svg>
-                        </button>
-                        <!-- disabled -->
-                        <button class="tag tag--lg" style="margin-left: 16px" disabled>
-                          <span class="tag__label">TAG1</span>
-                          <svg class="tag__remove-button">
-                            <use xlink:href="#close"></use>
-                          </svg>
-                        </button>
-                        <!-- selected + disabled -->
-                        <button class="tag tag--lg tag--selected" style="margin-left: 16px" disabled>
-                          <span class="tag__label">TAG1</span>
-                          <svg class="tag__remove-button">
-                            <use xlink:href="#close"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="component-example__row">
-                      <p class="component-example__size-label">Size: md</p>
-                      <div class="component-examle__item-group">
-                        <!-- default -->
-                        <button class="tag">
-                          <span class="tag__label">TAG1</span>
-                          <svg class="tag__remove-button">
-                            <use xlink:href="#close"></use>
-                          </svg>
-                        </button>
-                        <!-- selected -->
-                        <button class="tag tag--selected" style="margin-left: 16px">
-                          <span class="tag__label">TAG1</span>
-                          <svg class="tag__remove-button">
-                            <use xlink:href="#close"></use>
-                          </svg>
-                        </button>
-                        <!-- disabled -->
-                        <button class="tag" style="margin-left: 16px" disabled>
-                          <span class="tag__label">TAG1</span>
-                          <svg class="tag__remove-button">
-                            <use xlink:href="#close"></use>
-                          </svg>
-                        </button>
-                        <!-- selected + disabled -->
-                        <button class="tag tag--selected" style="margin-left: 16px" disabled>
-                          <span class="tag__label">TAG1</span>
-                          <svg class="tag__remove-button">
-                            <use xlink:href="#close"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="component-example__row">
-                      <p class="component-example__size-label">Size: sm</p>
-                      <div class="component-examle__item-group">
-                        <!-- default -->
-                        <button class="tag tag--sm">
-                          <span class="tag__label">TAG1</span>
-                          <svg class="tag__remove-button">
-                            <use xlink:href="#close"></use>
-                          </svg>
-                        </button>
-                        <!-- selected -->
-                        <button class="tag tag--sm tag--selected" style="margin-left: 16px">
-                          <span class="tag__label">TAG1</span>
-                          <svg class="tag__remove-button">
-                            <use xlink:href="#close"></use>
-                          </svg>
-                        </button>
-                        <!-- disabled -->
-                        <button class="tag" style="margin-left: 16px" disabled>
-                          <span class="tag__label">TAG1</span>
-                          <svg class="tag__remove-button">
-                            <use xlink:href="#close"></use>
-                          </svg>
-                        </button>
-                        <!-- selected + disabled -->
-                        <button class="tag tag--sm tag--selected" style="margin-left: 16px" disabled>
-                          <span class="tag__label">TAG1</span>
-                          <svg class="tag__remove-button">
-                            <use xlink:href="#close"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="component-variation">
-              <span class="component-variation__name">Studio Default Tag</span>
-              <div class="component-example">
-                <div class="component-example__live">
-                  <div class="canvas-object">
-                    <div class="component-example__row">
-                      <p class="component-example__size-label">Size: lg</p>
-                      <div class="component-examle__item-group">
-                        <!-- default -->
-                        <button class="tag tag--lg">
-                          <span class="tag__label">TAG1</span>
-                        </button>
-                        <!-- selected -->
-                        <button class="tag tag--lg tag--selected" style="margin-left: 16px">
-                          <span class="tag__label">TAG1</span>
-                        </button>
-                        <!-- disabled -->
-                        <button class="tag tag--lg" style="margin-left: 16px" disabled>
-                          <span class="tag__label">TAG1</span>
-                        </button>
-                        <!-- selected + disabled -->
-                        <button class="tag tag--lg tag--selected" style="margin-left: 16px" disabled>
-                          <span class="tag__label">TAG1</span>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="component-example__row">
-                      <p class="component-example__size-label">Size: md</p>
-                      <div class="component-examle__item-group">
-                        <!-- default -->
-                        <button class="tag">
-                          <span class="tag__label">TAG1</span>
-                        </button>
-                        <!-- selected -->
-                        <button class="tag tag--selected" style="margin-left: 16px">
-                          <span class="tag__label">TAG1</span>
-                        </button>
-                        <!-- disabled -->
-                        <button class="tag" style="margin-left: 16px" disabled>
-                          <span class="tag__label">TAG1</span>
-                        </button>
-                        <!-- selected + disabled -->
-                        <button class="tag tag--selected" style="margin-left: 16px" disabled>
-                          <span class="tag__label">TAG1</span>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="component-example__row">
-                      <p class="component-example__size-label">Size: sm</p>
-                      <div class="component-examle__item-group">
-                        <!-- default -->
-                        <button class="tag tag--sm">
-                          <span class="tag__label">TAG1</span>
-                        </button>
-                        <!-- selected -->
-                        <button class="tag tag--sm tag--selected" style="margin-left: 16px">
-                          <span class="tag__label">TAG1</span>
-                        </button>
-                        <!-- disabled -->
-                        <button class="tag" style="margin-left: 16px" disabled>
-                          <span class="tag__label">TAG1</span>
-                        </button>
-                        <!-- selected + disabled -->
-                        <button class="tag tag--sm tag--selected" style="margin-left: 16px" disabled>
-                          <span class="tag__label">TAG1</span>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="component-variation">
-              <span class="component-variation__name">Studio Removable Tag</span>
-              <div class="component-example">
-                <div class="component-example__live">
-                  <div class="canvas-object">
                     <div class="component-example__row">
                       <p class="component-example__size-label">Size: lg</p>
                       <div class="component-examle__item-group">
@@ -14263,140 +12940,7 @@
             </div>
 
             <div class="component-variation">
-              <span class="component-variation__name">Input + icon</span>
-              <div class="component-example">
-                <div class="component-example__live">
-                  <div>
-                    <div class="component-example__row">
-                      <p class="component-example__size-label">Size: lg</p>
-                      <div class="component-examle__item-group component-examle__item-group--row">
-                        <!-- default -->
-                        <div class="text-input-group text-input-group--lg">
-                          <span class="text-input-group__icon">
-                            <svg class="svg-icon" aria-hidden="true">
-                              <use xlink:href="#search"></use>
-                            </svg>
-                          </span>
-                          <input type="text" class="text-input" placeholder="placeholder text" />
-                        </div>
-                        <!-- filled -->
-                        <div class="text-input-group text-input-group--lg">
-                          <span class="text-input-group__icon">
-                            <svg class="svg-icon" aria-hidden="true">
-                              <use xlink:href="#search"></use>
-                            </svg>
-                          </span>
-                          <input type="text" class="text-input" placeholder="placeholder text" value="input filled" />
-                        </div>
-                        <!-- disabled -->
-                        <div class="text-input-group text-input-group--lg text-input-group--disabled">
-                          <span class="text-input-group__icon">
-                            <svg class="svg-icon" aria-hidden="true">
-                              <use xlink:href="#search"></use>
-                            </svg>
-                          </span>
-                          <input type="text" class="text-input" placeholder="placeholder text" disabled />
-                        </div>
-                        <!-- filled + disabled -->
-                        <div class="text-input-group text-input-group--lg text-input-group--disabled">
-                          <span class="text-input-group__icon">
-                            <svg class="svg-icon" aria-hidden="true">
-                              <use xlink:href="#search"></use>
-                            </svg>
-                          </span>
-                          <input type="text" class="text-input" placeholder="placeholder text" value="input filled" disabled />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="component-example__row">
-                      <p class="component-example__size-label">Size: md</p>
-                      <div class="component-examle__item-group component-examle__item-group--row">
-                        <!-- default -->
-                        <div class="text-input-group">
-                          <span class="text-input-group__icon">
-                            <svg class="svg-icon" aria-hidden="true">
-                              <use xlink:href="#search"></use>
-                            </svg>
-                          </span>
-                          <input type="text" class="text-input" placeholder="placeholder text" />
-                        </div>
-                        <!-- filled -->
-                        <div class="text-input-group">
-                          <span class="text-input-group__icon">
-                            <svg class="svg-icon" aria-hidden="true">
-                              <use xlink:href="#search"></use>
-                            </svg>
-                          </span>
-                          <input type="text" class="text-input" placeholder="placeholder text" value="input filled" />
-                        </div>
-                        <!-- disabled -->
-                        <div class="text-input-group">
-                          <span class="text-input-group__icon">
-                            <svg class="svg-icon" aria-hidden="true">
-                              <use xlink:href="#search"></use>
-                            </svg>
-                          </span>
-                          <input type="text" class="text-input" placeholder="placeholder text" disabled />
-                        </div>
-                        <!-- filled + disabled -->
-                        <div class="text-input-group">
-                          <span class="text-input-group__icon">
-                            <svg class="svg-icon" aria-hidden="true">
-                              <use xlink:href="#search"></use>
-                            </svg>
-                          </span>
-                          <input type="text" class="text-input" placeholder="placeholder text" value="input filled" disabled />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="component-example__row">
-                      <p class="component-example__size-label">Size: sm</p>
-                      <div class="component-examle__item-group component-examle__item-group--row">
-                        <!-- default -->
-                        <div class="text-input-group text-input-group--sm">
-                          <span class="text-input-group__icon">
-                            <svg class="svg-icon" aria-hidden="true">
-                              <use xlink:href="#search"></use>
-                            </svg>
-                          </span>
-                          <input type="text" class="text-input" placeholder="placeholder text" />
-                        </div>
-                        <!-- filled -->
-                        <div class="text-input-group text-input-group--sm">
-                          <span class="text-input-group__icon">
-                            <svg class="svg-icon" aria-hidden="true">
-                              <use xlink:href="#search"></use>
-                            </svg>
-                          </span>
-                          <input type="text" class="text-input" placeholder="placeholder text" value="input filled" />
-                        </div>
-                        <!-- disabled -->
-                        <div class="text-input-group text-input-group--sm text-input-group--disabled">
-                          <span class="text-input-group__icon">
-                            <svg class="svg-icon" aria-hidden="true">
-                              <use xlink:href="#search"></use>
-                            </svg>
-                          </span>
-                          <input type="text" class="text-input" placeholder="placeholder text" disabled />
-                        </div>
-                        <!-- filled + disabled -->
-                        <div class="text-input-group text-input-group--sm text-input-group--disabled">
-                          <span class="text-input-group__icon">
-                            <svg class="svg-icon" aria-hidden="true">
-                              <use xlink:href="#search"></use>
-                            </svg>
-                          </span>
-                          <input type="text" class="text-input" placeholder="placeholder text" value="input filled" disabled />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="component-variation">
-              <span class="component-variation__name">Input + icon + clear button</span>
+              <span class="component-variation__name">Input + clear button</span>
               <div class="component-example">
                 <div class="component-example__live">
                   <div>
@@ -14589,7 +13133,7 @@
             </div>
 
             <div class="component-variation">
-              <span class="component-variation__name">Input + icon + clear button + search button</span>
+              <span class="component-variation__name">Input + clear button + search button</span>
               <div class="component-example">
                 <div class="component-example__live">
                   <div>
@@ -14793,8 +13337,9 @@
               </div>
             </div>
 
+            <!-- TODO: 추후 제거 필요 (IWP 에서 사용중) -->
             <div class="component-variation">
-              <span class="component-variation__name">Input + icon + hidable button</span>
+              <span class="component-variation__name">Input + hidable button</span>
               <div class="component-example">
                 <div class="component-example__live">
                   <div>
@@ -14987,7 +13532,7 @@
             </div>
 
             <div class="component-variation">
-              <span class="component-variation__name">Input with Suffix</span>
+              <span class="component-variation__name">Input with Text</span>
               <div class="component-example">
                 <div class="component-example__live">
                   <div>
@@ -14996,19 +13541,27 @@
                       <div class="component-examle__item-group component-examle__item-group--row">
                         <!-- default -->
                         <div class="text-input-wrap">
-                          <input type="text" class="text-input text-input--lg" placeholder="placeholder text" /><span class="text-input-wrap__suffix">suffix</span>
+                          <span class="text-input-wrap__prefix">prefix</span>
+                          <input type="text" class="text-input text-input--lg" placeholder="placeholder text" />
+                          <span class="text-input-wrap__suffix">suffix</span>
                         </div>
                         <!-- filled -->
                         <div class="text-input-wrap" style="margin-top: 0.5rem;">
-                          <input type="text" class="text-input text-input--lg" placeholder="placeholder text" value="input filled" /><span class="text-input-wrap__suffix">suffix</span>
+                          <span class="text-input-wrap__prefix">prefix</span>
+                          <input type="text" class="text-input text-input--lg" placeholder="placeholder text" value="input filled" />
+                          <span class="text-input-wrap__suffix">suffix</span>
                         </div>
                         <!-- disabled -->
                         <div class="text-input-wrap" style="margin-top: 0.5rem;">
-                          <input type="text" class="text-input text-input--lg" placeholder="placeholder text" disabled /><span class="text-input-wrap__suffix">suffix</span>
+                          <span class="text-input-wrap__prefix">prefix</span>
+                          <input type="text" class="text-input text-input--lg" placeholder="placeholder text" disabled />
+                          <span class="text-input-wrap__suffix">suffix</span>
                         </div>
                         <!-- filled + disabled -->
                         <div class="text-input-wrap" style="margin-top: 0.5rem;">
-                          <input type="text" class="text-input text-input--lg" placeholder="placeholder text" value="input filled" disabled /><span class="text-input-wrap__suffix">suffix</span>
+                          <span class="text-input-wrap__prefix">prefix</span>
+                          <input type="text" class="text-input text-input--lg" placeholder="placeholder text" value="input filled" disabled />
+                          <span class="text-input-wrap__suffix">suffix</span>
                         </div>
                       </div>
                     </div>
@@ -15017,31 +13570,27 @@
                       <div class="component-examle__item-group component-examle__item-group--row">
                         <!-- default -->
                         <div class="text-input-wrap">
-                          <input type="text" class="text-input" placeholder="placeholder text" /><span class="text-input-wrap__suffix">suffix</span>
-                        </div>
-                        <div class="notification-message notification-message--error" style="align-self: flex-start">
-                          <svg class="notification-message__icon svg-icon" aria-hidden="true">
-                            <use xlink:href="#issue-fill"></use>
-                          </svg>
-                          <span class="notification-message__text">Notification Message</span>
+                          <span class="text-input-wrap__prefix">prefix</span>
+                          <input type="text" class="text-input" placeholder="placeholder text" />
+                          <span class="text-input-wrap__suffix">suffix</span>
                         </div>
                         <!-- filled -->
                         <div class="text-input-wrap" style="margin-top: 0.5rem;">
-                          <input type="text" class="text-input" placeholder="placeholder text" value="input filled" /><span class="text-input-wrap__suffix">suffix</span>
-                        </div>
-                        <div class="notification-message notification-message--info" style="align-self: flex-start">
-                          <svg class="notification-message__icon svg-icon" aria-hidden="true">
-                            <use xlink:href="#info-fill"></use>
-                          </svg>
-                          <span class="notification-message__text">Notification Message</span>
+                          <span class="text-input-wrap__prefix">prefix</span>
+                          <input type="text" class="text-input" placeholder="placeholder text" value="input filled" />
+                          <span class="text-input-wrap__suffix">suffix</span>
                         </div>
                         <!-- disabled -->
                         <div class="text-input-wrap" style="margin-top: 0.5rem;">
-                          <input type="text" class="text-input" placeholder="placeholder text" disabled /><span class="text-input-wrap__suffix">suffix</span>
+                          <span class="text-input-wrap__prefix">prefix</span>
+                          <input type="text" class="text-input" placeholder="placeholder text" disabled />
+                          <span class="text-input-wrap__suffix">suffix</span>
                         </div>
                         <!-- filled + disabled -->
                         <div class="text-input-wrap" style="margin-top: 0.5rem;">
-                          <input type="text" class="text-input" placeholder="placeholder text" value="input filled" disabled /><span class="text-input-wrap__suffix">suffix</span>
+                          <span class="text-input-wrap__prefix">prefix</span>
+                          <input type="text" class="text-input" placeholder="placeholder text" value="input filled" disabled />
+                          <span class="text-input-wrap__suffix">suffix</span>
                         </div>
                       </div>
                     </div>
@@ -15050,19 +13599,27 @@
                       <div class="component-examle__item-group component-examle__item-group--row">
                         <!-- default -->
                         <div class="text-input-wrap">
-                          <input type="text" class="text-input text-input--sm" placeholder="placeholder text" /><span class="text-input-wrap__suffix">suffix</span>
+                          <span class="text-input-wrap__prefix">prefix</span>
+                          <input type="text" class="text-input text-input--sm" placeholder="placeholder text" />
+                          <span class="text-input-wrap__suffix">suffix</span>
                         </div>
                         <!-- filled -->
                         <div class="text-input-wrap" style="margin-top: 0.5rem;">
-                          <input type="text" class="text-input text-input--sm" placeholder="placeholder text" value="input filled" /><span class="text-input-wrap__suffix">suffix</span>
+                          <span class="text-input-wrap__prefix">prefix</span>
+                          <input type="text" class="text-input text-input--sm" placeholder="placeholder text" value="input filled" />
+                          <span class="text-input-wrap__suffix">suffix</span>
                         </div>
                         <!-- disabled -->
                         <div class="text-input-wrap" style="margin-top: 0.5rem;">
-                          <input type="text" class="text-input text-input--sm" placeholder="placeholder text" disabled /><span class="text-input-wrap__suffix">suffix</span>
+                          <span class="text-input-wrap__prefix">prefix</span>
+                          <input type="text" class="text-input text-input--sm" placeholder="placeholder text" disabled />
+                          <span class="text-input-wrap__suffix">suffix</span>
                         </div>
                         <!-- filled + disabled -->
                         <div class="text-input-wrap" style="margin-top: 0.5rem;">
-                          <input type="text" class="text-input text-input--sm" placeholder="placeholder text" value="input filled" disabled /><span class="text-input-wrap__suffix">suffix</span>
+                          <span class="text-input-wrap__prefix">prefix</span>
+                          <input type="text" class="text-input text-input--sm" placeholder="placeholder text" value="input filled" disabled />
+                          <span class="text-input-wrap__suffix">suffix</span>
                         </div>
                       </div>
                     </div>
@@ -15134,6 +13691,7 @@
               </div>
             </div>
           </div>
+
         </div>
         <div class="page" id="page--textarea">
 
