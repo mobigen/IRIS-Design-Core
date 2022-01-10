@@ -1026,10 +1026,10 @@
 }
 
 .object-area--bg-none {
-  background: none;
+  background: none !important;
 
   &:hover {
-    background: none;
+    background: none !important;
   }
 }
 
