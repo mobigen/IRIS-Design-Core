@@ -466,14 +466,6 @@
   }
 }
 
-.object-area--bg-none {
-  background: none;
-
-  &:hover {
-    background: none;
-  }
-}
-
 .object-list {
   background: $ui-02;
   border: 1px solid transparent;
@@ -1030,6 +1022,14 @@
   &:hover:not([preview]) {
     background: none;
     border: 1px solid $secondary;
+  }
+}
+
+.object-area--bg-none {
+  background: none !important;
+
+  &:hover {
+    background: none !important;
   }
 }
 
