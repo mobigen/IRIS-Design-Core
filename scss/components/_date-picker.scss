@@ -36,8 +36,9 @@
 .date-picker-panel__head {
   display: flex;
   align-items: center;
-  padding: $spacing-2xs $spacing-2xs;
+  padding: 0 $spacing-2xs;
   border-bottom: 1px solid $hover-row;
+  height: rem(32px);
 }
 
 .date-picker-panel__head-actions {
