@@ -2,6 +2,9 @@
   border: 1px solid $ui-04;
 }
 
+
+
+
 .accordion-vertical {
   @include list;
 }
@@ -117,7 +120,7 @@
 // default 열고 닫을 경우 스타일
 // -------------------------
 .accordion__head--open .accordion__head-icon {
-  transform: rotate(-90deg);
+  transform: rotate(90deg);
 }
 
 .accordion__head--open .accordion__head-icon--right {
@@ -143,3 +146,4 @@
     height: rem(36px);
   }
 }
+
