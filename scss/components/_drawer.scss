@@ -12,6 +12,23 @@
   border-bottom: 1px solid $ui-04;
 }
 
+.drawer__head-control-button {
+  @include button-normal;
+  @include button--tertiary;
+  position: absolute;
+  top: 50px;
+  left: -42px;
+  width: rem(42px);
+  height: rem(52px);
+  border: 0;
+  border-radius: 3px 0px 0px 3px;
+  box-shadow: -2px 0px 4px 0 rgba(0, 0, 0, 0.2);
+
+  .svg-icon {
+    @include svg-icon-size(26px);
+  }
+}
+
 .drawer__actions {
   margin-left: auto;
   display: flex;
@@ -28,6 +45,10 @@
 .drawer__body {
   overflow-y: auto;
   padding: $spacing-md;
+}
+
+.drawer__content-clear-button {
+  margin-left: auto;
 }
 
 .drawer__foot {
