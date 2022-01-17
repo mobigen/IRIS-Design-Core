@@ -86,10 +86,6 @@
   color: $text-03;
 }
 
-.list__checkmark {
-  vertical-align: middle;
-}
-
 .list__body {
   overflow: auto;
 }
@@ -236,7 +232,7 @@
   justify-content: center;
 }
 
-.dynamic-list__no-contents .notification-message{
+.dynamic-list__no-contents .notification-message {
   height: 480px;
 }
 
@@ -324,70 +320,4 @@
 
 .list--lg .list__item {
   height: rem(40px);
-}
-
-// -------------------------
-// list--stripe
-// -------------------------
-
-.list--stripe {
-  .list__item {
-    border-bottom: none;
-
-    &:nth-child(2n + 1) {
-      .list__button {
-        background: $odd-row;
-      }
-    }
-
-    &:hover {
-      background: $hover-row;
-
-      .list__button {
-        background: $hover-row;
-      }
-    }
-
-    &.list__item--selected {
-      .list__text {
-        color: $primary;
-      }
-    }
-
-    &.list__item--disabled {
-      .list__button {
-        background: transparent;
-      }
-
-      &:hover {
-        background: transparent;
-
-        .list__button {
-          background: transparent;
-        }
-      }
-
-      .list__button {
-        &:active {
-          .list__text {
-            color: $text-03;
-          }
-        }
-      }
-    }
-
-    &.list__item--selected.list__item--disabled{
-      .list__button{
-        &:active{
-          .list__text{
-            color: $primary;
-          }
-        }
-      }
-    }
-  }
-
-  .list__text {
-    color: $text-03;
-  }
 }

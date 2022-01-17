@@ -10,7 +10,7 @@ $font-families: (
     unquote(
       "'NotoSansKR', 'メイリオ', Meiryo, 'Yu Gothic UI', 'Microsoft YaHei UI', 'Microsoft JhengHei UI', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif"
     ),
-  "serif": unquote("'Georgia', Times, serif"),
+  "serif": unquote("'Georgia', Times, serif")
 );
 
 @function font-family($name) {
@@ -29,7 +29,7 @@ $font-weights: (
   "light": 300,
   "regular": 400,
   "medium": 500,
-  "bold": 700,
+  "bold": 700
 );
 
 @function font-weight($weight) {
@@ -81,17 +81,19 @@ $base-font-size: 16px !default; // Default
   -moz-osx-font-smoothing: grayscale;
 }
 
-// NOTE: IMA 프로젝트에서 new 사이즈 추가
-// TODO: 미사용 데이터 골라서 제거하는 작업 필요
 $font-size-map: (
   "76": 4.75rem,
-  "72": 4.5rem, // new
+  "72": 4.5rem,
+  // new
   "54": 3.375rem,
-  "48": 3rem, // new
+  "48": 3rem,
+  // new
   "36": 2.25rem,
-  "32": 2rem, // new
+  "32": 2rem,
+  // new
   "28": 1.75rem,
-  "24": 1.5rem, // new
+  "24": 1.5rem,
+  // new
   "20": 1.25rem,
   "18": 1.125rem,
   "16": 1rem,
