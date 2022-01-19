@@ -506,17 +506,20 @@
 }
 
 .project-thumbnail-list__information-desc-text {
-  @include text-overflow;
   @include font-size("12");
   color: $text-03;
 
   &:first-child {
-    max-width: 40%;
+    @include text-overflow;
+  }
+
+  &:first-child:not(:only-child) {
+    flex-grow: 1;
   }
 
   & + & {
+    flex-shrink: 0;
     margin-left: auto;
-    max-width: 60%;
   }
 
   &.project-thumbnail-list__information-desc-text--right {
