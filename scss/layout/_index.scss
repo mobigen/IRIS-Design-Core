@@ -600,3 +600,12 @@
     }
   }
 }
+
+/* IE10+ */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .project-thumbnail-list__information-desc-text {
+    &:first-child {
+      max-width: inherit;
+    }
+  }
+}
