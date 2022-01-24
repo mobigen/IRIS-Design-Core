@@ -3833,24 +3833,24 @@
               <span class="object-map__layer-name-text">layer name</span>
             </div>
             <!-- // 레이어 이름 요소 -->
-            <!-- 객체 이동 버튼: 지도 이동, 객체 이동 토글 -->
-            <div class="object-map__move-buttons">
-              <button type="button" class="button button--tertiary">
-                <svg class="svg-icon">
-                  <use xlink:href="#global"></use>
-                </svg>
-                <span class="button__text">지도 이동</span>
-              </button>
-            </div>
-            <div class="object-map__move-buttons" style="top: 40px;">
-              <button type="button" class="button button--tertiary">
-                <svg class="svg-icon">
-                  <use xlink:href="#move"></use>
-                </svg>
-                <span class="button__text">객체 이동</span>
-              </button>
-            </div>
-            <!-- // 객체 이동 버튼: 지도 이동, 객체 이동 토글 -->
+<!--            &lt;!&ndash; 객체 이동 버튼: 지도 이동, 객체 이동 토글 &ndash;&gt;-->
+<!--            <div class="object-map__move-buttons">-->
+<!--              <button type="button" class="button button&#45;&#45;tertiary">-->
+<!--                <svg class="svg-icon">-->
+<!--                  <use xlink:href="#global"></use>-->
+<!--                </svg>-->
+<!--                <span class="button__text">지도 이동</span>-->
+<!--              </button>-->
+<!--            </div>-->
+<!--            <div class="object-map__move-buttons" style="top: 40px;">-->
+<!--              <button type="button" class="button button&#45;&#45;tertiary">-->
+<!--                <svg class="svg-icon">-->
+<!--                  <use xlink:href="#move"></use>-->
+<!--                </svg>-->
+<!--                <span class="button__text">객체 이동</span>-->
+<!--              </button>-->
+<!--            </div>-->
+<!--            &lt;!&ndash; // 객체 이동 버튼: 지도 이동, 객체 이동 토글 &ndash;&gt;-->
             <!-- MAP 레이어 보기/숨기기 -->
             <div class="leaflet-top leaflet-left">
               <button class="leaflet-goto-home leaflet-control" type="button"></button>
@@ -4043,19 +4043,19 @@
 
           <span style="position: absolute; top: 1940px; left: 570px;">IMA .object-ima</span>
           <div class="canvas-object object-ima canvas-object--active" style="top: 1960px; left: 570px; width: 500px; height: 280px;">
-            <div class="object-ima__move-buttons">
-              <button class="object-ima__move-button" type="button">
-                <svg class="svg-icon">
-                  <use xlink:href="#move"></use>
-                </svg>
-              </button>
-              <!-- 두개 버튼 토글 -->
-              <button class="object-ima__move-button" type="button">
-                <svg class="svg-icon">
-                  <use xlink:href="#ima"></use>
-                </svg>
-              </button>
-            </div>
+<!--            <div class="object-ima__move-buttons">-->
+<!--              <button class="object-ima__move-button" type="button">-->
+<!--                <svg class="svg-icon">-->
+<!--                  <use xlink:href="#move"></use>-->
+<!--                </svg>-->
+<!--              </button>-->
+<!--              &lt;!&ndash; 두개 버튼 토글 &ndash;&gt;-->
+<!--              <button class="object-ima__move-button" type="button">-->
+<!--                <svg class="svg-icon">-->
+<!--                  <use xlink:href="#ima"></use>-->
+<!--                </svg>-->
+<!--              </button>-->
+<!--            </div>-->
             <div class="object-ima__layer-name-wrap">
               <span class="object-ima__layer-name">layer name</span>
             </div>
@@ -4470,6 +4470,13 @@
           <!-- slider : 가로형 클릭한 상태 -->
           <span style="position:absolute;top:2650px;left:380px;">slider : 가로형 클릭한 상태</span>
           <div class="canvas-object object-slider canvas-object--active" style="top:2670px;left:380px;width:300px;height:102px;">
+            <div class="object-interactive-button">
+              <button class="toggle-button__item toggle-button__item--icon" type="button">
+                <svg class="svg-icon">
+                  <use xlink:href="#interactive"></use>
+                </svg>
+              </button>
+            </div>
             <div class="slider-group">
               <div id="slider-handles" class="noUi-target noUi-ltr noUi-horizontal noUi-txt-dir-ltr">
                 <div class="noUi-base">
@@ -4491,20 +4498,29 @@
               </div>
             </div>
             <!-- 크기 조절 상자 -->
-            <span class="tl"></span>
-            <span class="tc"></span>
-            <span class="tr"></span>
-            <span class="cl"></span>
-            <span class="cr"></span>
-            <span class="bl"></span>
-            <span class="bc"></span>
-            <span class="br"></span>
+            <div class="object-sizing-box">
+              <span class="tl"></span>
+              <span class="tc"></span>
+              <span class="tr"></span>
+              <span class="cl"></span>
+              <span class="cr"></span>
+              <span class="bl"></span>
+              <span class="bc"></span>
+              <span class="br"></span>
+            </div>
             <!-- //크기 조절 상자 -->
           </div>
           <!-- // slider : 가로형 클릭한 상태 -->
           <!-- slider : 세로형 클릭한 상태 -->
-          <span style="position:absolute;top:2650px;left:710px;">slider : 세로형 클릭한 상태</span>
-          <div class="canvas-object object-slider canvas-object--active" style="top:2670px;left:710px;width:140px;height:230px;">
+          <span style="position:absolute;top:2650px;left:730px;">slider : 세로형 입력모드 활성화</span>
+          <div class="canvas-object object-slider canvas-object--interactive" style="top:2670px;left:730px;width:140px;height:230px;">
+            <div class="object-interactive-button">
+              <button class="toggle-button__item toggle-button__item--icon toggle-button__item--selected" type="button">
+                <svg class="svg-icon">
+                  <use xlink:href="#interactive"></use>
+                </svg>
+              </button>
+            </div>
             <div class="slider-group vertical">
               <div id="slider-vertical" class="noUi-target noUi-ltr noUi-vertical noUi-txt-dir-ltr">
                 <div class="noUi-base">
@@ -4557,20 +4573,22 @@
                 </div>
               </div>
               <!-- 크기 조절 상자 -->
-              <span class="tl"></span>
-              <span class="tc"></span>
-              <span class="tr"></span>
-              <span class="cl"></span>
-              <span class="cr"></span>
-              <span class="bl"></span>
-              <span class="bc"></span>
-              <span class="br"></span>
+              <div class="object-sizing-box">
+                <span class="tl"></span>
+                <span class="tc"></span>
+                <span class="tr"></span>
+                <span class="cl"></span>
+                <span class="cr"></span>
+                <span class="bl"></span>
+                <span class="bc"></span>
+                <span class="br"></span>
+              </div>
               <!-- //크기 조절 상자 -->
             </div>
             <!-- // slider : 세로형 클릭한 상태 -->
             <!-- slider: deselect -->
-            <span style="position:absolute;top:2650px;left:880px;">slider: deselect</span>
-            <div class="canvas-object object-slider canvas-object--deselect" style="top:2670px;left:880px;width:300px;height:102px;">
+            <span style="position:absolute;top:2650px;left:920px;">slider: deselect</span>
+            <div class="canvas-object object-slider canvas-object--deselect" style="top:2670px;left:920px;width:300px;height:102px;">
               <div class="slider-group">
                 <div id="slider-tooltips" class="noUi-target noUi-ltr noUi-horizontal noUi-txt-dir-ltr">
                   <div class="noUi-base">
@@ -4645,8 +4663,8 @@
             </div>
             <!-- // slider: deselect -->
             <!-- slider: select -->
-            <span style="position:absolute;top:2650px;left:1210px;">slider: select</span>
-            <div class="canvas-object object-slider canvas-object--select" style="top:2670px;left:1210px;width:300px;height:102px;">
+            <span style="position:absolute;top:2650px;left:1240px;">slider: select</span>
+            <div class="canvas-object object-slider canvas-object--select" style="top:2670px;left:1240px;width:300px;height:102px;">
               <div class="slider-group">
                 <div id="slider-handles" class="noUi-target noUi-ltr noUi-horizontal noUi-txt-dir-ltr">
                   <div class="noUi-base">
