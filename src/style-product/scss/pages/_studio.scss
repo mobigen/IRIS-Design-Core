@@ -3171,3 +3171,8 @@
   max-height: rem(150px);
   overflow-y: auto;
 }
+
+// 모달 타이틀 우측에 컨텐츠가 특정 길이 이상 넘칠때 디자인 깨짐 방지 (IE 이슈로 calc 삭제 불가 최대 사이즈로 고정)
+.modal__head-title {
+  width: calc(100% - 240px);
+}
