@@ -22,7 +22,6 @@
   }
 }
 
-
 .tag__label {
   @include line-height("heading");
   @include font-weight("medium");
@@ -99,7 +98,7 @@
     fill: $font-color;
 
     &:hover {
-      background-color: rgba($font-color, .15);
+      background-color: rgba($font-color, 0.15);
       fill: $font-color;
     }
   }
@@ -124,7 +123,7 @@
       fill: $selected-font-color;
 
       &:hover {
-        background-color: rgba($selected-font-color, .15);
+        background-color: rgba($selected-font-color, 0.15);
       }
     }
   }
@@ -170,6 +169,7 @@
   @include tag-theme(#a26aff, $text-04, $text-04);
 }
 
+// 목록화면 쪽에서 사용 중으로 추후 제거
 // -------------------------
 // not clickable
 // -------------------------
@@ -180,8 +180,12 @@
   }
 }
 
-.tag.tag--not-clickable{
+.tag.tag--not-clickable {
   cursor: default;
+
+  & {
+    @include tag-not-effect($hover-row, $text-03);
+  }
 
   &.tag--red {
     @include tag-not-effect(#ffd7d9, #da1e28);
