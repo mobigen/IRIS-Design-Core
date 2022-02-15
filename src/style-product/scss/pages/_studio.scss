@@ -3176,3 +3176,7 @@
 .modal__head-title {
   width: calc(100% - 240px);
 }
+
+.ag-theme-default .ag-row {
+  overflow: hidden;
+}
