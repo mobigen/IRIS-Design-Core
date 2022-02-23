@@ -307,10 +307,20 @@
   flex-shrink: 0;
 }
 
+.editor-layout-head__object-group {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  overflow: hidden;
+  margin-right: $spacing-xl;
+}
+
 .editor-layout-head__object-list {
   display: flex;
   flex: 1;
   margin-left: $spacing-xs;
+  margin-right: auto;
+  overflow: hidden;
 }
 
 .editor-layout-head__object-list-item {
@@ -321,6 +331,34 @@
   .svg-icon {
     @include svg-icon-stroke($icon-01);
   }
+}
+
+// 화면 사이즈 축소시 객체를 가리는 시점부터 네비게이션 버튼 노출
+@media (max-width: 1505px) {
+  .editor-layout-head__navigation-button {
+    display: flex;
+    margin-left: auto;
+  }
+}
+
+// 화면 사이즈 확대시 객체 전부가 보이는 시점부터 네비게이션 버튼 비노출
+@media (min-width: 1506px) {
+  .editor-layout-head__navigation-button {
+    display: none;
+  } 
+}
+
+.editor-layout-head__navigation-button .button {
+  // 시인성 문제로 아이콘 두께 조절
+  .svg-icon {
+    stroke: $link;
+    stroke-width: 1.5;
+    stroke-opacity: .4;
+  }
+}
+
+.editor-layout-head__navigation-button .button:last-child {
+  margin-left: -1px;
 }
 
 .editor-layout-head__object-list-item--selected {
