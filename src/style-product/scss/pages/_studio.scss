@@ -317,9 +317,7 @@
 
 .editor-layout-head__object-list {
   display: flex;
-  flex: 1;
   margin-left: $spacing-xs;
-  margin-right: auto;
   overflow: hidden;
 }
 
@@ -337,7 +335,6 @@
 @media (max-width: 1505px) {
   .editor-layout-head__navigation-buttons {
     display: flex;
-    margin-left: auto;
   }
 }
 
