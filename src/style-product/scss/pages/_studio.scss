@@ -308,17 +308,28 @@
 }
 
 .editor-layout-head__object-group {
+  position: relative;
   display: flex;
-  flex: 1;
   align-items: center;
+  width: 1132px;
+  margin-right: auto;
   overflow: hidden;
-  margin-right: $spacing-xl;
+}
+
+.editor-layout-head__object-list-inner {
+  position: relative;
+  width: 1080px;
+  height: 100%;
+  overflow: hidden;
+  margin-left: $spacing-xs;
 }
 
 .editor-layout-head__object-list {
+  position: absolute;
+  left: 0;
   display: flex;
-  margin-left: $spacing-xs;
-  overflow: hidden;
+  white-space: nowrap;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 .editor-layout-head__object-list-item {
@@ -332,17 +343,21 @@
 }
 
 // 화면 사이즈 축소시 객체를 가리는 시점부터 네비게이션 버튼 노출
-@media (max-width: 1505px) {
+@media (max-width: 1480px) {
   .object-navigation {
     display: flex;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    background-color: $ui-02;
   }
 }
 
 // 화면 사이즈 확대시 객체 전부가 보이는 시점부터 네비게이션 버튼 비노출
-@media (min-width: 1506px) {
+@media (min-width: 1479px) {
   .object-navigation {
     display: none;
-  } 
+  }
 }
 
 .object-navigation .button {
@@ -350,7 +365,7 @@
   .svg-icon {
     stroke: $link;
     stroke-width: 1.5;
-    stroke-opacity: .4;
+    stroke-opacity: 0.4;
   }
 }
 
@@ -522,7 +537,7 @@
 .object-tag:not([preview]),
 .object-url:not([preview]),
 .object-check-and-radio:not([preview]),
-.object-slider:not([preview]), 
+.object-slider:not([preview]),
 .object-line:not([preview]) {
   border: 1px dashed $ui-04;
 }
@@ -856,7 +871,7 @@
 }
 
 // sankey
-.object-sankey{
+.object-sankey {
   background: $odd-row sankey(77889a) no-repeat center;
 
   &:hover:not([preview]) {
@@ -1153,7 +1168,7 @@
 }
 
 .object-combo-box .select,
-.object-combo-box .select-selector{
+.object-combo-box .select-selector {
   width: 100%;
   height: 100%;
 }
@@ -1576,7 +1591,6 @@
 }
 
 .line--vertical {
-
   .vertical-group {
     height: 100%;
     border-top: 0;
@@ -1585,7 +1599,7 @@
   .border-style--thickness-1 {
     border-left-width: 1px;
   }
-  
+
   .border-style--thickness-2 {
     border-left-width: 2px;
   }
@@ -1685,7 +1699,7 @@
     .tab__button-text.text-italic {
       padding-right: rem(5px);
     }
-    
+
     .tab__item--selected {
       background-color: $ui-03;
 
@@ -1904,7 +1918,7 @@
 .select-container {
   max-height: rem(330px);
 }
-  
+
 .dynamic-form__list::-webkit-scrollbar {
   -webkit-appearance: none;
 }
@@ -1923,12 +1937,12 @@
   background-color: #c1c1c1;
 }
 
-.dynamic-form__list::-webkit-scrollbar-track { 
-  background-color: #fafafa; 
-  border-radius: 8px; 
+.dynamic-form__list::-webkit-scrollbar-track {
+  background-color: #fafafa;
+  border-radius: 8px;
   border-left: 1px solid #ededed;
   border-right: 1px solid #ededed;
-} 
+}
 
 .dynamic-form__list::-webkit-scrollbar-thumb:hover {
   background-color: #7d7d7d;
@@ -2226,11 +2240,11 @@
   border-radius: 2px;
 }
 
-// 차트 > 선 스타일 옵션 추가 
+// 차트 > 선 스타일 옵션 추가
 
 .border-option {
   width: 100%;
-  
+
   &__svg-line {
     width: 100%;
     height: 100%;
@@ -2260,8 +2274,8 @@
 
   .select--disabled {
     .border-style {
-    stroke: $text-05;
-    } 
+      stroke: $text-05;
+    }
   }
 
   .border-style {
@@ -2272,23 +2286,23 @@
   .border-style--thickness-1 {
     stroke-width: 1;
   }
-  
+
   .border-style--thickness-2 {
     stroke-width: 2;
   }
-  
+
   .border-style--thickness-3 {
     stroke-width: 3;
   }
-  
+
   .border-style--thickness-4 {
     stroke-width: 4;
   }
-  
+
   .border-style--thickness-5 {
     stroke-width: 5;
   }
-  
+
   .border-style--thickness-6 {
     stroke-width: 6;
   }
@@ -3188,15 +3202,15 @@
 .data-model__body .select--borderless {
   min-width: auto;
 }
-  
+
 .data-model__body .data-modal__select {
   flex: 1;
 }
 
-.data-model__body .select--borderless .select-selector__button{
+.data-model__body .select--borderless .select-selector__button {
   width: rem(32px);
   padding: 0 5px;
- }
+}
 
 // -------------------------
 // style-core로 옮겨질 검토가 필요한 스타일
