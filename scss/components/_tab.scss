@@ -35,10 +35,10 @@
   color: $primary;
 }
 
-.tab--horizontal .tab__item--selected::after {
+.tab__item--selected::after {
   content: "";
   position: absolute;
-  background-color: $primary !important;
+  background-color: $primary;
 }
 
 .tab__item--disabled {
@@ -118,7 +118,7 @@
   flex-grow: 1;
   flex-direction: column;
 
-  .tab__item:after {
+  .tab__bar:after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -156,13 +156,14 @@
 .tab--vertical {
   .tab__bar {
     flex-direction: column;
-  }
-  .tab__item{
     border-right: 2px solid $ui-04;
   }
 
-  .tab__item.tab__item--selected {
-    border-color: $primary;
+  .tab__item--selected::after {
+    top: 0;
+    right: -2px;
+    width: 2px;
+    height: 100%;
   }
 
   .tab__button {
@@ -174,7 +175,7 @@
 // modifier: container theme
 // -------------------------
 .tab--container {
-  .tab__item:after {
+  .tab__bar:after {
     content: none;
   }
 

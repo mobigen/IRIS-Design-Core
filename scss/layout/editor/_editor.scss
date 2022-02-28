@@ -1,4 +1,6 @@
-// TODO: IAP 등 서비스 만들 떄 재사용 가능한 부분이 있다면 ../layout/common.scss 파일로 분리해야함.
+//-------------------------------------------
+//  편집화면 공통 UI (Studio, ITS)
+// ------------------------------------------
 .editor-layout {
   display: flex;
   flex-direction: column;
@@ -9,7 +11,9 @@
   display: flex;
   flex-direction: column;
   background-color: $ui-01;
-  z-index: z("dropdown"); // head 내부 selectbox의 z-index에 끼치는 영향으로 인해 수정
+  z-index: z(
+    "dropdown"
+  ); // head 내부 selectbox의 z-index에 끼치는 영향으로 인해 수정
 }
 
 .editor-layout-head__top-bar {
@@ -37,7 +41,7 @@
 .editor-layout-head__title {
   @include line-height("heading");
   max-width: rem(400px);
-  overflow: hidden
+  overflow: hidden;
 }
 
 .editor-layout-head__title-text {
@@ -65,8 +69,8 @@
 }
 
 .editor-layout-head__action-buttons {
-  .text-input-group + .button,
-  .button + .button,
+  .text-input-group + div,
+  div + div,
   .select + .button,
   .button + .select {
     margin-left: $spacing-2xs;
@@ -107,7 +111,7 @@
   flex: 1;
   overflow: auto;
   background-color: $ui-04;
-    transition: all $duration-slow-02 motion(standard, productive);
+  transition: all $duration-slow-02 motion(standard, productive);
 }
 
 .editor-layout-body__canvas {
@@ -118,8 +122,20 @@
 .canvas-area {
   width: 100%;
   height: 100%;
-  background-image: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) 1px, transparent 0, transparent 10px),
-    repeating-linear-gradient(-90deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) 1px, transparent 0, transparent 10px);
+  background-image: repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.05),
+      rgba(0, 0, 0, 0.05) 1px,
+      transparent 0,
+      transparent 10px
+    ),
+    repeating-linear-gradient(
+      -90deg,
+      rgba(0, 0, 0, 0.05),
+      rgba(0, 0, 0, 0.05) 1px,
+      transparent 0,
+      transparent 10px
+    );
   background-size: 10px 10px;
   background-position: 1px 1px;
 }
