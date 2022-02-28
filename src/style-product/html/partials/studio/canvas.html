@@ -1,5 +1,5 @@
 <div id="report-canvas" class="editor-layout-body__canvas-wrap">
-  <div class="editor-layout-body__canvas" style="width: 1920px; height: 2950px;">
+  <div class="editor-layout-body__canvas" style="width: 1920px; height: 3200px;">
     <div style="display:block;position:relative;width:100%;height:100%;">
       <div style="display:block;position:relative;width:100%;height:100%;">
         <div id="canvas-area" style="width: 100%; height: 100%; background-color: rgb(255, 255, 255);">
@@ -23,14 +23,14 @@
           </div> -->
 
           <!-- background-image 적용 -->
-          <div class="canvas-object object-area" style="top: 50px;left: 50px;width: 200px;height: 150px;">
+          <div class="canvas-object object-table" style="top: 50px;left: 50px;width: 200px;height: 150px;">
             <div style="width: 100%; height: 100%;">
             </div>
           </div>
 
           <!-- 박스 클릭 시 사이즈 조절 박스 활성화 -->
           <span style="position: absolute; top: 30px; left: 260px;">차트(selected/활성화)</span>
-          <div class="canvas-object object-area canvas-object--active chart-bg-none" style="top: 50px;left: 260px;width: 200px;height: 150px;">
+          <div class="canvas-object object-table canvas-object--active chart-bg-none" style="top: 50px;left: 260px;width: 200px;height: 150px;">
             <!-- 크기 조절 상자 -->
             <span class="tl"></span>
             <span class="tc"></span>
@@ -2029,27 +2029,27 @@
               <ul class="tab__bar">
                 <li class="tab__item" style="width: 20%;">
                   <button type="button" class="tab__button">
-                    <span class="tab__button-text">Tab1</span>
+                    <span class="tab__button-text text-bold">Tab1</span>
                   </button>
                 </li>
                 <li class="tab__item tab__item--selected" style="width: 20%;">
                   <button type="button" class="tab__button">
-                    <span class="tab__button-text">Tab2</span>
+                    <span class="tab__button-text text-bold">Tab2</span>
                   </button>
                 </li>
                 <li class="tab__item" style="width: 20%;">
                   <button type="button" class="tab__button">
-                    <span class="tab__button-text">Tab3</span>
+                    <span class="tab__button-text text-bold">Tab3</span>
                   </button>
                 </li>
                 <li class="tab__item" style="width: 20%;">
                   <button type="button" class="tab__button">
-                    <span class="tab__button-text">Tab4</span>
+                    <span class="tab__button-text text-bold">Tab4</span>
                   </button>
                 </li>
                 <li class="tab__item tab__item--disabled" style="width: 20%;">
                   <button type="button" class="tab__button">
-                    <span class="tab__button-text">Tab5-disabled</span>
+                    <span class="tab__button-text text-bold">Tab5-disabled</span>
                   </button>
                 </li>
               </ul>
@@ -2239,7 +2239,7 @@
           <p style="position: absolute; top: 1240px; left: 50px;">데이터 객체</p>
           <div class="canvas-object object-hidden" style="top: 1260px; left: 50px; width: 200px; height: 30px;">
             <svg class="object-hidden__icon svg-icon">
-              <use xlink:href="#data"></use>
+              <use xlink:href="#data-model"></use>
             </svg>
             <div class="object-hidden__text">
               <span>common_data_1</span>
@@ -2249,7 +2249,7 @@
           <p style="position: absolute; top: 1240px; left: 260px;">박스 클릭 상태 <span class="highlight">.active</span></p>
           <div class="canvas-object object-hidden canvas-object--active" style="top: 1260px; left: 260px; width: 200px; height: 30px;">
             <svg class="object-hidden__icon svg-icon">
-              <use xlink:href="#data"></use>
+              <use xlink:href="#data-model"></use>
             </svg>
             <div class="object-hidden__text">
               <span>common_data_1</span>
@@ -2269,7 +2269,7 @@
           <p style="position: absolute; top: 1240px; left: 470px;">데이터가 연결된 상태 <span class="highlight">.loaded</span></p>
           <div class="canvas-object object-hidden object-hidden--loaded" style="top: 1260px; left: 470px; width: 200px; height: 30px;">
             <svg class="object-hidden__icon svg-icon">
-              <use xlink:href="#data"></use>
+              <use xlink:href="#data-model"></use>
             </svg>
             <div class="object-hidden__text">
               <span>common_data_1</span>
@@ -2290,7 +2290,7 @@
           <p style="position: absolute; top: 1240px; left: 890px;">연결 상태 <span class="highlight">.canvas-object--connected</span></p>
           <div class="canvas-object object-hidden object-hidden--loaded canvas-object--connected" style="top: 1260px; left: 890px; width: 200px; height: 30px;">
             <svg class="object-hidden__icon svg-icon">
-              <use xlink:href="#data"></use>
+              <use xlink:href="#data-model"></use>
             </svg>
             <div class="object-hidden__text">
               <span>common_data_1</span>
@@ -2338,7 +2338,7 @@
           <p style="position: absolute; top: 1240px; left: 1100px;">미연결 상태 <span class="highlight">.canvas-object--unconnected</span></p>
           <div class="canvas-object object-hidden object-hidden--loaded canvas-object--unconnected" style="top: 1260px; left: 1100px; width: 200px; height: 30px;">
             <svg class="object-hidden__icon svg-icon">
-              <use xlink:href="#data"></use>
+              <use xlink:href="#data-model"></use>
             </svg>
             <div class="object-hidden__text">
               <span>common_data_1</span>
@@ -3930,6 +3930,39 @@
           </div>
           <!-- //증감률  -->
 
+          <!-- 데이터 유형설정 별 히든객체 예시: 데이터 모델 -->
+          <span style="position: absolute; top: 2500px; left: 1150px;">데이터 모델(기본값)</span>
+          <div class="canvas-object object-hidden" style="top: 2530px; left: 1150px; width: 200px; height: 30px;">
+            <svg class="object-hidden__icon svg-icon">
+              <use xlink:href="#data-model"></use>
+            </svg>
+            <div class="object-hidden__text">
+              <span>common_data_1</span>
+            </div>
+          </div>
+          
+          <!-- 데이터 유형설정 별 히든객체 예시: DSMS -->
+          <span style="position: absolute; top: 2500px; left: 1360px;">DSMS</span>
+          <div class="canvas-object object-hidden" style="top: 2530px; left: 1360px; width: 200px; height: 30px;">
+            <svg class="object-hidden__icon svg-icon">
+              <use xlink:href="#data-storage"></use>
+            </svg>
+            <div class="object-hidden__text">
+              <span>common_data_1</span>
+            </div>
+          </div>
+
+          <!-- 데이터 유형설정 별 히든객체 예시: REST-API -->
+          <span style="position: absolute; top: 2500px; left: 1570px;">REST-API</span>
+          <div class="canvas-object object-hidden" style="top: 2530px; left: 1570px; width: 200px; height: 30px;">
+            <svg class="object-hidden__icon svg-icon">
+              <use xlink:href="#restapi"></use>
+            </svg>
+            <div class="object-hidden__text">
+              <span>common_data_1</span>
+            </div>
+          </div>
+
           <!-- slider : 초기 enabled 상태 -->
           <span style="position:absolute;top:2650px;left:50px;">slider : 초기 enabled 상태</span>
           <div class="canvas-object object-slider" style="top:2670px;left:50px;width:300px;height:102px;">
@@ -4167,9 +4200,76 @@
             <!-- // slider: select -->
 
             <!-- 반응형 가이드라인 -->
-            <span style="position:absolute;top:2840px;left:50px;">반응형 : 가이드라인</span>
-            <div class="responsive__guide-line" style="top:2870px;left:0;"></div>
+            <span style="position:absolute;top:2810px;left:50px;">반응형 : 가이드라인</span>
+            <div class="responsive__guide-line" style="top:2840px;left:0;"></div>
             <!-- // 반응형 가이드라인 -->
+
+            <!-- 구분선 -->
+            <!-- slider : 초기 enabled 상태 -->
+            <span style="position:absolute;top:2920px;left:50px;">구분선 : 초기 enabled 상태</span>
+            <div class="canvas-object object-line" style="top:2940px;left:50px;width:300px;height:102px;">
+              <div class="line line--horizontal">
+                <div class="border-style--thickness-3 border-style--solid" style="border-color: #b2bdcb;"></div>
+              </div>
+            </div>
+            <!-- //구분선 : 초기 enabled 상태 -->
+            <!-- 구분선 : 가로형 클릭한 상태 -->
+            <span style="position:absolute;top:2920px;left:380px;">구분선 : 가로형 클릭한 상태</span>
+            <div class="canvas-object object-line canvas-object--active" style="top:2940px;left:380px;width:300px;height:102px;">
+              <div class="line line--horizontal">
+                <div class="border-style--thickness-2 border-style--dotted" style="border-color: #b2bdcb;"></div>
+              </div>
+              <!-- 크기 조절 상자 -->
+              <span class="tl"></span>
+              <span class="tc"></span>
+              <span class="tr"></span>
+              <span class="cl"></span>
+              <span class="cr"></span>
+              <span class="bl"></span>
+              <span class="bc"></span>
+              <span class="br"></span>
+              <!-- //크기 조절 상자 -->
+            </div>
+            <!-- // 구분선 : 가로형 클릭한 상태 -->
+            <!-- 구분선 : 세로형 클릭한 상태 -->
+            <span style="position:absolute;top:2920px;left:710px;">구분선 : 세로형 클릭한 상태</span>
+            <div class="canvas-object object-line canvas-object--active" style="top:2940px;left:710px;width:140px;height:230px;">
+              <div class="line line--vertical">
+                <div class="vertical-group border-style--thickness-4 border-style--dashed" style="border-color: #b2bdcb;"></div>
+              </div>
+              <!-- 크기 조절 상자 -->
+              <span class="tl"></span>
+              <span class="tc"></span>
+              <span class="tr"></span>
+              <span class="cl"></span>
+              <span class="cr"></span>
+              <span class="bl"></span>
+              <span class="bc"></span>
+              <span class="br"></span>
+              <!-- //크기 조절 상자 -->
+            </div>
+            <!-- // 구분선 : 세로형 클릭한 상태 -->
+            <!-- 구분선 : deselect -->
+            <span style="position:absolute;top:2920px;left:880px;">구분선 : deselect</span>
+            <div class="canvas-object object-line canvas-object--deselect" style="top:2940px;left:880px;width:140px;height:232px;">
+              <div class="line line--vertical">
+                <div class="vertical-group border-style--thickness-5 border-style--double" style="border-color: #b2bdcb;"></div>
+              </div>
+            </div>
+            <!-- // 구분선 : deselect -->
+            <!-- 구분선 : select -->
+            <span style="position:absolute;top:2920px;left:1050px;">구분선 : select</span>
+            <div class="canvas-object object-line canvas-object--select" style="top:2940px;left:1050px;width:300px;height:102px;">
+              <div class="line line--horizontal">
+                <div class="border-style--thickness-6 border-style--dotted" style="border-color: #b2bdcb;"></div>
+              </div>
+              <div class="checkbox checkbox--primary">
+                <input class="checkbox__input" type="checkbox" id="tag_ckb-02" checked="checked">
+                <label class="checkbox__label" for="tag_ckb-02"></label>
+              </div>
+            </div>
+            <!-- // 구분선 : select -->
+            <!-- // 구분선 -->            
 
           </div>
         </div>

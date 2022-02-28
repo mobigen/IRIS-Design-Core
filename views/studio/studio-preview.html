@@ -21,8 +21,13 @@
         <div class="editor-preview-layout-body">
           <div class="editor-preview-layout__preview-wrap">
             <!-- 화면 캡쳐 버튼 -->
-            <div id="preview-button" class="editor-preview-layout__capture-button" style="right: 30px; top: 50px">
-              <button type="button" class="button button--support button--icon">
+            <div id="preview-button" class="editor-preview-layout__buttons" style="right: 30px; top: 50px">
+              <button type="button" class="button button--support button--icon editor-preview-layout__button">
+                <svg class="svg-icon">
+                  <use xlink:href="#print"></use>
+                </svg>
+              </button>
+              <button type="button" class="button button--support button--icon editor-preview-layout__button">
                 <svg class="svg-icon">
                   <use xlink:href="#capture"></use>
                 </svg>
@@ -35,7 +40,7 @@
               </div>
             </div>
             <!-- 유저가 설정한 캔버스 가로, 세로 사이즈가 inline으로 들어감 -->
-            <div class="editor-preview-layout__preview" style="width: 1920px; height: 1080px;">
+            <div id="preview-container" class="editor-preview-layout__preview" style="width: 1920px; height: 1080px;">
               <div class="canvas-object object-button" style="width: 200px; height: 40px;" preview>
                 <button class="button button--primary">
                   <span>button</span>

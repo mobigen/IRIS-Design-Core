@@ -3,16 +3,17 @@
 // ---------------------------------------------
 
 // v-tooltip이 뜨기 전에 표시해주는 인포 아이콘 영역
-.v-tooltip{
+.v-tooltip {
   display: flex;
-  height: rem(16px);
+  height: rem(20px);
+  justify-self: center;
   align-items: center;
 }
 
-.v-tooltip__icon{
-  width: rem(16px);
-  height: rem(16px);
-  fill: $text-03;
+.v-tooltip__icon {
+  width: rem(20px);
+  height: rem(20px);
+  fill: $text-02;
 }
 
 // v-tooltip이 화면에 생성되었을 때의 tooltip 영역
@@ -60,8 +61,22 @@
 
     .tooltip-arrow {
       top: -4px;
-      left: 50%;
-      margin-left: -$spacing-2xs;
+    }
+  }
+
+  &[x-placement^="bottom-end"] {
+    margin-top: 10px;
+
+    .tooltip-arrow {
+      top: -4px;
+    }
+  }
+
+  &[x-placement^="bottom-start"] {
+    margin-top: 10px;
+
+    .tooltip-arrow {
+      top: -4px;
     }
   }
 
@@ -100,14 +115,14 @@
 
 // popover - 기존 tooltip UI와 다른 유형의 tooltip
 
-.popover.tooltip{
+.popover.tooltip {
   padding: $spacing-2xs;
   min-width: rem(380px);
   background-color: $ui-01;
   box-shadow: 0 2px 12px 2px rgba(0, 0, 0, 0.14);
 }
 
-.popover.tooltip .table{
+.popover.tooltip .table {
   border: none;
 }
 
@@ -116,7 +131,7 @@
   border-color: darken($ui-01, 8%);
 }
 
-.popover{
+.popover {
   // Tooltip 위로 위치
   .tooltip--top {
     margin-bottom: 10px;

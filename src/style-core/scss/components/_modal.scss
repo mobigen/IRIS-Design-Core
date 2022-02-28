@@ -37,6 +37,11 @@
   color: $text-02;
 }
 
+.modal__head-tooltip{
+  margin-left: $spacing-3xs;
+  margin-bottom: $spacing-3xs;
+}
+
 .modal__head-toolbar ~ .modal__head-close-button {
   margin-left: $spacing-sm;
 }
@@ -75,15 +80,16 @@
   background-color: $ui-01;
 }
 
-.modal__foot-main-buttons {
-  display: flex;
-  margin-left: auto;
-}
-
-.modal__foot .button + .button {
+.modal__foot .button + .button,
+.modal__foot div + div,
+.modal__foot .modal__foot-main-buttons div + div{
   margin-left: $spacing-xs;
 }
 
+.modal__foot .modal__foot-main-buttons {
+  display: flex;
+  margin-left: auto;
+}
 //   midal size
 //   ==========================================
 //   xs   ||  350px
@@ -173,6 +179,17 @@
   flex: 1 0 auto;
   padding-right: $spacing-md;
   padding-left: $spacing-md;
+}
+
+//modal에서 탭이 포함될때 ul에 아래 기본선 추가 
+.modal .tab--horizontal .tab__bar::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: $ui-04;
 }
 
 .modal__body--overflow-hidden {

@@ -20,7 +20,7 @@
     이외 사이즈는 인라인 스타일로 추가
 -->
 <!-- 시각화 옵션 설정 모달 -->
-<div class="modal modal--xl" style="position: static; width: 820px;">
+<div class="modal modal--lg" style="position: static; width: 800px;">
   <div class="modal__head">
     <div class="modal__head-title">
       <span class="modal__head-title-text">시각화 옵션</span>
@@ -253,22 +253,46 @@
                       <div class="toggle-button">
                         <!-- toggle-button__item--selected 클래스 추가시 버튼 활성화 -->
                         <button class="toggle-button__item" type="button">
-                          <span class="toggle-button__text">Toggle Button</span>
+                          <span class="toggle-button__text">객체 맞춤</span>
                         </button>
                         <button class="toggle-button__item toggle-button__item--selected" type="button">
-                          <span class="toggle-button__text">Toggle Button</span>
+                          <span class="toggle-button__text">사용자 설정</span>
                         </button>
                       </div>
                       <div class="h-group ml-8">
-                        <div class="text-input-wrap w-120">
-                          <span class="text-input-wrap__prefix">가로</span>
+                        <div class="select">
+                          <div class="select-selector">
+                            <button class="select-selector__button" type="button">
+                              <span class="select-selector__title">가로</span>
+                              <svg class="svg-icon select-selector__icon">
+                                <use xlink:href="#chevron-down-medium"></use>
+                              </svg>
+                            </button>
+                          </div>
+                          <div class="select-container">
+                            <ul class="select-container__list">
+                              <li class="select-container__item select-container__item--selected">
+                                <button class="select-container__button" type="button">
+                                  <span class="select-container__text">가로</span>
+                                </button>
+                              </li>
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <span class="select-container__text">세로</span>
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="text-input-wrap w-112">
                           <input type="number" class="text-input" value="">
                           <span class="text-input-wrap__suffix">px</span>
                         </div>
-                        <div class="text-input-wrap w-120 ml-8">
-                          <span class="text-input-wrap__prefix">세로</span>
-                          <input type="number" class="text-input" value="">
-                          <span class="text-input-wrap__suffix">px</span>
+                        <div class="notification-message notification-message--info ml-8">
+                          <svg class="notification-message__icon svg-icon" aria-hidden="true">
+                            <use xlink:href="#info-fill"></use>
+                          </svg>
+                          <span class="notification-message__text">객체 크기보다 작게 설정 할 수 없습니다.</span>
                         </div>
                       </div>
                     </div>
@@ -445,6 +469,893 @@
                     </div>
                   </div>
                 </div>
+                <!-- 선 두께 옵션 추가 -->
+                <div class="form__item">
+                  <label class="form__label">
+                    <span class="form__label-text whitespace-normal">
+                      선 두께
+                    </span>
+                  </label>
+                  <div class="border-option">
+                    <div class="v-group">
+                      <div class="h-group">
+                        <div class="select w-160 select--disabled">
+                          <div class="select-selector">
+                            <button class="select-selector__button" type="button">
+                              <svg class="border-option__svg-line">
+                                <line class="border-style border-style--thickness-1" x1="100%" y1="50%" x2="0%" y2="50%"></line>
+                              </svg>
+                              <svg class="svg-icon select-selector__icon">
+                                <use xlink:href="#chevron-down-medium"></use>
+                              </svg>
+                            </button>
+                          </div>
+                          <div class="select-container">
+                            <ul class="select-container__list">
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <svg class="border-option__svg-line">
+                                    <line class="border-style border-style--thickness-1" x1="93%" y1="50%" x2="0%" y2="50%"></line>
+                                  </svg>
+                                  <span class="select-container__text">1</span>
+                                </button>
+                              </li>
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <svg class="border-option__svg-line">
+                                    <line class="border-style border-style--thickness-2" x1="93%" y1="50%" x2="0%" y2="50%"></line>
+                                  </svg>
+                                  <span class="select-container__text">2</span>
+                                </button>
+                              </li>
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <svg class="border-option__svg-line">
+                                    <line class="border-style border-style--thickness-3" x1="93%" y1="50%" x2="0%" y2="50%"></line>
+                                  </svg>
+                                  <span class="select-container__text">3</span>
+                                </button>
+                              </li>
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <svg class="border-option__svg-line">
+                                    <line class="border-style border-style--thickness-4" x1="93%" y1="50%" x2="0%" y2="50%"></line>
+                                  </svg>
+                                  <span class="select-container__text">4</span>
+                                </button>
+                              </li>
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <svg class="border-option__svg-line">
+                                    <line class="border-style border-style--thickness-5" x1="93%" y1="50%" x2="0%" y2="50%"></line>
+                                  </svg>
+                                  <span class="select-container__text">5</span>
+                                </button>
+                              </li>
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <svg class="border-option__svg-line">
+                                    <line class="border-style border-style--thickness-6" x1="93%" y1="50%" x2="0%" y2="50%"></line>
+                                  </svg>
+                                  <span class="select-container__text">6</span>
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="toggle-switch ml-8">
+                          <label for="toggleSwitch2" class="toggle-switch__label">상세설정</label>
+                          <button id="toggleSwitch2" class="toggle-switch__switch toggle-switch__switch--selected" type="button">
+                            <span class="toggle-switch__handle">
+                              <span class="ir-pm"></span>
+                            </span>
+                          </button>
+                        </div>
+                        <div class="notification-message notification-message--info ml-8">
+                          <svg class="notification-message__icon svg-icon" aria-hidden="true">
+                            <use xlink:href="#info-fill"></use>
+                          </svg>
+                          <span class="notification-message__text">첫 번째 설정 값부터 순서대로 반복 적용 됩니다.</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="v-group mt-8">
+                      <div class="border-option__inner">
+                        <div class="border-option__item">
+                          <div class="select">
+                            <div class="select-selector">
+                              <button class="select-selector__button" type="button">
+                                <svg class="border-option__svg-line">
+                                  <line class="border-style border-style--thickness-1" x1="100%" y1="50%" x2="0%" y2="50%"></line>
+                                </svg>
+                                <svg class="svg-icon select-selector__icon">
+                                  <use xlink:href="#chevron-down-medium"></use>
+                                </svg>
+                              </button>
+                            </div>
+                            <div class="select-container">
+                              <ul class="select-container__list">
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-1" x1="93%" y1="50%" x2="0%" y2="50%"></line>
+                                    </svg>
+                                    <span class="select-container__text">1</span>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-2" x1="93%" y1="50%" x2="0%" y2="50%"></line>
+                                    </svg>
+                                    <span class="select-container__text">2</span>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-3" x1="93%" y1="50%" x2="0%" y2="50%"></line>
+                                    </svg>
+                                    <span class="select-container__text">3</span>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-4" x1="93%" y1="50%" x2="0%" y2="50%"></line>
+                                    </svg>
+                                    <span class="select-container__text">4</span>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-5" x1="93%" y1="50%" x2="0%" y2="50%"></line>
+                                    </svg>
+                                    <span class="select-container__text">5</span>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-6" x1="93%" y1="50%" x2="0%" y2="50%"></line>
+                                    </svg>
+                                    <span class="select-container__text">6</span>
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <button type="button" class="button button--icon button--support">
+                            <svg class="svg-icon" aria-hidden="true">
+                                <use xlink:href="#plus"></use>
+                            </svg>
+                          </button>
+                          <button type="button" class="button button--icon button--danger">
+                            <svg class="svg-icon" aria-hidden="true">
+                                <use xlink:href="#minus"></use>
+                            </svg>
+                            </button>
+                        </div>
+                        <div class="border-option__item">
+                          <div class="select">
+                            <div class="select-selector">
+                              <button class="select-selector__button" type="button">
+                                <svg class="border-option__svg-line">
+                                  <line class="border-style border-style--thickness-2" x1="100%" y1="50%" x2="0%" y2="50%"></line>
+                                </svg>
+                                <svg class="svg-icon select-selector__icon">
+                                  <use xlink:href="#chevron-down-medium"></use>
+                                </svg>
+                              </button>
+                            </div>
+                            <div class="select-container">
+                              <ul class="select-container__list">
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-1" x1="93%" y1="50%" x2="0%" y2="50%"></line>
+                                    </svg>
+                                    <span class="select-container__text">1</span>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-2" x1="93%" y1="50%" x2="0%" y2="50%"></line>
+                                    </svg>
+                                    <span class="select-container__text">2</span>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-3" x1="93%" y1="50%" x2="0%" y2="50%"></line>
+                                    </svg>
+                                    <span class="select-container__text">3</span>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-4" x1="93%" y1="50%" x2="0%" y2="50%"></line>
+                                    </svg>
+                                    <span class="select-container__text">4</span>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-5" x1="93%" y1="50%" x2="0%" y2="50%"></line>
+                                    </svg>
+                                    <span class="select-container__text">5</span>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-6" x1="93%" y1="50%" x2="0%" y2="50%"></line>
+                                    </svg>
+                                    <span class="select-container__text">6</span>
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <button type="button" class="button button--icon button--support">
+                            <svg class="svg-icon" aria-hidden="true">
+                                <use xlink:href="#plus"></use>
+                            </svg>
+                          </button>
+                          <button type="button" class="button button--icon button--danger">
+                            <svg class="svg-icon" aria-hidden="true">
+                                <use xlink:href="#minus"></use>
+                            </svg>
+                            </button>
+                        </div>
+                        <div class="border-option__item">
+                          <div class="select">
+                            <div class="select-selector">
+                              <button class="select-selector__button" type="button">
+                                <svg class="border-option__svg-line">
+                                  <line class="border-style border-style--thickness-3" x1="100%" y1="50%" x2="0%" y2="50%"></line>
+                                </svg>
+                                <svg class="svg-icon select-selector__icon">
+                                  <use xlink:href="#chevron-down-medium"></use>
+                                </svg>
+                              </button>
+                            </div>
+                            <div class="select-container">
+                              <ul class="select-container__list">
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-1" x1="93%" y1="50%" x2="0%" y2="50%"></line>
+                                    </svg>
+                                    <span class="select-container__text">1</span>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-2" x1="93%" y1="50%" x2="0%" y2="50%"></line>
+                                    </svg>
+                                    <span class="select-container__text">2</span>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-3" x1="93%" y1="50%" x2="0%" y2="50%"></line>
+                                    </svg>
+                                    <span class="select-container__text">3</span>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-4" x1="93%" y1="50%" x2="0%" y2="50%"></line>
+                                    </svg>
+                                    <span class="select-container__text">4</span>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-5" x1="93%" y1="50%" x2="0%" y2="50%"></line>
+                                    </svg>
+                                    <span class="select-container__text">5</span>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-6" x1="93%" y1="50%" x2="0%" y2="50%"></line>
+                                    </svg>
+                                    <span class="select-container__text">6</span>
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <button type="button" class="button button--icon button--support">
+                            <svg class="svg-icon" aria-hidden="true">
+                                <use xlink:href="#plus"></use>
+                            </svg>
+                          </button>
+                          <button type="button" class="button button--icon button--danger">
+                            <svg class="svg-icon" aria-hidden="true">
+                                <use xlink:href="#minus"></use>
+                            </svg>
+                            </button>
+                        </div>
+                        <div class="border-option__item">
+                          <div class="select">
+                            <div class="select-selector">
+                              <button class="select-selector__button" type="button">
+                                <svg class="border-option__svg-line">
+                                  <line class="border-style border-style--thickness-4" x1="100%" y1="50%" x2="0%" y2="50%"></line>
+                                </svg>
+                                <svg class="svg-icon select-selector__icon">
+                                  <use xlink:href="#chevron-down-medium"></use>
+                                </svg>
+                              </button>
+                            </div>
+                            <div class="select-container">
+                              <ul class="select-container__list">
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-1" x1="93%" y1="50%" x2="0%" y2="50%"></line>
+                                    </svg>
+                                    <span class="select-container__text">1</span>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-2" x1="93%" y1="50%" x2="0%" y2="50%"></line>
+                                    </svg>
+                                    <span class="select-container__text">2</span>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-3" x1="93%" y1="50%" x2="0%" y2="50%"></line>
+                                    </svg>
+                                    <span class="select-container__text">3</span>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-4" x1="93%" y1="50%" x2="0%" y2="50%"></line>
+                                    </svg>
+                                    <span class="select-container__text">4</span>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-5" x1="93%" y1="50%" x2="0%" y2="50%"></line>
+                                    </svg>
+                                    <span class="select-container__text">5</span>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-6" x1="93%" y1="50%" x2="0%" y2="50%"></line>
+                                    </svg>
+                                    <span class="select-container__text">6</span>
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <button type="button" class="button button--icon button--support">
+                            <svg class="svg-icon" aria-hidden="true">
+                                <use xlink:href="#plus"></use>
+                            </svg>
+                          </button>
+                          <button type="button" class="button button--icon button--danger">
+                            <svg class="svg-icon" aria-hidden="true">
+                                <use xlink:href="#minus"></use>
+                            </svg>
+                            </button>
+                        </div>
+                        <div class="border-option__item">
+                          <div class="select">
+                            <div class="select-selector">
+                              <button class="select-selector__button" type="button">
+                                <svg class="border-option__svg-line">
+                                  <line class="border-style border-style--thickness-5" x1="100%" y1="50%" x2="0%" y2="50%"></line>
+                                </svg>
+                                <svg class="svg-icon select-selector__icon">
+                                  <use xlink:href="#chevron-down-medium"></use>
+                                </svg>
+                              </button>
+                            </div>
+                            <div class="select-container">
+                              <ul class="select-container__list">
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-1" x1="93%" y1="50%" x2="0%" y2="50%"></line>
+                                    </svg>
+                                    <span class="select-container__text">1</span>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-2" x1="93%" y1="50%" x2="0%" y2="50%"></line>
+                                    </svg>
+                                    <span class="select-container__text">2</span>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-3" x1="93%" y1="50%" x2="0%" y2="50%"></line>
+                                    </svg>
+                                    <span class="select-container__text">3</span>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-4" x1="93%" y1="50%" x2="0%" y2="50%"></line>
+                                    </svg>
+                                    <span class="select-container__text">4</span>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-5" x1="93%" y1="50%" x2="0%" y2="50%"></line>
+                                    </svg>
+                                    <span class="select-container__text">5</span>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-6" x1="93%" y1="50%" x2="0%" y2="50%"></line>
+                                    </svg>
+                                    <span class="select-container__text">6</span>
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <button type="button" class="button button--icon button--support">
+                            <svg class="svg-icon" aria-hidden="true">
+                                <use xlink:href="#plus"></use>
+                            </svg>
+                          </button>
+                          <button type="button" class="button button--icon button--danger">
+                            <svg class="svg-icon" aria-hidden="true">
+                                <use xlink:href="#minus"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="border-option__item">
+                          <div class="select">
+                            <div class="select-selector">
+                              <button class="select-selector__button" type="button">
+                                <svg class="border-option__svg-line">
+                                  <line class="border-style border-style--thickness-6" x1="100%" y1="50%" x2="0%" y2="50%"></line>
+                                </svg>
+                                <svg class="svg-icon select-selector__icon">
+                                  <use xlink:href="#chevron-down-medium"></use>
+                                </svg>
+                              </button>
+                            </div>
+                            <div class="select-container">
+                              <ul class="select-container__list">
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-1" x1="93%" y1="50%" x2="0%" y2="50%"></line>
+                                    </svg>
+                                    <span class="select-container__text">1</span>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-2" x1="93%" y1="50%" x2="0%" y2="50%"></line>
+                                    </svg>
+                                    <span class="select-container__text">2</span>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-3" x1="93%" y1="50%" x2="0%" y2="50%"></line>
+                                    </svg>
+                                    <span class="select-container__text">3</span>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-4" x1="93%" y1="50%" x2="0%" y2="50%"></line>
+                                    </svg>
+                                    <span class="select-container__text">4</span>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-5" x1="93%" y1="50%" x2="0%" y2="50%"></line>
+                                    </svg>
+                                    <span class="select-container__text">5</span>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-6" x1="93%" y1="50%" x2="0%" y2="50%"></line>
+                                    </svg>
+                                    <span class="select-container__text">6</span>
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <button type="button" class="button button--icon button--support">
+                            <svg class="svg-icon" aria-hidden="true">
+                                <use xlink:href="#plus"></use>
+                            </svg>
+                          </button>
+                          <button type="button" class="button button--icon button--danger">
+                            <svg class="svg-icon" aria-hidden="true">
+                                <use xlink:href="#minus"></use>
+                            </svg>
+                            </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- //선 두께 옵션 추가 -->
+                <!-- 선 종류 옵션 추가 -->
+                <div class="form__item">
+                  <label class="form__label">
+                    <span class="form__label-text whitespace-normal">
+                      선 종류
+                    </span>
+                  </label>
+                  <div class="border-option">
+                    <div class="v-group">
+                      <div class="h-group">
+                        <div class="select w-160">
+                          <div class="select-selector">
+                            <button class="select-selector__button" type="button">
+                              <svg class="border-option__svg-line">
+                                <line class="border-style border-style--thickness-2" x1="100%" y1="50%" x2="0%" y2="50%"></line>
+                              </svg>
+                              <svg class="svg-icon select-selector__icon">
+                                <use xlink:href="#chevron-down-medium"></use>
+                              </svg>
+                            </button>
+                          </div>
+                          <div class="select-container">
+                            <ul class="select-container__list">
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <svg class="border-option__svg-line">
+                                    <line class="border-style border-style--thickness-2" x1="100%" y1="50%" x2="0%" y2="50%"></line>
+                                  </svg>
+                                </button>
+                              </li>
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <svg class="border-option__svg-line">
+                                    <line class="border-style border-style--thickness-2" x1="100%" y1="50%" x2="0%" y2="50%" stroke-dasharray="2,6"></line>
+                                  </svg>
+                                </button>
+                              </li>
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <svg class="border-option__svg-line">
+                                    <line class="border-style border-style--thickness-2" x1="100%" y1="50%" x2="0%" y2="50%" stroke-dasharray="8,6"></line>
+                                  </svg>
+                                </button>
+                              </li>
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <svg class="border-option__svg-line">
+                                    <line class="border-style border-style--thickness-2" x1="100%" y1="50%" x2="0%" y2="50%" stroke-dasharray="2,2"></line>
+                                  </svg>
+                                </button>
+                              </li>
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <svg class="border-option__svg-line">
+                                    <line class="border-style border-style--thickness-2" x1="100%" y1="50%" x2="0%" y2="50%" stroke-dasharray="6,2"></line>
+                                  </svg>
+                                </button>
+                              </li>
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <svg class="border-option__svg-line">
+                                    <line class="border-style border-style--thickness-2" x1="100%" y1="50%" x2="0%" y2="50%" stroke-dasharray="6,2,2,2"></line>
+                                  </svg>
+                                </button>
+                              </li>
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <svg class="border-option__svg-line">
+                                    <line class="border-style border-style--thickness-2" x1="100%" y1="50%" x2="0%" y2="50%" stroke-dasharray="6,2,2,2,2,2"></line>
+                                  </svg>
+                                </button>
+                              </li>
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <svg class="border-option__svg-line">
+                                    <line class="border-style border-style--thickness-2" x1="100%" y1="50%" x2="0%" y2="50%" stroke-dasharray="16,6"></line>
+                                  </svg>
+                                </button>
+                              </li>
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <svg class="border-option__svg-line">
+                                    <line class="border-style border-style--thickness-2" x1="100%" y1="50%" x2="0%" y2="50%" stroke-dasharray="8,6,2,6"></line>
+                                  </svg>
+                                </button>
+                              </li>
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <svg class="border-option__svg-line">
+                                    <line class="border-style border-style--thickness-2" x1="100%" y1="50%" x2="0%" y2="50%" stroke-dasharray="16,6,2,6"></line>
+                                  </svg>
+                                </button>
+                              </li>
+                              <li class="select-container__item">
+                                <button class="select-container__button" type="button">
+                                  <svg class="border-option__svg-line">
+                                    <line class="border-style border-style--thickness-2" x1="100%" y1="50%" x2="0%" y2="50%" stroke-dasharray="16,6,2,6,2,6"></line>
+                                  </svg>
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="toggle-switch ml-8">
+                          <label for="toggleSwitch2" class="toggle-switch__label">상세설정</label>
+                          <button id="toggleSwitch2" class="toggle-switch__switch" type="button">
+                            <span class="toggle-switch__handle">
+                              <span class="ir-pm"></span>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="v-group mt-8">
+                      <div class="border-option__inner">
+                        <!-- solid -->
+                        <div class="border-option__item">
+                          <div class="select">
+                            <div class="select-selector">
+                              <button class="select-selector__button" type="button">
+                                <svg class="border-option__svg-line">
+                                  <line class="border-style border-style--thickness-2" x1="100%" y1="50%" x2="0%" y2="50%"></line>
+                                </svg>
+                                <svg class="svg-icon select-selector__icon">
+                                  <use xlink:href="#chevron-down-medium"></use>
+                                </svg>
+                              </button>
+                            </div>
+                            <div class="select-container">
+                              <ul class="select-container__list">
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-2" x1="100%" y1="50%" x2="0%" y2="50%"></line>
+                                    </svg>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-2" x1="100%" y1="50%" x2="0%" y2="50%" stroke-dasharray="2,6"></line>
+                                    </svg>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-2" x1="100%" y1="50%" x2="0%" y2="50%" stroke-dasharray="8,6"></line>
+                                    </svg>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-2" x1="100%" y1="50%" x2="0%" y2="50%" stroke-dasharray="2,2"></line>
+                                    </svg>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-2" x1="100%" y1="50%" x2="0%" y2="50%" stroke-dasharray="6,2"></line>
+                                    </svg>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-2" x1="100%" y1="50%" x2="0%" y2="50%" stroke-dasharray="6,2,2,2"></line>
+                                    </svg>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-2" x1="100%" y1="50%" x2="0%" y2="50%" stroke-dasharray="6,2,2,2,2,2"></line>
+                                    </svg>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-2" x1="100%" y1="50%" x2="0%" y2="50%" stroke-dasharray="16,6"></line>
+                                    </svg>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-2" x1="100%" y1="50%" x2="0%" y2="50%" stroke-dasharray="8,6,2,6"></line>
+                                    </svg>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-2" x1="100%" y1="50%" x2="0%" y2="50%" stroke-dasharray="16,6,2,6"></line>
+                                    </svg>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-2" x1="100%" y1="50%" x2="0%" y2="50%" stroke-dasharray="16,6,2,6,2,6"></line>
+                                    </svg>
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <button type="button" class="button button--icon button--support">
+                            <svg class="svg-icon" aria-hidden="true">
+                                <use xlink:href="#plus"></use>
+                            </svg>
+                          </button>
+                          <button type="button" class="button button--icon button--danger">
+                            <svg class="svg-icon" aria-hidden="true">
+                                <use xlink:href="#minus"></use>
+                            </svg>
+                            </button>
+                        </div>
+                        <!-- //solid -->
+                        <!-- dotte -->
+                        <div class="border-option__item">
+                          <div class="select">
+                            <div class="select-selector">
+                              <button class="select-selector__button" type="button">
+                                <svg class="border-option__svg-line">
+                                  <line class="border-style border-style--thickness-2" x1="100%" y1="50%" x2="0%" y2="50%" stroke-dasharray="2,6"></line>
+                                </svg>
+                                <svg class="svg-icon select-selector__icon">
+                                  <use xlink:href="#chevron-down-medium"></use>
+                                </svg>
+                              </button>
+                            </div>
+                            <div class="select-container">
+                              <ul class="select-container__list">
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-2" x1="100%" y1="50%" x2="0%" y2="50%"></line>
+                                    </svg>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-2" x1="100%" y1="50%" x2="0%" y2="50%" stroke-dasharray="2,6"></line>
+                                    </svg>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-2" x1="100%" y1="50%" x2="0%" y2="50%" stroke-dasharray="8,6"></line>
+                                    </svg>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-2" x1="100%" y1="50%" x2="0%" y2="50%" stroke-dasharray="2,2"></line>
+                                    </svg>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-2" x1="100%" y1="50%" x2="0%" y2="50%" stroke-dasharray="6,2"></line>
+                                    </svg>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-2" x1="100%" y1="50%" x2="0%" y2="50%" stroke-dasharray="6,2,2,2"></line>
+                                    </svg>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-2" x1="100%" y1="50%" x2="0%" y2="50%" stroke-dasharray="6,2,2,2,2,2"></line>
+                                    </svg>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-2" x1="100%" y1="50%" x2="0%" y2="50%" stroke-dasharray="16,6"></line>
+                                    </svg>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-2" x1="100%" y1="50%" x2="0%" y2="50%" stroke-dasharray="8,6,2,6"></line>
+                                    </svg>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-2" x1="100%" y1="50%" x2="0%" y2="50%" stroke-dasharray="16,6,2,6"></line>
+                                    </svg>
+                                  </button>
+                                </li>
+                                <li class="select-container__item">
+                                  <button class="select-container__button" type="button">
+                                    <svg class="border-option__svg-line">
+                                      <line class="border-style border-style--thickness-2" x1="100%" y1="50%" x2="0%" y2="50%" stroke-dasharray="16,6,2,6,2,6"></line>
+                                    </svg>
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <button type="button" class="button button--icon button--support">
+                            <svg class="svg-icon" aria-hidden="true">
+                                <use xlink:href="#plus"></use>
+                            </svg>
+                          </button>
+                          <button type="button" class="button button--icon button--danger">
+                            <svg class="svg-icon" aria-hidden="true">
+                                <use xlink:href="#minus"></use>
+                            </svg>
+                            </button>
+                        </div>
+                        <!-- //dotte -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- //선 종류 옵션 추가 -->
                 <div class="form__item">
                   <label class="form__label">
                     <span class="form__label-text">
@@ -3308,8 +4219,23 @@
 <div class="modal modal--md" style="position: static;">
   <!-- 내용 -->
   <div class="modal__body modal__body--sm">
+    <div class="table__toolbar">
+      <div class="text-input-group ml-auto w-260">
+        <span class="text-input-group__icon">
+          <svg class="svg-icon" aria-hidden="true">
+            <use xlink:href="#search"></use>
+          </svg>
+        </span>
+        <input type="text" class="text-input" placeholder="검색">
+        <button class="text-input-group__clear-button">
+          <svg class="svg-icon" aria-hidden="true">
+            <use xlink:href="#close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
     <div class="table-scroll">
-      <table class="table table--secondary table--sm">
+      <table class="table table--secondary table">
         <colgroup>
           <col width="140px">
           <col width="140px">
@@ -3317,9 +4243,24 @@
         </colgroup>
         <thead>
           <tr>
-            <th>오브젝트 ID</th>
-            <th>변수 명</th>
-            <th>변수 값</th>
+            <th>
+              오브젝트 ID
+              <svg class="svg-icon">
+                <use xlink:href="#sort"></use>
+              </svg>
+            </th>
+            <th>
+              변수 명
+              <svg class="svg-icon">
+                <use xlink:href="#sort-up"></use>
+              </svg>
+            </th>
+            <th>
+              변수 값
+              <svg class="svg-icon">
+                <use xlink:href="#sort-down"></use>
+              </svg>
+            </th>
           </tr>
         </thead>
       </table>
@@ -4230,10 +5171,10 @@
             <div class="dynamic-list__head h-group">
               <div class="dynamic-list__button">
                 <!-- 메시지 선택 지정 여부 -->
-                <button class="tag">
+                <button class="tag tag--not-clickable">
                   <span class="tag__label">미사용</span>
                 </button>
-                <button class="tag tag--teal" style="display: none;">
+                <button class="tag tag--teal tag--not-clickable" style="display: none;">
                   <span class="tag__label">사용</span>
                   <svg class="tag__remove-button">
                     <use xlink:href="#close"></use>
@@ -4367,7 +5308,7 @@
                 <button class="tag" style="display: none;">
                   <span class="tag__label">미사용</span>
                 </button>
-                <button class="tag tag--teal">
+                <button class="tag tag--teal tag--not-clickable">
                   <span class="tag__label">사용</span>
                 </button>
                 <!-- // 메시지 선택 지정 여부 -->
@@ -4523,7 +5464,7 @@
                 <button class="tag" style="display: none;">
                   <span class="tag__label">미사용</span>
                 </button>
-                <button class="tag tag--teal">
+                <button class="tag tag--teal tag--not-clickable">
                   <span class="tag__label">사용</span>
                 </button>
                 <!-- // 메시지 선택 지정 여부 -->
@@ -4748,7 +5689,7 @@
       </div>
       <div class="dynamic-list__wrap">
         <div class="dynamic-list__items dynamic-list__no-contents">
-          <div class="notification-message notification-message--inline notification-message--info">
+          <div class="notification-message notification-message--info">
             <svg class="notification-message__icon svg-icon" aria-hidden="true">
               <use xlink:href="#info-fill"></use>
             </svg>
