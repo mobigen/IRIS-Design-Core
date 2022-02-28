@@ -128,116 +128,6 @@
 }
 
 // -------------------------
-// upload-alt
-// -------------------------
-.upload-alt {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-
-  &--loaded {
-    .upload-alt__file-button {
-      background-color: $secondary;
-    }
-
-    .upload-alt__file {
-      &:hover {
-        .upload-alt__file-button {
-          background-color: $active-secondary;
-        }
-      }
-    }
-  }
-}
-
-.upload-alt__file {
-  position: relative;
-
-  &:hover {
-    .upload-alt__file-button {
-      background-color: $text-03;
-    }
-  }
-}
-
-.upload-alt__file-button {
-  @include button-normal;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  position: relative;
-  width: 220px;
-  height: 57px;
-  padding: 6px $spacing-2xl 6px $spacing-sm;
-  border-radius: $button-border-radius;
-  background-color: $hover-field-border;
-}
-
-.upload-alt__file-button.upload-alt__file-button--selected {
-  background-color: $primary;
-  border-color: $primary;
-
-  &:hover {
-    background-color: darken($primary, 10%);
-  }
-
-  .upload-alt__file-icon .upload-alt__file-icon-download {
-    display: none;
-  }
-
-  .upload-alt__file-icon .upload-alt__file-icon-remove {
-    display: block;
-  }
-}
-.upload-alt__file-title {
-  @include text-overflow(100%);
-  @include font-size("14");
-  color: $ui-02;
-  text-align: left;
-}
-
-.upload-alt__file-text {
-  @include text-overflow(100%);
-  @include font-size("12");
-  margin-top: auto;
-  color: $ui-02;
-  text-align: left;
-}
-
-.upload-alt__file-icon {
-  @include position-right-center(12px);
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-
-  .svg-icon {
-    @include svg-icon-size(22px);
-    fill: $ui-02;
-  }
-
-  .upload-alt__file-icon-download {
-    display: block;
-  }
-
-  .upload-alt__file-icon-remove {
-    display: none;
-  }
-}
-
-.upload-alt__helper-text {
-  margin-left: $spacing-sm;
-  color: $text-02;
-}
-
-.upload-alt__thumbnail {
-  overflow: hidden;
-  width: 40px;
-  height: 40px;
-  margin-left: $spacing-xs;
-}
-
-// -------------------------
 // upload-preview
 // -------------------------
 .upload-preview__thumbnail {
@@ -414,7 +304,7 @@
 .upload-drag__description-text {
   @include font-size("18");
   color: $text-03;
-  text-align: center
+  text-align: center;
 }
 
 .upload-drag__description-file-type {

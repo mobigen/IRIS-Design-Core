@@ -101,13 +101,13 @@
 .text-input-group {
   position: relative;
 
-  .text-input{
+  .text-input {
     // 뒤에 button이 있는 경우
-    &:not(&:last-child){
+    &:not(&:last-child) {
       padding-right: $spacing-lg;
     }
 
-    &:nth-last-child(3):not(div){
+    &:nth-last-child(3):not(div) {
       padding-right: rem(62px) !important;
     }
   }
@@ -164,7 +164,7 @@
   }
 
   // 뒤에 search-button 있는 경우
-  &:not(&:last-child){
+  &:not(&:last-child) {
     right: $spacing-2xl;
   }
 }
@@ -204,7 +204,7 @@
   .text-input {
     @include text-input--lg;
 
-    &:nth-last-child(3):not(div){
+    &:nth-last-child(3):not(div) {
       padding-right: rem(72px) !important;
     }
   }
@@ -217,22 +217,22 @@
       padding-left: $icon-spacing;
     }
   }
-  .text-input-group__clear-button{
+  .text-input-group__clear-button {
     width: rem(20px);
     height: rem(20px);
 
     // 뒤에 search-button 있는 경우
-    &:not(&:last-child){
+    &:not(&:last-child) {
       right: $spacing-3xl;
     }
-    .svg-icon{
+    .svg-icon {
       width: rem(20px);
       height: rem(20px);
     }
   }
 
-  .text-input-group__search-button{
-    height: 38px
+  .text-input-group__search-button {
+    height: 38px;
   }
 }
 
@@ -240,7 +240,7 @@
   .text-input {
     @include text-input--sm;
 
-    &:nth-last-child(3):not(div){
+    &:nth-last-child(3):not(div) {
       padding-right: rem(46px) !important;
     }
   }
@@ -263,20 +263,20 @@
     height: rem(14px);
   }
 
-  .text-input-group__clear-button{
+  .text-input-group__clear-button {
     // 뒤에 search-button 있는 경우
-    &:not(&:last-child){
+    &:not(&:last-child) {
       right: $spacing-xl;
     }
 
-    .svg-icon{
+    .svg-icon {
       width: rem(14px);
       height: rem(14px);
     }
   }
 
-  .text-input-group__search-button{
-    height: 22px
+  .text-input-group__search-button {
+    height: 22px;
   }
 }
 
@@ -316,41 +316,26 @@
 }
 
 // -------------------------
-// input hidable
-// -------------------------
-.text-input-group--hidable {
-  .text-input-group__button {
-    display: none;
-  }
-  &:hover {
-    .text-input-group__button {
-      display: flex;
-    }
-  }
-}
-
-// -------------------------
 // input with range
 // -------------------------
 input[type="range"] + .text-input-wrap .text-input {
   width: rem(80px);
 }
 
-
 // -------------------------
 // text edit + text input
 // -------------------------
-.text-edit{
+.text-edit {
   display: flex;
   align-items: center;
   padding: $spacing-2xs 0;
 }
 
-.text-edit__title{
+.text-edit__title {
   @include font-weight("regular");
   @include text-overflow();
 }
 
-.text-edit__button{
+.text-edit__button {
   margin-left: $spacing-2xs;
 }
