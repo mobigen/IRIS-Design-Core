@@ -283,6 +283,43 @@
                 </div>
                 <div class="form__item">
                   <label class="form__label">
+                    <span class="form__label-text">
+                      숫자 데이터표시
+                    </span>
+                  </label>
+                  <div class="form__detail v-group">
+                    <div class="form__v-group-item">
+                      <div class="form__v-group-title">
+                        <span>천 단위 콤마(,) 표시</span>
+                      </div>
+                      <div class="radios">
+                        <div class="radio">
+                          <input type="radio" id="use" name="radio-group" class="radio__input" value="label">
+                          <label for="use" class="radio__label">보이기</label>
+                        </div>
+                        <div class="radio">
+                          <input type="radio" id="unuse" name="radio-group" class="radio__input" value="label">
+                          <label for="unuse" class="radio__label">감추기</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form__v-group-item">
+                      <div class="form__v-group-title">
+                        <span>소수점 자리 수</span>
+                      </div>
+                      <div class="text-input-wrap w-112">
+                        <input type="number" class="text-input" value="">
+                        <span class="text-input-wrap__suffix">px</span>
+                      </div>
+                      <div class="checkbox ml-8">
+                        <input id="formChekcbox-05" type="checkbox" class="checkbox__input" value="label">
+                        <label for="formChekcbox-05" class="checkbox__label">소수 자릿수에 맞춰 0 채우기</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__item">
+                  <label class="form__label">
                     <span class="form__label-text whitespace-normal">
                       데이터 표시 색상
                     </span>
