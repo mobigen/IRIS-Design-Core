@@ -275,13 +275,16 @@
 }
 
 .editor-layout-head__title {
-  @include line-height("heading");
-  max-width: rem(400px);
+  max-width: 100%;
 }
 
 .editor-layout-head__title-text {
   @include text-overflow;
   @include font-weight("medium");
+}
+
+.editor-layout-head__title-input{
+  width: rem(400px);
 }
 
 .editor-layout-head__title-button {
@@ -333,6 +336,7 @@
 
 .editor-layout-head__responsive {
   margin-right: $spacing-sm;
+  margin-left: $spacing-xl;
 }
 
 .editor-layout-body {
