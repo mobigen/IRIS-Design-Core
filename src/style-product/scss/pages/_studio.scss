@@ -2990,6 +2990,39 @@
   }
 }
 
+.title-type__body {
+  .form__item {
+    padding: $spacing-md 0;
+  }
+
+  .form__item:last-child {
+    padding: $spacing-md 0 0 0;
+  }
+}
+
+.form--dsl {
+  .form__item-head {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .form__label-group {
+    display: flex;
+    align-items: center;
+    flex: 1;
+
+    .form__label {
+      width: unset;
+    }
+
+    .button {
+      padding: 0 $spacing-2xs;
+    }
+  }
+
+}
+
 .code__pre {
   @include font-size("13");
   background-color: $odd-row;
@@ -3149,11 +3182,85 @@
   }
 }
 
+// ------------------------------------
+// pandas - list, table 목록 스타일 추가
+// ------------------------------------
+.table-list-layout {
+  display: flex;
+  width: 100%;
+
+  .side-nav {
+    width: 340px;
+  }
+
+  .side-nav__list-wrap {
+    margin-top: $spacing-md;
+  }
+
+  .side-nav__list-title {
+    @include font-weight("medium");
+    line-height: 2.5;
+    color: $text-02;
+  }
+
+  .side-nav__list-action-buttons {
+    display: flex;
+    margin-right: $spacing-2xs;
+    z-index: 1;
+  }
+
+  .side-nav__list-action-button:not(:last-child) {
+    margin-right: $spacing-xs;
+  }
+}
+
+.select-content {
+  width: 100%;
+  flex: 1;
+  border-left: 1px solid $ui-04;
+
+  .modal__head {
+    background-color: $odd-row;
+  }
+  
+  .select-content__title {
+    @include font-weight("medium");
+    line-height: 2.5;
+    color: $text-02;
+  }
+  
+  .select-content__helper-text {
+    @include font-size("13");
+    @include font-weight("regular");
+    color: $text-03;
+    padding-left: $spacing-2xs;
+  }
+
+  .select-content__body {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 38px);
+    padding: $spacing-sm;
+  }
+
+  .select-content__data {
+    margin-top: auto;
+  }
+   
+  .select-content__table {
+    table-layout: fixed;
+  
+    td, th {
+      text-align: center;
+    }
+  }
+}
+
 //데이터 모델 필터 스타일 적용
 .data-model__body .select--borderless {
   min-width: auto;
 }
-  
+
 .data-model__body .data-modal__select {
   flex: 1;
 }
