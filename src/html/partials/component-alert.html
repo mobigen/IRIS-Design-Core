@@ -1,0 +1,169 @@
+<!-- alert -->
+<div class="page-header">
+  <h2 class="page-header__lable">component</h2>
+  <h3 class="page-header__title">Alert</h3>
+</div>
+<div class="page-content">
+  <p class="page__desc">얼럿은 사용자에게 경고와 같은 피드백을 주기 위해 사용합니다.</p>
+  <div class="page__usage md">
+    <ul>
+      <li>
+        얼럿은 <em class="text-emphasis">5개</em> 종류를 사용합니다.
+        <ul>
+          <li>기본</li>
+          <li>정보</li>
+          <li>성공</li>
+          <li>경고</li>
+          <li>에러</li>
+        </ul>
+      </li>
+      <li>
+        Foot은 <em class="text-emphasis">저장 / 확인 / 닫기 / 취소</em> 문구를 사용합니다.
+      </li>
+    </ul>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Default</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <div class="alert alert--default" style="position: static;">
+            <div class="alert__body">
+              <svg class="alert__icon svg-icon" aria-hidden="true">
+                <use xlink:href="#info-fill"></use>
+              </svg>
+              <div class="alert__contents">
+                <p class="alert__text">Alert Contents Here.</p>
+              </div>
+            </div>
+            <div class="alert__foot">
+              <div class="alert__foot-main-buttons">
+                <button class="button button--link button--lg" type="button">
+                  <span>취소</span>
+                </button>
+                <button class="button button--primary button--lg" type="button">
+                  <span>확인</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Information</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <div class="alert alert--info" style="position: static;">
+            <div class="alert__body">
+              <svg class="alert__icon svg-icon" aria-hidden="true">
+                <use xlink:href="#info-fill"></use>
+              </svg>
+              <div class="alert__contents">
+                <p class="alert__text">Alert<br />이 얼럿은 사용자에게 정보 상태를 알리기 위해 사용합니다.</p>
+              </div>
+            </div>
+            <div class="alert__foot">
+              <div class="alert__foot-main-buttons">
+                <button class="button button--link button--lg" type="button">
+                  <span>취소</span>
+                </button>
+                <button class="button button--primary button--lg" type="button">
+                  <span>확인</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Success</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <div class="alert alert--success" style="position: static;">
+            <div class="alert__body">
+              <svg class="alert__icon svg-icon" aria-hidden="true">
+                <use xlink:href="#checkmark-fill"></use>
+              </svg>
+              <div class="alert__contents">
+                <p class="alert__text">Alert<br />이 얼럿은 사용자에게 성공 상태를 알리기 위해 사용합니다.</p>
+              </div>
+            </div>
+            <div class="alert__foot">
+              <div class="alert__foot-main-buttons">
+                <button class="button button--link button--lg" type="button">
+                  <span>취소</span>
+                </button>
+                <button class="button button--primary button--lg" type="button">
+                  <span>확인</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Warning</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <div class="alert alert--warning" style="position: static;">
+            <div class="alert__body">
+              <svg class="alert__icon svg-icon" aria-hidden="true">
+                <use xlink:href="#warning-fill"></use>
+              </svg>
+              <div class="alert__contents">
+                <p class="alert__text">Alert<br />이 얼럿은 사용자에게 경고 상태를 알리기 위해 사용합니다.</p>
+              </div>
+            </div>
+            <div class="alert__foot">
+              <div class="alert__foot-main-buttons">
+                <button class="button button--negative button--lg" type="button">
+                  <span>확인</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Error</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <div class="alert alert--error" style="position: static;">
+            <div class="alert__body">
+              <svg class="alert__icon svg-icon" aria-hidden="true">
+                <use xlink:href="#issue-fill"></use>
+              </svg>
+              <div class="alert__contents">
+                <p class="alert__text">Alert<br />이 얼럿은 사용자에게 에러 상태를 알리기 위해 사용합니다.</p>
+              </div>
+            </div>
+            <div class="alert__foot">
+              <div class="alert__foot-main-buttons">
+                <button class="button button--negative button--lg" type="button">
+                  <span>확인</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

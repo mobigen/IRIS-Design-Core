@@ -1,0 +1,701 @@
+<!-- context menu -->
+<div class="page-header">
+  <h2 class="page-header__lable">component</h2>
+  <h3 class="page-header__title">Form</h3>
+</div>
+<div class="page-content">
+  <p class="page__desc">폼은 사용자가 데이터를 입력하거나 옵션을 구성할 수 있는 입력 컨트롤 그룹입니다.<br/> 폼은 많이 단순할 수도, 복잡할 수도 있습니다.</p>
+  <div class="page__usage md">
+    <ul>
+      <li>폼은  <em class="text-emphasis">2개</em> 유형과 <em class="text-emphasis">2개</em>의 사이즈가 있습니다.
+        <ul>
+          <li>Default(horizontal)</li>
+          <li>Vertical</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Default</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: lg</p>
+            <div class="component-examle__item-group">
+              <form class="form form--lg" style="width: 570px;">
+                <div class="form__head">
+                  <strong class="form__head-title">
+                    그룹 기본설정
+                  </strong>
+                </div>
+                <div class="form__body">
+                  <div class="form__list">
+                    <div class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">
+                          그룹 메뉴 아이콘
+                        </span>
+<!--                        v-tooltip로 tooltip을 퍼블리싱 하는 경우에만 사용합니다. -->
+                        <span class="v-tooltip">
+                            <!-- auto, top, right, left, bottom -->
+                            <svg class="svg-icon v-tooltip__icon" aria-hidden="true" aria-hidden="true">
+                              <use xlink:href="#help-outline"></use>
+                            </svg>
+                        </span>
+                      </label>
+                      <div class="form__detail">
+                        <div class="upload-preview">
+                          <div class="upload-preview__thumbnail">
+                            <svg class="svg-icon" aria-hidden="true" aria-hidden="true">
+                              <use xlink:href="#object-image"></use>
+                            </svg>
+                            <p class="upload-preview__thumbnail-text">
+                              파일을 선택하시면 이곳에 추가됩니다.
+                              <br>
+                              pdf, jpg, gif up to 10MB
+                            </p>
+                          </div>
+                          <div class="upload-preview__file">
+                            <input type="file" class="upload-preview__file-input">
+                            <label class="upload-preview__file-label">
+                              <svg class="svg-icon" aria-hidden="true" aria-hidden="true">
+                                <use xlink:href="#upload"></use>
+                              </svg>
+                              <span class="upload-preview__file-text"> Click To Upload </span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">
+                          그룹명
+                        </span>
+                        <span class="form__label-subtext">(한국어)</span>
+                      </label>
+                      <div class="form__detail">
+                        <input type="text" class="text-input text-input--lg" placeholder="placeholder text" />
+
+                      </div>
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">
+                          그룹 설명
+                        </span>
+                        <span class="form__label-subtext">(한국어)</span>
+                      </label>
+                      <div class="form__detail">
+                        <input type="text" class="text-input text-input--lg" placeholder="placeholder text" />
+
+                      </div>
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">
+                          그룹명
+                        </span>
+                        <span class="form__label-subtext">(한국어)</span>
+                      </label>
+                      <div class="form__detail">
+                        <input type="text" class="text-input text-input--lg" placeholder="placeholder text" />
+
+                      </div>
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">
+                          그룹 설명
+                        </span>
+                        <span class="form__label-subtext">(한국어)</span>
+                      </label>
+                      <div class="form__detail">
+                        <input type="text" class="text-input text-input--lg" placeholder="placeholder text" />
+
+                      </div>
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">그룹명</span>
+                        <span class="form__label-subtext">(한국어)</span>
+                      </label>
+                      <div class="form__detail">
+                        <input type="text" class="text-input text-input--lg" placeholder="placeholder text" />
+                      </div>
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">그룹 설명</span>
+                        <span class="form__label-subtext">(한국어)</span>
+                      </label>
+                      <div class="form__detail">
+                        <input type="text" class="text-input text-input--lg" placeholder="placeholder text" />
+
+                      </div>
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">그룹명</span>
+                        <span class="form__label-subtext">(한국어)</span>
+                      </label>
+                      <div class="form__detail">
+                        <input type="text" class="text-input text-input--lg" placeholder="placeholder text" />
+
+                      </div>
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">첫그룹</span> <span class="form__label-subtext">(한국어)</span>
+                      </label>
+                      <div class="form__detail">
+                        <div class="checkbox checkbox--lg">
+                          <input id="formChekcbox-01" type="checkbox" class="checkbox__input" value="label">
+                          <label for="formChekcbox-01" class="checkbox__label">첫 그룹으로 설정</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">첫그룹</span> <span class="form__label-subtext">(한국어)</span>
+                      </label>
+                      <div class="form__detail form__detail-list">
+                        <div class="form__detail-item form__detail-item--border">
+                          <div class="form__detail-label">
+                            <label for="id1" class="form__detail-label-text">
+                              name
+                            </label>
+                          </div>
+                          <div class="form__detail-detail">
+                            <input type="text" class="text-input text-input--lg" placeholder="placeholder text" />
+                          </div>
+                        </div>
+                        <div class="form__detail-item form__detail-item--border">
+                          <div class="form__detail-label">
+                            <label for="id1" class="form__detail-label-text">
+                              name
+                            </label>
+                          </div>
+                          <div class="form__detail-detail">
+                            <input type="text" class="text-input text-input--lg" placeholder="placeholder text" />
+                          </div>
+                        </div>
+                        <div class="form__detail-item form__detail-item--border">
+                          <div class="form__detail-label">
+                            <label for="id1" class="form__detail-label-text">
+                              name
+                            </label>
+                          </div>
+                          <div class="form__detail-detail">
+                            <input type="text" class="text-input text-input--lg" placeholder="placeholder text" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">첫그룹</span> <span class="form__label-subtext">(한국어)</span>
+                      </label>
+                      <div class="form__detail form__detail-list">
+                        <div class="form__detail-item form__detail-item--border">
+                          <div class="form__detail-label">
+                            <label for="id1" class="form__detail-label-text">
+                              name
+                            </label>
+                          </div>
+                          <div class="form__detail-detail">
+                            <input type="text" class="text-input text-input--lg" placeholder="placeholder text" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">첫그룹</span> <span class="form__label-subtext">(한국어)</span>
+                      </label>
+                      <div class="form__detail form__detail-list">
+                        <div class="form__detail-item form__detail-item--border">
+                          <div class="form__detail-label">
+                            <label for="id1" class="form__detail-label-text">
+                              name
+                            </label>
+                          </div>
+                          <div class="form__detail-detail">
+                            <input type="text" class="text-input text-input--lg" placeholder="placeholder text" />
+                          </div>
+                        </div>
+                        <div class="form__detail-item form__detail-item--border">
+                          <div class="form__detail-label">
+                            <label for="id1" class="form__detail-label-text">
+                              name
+                            </label>
+                          </div>
+                          <div class="form__detail-detail">
+                            <input type="text" class="text-input text-input--lg" placeholder="placeholder text" />
+                          </div>
+                        </div>
+                        <div class="form__detail-item form__detail-item--border">
+                          <div class="form__detail-label">
+                            <label for="id1" class="form__detail-label-text">
+                              name
+                            </label>
+                          </div>
+                          <div class="form__detail-detail">
+                            <input type="text" class="text-input text-input--lg" placeholder="placeholder text" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__foot">
+                  <button class="button button--tertiary button--lg" type="button">
+                    <span class="button__text"> 초기화 </span>
+                  </button>
+                  <div class="form__foot-main-buttons">
+                    <button class="button button--support button--lg" type="button">
+                      <span class="button__text"> 수정 </span>
+                    </button>
+                    <button class="button button--primary button--lg" type="button">
+                      <span class="button__text"> 그룹 설정 저장 </span>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: md</p>
+            <div class="component-examle__item-group">
+              <form class="form" style="width: 570px;">
+                <div class="form__head">
+                  <strong class="form__head-title">
+                    그룹 기본설정
+                  </strong>
+                </div>
+                <div class="form__body">
+                  <div class="form__list">
+                    <div class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">그룹 메뉴 아이콘</span>
+                      </label>
+                      <div class="form__detail">
+                        <div class="upload-preview">
+                          <div class="upload-preview__thumbnail">
+                            <svg class="svg-icon" aria-hidden="true" aria-hidden="true">
+                              <use xlink:href="#object-image"></use>
+                            </svg>
+                            <p class="upload-preview__thumbnail-text">
+                              파일을 선택하시면 이곳에 추가됩니다.
+                              <br>
+                              pdf, jpg, gif up to 10MB
+                            </p>
+                          </div>
+                          <div class="upload-preview__file">
+                            <input type="file" class="upload-preview__file-input">
+                            <label class="upload-preview__file-label">
+                              <svg class="svg-icon" aria-hidden="true" aria-hidden="true">
+                                <use xlink:href="#upload"></use>
+                              </svg>
+                              <span class="upload-preview__file-text"> Click To Upload </span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">그룹명</span>
+                        <span class="form__label-subtext">(한국어)</span>
+                      </label>
+                      <div class="form__detail">
+                        <input type="text" class="text-input" placeholder="placeholder text" />
+                      </div>
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">그룹 설명</span>
+                        <span class="form__label-subtext">(한국어)</span>
+                      </label>
+                      <div class="form__detail">
+                        <input type="text" class="text-input" placeholder="placeholder text" />
+                      </div>
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">그룹명</span>
+                        <span class="form__label-subtext">(한국어)</span>
+                      </label>
+                      <div class="form__detail">
+                        <input type="text" class="text-input" placeholder="placeholder text" />
+                      </div>
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">그룹명</span>
+                        <span class="form__label-subtext">(한국어)</span>
+                      </label>
+                      <div class="form__detail">
+                        <input type="text" class="text-input" placeholder="placeholder text" />
+                      </div>
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">그룹 설명</span>
+                        <span class="form__label-subtext">(한국어)</span>
+                      </label>
+                      <div class="form__detail">
+                        <input type="text" class="text-input" placeholder="placeholder text" />
+                      </div>
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">그룹명</span>
+                        <span class="form__label-subtext">(한국어)</span>
+                      </label>
+                      <div class="form__detail">
+                        <input type="text" class="text-input" placeholder="placeholder text" />
+                      </div>
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">그룹 설명</span>
+                        <span class="form__label-subtext">(한국어)</span>
+                      </label>
+                      <div class="form__detail">
+                        <input type="text" class="text-input" placeholder="placeholder text" />
+                      </div>
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">그룹 설명</span>
+                        <span class="form__label-subtext">(한국어)</span>
+                      </label>
+                      <div class="form__detail">
+                        <div class="checkbox">
+                          <input id="formChekcbox-01" type="checkbox" class="checkbox__input" value="label">
+                          <label for="formChekcbox-01" class="checkbox__label">첫 그룹으로 설정</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__foot">
+                  <button class="button button--tertiary" type="button">
+                    <span class="button__text"> 초기화 </span>
+                  </button>
+                  <div class="form__foot-main-buttons">
+                    <button class="button button--support" type="button">
+                      <span class="button__text"> 수정 </span>
+                    </button>
+                    <button class="button button--primary" type="button">
+                      <span class="button__text"> 그룹 설정 저장 </span>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component-variation">
+    <span class="component-variation__name">Vertical Form</span>
+    <div class="component-example">
+      <div class="component-example__live">
+        <div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: lg</p>
+            <div class="component-examle__item-group">
+              <form class="form form--lg form--vertical" style="width: 570px;">
+                <div class="form__head">
+                  <strong class="form__head-title">
+                    그룹 기본설정
+                  </strong>
+                </div>
+                <div class="form__body">
+                  <div class="form__list">
+                    <div class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">
+                          그룹 메뉴 아이콘
+                        </span>
+<!--                        v-tooltip로 tooltip을 퍼블리싱 하는 경우에만 사용합니다. -->
+                        <span class="v-tooltip">
+                            <!-- auto, top, right, left, bottom -->
+                            <svg class="svg-icon v-tooltip__icon" aria-hidden="true" aria-hidden="true">
+                              <use xlink:href="#help-outline"></use>
+                            </svg>
+                        </span>
+                      </label>
+                      <div class="form__detail">
+                        <div class="upload-preview">
+                          <div class="upload-preview__thumbnail">
+                            <svg class="svg-icon" aria-hidden="true" aria-hidden="true">
+                              <use xlink:href="#object-image"></use>
+                            </svg>
+                            <p class="upload-preview__thumbnail-text">
+                              파일을 선택하시면 이곳에 추가됩니다.
+                              <br>
+                              pdf, jpg, gif up to 10MB
+                            </p>
+                          </div>
+                          <div class="upload-preview__file">
+                            <input type="file" class="upload-preview__file-input">
+                            <label class="upload-preview__file-label">
+                              <svg class="svg-icon" aria-hidden="true" aria-hidden="true">
+                                <use xlink:href="#upload"></use>
+                              </svg>
+                              <span class="upload-preview__file-text"> Click To Upload </span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">
+                          그룹명
+                        </span>
+                        <span class="form__label-subtext">(한국어)</span>
+                      </label>
+                      <div class="form__detail">
+                        <input type="text" class="text-input text-input--lg" placeholder="placeholder text" />
+
+                      </div>
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">
+                          그룹 설명
+                        </span>
+                        <span class="form__label-subtext">(한국어)</span>
+                      </label>
+                      <div class="form__detail">
+                        <input type="text" class="text-input text-input--lg" placeholder="placeholder text" />
+
+                      </div>
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">
+                          그룹명
+                        </span>
+                        <span class="form__label-subtext">(한국어)</span>
+                      </label>
+                      <div class="form__detail">
+                        <input type="text" class="text-input text-input--lg" placeholder="placeholder text" />
+
+                      </div>
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">
+                          그룹 설명
+                        </span>
+                        <span class="form__label-subtext">(한국어)</span>
+                      </label>
+                      <div class="form__detail">
+                        <input type="text" class="text-input text-input--lg" placeholder="placeholder text" />
+
+                      </div>
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">그룹명</span>
+                        <span class="form__label-subtext">(한국어)</span>
+                      </label>
+                      <div class="form__detail">
+                        <input type="text" class="text-input text-input--lg" placeholder="placeholder text" />
+                      </div>
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">그룹 설명</span>
+                        <span class="form__label-subtext">(한국어)</span>
+                      </label>
+                      <div class="form__detail">
+                        <input type="text" class="text-input text-input--lg" placeholder="placeholder text" />
+
+                      </div>
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">그룹명</span>
+                        <span class="form__label-subtext">(한국어)</span>
+                      </label>
+                      <div class="form__detail">
+                        <input type="text" class="text-input text-input--lg" placeholder="placeholder text" />
+
+                      </div>
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">첫그룹</span> <span class="form__label-subtext">(한국어)</span>
+                      </label>
+                      <div class="form__detail">
+                        <div class="checkbox checkbox--lg">
+                          <input id="formChekcbox-01" type="checkbox" class="checkbox__input" value="label">
+                          <label for="formChekcbox-01" class="checkbox__label">첫 그룹으로 설정</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__foot">
+                  <button class="button button--tertiary button--lg" type="button">
+                    <span class="button__text"> 초기화 </span>
+                  </button>
+                  <div class="form__foot-main-buttons">
+                    <button class="button button--support button--lg" type="button">
+                      <span class="button__text"> 수정 </span>
+                    </button>
+                    <button class="button button--primary button--lg" type="button">
+                      <span class="button__text"> 그룹 설정 저장 </span>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="component-example__row">
+            <p class="component-example__size-label">Size: md</p>
+            <div class="component-examle__item-group">
+              <form class="form form--vertical" style="width: 570px;">
+                <div class="form__head">
+                  <strong class="form__head-title">
+                    그룹 기본설정
+                  </strong>
+                </div>
+                <div class="form__body">
+                  <div class="form__list">
+                    <div class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">그룹 메뉴 아이콘</span>
+                      </label>
+                      <div class="form__detail">
+                        <div class="upload-preview">
+                          <div class="upload-preview__thumbnail">
+                            <svg class="svg-icon" aria-hidden="true" aria-hidden="true">
+                              <use xlink:href="#object-image"></use>
+                            </svg>
+                            <p class="upload-preview__thumbnail-text">
+                              파일을 선택하시면 이곳에 추가됩니다.
+                              <br>
+                              pdf, jpg, gif up to 10MB
+                            </p>
+                          </div>
+                          <div class="upload-preview__file">
+                            <input type="file" class="upload-preview__file-input">
+                            <label class="upload-preview__file-label">
+                              <svg class="svg-icon" aria-hidden="true" aria-hidden="true">
+                                <use xlink:href="#upload"></use>
+                              </svg>
+                              <span class="upload-preview__file-text"> Click To Upload </span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">그룹명</span>
+                        <span class="form__label-subtext">(한국어)</span>
+                      </label>
+                      <div class="form__detail">
+                        <input type="text" class="text-input" placeholder="placeholder text" />
+                      </div>
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">그룹 설명</span>
+                        <span class="form__label-subtext">(한국어)</span>
+                      </label>
+                      <div class="form__detail">
+                        <input type="text" class="text-input" placeholder="placeholder text" />
+                      </div>
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">그룹명</span>
+                        <span class="form__label-subtext">(한국어)</span>
+                      </label>
+                      <div class="form__detail">
+                        <input type="text" class="text-input" placeholder="placeholder text" />
+                      </div>
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">그룹명</span>
+                        <span class="form__label-subtext">(한국어)</span>
+                      </label>
+                      <div class="form__detail">
+                        <input type="text" class="text-input" placeholder="placeholder text" />
+                      </div>
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">그룹 설명</span>
+                        <span class="form__label-subtext">(한국어)</span>
+                      </label>
+                      <div class="form__detail">
+                        <input type="text" class="text-input" placeholder="placeholder text" />
+                      </div>
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">그룹명</span>
+                        <span class="form__label-subtext">(한국어)</span>
+                      </label>
+                      <div class="form__detail">
+                        <input type="text" class="text-input" placeholder="placeholder text" />
+                      </div>
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">그룹 설명</span>
+                        <span class="form__label-subtext">(한국어)</span>
+                      </label>
+                      <div class="form__detail">
+                        <input type="text" class="text-input" placeholder="placeholder text" />
+                      </div>
+                    </div>
+                    <div class="form__item">
+                      <label class="form__label">
+                        <span class="form__label-text">그룹 설명</span>
+                        <span class="form__label-subtext">(한국어)</span>
+                      </label>
+                      <div class="form__detail">
+                        <div class="checkbox">
+                          <input id="formChekcbox-01" type="checkbox" class="checkbox__input" value="label">
+                          <label for="formChekcbox-01" class="checkbox__label">첫 그룹으로 설정</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__foot">
+                  <button class="button button--tertiary" type="button">
+                    <span class="button__text"> 초기화 </span>
+                  </button>
+                  <div class="form__foot-main-buttons">
+                    <button class="button button--support" type="button">
+                      <span class="button__text"> 수정 </span>
+                    </button>
+                    <button class="button button--primary" type="button">
+                      <span class="button__text"> 그룹 설정 저장 </span>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
