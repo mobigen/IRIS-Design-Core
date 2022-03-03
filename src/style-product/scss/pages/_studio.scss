@@ -3207,6 +3207,11 @@
     color: $text-02;
   }
 
+  .list__list {
+    height: rem(442px);
+    overflow-y: auto;
+  }
+
   .side-nav__list-action-buttons {
     display: flex;
     margin-right: $spacing-2xs;
