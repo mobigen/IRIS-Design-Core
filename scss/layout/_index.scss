@@ -92,8 +92,19 @@
 .index-layout-body__top-bar {
   display: flex;
   align-items: center;
-  height: rem(56px);
-  padding: $spacing-sm 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-height: rem(56px);
+  max-height: rem(100px);
+  height: auto;
+  padding: 0 20px $spacing-sm 20px;
+}
+
+.index-layout-body__left-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: $spacing-sm;
 }
 
 .index-layout-body__filter {
@@ -143,9 +154,9 @@
 }
 
 .index-layout-body__controller {
-  margin-left: auto;
   display: flex;
   align-items: center;
+  padding-top: $spacing-sm;
 }
 
 .index-layout-body__controller-select {
@@ -511,6 +522,7 @@
 
   &:first-child {
     @include text-overflow;
+    max-width: fit-content;
   }
 
   &:first-child:not(:only-child) {
@@ -518,6 +530,7 @@
   }
 
   & + & {
+    max-width: inherit;
     flex-shrink: 0;
     margin-left: auto;
   }
@@ -580,23 +593,6 @@
       .svg-icon {
         fill: $ui-02;
       }
-    }
-  }
-}
-
-// responsive
-@media all and (max-width: 1280px) {
-  .index-layout-body__top-bar.index-layout-body__top-bar--reponsive-lg {
-    flex-wrap: wrap;
-    height: auto;
-
-    .index-layout-body__management {
-      margin-right: 10px;
-    }
-
-    .index-layout-body__controller {
-      margin-left: 0;
-      margin-top: $spacing-sm;
     }
   }
 }
