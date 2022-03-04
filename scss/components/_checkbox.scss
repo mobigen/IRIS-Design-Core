@@ -169,3 +169,37 @@
     border-bottom-width: rem(3px);
   }
 }
+
+.checkbox--sm {
+  .checkbox__label {
+    @include font-size("12");
+    padding-left: rem(16px); //width of checkbox 20px + 8px of padding
+    min-height: rem(18px);
+  }
+
+  .checkbox__label::before {
+    content: "";
+    width: rem(12px);
+    height: rem(12px);
+    margin: rem(1px);
+    top: rem(3px);
+    border-width: rem(1px);
+  }
+
+  .checkbox__label::after {
+    left: rem(4px);
+    top: rem(4px);
+    width: rem(7px);
+    height: rem(4px);
+  }
+
+  &.checkbox--indeterminate .checkbox__input + .checkbox__label::after,
+  .checkbox__input:indeterminate + .checkbox__label::after {
+    transform: scale(1) rotate(0deg);
+    top: rem(7px);
+    left: rem(4px);
+    width: rem(6px);
+    border-left-width: 0;
+    border-bottom-width: rem(2px);
+  }
+}
