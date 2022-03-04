@@ -522,6 +522,7 @@
 
   &:first-child {
     @include text-overflow;
+    max-width: fit-content;
   }
 
   &:first-child:not(:only-child) {
@@ -529,6 +530,7 @@
   }
 
   & + & {
+    max-width: inherit;
     flex-shrink: 0;
     margin-left: auto;
   }
