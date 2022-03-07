@@ -311,14 +311,14 @@
   position: relative;
   display: flex;
   align-items: center;
-  width: 1132px;
+  width: 100%;
   margin-right: auto;
   overflow: hidden;
 }
 
 .editor-layout-head__object-list-inner {
   position: relative;
-  width: 1080px;
+  width: 100%;
   height: 100%;
   overflow: hidden;
   margin-left: $spacing-xs;
@@ -328,7 +328,6 @@
   position: absolute;
   display: flex;
   white-space: nowrap;
-  margin-right: rem(45px);
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
