@@ -66,6 +66,12 @@
 // 상태별 스타일
 // -------------------------
 // hover 상태
+.checkbox__input:focus {
+  + .checkbox__label:before {
+    border-color: $primary;
+  }
+}
+
 .checkbox__label:hover::before {
   border-color: $primary;
 }

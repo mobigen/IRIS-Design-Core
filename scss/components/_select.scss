@@ -14,7 +14,8 @@
     border-color: $secondary;
     box-shadow: 0px 0px 4px rgba(77, 174, 255, 0.4);
 
-    &:hover:not(:disabled) {
+    &:hover:not(:disabled),
+    &:focus:not(:disabled) {
       border-color: $secondary;
     }
   }
@@ -36,7 +37,8 @@
         fill: $secondary;
       }
 
-      &:hover:not(:disabled) {
+      &:hover:not(:disabled),
+      &:focus:not(:disabled) {
         border-color: transparent;
         background-color: $ui-02;
 
@@ -61,7 +63,8 @@
         fill: $secondary;
       }
 
-      &:hover {
+      &:hover:not(:disabled),
+      &:focus:not(:disabled) {
         .text-input {
           background-color: $ui-02;
           color: $secondary;
@@ -101,7 +104,7 @@
     cursor: not-allowed;
     box-shadow: none;
 
-    &:hover,
+    &:hover:not(:disabled),
     &:hover:active,
     &:hover:focus {
       box-shadow: none;
@@ -135,7 +138,8 @@
         fill: $text-05;
       }
 
-      &:hover,
+      &:hover:not(:disabled),
+      &:focus:not(:disabled),
       &:hover:active,
       &:hover:focus {
         .text-input {
@@ -302,6 +306,12 @@
   background-color: $ui-02;
 }
 
+.select-container__button {
+  &:focus:not(:disabled) {
+    background-color: $ui-01;
+  }
+}
+
 .select-container__subtext {
   @include font-size("12");
   color: $text-03;
@@ -399,7 +409,8 @@
     border-color: transparent;
     box-shadow: none;
 
-    &:hover {
+    &:hover:not(:disabled),
+    &:focus:not(:disabled) {
       background-color: $ui-01;
 
       .select-selector__title {
@@ -435,7 +446,8 @@
       box-shadow: none;
     }
 
-    &:hover {
+    &:hover:not(:disabled),
+    &:focus:not(:disabled) {
       .text-input {
         background-color: $ui-01;
         color: $text-01;
