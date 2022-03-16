@@ -3117,6 +3117,23 @@
   margin-bottom: $spacing-2xs;
 }
 
+// tooltip에 더보기 버튼이 올때 스타일 처리 
+.tooltip-studio--help {
+
+  & .button:last-child {
+    margin-top: $spacing-xs;
+  }
+
+  .button--underline {
+    color: $ui-02;
+    padding: 0;
+
+    .svg-icon {
+      fill: $ui-02;
+    }
+  }
+}
+
 //studio내 텍스트가 길어질때 툴팁을 벗어나는 문제 방지
 .tooltip-studio__text {
   white-space: normal;
