@@ -8,11 +8,11 @@
 }
 
 // area
-.object-area .chart-container.chart-bg-none {
+.chart-container.chart-bg-none {
   background-color: transparent;
 }
 
-.object-area {
+.object-motion {
   // studio 모션 차트 옵션 설정 스타일
   .motion-chart-btn-group {
     display: flex;
@@ -181,7 +181,7 @@
 }
 
 // grid 차트 체크박스 커스텀
-.canvas-object.object-area {
+.canvas-object.object-table {
   .ag-theme-default .ag-checkbox-input-wrapper {
     line-height: 20px;
     width: 20px;
@@ -497,7 +497,6 @@
 }
 
 // 기본 박스 스타일들
-.object-area,
 .object-image,
 .object-renew,
 .object-map,
