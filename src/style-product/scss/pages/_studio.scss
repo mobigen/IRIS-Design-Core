@@ -283,7 +283,7 @@
   @include font-weight("medium");
 }
 
-.editor-layout-head__title-input{
+.editor-layout-head__title-input {
   width: rem(400px);
 }
 
@@ -3068,7 +3068,7 @@
     align-items: center;
     width: 100%;
   }
-  
+
   .form__label-group {
     display: flex;
     align-items: center;
@@ -3082,7 +3082,6 @@
       padding: 0 $spacing-2xs;
     }
   }
-
 }
 
 .code__pre {
@@ -3116,19 +3115,34 @@
   margin-bottom: $spacing-2xs;
 }
 
-// tooltip에 더보기 버튼이 올때 스타일 처리 
+// tooltip에 더보기 버튼이 올때 스타일 처리
 .tooltip-studio--help {
-
   & .button:last-child {
     margin-top: $spacing-xs;
   }
 
   .button--underline {
+    &:hover,
+    &:active,
+    &:focus {
+      color: $ui-02;
+
+      .svg-icon {
+        fill: $ui-02;
+      }
+    }
+
     color: $ui-02;
     padding: 0;
 
     .svg-icon {
       fill: $ui-02;
+
+      &:hover,
+      &:active,
+      &:focus {
+        fill: $ui-02;
+      }
     }
   }
 }
@@ -3306,13 +3320,13 @@
   .modal__head {
     background-color: $odd-row;
   }
-  
+
   .select-content__title {
     @include font-weight("medium");
     line-height: 2.5;
     color: $text-02;
   }
-  
+
   .select-content__helper-text {
     @include font-size("13");
     @include font-weight("regular");
@@ -3330,11 +3344,12 @@
   .select-content__data {
     margin-top: auto;
   }
-   
+
   .select-content__table {
     table-layout: fixed;
-  
-    td, th {
+
+    td,
+    th {
       text-align: center;
     }
   }
