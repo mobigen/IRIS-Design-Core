@@ -67,7 +67,7 @@
 // 상태별 스타일
 // -------------------------
 // hover 상태
-.radio__input:focus {
+.radio__input:focus-visible:not(:disabled) {
   + .radio__label:before {
     border-color: $primary;
   }
