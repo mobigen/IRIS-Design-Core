@@ -3301,6 +3301,14 @@
     overflow-y: auto;
   }
 
+  .list__item--selected {
+    background-color: $ui-01;
+
+    .list__button {
+      @include font-weight("medium");
+    }
+  }
+
   .side-nav__list-action-buttons {
     display: flex;
     margin-right: $spacing-2xs;
