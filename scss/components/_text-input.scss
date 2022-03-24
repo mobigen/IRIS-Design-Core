@@ -157,7 +157,8 @@
     fill: lighten($icon-01, 18%);
   }
 
-  &:hover {
+  &:hover,
+  &:focus-visible:not(:disabled) {
     .svg-icon {
       fill: $icon-01;
     }
