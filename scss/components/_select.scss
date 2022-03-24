@@ -15,7 +15,7 @@
     box-shadow: 0px 0px 4px rgba(77, 174, 255, 0.4);
 
     &:hover:not(:disabled),
-    &:focus:not(:disabled) {
+    &:focus-visible:not(:disabled) {
       border-color: $secondary;
     }
   }
@@ -38,7 +38,7 @@
       }
 
       &:hover:not(:disabled),
-      &:focus:not(:disabled) {
+      &:focus-visible:not(:disabled) {
         border-color: transparent;
         background-color: $ui-02;
 
@@ -64,7 +64,7 @@
       }
 
       &:hover:not(:disabled),
-      &:focus:not(:disabled) {
+      &:focus-visible:not(:disabled) {
         .text-input {
           background-color: $ui-02;
           color: $secondary;
@@ -139,7 +139,7 @@
       }
 
       &:hover:not(:disabled),
-      &:focus:not(:disabled),
+      &:focus-visible:not(:disabled),
       &:hover:active,
       &:hover:focus {
         .text-input {
@@ -307,7 +307,7 @@
 }
 
 .select-container__button {
-  &:focus:not(:disabled) {
+  &:focus-visible:not(:disabled) {
     background-color: $ui-01;
   }
 }
@@ -410,7 +410,7 @@
     box-shadow: none;
 
     &:hover:not(:disabled),
-    &:focus:not(:disabled) {
+    &:focus-visible:not(:disabled) {
       background-color: $ui-01;
 
       .select-selector__title {
@@ -447,7 +447,7 @@
     }
 
     &:hover:not(:disabled),
-    &:focus:not(:disabled) {
+    &:focus-visible:not(:disabled) {
       .text-input {
         background-color: $ui-01;
         color: $text-01;
