@@ -1,4 +1,4 @@
-@import "../utiles/helper-mixins";
+@import "../utils/helper-mixins";
 
 .svg-icon {
   @include svg-icon-size(18px);
