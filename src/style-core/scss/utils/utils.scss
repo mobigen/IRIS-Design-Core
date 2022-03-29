@@ -1,3 +1,11 @@
-@import 'css-reset';
-@import 'components-mixins';
-@import 'helper-mixins';
+// Base Variables
+@import "vars";
+@import "spacing";
+
+// Base Mixins
+@import "box-shadow";
+@import "breakpoints";
+@import "font-style";
+@import "grid-system";
+@import "motion";
+@import "z-index";
