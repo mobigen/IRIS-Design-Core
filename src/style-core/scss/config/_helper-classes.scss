@@ -34,6 +34,14 @@
   @include font-weight("bold");
 }
 
+.right-position {
+  @include right-position;
+}
+
+.not-scroll {
+  @include not-scroll;
+}
+
 .filter-highlight {
   background-color: #fff09c;
 }
@@ -52,7 +60,6 @@
   flex-shrink: 0;
   width: rem(32px);
   height: rem(32px);
-  // background: url("#{$img-path}/common/icon_map-type.png") no-repeat;
   content: "";
 }
 
@@ -485,18 +492,6 @@
 
 .text-negative {
   color: $negative;
-}
-
-.caption-out {
-  @include caption-out;
-}
-
-.right-position {
-  @include right-position;
-}
-
-.not-scroll {
-  @include not-scroll;
 }
 
 // element 사이 구분선
