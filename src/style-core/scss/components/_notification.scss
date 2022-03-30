@@ -1,5 +1,5 @@
 // -------------------------
-// Mixins
+// Notification
 // -------------------------
 @mixin notification-status($status-color, $background-color) {
   background-color: $background-color;
@@ -231,21 +231,19 @@
 // Notification Full - sm
 // -------------------------
 
-.notification-full--sm{
-
-  .notification-full__icon{
+.notification-full--sm {
+  .notification-full__icon {
     width: rem(36px);
     height: rem(36px);
     margin-bottom: $spacing-xs;
   }
 
-  .notification-full__text{
+  .notification-full__text {
     @include font-size("18");
   }
 
-  .notification-full__subtext{
+  .notification-full__subtext {
     @include font-size("12");
     margin-top: $spacing-xs;
   }
-
 }
