@@ -1,0 +1,112 @@
+// --------------------------------------
+// 프로젝트 내에서만 사용하는 반응형 스타일
+// --------------------------------------
+@include respond-to("tablet") {
+  .color-card {
+    flex-basis: 50%;
+    padding: $spacing-2xs;
+    margin-right: 0;
+    text-align: center;
+  }
+  .color-card__example {
+    width: 100%;
+  }
+
+  .component-example__live > div:only-child {
+    width: 100%;
+  }
+
+  .component-example__live > div + div {
+    margin-left: $spacing-md;
+  }
+
+  .component-example__row {
+    flex-direction: column;
+
+    & + & {
+      margin-top: $spacing-lg;
+    }
+  }
+
+  .component-example__size-label {
+    width: auto;
+    margin-right: 0;
+    margin-bottom: $spacing-2xs;
+  }
+
+  .component-examle__item-group {
+    justify-content: center;
+  }
+
+  .component-examle__item-group {
+    width: 100%;
+  }
+
+  .component-examle__item-group--not-full {
+    width: auto;
+  }
+
+  .component-examle__item-group--column {
+    flex-direction: column;
+
+    & > .button + .button,
+    & > .context-menu + .context-menu,
+    & > .select + .select,
+    & > .table + .table,
+    & > .tag + .tag,
+    & > .toggle-button + .toggle-button,
+    & > .tooltip-studio + .tooltip-studio {
+      margin-left: 0;
+      margin-top: $spacing-xs;
+    }
+  }
+
+  .accordion,
+  .description,
+  .drawer,
+  .list,
+  .progressbar,
+  .transfer,
+  .upload,
+  .upload-preview,
+  .upload-drag {
+    width: 100%;
+  }
+
+  .checkboxs,
+  .radios,
+  .toggle-button {
+    flex-direction: column;
+  }
+
+  .checkboxs .checkbox:not(:last-of-type),
+  .radios .radio:not(:last-of-type) {
+    margin-right: 0;
+    margin-top: $spacing-2xs;
+  }
+
+  .date-picker-selector {
+    width: 100%;
+  }
+
+  .date-picker-selector__input {
+    width: 100%;
+    min-width: auto;
+    max-width: auto;
+  }
+
+  .form__detail {
+    flex-basis: min-content;
+  }
+  .form__detail-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .form__detail-label {
+    width: auto;
+  }
+}
+
+@include respond-to("mobile") {
+  // ...
+}

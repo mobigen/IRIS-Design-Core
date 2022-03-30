@@ -38,7 +38,7 @@
 
 .footer__copyright {
   @include font-size("12");
-  color: $text-02
+  color: $text-02;
 }
 // content - article area
 .page-header {
@@ -148,13 +148,13 @@
   word-wrap: normal;
   font-weight: 600;
   padding-bottom: $layout-sm;
-  
+
   span {
     color: $primary;
   }
 }
 
-.page__usage { 
+.page__usage {
   margin-bottom: $layout-sm;
 }
 
@@ -231,6 +231,10 @@
   border: 1px solid $ui-04;
 }
 
+.component-example__live > div + div {
+  margin-left: $spacing-3xl;
+}
+
 .component-example__row {
   display: flex;
   align-items: center;
@@ -251,6 +255,33 @@
 .component-examle__item-group {
   display: flex;
   align-items: center;
+}
+
+.accordion,
+.description,
+.drawer,
+.list,
+.progressbar,
+.transfer,
+.upload,
+.upload-preview,
+.upload-drag {
+  width: rem(550px);
+}
+
+.drawer .description {
+  width: 100%;
+}
+
+.progressbar {
+  & + & {
+    margin-top: $spacing-md;
+  }
+}
+
+.tag + .tag,
+.badge + .badge {
+  margin-left: $spacing-xs;
 }
 
 .component-examle__item-group--row {
@@ -279,6 +310,6 @@
 
 .component-examle__item-group--row .upload + .upload,
 .component-examle__item-group--row .upload-alt + .upload-alt,
-.component-examle__item-group--row .upload-preview + .upload-preview{
+.component-examle__item-group--row .upload-preview + .upload-preview {
   margin-top: $spacing-xs;
 }
