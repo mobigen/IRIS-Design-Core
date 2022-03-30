@@ -1,3 +1,6 @@
+// -------------------------
+// Timepicker
+// -------------------------
 .time-picker {
   @include picker;
   display: flex;
@@ -30,5 +33,3 @@
 .time-picker-container__list + .time-picker-container__list::before {
   display: none;
 }
-
-
