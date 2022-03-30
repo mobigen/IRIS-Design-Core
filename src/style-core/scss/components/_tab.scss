@@ -23,6 +23,12 @@
   &:hover .tab__button-text {
     color: $text-01;
   }
+
+  .tab__button {
+    &:focus-visible:not(:disabled) {
+      outline: 2px solid $default-focus;
+    }
+  }
 }
 
 .tab__item--selected {
@@ -31,7 +37,7 @@
   }
 
   .tab__button {
-    &:focus-visible:not(:disabled) {
+    &:focus:not(:disabled) {
       .tab__button-text {
         color: $primary;
       }
@@ -79,7 +85,7 @@
   background-color: transparent;
   padding: 0;
 
-  &:focus-visible:not(:disabled) {
+  &:focus:not(:disabled) {
     .tab__button-text {
       color: $text-01;
     }
@@ -217,7 +223,7 @@
     .tab__button {
       justify-content: center;
 
-      &:focus-visible:not(:disabled) {
+      &:focus:not(:disabled) {
         .tab__button-text {
           color: $text-02;
         }
@@ -243,7 +249,7 @@
     }
 
     .tab__button {
-      &:focus-visible:not(:disabled) {
+      &:focus:not(:disabled) {
         .tab__button-text {
           color: $text-02;
         }
@@ -253,7 +259,7 @@
 
   .tab__item--disabled {
     .tab__button {
-      &:focus-visible:not(:disabled) {
+      &:focus:not(:disabled) {
         .tab__button-text {
           color: rgba($text-04, 0.85);
         }
