@@ -9,18 +9,19 @@
   }
 }
 
+// 한줄 말줄임 적용
 @mixin text-overflow($width: false) {
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 
-  // width parameter가 있을 경우 허용
   @if ($width) {
     width: $width;
   }
 }
 
+// 숨김 처리
 @mixin hidden {
   position: absolute;
   width: 1px;
@@ -34,26 +35,26 @@
   white-space: nowrap;
 }
 
-// Image Replacement Phark Method
+// 의미있는 이미지 대체 텍스트 (IR - Image Replacement)
 @mixin ir-pm {
-  	/* 레이아웃에 영향을 끼치지 않도록 */
-	position: absolute;
-	/* 스크린 리더가 읽을 수 있도록 */
-	width: 1px;
-	height: 1px;
-	/* 눈에 보이는 부분을 제거 */
-	clip: rect(0 0 0 0);
-	margin: -1px;
-	overflow: hidden;
+  /* 레이아웃에 영향을 끼치지 않도록 */
+  position: absolute;
+  /* 스크린 리더가 읽을 수 있도록 */
+  width: 1px;
+  height: 1px;
+  /* 눈에 보이는 부분을 제거 */
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  overflow: hidden;
 }
 
-// Img Global
+// 이미지 가로에 꽉차게 보여지게 적용
 @mixin img-g {
   display: block;
   width: 100%;
 }
 
-// Hide Table Caption
+// table 숨김 처리
 @mixin caption-out {
   width: 0;
   height: 0;
@@ -62,7 +63,7 @@
   visibility: hidden;
 }
 
-// Right Position Center
+// 요소 우측 중앙 정렬
 @mixin position-right-center($right-spacing) {
   position: absolute;
   top: 50%;
@@ -70,33 +71,25 @@
   transform: translateY(-50%);
 }
 
-// 상하와 좌우가 동일한 padding
+// 일정한 패딩 적용
 @mixin stable-padding($padding-up-and-down, $padding-both-sides) {
   padding: $padding-up-and-down $padding-both-sides;
 }
 
-// svg icon size
+// svg 아이콘 사이즈 적용
 @mixin svg-icon-size($size) {
   width: $size;
   height: $size;
 }
 
-// svg icon stroke (bolder, lighter)
+// svg 아이콘 stroke 두께 설정
 @mixin svg-icon-stroke($stroke-color) {
   stroke: $stroke-color;
   stroke-width: 1;
-  stroke-opacity: .4;
+  stroke-opacity: 0.4;
 }
 
-// Hide Table Caption
-@mixin caption-out {
-  width: 0;
-  height: 0;
-  padding: 0;
-  margin: 0;
-  visibility: hidden;
-}
-
+// 요소 우측 가운데 정렬
 @mixin right-position {
   position: absolute;
   top: 50%;
@@ -104,6 +97,7 @@
   transform: translateY(-50%);
 }
 
+// 스크롤 안되도록 처리
 @mixin not-scroll {
   overflow: hidden;
 }
