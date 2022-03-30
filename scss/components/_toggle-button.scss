@@ -42,7 +42,7 @@
 .toggle-button__text {
   @include font-size("13");
   line-height: 1;
-  letter-spacing: -.5px;
+  letter-spacing: -0.5px;
 }
 
 .toggle-button__item--selected.toggle-button__item--disabled,
@@ -57,7 +57,13 @@
 // -------------------------
 .toggle-button__item--secondary {
   @include button;
-  @include button-theme($ui-02, $text-02, rgba($secondary, 0.14), rgba($secondary, 0.14), $ui-04);
+  @include button-theme(
+    $ui-02,
+    $text-02,
+    rgba($secondary, 0.14),
+    rgba($secondary, 0.14),
+    $ui-04
+  );
   display: flex;
   flex-direction: column;
   height: rem(74px);
@@ -149,7 +155,7 @@
   .toggle-button__item--disabled:focus,
   .toggle-button__item--disabled:disabled,
   .toggle-button__item--disabled:disabled:hover,
-  .toggle-button__item--disabled:disabled:focus{
+  .toggle-button__item--disabled:disabled:focus {
     background-color: $ui-02 !important;
     opacity: 0.25;
     cursor: not-allowed;
@@ -183,7 +189,7 @@
   padding: $spacing-2xs;
 }
 
-.toggle-button-list .toggle-button__text{
+.toggle-button-list .toggle-button__text {
   width: 100%;
   word-break: keep-all;
   word-wrap: break-word;
