@@ -72,7 +72,7 @@
 // hover 상태
 .radio__input:focus-visible:not(:disabled) {
   + .radio__label:before {
-    border-color: $primary;
+    outline: 2px solid $default-focus;
   }
 }
 
