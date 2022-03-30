@@ -143,6 +143,11 @@ button:focus,
 input:focus {
   outline: 0;
 }
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid $primary;
+}
 // reset a tag 논의 필요 끝
 
 * {
