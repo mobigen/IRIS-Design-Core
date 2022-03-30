@@ -38,6 +38,24 @@
   background-color: #fff09c;
 }
 
+.svg-icon {
+  @include svg-icon-size(18px);
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+  fill: $icon-01;
+  color: $icon-01;
+}
+
+.img-icon {
+  display: flex;
+  flex-shrink: 0;
+  width: rem(32px);
+  height: rem(32px);
+  // background: url("#{$img-path}/common/icon_map-type.png") no-repeat;
+  content: "";
+}
+
 .division-line {
   display: inline-block;
   overflow: hidden;
@@ -511,14 +529,14 @@
 // icon fill
 // -------------------------
 
-.svg-icon.svg-icon--primary{
+.svg-icon.svg-icon--primary {
   fill: $primary;
 }
 
-.svg-icon.svg-icon--secondary{
-  fill: $secondary
+.svg-icon.svg-icon--secondary {
+  fill: $secondary;
 }
 
-.svg-icon.svg-icon--negative{
+.svg-icon.svg-icon--negative {
   fill: $negative;
 }
