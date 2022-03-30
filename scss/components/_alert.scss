@@ -1,4 +1,6 @@
-// modal과 디자인이 똑같은 부분 시작
+// -------------------------
+// Alert
+// -------------------------
 .alert {
   @include layer("pop-out");
   display: flex;

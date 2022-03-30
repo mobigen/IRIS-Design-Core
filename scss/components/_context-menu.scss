@@ -1,3 +1,6 @@
+// -------------------------
+// Context menu
+// -------------------------
 .context-menu {
   @include list;
   @include layer("pop-out");
@@ -12,7 +15,7 @@
   background-color: $ui-02;
 }
 
-.context-menu__icon{
+.context-menu__icon {
   fill: $text-02;
 }
 
@@ -174,6 +177,6 @@
 // Modifier - division-line
 // -------------------------
 
-.context-menu__item--division-line{
+.context-menu__item--division-line {
   border-bottom: 1px solid $ui-04;
 }
