@@ -15,6 +15,10 @@
     color: $primary;
   }
 
+  &:focus-visible:not(:disabled) {
+    outline: 2px solid $default-focus;
+  }
+
   &:disabled {
     opacity: 0.25;
     cursor: not-allowed;
