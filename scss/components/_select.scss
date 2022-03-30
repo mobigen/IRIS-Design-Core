@@ -14,9 +14,13 @@
     border-color: $secondary;
     box-shadow: 0px 0px 4px rgba(77, 174, 255, 0.4);
 
-    &:hover:not(:disabled),
-    &:focus-visible:not(:disabled) {
+    &:hover:not(:disabled) {
       border-color: $secondary;
+    }
+
+    &:focus-visible:not(:disabled) {
+      border: 2px solid $default-focus;
+      box-shadow: none;
     }
   }
 
@@ -37,8 +41,7 @@
         fill: $secondary;
       }
 
-      &:hover:not(:disabled),
-      &:focus-visible:not(:disabled) {
+      &:hover:not(:disabled) {
         border-color: transparent;
         background-color: $ui-02;
 
@@ -63,8 +66,7 @@
         fill: $secondary;
       }
 
-      &:hover:not(:disabled),
-      &:focus-visible:not(:disabled) {
+      &:hover:not(:disabled) {
         .text-input {
           background-color: $ui-02;
           color: $secondary;
@@ -139,7 +141,6 @@
       }
 
       &:hover:not(:disabled),
-      &:focus-visible:not(:disabled),
       &:hover:active,
       &:hover:focus {
         .text-input {
@@ -215,6 +216,11 @@
     border-color: $secondary;
     box-shadow: 0px 0px 4px rgba(77, 174, 255, 0.4);
   }
+
+  &:focus-visible:not(:disabled) {
+    border: 2px solid $default-focus;
+    box-shadow: none;
+  }
 }
 
 .select-selector__input {
@@ -228,6 +234,11 @@
   height: 100%;
   padding-right: $spacing-xl;
   color: $text-02;
+
+  &:focus-visible:not(:disabled) {
+    border: 2px solid $default-focus;
+    box-shadow: none;
+  }
 }
 
 .select-selector__input-icon {
@@ -409,8 +420,7 @@
     border-color: transparent;
     box-shadow: none;
 
-    &:hover:not(:disabled),
-    &:focus-visible:not(:disabled) {
+    &:hover:not(:disabled) {
       background-color: $ui-01;
 
       .select-selector__title {
@@ -446,8 +456,7 @@
       box-shadow: none;
     }
 
-    &:hover:not(:disabled),
-    &:focus-visible:not(:disabled) {
+    &:hover:not(:disabled) {
       .text-input {
         background-color: $ui-01;
         color: $text-01;
