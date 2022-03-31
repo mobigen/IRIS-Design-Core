@@ -57,7 +57,7 @@
   }
 
   &[x-placement^="bottom"] {
-    margin-top: 10px;
+    margin-top: $spacing-xs + $spacing-3xs;
 
     .tooltip-arrow {
       top: -4px;
@@ -65,7 +65,7 @@
   }
 
   &[x-placement^="bottom-end"] {
-    margin-top: 10px;
+    margin-top: $spacing-xs + $spacing-3xs;
 
     .tooltip-arrow {
       top: -4px;
@@ -73,7 +73,7 @@
   }
 
   &[x-placement^="bottom-start"] {
-    margin-top: 10px;
+    margin-top: $spacing-xs + $spacing-3xs;
 
     .tooltip-arrow {
       top: -4px;
@@ -81,7 +81,7 @@
   }
 
   &[x-placement^="right"] {
-    margin-left: 10px;
+    margin-left: $spacing-xs + $spacing-3xs;
 
     .tooltip-arrow {
       top: 50%;
@@ -91,7 +91,7 @@
   }
 
   &[x-placement^="left"] {
-    margin-right: 10px;
+    margin-right: $spacing-xs + $spacing-3xs;
 
     .tooltip-arrow {
       top: 50%;
@@ -134,7 +134,7 @@
 .popover {
   // Tooltip 위로 위치
   .tooltip--top {
-    margin-bottom: 10px;
+    margin-bottom: $spacing-xs + $spacing-3xs;
 
     .tooltip-arrow {
       top: calc(100% - 4px);
@@ -145,7 +145,7 @@
 
   // // Tooltip 아래로 위치
   .tooltip--bottom {
-    margin-top: 10px;
+    margin-top: $spacing-xs + $spacing-3xs;
 
     .tooltip-arrow {
       top: -4px;
@@ -156,7 +156,7 @@
 
   // Tooltip 왼쪽으로 위치
   .tooltip--left {
-    margin-right: 10px;
+    margin-right: $spacing-xs + $spacing-3xs;
 
     .tooltip-arrow {
       top: 50%;
@@ -167,7 +167,7 @@
 
   // Tooltip 오른쪽으로 위치
   .tooltip--right {
-    margin-left: 10px;
+    margin-left: $spacing-xs + $spacing-3xs;
 
     .tooltip-arrow {
       top: 50%;
@@ -177,7 +177,7 @@
   }
 
   .tooltip--top-right {
-    margin-bottom: 10px;
+    margin-bottom: $spacing-xs + $spacing-3xs;
 
     .tooltip-arrow {
       top: calc(100% - 4px);
@@ -186,7 +186,7 @@
   }
 
   .tooltip--top-left {
-    margin-bottom: 10px;
+    margin-bottom: $spacing-xs + $spacing-3xs;
 
     .tooltip-arrow {
       top: calc(100% - 4px);
@@ -195,7 +195,7 @@
   }
 
   .tooltip--bottom-right {
-    margin-top: 10px;
+    margin-top: $spacing-xs + $spacing-3xs;
 
     .tooltip-arrow {
       top: -4px;
@@ -204,7 +204,7 @@
   }
 
   .tooltip--bottom-left {
-    margin-top: 10px;
+    margin-top: $spacing-xs + $spacing-3xs;
 
     .tooltip-arrow {
       top: -4px;
@@ -213,7 +213,7 @@
   }
 
   .tooltip--right-top {
-    margin-left: 10px;
+    margin-left: $spacing-xs + $spacing-3xs;
 
     .tooltip-arrow {
       top: rem(8px);
@@ -222,7 +222,7 @@
   }
 
   .tooltip--right-bottom {
-    margin-left: 10px;
+    margin-left: $spacing-xs + $spacing-3xs;
 
     .tooltip-arrow {
       bottom: rem(8px);
@@ -231,7 +231,7 @@
   }
 
   .tooltip--left-top {
-    margin-right: 10px;
+    margin-right: $spacing-xs + $spacing-3xs;
 
     .tooltip-arrow {
       top: rem(8px);
@@ -240,7 +240,7 @@
   }
 
   .tooltip--left-bottom {
-    margin-right: 10px;
+    margin-right: $spacing-xs + $spacing-3xs;
 
     .tooltip-arrow {
       bottom: rem(8px);

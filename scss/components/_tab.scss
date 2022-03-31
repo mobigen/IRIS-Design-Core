@@ -161,7 +161,7 @@
   }
 
   .tab__item {
-    padding-bottom: 2px;
+    padding-bottom: $spacing-3xs;
   }
 
   .tab__item--selected::after {
@@ -285,7 +285,7 @@
   }
 
   .tab__button-text {
-    margin-top: 2px;
+    margin-top: $spacing-3xs;
     color: rgba($text-04, 0.85);
   }
 
@@ -312,14 +312,14 @@
   position: absolute;
   top: 50%;
   left: -24px;
-  margin-top: -12px;
+  margin-top: -$spacing-sm;
 }
 
 .tab__next-button {
   position: absolute;
   top: 50%;
   right: -24px;
-  margin-top: -12px;
+  margin-top: -$spacing-sm;
 }
 
 .tab--pagination .tab__bar-wrap {

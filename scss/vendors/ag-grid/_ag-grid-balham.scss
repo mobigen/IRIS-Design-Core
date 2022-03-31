@@ -181,13 +181,13 @@
   .ag-cell__group {
     @include text-overflow;
     position: relative;
-    padding-right: 36px;
+    padding-right: $spacing-sm * 3;
   }
 
   .button.ag-cell__group-button {
     position: absolute;
     top: 50%;
-    margin-top: -16px;
+    margin-top: -$spacing-md;
     right: 0;
     width: 32px;
     height: 32px;
