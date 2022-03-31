@@ -250,7 +250,7 @@
 }
 
 .select-selector__input-icon + .text-input {
-  padding-left: rem(35px);
+  padding-left: $spacing-xl + $spacing-2xs;
 }
 
 .select-selector__title {
@@ -270,7 +270,7 @@
   @include svg-icon-size(20px);
   position: absolute;
   top: 50%;
-  margin-top: -10px;
+  margin-top: rem(-10px);
   right: $spacing-xs;
   transform: none;
   pointer-events: none;
@@ -370,7 +370,7 @@
     right: rem(4px);
     width: 18px;
     height: 18px;
-    margin-top: -8px;
+    margin-top: -$spacing-xs;
   }
 
   .select-container {
@@ -499,7 +499,7 @@
 .select--color-picker {
   .select-selector__button {
     padding-left: $spacing-2xs;
-    padding-right: rem(28px);
+    padding-right: $spacing-lg + $spacing-2xs;
   }
 
   .color-picker__color {

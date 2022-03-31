@@ -108,7 +108,7 @@
     }
 
     &:nth-last-child(3):not(div) {
-      padding-right: rem(62px) !important;
+      padding-right: ($spacing-xl * 2) - $spacing-3xs !important;
     }
   }
 }
@@ -206,7 +206,7 @@
     @include text-input--lg;
 
     &:nth-last-child(3):not(div) {
-      padding-right: rem(72px) !important;
+      padding-right: $spacing-sm * 6 !important;
     }
   }
 
@@ -242,7 +242,7 @@
     @include text-input--sm;
 
     &:nth-last-child(3):not(div) {
-      padding-right: rem(46px) !important;
+      padding-right: $spacing-3xl - $spacing-3xs !important;
     }
   }
 

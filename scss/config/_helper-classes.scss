@@ -137,12 +137,12 @@
 }
 
 .p-4 {
-  padding: rem(4px) !important;
+  padding: $spacing-2xs !important;
 }
 
 .px-6 {
-  padding-right: rem(6px) !important;
-  padding-left: rem(6px) !important;
+  padding-right: $spacing-2xs + $spacing-3xs !important;
+  padding-left: $spacing-2xs + $spacing-3xs !important;
 }
 
 // -------------------------
@@ -497,23 +497,23 @@
 // element 사이 구분선
 .division-element {
   position: relative;
-  margin-left: rem(20px) !important;
+  margin-left: $spacing-md + $spacing-2xs !important;
   &:after {
     content: "";
     position: absolute;
     left: -11px;
     top: 50%;
-    margin-top: -8px;
+    margin-top: -$spacing-xs;
     width: 1px;
     height: 17px;
     background-color: $ui-04;
   }
 
   &.division-element--lg {
-    margin-left: rem(24px) !important;
+    margin-left: $spacing-lg !important;
 
     &:after {
-      margin-top: -11px;
+      margin-top: rem(-11px);
       height: 22px;
       left: -13px;
     }
