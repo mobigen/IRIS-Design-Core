@@ -28,8 +28,8 @@
   position: relative;
   display: flex;
   align-items: center;
-  padding-left: rem(24px); //width of radio 17px + 6px of padding
-  min-height: rem(24px);
+  padding-left: $spacing-lg;
+  min-height: $layout-xs;
   color: $text-02;
   white-space: nowrap;
   user-select: none;
@@ -46,7 +46,7 @@
   content: "";
   width: rem(17px);
   height: rem(17px);
-  margin: rem(2px);
+  margin: $spacing-3xs;
   position: absolute;
   left: 0;
   top: rem(1px);
@@ -117,7 +117,7 @@
 .radio--lg {
   .radio__label {
     @include font-size("16");
-    padding-left: rem(28px); //width of radio 20px + 8px of padding
+    padding-left: $spacing-lg + $spacing-2xs; //width of radio 20px + 8px of padding
     min-height: rem(28px);
   }
 
@@ -125,7 +125,7 @@
     content: "";
     width: rem(20px);
     height: rem(20px);
-    margin: rem(2px);
+    margin: $spacing-3xs;
     top: rem(2px);
     border-width: rem(2px);
   }

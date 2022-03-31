@@ -6,16 +6,16 @@
   align-items: center;
   justify-content: flex-start;
   height: rem(28px);
-  padding: 0 rem(20px);
+  padding: 0 $spacing-md + $spacing-2xs;
   background-color: $breadcrumb-bg;
   border-bottom: 1px solid darken($breadcrumb-bg, 8%);
 }
 
 .breadcrumb__text {
   position: relative;
-  padding-right: 28px;
+  padding-right: $spacing-lg + $spacing-2xs;
   color: $breadcrumb-text;
-  font-size: 13px;
+  @include font-size("13");
   user-select: none;
   letter-spacing: -0.2px;
   white-space: nowrap;
@@ -30,7 +30,7 @@
     transform: rotate(45deg); /* 각도 */
     position: absolute;
     top: 50%;
-    margin-top: -4px;
+    margin-top: -$spacing-2xs;
     right: 13px;
     border-radius: 2px;
   }
