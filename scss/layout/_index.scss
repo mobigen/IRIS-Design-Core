@@ -19,7 +19,7 @@
   display: flex;
   align-items: center;
   height: rem(56px);
-  padding: 0 20px;
+  padding: 0 $spacing-md + $spacing-2xs;
 }
 
 .index-layout-head__title-bar .select--borderless .select-container {
@@ -97,7 +97,7 @@
   min-height: rem(56px);
   max-height: rem(100px);
   height: auto;
-  padding: 0 20px $spacing-sm 20px;
+  padding: 0 $spacing-md + $spacing-2xs $spacing-sm $spacing-md + $spacing-2xs;
 }
 
 .index-layout-body__left-content {
@@ -126,7 +126,7 @@
 .index-layout-body__filter-title {
   @include text-overflow;
   @include font-weight("regular");
-  font-size: 15px;
+  @include font-size("15");
   color: $text-02;
   letter-spacing: -0.3px;
   em {
@@ -307,12 +307,12 @@
 
 // IMA, ISS, ITS 목록화면 공통 클래스
 .project-list {
-  padding: 0 20px;
+  padding: 0 $spacing-md + $spacing-2xs;
   height: calc(100vh - 115px);
 }
 
 .project-thumbnail {
-  padding: 0 35px $layout-xs 35px;
+  padding: 0 $spacing-xl + $spacing-2xs $layout-xs $spacing-xl + $spacing-2xs;
   flex: 1 0 auto;
   overflow-y: auto;
   height: calc(100vh - 112px);
@@ -445,8 +445,8 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -25px;
-  margin-left: -25px;
+  margin-top: -$spacing-lg;
+  margin-left: -$spacing-lg;
 }
 
 .project-thumbnail-list__thumbnail-icon .svg-icon {
@@ -503,7 +503,7 @@
   @include text-overflow;
   position: relative;
   padding: $spacing-2xs 0;
-  font-size: 15px;
+  @include font-size("15");
   font-weight: normal;
   letter-spacing: -0.3px;
   color: $text-02;

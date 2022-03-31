@@ -25,7 +25,7 @@
   display: inline-flex;
   align-items: center;
   position: relative;
-  padding-left: rem(24px); //NOTE: width of checkbox 16px + 8px of padding
+  padding-left: $spacing-xl;
   min-height: rem(24px);
   color: $text-02;
   white-space: nowrap;
@@ -43,7 +43,7 @@
   content: "";
   width: rem(16px);
   height: rem(16px);
-  margin: rem(2px);
+  margin: $spacing-3xs;
   position: absolute;
   left: 0;
   top: rem(2px);
@@ -148,7 +148,7 @@
 .checkbox--lg {
   .checkbox__label {
     @include font-size("16");
-    padding-left: rem(28px); //width of checkbox 20px + 8px of padding
+    padding-left: $spacing-lg + $spacing-2xs;
     min-height: rem(28px);
   }
 
@@ -156,7 +156,7 @@
     content: "";
     width: rem(20px);
     height: rem(20px);
-    margin: rem(2px);
+    margin: $spacing-3xs;
     top: rem(2px);
     border-width: rem(2px);
   }
@@ -182,7 +182,7 @@
 .checkbox--sm {
   .checkbox__label {
     @include font-size("12");
-    padding-left: rem(16px); //width of checkbox 20px + 8px of padding
+    padding-left: $spacing-md;
     min-height: rem(18px);
   }
 
