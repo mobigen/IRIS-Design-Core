@@ -20,8 +20,10 @@
           <div class="component-example__row">
             <!-- default -->
             <p class="component-example__size-label">Size: md</p>
-            <input type="range" name="shadow.shadow_opacity" min="0" max="100" step="1" class="range-input">
-            <input type="range" name="shadow.shadow_opacity" min="0" max="100" step="1" class="range-input" disabled>
+            <label for="inp-range-01" class="hidden">Label</label>
+            <input type="range" name="shadow.shadow_opacity" min="0" max="100" step="1" class="range-input" id="inp-range-01">
+            <label for="inp-range-02" class="hidden">Label</label>
+            <input type="range" name="shadow.shadow_opacity" min="0" max="100" step="1" class="range-input" id="inp-range-02" disabled>
           </div>
         </div>
       </div>
@@ -35,11 +37,14 @@
         <div>
           <div class="component-example__row">
             <p class="component-example__size-label">Size: md</p>
+            <label for="inp-range-06" class="hidden">Label</label>
             <!-- default + text-input -->
-            <div class="range-input-group">
-              <input type="range" name="shadow.shadow_opacity" min="0" max="100" step="1" class="range-input">
+            <div class="range-input-group" id=" inp-range-01">
+              <label for="inp-range-03" class="hidden">Label</label>
+              <input type="range" name="shadow.shadow_opacity" min="0" max="100" step="1" class="range-input" id="inp-range-03">
               <div class="text-input-wrap">
-                <input class="text-input" type="number"32 min="0" max="100" step="1">
+                <label for="inp-01" class="hidden">Label</label>
+                <input id="inp-01" class="text-input" type="number" 32 min="0" max="100" step="1">
                 <span class="text-input-wrap__suffix">%</span>
               </div>
             </div>

@@ -19,16 +19,17 @@
           <div class="component-example__row">
             <p class="component-example__size-label">Size: md</p>
             <div class="component-examle__item-group">
-              <div class="accordion">
+              <!-- aria-labelledby 사용 용도 설명 시 작성 (하위 컴포넌트 파일은 생략) -->
+              <div class="accordion" aria-labelledby="accordion-component">
                 <div class="accordion__item">
                   <!-- accordion__head--open 클래스 추가시 open -->
-                  <button class="accordion__head accordion__head--open">
+                  <button class="accordion__head accordion__head--open" aria-expanded="true" aria-controls="accordion-01">
                     <span class="accordion__head-title"> Accordion Head Title </span>
                     <svg class="accordion__head-icon svg-icon" aria-hidden="true">
                       <use xlink:href="#chevron-left-medium"></use>
                     </svg>
                   </button>
-                  <div class="accordion__body">
+                  <div class="accordion__body" id="accordion-01">
                     <div class="accordion-vertical">
                       <ul class="accordion-vertical__list">
                         <li class="accordion-vertical__item accordion-vertical__item--selected">
@@ -36,7 +37,7 @@
                             <span class="accordion-vertical__text"> list-item-text </span>
                           </button>
                           <div class="accordion-vertical__action-buttons">
-                            <button class="accordion-vertical__action-button" type="button" title="icon">
+                            <button class="accordion-vertical__action-button" type="button" title="현재 아이템 삭제">
                               <svg class="svg-icon accordion-vertical__icon" aria-hidden="true">
                                 <use xlink:href="#close">
                                 </use>
@@ -51,7 +52,7 @@
                             </span>
                           </button>
                           <div class="accordion-vertical__action-buttons">
-                            <button class="accordion-vertical__action-button" type="button" title="icon">
+                            <button class="accordion-vertical__action-button" type="button" title="현재 아이템 삭제">
                               <svg class="svg-icon accordion-vertical__icon" aria-hidden="true">
                                 <use xlink:href="#close"></use>
                               </svg>
@@ -63,7 +64,7 @@
                             <span class="accordion-vertical__text"> list-item-text </span>
                           </button>
                           <div class="accordion-vertical__action-buttons">
-                            <button class="accordion-vertical__action-button" type="button" title="icon">
+                            <button class="accordion-vertical__action-button" type="button" title="현재 아이템 삭제">
                               <svg class="svg-icon accordion-vertical__icon" aria-hidden="true">
                                 <use xlink:href="#close"></use>
                               </svg>
@@ -76,13 +77,13 @@
                 </div>
                 <div class="accordion__item">
                   <!-- accordion__head--open 클래스 추가시 open -->
-                  <button class="accordion__head accordion__head--open">
+                  <button class="accordion__head" aria-expanded="false" aria-controls="accordion-02">
                     <span class="accordion__head-title"> Accordion Head Title </span>
                     <svg class="accordion__head-icon svg-icon" aria-hidden="true">
                       <use xlink:href="#chevron-left-medium"></use>
                     </svg>
                   </button>
-                  <div class="accordion__body">
+                  <div class="accordion__body" id="accordion-02">
                     <div class="accordion-vertical">
                       <ul class="accordion-vertical__list">
                         <li class="accordion-vertical__item">
@@ -90,7 +91,7 @@
                             <span class="accordion-vertical__text"> list-item-text </span>
                           </button>
                           <div class="accordion-vertical__action-buttons">
-                            <button class="accordion-vertical__action-button" type="button" title="icon">
+                            <button class="accordion-vertical__action-button" type="button" title="현재 아이템 삭제">
                               <svg class="svg-icon accordion-vertical__icon" aria-hidden="true">
                                 <use xlink:href="#close"></use>
                               </svg>
@@ -104,7 +105,7 @@
                             </span>
                           </button>
                           <div class="accordion-vertical__action-buttons">
-                            <button class="accordion-vertical__action-button" type="button" title="icon">
+                            <button class="accordion-vertical__action-button" type="button" title="현재 아이템 삭제">
                               <svg class="svg-icon accordion-vertical__icon" aria-hidden="true">
                                 <use xlink:href="#close"></use>
                               </svg>
@@ -116,7 +117,7 @@
                             <span class="accordion-vertical__text"> list-item-text </span>
                           </button>
                           <div class="accordion-vertical__action-buttons">
-                            <button class="accordion-vertical__action-button" type="button" title="icon">
+                            <button class="accordion-vertical__action-button" type="button" title="현재 아이템 삭제">
                               <svg class="svg-icon accordion-vertical__icon" aria-hidden="true">
                                 <use xlink:href="#close"></use>
                               </svg>
@@ -143,16 +144,16 @@
           <div class="component-example__row">
             <p class="component-example__size-label">Size: lg</p>
             <div class="component-examle__item-group">
-              <div class="accordion">
+              <div class="accordion" aria-labelledby="accordion-component">
                 <div class="accordion__item">
                   <!-- accordion__head--open 클래스 추가시 open -->
-                  <button class="accordion__head accordion__head--open">
+                  <button class="accordion__head accordion__head--open" aria-expanded="true" aria-controls="accordion-03">
                     <span class="accordion__head-title"> Accordion Head Title </span>
                     <svg class="accordion__head-icon accordion__head-icon--right svg-icon" aria-hidden="true">
                       <use xlink:href="#chevron-up-medium"></use>
                     </svg>
                   </button>
-                  <div class="accordion__body">
+                  <div class="accordion__body" id="accordion-03">
                     <div class="accordion-horizontal accordion-horizontal--lg">
                       <ul class="accordion-horizontal__list">
                         <li class="accordion-horizontal__item accordion-horizontal__item--selected">
@@ -182,13 +183,13 @@
                 </div>
                 <div class="accordion__item">
                   <!-- accordion__head--open 클래스 추가시 open -->
-                  <button class="accordion__head">
+                  <button class="accordion__head" aria-expanded="false" aria-controls="accordion-04">
                     <span class="accordion__head-title"> Accordion Head Title </span>
                     <svg class="accordion__head-icon accordion__head-icon--right svg-icon" aria-hidden="true">
                       <use xlink:href="#chevron-up-medium"></use>
                     </svg>
                   </button>
-                  <div class="accordion__body">
+                  <div class="accordion__body" id="accordion-04">
                     <div class="accordion-horizontal accordion-horizontal--lg">
                       <ul class="accordion-horizontal__list">
                         <li class="accordion-horizontal__item accordion-horizontal__item--selected">
@@ -222,16 +223,16 @@
           <div class="component-example__row">
             <p class="component-example__size-label">Size: md</p>
             <div class="component-examle__item-group">
-              <div class="accordion">
+              <div class="accordion" aria-labelledby="accordion-component">
                 <div class="accordion__item">
                   <!-- accordion__head--open 클래스 추가시 open -->
-                  <button class="accordion__head accordion__head--open">
+                  <button class="accordion__head accordion__head--open" aria-expanded="true" aria-controls="accordion-05">
                     <span class="accordion__head-title"> Accordion Head Title </span>
                     <svg class="accordion__head-icon accordion__head-icon--right svg-icon" aria-hidden="true">
                       <use xlink:href="#chevron-up-medium"></use>
                     </svg>
                   </button>
-                  <div class="accordion__body">
+                  <div class="accordion__body" id="accordion-05">
                     <div class="accordion-horizontal">
                       <ul class="accordion-horizontal__list">
                         <li class="accordion-horizontal__item">
@@ -288,13 +289,13 @@
                 </div>
                 <div class="accordion__item">
                   <!-- accordion__head--open 클래스 추가시 open -->
-                  <button class="accordion__head">
+                  <button class="accordion__head" aria-expanded="false" aria-controls="accordion-06">
                     <span class="accordion__head-title"> Accordion Head Title </span>
                     <svg class="accordion__head-icon accordion__head-icon--right svg-icon" aria-hidden="true">
                       <use xlink:href="#chevron-up-medium"></use>
                     </svg>
                   </button>
-                  <div class="accordion__body">
+                  <div class="accordion__body" id="accordion-06">
                     <div class="accordion-horizontal">
                       <ul class="accordion-horizontal__list">
                         <li class="accordion-horizontal__item">

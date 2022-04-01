@@ -23,21 +23,25 @@
             <p class="component-example__size-label">Size: lg</p>
             <div class="component-examle__item-group component-examle__item-group--row">
               <!-- default -->
-              <input type="text" class="text-input text-input--lg" placeholder="placeholder text" />
+              <label for="inp-lg-01" class="hidden">Label</label>
+              <input type="text" id="inp-lg-01" class="text-input text-input--lg" placeholder="placeholder text" />
               <!-- filled -->
-              <input type="text" class="text-input text-input--lg" placeholder="placeholder text" value="input filled" />
+              <label for="inp-lg-02" class="hidden">Label</label>
+              <input type="text" id="inp-lg-02" class="text-input text-input--lg" placeholder="placeholder text" value="input filled" />
               <!-- disabled -->
-              <input type="text" class="text-input text-input--lg" placeholder="placeholder text" disabled />
+              <label for="inp-lg-03" class="hidden">Label</label>
+              <input type="text" id="inp-lg-03" class="text-input text-input--lg" placeholder="placeholder text" disabled />
               <!-- filled + disabled -->
-              <input type="text" class="text-input text-input--lg" placeholder="placeholder text" value="input filled" disabled />
+              <label for="inp-lg-04" class="hidden">Label</label>
+              <input type="text" id="inp-lg-04" class="text-input text-input--lg" placeholder="placeholder text" value="input filled" disabled />
             </div>
           </div>
           <div class="component-example__row">
             <p class="component-example__size-label">Size: md</p>
             <div class="component-examle__item-group component-examle__item-group--row">
               <!-- default -->
-
-              <input type="text" class="text-input" placeholder="placeholder text" />
+              <label for="inp-01" class="hidden">Label</label>
+              <input type="text" id="inp-01" class="text-input" placeholder="placeholder text" />
               <div class="notification-message notification-message--error" style="align-self: flex-start">
                 <svg class="notification-message__icon svg-icon" aria-hidden="true">
                   <use xlink:href="#issue-fill"></use>
@@ -45,8 +49,8 @@
                 <span class="notification-message__text">Notification Message</span>
               </div>
               <!-- filled -->
-
-              <input type="text" class="text-input" placeholder="placeholder text" value="input filled" />
+              <label for="inp-02" class="hidden">Label</label>
+              <input type="text" id="inp-02" class="text-input" placeholder="placeholder text" value="input filled" />
               <div class="notification-message notification-message--info" style="align-self: flex-start">
                 <svg class="notification-message__icon svg-icon" aria-hidden="true">
                   <use xlink:href="#info-fill"></use>
@@ -54,24 +58,28 @@
                 <span class="notification-message__text">Notification Message</span>
               </div>
               <!-- disabled -->
-
-              <input type="text" class="text-input" placeholder="placeholder text" disabled />
+              <label for="inp-03" class="hidden">Label</label>
+              <input type="text" id="inp-03" class="text-input" placeholder="placeholder text" disabled />
               <!-- filled + disabled -->
-
-              <input type="text" class="text-input" placeholder="placeholder text" value="input filled" disabled />
+              <label for="inp-04" class="hidden">Label</label>
+              <input type="text" id="inp-04" class="text-input" placeholder="placeholder text" value="input filled" disabled />
             </div>
           </div>
           <div class="component-example__row">
             <p class="component-example__size-label">Size: sm</p>
             <div class="component-examle__item-group component-examle__item-group--row">
               <!-- default -->
-              <input type="text" class="text-input text-input--sm" placeholder="placeholder text" />
+              <label for="inp-sm-01" class="hidden">Label</label>
+              <input type="text" id="inp-sm-01" class="text-input text-input--sm" placeholder="placeholder text" />
               <!-- filled -->
-              <input type="text" class="text-input text-input--sm" placeholder="placeholder text" value="input filled" />
+              <label for="inp-sm-02" class="hidden">Label</label>
+              <input type="text" id="inp-sm-02" class="text-input text-input--sm" placeholder="placeholder text" value="input filled" />
               <!-- disabled -->
-              <input type="text" class="text-input text-input--sm" placeholder="placeholder text" disabled />
+              <label for="inp-sm-03" class="hidden">Label</label>
+              <input type="text" id="inp-sm-03" class="text-input text-input--sm" placeholder="placeholder text" disabled />
               <!-- filled + disabled -->
-              <input type="text" class="text-input text-input--sm" placeholder="placeholder text" value="input filled" disabled />
+              <label for="inp-sm-04" class="hidden">Label</label>
+              <input type="text" id="inp-sm-04" class="text-input text-input--sm" placeholder="placeholder text" value="input filled" disabled />
             </div>
           </div>
         </div>
@@ -94,8 +102,9 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
-                <input type="text" class="text-input" placeholder="placeholder text" />
-                <button class="text-input-group__clear-button">
+                <label for="inp-group-lg-01" class="hidden">Label</label>
+                <input type="text" id="input-group-lg-01" class="text-input" placeholder="placeholder text" />
+                <button class="text-input-group__clear-button" title="초기화">
                   <svg class="svg-icon" aria-hidden="true">
                     <use xlink:href="#close"></use>
                   </svg>
@@ -108,8 +117,9 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
-                <input type="text" class="text-input" placeholder="placeholder text" value="input filled" />
-                <button class="text-input-group__clear-button">
+                <label for="inp-group-lg-02" class="hidden">Label</label>
+                <input type="text" id="input-group-lg-02" class="text-input" placeholder="placeholder text" value="input filled" />
+                <button class="text-input-group__clear-button" title="초기화">
                   <svg class="svg-icon" aria-hidden="true">
                     <use xlink:href="#close"></use>
                   </svg>
@@ -122,8 +132,9 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
-                <input type="text" class="text-input" placeholder="placeholder text" disabled />
-                <button class="text-input-group__clear-button">
+                <label for="inp-group-lg-03" class="hidden">Label</label>
+                <input type="text" id="input-group-lg-03" class="text-input" placeholder="placeholder text" disabled />
+                <button class="text-input-group__clear-button" title="초기화">
                   <svg class="svg-icon" aria-hidden="true">
                     <use xlink:href="#close"></use>
                   </svg>
@@ -136,8 +147,9 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
-                <input type="text" class="text-input" placeholder="placeholder text" value="input filled" disabled />
-                <button class="text-input-group__clear-button">
+                <label for="inp-group-lg-04" class="hidden">Label</label>
+                <input type="text" id="input-group-lg-04" class="text-input" placeholder="placeholder text" value="input filled" disabled />
+                <button class="text-input-group__clear-button" title="초기화">
                   <svg class="svg-icon" aria-hidden="true">
                     <use xlink:href="#close"></use>
                   </svg>
@@ -155,8 +167,9 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
-                <input type="text" class="text-input" placeholder="placeholder text" />
-                <button class="text-input-group__clear-button">
+                <label for="inp-group-01" class="hidden">Label</label>
+                <input type="text" id="inp-group-01" class="text-input" placeholder="placeholder text" />
+                <button class="text-input-group__clear-button" title="초기화">
                   <svg class="svg-icon" aria-hidden="true">
                     <use xlink:href="#close"></use>
                   </svg>
@@ -169,8 +182,9 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
-                <input type="text" class="text-input" placeholder="placeholder text" value="input filled" />
-                <button class="text-input-group__clear-button">
+                <label for="inp-group-02" class="hidden">Label</label>
+                <input type="text" id="inp-group-02" class="text-input" placeholder="placeholder text" value="input filled" />
+                <button class="text-input-group__clear-button" title="초기화">
                   <svg class="svg-icon" aria-hidden="true">
                     <use xlink:href="#close"></use>
                   </svg>
@@ -183,8 +197,9 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
-                <input type="text" class="text-input" placeholder="placeholder text" disabled />
-                <button class="text-input-group__clear-button">
+                <label for="inp-group-03" class="hidden">Label</label>
+                <input type="text" id="inp-group-03" class="text-input" placeholder="placeholder text" disabled />
+                <button class="text-input-group__clear-button" title="초기화">
                   <svg class="svg-icon" aria-hidden="true">
                     <use xlink:href="#close"></use>
                   </svg>
@@ -197,8 +212,9 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
-                <input type="text" class="text-input" placeholder="placeholder text" value="input filled" disabled />
-                <button class="text-input-group__clear-button">
+                <label for="inp-group-04" class="hidden">Label</label>
+                <input type="text" id="inp-group-04" class="text-input" placeholder="placeholder text" value="input filled" disabled />
+                <button class="text-input-group__clear-button" title="초기화">
                   <svg class="svg-icon" aria-hidden="true">
                     <use xlink:href="#close"></use>
                   </svg>
@@ -216,8 +232,9 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
-                <input type="text" class="text-input" placeholder="placeholder text" />
-                <button class="text-input-group__clear-button">
+                <label for="inp-group-sm-01" class="hidden">Label</label>
+                <input type="text" id="inp-group-sm-01" class="text-input" placeholder="placeholder text" />
+                <button class="text-input-group__clear-button" title="초기화">
                   <svg class="svg-icon" aria-hidden="true">
                     <use xlink:href="#close"></use>
                   </svg>
@@ -230,8 +247,9 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
-                <input type="text" class="text-input" placeholder="placeholder text" value="input filled" />
-                <button class="text-input-group__clear-button">
+                <label for="inp-group-sm-02" class="hidden">Label</label>
+                <input type="text" id="inp-group-sm-02" class="text-input" placeholder="placeholder text" value="input filled" />
+                <button class="text-input-group__clear-button" title="초기화">
                   <svg class="svg-icon" aria-hidden="true">
                     <use xlink:href="#close"></use>
                   </svg>
@@ -244,8 +262,9 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
-                <input type="text" class="text-input" placeholder="placeholder text" disabled />
-                <button class="text-input-group__clear-button">
+                <label for="inp-group-sm-03" class="hidden">Label</label>
+                <input type="text" id="inp-group-sm-03" class="text-input" placeholder="placeholder text" disabled />
+                <button class="text-input-group__clear-button" title="초기화">
                   <svg class="svg-icon" aria-hidden="true">
                     <use xlink:href="#close"></use>
                   </svg>
@@ -258,8 +277,9 @@
                     <use xlink:href="#search"></use>
                   </svg>
                 </span>
-                <input type="text" class="text-input" placeholder="placeholder text" value="input filled" disabled />
-                <button class="text-input-group__clear-button">
+                <label for="inp-group-sm-04" class="hidden">Label</label>
+                <input type="text" id="inp-group-sm-04" class="text-input" placeholder="placeholder text" value="input filled" disabled />
+                <button class="text-input-group__clear-button" title="초기화">
                   <svg class="svg-icon" aria-hidden="true">
                     <use xlink:href="#close"></use>
                   </svg>
@@ -283,13 +303,14 @@
               <!-- default -->
               <div class="text-input-group text-input-group--lg">
                 </span>
-                <input type="text" class="text-input" placeholder="placeholder text" />
-                <button class="text-input-group__clear-button">
+                <label for="inp-search-lg-01" class="hidden">Label</label>
+                <input type="text" id="inp-search-lg-01" class="text-input" placeholder="placeholder text" />
+                <button class="text-input-group__clear-button" title="초기화">
                   <svg class="svg-icon" aria-hidden="true">
                     <use xlink:href="#close"></use>
                   </svg>
                 </button>
-                <button class="text-input-group__search-button button button--icon button--lg button--tertiary">
+                <button title="검색" class="text-input-group__search-button button button--icon button--lg button--tertiary">
                   <svg class="svg-icon button__icon" aria-hidden="true">
                     <use xlink:href="#search"></use>
                   </svg>
@@ -298,13 +319,14 @@
               <!-- filled -->
               <div class="text-input-group text-input-group--lg">
                 </span>
-                <input type="text" class="text-input" placeholder="placeholder text" value="input filled" />
-                <button class="text-input-group__clear-button">
+                <label for="inp-search-lg-02" class="hidden">Label</label>
+                <input type="text" id="inp-search-lg-02" class="text-input" placeholder="placeholder text" value="input filled" />
+                <button class="text-input-group__clear-button" title="초기화">
                   <svg class="svg-icon" aria-hidden="true">
                     <use xlink:href="#close"></use>
                   </svg>
                 </button>
-                <button class="text-input-group__search-button button button--icon button--lg button--tertiary">
+                <button title="검색" class="text-input-group__search-button button button--icon button--lg button--tertiary">
                   <svg class="svg-icon button__icon" aria-hidden="true">
                     <use xlink:href="#search"></use>
                   </svg>
@@ -313,13 +335,14 @@
               <!-- disabled -->
               <div class="text-input-group text-input-group--lg text-input-group--disabled">
                 </span>
-                <input type="text" class="text-input" placeholder="placeholder text" disabled />
-                <button class="text-input-group__clear-button">
+                <label for="inp-search-lg-03" class="hidden">Label</label>
+                <input type="text" id="inp-search-lg-03" class="text-input" placeholder="placeholder text" disabled />
+                <button class="text-input-group__clear-button" title="초기화">
                   <svg class="svg-icon" aria-hidden="true">
                     <use xlink:href="#close"></use>
                   </svg>
                 </button>
-                <button class="text-input-group__search-button button button--icon button--lg button--tertiary" disabled>
+                <button title="검색" class="text-input-group__search-button button button--icon button--lg button--tertiary" disabled>
                   <svg class="svg-icon button__icon" aria-hidden="true">
                     <use xlink:href="#search"></use>
                   </svg>
@@ -328,13 +351,14 @@
               <!-- filled + disabled -->
               <div class="text-input-group text-input-group--lg text-input-group--disabled">
                 </span>
-                <input type="text" class="text-input" placeholder="placeholder text" value="input filled" disabled />
-                <button class="text-input-group__clear-button">
+                <label for="inp-search-lg-04" class="hidden">Label</label>
+                <input type="text" id="inp-search-lg-04" class="text-input" placeholder="placeholder text" value="input filled" disabled />
+                <button class="text-input-group__clear-button" title="초기화">
                   <svg class="svg-icon" aria-hidden="true">
                     <use xlink:href="#close"></use>
                   </svg>
                 </button>
-                <button class="text-input-group__search-button button button--icon button--lg button--tertiary" disabled>
+                <button title="검색" class="text-input-group__search-button button button--icon button--lg button--tertiary" disabled>
                   <svg class="svg-icon button__icon" aria-hidden="true">
                     <use xlink:href="#search"></use>
                   </svg>
@@ -348,13 +372,14 @@
               <!-- default -->
               <div class="text-input-group">
                 </span>
-                <input type="text" class="text-input" placeholder="placeholder text" />
-                <button class="text-input-group__clear-button">
+                <label for="inp-search-01" class="hidden">Label</label>
+                <input type="text" id="inp-search-01" class="text-input" placeholder="placeholder text" />
+                <button class="text-input-group__clear-button" title="초기화">
                   <svg class="svg-icon" aria-hidden="true">
                     <use xlink:href="#close"></use>
                   </svg>
                 </button>
-                <button class="text-input-group__search-button button button--icon button--tertiary">
+                <button title="검색" class="text-input-group__search-button button button--icon button--tertiary">
                   <svg class="svg-icon button__icon" aria-hidden="true">
                     <use xlink:href="#search"></use>
                   </svg>
@@ -363,13 +388,14 @@
               <!-- filled -->
               <div class="text-input-group">
                 </span>
-                <input type="text" class="text-input" placeholder="placeholder text" value="input filled" />
-                <button class="text-input-group__clear-button">
+                <label for="inp-search-02" class="hidden">Label</label>
+                <input type="text" id="inp-search-02" class="text-input" placeholder="placeholder text" value="input filled" />
+                <button class="text-input-group__clear-button" title="초기화">
                   <svg class="svg-icon" aria-hidden="true">
                     <use xlink:href="#close"></use>
                   </svg>
                 </button>
-                <button class="text-input-group__search-button button button--icon button--tertiary">
+                <button title="검색" class="text-input-group__search-button button button--icon button--tertiary">
                   <svg class="svg-icon button__icon" aria-hidden="true">
                     <use xlink:href="#search"></use>
                   </svg>
@@ -378,13 +404,14 @@
               <!-- disabled -->
               <div class="text-input-group text-input-group--disabled">
                 </span>
-                <input type="text" class="text-input" placeholder="placeholder text" disabled />
-                <button class="text-input-group__clear-button">
+                <label for="inp-search-03" class="hidden">Label</label>
+                <input type="text" id="inp-search-03" class="text-input" placeholder="placeholder text" disabled />
+                <button class="text-input-group__clear-button" title="초기화">
                   <svg class="svg-icon" aria-hidden="true">
                     <use xlink:href="#close"></use>
                   </svg>
                 </button>
-                <button class="text-input-group__search-button button button--icon button--tertiary" disabled>
+                <button title="검색" class="text-input-group__search-button button button--icon button--tertiary" disabled>
                   <svg class="svg-icon button__icon" aria-hidden="true">
                     <use xlink:href="#search"></use>
                   </svg>
@@ -393,13 +420,14 @@
               <!-- filled + disabled -->
               <div class="text-input-group text-input-group--disabled">
                 </span>
-                <input type="text" class="text-input" placeholder="placeholder text" value="input filled" disabled />
-                <button class="text-input-group__clear-button">
+                <label for="inp-search-04" class="hidden">Label</label>
+                <input type="text" id="inp-search-04" class="text-input" placeholder="placeholder text" value="input filled" disabled />
+                <button class="text-input-group__clear-button" title="초기화">
                   <svg class="svg-icon" aria-hidden="true">
                     <use xlink:href="#close"></use>
                   </svg>
                 </button>
-                <button class="text-input-group__search-button button button--icon button--tertiary" disabled>
+                <button title="검색" class="text-input-group__search-button button button--icon button--tertiary" disabled>
                   <svg class="svg-icon button__icon" aria-hidden="true">
                     <use xlink:href="#search"></use>
                   </svg>
@@ -413,13 +441,14 @@
               <!-- default -->
               <div class="text-input-group text-input-group--sm">
                 </span>
-                <input type="text" class="text-input" placeholder="placeholder text" />
-                <button class="text-input-group__clear-button">
+                <label for="inp-search-sm-01" class="hidden">Label</label>
+                <input type="text" id="inp-search-sm-01" class="text-input" placeholder="placeholder text" />
+                <button class="text-input-group__clear-button" title="초기화">
                   <svg class="svg-icon" aria-hidden="true">
                     <use xlink:href="#close"></use>
                   </svg>
                 </button>
-                <button class="text-input-group__search-button button button--sm button--icon button--tertiary">
+                <button title="검색" class="text-input-group__search-button button button--sm button--icon button--tertiary">
                   <svg class="svg-icon button__icon" aria-hidden="true">
                     <use xlink:href="#search"></use>
                   </svg>
@@ -428,13 +457,14 @@
               <!-- filled -->
               <div class="text-input-group text-input-group--sm">
                 </span>
-                <input type="text" class="text-input" placeholder="placeholder text" value="input filled" />
-                <button class="text-input-group__clear-button">
+                <label for="inp-search-sm-02" class="hidden">Label</label>
+                <input type="text" id="inp-search-sm-02" class="text-input" placeholder="placeholder text" value="input filled" />
+                <button class="text-input-group__clear-button" title="초기화">
                   <svg class="svg-icon" aria-hidden="true">
                     <use xlink:href="#close"></use>
                   </svg>
                 </button>
-                <button class="text-input-group__search-button button button--sm button--icon button--tertiary">
+                <button title="검색" class="text-input-group__search-button button button--sm button--icon button--tertiary">
                   <svg class="svg-icon button__icon" aria-hidden="true">
                     <use xlink:href="#search"></use>
                   </svg>
@@ -443,13 +473,14 @@
               <!-- disabled -->
               <div class="text-input-group text-input-group--sm text-input-group--disabled">
                 </span>
-                <input type="text" class="text-input" placeholder="placeholder text" disabled />
-                <button class="text-input-group__clear-button">
+                <label for="inp-search-sm-03" class="hidden">Label</label>
+                <input type="text" id="inp-search-sm-03" class="text-input" placeholder="placeholder text" disabled />
+                <button class="text-input-group__clear-button" title="초기화">
                   <svg class="svg-icon" aria-hidden="true">
                     <use xlink:href="#close"></use>
                   </svg>
                 </button>
-                <button class="text-input-group__search-button button button--sm button--icon button--tertiary" disabled>
+                <button title="검색" class="text-input-group__search-button button button--sm button--icon button--tertiary" disabled>
                   <svg class="svg-icon button__icon" aria-hidden="true">
                     <use xlink:href="#search"></use>
                   </svg>
@@ -458,13 +489,14 @@
               <!-- filled + disabled -->
               <div class="text-input-group text-input-group--sm text-input-group--disabled">
                 </span>
-                <input type="text" class="text-input" placeholder="placeholder text" value="input filled" disabled />
-                <button class="text-input-group__clear-button">
+                <label for="inp-search-sm-04" class="hidden">Label</label>
+                <input type="text" id="inp-search-sm-04" class="text-input" placeholder="placeholder text" value="input filled" disabled />
+                <button class="text-input-group__clear-button" title="초기화">
                   <svg class="svg-icon" aria-hidden="true">
                     <use xlink:href="#close"></use>
                   </svg>
                 </button>
-                <button class="text-input-group__search-button button button--sm button--icon button--tertiary" disabled>
+                <button title="검색" class="text-input-group__search-button button button--sm button--icon button--tertiary" disabled>
                   <svg class="svg-icon button__icon" aria-hidden="true">
                     <use xlink:href="#search"></use>
                   </svg>
@@ -488,25 +520,29 @@
               <!-- default -->
               <div class="text-input-wrap">
                 <span class="text-input-wrap__prefix">prefix</span>
-                <input type="text" class="text-input text-input--lg" placeholder="placeholder text" />
+                <label for="inp-text-lg-01" class="hidden">Label</label>
+                <input type="text" id="inp-text-lg-01" class="text-input text-input--lg" placeholder="placeholder text" />
                 <span class="text-input-wrap__suffix">suffix</span>
               </div>
               <!-- filled -->
               <div class="text-input-wrap" style="margin-top: 0.5rem;">
                 <span class="text-input-wrap__prefix">prefix</span>
-                <input type="text" class="text-input text-input--lg" placeholder="placeholder text" value="input filled" />
+                <label for="inp-text-lg-02" class="hidden">Label</label>
+                <input type="text" id="inp-text-lg-02" class="text-input text-input--lg" placeholder="placeholder text" value="input filled" />
                 <span class="text-input-wrap__suffix">suffix</span>
               </div>
               <!-- disabled -->
               <div class="text-input-wrap" style="margin-top: 0.5rem;">
                 <span class="text-input-wrap__prefix">prefix</span>
-                <input type="text" class="text-input text-input--lg" placeholder="placeholder text" disabled />
+                <label for="inp-text-lg-03" class="hidden">Label</label>
+                <input type="text" id="inp-text-lg-03" class="text-input text-input--lg" placeholder="placeholder text" disabled />
                 <span class="text-input-wrap__suffix">suffix</span>
               </div>
               <!-- filled + disabled -->
               <div class="text-input-wrap" style="margin-top: 0.5rem;">
                 <span class="text-input-wrap__prefix">prefix</span>
-                <input type="text" class="text-input text-input--lg" placeholder="placeholder text" value="input filled" disabled />
+                <label for="inp-text-lg-04" class="hidden">Label</label>
+                <input type="text" id="inp-text-lg-04" class="text-input text-input--lg" placeholder="placeholder text" value="input filled" disabled />
                 <span class="text-input-wrap__suffix">suffix</span>
               </div>
             </div>
@@ -517,25 +553,29 @@
               <!-- default -->
               <div class="text-input-wrap">
                 <span class="text-input-wrap__prefix">prefix</span>
-                <input type="text" class="text-input" placeholder="placeholder text" />
+                <label for="inp-text-01" class="hidden">Label</label>
+                <input type="text" id="inp-text-01" class="text-input" placeholder="placeholder text" />
                 <span class="text-input-wrap__suffix">suffix</span>
               </div>
               <!-- filled -->
               <div class="text-input-wrap" style="margin-top: 0.5rem;">
                 <span class="text-input-wrap__prefix">prefix</span>
-                <input type="text" class="text-input" placeholder="placeholder text" value="input filled" />
+                <label for="inp-text-02" class="hidden">Label</label>
+                <input type="text" id="inp-text-02" class="text-input" placeholder="placeholder text" value="input filled" />
                 <span class="text-input-wrap__suffix">suffix</span>
               </div>
               <!-- disabled -->
               <div class="text-input-wrap" style="margin-top: 0.5rem;">
                 <span class="text-input-wrap__prefix">prefix</span>
-                <input type="text" class="text-input" placeholder="placeholder text" disabled />
+                <label for="inp-text-03" class="hidden">Label</label>
+                <input type="text" id="inp-text-03" class="text-input" placeholder="placeholder text" disabled />
                 <span class="text-input-wrap__suffix">suffix</span>
               </div>
               <!-- filled + disabled -->
               <div class="text-input-wrap" style="margin-top: 0.5rem;">
                 <span class="text-input-wrap__prefix">prefix</span>
-                <input type="text" class="text-input" placeholder="placeholder text" value="input filled" disabled />
+                <label for="inp-text-04" class="hidden">Label</label>
+                <input type="text" id="inp-text-04" class="text-input" placeholder="placeholder text" value="input filled" disabled />
                 <span class="text-input-wrap__suffix">suffix</span>
               </div>
             </div>
@@ -546,25 +586,29 @@
               <!-- default -->
               <div class="text-input-wrap">
                 <span class="text-input-wrap__prefix">prefix</span>
-                <input type="text" class="text-input text-input--sm" placeholder="placeholder text" />
+                <label for="inp-text-sm-02" class="hidden">Label</label>
+                <input type="text" id="inp-text-sm-01" class="text-input text-input--sm" placeholder="placeholder text" />
                 <span class="text-input-wrap__suffix">suffix</span>
               </div>
               <!-- filled -->
               <div class="text-input-wrap" style="margin-top: 0.5rem;">
                 <span class="text-input-wrap__prefix">prefix</span>
-                <input type="text" class="text-input text-input--sm" placeholder="placeholder text" value="input filled" />
+                <label for="inp-text-sm-02" class="hidden">Label</label>
+                <input type="text" id="inp-text-sm-02" class="text-input text-input--sm" placeholder="placeholder text" value="input filled" />
                 <span class="text-input-wrap__suffix">suffix</span>
               </div>
               <!-- disabled -->
               <div class="text-input-wrap" style="margin-top: 0.5rem;">
                 <span class="text-input-wrap__prefix">prefix</span>
-                <input type="text" class="text-input text-input--sm" placeholder="placeholder text" disabled />
+                <label for="inp-text-sm-02" class="hidden">Label</label>
+                <input type="text" id="inp-text-sm-02" class="text-input text-input--sm" placeholder="placeholder text" disabled />
                 <span class="text-input-wrap__suffix">suffix</span>
               </div>
               <!-- filled + disabled -->
               <div class="text-input-wrap" style="margin-top: 0.5rem;">
                 <span class="text-input-wrap__prefix">prefix</span>
-                <input type="text" class="text-input text-input--sm" placeholder="placeholder text" value="input filled" disabled />
+                <label for="inp-text-sm-04" class="hidden">Label</label>
+                <input type="text" id="inp-text-sm-04" class="text-input text-input--sm" placeholder="placeholder text" value="input filled" disabled />
                 <span class="text-input-wrap__suffix">suffix</span>
               </div>
             </div>
@@ -588,15 +632,16 @@
                   <strong class="text-edit__title">
                     Text Title 여기입니다.
                   </strong>
-                  <button class="button button--icon button--link text-edit__button" type="button">
+                  <button class="button button--icon button--link text-edit__button" title="텍스트 수정" type="button">
                     <svg class="svg-icon" aria-hidden="true">
                       <use xlink:href="#pen"></use>
                     </svg>
                   </button>
                 </div>
                 <div class="text-input-wrap" style="display: none">
-                  <input type="text" class="text-input" />
-                  <button class="button button--icon button--link text-edit__button">
+                  <label for="inp-group-05" class="hidden">Label</label>
+                  <input type="text" id="inp-group-05" class="text-input" />
+                  <button class="button button--icon button--link text-edit__button" title="텍스트 수정 완료" type="button">
                     <svg class="button__icon svg-icon" aria-hidden="true">
                       <use xlink:href="#checkmark"></use>
                     </svg>
@@ -615,15 +660,16 @@
                   <span class="text-edit__title">
                     Text Title 여기입니다.
                   </span>
-                  <button class="button button--icon button--sm button--link text-edit__button" type="button">
+                  <button class="button button--icon button--sm button--link text-edit__button" title="텍스트 수정" type="button">
                     <svg class="svg-icon" aria-hidden="true">
                       <use xlink:href="#pen"></use>
                     </svg>
                   </button>
                 </div>
                 <div class="text-input-wrap" style="display: none;">
-                  <input type="text" class="text-input text-input--sm" />
-                  <button class="button button--icon button--sm button--link text-edit__button">
+                  <label for="inp-group-06" class="hidden">Label</label>
+                  <input type="text" id="inp-group-06" class="text-input text-input--sm" />
+                  <button class="button button--icon button--sm button--link text-edit__button" title="텍스트 수정 완료" type="button">
                     <svg class="button__icon svg-icon" aria-hidden="true">
                       <use xlink:href="#checkmark"></use>
                     </svg>

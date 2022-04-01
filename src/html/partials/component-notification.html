@@ -27,7 +27,7 @@
         <div style="width: 600px">
           <!-- info -->
           <div class="notification-wrap">
-            <div class="notification notification--info">
+            <div class="notification notification--info" role="alert">
               <svg class="notification__icon svg-icon" aria-hidden="true">
                 <use xlink:href="#info-fill"></use>
               </svg>
@@ -39,7 +39,7 @@
           </div>
           <!-- success -->
           <div class="notification-wrap">
-            <div class="notification notification--success">
+            <div class="notification notification--success" role="alert">
               <svg class="notification__icon svg-icon" aria-hidden="true">
                 <use xlink:href="#checkmark-fill"></use>
               </svg>
@@ -51,7 +51,7 @@
           </div>
           <!-- warning -->
           <div class="notification-wrap">
-            <div class="notification notification--warning">
+            <div class="notification notification--warning" role="alert">
               <svg class="notification__icon svg-icon" aria-hidden="true">
                 <use xlink:href="#warning-fill"></use>
               </svg>
@@ -63,7 +63,7 @@
           </div>
           <!-- error -->
           <div class="notification-wrap">
-            <div class="notification notification--error">
+            <div class="notification notification--error" role="alert">
               <svg class="notification__icon svg-icon" aria-hidden="true">
                 <use xlink:href="#issue-fill"></use>
               </svg>
@@ -78,7 +78,7 @@
           </div>
           <!-- normal -->
           <div class="notification-wrap">
-            <div class="notification notification--normal">
+            <div class="notification notification--normal" role="alert">
               <svg class="notification__icon svg-icon" aria-hidden="true">
                 <use xlink:href="#subtract"></use>
               </svg>
@@ -102,7 +102,7 @@
       <div class="component-example__live">
         <div style="width: 600px">
           <!-- info -->
-          <div class="notification notification--info">
+          <div class="notification notification--info" role="alert">
             <svg class="notification__icon svg-icon" aria-hidden="true">
               <use xlink:href="#info-fill"></use>
             </svg>
@@ -110,14 +110,14 @@
               <p class="notification__title">Notification Title</p>
               <p class="notification__text">Notification Text Here.</p>
             </div>
-            <button class="notification__close-button">
+            <button class="notification__close-button" title="닫기">
               <svg class="svg-icon" aria-hidden="true">
                 <use xlink:href="#close"></use>
               </svg>
             </button>
           </div>
           <!-- success -->
-          <div class="notification notification--success">
+          <div class="notification notification--success" role="alert">
             <svg class="notification__icon svg-icon" aria-hidden="true">
               <use xlink:href="#checkmark-fill"></use>
             </svg>
@@ -125,14 +125,14 @@
               <p class="notification__title">Notification Title</p>
               <p class="notification__text">Notification Text Here.</p>
             </div>
-            <button class="notification__close-button">
+            <button class="notification__close-button" title="닫기">
               <svg class="svg-icon" aria-hidden="true">
                 <use xlink:href="#close"></use>
               </svg>
             </button>
           </div>
           <!-- warning -->
-          <div class="notification notification--warning">
+          <div class="notification notification--warning" role="alert">
             <svg class="notification__icon svg-icon" aria-hidden="true">
               <use xlink:href="#warning-fill"></use>
             </svg>
@@ -140,14 +140,14 @@
               <p class="notification__title">Notification Title</p>
               <p class="notification__text">Notification Text Here.</p>
             </div>
-            <button class="notification__close-button">
+            <button class="notification__close-button" title="닫기">
               <svg class="svg-icon" aria-hidden="true">
                 <use xlink:href="#close"></use>
               </svg>
             </button>
           </div>
           <!-- error -->
-          <div class="notification notification--error">
+          <div class="notification notification--error" role="alert">
             <svg class="notification__icon svg-icon" aria-hidden="true">
               <use xlink:href="#issue-fill"></use>
             </svg>
@@ -158,14 +158,14 @@
                 Text Here Notification Text Here Notification Text Here Notification Text Here.
               </p>
             </div>
-            <button class="notification__close-button">
+            <button class="notification__close-button" title="닫기">
               <svg class="svg-icon" aria-hidden="true">
                 <use xlink:href="#close"></use>
               </svg>
             </button>
           </div>
           <!-- normal -->
-          <div class="notification notification--normal">
+          <div class="notification notification--normal" role="alert">
             <svg class="notification__icon svg-icon" aria-hidden="true">
               <use xlink:href="#subtract"></use>
             </svg>
@@ -176,7 +176,7 @@
                 Text Here Notification Text Here Notification Text Here Notification Text Here.
               </p>
             </div>
-            <button class="notification__close-button">
+            <button class="notification__close-button" title="닫기">
               <svg class="svg-icon" aria-hidden="true">
                 <use xlink:href="#close"></use>
               </svg>
@@ -313,8 +313,8 @@
             <p class="notification-full__text">경고 메세지를 입력해주세요.</p>
             <div class="notification-full__detail">
               <span class="notification-full__subtext">서버 재시작 중 IRIS 사용이 중단되며, 저장하지 않은 데이터는 삭제됩니다. 문제 발생 시, 담당자에게 연락바랍니다.</span> <button class="button button--negative button--lg" type="button" style="width: 150px;">
-              <span class="button__text">확인</span>
-            </button>
+                <span class="button__text">확인</span>
+              </button>
             </div>
           </div>
           <!-- error -->
@@ -324,7 +324,7 @@
             </svg>
             <p class="notification-full__text">에러 메세지를 입력해주세요.</p>
             <div class="notification-full__detail">
-              <div class="notification notification--normal" style="width: 450px;">
+              <div class="notification notification--normal" style="width: 450px;" role="alert">
                 <svg class="notification__icon svg-icon" aria-hidden="true">
                   <use xlink:href="#subtract"></use>
                 </svg>
@@ -393,8 +393,8 @@
             <p class="notification-full__text">경고 메세지를 입력해주세요.</p>
             <div class="notification-full__detail">
               <span class="notification-full__subtext">서버 재시작 중 IRIS 사용이 중단되며, 저장하지 않은 데이터는 삭제됩니다. 문제 발생 시, 담당자에게 연락바랍니다.</span> <button class="button button--negative button--lg" type="button" style="width: 150px;">
-              <span class="button__text">확인</span>
-            </button>
+                <span class="button__text">확인</span>
+              </button>
             </div>
           </div>
           <!-- error -->
@@ -404,7 +404,7 @@
             </svg>
             <p class="notification-full__text">에러 메세지를 입력해주세요.</p>
             <div class="notification-full__detail">
-              <div class="notification notification--normal" style="width: 450px;">
+              <div class="notification notification--normal" style="width: 450px;" role="alert">
                 <svg class="notification__icon svg-icon" aria-hidden="true">
                   <use xlink:href="#subtract"></use>
                 </svg>
