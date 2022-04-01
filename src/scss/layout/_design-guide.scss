@@ -274,7 +274,7 @@
 }
 
 .progressbar {
-  & + & {
+  & ~ & {
     margin-top: $spacing-md;
   }
 }
