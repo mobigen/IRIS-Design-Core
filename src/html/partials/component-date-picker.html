@@ -14,8 +14,9 @@
           <!-- default -->
           <div class="date-picker" style="display: inline-flex; margin-right: 18px;">
             <div class="date-picker-selector">
-              <input type="text" class="date-picker-selector__input" placeholder="yyyy/mm/dd hh:mm:ss" autocomplete="off" readonly>
-              <button class="date-picker-selector__button">
+              <label for="inp-date01" class="hidden">date picker label</label>
+              <input type="text" id="inp-date01" class="date-picker-selector__input" placeholder="yyyy/mm/dd hh:mm:ss" autocomplete="off" readonly>
+              <button title="날짜 선택" class="date-picker-selector__button">
                 <svg class="svg-icon" aria-hidden="true">
                   <use xlink:href="#calendar"></use>
                 </svg>
@@ -25,8 +26,9 @@
           <!-- focused + open -->
           <div class="date-picker date-picker--focused date-picker--open" style="display: inline-flex; margin-right: 18px">
             <div class="date-picker-selector">
-              <input type="text" class="date-picker-selector__input" placeholder="yyyy/mm/dd hh:mm:ss" value="2021/01/25 02:05:07" autocomplete="off">
-              <button class="date-picker-selector__button">
+              <label for="inp-date02" class="hidden">date picker label</label>
+              <input type="text" id="inp-date02" class="date-picker-selector__input" placeholder="yyyy/mm/dd hh:mm:ss" value="2021/01/25 02:05:07" autocomplete="off">
+              <button title="날짜 선택" class="date-picker-selector__button">
                 <svg class="svg-icon" aria-hidden="true">
                   <use xlink:href="#calendar"></use>
                 </svg>
@@ -41,8 +43,9 @@
           <!-- disabled -->
           <div class="date-picker date-picker--disabled" style="display: inline-flex">
             <div class="date-picker-selector">
-              <input type="text" class="date-picker-selector__input" placeholder="yyyy/mm/dd hh:mm:ss" autocomplete="off" disabled>
-              <button class="date-picker-selector__button" disabled>
+              <label for="inp-date03" class="hidden">date picker label</label>
+              <input type="text" id="inp-date03" class="date-picker-selector__input" placeholder="yyyy/mm/dd hh:mm:ss" autocomplete="off" disabled>
+              <button title="날짜 선택" class="date-picker-selector__button" disabled>
                 <svg class="svg-icon" aria-hidden="true">
                   <use xlink:href="#calendar"></use>
                 </svg>
@@ -62,8 +65,9 @@
           <!-- default -->
           <div class="date-picker" style="display: inline-flex; margin-right: 18px;">
             <div class="date-picker-selector">
-              <input type="text" class="date-picker-selector__input" placeholder="yyyy/mm/dd hh:mm:ss" autocomplete="off" readonly>
-              <button class="date-picker-selector__button">
+              <label for="inp-date04" class="hidden">date picker label</label>
+              <input type="text" id="inp-date04" class="date-picker-selector__input" placeholder="yyyy/mm/dd hh:mm:ss" autocomplete="off" readonly>
+              <button title="날짜 선택" class="date-picker-selector__button">
                 <svg class="svg-icon" aria-hidden="true">
                   <use xlink:href="#calendar"></use>
                 </svg>
@@ -73,8 +77,9 @@
           <!-- focused + open -->
           <div class="date-picker date-picker--focused date-picker--open" style="display: inline-flex; margin-right: 18px">
             <div class="date-picker-selector">
-              <input type="text" class="date-picker-selector__input" placeholder="yyyy/mm/dd hh:mm:ss" value="2021/01/25 02:05:07" autocomplete="off">
-              <button class="date-picker-selector__button">
+              <label for="inp-date05" class="hidden">date picker label</label>
+              <input type="text" id="inp-date05" class="date-picker-selector__input" placeholder="yyyy/mm/dd hh:mm:ss" value="2021/01/25 02:05:07" autocomplete="off">
+              <button title="날짜 선택" class="date-picker-selector__button">
                 <svg class="svg-icon" aria-hidden="true">
                   <use xlink:href="#calendar"></use>
                 </svg>
@@ -105,8 +110,9 @@
           <!-- disabled -->
           <div class="date-picker date-picker--disabled" style="display: inline-flex">
             <div class="date-picker-selector">
-              <input type="text" class="date-picker-selector__input" placeholder="yyyy/mm/dd hh:mm:ss" autocomplete="off" disabled>
-              <button class="date-picker-selector__button" disabled>
+              <label for="inp-date06" class="hidden">date picker label</label>
+              <input type="text" id="inp-date06" class="date-picker-selector__input" placeholder="yyyy/mm/dd hh:mm:ss" autocomplete="off" disabled>
+              <button title="날짜 선택" class="date-picker-selector__button" disabled>
                 <svg class="svg-icon" aria-hidden="true">
                   <use xlink:href="#calendar"></use>
                 </svg>
@@ -126,12 +132,14 @@
           <!-- focused + open -->
           <div class="date-picker date-picker--open">
             <div class="date-picker-selector">
-              <input type="text" class="date-picker-selector__input" placeholder="yyyy/mm/dd hh:mm:ss" autocomplete="off">
+              <label for="inp-date08" class="hidden">date picker label</label>
+              <input type="text" id="inp-date08" class="date-picker-selector__input" placeholder="yyyy/mm/dd hh:mm:ss" autocomplete="off">
               <div class="date-picker-selector__separator">
                 <span>&sim;</span>
               </div>
-              <input type="text" class="date-picker-selector__input" placeholder="yyyy/mm/dd hh:mm:ss" autocomplete="off">
-              <button class="date-picker-selector__button">
+              <label for="inp-date09" class="hidden">date picker label</label>
+              <input type="text" id="inp-date09" class="date-picker-selector__input" placeholder="yyyy/mm/dd hh:mm:ss" autocomplete="off">
+              <button title="날짜 선택" class="date-picker-selector__button">
                 <svg class="svg-icon" aria-hidden="true">
                   <use xlink:href="#calendar"></use>
                 </svg>
@@ -162,7 +170,7 @@
                   <button class="button button--link button--sm">오늘</button>
                   <div class="date-picker-panel__head-actions toggle-switch toggle-switch--sm">
                     <label for="currentDay" class="toggle-switch__label">현재</label>
-                    <button id="currentDay" class="toggle-switch__switch toggle-switch--sm" type="button">
+                    <button id="currentDay" class="toggle-switch__switch toggle-switch--sm" type="button" title="on">
                       <span class="toggle-switch__handle">
                         <span class="ir-pm"></span>
                       </span>
