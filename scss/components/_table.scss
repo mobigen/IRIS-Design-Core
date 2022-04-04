@@ -221,8 +221,8 @@ th .button {
 // -------------------------
 .table--sm th,
 .table--sm td {
+  @include font-size("13");
   height: $button-height-md;
-  font-size: rem(13px);
 }
 
 .td--gap-sm td {
