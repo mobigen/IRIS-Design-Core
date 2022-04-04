@@ -145,9 +145,9 @@
 }
 
 .index-layout-body__management-text {
+  @include font-size("15");
   display: block;
   margin-right: $spacing-xs;
-  @include font-size("15");
   color: $active-secondary;
   white-space: nowrap;
   word-break: keep-all;
@@ -501,9 +501,9 @@
 
 .project-thumbnail-list__information-title {
   @include text-overflow;
+  @include font-size("15");
   position: relative;
   padding: $spacing-2xs 0;
-  @include font-size("15");
   font-weight: normal;
   letter-spacing: rem(-0.3px);
   color: $text-02;
