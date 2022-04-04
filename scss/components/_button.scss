@@ -283,12 +283,12 @@
 }
 
 @mixin button--lg {
-  @include button-size(15px, $button-height-lg, 24px);
+  @include button-size(rem(15px), $button-height-lg, rem(24px));
   @include button-padding($spacing-md, $spacing-md);
 }
 
 @mixin button--sm {
-  @include button-size(12px, $button-height-sm, 16px);
+  @include button-size(rem(12px), $button-height-sm, rem(16px));
   @include button-padding($spacing-xs, $spacing-xs);
 }
 
@@ -300,7 +300,7 @@
 }
 
 .button--icon {
-  @include button--icon(6px, 20px);
+  @include button--icon(rem(6px), rem(20px));
 }
 
 .button--tertiary {
@@ -356,28 +356,28 @@
 }
 
 .button--icon.button--lg {
-  @include button--icon(8px, 24px);
+  @include button--icon(rem(8px), rem(24px));
 }
 
 .button--icon.button--sm {
-  @include button--icon(4px, 16px);
+  @include button--icon(rem(4px), rem(16px));
 }
 
 // link 테마 버튼이 icon만 사용되는 경우 예외 사항
 .button--icon.button--link {
-  @include button--icon(4px, 24px);
+  @include button--icon(rem(4px), rem(24px));
 }
 
 .button--icon.button--link.button--lg {
-  @include button--icon(4px, 28px);
+  @include button--icon(rem(4px), rem(28px));
 }
 
 .button--icon.button--link.button--sm {
-  @include button--icon(2px, 20px);
+  @include button--icon(rem(2px), rem(20px));
 }
 
 .button--icon.button--link.button--xs {
-  @include button--icon(1px, 16px);
+  @include button--icon(rem(1px), rem(16px));
   // height: 16px;
 }
 
@@ -418,7 +418,7 @@
 }
 
 .button-group__button .svg-icon {
-  @include svg-icon-size(20px);
+  @include svg-icon-size(rem(20px));
 }
 
 .button-group__button .select-selector__button {
