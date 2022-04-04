@@ -8,15 +8,15 @@ $font-path: "../fonts" !default;
 
 // button
 $button-border-radius: 2px !default;
-$button-height-lg: rem(40px) !default;
-$button-height-md: rem(32px) !default;
-$button-height-sm: rem(24px) !default;
+$button-height-lg: 40px !default;
+$button-height-md: 32px !default;
+$button-height-sm: 24px !default;
 
 // fields
 $field-border-radius: 2px !default;
 
 // form
-$min-form-label-width-fixed: rem(220px);
+$min-form-label-width-fixed: 220px;
 $min-form-label-width: 18%;
 $max-form-label-width: 30%;
 $row-form-margin: $spacing-xs;
@@ -53,11 +53,11 @@ $spacers: (
 ) !default;
 $grid-breakpoints: (
   xs: 0,
-  sm: rem(640px),
-  md: rem(768px),
-  lg: rem(1024px),
-  xl: rem(1280px),
-  2xl: rem(1400px)
+  sm: 640px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+  2xl: 1400px
 ) !default;
 $grid-columns: 12 !default;
 $grid-gutter-width: 0 !default;
@@ -65,4 +65,4 @@ $grid-row-columns: 6 !default;
 $gutters: $spacers !default;
 
 // layout
-$editor-layout-body__side-penal: rem(300px) !default;
+$editor-layout-body__side-penal: 300px !default;

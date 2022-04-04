@@ -24,7 +24,7 @@
   padding: $spacing-sm;
   background-color: $text-03;
   border-radius: 4px;
-  box-shadow: 0 rem(4px) rem(8px) 0 rgba(0, 0, 0, 0.07);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.07);
   transition-duration: $duration-fast-02;
   transition-timing-function: ease-in-out;
   display: block !important;
@@ -47,10 +47,10 @@
   }
 
   &[x-placement^="top"] {
-    margin-bottom: rem(10px);
+    margin-bottom: 10px;
 
     .tooltip-arrow {
-      top: calc(100% - rem(4px));
+      top: calc(100% - 4px);
       left: 50%;
       margin-left: -$spacing-2xs;
     }
@@ -60,7 +60,7 @@
     margin-top: $spacing-xs + $spacing-3xs;
 
     .tooltip-arrow {
-      top: rem(-4px);
+      top: -4px;
     }
   }
 
@@ -68,7 +68,7 @@
     margin-top: $spacing-xs + $spacing-3xs;
 
     .tooltip-arrow {
-      top: rem(-4px);
+      top: -4px;
     }
   }
 
@@ -76,7 +76,7 @@
     margin-top: $spacing-xs + $spacing-3xs;
 
     .tooltip-arrow {
-      top: rem(-4px);
+      top: -4px;
     }
   }
 
@@ -85,7 +85,7 @@
 
     .tooltip-arrow {
       top: 50%;
-      left: rem(-4px);
+      left: -4px;
       margin-top: -$spacing-2xs;
     }
   }
@@ -95,7 +95,7 @@
 
     .tooltip-arrow {
       top: 50%;
-      right: rem(-4px);
+      right: -4px;
       margin-top: -$spacing-2xs;
     }
   }
@@ -119,7 +119,7 @@
   padding: $spacing-2xs;
   min-width: rem(380px);
   background-color: $ui-01;
-  box-shadow: 0 rem(2px) rem(12px) rem(2px) rgba(0, 0, 0, 0.14);
+  box-shadow: 0 2px 12px 2px rgba(0, 0, 0, 0.14);
 }
 
 .popover.tooltip .table {
@@ -137,7 +137,7 @@
     margin-bottom: $spacing-xs + $spacing-3xs;
 
     .tooltip-arrow {
-      top: calc(100% - rem(4px));
+      top: calc(100% - 4px);
       left: 50%;
       margin-left: -$spacing-2xs;
     }
@@ -148,7 +148,7 @@
     margin-top: $spacing-xs + $spacing-3xs;
 
     .tooltip-arrow {
-      top: rem(-4px);
+      top: -4px;
       left: 50%;
       margin-left: -$spacing-2xs;
     }
@@ -160,7 +160,7 @@
 
     .tooltip-arrow {
       top: 50%;
-      right: rem(-4px);
+      right: -4px;
       margin-top: -$spacing-2xs;
     }
   }
@@ -171,7 +171,7 @@
 
     .tooltip-arrow {
       top: 50%;
-      left: rem(-4px);
+      left: -4px;
       margin-top: -$spacing-2xs;
     }
   }
@@ -180,8 +180,8 @@
     margin-bottom: $spacing-xs + $spacing-3xs;
 
     .tooltip-arrow {
-      top: calc(100% - rem(4px));
-      right: rem(-12px);
+      top: calc(100% - 4px);
+      right: 12px;
     }
   }
 
@@ -189,8 +189,8 @@
     margin-bottom: $spacing-xs + $spacing-3xs;
 
     .tooltip-arrow {
-      top: calc(100% - rem(4px));
-      left: rem(-12px);
+      top: calc(100% - 4px);
+      left: 12px;
     }
   }
 
@@ -198,8 +198,8 @@
     margin-top: $spacing-xs + $spacing-3xs;
 
     .tooltip-arrow {
-      top: rem(-4px);
-      right: rem(-12px);
+      top: -4px;
+      right: 12px;
     }
   }
 
@@ -207,8 +207,8 @@
     margin-top: $spacing-xs + $spacing-3xs;
 
     .tooltip-arrow {
-      top: rem(-4px);
-      left: rem(-12px);
+      top: -4px;
+      left: 12px;
     }
   }
 
@@ -217,7 +217,7 @@
 
     .tooltip-arrow {
       top: rem(8px);
-      left: rem(-4px);
+      left: -4px;
     }
   }
 
@@ -226,7 +226,7 @@
 
     .tooltip-arrow {
       bottom: rem(8px);
-      left: rem(-4px);
+      left: -4px;
     }
   }
 
@@ -235,7 +235,7 @@
 
     .tooltip-arrow {
       top: rem(8px);
-      right: rem(-4px);
+      right: -4px;
     }
   }
 
@@ -244,7 +244,7 @@
 
     .tooltip-arrow {
       bottom: rem(8px);
-      right: rem(-4px);
+      right: -4px;
     }
   }
 }
