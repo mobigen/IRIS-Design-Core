@@ -378,7 +378,6 @@
 
 .button--icon.button--link.button--xs {
   @include button--icon(rem(1px), rem(16px));
-  // height: 16px;
 }
 
 // underline 테마 버튼일 때 예외 사항
