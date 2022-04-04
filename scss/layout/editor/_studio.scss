@@ -3,7 +3,7 @@
   width: 100%;
   height: auto;
   border: 1px solid $text-02;
-  border-width: rem(1px) 0 0 0;
+  border-width: 1px 0 0 0;
 }
 
 .border-style--preview {
@@ -13,14 +13,14 @@
 .select-selector__title .border-style {
   position: absolute;
   top: 50%;
-  width: calc(100% - rem(44px));
+  width: calc(100% - 44px);
   transform: translateY(-50%);
 }
 
 .select-container__text .border-style {
   position: absolute;
   top: 50%;
-  width: calc(100% - rem(16px));
+  width: calc(100% - 16px);
   transform: translateY(-50%);
 }
 
