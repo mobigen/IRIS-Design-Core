@@ -1841,7 +1841,7 @@ input[type="radio"] {
 
 .ag-theme-default .ag-tab-body .ag-filter-select {
   margin: $spacing-2xs;
-  width: calc(100% - rem(8px));
+  width: calc(100% - 8px);
 }
 
 .ag-theme-default .ag-tab-body .ag-menu-list {
@@ -1867,7 +1867,7 @@ input[type="radio"] {
 
 .ag-theme-default .ag-filter-select {
   margin: $spacing-2xs;
-  width: calc(100% - rem(8px));
+  width: calc(100% - 8px);
 }
 
 .ag-theme-default .ag-filter input[type="radio"] {
@@ -2128,7 +2128,7 @@ input[type="radio"] {
   float: left;
   height: rem(20px);
   line-height: rem(20px);
-  width: calc(100% - rem(20px));
+  width: calc(100% - 20px);
 }
 
 /*.ag-theme-default .ag-tool-panel-wrapper .ag-column-drop .ag-column-drop-empty-message {
@@ -2346,7 +2346,7 @@ input[type="radio"] {
   float: left;
   height: 100%;
   margin-right: 0;
-  width: calc(100% - rem(20px));
+  width: calc(100% - 20px);
 }
 
 /*.ag-theme-default .ag-floating-filter-body input:disabled {
@@ -2429,7 +2429,7 @@ input[type="radio"] {
   .ag-header-select-all:not(.ag-hidden)
   + .ag-cell-label-container {
   float: left;
-  width: calc(100% - rem(12px) - rem(12px));
+  width: calc(100% - 12px - 12px);
 }
 
 .ag-theme-default .ag-selection-checkbox ~ .ag-cell-value:not(:empty),
@@ -2969,7 +2969,7 @@ input[type="radio"] {
     padding: $spacing-xs 0 $spacing-xs 0;
     width: 100%;
     margin: 0;
-    min-height: 7rem(2px);
+    min-height: 72px;
     border-width: 1px 0 1px 0;
     border-style: solid;
     border-color: transparent;
@@ -2995,7 +2995,7 @@ input[type="radio"] {
   background-color: #f6f6f6;
   margin-left: rem(-1px);
   padding-left: rem(1px);
-  width: calc(100% + rem(1px));
+  width: calc(100% + 1px);
   border-color: $ui-04;
 }
 
@@ -3129,7 +3129,7 @@ input[type="radio"] {
 }
 
 .ag-theme-default .ag-column-drop-cell .ag-column-drop-cell-button {
-  height: calc(100% - rem(4px));
+  height: calc(100% - 4px);
   margin-bottom: $spacing-3xs;
   margin-top: $spacing-3xs;
 }

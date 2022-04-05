@@ -147,7 +147,7 @@
   border-radius: $field-border-radius;
 
   .svg-icon {
-    @include svg-icon-size(rem(40px));
+    @include svg-icon-size(40px);
     margin-bottom: $spacing-xs;
     fill: $ui-03;
   }
@@ -192,7 +192,7 @@
   border-radius: $field-border-radius;
 
   .svg-icon {
-    @include svg-icon-size(rem(20px));
+    @include svg-icon-size(20px);
     fill: $primary;
     color: $primary;
   }
@@ -222,7 +222,7 @@
   }
 
   .svg-icon {
-    @include svg-icon-size(rem(20px));
+    @include svg-icon-size(20px);
     fill: $negative;
     color: $negative;
   }

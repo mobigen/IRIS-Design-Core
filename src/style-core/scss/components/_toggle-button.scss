@@ -113,7 +113,7 @@
 }
 
 .toggle-button__item--secondary .svg-icon {
-  @include svg-icon-size(rem(32px));
+  @include svg-icon-size(32px);
 }
 
 .toggle-button__item--secondary .svg-icon + .toggle-button__text,
@@ -131,7 +131,7 @@
 }
 
 .toggle-button__item--icon {
-  @include button--icon(rem(6px), rem(20px));
+  @include button--icon(6px, 20px);
 }
 
 // tertiary Theme
@@ -173,7 +173,7 @@
 }
 
 .toggle-button__item--icon.toggle-button__item--sm {
-  @include button--icon(rem(4px), rem(16px));
+  @include button--icon(4px, 16px);
 }
 
 // -------------------------
