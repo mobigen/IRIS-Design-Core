@@ -2126,8 +2126,8 @@ input[type="radio"] {
 .ag-theme-default .ag-tool-panel-wrapper .ag-column-drop .ag-column-drop-title {
   clear: right;
   float: left;
-  height: 20px;
-  line-height: 20px;
+  height: rem(20px);
+  line-height: rem(20px);
   width: calc(100% - 20px);
 }
 

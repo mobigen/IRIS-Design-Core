@@ -21,8 +21,7 @@
 
   &:focus {
     border-color: $secondary;
-    filter: drop-shadow(0px 0px 4px rgba(77, 174, 255, 0.4));
-
+    filter: drop-shadow(0 0 4px rgba(77, 174, 255, 0.4));
     + .mx-icon-calendar {
       &:after {
         background-color: $secondary;

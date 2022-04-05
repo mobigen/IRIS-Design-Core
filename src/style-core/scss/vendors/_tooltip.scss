@@ -181,7 +181,7 @@
 
     .tooltip-arrow {
       top: calc(100% - 4px);
-      right: 12px;
+      right: rem(-12px);
     }
   }
 
@@ -190,7 +190,7 @@
 
     .tooltip-arrow {
       top: calc(100% - 4px);
-      left: 12px;
+      left: rem(-12px);
     }
   }
 
