@@ -34,8 +34,33 @@
   @include font-weight("bold");
 }
 
+.right-position {
+  @include right-position;
+}
+
+.not-scroll {
+  @include not-scroll;
+}
+
 .filter-highlight {
   background-color: #fff09c;
+}
+
+.svg-icon {
+  @include svg-icon-size(18px);
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+  fill: $icon-01;
+  color: $icon-01;
+}
+
+.img-icon {
+  display: flex;
+  flex-shrink: 0;
+  width: rem(32px);
+  height: rem(32px);
+  content: "";
 }
 
 .division-line {
@@ -112,12 +137,12 @@
 }
 
 .p-4 {
-  padding: rem(4px) !important;
+  padding: $spacing-2xs !important;
 }
 
 .px-6 {
-  padding-right: rem(6px) !important;
-  padding-left: rem(6px) !important;
+  padding-right: $spacing-2xs + $spacing-3xs !important;
+  padding-left: $spacing-2xs + $spacing-3xs !important;
 }
 
 // -------------------------
@@ -469,38 +494,26 @@
   color: $negative;
 }
 
-.caption-out {
-  @include caption-out;
-}
-
-.right-position {
-  @include right-position;
-}
-
-.not-scroll {
-  @include not-scroll;
-}
-
 // element 사이 구분선
 .division-element {
   position: relative;
-  margin-left: rem(20px) !important;
+  margin-left: $spacing-md + $spacing-2xs !important;
   &:after {
     content: "";
     position: absolute;
     left: -11px;
     top: 50%;
-    margin-top: -8px;
+    margin-top: -$spacing-xs;
     width: 1px;
     height: 17px;
     background-color: $ui-04;
   }
 
   &.division-element--lg {
-    margin-left: rem(24px) !important;
+    margin-left: $spacing-lg !important;
 
     &:after {
-      margin-top: -11px;
+      margin-top: rem(-11px);
       height: 22px;
       left: -13px;
     }
@@ -511,14 +524,14 @@
 // icon fill
 // -------------------------
 
-.svg-icon.svg-icon--primary{
+.svg-icon.svg-icon--primary {
   fill: $primary;
 }
 
-.svg-icon.svg-icon--secondary{
-  fill: $secondary
+.svg-icon.svg-icon--secondary {
+  fill: $secondary;
 }
 
-.svg-icon.svg-icon--negative{
+.svg-icon.svg-icon--negative {
   fill: $negative;
 }

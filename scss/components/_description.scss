@@ -1,6 +1,9 @@
+// -------------------------
+// Description
+// -------------------------
 .description__head-title {
-  @include font-size('16');
-  @include font-weight('medium');
+  @include font-size("16");
+  @include font-weight("medium");
   display: block;
 }
 
@@ -17,7 +20,7 @@
   padding: 0 $spacing-xs;
 }
 
-.description__item+.description__item {
+.description__item + .description__item {
   border-top: 1px solid $hover-row;
 }
 
@@ -26,7 +29,7 @@
 }
 
 .description__title {
-  @include font-weight('medium');
+  @include font-weight("medium");
   width: rem(140px);
   margin-right: $spacing-2xs;
   color: $text-02;
@@ -50,7 +53,7 @@
   display: flex;
   align-items: center;
 
-  .button+.button {
+  .button + .button {
     margin-left: $spacing-xs;
   }
 }
@@ -60,7 +63,7 @@
 // -------------------------
 .description--lg {
   .description__head-title {
-    @include font-size('18');
+    @include font-size("18");
   }
 
   .description__item {

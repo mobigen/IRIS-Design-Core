@@ -1,3 +1,6 @@
+// -------------------------
+// Progressbar
+// -------------------------
 .progressbar,
 .progressbar::-webkit-progress-bar {
   overflow: hidden;
@@ -9,7 +12,7 @@
 
 .progressbar__gage,
 .progressbar::-webkit-progress-value {
-  z-index: z('float');
+  z-index: z("float");
   position: absolute;
   left: 0;
   top: 0;
@@ -57,18 +60,18 @@
 // -------------------------
 .progressbar--major {
   .progressbar__gage {
-    background-color: #34DCA1;
+    background-color: #34dca1;
   }
 }
 
 .progressbar--major::-webkit-progress-value {
-  background-color: #34DCA1;
+  background-color: #34dca1;
 }
 
 // -------------------------
 // progressbar--sm
 // -------------------------
 .progressbar--sm,
-.progressbar--sm::-webkit-progress-bar{
+.progressbar--sm::-webkit-progress-bar {
   height: rem(6px);
 }

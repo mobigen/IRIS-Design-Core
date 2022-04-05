@@ -1,3 +1,6 @@
+// -------------------------
+// Badge
+// -------------------------
 .badge {
   @include font-family("sans");
   @include font-weight("medium");
@@ -19,7 +22,7 @@
   cursor: default;
 
   &.badge--icon {
-    padding: 3px;
+    padding: rem(3px);
   }
 }
 

@@ -1,9 +1,52 @@
 //-------------------------------------------
-//  Breakpoints
+//  Breakpoints - 신규 방식
+//  Desktop 우선 순위로 적용
 // ------------------------------------------
-// 
+$breakpoints: (
+  "laptop": (
+    max-width: 1279px
+  ),
+  "tablet": (
+    max-width: 767px
+  ),
+  "mobile": (
+    max-width: 480px
+  )
+) !default;
+
+@mixin respond-to($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+// Usage
+// .selector {
+//   color: red;
+
+//   @include respond-to('small') {
+//     color: blue;
+//   }
+// }
+// https://css-tricks.com/snippets/sass/mixin-manage-breakpoints/
+
+//---------------------------------------------------------------------------------------------------------------
+
+//-------------------------------------------
+//  Breakpoints - grid-system에서 사용되고 있어서 유지, 다른 곳에서는 사용하지 않음
+// ------------------------------------------
 // 전역 변수를 정의하는 `_vars.scss` 파일의 `$grid-breakpoints`에 정의된 map을 `$breakpoints` 인수로 사용합니다.
-// 
+//
 //   Breakpoints
 //   ==========================================
 //   xs    ||  0
@@ -15,7 +58,6 @@
 //   ==========================================
 //
 
-
 // 다음 중단점, 또는 마지막 중단점의 이름.
 //  >> breakpoint-next(sm)
 //  md
@@ -23,12 +65,20 @@
 //  md
 //  >> breakpoint-next(sm, $breakpoint-names: (xs sm md lg xl))
 //  md
-@function breakpoint-next($name, $breakpoints: $grid-breakpoints, $breakpoint-names: map-keys($breakpoints)) {
+@function breakpoint-next(
+  $name,
+  $breakpoints: $grid-breakpoints,
+  $breakpoint-names: map-keys($breakpoints)
+) {
   $n: index($breakpoint-names, $name);
   @if not $n {
     @error "`#{$breakpoints}`에서 `#{$name}` breakpoint를 찾지 못했습니다.";
   }
-  @return if($n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null);
+  @return if(
+    $n < length($breakpoint-names),
+    nth($breakpoint-names, $n + 1),
+    null
+  );
 }
 
 // 최소 width 기준 breakpoint
@@ -50,7 +100,7 @@
 //  767.98px
 @function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
   $max: map-get($breakpoints, $name);
-  @return if($max and $max > 0, $max - .02, null);
+  @return if($max and $max > 0, $max - 0.02, null);
 }
 
 @function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {

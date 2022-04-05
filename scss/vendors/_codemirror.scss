@@ -1,9 +1,9 @@
 .CodeMirror {
   @include font-family("mono");
-  font-size: 12px;
+  @include font-size("12");
   height: 480px;
 }
 
 .CodeMirror pre {
-  padding: 1px 4px;
+  padding: rem(1px) $spacing-2xs;
 }
