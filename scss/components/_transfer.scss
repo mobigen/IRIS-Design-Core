@@ -14,7 +14,7 @@
   background-color: $ui-02;
   color: $text-01;
   // transfer-list일 때만 추가되는 스타일
-  width: calc(50% - 32px);
+  width: calc(50% - rem(32px));
   position: relative;
 }
 

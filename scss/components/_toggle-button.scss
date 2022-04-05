@@ -30,7 +30,7 @@
 }
 
 .toggle-button__item:not(:only-child):first-child {
-  border-radius: 2px 0px 0px 2px;
+  border-radius: 2px 0 0 2px;
 }
 
 .toggle-button__item:not(:first-child),
@@ -39,13 +39,13 @@
 }
 
 .toggle-button__item:not(:only-child):last-child {
-  border-radius: 0px 2px 2px 0px;
+  border-radius: 0 2px 2px 0;
 }
 
 .toggle-button__text {
   @include font-size("13");
   line-height: 1;
-  letter-spacing: -0.5px;
+  letter-spacing: rem(-0.5px);
 }
 
 .toggle-button__item--selected.toggle-button__item--disabled,
@@ -113,7 +113,7 @@
 }
 
 .toggle-button__item--secondary .svg-icon {
-  @include svg-icon-size(32px);
+  @include svg-icon-size(rem(32px));
 }
 
 .toggle-button__item--secondary .svg-icon + .toggle-button__text,
@@ -131,7 +131,7 @@
 }
 
 .toggle-button__item--icon {
-  @include button--icon(6px, 20px);
+  @include button--icon(rem(6px), rem(20px));
 }
 
 // tertiary Theme
@@ -173,7 +173,7 @@
 }
 
 .toggle-button__item--icon.toggle-button__item--sm {
-  @include button--icon(4px, 16px);
+  @include button--icon(rem(4px), rem(16px));
 }
 
 // -------------------------
