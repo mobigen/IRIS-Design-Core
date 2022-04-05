@@ -77,7 +77,7 @@ th .button {
 
 .table__icon {
   display: inline-block;
-  height: 20px;
+  height: rem(20px);
   vertical-align: middle;
 }
 
@@ -159,7 +159,7 @@ th .button {
     position: absolute;
     top: 50%;
     margin-top: rem(-7px);
-    left: -1px;
+    left: rem(-1px);
   }
 }
 
@@ -193,8 +193,8 @@ th .button {
 .table__color-picker-button {
   @include button-normal;
   position: relative;
-  width: 26px;
-  height: 26px;
+  width: rem(26px);
+  height: rem(26px);
   background-color: $ui-02;
   border-radius: 50%;
   border: 1px solid $ui-04;
@@ -203,8 +203,8 @@ th .button {
 
 .table__color-picker-inner {
   position: absolute;
-  width: 19px;
-  height: 19px;
+  width: rem(19px);
+  height: rem(19px);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -212,7 +212,7 @@ th .button {
 }
 
 .text-input.table__color-picker-input {
-  width: 80px;
+  width: rem(80px);
   margin-left: $spacing-2xs;
 }
 
@@ -221,8 +221,8 @@ th .button {
 // -------------------------
 .table--sm th,
 .table--sm td {
+  @include font-size("13");
   height: $button-height-md;
-  font-size: rem(13px);
 }
 
 .td--gap-sm td {
