@@ -50,7 +50,7 @@
     margin-bottom: rem(10px);
 
     .tooltip-arrow {
-      top: calc(100% - rem(4px));
+      top: calc(100% - 4px);
       left: 50%;
       margin-left: -$spacing-2xs;
     }
@@ -137,7 +137,7 @@
     margin-bottom: $spacing-xs + $spacing-3xs;
 
     .tooltip-arrow {
-      top: calc(100% - rem(4px));
+      top: calc(100% - 4px);
       left: 50%;
       margin-left: -$spacing-2xs;
     }
@@ -180,7 +180,7 @@
     margin-bottom: $spacing-xs + $spacing-3xs;
 
     .tooltip-arrow {
-      top: calc(100% - rem(4px));
+      top: calc(100% - 4px);
       right: rem(-12px);
     }
   }
@@ -189,7 +189,7 @@
     margin-bottom: $spacing-xs + $spacing-3xs;
 
     .tooltip-arrow {
-      top: calc(100% - rem(4px));
+      top: calc(100% - 4px);
       left: rem(-12px);
     }
   }

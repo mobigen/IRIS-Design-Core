@@ -50,7 +50,7 @@
 // Tooltip 위로 위치
 .tooltip-studio--top {
   .tooltip-studio__arrow {
-    top: calc(100% - rem(4px));
+    top: calc(100% - 4px);
     left: 50%;
     margin-left: -$spacing-2xs;
     border-width: 0 1px 1px 0;
@@ -89,7 +89,7 @@
 
 .tooltip-studio--top-right {
   .tooltip-studio__arrow {
-    top: calc(100% - rem(4px));
+    top: calc(100% - 4px);
     right: rem(12px);
     border-width: 0 1px 1px 0;
   }
@@ -97,7 +97,7 @@
 
 .tooltip-studio--top-left {
   .tooltip-studio__arrow {
-    top: calc(100% - rem(4px));
+    top: calc(100% - 4px);
     left: rem(12px);
     border-width: 0 1px 1px 0;
   }

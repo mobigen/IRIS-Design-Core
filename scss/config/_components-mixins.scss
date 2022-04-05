@@ -306,7 +306,7 @@
   }
 
   &__item {
-    width: calc(33.33% - rem(8px));
+    width: calc(33.33% - 8px);
     margin: $spacing-2xs;
 
     &:hover {
@@ -439,7 +439,7 @@
 
   &-selector__button {
     @include button-normal;
-    @include button--icon(rem(6px), rem(20px));
+    @include button--icon(6px, 20px);
     position: absolute;
     top: 0;
     right: 0;
