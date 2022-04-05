@@ -4,13 +4,13 @@
 // ------------------------------------------
 $breakpoints: (
   "laptop": (
-    max-width: 1279px
+    max-width: rem(1279px)
   ),
   "tablet": (
-    max-width: 767px
+    max-width: rem(767px)
   ),
   "mobile": (
-    max-width: 480px
+    max-width: rem(480px)
   )
 ) !default;
 
