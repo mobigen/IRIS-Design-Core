@@ -236,7 +236,7 @@
 }
 
 .dynamic-list__no-contents .notification-message {
-  height: rem(480px);
+  height: 480px;
 }
 
 .dynamic-list__toolbar {
@@ -245,8 +245,8 @@
 }
 
 .dynamic-list__items {
-  min-height: rem(480px);
-  max-height: rem(480px);
+  min-height: 480px;
+  max-height: 480px;
   padding-right: $spacing-xs;
   overflow-y: auto;
   position: relative;

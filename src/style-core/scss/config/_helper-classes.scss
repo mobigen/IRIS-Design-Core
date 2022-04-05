@@ -67,7 +67,7 @@
   display: inline-block;
   overflow: hidden;
   vertical-align: middle;
-  width: rem(1px);
+  width: 1px;
   height: rem(16px);
   margin: 0 $spacing-xs;
   border-left: 1px solid $ui-04;
@@ -79,7 +79,7 @@
   overflow: hidden;
   vertical-align: middle;
   width: 100%;
-  height: rem(1px);
+  height: 1px;
   margin: $spacing-3xs 0;
   border-bottom: 1px solid $ui-04;
   clip: rect(1px, 1px, 1px, 1px);
@@ -501,11 +501,11 @@
   &:after {
     content: "";
     position: absolute;
-    left: rem(-11px);
+    left: -11px;
     top: 50%;
     margin-top: -$spacing-xs;
-    width: rem(1px);
-    height: rem(17px);
+    width: 1px;
+    height: 17px;
     background-color: $ui-04;
   }
 
@@ -514,8 +514,8 @@
 
     &:after {
       margin-top: rem(-11px);
-      height: rem(22px);
-      left: rem(-13px);
+      height: 22px;
+      left: -13px;
     }
   }
 }
