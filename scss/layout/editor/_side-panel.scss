@@ -20,12 +20,12 @@
 .side-panel__toggle {
   width: 0;
   opacity: 0;
-  clip: rect(rem(1px), rem(1px), rem(1px), rem(1px));
+  clip: rect(1px, 1px, 1px, 1px);
   transition: all $duration-fast-01 motion(standard, productive);
 
   > * {
     display: none;
-    clip: rect(rem(1px), rem(1px), rem(1px), rem(1px));
+    clip: rect(1px, 1px, 1px, 1px);
     opacity: 0;
     height: 0;
   }
@@ -110,7 +110,7 @@
 
 .side-panel::before {
   top: calc(
-    rem(40px) + rem(32px)
+    40px + 32px
   ); // side-panel__head의 높이 + side-panel__component-name-container 높이
   background-image: linear-gradient(
     0deg,

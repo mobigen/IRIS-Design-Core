@@ -24,7 +24,7 @@
 
 .editor-layout-head__title-container {
   display: flex;
-  width: calc(rem(325px) - #{$spacing-sm});
+  width: calc(325px - #{$spacing-sm});
 }
 
 .editor-layout-head__menu {
