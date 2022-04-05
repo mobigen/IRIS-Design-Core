@@ -30,7 +30,7 @@
 }
 
 .toggle-button__item:not(:only-child):first-child {
-  border-radius: 2px 0px 0px 2px;
+  border-radius: 2px 0 0 2px;
 }
 
 .toggle-button__item:not(:first-child),
@@ -39,13 +39,13 @@
 }
 
 .toggle-button__item:not(:only-child):last-child {
-  border-radius: 0px 2px 2px 0px;
+  border-radius: 0 2px 2px 0;
 }
 
 .toggle-button__text {
   @include font-size("13");
   line-height: 1;
-  letter-spacing: -0.5px;
+  letter-spacing: rem(-0.5px);
 }
 
 .toggle-button__item--selected.toggle-button__item--disabled,
