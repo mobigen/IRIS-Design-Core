@@ -491,7 +491,7 @@
   &--focused &-selector,
   &--open &-selector {
     border-color: $secondary;
-    box-shadow: 0 0 rem(4px) rgba($secondary, 0.65);
+    box-shadow: 0 0 4px rgba($secondary, 0.65);
   }
 
   &--focused &-selector__button,

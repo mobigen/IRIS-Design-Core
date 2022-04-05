@@ -78,7 +78,7 @@
 .form__detail-value {
   @include font-size("13");
   color: $text-01;
-  width: rem(40px);
+  width: 40px;
 }
 
 .form__label-text + .button--link {
@@ -91,7 +91,7 @@
 
 .form__detail-text {
   @include font-weight("medium");
-  @include font-size("15");
+  font-size: 15px;
   color: $text-01;
 }
 
@@ -206,7 +206,7 @@
   }
 
   .form__detail-textarea {
-    height: rem(120px);
+    height: 120px;
   }
 
   .form__detail-detail {
@@ -326,8 +326,8 @@
   }
 
   .notification__icon {
-    width: rem(18px);
-    height: rem(18px);
+    width: 18px;
+    height: 18px;
     margin: $spacing-xs;
   }
 
@@ -368,7 +368,7 @@
   }
 
   .dynamic-form__action-buttons {
-    width: rem(68px);
+    width: 68px;
     margin-left: 0;
   }
 

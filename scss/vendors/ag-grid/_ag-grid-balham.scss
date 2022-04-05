@@ -47,7 +47,7 @@
   // body
   .ag-cell {
     @include font-size("14");
-    line-height: rem(38px);
+    line-height: 38px;
     color: $text-02;
     border: none;
     border-right-width: 0;
@@ -70,8 +70,8 @@
   }
 
   .checkbox {
-    width: rem(20px);
-    height: rem(24px);
+    width: 20px;
+    height: 24px;
   }
 
   .ag-icon:before {
@@ -81,9 +81,9 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: 24px 24px;
-    height: rem(24px);
+    height: 24px;
     opacity: 1;
-    width: rem(24px);
+    width: 24px;
     display: inline-block;
   }
 
@@ -142,8 +142,8 @@
     display: block;
     display: -webkit-box;
     overflow: hidden;
-    max-height: rem(114px);
-    line-height: rem(38px);
+    max-height: 114px;
+    line-height: 38px;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     word-wrap: break-word;
@@ -189,8 +189,8 @@
     top: 50%;
     margin-top: -$spacing-md;
     right: 0;
-    width: rem(32px);
-    height: rem(32px);
+    width: 32px;
+    height: 32px;
   }
 
   // cell 강조인 경우, '--emphasis' suffix 추가
@@ -224,7 +224,7 @@
   @include font-size("24");
   margin-top: $spacing-lg;
   color: $text-03;
-  letter-spacing: rem(-0.3px);
+  letter-spacing: -0.3px;
 
   em {
     color: $icon-02;
