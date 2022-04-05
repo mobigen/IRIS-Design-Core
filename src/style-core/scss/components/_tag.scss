@@ -1,3 +1,6 @@
+// -------------------------
+// Tag
+// -------------------------
 .tag {
   @include button-normal;
   @include font-size("12");
@@ -10,6 +13,10 @@
   &:hover:not(:disabled) {
     background-color: darken($hover-row, 5%);
     color: $primary;
+  }
+
+  &:focus-visible:not(:disabled) {
+    outline: 2px solid $default-focus;
   }
 
   &:disabled {

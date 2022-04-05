@@ -1,3 +1,6 @@
+// -------------------------
+// Table
+// -------------------------
 .table {
   width: 100%;
   border: 1px solid $ui-04;
@@ -32,7 +35,7 @@
 th .button {
   display: inline-block;
   vertical-align: middle;
-  margin-top: -4px;
+  margin-top: -$spacing-2xs;
 }
 
 .table td {
@@ -155,7 +158,7 @@ th .button {
     background-color: $ui-04;
     position: absolute;
     top: 50%;
-    margin-top: -7px;
+    margin-top: rem(-7px);
     left: -1px;
   }
 }

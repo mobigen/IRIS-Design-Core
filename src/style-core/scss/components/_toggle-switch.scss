@@ -1,3 +1,6 @@
+// -------------------------
+// Toggle switch
+// -------------------------
 .toggle-switch {
   display: flex;
   align-items: center;
@@ -15,6 +18,11 @@
   opacity: 0.5;
   transition-duration: $duration-fast-02;
   transition-timing-function: ease-in-out;
+
+  &:focus-visible:not(:disabled) {
+    outline: 2px solid $default-focus;
+    opacity: 1;
+  }
 }
 
 .toggle-switch__handle {

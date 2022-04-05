@@ -1,3 +1,6 @@
+// -------------------------
+// Date picker
+// -------------------------
 .date-picker {
   @include picker;
 }
@@ -161,9 +164,9 @@
   display: block;
   position: absolute;
   left: 50%;
-  margin-left: -8px;
+  margin-left: -$spacing-xs;
   top: 50%;
-  margin-top: -8px;
+  margin-top: -$spacing-xs;
 }
 .ui-datepicker .ui-datepicker-title {
   margin: 0 $spacing-xl;
@@ -172,7 +175,7 @@
 }
 .ui-datepicker .ui-datepicker-title select {
   @include font-size("14");
-  margin: 1px 0;
+  margin: rem(1px) 0;
 }
 .ui-datepicker select.ui-datepicker-month,
 .ui-datepicker select.ui-datepicker-year {
@@ -187,7 +190,7 @@
 .ui-datepicker th {
   @include font-weight("regular");
   height: rem(32px);
-  padding: rem(6px);
+  padding: $spacing-2xs + $spacing-3xs;
   text-align: center;
   border: 0;
   color: $text-03;
