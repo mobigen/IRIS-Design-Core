@@ -40,12 +40,12 @@
   &:active,
   &:focus {
     border-color: $secondary;
-    box-shadow: 0 0 rem(4px) rgba($secondary, 0.65);
+    box-shadow: 0 0 4px rgba($secondary, 0.65);
   }
 
   // chrom에서 자동저장된 input의 배경컬러를 제어
   &:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 rem(1000px) $ui-02 inset;
+    -webkit-box-shadow: 0 0 0 1000px $ui-02 inset;
   }
 
   // number 유형에 자동으로 생성되는 spinner 제거
@@ -64,16 +64,16 @@
 
 .number-input__controls {
   position: absolute;
-  top: rem(1px);
-  right: rem(1px);
-  height: calc(100% - rem(2px));
+  top: 1px;
+  right: 1px;
+  height: calc(100% - 2px);
   border-left: 1px solid $ui-04;
   transition: all $duration-fast-01 motion(standard, productive);
 }
 
 .number-input__control-button {
   @include button-normal;
-  @include button--icon(rem(2px), rem(14px));
+  @include button--icon(2px, 14px);
   height: 50%;
   background-color: $ui-02;
   border-radius: 0;
@@ -104,8 +104,8 @@
 
   .number-input__control-button {
     .svg-icon {
-      width: rem(10px);
-      height: rem(10px);
+      width: 10px;
+      height: 10px;
     }
   }
 }

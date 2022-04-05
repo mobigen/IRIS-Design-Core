@@ -38,7 +38,7 @@
 }
 
 .alert__icon {
-  @include svg-icon-size(rem(24px));
+  @include svg-icon-size(24px);
   flex-shrink: 0;
   margin-right: $spacing-sm;
   margin-left: -$spacing-xs;
