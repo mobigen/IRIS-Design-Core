@@ -21,7 +21,7 @@
 }
 
 .description__item + .description__item {
- border-top: 1px solid $hover-row;
+  border-top: 1px solid $hover-row;
 }
 
 .description__item:last-child:not(:only-child) {
@@ -76,6 +76,6 @@
 
   .description__title,
   .description__text {
-    @include font-size("15");
+    font-size: 15px;
   }
 }
