@@ -29,7 +29,7 @@
 
   // chrom에서 자동저장된 input의 배경컬러를 제어
   &:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 rem(1000px) $ui-02 inset;
+    -webkit-box-shadow: 0 0 0 1000px $ui-02 inset;
   }
 
   &[disabled],

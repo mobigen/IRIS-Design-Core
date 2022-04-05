@@ -216,7 +216,7 @@
 /* Icons */
 .ui-datepicker .ui-icon {
   display: block;
-  text-indent: rem(-99999px);
+  text-indent: -99999px;
   overflow: hidden;
   background-repeat: no-repeat;
   left: 0.5em;

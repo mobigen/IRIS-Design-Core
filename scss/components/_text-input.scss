@@ -34,7 +34,7 @@
 
   // chrom에서 자동저장된 input의 배경컬러를 제어
   &:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 rem(1000px) $ui-02 inset;
+    -webkit-box-shadow: 0 0 0 1000px $ui-02 inset;
   }
 
   &[disabled],
@@ -135,14 +135,14 @@
   }
 
   & ~ .text-input {
-    $icon-spacing: rem(8px) + rem(20px) + rem(4px);
+    $icon-spacing: 8px + 20px + 4px;
     padding-left: $icon-spacing;
   }
 }
 
 .text-input-group__clear-button {
   @include button-normal;
-  @include position-right-center(rem(6px));
+  @include position-right-center(6px);
   width: rem(18px);
   height: rem(18px);
   padding: 0;
@@ -171,7 +171,7 @@
 }
 
 .text-input-group__search-button {
-  @include position-right-center(rem(1px));
+  @include position-right-center(1px);
   z-index: z("float");
   height: rem(30px);
   border-right: transparent;
@@ -181,7 +181,7 @@
 
 .text-input-group__button {
   @include button-normal;
-  @include position-right-center(rem(8px));
+  @include position-right-center(8px);
   width: rem(20px);
   height: rem(20px);
   padding: 0;
@@ -214,7 +214,7 @@
     left: $spacing-sm;
 
     & ~ .text-input {
-      $icon-spacing: rem(12px) + rem(20px) + rem(4px); // left + width + text사이와의 여백
+      $icon-spacing: 12px + 20px + 4px; // left + width + text사이와의 여백
       padding-left: $icon-spacing;
     }
   }
@@ -252,7 +252,7 @@
     height: rem(14px);
 
     & ~ .text-input {
-      $icon-spacing: rem(4px) + rem(14px) + rem(2px); // left + width + text사이와의 여백
+      $icon-spacing: 4px + 14px + 2px; // left + width + text사이와의 여백
       padding-left: $icon-spacing;
     }
   }
