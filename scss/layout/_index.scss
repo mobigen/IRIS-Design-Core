@@ -4,7 +4,7 @@
 // index-layout-head
 .index-layout-head {
   background-color: $ui-02;
-  box-shadow: 0 rem(4px) rem(11px) rgba(0, 0, 0, 0.03);
+  box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.03);
 }
 
 .index-layout-head__title {
@@ -12,7 +12,7 @@
   @include font-weight("medium");
   white-space: nowrap;
   color: $text-01;
-  letter-spacing: rem(-0.3px);
+  letter-spacing: -0.3px;
 }
 
 .index-layout-head__title-bar {
@@ -52,13 +52,13 @@
   right: 0;
   bottom: rem(200px);
   width: 100%;
-  min-width: rem(1200px);
+  min-width: 1200px;
   display: flex;
   flex-direction: column;
   flex: 1 0 auto;
   z-index: z("modal");
   background: $ui-01;
-  box-shadow: 0 rem(4px) rem(11px) rgba(0, 0, 0, 0.03);
+  box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.03);
 }
 
 .index-layout-body__inner {
@@ -128,7 +128,7 @@
   @include font-weight("regular");
   @include font-size("15");
   color: $text-02;
-  letter-spacing: rem(-0.3px);
+  letter-spacing: -0.3px;
   em {
     @include font-weight("medium");
   }
@@ -145,9 +145,9 @@
 }
 
 .index-layout-body__management-text {
-  @include font-size("15");
   display: block;
   margin-right: $spacing-xs;
+  font-size: rem(15px);
   color: $active-secondary;
   white-space: nowrap;
   word-break: keep-all;
@@ -220,7 +220,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: rem(62px);
+  height: 62px;
 }
 
 .generate-link-group .text-area {
@@ -229,7 +229,7 @@
 
 .url-group {
   min-height: rem(80px);
-  max-height: rem(235px);
+  max-height: 235px;
   overflow-y: auto;
   background-color: $ui-02;
   border: 1px solid $ui-04;
@@ -275,7 +275,7 @@
 
 // 카테고리 관리
 .list.list-category-dialog {
-  height: rem(280px);
+  height: 280px;
   overflow-y: auto;
 }
 
@@ -411,14 +411,14 @@
   padding: $spacing-sm;
   background-color: $ui-02;
   border: 1px solid $ui-04;
-  box-shadow: 0 rem(2px) 0 rgba(206, 211, 217, 0.2);
+  box-shadow: 0px 2px 0px rgba(206, 211, 217, 0.2);
   border-radius: 2px;
   transition: all $duration-slow-01 $iris-standard-easing;
   text-decoration: none;
   cursor: pointer;
 
   &:hover {
-    box-shadow: 0 0 rem(30px) rgba(206, 211, 217, 0.8);
+    box-shadow: 0px 0px 30px rgba(206, 211, 217, 0.8);
     color: inherit;
 
     .project-thumbnail-list__details {
@@ -501,11 +501,11 @@
 
 .project-thumbnail-list__information-title {
   @include text-overflow;
-  @include font-size("15");
   position: relative;
   padding: $spacing-2xs 0;
+  @include font-size("15");
   font-weight: normal;
-  letter-spacing: rem(-0.3px);
+  letter-spacing: -0.3px;
   color: $text-02;
 }
 
@@ -543,7 +543,7 @@
 // 추후 삭제
 .project-thumbnail-list__tags {
   position: absolute;
-  bottom: rem(6px);
+  bottom: 6px;
   right: rem(8px);
   display: flex;
   flex-direction: row;
@@ -556,7 +556,7 @@
 
 .project-thumbnail-list__badges {
   position: absolute;
-  bottom: rem(6px);
+  bottom: 6px;
   right: rem(8px);
   display: flex;
   flex-direction: row;

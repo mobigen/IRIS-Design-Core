@@ -25,7 +25,7 @@
 
   &--focused {
     border-color: $secondary;
-    box-shadow: 0 0 rem(4px) rgba(77, 174, 255, 0.4);
+    box-shadow: 0px 0px 4px rgba(77, 174, 255, 0.4);
 
     .upload__file-button {
       border-left-color: $secondary;
@@ -35,7 +35,7 @@
     &:hover:active,
     &:hover:focus {
       border-color: $secondary;
-      box-shadow: 0 0 rem(4px) rgba(77, 174, 255, 0.4);
+      box-shadow: 0px 0px 4px rgba(77, 174, 255, 0.4);
 
       .upload__file-button {
         border-left-color: $secondary;
@@ -136,7 +136,7 @@
 // -------------------------
 .upload-preview__thumbnail {
   width: 100%;
-  height: rem(130px);
+  height: 130px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -153,7 +153,7 @@
   }
 
   img {
-    width: rem(66px);
+    width: 66px;
   }
 }
 

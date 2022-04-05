@@ -22,7 +22,6 @@
   &:focus {
     border-color: $secondary;
     filter: drop-shadow(0 0 4px rgba(77, 174, 255, 0.4));
-
     + .mx-icon-calendar {
       &:after {
         background-color: $secondary;
@@ -53,7 +52,7 @@
 
 .mx-icon-calendar,
 .mx-icon-clear {
-  right: rem(9px);
+  right: 9px;
   width: rem(15px);
   height: rem(15px);
   color: $text-03;
@@ -66,13 +65,13 @@
 
   &:after {
     content: "";
-    width: rem(1px);
+    width: 1px;
     position: absolute;
-    right: rem(23px);
-    top: rem(-8px);
+    right: 23px;
+    top: -8px;
     bottom: 0;
     background-color: $ui-04;
-    height: rem(31px);
+    height: 31px;
   }
 }
 
@@ -95,7 +94,7 @@
 
 .mx-datepicker-popup {
   border-color: $ui-04;
-  box-shadow: 0 rem(10px) rem(24px) rgba(206, 211, 217, 0.4);
+  box-shadow: 0px 10px 24px rgba(206, 211, 217, 0.4);
 }
 
 .mx-calendar-header-label {
@@ -138,7 +137,7 @@
 .mx-time-header {
   height: rem(32px);
   border-color: $ui-04;
-  line-height: rem(30px);
+  line-height: 30px;
 }
 
 .mx-time-header-title {
