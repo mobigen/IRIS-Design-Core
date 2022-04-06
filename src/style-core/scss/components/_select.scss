@@ -12,7 +12,7 @@
   .select-selector__button,
   .select-selector__input {
     border-color: $secondary;
-    box-shadow: 0px 0px 4px rgba(77, 174, 255, 0.4);
+    box-shadow: 0 0 rem(4px) rgba(77, 174, 255, 0.4);
 
     &:hover:not(:disabled) {
       border-color: $secondary;
@@ -214,7 +214,7 @@
 
   &:focus {
     border-color: $secondary;
-    box-shadow: 0px 0px 4px rgba(77, 174, 255, 0.4);
+    box-shadow: 0 0 rem(4px) rgba(77, 174, 255, 0.4);
   }
 
   &:focus-visible:not(:disabled) {
@@ -330,7 +330,7 @@
 }
 
 .select-container--up {
-  box-shadow: 0 0 8px 0 $box-shadow;
+  box-shadow: 0 0 rem(8px) 0 $box-shadow;
 }
 
 // -------------------------
@@ -368,8 +368,8 @@
 
   .select-selector__icon {
     right: rem(4px);
-    width: 18px;
-    height: 18px;
+    width: rem(18px);
+    height: rem(18px);
     margin-top: -$spacing-xs;
   }
 
@@ -410,7 +410,7 @@
   .select-container {
     top: auto;
     bottom: calc(100% + 2px);
-    box-shadow: 0 0 8px 0 $box-shadow;
+    box-shadow: 0 0 rem(8px) 0 $box-shadow;
   }
 }
 
