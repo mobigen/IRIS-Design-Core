@@ -229,6 +229,19 @@
   display: flex;
 }
 
+.form__v-group-item {
+  display: flex;
+  align-items: center;
+  height: rem(32px);
+}
+
+.form__v-group-title {
+  display: flex;
+  align-items: center;
+  width: rem(130px);
+  color: $text-02;
+}
+
 .dynamic-form__item + .dynamic-form__item {
   margin-top: $spacing-xs;
 }
