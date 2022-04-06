@@ -114,7 +114,7 @@
 .ui-datepicker .ui-datepicker-prev,
 .ui-datepicker .ui-datepicker-next {
   position: absolute;
-  top: 10px;
+  top: rem(10px);
   width: rem(20px);
   height: rem(20px);
   cursor: pointer;
@@ -124,7 +124,7 @@
 .ui-datepicker .ui-datepicker-next::after {
   display: inline-block;
   position: absolute;
-  top: 6px;
+  top: rem(6px);
   width: rem(8px);
   height: rem(8px);
   border-color: $text-03;
@@ -146,17 +146,17 @@
   left: 0;
 }
 .ui-datepicker .ui-datepicker-prev {
-  left: 10px;
+  left: rem(10px);
 
   &:hover {
-    left: 10px;
+    left: rem(10px);
   }
 }
 .ui-datepicker .ui-datepicker-next {
-  right: 10px;
+  right: rem(10px);
 
   &:hover {
-    right: 10px;
+    right: rem(10px);
   }
 }
 .ui-datepicker .ui-datepicker-prev span,
@@ -306,7 +306,7 @@ a.ui-button:active,
   position: absolute;
   top: 50%;
   right: 0;
-  left: -4px;
+  left: rem(-4px);
   z-index: 1;
   width: 121%;
   height: rem(32px);
@@ -316,12 +316,12 @@ a.ui-button:active,
 }
 
 .ui-datepicker-calendar .ui-datepicker-range:first-child::before {
-  left: 4px;
+  left: rem(4px);
   width: 100%;
 }
 
 .ui-datepicker-calendar .ui-datepicker-range:last-child::before {
-  right: 2px;
+  right: rem(2px);
   left: auto;
   width: 100%;
 }
