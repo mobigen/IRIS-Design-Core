@@ -29,7 +29,7 @@
   &:active,
   &:focus {
     border-color: $secondary;
-    box-shadow: 0 0 4px rgba($secondary, 0.65);
+    box-shadow: 0 0 rem(4px) rgba($secondary, 0.65);
   }
 
   // chrom에서 자동저장된 input의 배경컬러를 제어
@@ -108,7 +108,7 @@
     }
 
     &:nth-last-child(3):not(div) {
-      padding-right: rem(62px) !important;
+      padding-right: ($spacing-xl * 2) - $spacing-3xs !important;
     }
   }
 }
@@ -122,8 +122,8 @@
   top: 50%;
   transform: translateY(-50%);
   left: $spacing-xs;
-  width: 20px;
-  height: 20px;
+  width: rem(20px);
+  height: rem(20px);
   border: none;
   padding: 0;
   z-index: z("float");
@@ -157,7 +157,8 @@
     fill: lighten($icon-01, 18%);
   }
 
-  &:hover {
+  &:hover,
+  &:focus-visible:not(:disabled) {
     .svg-icon {
       fill: $icon-01;
     }
@@ -172,7 +173,7 @@
 .text-input-group__search-button {
   @include position-right-center(1px);
   z-index: z("float");
-  height: 30px;
+  height: rem(30px);
   border-right: transparent;
   border-top: transparent;
   border-bottom: transparent;
@@ -205,7 +206,7 @@
     @include text-input--lg;
 
     &:nth-last-child(3):not(div) {
-      padding-right: rem(72px) !important;
+      padding-right: $spacing-sm * 6 !important;
     }
   }
 
@@ -232,7 +233,7 @@
   }
 
   .text-input-group__search-button {
-    height: 38px;
+    height: rem(38px);
   }
 }
 
@@ -241,14 +242,14 @@
     @include text-input--sm;
 
     &:nth-last-child(3):not(div) {
-      padding-right: rem(46px) !important;
+      padding-right: $spacing-3xl - $spacing-3xs !important;
     }
   }
 
   .text-input-group__icon {
     left: $spacing-2xs;
-    width: 14px;
-    height: 14px;
+    width: rem(14px);
+    height: rem(14px);
 
     & ~ .text-input {
       $icon-spacing: 4px + 14px + 2px; // left + width + text사이와의 여백
@@ -258,7 +259,7 @@
 
   .text-input-group__clear-button,
   .text-input-group__button {
-    right: 4px;
+    right: rem(4px);
     width: rem(14px);
     height: rem(14px);
   }
@@ -276,7 +277,7 @@
   }
 
   .text-input-group__search-button {
-    height: 22px;
+    height: rem(22px);
   }
 }
 

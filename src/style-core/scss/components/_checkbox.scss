@@ -1,3 +1,6 @@
+// -------------------------
+// Checkbox
+// -------------------------
 .checkbox {
   position: relative;
 }
@@ -12,8 +15,8 @@
 
 .checkbox__input {
   @include hidden;
-  top: 4px;
-  left: 2px;
+  top: rem(4px);
+  left: rem(2px);
 }
 
 .checkbox__label {
@@ -22,7 +25,7 @@
   display: inline-flex;
   align-items: center;
   position: relative;
-  padding-left: rem(24px); //NOTE: width of checkbox 16px + 8px of padding
+  padding-left: $spacing-xl;
   min-height: rem(24px);
   color: $text-02;
   white-space: nowrap;
@@ -40,7 +43,7 @@
   content: "";
   width: rem(16px);
   height: rem(16px);
-  margin: rem(2px);
+  margin: $spacing-3xs;
   position: absolute;
   left: 0;
   top: rem(2px);
@@ -66,6 +69,12 @@
 // 상태별 스타일
 // -------------------------
 // hover 상태
+.checkbox__input:focus-visible:not(:disabled) {
+  + .checkbox__label:before {
+    border-color: $primary;
+  }
+}
+
 .checkbox__label:hover::before {
   border-color: $primary;
 }
@@ -93,7 +102,7 @@
   left: rem(6px);
   width: rem(8px);
   border-left-width: 0;
-  border-bottom-width: rem(2px);
+  border-bottom-width: 2px;
   border-color: $primary;
 }
 
@@ -139,7 +148,7 @@
 .checkbox--lg {
   .checkbox__label {
     @include font-size("16");
-    padding-left: rem(28px); //width of checkbox 20px + 8px of padding
+    padding-left: $spacing-lg + $spacing-2xs;
     min-height: rem(28px);
   }
 
@@ -147,9 +156,9 @@
     content: "";
     width: rem(20px);
     height: rem(20px);
-    margin: rem(2px);
+    margin: $spacing-3xs;
     top: rem(2px);
-    border-width: rem(2px);
+    border-width: 2px;
   }
 
   .checkbox__label::after {
@@ -166,14 +175,14 @@
     left: rem(7px);
     width: rem(10px);
     border-left-width: 0;
-    border-bottom-width: rem(3px);
+    border-bottom-width: 3px;
   }
 }
 
 .checkbox--sm {
   .checkbox__label {
     @include font-size("12");
-    padding-left: rem(16px); //width of checkbox 20px + 8px of padding
+    padding-left: $spacing-md;
     min-height: rem(18px);
   }
 
@@ -183,7 +192,7 @@
     height: rem(12px);
     margin: rem(1px);
     top: rem(3px);
-    border-width: rem(1px);
+    border-width: 1px;
   }
 
   .checkbox__label::after {
@@ -200,6 +209,6 @@
     left: rem(4px);
     width: rem(6px);
     border-left-width: 0;
-    border-bottom-width: rem(2px);
+    border-bottom-width: 2px;
   }
 }

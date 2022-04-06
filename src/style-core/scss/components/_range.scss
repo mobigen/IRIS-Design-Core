@@ -1,5 +1,8 @@
+// -------------------------
+// Range
+// -------------------------
 .range-input {
-  -webkit-appearance: none;  /* Override default CSS styles */
+  -webkit-appearance: none; /* Override default CSS styles */
   appearance: none;
   width: 100%; /* Full-width */
   height: rem(6px);
@@ -7,30 +10,30 @@
   background: $ui-04;
   border-radius: 5px;
   outline: none; /* Remove outline */
-  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
-  transition: opacity .2s;
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
 }
 
 /* Mouse-over effects */
 .range-input:hover {
   background: $field-border;
-  &::-webkit-slider-thumb{
+  &::-webkit-slider-thumb {
     background: $hover-primary;
   }
 }
 
 /* focus effects */
 .range-input:active,
-.range-input:focus{
-  &::-webkit-slider-thumb{
+.range-input:focus {
+  &::-webkit-slider-thumb {
     background: $active-primary;
   }
 }
 
 /* focus effects */
-.range-input:disabled{
+.range-input:disabled {
   cursor: not-allowed;
-  &::-webkit-slider-thumb{
+  &::-webkit-slider-thumb {
     background: $text-05;
     cursor: not-allowed;
   }
@@ -54,13 +57,13 @@
   cursor: pointer;
 }
 
-.range-input-group{
+.range-input-group {
   display: flex;
   align-items: center;
   justify-content: flex-start;
 
   .range-input + .text-input-wrap {
-    .text-input{
+    .text-input {
       width: 100%;
       margin-left: $spacing-2xs;
     }

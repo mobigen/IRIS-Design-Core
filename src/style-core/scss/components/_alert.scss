@@ -1,4 +1,6 @@
-// modal과 디자인이 똑같은 부분 시작
+// -------------------------
+// Alert
+// -------------------------
 .alert {
   @include layer("pop-out");
   display: flex;
@@ -61,6 +63,8 @@
   word-break: keep-all;
   word-wrap: break-word;
   white-space: normal;
+  max-height: rem(150px);
+  overflow-y: auto;
 }
 
 // -------------------------

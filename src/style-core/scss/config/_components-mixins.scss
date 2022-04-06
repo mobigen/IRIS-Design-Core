@@ -75,6 +75,10 @@
     &:active {
       background-color: $ui-01;
     }
+
+    &:focus-visible:not(:disabled) {
+      border: 2px solid $default-focus;
+    }
   }
 
   &__notification {
@@ -149,6 +153,10 @@
 
     &:not(:last-child) {
       margin-right: $spacing-3xs;
+    }
+
+    &:focus-visible:not(:disabled) {
+      border: 2px solid $default-focus;
     }
   }
 
@@ -328,6 +336,10 @@
     &:active {
       background-color: $ui-01;
     }
+
+    &:focus-visible:not(:disabled) {
+      border: 2px solid $default-focus;
+    }
   }
 
   &__icon {
@@ -479,7 +491,7 @@
   &--focused &-selector,
   &--open &-selector {
     border-color: $secondary;
-    box-shadow: 0 0 4px rgba($secondary, 0.65);
+    box-shadow: 0 0 rem(4px) rgba($secondary, 0.65);
   }
 
   &--focused &-selector__button,
