@@ -1,3 +1,6 @@
+// -------------------------
+// Tag
+// -------------------------
 .tag {
   @include button-normal;
   @include font-size("12");
@@ -10,6 +13,10 @@
   &:hover:not(:disabled) {
     background-color: darken($hover-row, 5%);
     color: $primary;
+  }
+
+  &:focus-visible:not(:disabled) {
+    outline: 2px solid $default-focus;
   }
 
   &:disabled {
@@ -28,8 +35,8 @@
 }
 
 .tag__remove-button {
-  width: 14px;
-  height: 14px;
+  width: rem(14px);
+  height: rem(14px);
   margin-left: $spacing-2xs;
   border-radius: $field-border-radius;
   fill: $icon-01;

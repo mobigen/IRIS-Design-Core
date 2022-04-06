@@ -74,7 +74,13 @@
 // -------------------------
 // button-theme
 // -------------------------
-@mixin button-theme($bg-color, $font-color, $hover-bg-color, $active-bg-color, $border-color: false) {
+@mixin button-theme(
+  $bg-color,
+  $font-color,
+  $hover-bg-color,
+  $active-bg-color,
+  $border-color: false
+) {
   background-color: $bg-color;
   color: $font-color;
 
@@ -84,6 +90,10 @@
 
   &:active:not(:disabled) {
     background-color: $active-bg-color;
+  }
+
+  &:focus-visible:not(:disabled) {
+    outline: 2px solid $default-focus;
   }
 
   .svg-icon {
@@ -100,7 +110,12 @@
 }
 
 @mixin button--secondary {
-  @include button-theme($secondary, $text-04, $hover-secondary, $active-secondary);
+  @include button-theme(
+    $secondary,
+    $text-04,
+    $hover-secondary,
+    $active-secondary
+  );
 }
 
 @mixin button--tertiary {
@@ -109,8 +124,7 @@
 
 @mixin button--link {
   @include button-theme(transparent, $text-02, transparent, transparent);
-  // link 예외 사항
-  &:hover {
+  &:hover:not(:disabled) {
     color: $text-03;
 
     .svg-icon {
@@ -160,8 +174,8 @@
   @include button-theme(transparent, $text-02, transparent, transparent);
   text-decoration: underline;
   padding: 0;
-  // link 예외 사항
-  &:hover {
+  &:hover:not(:disabled),
+  &:focus-visible:not(:disabled) {
     color: $text-03;
 
     .svg-icon {
@@ -183,8 +197,7 @@
   text-decoration: underline;
   padding: 0;
 
-  // link 예외 사항
-  &:hover {
+  &:hover:not(:disabled) {
     color: $hover-primary;
 
     .svg-icon {
@@ -206,8 +219,8 @@
   padding: 0;
   text-decoration: underline;
 
-  // link 예외 사항
-  &:hover {
+  &:hover:not(:disabled),
+  &:focus-visible:not(:disabled) {
     color: $hover-negative;
 
     .svg-icon {
@@ -231,7 +244,12 @@
 // -------------------------
 // button-size
 // -------------------------
-@mixin button-size($font-size, $button-height, $icon-size, $button-width: false) {
+@mixin button-size(
+  $font-size,
+  $button-height,
+  $icon-size,
+  $button-width: false
+) {
   height: $button-height;
   font-size: $font-size;
 
@@ -360,7 +378,6 @@
 
 .button--icon.button--link.button--xs {
   @include button--icon(1px, 16px);
-  // height: 16px;
 }
 
 // underline 테마 버튼일 때 예외 사항

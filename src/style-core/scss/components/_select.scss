@@ -12,10 +12,15 @@
   .select-selector__button,
   .select-selector__input {
     border-color: $secondary;
-    box-shadow: 0px 0px 4px rgba(77, 174, 255, 0.4);
+    box-shadow: 0 0 rem(4px) rgba(77, 174, 255, 0.4);
 
     &:hover:not(:disabled) {
       border-color: $secondary;
+    }
+
+    &:focus-visible:not(:disabled) {
+      border: 2px solid $default-focus;
+      box-shadow: none;
     }
   }
 
@@ -61,7 +66,7 @@
         fill: $secondary;
       }
 
-      &:hover {
+      &:hover:not(:disabled) {
         .text-input {
           background-color: $ui-02;
           color: $secondary;
@@ -101,7 +106,7 @@
     cursor: not-allowed;
     box-shadow: none;
 
-    &:hover,
+    &:hover:not(:disabled),
     &:hover:active,
     &:hover:focus {
       box-shadow: none;
@@ -135,7 +140,7 @@
         fill: $text-05;
       }
 
-      &:hover,
+      &:hover:not(:disabled),
       &:hover:active,
       &:hover:focus {
         .text-input {
@@ -209,7 +214,12 @@
 
   &:focus {
     border-color: $secondary;
-    box-shadow: 0px 0px 4px rgba(77, 174, 255, 0.4);
+    box-shadow: 0 0 rem(4px) rgba(77, 174, 255, 0.4);
+  }
+
+  &:focus-visible:not(:disabled) {
+    border: 2px solid $default-focus;
+    box-shadow: none;
   }
 }
 
@@ -224,6 +234,11 @@
   height: 100%;
   padding-right: $spacing-xl;
   color: $text-02;
+
+  &:focus-visible:not(:disabled) {
+    border: 2px solid $default-focus;
+    box-shadow: none;
+  }
 }
 
 .select-selector__input-icon {
@@ -235,7 +250,7 @@
 }
 
 .select-selector__input-icon + .text-input {
-  padding-left: rem(35px);
+  padding-left: $spacing-xl + $spacing-2xs;
 }
 
 .select-selector__title {
@@ -255,7 +270,7 @@
   @include svg-icon-size(20px);
   position: absolute;
   top: 50%;
-  margin-top: -10px;
+  margin-top: rem(-10px);
   right: $spacing-xs;
   transform: none;
   pointer-events: none;
@@ -302,6 +317,12 @@
   background-color: $ui-02;
 }
 
+.select-container__button {
+  &:focus-visible:not(:disabled) {
+    background-color: $ui-01;
+  }
+}
+
 .select-container__subtext {
   @include font-size("12");
   color: $text-03;
@@ -309,7 +330,7 @@
 }
 
 .select-container--up {
-  box-shadow: 0 0 8px 0 $box-shadow;
+  box-shadow: 0 0 rem(8px) 0 $box-shadow;
 }
 
 // -------------------------
@@ -347,9 +368,9 @@
 
   .select-selector__icon {
     right: rem(4px);
-    width: 18px;
-    height: 18px;
-    margin-top: -8px;
+    width: rem(18px);
+    height: rem(18px);
+    margin-top: -$spacing-xs;
   }
 
   .select-container {
@@ -389,7 +410,7 @@
   .select-container {
     top: auto;
     bottom: calc(100% + 2px);
-    box-shadow: 0 0 8px 0 $box-shadow;
+    box-shadow: 0 0 rem(8px) 0 $box-shadow;
   }
 }
 
@@ -399,7 +420,7 @@
     border-color: transparent;
     box-shadow: none;
 
-    &:hover {
+    &:hover:not(:disabled) {
       background-color: $ui-01;
 
       .select-selector__title {
@@ -435,7 +456,7 @@
       box-shadow: none;
     }
 
-    &:hover {
+    &:hover:not(:disabled) {
       .text-input {
         background-color: $ui-01;
         color: $text-01;
@@ -478,7 +499,7 @@
 .select--color-picker {
   .select-selector__button {
     padding-left: $spacing-2xs;
-    padding-right: rem(28px);
+    padding-right: $spacing-lg + $spacing-2xs;
   }
 
   .color-picker__color {

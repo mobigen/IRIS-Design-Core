@@ -1,3 +1,6 @@
+// -------------------------
+// Tab
+// -------------------------
 .tab {
   display: flex;
   position: relative;
@@ -23,11 +26,25 @@
   &:hover .tab__button-text {
     color: $text-01;
   }
+
+  .tab__button {
+    &:focus-visible:not(:disabled) {
+      outline: 2px solid $default-focus;
+    }
+  }
 }
 
 .tab__item--selected {
   &:hover .tab__button-text {
     color: $primary;
+  }
+
+  .tab__button {
+    &:focus:not(:disabled) {
+      .tab__button-text {
+        color: $primary;
+      }
+    }
   }
 }
 
@@ -52,6 +69,15 @@
       color: $text-02;
     }
   }
+
+  .tab__button {
+    &:focus {
+      .tab__button-text {
+        color: $text-04;
+        opacity: 0.85;
+      }
+    }
+  }
 }
 
 .tab__button {
@@ -61,6 +87,12 @@
   width: 100%;
   background-color: transparent;
   padding: 0;
+
+  &:focus:not(:disabled) {
+    .tab__button-text {
+      color: $text-01;
+    }
+  }
 }
 
 .tab__button-text {
@@ -93,7 +125,7 @@
   background-color: $ui-02;
   width: rem(18px);
   height: rem(18px);
-  margin-left: - $spacing-xs;
+  margin-left: -$spacing-xs;
   padding: 0;
   border-radius: $field-border-radius;
   fill: $icon-01;
@@ -124,12 +156,12 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 2px;
+    height: rem(2px);
     background: $ui-04;
   }
 
   .tab__item {
-    padding-bottom: 2px;
+    padding-bottom: $spacing-3xs;
   }
 
   .tab__item--selected::after {
@@ -137,7 +169,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 2px;
+    height: rem(2px);
   }
 
   &.tab__item--selected,
@@ -161,8 +193,8 @@
 
   .tab__item--selected::after {
     top: 0;
-    right: -2px;
-    width: 2px;
+    right: rem(-2px);
+    width: rem(2px);
     height: 100%;
   }
 
@@ -190,10 +222,16 @@
     &:hover .tab__button-text {
       color: rgba($text-04, 0.85);
     }
-  }
 
-  .tab__button {
-    justify-content: center;
+    .tab__button {
+      justify-content: center;
+
+      &:focus:not(:disabled) {
+        .tab__button-text {
+          color: $text-02;
+        }
+      }
+    }
   }
 
   .tab__item--selected {
@@ -212,11 +250,28 @@
     &::after {
       display: none;
     }
+
+    .tab__button {
+      &:focus:not(:disabled) {
+        .tab__button-text {
+          color: $text-02;
+        }
+      }
+    }
   }
 
+  .tab__item--disabled {
+    .tab__button {
+      &:focus:not(:disabled) {
+        .tab__button-text {
+          color: rgba($text-04, 0.85);
+        }
+      }
+    }
+  }
 
-  &.tab--vertical .tab__item.tab__item--selected{
-  border-color: $field-border;
+  &.tab--vertical .tab__item.tab__item--selected {
+    border-color: $field-border;
   }
 
   .tab__item--selected .tab__button-text {
@@ -230,7 +285,7 @@
   }
 
   .tab__button-text {
-    margin-top: 2px;
+    margin-top: $spacing-3xs;
     color: rgba($text-04, 0.85);
   }
 
@@ -249,29 +304,29 @@
 }
 
 // tab--pagination
-.tab--pagination{
+.tab--pagination {
   margin: 0 $spacing-lg;
 }
 
-.tab__previous-button{
+.tab__previous-button {
   position: absolute;
   top: 50%;
-  left: -24px;
-  margin-top: -12px;
+  left: rem(-24px);
+  margin-top: -$spacing-sm;
 }
 
-.tab__next-button{
+.tab__next-button {
   position: absolute;
   top: 50%;
-  right: -24px;
-  margin-top: -12px;
+  right: rem(-24px);
+  margin-top: -$spacing-sm;
 }
 
-.tab--pagination .tab__bar-wrap{
+.tab--pagination .tab__bar-wrap {
   overflow: hidden;
 }
 
-.tab--pagination .tab__item{
+.tab--pagination .tab__item {
   height: rem(32px);
   flex: 0 1 auto;
 }
