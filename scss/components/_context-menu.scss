@@ -136,7 +136,7 @@
   .checkbox--indeterminate {
     .checkbox__label {
       &::after {
-        margin-top: -3px;
+        margin-top: rem(-3px);
       }
     }
   }
@@ -150,7 +150,7 @@
   .context-menu__button {
     @include stable-padding($spacing-3xs, $spacing-xs);
     height: $button-height-sm;
-    line-height: 9px;
+    line-height: rem(9px);
   }
 
   .context-menu__icon,
@@ -165,7 +165,7 @@
   .context-submenu__button {
     @include stable-padding($spacing-3xs, $spacing-xs);
     height: $button-height-sm;
-    line-height: 9px;
+    line-height: rem(9px);
   }
 
   .context-submenu__text {

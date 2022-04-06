@@ -24,7 +24,7 @@
   &:active,
   &:focus {
     border-color: $secondary;
-    box-shadow: 0 0 4px rgba($secondary, 0.65);
+    box-shadow: 0 0 rem(4px) rgba($secondary, 0.65);
   }
 
   // chrom에서 자동저장된 input의 배경컬러를 제어

@@ -1,7 +1,7 @@
 .CodeMirror {
   @include font-family("mono");
   @include font-size("12");
-  height: 480px;
+  height: rem(480px);
 }
 
 .CodeMirror pre {
