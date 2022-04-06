@@ -3162,6 +3162,11 @@
   z-index: 9998 !important;
 }
 
+// 모달 타이틀 우측에 컨텐츠가 특정 길이 이상 넘칠때 디자인 깨짐 방지 (IE 이슈로 calc 삭제 불가 최대 사이즈로 고정)
+.modal__head-title {
+  width: calc(100% - 240px);
+}
+
 // -------------------------
 // ui-resizable
 // -------------------------
@@ -3384,37 +3389,4 @@
 .tag--teal.tag--not-clickable:hover:not(:disabled) {
   background-color: #adf0f0;
   color: #007d79;
-}
-
-.alert__text {
-  max-height: rem(150px);
-  overflow-y: auto;
-}
-
-//테이블 > 시각화 옵션 폼안에 세로로 쌓이는 서브 폼이 올때 유형
-.form__v-group-item {
-  display: flex;
-  align-items: center;
-  height: rem(32px);
-}
-
-.form__v-group-title {
-  display: flex;
-  align-items: center;
-  width: rem(130px);
-  @include font-size("14");
-  color: $text-02;
-}
-
-.form__v-group-title > *:not(:last-child) {
-  margin-right: $spacing-2xs;
-}
-
-// 모달 타이틀 우측에 컨텐츠가 특정 길이 이상 넘칠때 디자인 깨짐 방지 (IE 이슈로 calc 삭제 불가 최대 사이즈로 고정)
-.modal__head-title {
-  width: calc(100% - 240px);
-}
-
-.ag-theme-default .ag-row {
-  overflow: hidden;
 }
