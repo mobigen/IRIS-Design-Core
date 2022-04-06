@@ -1,3 +1,6 @@
+// -------------------------
+// Date picker
+// -------------------------
 .date-picker {
   @include picker;
 }
@@ -111,7 +114,7 @@
 .ui-datepicker .ui-datepicker-prev,
 .ui-datepicker .ui-datepicker-next {
   position: absolute;
-  top: 10px;
+  top: rem(10px);
   width: rem(20px);
   height: rem(20px);
   cursor: pointer;
@@ -121,7 +124,7 @@
 .ui-datepicker .ui-datepicker-next::after {
   display: inline-block;
   position: absolute;
-  top: 6px;
+  top: rem(6px);
   width: rem(8px);
   height: rem(8px);
   border-color: $text-03;
@@ -143,17 +146,17 @@
   left: 0;
 }
 .ui-datepicker .ui-datepicker-prev {
-  left: 10px;
+  left: rem(10px);
 
   &:hover {
-    left: 10px;
+    left: rem(10px);
   }
 }
 .ui-datepicker .ui-datepicker-next {
-  right: 10px;
+  right: rem(10px);
 
   &:hover {
-    right: 10px;
+    right: rem(10px);
   }
 }
 .ui-datepicker .ui-datepicker-prev span,
@@ -161,9 +164,9 @@
   display: block;
   position: absolute;
   left: 50%;
-  margin-left: -8px;
+  margin-left: -$spacing-xs;
   top: 50%;
-  margin-top: -8px;
+  margin-top: -$spacing-xs;
 }
 .ui-datepicker .ui-datepicker-title {
   margin: 0 $spacing-xl;
@@ -172,7 +175,7 @@
 }
 .ui-datepicker .ui-datepicker-title select {
   @include font-size("14");
-  margin: 1px 0;
+  margin: rem(1px) 0;
 }
 .ui-datepicker select.ui-datepicker-month,
 .ui-datepicker select.ui-datepicker-year {
@@ -187,7 +190,7 @@
 .ui-datepicker th {
   @include font-weight("regular");
   height: rem(32px);
-  padding: rem(6px);
+  padding: $spacing-2xs + $spacing-3xs;
   text-align: center;
   border: 0;
   color: $text-03;
@@ -303,7 +306,7 @@ a.ui-button:active,
   position: absolute;
   top: 50%;
   right: 0;
-  left: -4px;
+  left: rem(-4px);
   z-index: 1;
   width: 121%;
   height: rem(32px);
@@ -313,12 +316,12 @@ a.ui-button:active,
 }
 
 .ui-datepicker-calendar .ui-datepicker-range:first-child::before {
-  left: 4px;
+  left: rem(4px);
   width: 100%;
 }
 
 .ui-datepicker-calendar .ui-datepicker-range:last-child::before {
-  right: 2px;
+  right: rem(2px);
   left: auto;
   width: 100%;
 }

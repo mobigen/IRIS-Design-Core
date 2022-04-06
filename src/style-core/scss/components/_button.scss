@@ -84,13 +84,16 @@
   background-color: $bg-color;
   color: $font-color;
 
-  &:hover:not(:disabled),
-  &:focus-visible:not(:disabled) {
+  &:hover:not(:disabled) {
     background-color: $hover-bg-color;
   }
 
   &:active:not(:disabled) {
     background-color: $active-bg-color;
+  }
+
+  &:focus-visible:not(:disabled) {
+    outline: 2px solid $default-focus;
   }
 
   .svg-icon {
@@ -121,8 +124,7 @@
 
 @mixin button--link {
   @include button-theme(transparent, $text-02, transparent, transparent);
-  &:hover:not(:disabled),
-  &:focus-visible:not(:disabled) {
+  &:hover:not(:disabled) {
     color: $text-03;
 
     .svg-icon {
@@ -142,8 +144,7 @@
 @mixin button--support {
   @include button-theme($ui-02, $primary, #e1eaf7, #c6d8f2, $ui-04);
   // support 예외 사항
-  &:hover:not(:disabled),
-  &:focus-visible:not(:disabled) {
+  &:hover:not(:disabled) {
     color: $primary;
 
     .svg-icon {
@@ -155,8 +156,7 @@
 @mixin button--danger {
   @include button-theme($ui-02, $negative, $negative, $active-negative, $ui-04);
   // danger 예외 사항
-  &:hover:not(:disabled),
-  &:focus-visible:not(:disabled) {
+  &:hover:not(:disabled) {
     color: $text-04;
     border-color: $negative;
 
@@ -197,8 +197,7 @@
   text-decoration: underline;
   padding: 0;
 
-  &:hover:not(:disabled),
-  &:focus-visible:not(:disabled) {
+  &:hover:not(:disabled) {
     color: $hover-primary;
 
     .svg-icon {
@@ -379,7 +378,6 @@
 
 .button--icon.button--link.button--xs {
   @include button--icon(1px, 16px);
-  // height: 16px;
 }
 
 // underline 테마 버튼일 때 예외 사항

@@ -1,3 +1,6 @@
+// -------------------------
+// Modal
+// -------------------------
 .modal {
   @include layer("pop-out");
   display: flex;
@@ -37,7 +40,7 @@
   color: $text-02;
 }
 
-.modal__head-tooltip{
+.modal__head-tooltip {
   margin-left: $spacing-3xs;
   margin-bottom: $spacing-3xs;
 }
@@ -82,7 +85,7 @@
 
 .modal__foot .button + .button,
 .modal__foot div + div,
-.modal__foot .modal__foot-main-buttons div + div{
+.modal__foot .modal__foot-main-buttons div + div {
   margin-left: $spacing-xs;
 }
 
@@ -130,7 +133,7 @@
 
 // $spacing-sm / 2 = 6px
 .modal .form__item {
-  padding: $spacing-sm * .5 0;
+  padding: $spacing-sm * 0.5 0;
 }
 
 .modal .form--lg .form__item {
@@ -143,7 +146,7 @@
 
 .modal .form__label-text {
   @include font-weight("regular");
-  letter-spacing: -1px;
+  letter-spacing: rem(-1px);
 }
 
 .modal .form__label {
@@ -159,16 +162,16 @@
   margin-top: $spacing-xs;
 }
 
-.modal .form--vertical .form__item{
-    padding: $spacing-sm 0;
-  
-    &:first-child {
-      padding-top: 0;
-    }
+.modal .form--vertical .form__item {
+  padding: $spacing-sm 0;
 
-    &:last-child {
-      padding-bottom: 0;
-    }
+  &:first-child {
+    padding-top: 0;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+  }
 }
 
 .modal .form--complex .text-input {
@@ -181,14 +184,14 @@
   padding-left: $spacing-md;
 }
 
-//modal에서 탭이 포함될때 ul에 아래 기본선 추가 
+//modal에서 탭이 포함될때 ul에 아래 기본선 추가
 .modal .tab--horizontal .tab__bar::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 2px;
+  height: rem(2px);
   background: $ui-04;
 }
 

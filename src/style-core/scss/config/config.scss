@@ -1,10 +1,6 @@
-@import 'vars';
-@import 'breakpoints';
-@import 'font-face';
-@import 'font-style';
-@import 'font-reset';
-@import 'grid-system';
-@import 'icon';
-@import 'layer';
-@import 'motion';
-@import 'spacing';
+// Config Setting
+@import "font-reset";
+@import "css-reset";
+@import "helper-mixins";
+@import "components-mixins";
+@import "svg-icon";
