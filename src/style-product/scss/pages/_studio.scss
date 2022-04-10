@@ -3099,6 +3099,14 @@
   }
 }
 
+.transform-method__itme-group {
+  margin-bottom: $spacing-3xs;
+}
+
+.transform-method .select {
+  flex: 1;
+}
+
 .code__pre {
   @include font-size("13");
   background-color: $odd-row;
