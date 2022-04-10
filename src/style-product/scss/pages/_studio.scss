@@ -366,7 +366,22 @@
 }
 
 .editor-layout-head__object-list-item--selected {
-  background-color: darken($ui-01, 3%);
+  background: rgba(77, 174, 255, 0.17);
+
+  .svg-icon {
+    fill: $primary;
+    stroke: $primary;
+  }
+
+  .button:hover:not(:disabled) .svg-icon {
+    fill: $hover-primary;
+    stroke: $hover-primary;
+  }
+
+  .button:active:not(:disabled) .svg-icon {
+    fill: $active-primary;
+    stroke: $active-primary;
+  }
 }
 
 .editor-layout-head__additinal-buttons {

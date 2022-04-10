@@ -4941,6 +4941,31 @@
                 <div class="side-panel-tab__contents tab__contents">
                   <div class="side-panel-content">
                     <div class="side-panel-content__head">
+                      <strong class="side-panel-content__head-title">기본정보</strong>
+                    </div>
+                    <div class="side-panel-content__body">
+                      <div class="form">
+                        <div class="form__list">
+                          <div class="form__item">
+                            <label class="form__label">
+                              <span class="form__label-text">유형</span></label>
+                            <div class="form__detail">
+                              <div class="form__detail-inner">라벨</div>
+                            </div>
+                          </div>
+                          <div class="form__item">
+                            <label class="form__label">
+                              <span class="form__label-text"> ID</span></label>
+                            <div class="form__detail">
+                              <div class="form__detail-inner">label-02</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="side-panel-content">
+                    <div class="side-panel-content__head">
                       <strong class="side-panel-content__head-title">토글 버튼 리스트</strong>
                     </div>
                     <div class="side-panel-content__body">
@@ -5579,13 +5604,6 @@
                     <div class="side-panel-content__body">
                       <div class="form">
                         <div class="form__list">
-                          <div class="form__item">
-                            <label class="form__label">
-                              <span class="form__label-text">오브젝트 ID</span></label>
-                            <div class="form__detail">
-                              <div class="form__detail-inner">canvas</div>
-                            </div>
-                          </div>
                           <div class="form__item">
                             <label class="form__label">
                               <span class="form__label-text">변수명</span></label>
@@ -7098,6 +7116,141 @@
                                 <div class="d-flex items-center">
                                   <!-- <span class="shadow-style"></span><span>그림자 없음</span> -->
                                   <span class="shadow-style shadow-style--right-top"></span><span>오른쪽 위</span>
+                              <td>
+                                <span class="table__icon">
+                                  <svg class="svg-icon" aria-hidden="true">
+                                    <use xlink:href="#object-chart"></use>
+                                  </svg>
+                                </span>
+                                <span class="table__subtext">object-chart</span>
+                              </td>
+                              <td>
+                                Data
+                                <br>
+                                Received
+                                <div class="table__action-buttons">
+                                  <button class="button button--icon button--link" type="button">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#select-move"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="button button--icon button--link" type="button">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                      <use xlink:href="#unlink"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+
+                              <td colspan="2" class="table__code">
+                                <textarea type="text" class="text-area h-84" readonly="readonly">
+{% if input_1 %}
+                              </textarea>
+                                <div class="text-area-wrap__foot-buttons">
+                                  <button class="button button--link button--sm ml-auto">미리보기</button>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="side-panel-content">
+                      <div class="side-panel-content__head">
+                        <!-- 테이블 상단 툴바에 검색 기능 -->
+                        <strong class="side-panel-content__head-title">테이블 있는 유형 5</strong>
+                        <button class="button button--link" type="button">
+                          <svg class="svg-icon" aria-hidden="true">
+                            <use xlink:href="#refresh"></use>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="side-panel-content__body">
+                        <div class="table-wrap">
+                          <div class="table__toolbar">
+                            <div class="text-input-group">
+                              <span class="text-input-group__icon">
+                                <svg class="svg-icon" aria-hidden="true">
+                                  <use xlink:href="#search"></use>
+                                </svg>
+                              </span>
+                              <input type="text" class="text-input" placeholder="검색어를 입력해주세요">
+                              <button class="text-input-group__clear-button">
+                                <svg class="svg-icon" aria-hidden="true">
+                                  <use xlink:href="#close"></use>
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                          <table class="table table--secondary">
+                            <colgroup>
+                              <col width="140">
+                              <col>
+                            </colgroup>
+                            <thead>
+                              <tr>
+                                <th>이름</th>
+                                <th>구분</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>히트맵</td>
+                                <td>고급 시각화</td>
+                              </tr>
+                              <tr>
+                                <td>미인증사용자_중복시간과 멤버예시</td>
+                                <td>검색</td>
+                              </tr>
+                              <tr>
+                                <td>철도청_예측_pi_pm_5m</td>
+                                <td>피벗</td>
+                              </tr>
+                              <tr>
+                                <td>test_timediff</td>
+                                <td>고급 시각화</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <div class="table__footbar">
+                            <div class="toggle-switch toggle-switch--sm">
+                              <label for="toggleSwitch1" class="toggle-switch__label">label</label>
+                              <button id="toggleSwitch1" class="toggle-switch__switch" type="button">
+                                <span class="toggle-switch__handle">
+                                  <span class="ir-pm"></span>
+                                </span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="side-panel-content">
+                      <div class="side-panel-content__head">
+                        <strong class="side-panel-content__head-title">테이블이 있는 유형 6</strong>
+                      </div>
+                      <div class="side-panel-content__body">
+                        <table class="table table--secondary table--horizontal table--description">
+                          <tbody>
+                            <tr>
+                              <th>행 번호</th>
+                              <td>
+                                <span class="table__icon">
+                                  <svg class="svg-icon">
+                                    <use xlink:href="#write"></use>
+                                  </svg>
+                                </span>
+                                미표시
+                              </td>
+                            </tr>
+                            <tr>
+                              <th>미리설정</th>
+                              <td>
+                                <div class="d-flex items-center">
+                                  <!-- <span class="shadow-style"></span><span>그림자 없음</span> -->
+                                  <span class="shadow-style shadow-style--right-top"></span><span>오른쪽 위</span>
                                 </div>
                               </td>
                             </tr>
@@ -7513,6 +7666,151 @@
                             </button>
                           </div>
                         </div>
+                        <!-- //선 종류 -->
+                      </div>
+                    </div>
+                    <div class="side-panel-content">
+                      <div class="side-panel-content__head">
+                        <strong class="side-panel-content__head-title">인풋 유형</strong>
+                      </div>
+                      <div class="side-panel-content__body">
+                        <div class="form">
+                          <div class="form__list">
+                            <div class="form__item">
+                              <div class="h-group">
+                                <input type="text" class="text-input" placeholder="경도를 입력해주세요.">
+                                <button class="button button--tertiary" title="적용">적용</button>
+                              </div>
+                            </div>
+                            <!-- validation 체크 -->
+                            <div class="notification-message notification-message--inline notification-message--error">
+                              <svg class="notification-message__icon svg-icon">
+                                <use xlink:href="#issue-fill"></use>
+                              </svg>
+                              <span class="notification-message__text">Notification Message</span>
+                            </div>
+                            <!-- //validation 체크 -->
+                            <div class="form__item">
+                              <label class="form__label">
+                                <span class="form__label-text">길이</span></label>
+                              <div class="form__detail">
+                                <div class="h-group">
+                                  <input type="text" class="text-input">
+                                  <span class="text-input-wrap__suffix">px</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form__item">
+                              <label class="form__label">
+                                <span class="form__label-text">X</span>
+                              </label>
+                              <div class="form__detail">
+                                <input type="text" class="text-input">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="side-panel-content">
+                      <div class="side-panel-content__head">
+                        <strong class="side-panel-content__head-title">세로로 쌓이는 유형</strong>
+                      </div>
+                      <div class="side-panel-content__body">
+                        <div class="row">
+                          <div class="col-12">
+                            <div class="checkboxs">
+                              <div class="checkbox">
+                                <input id="check-01" type="checkbox" class="checkbox__input" value="데이터모델">
+                                <label for="check-01" class="checkbox__label">데이터모델</label>
+                              </div>
+                              <div class="checkbox">
+                                <input id="check-02" type="checkbox" class="checkbox__input" value="데이터모델뷰">
+                                <label for="check-02" class="checkbox__label">데이터모델뷰</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-12">
+                            <div class="select">
+                              <div class="select-selector">
+                                <button class="select-selector__button" type="button">
+                                  <span class="select-selector__title">데이터 모델</span>
+                                  <svg class="svg-icon select-selector__icon">
+                                    <use xlink:href="#chevron-down-medium"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                              <div class="select-container">
+                                <ul class="select-container__list">
+                                  <li class="select-container__item select-container__item--selected">
+                                    <button class="select-container__button" type="button">
+                                      <svg class="svg-icon select-container__icon" aria-hidden="true">
+                                        <use xlink:href="#link"></use>
+                                      </svg>
+                                      <span class="select-container__text">데이터 모델</span>
+                                    </button>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-12">
+                            <div class="checkbox">
+                              <input id="check-01" type="checkbox" class="checkbox__input" value="마지막 갱신 시간 표시">
+                              <label for="check-01" class="checkbox__label">마지막 갱신 시간 표시</label>
+                            </div>
+                            <div class="checkbox">
+                              <input id="check-02" type="checkbox" class="checkbox__input" value="다음 갱신까지 남은 시간 표시">
+                              <label for="check-02" class="checkbox__label">다음 갱신까지 남은 시간 표시</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="h-group">
+                            <div class="text-input-wrap">
+                              <input type="number" class="text-input" max="60" min="0" step="1" value="1">
+                              <span class="text-input-wrap__suffix">초</span>
+                            </div>
+                            <div class="select">
+                              <div class="select-selector">
+                                <button class="select-selector__button" type="button">
+                                  <span class="select-selector__title">초</span>
+                                  <svg class="svg-icon select-selector__icon">
+                                    <use xlink:href="#chevron-down-medium"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                              <div class="select-container">
+                                <ul class="select-container__list">
+                                  <li class="select-container__item">
+                                    <button class="select-container__button" type="button">
+                                      <span class="select-container__text">시</span>
+                                    </button>
+                                  </li>
+                                  <li class="select-container__item">
+                                    <button class="select-container__button" type="button">
+                                      <span class="select-container__text">분</span>
+                                    </button>
+                                  </li>
+                                  <li class="select-container__item select-container__item--selected">
+                                    <button class="select-container__button" type="button">
+                                      <span class="select-container__text">초</span>
+                                    </button>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <button class="button button--tertiary button--icon">
+                              <svg class="svg-icon" aria-hidden="true">
+                                <use xlink:href="#plus"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
                       </div>
                     </div>
                     <div class="side-panel-content">
@@ -7562,8 +7860,7 @@
                                 <span class="form__label-text">가로</span>
                               </label>
                               <div class="form__detail">
-                                <div class="form__detail-inner"><textarea type="text" class="text-area"
-                                    placeholder="placeholder text"></textarea></div>
+                                <div class="form__detail-inner"><textarea type="text" class="text-area" placeholder="placeholder text"></textarea></div>
                               </div>
                             </div>
                           </div>
@@ -7606,13 +7903,11 @@
                           <div class="col-12">
                             <div class="radios">
                               <div class="radio">
-                                <input type="radio" id="select-time" name="radio-group" class="radio__input"
-                                  value="label">
+                                <input type="radio" id="select-time" name="radio-group" class="radio__input" value="label">
                                 <label for="select-time" class="radio__label">시간 선택</label>
                               </div>
                               <div class="radio">
-                                <input type="radio" id="conect-object" name="radio-group" class="radio__input"
-                                  value="label">
+                                <input type="radio" id="conect-object" name="radio-group" class="radio__input" value="label">
                                 <label for="conect-object" class="radio__label">객체 연결</label>
                               </div>
                             </div>
@@ -7633,8 +7928,7 @@
                                 <span class="form__label-text">시작 시간</span>
                               </label>
                               <div class="form__detail">
-                                <div class="form__detail-inner"><textarea type="text" class="text-area"
-                                    placeholder="placeholder text"></textarea></div>
+                                <div class="form__detail-inner"><textarea type="text" class="text-area" placeholder="placeholder text"></textarea></div>
                               </div>
                             </div>
                             <div class="form__item">
