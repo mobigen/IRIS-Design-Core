@@ -63,6 +63,8 @@
   word-break: keep-all;
   word-wrap: break-word;
   white-space: normal;
+  max-height: rem(150px);
+  overflow-y: auto;
 }
 
 // -------------------------
