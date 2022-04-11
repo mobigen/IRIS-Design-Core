@@ -987,6 +987,7 @@ input[type="radio"] {
     border-width: 0; }*/
 .ag-theme-default .ag-row {
   border-bottom: 1px solid transparent;
+  overflow: hidden;
 }
 
 /*.ag-theme-default .ag-row:not(.ag-row-first) {
