@@ -3145,7 +3145,14 @@
   }
 
   .button--underline {
-    &:hover,
+    &:hover:not(disabled) {
+      color: $ui-02;
+      opacity: 0.8;
+
+      .svg-icon {
+        fill: $ui-02;
+      }
+    }
     &:active,
     &:focus {
       color: $ui-02;
@@ -3160,12 +3167,6 @@
 
     .svg-icon {
       fill: $ui-02;
-
-      &:hover,
-      &:active,
-      &:focus {
-        fill: $ui-02;
-      }
     }
   }
 }
