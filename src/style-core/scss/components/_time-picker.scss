@@ -3,9 +3,6 @@
 // -------------------------
 .time-picker {
   @include picker;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 // dropdown container
