@@ -113,8 +113,6 @@
   }
 }
 
-// popover - 기존 tooltip UI와 다른 유형의 tooltip
-
 .popover.tooltip {
   padding: $spacing-2xs;
   min-width: rem(380px);
@@ -131,7 +129,68 @@
   border-color: darken($ui-01, 8%);
 }
 
+// v-popover
+.v-popover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: -8px;
+  top: 50%;
+  transform: translateY(-52%);
+
+  .trigger {
+    padding: $spacing-xs;
+  }
+}
+
 .popover {
+  .tooltip-arrow {
+    background-color: $text-03 !important;
+  }
+
+  &.tooltip {
+    background-color: $text-03 !important;
+    padding: $spacing-sm !important;
+    min-width: 0 !important;
+    transition-duration: $duration-fast-02;
+
+    .tooltip-popover__text {
+      @include font-size("13");
+      @include line-height("body");
+      color: $text-04;
+      white-space: nowrap;
+    }
+
+    .tooltip-popover__button .button {
+      color: $text-04;
+      margin-top: $spacing-xs;
+
+      .svg-icon {
+        fill: $text-04;
+      }
+
+      &:hover:not(:disabled),
+      &:focus-visible:not(:disabled) {
+        color: $text-04;
+        opacity: 0.8;
+
+        .svg-icon {
+          fill: $text-04;
+          opacity: 0.8;
+        }
+      }
+
+      &:active {
+        color: darken($text-04, 0.25);
+
+        .svg-icon {
+          fill: darken($text-04, 0.25);
+        }
+      }
+    }
+  }
+
   // Tooltip 위로 위치
   .tooltip--top {
     margin-bottom: $spacing-xs + $spacing-3xs;
