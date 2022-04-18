@@ -1,0 +1,33 @@
+.error-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #f8f8f8;
+}
+
+.error-result {
+  text-align: center;
+  margin-top: - $layout-md;
+}
+
+.error-result__image {
+  width: rem(320px);
+  height: rem(170px);
+  background: url("#{$img-path}/common/img-error.png");
+}
+
+.error-result__number {
+  @include font-size("72");
+  @include font-weight("bold");
+  @include line-height("title");
+  margin-top: $spacing-lg;
+  color: $text-01;
+}
+
+.error-result__message {
+  @include font-size("24");
+  @include font-weight("medium");
+  margin-top: $spacing-md;
+  color: $text-02;
+}

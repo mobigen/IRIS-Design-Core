@@ -1,0 +1,414 @@
+.side-panel {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.side-panel__component-name-container {
+  padding: $spacing-xs $spacing-sm;
+  border-bottom: 1px solid $ui-04;
+  // background-color: $ui-02;
+}
+
+.side-panel__component-name {
+  @include text-overflow;
+  @include line-height("title");
+  @include font-size("13");
+  color: $text-03;
+}
+
+.side-panel__toggle {
+  width: 0;
+  opacity: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  transition: all $duration-fast-01 motion(standard, productive);
+
+  > * {
+    display: none;
+    clip: rect(1px, 1px, 1px, 1px);
+    opacity: 0;
+    height: 0;
+  }
+}
+
+.side-panel__toggle--right {
+  right: 0;
+}
+
+.side-panel__toggle--open {
+  width: $editor-layout-body__side-penal;
+  opacity: 1;
+
+  > * {
+    display: flex;
+    height: auto;
+    clip: auto;
+    opacity: 1;
+  }
+
+  + .side-panel__toggle-button {
+    display: none;
+    right: 0;
+  }
+
+  .side-panel__toggle-button {
+    right: $editor-layout-body__side-penal;
+    z-index: z(overlay);
+  }
+}
+
+.side-panel__toggle-button {
+  @include button;
+  @include button--tertiary;
+  position: absolute;
+  top: rem(78px);
+  right: 0;
+  width: rem(20px);
+  height: rem(48px);
+  padding: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.side-panel-tab {
+  height: 100%;
+  overflow: hidden;
+}
+
+.side-panel-tab__head {
+  position: relative;
+  background-color: $ui-04;
+}
+
+.side-panel-tab__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+  overflow: auto;
+  padding: $layout-3xs * 0.5 $layout-3xs $layout-2xs;
+  letter-spacing: rem(-0.3px);
+}
+
+// tab의 content가 뜨는 영역을 한번 그룹핑하는 block.
+.side-panel-tab__contents {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.side-panel::before,
+.side-panel::after {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: rem(24px);
+  content: "";
+  z-index: 1;
+}
+
+.side-panel::before {
+  top: calc(
+    40px + 32px
+  ); // side-panel__head의 높이 + side-panel__component-name-container 높이
+  background-image: linear-gradient(
+    0deg,
+    rgba($ui-01, 0) 0,
+    rgba($ui-01, 0.7) 30%,
+    $ui-01
+  );
+}
+
+.side-panel::after {
+  bottom: 0;
+  background-image: linear-gradient(
+    180deg,
+    rgba($ui-01, 0) 0,
+    rgba($ui-01, 0.7) 30%,
+    $ui-01
+  );
+}
+
+.side-panel--left::before,
+.side-panel--left::after {
+  display: none;
+}
+
+.side-panel-content {
+  flex: 1 0 auto;
+  position: relative;
+}
+
+.side-panel-content:not(:first-child) .side-panel-content__head::before {
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: rem(1px);
+  border-bottom: 1px solid $ui-04;
+  content: "";
+}
+
+.side-panel-content__head {
+  display: flex;
+  align-items: center;
+  margin-bottom: $spacing-2xs;
+  padding-top: $spacing-md;
+}
+
+.side-panel-content__head .button--link {
+  padding: 0;
+  margin-left: $spacing-2xs;
+}
+
+.side-panel-content__head-title {
+  @include text-overflow;
+  @include font-weight("medium");
+  @include line-height("heading");
+  flex-grow: 1;
+  color: $text-02;
+}
+
+.side-panel-content__body {
+  padding-bottom: $spacing-md;
+}
+
+.side-panel--hide .side-panel {
+  display: none;
+}
+
+.side-panel-tab__head-action-buttons {
+  align-self: center;
+  margin-left: auto;
+  margin-right: $spacing-xs;
+}
+
+// side-panel 내 요소 재선언
+.side-panel-tab__body {
+  .form {
+    width: 100%;
+  }
+
+  .form__list {
+    width: 100%;
+  }
+
+  .form__item {
+    padding: $spacing-3xs 0;
+    min-height: rem(32px);
+  }
+
+  .form__label {
+    @include make-col(4);
+  }
+
+  .form__label-text,
+  .dynamic-form__form-label-text {
+    @include font-weight("regular");
+    @include font-size("13");
+  }
+
+  .form__label-subtext {
+    @include font-size("12");
+    @include line-height("body");
+  }
+
+  .form__detail {
+    @include make-col(8);
+  }
+
+  .form--vertical {
+    .form__label {
+      width: 100%;
+    }
+    .form__detail {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+
+  .table__toolbar {
+    .text-input-group {
+      width: 100%;
+      margin-bottom: $spacing-2xs;
+    }
+  }
+
+  .row {
+    margin-bottom: $spacing-2xs;
+    width: 100%;
+  }
+
+  .h-group {
+    width: 100%;
+  }
+
+  .accordion {
+    border-color: $ui-04;
+  }
+
+  .accordion__head {
+    background-color: darken($hover-row, 1%);
+    border-bottom-color: $ui-04;
+  }
+
+  .accordion__body {
+    border-bottom-color: $ui-04;
+  }
+}
+
+.side-panel-tab__body--has-play-button {
+  padding-bottom: $layout-lg;
+}
+
+.side-panel-tab__play-button {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  margin-left: -$spacing-sm;
+  height: rem(56px);
+  width: rem(300px);
+  padding: $spacing-sm;
+  background-color: $ui-02;
+  border-top: 1px solid $ui-04;
+  z-index: z("layer");
+}
+
+// side-panel--left 일 때 스타일 재선언
+.side-panel--left {
+  .tab__bar {
+    background-color: $ui-03;
+    border-right-width: 0;
+  }
+
+  .tab__item {
+    padding-right: 0;
+    padding-left: 0;
+    height: rem(48px);
+    background-color: transparent;
+    border-right: 0;
+
+    &:hover {
+      background-color: lighten($ui-03, 3%);
+    }
+  }
+
+  .tab__item--selected {
+    background-color: $ui-01;
+    border-left: 2px solid;
+
+    &:hover {
+      background-color: $ui-01;
+
+      .tab__button .svg-icon {
+        fill: $text-03;
+      }
+    }
+
+    &:after {
+      left: 0;
+      width: rem(3px);
+    }
+
+    .tab__button .svg-icon {
+      fill: $text-02;
+    }
+  }
+
+  .tab__button {
+    padding-right: $spacing-sm;
+    padding-left: $spacing-sm;
+
+    .svg-icon {
+      @include svg-icon-size(24px);
+      fill: $text-04;
+    }
+  }
+
+  .side-panel-tab__body {
+    padding: 0;
+    height: 100%;
+    width: rem(274px);
+    min-width: rem(274px); // IE 크로스브라우징을 위한 스타일
+  }
+
+  .side-panel-tab__contents {
+    height: 100%;
+  }
+
+  .side-panel-tab__tools-accordion {
+    border-width: 1px 0 0 0;
+
+    .accordion__head {
+      background-color: $ui-01;
+    }
+
+    .accordion-horizontal__list {
+      padding: $spacing-2xs;
+    }
+
+    .accordion-horizontal__text {
+      @include font-size("13");
+      letter-spacing: rem(-0.5px);
+    }
+
+    .accordion-horizontal__text--sm {
+      @include font-size("11");
+      letter-spacing: rem(-1px);
+    }
+  }
+
+  .accordion__item:last-child .accordion__body {
+    border-bottom-width: 1px;
+  }
+}
+
+.side-pane-tab__tools {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.side-panel-tab__tools-filter {
+  display: flex;
+  padding: $spacing-xs;
+  background-color: $ui-01;
+
+  .button--icon {
+    margin-left: $spacing-2xs;
+  }
+
+  .text-input-group {
+    width: 100%;
+  }
+}
+
+.side-panel-tab__tools-accordion {
+  flex-grow: 1;
+  height: 100%;
+  overflow: auto;
+}
+
+//----------------------------------------------
+// side-panel 추가된 Block Element
+// ---------------------------------------------
+.side-panel__top-bar {
+  display: flex;
+  height: rem(56px);
+  min-height: rem(56px);
+  padding: 0 $spacing-sm;
+  align-items: center;
+  background-color: $ui-01;
+}
+
+.side-panel__action-buttons {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+
+  div + div {
+    margin-left: $spacing-2xs;
+  }
+}
