@@ -1,0 +1,112 @@
+//-------------------------------------------
+//  목록화면 Modal UI (IMA, ISB, Topology)
+// ------------------------------------------
+//-------------------------------------------
+//  내보내기 링크 모달
+// ------------------------------------------
+.form__label-action-items {
+  margin-left: auto;
+}
+
+.form__reference-text {
+  @include font-size("14");
+  display: block;
+  margin-top: $spacing-xs;
+  color: $text-05;
+}
+
+.empty-link-group {
+  width: 100%;
+  min-height: rem(80px);
+  padding: $spacing-xs;
+  border: 1px solid $ui-04;
+}
+
+.empty-link-group .notification-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: rem(62px);
+}
+
+.generate-link-group .text-area {
+  text-decoration: underline;
+}
+
+.url-group {
+  min-height: rem(80px);
+  max-height: rem(235px);
+  overflow-y: auto;
+  background-color: $ui-02;
+  border: 1px solid $ui-04;
+  border-radius: $button-border-radius;
+  padding: $spacing-xs;
+}
+
+.url-group--disabled {
+  cursor: not-allowed;
+  user-select: none;
+  .url-group__text {
+    color: $text-02;
+  }
+  .url-group__url {
+    color: $text-02;
+    cursor: not-allowed !important;
+  }
+}
+
+.url-group__item {
+  + .url-group__item {
+    margin-top: $spacing-md;
+  }
+}
+
+.url-group__text {
+  @include font-size("14");
+  display: block;
+  color: $text-01;
+}
+
+.url-group__url {
+  @include line-height("title");
+  @include font-size("14");
+  display: block;
+  margin-top: $spacing-2xs;
+  color: $primary;
+  word-break: break-all;
+  white-space: normal;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+//-------------------------------------------
+//  카테고리 관리 모달
+// ------------------------------------------
+.list.list-category-dialog {
+  height: rem(280px);
+  overflow-y: auto;
+}
+
+.list__item-inner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.list__item-inner .h-group {
+  padding: $spacing-2xs $spacing-xs;
+}
+
+.list__item-inner .h-group .text-input-group {
+  flex: 1px;
+}
+
+.list__item--no-data {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  &:hover {
+    background-color: $ui-02;
+  }
+}
