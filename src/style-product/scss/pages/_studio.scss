@@ -1590,7 +1590,10 @@
 }
 
 // image
-.object-image--inserted,
+.object-image--inserted {
+  border: 0;
+}
+
 .canvas-object--active.object-image--inserted,
 .object-image--inserted:hover:not([preview]) {
   background: none;
