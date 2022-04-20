@@ -1590,14 +1590,11 @@
 }
 
 // image
-.object-image--inserted {
-  border: 0;
-}
-
+.object-image--inserted,
 .canvas-object--active.object-image--inserted,
 .object-image--inserted:hover:not([preview]) {
   background: none;
-  border: 1px solid transparent;
+  border: 0;
 }
 
 // line
