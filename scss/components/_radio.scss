@@ -60,8 +60,8 @@
   position: absolute;
   left: rem(7px);
   top: rem(8px);
-  width: 7px;
-  height: 7px;
+  width: rem(7px);
+  height: rem(7px);
   border-radius: 50%;
   background-color: $text-04;
 }
@@ -127,7 +127,7 @@
     height: rem(20px);
     margin: $spacing-3xs;
     top: rem(2px);
-    border-width: rem(2px);
+    border-width: 2px;
   }
 
   .radio__label::after {
