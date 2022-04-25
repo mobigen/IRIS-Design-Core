@@ -1,5 +1,9 @@
-# IRIS-Design-Guide
+# IRIS-Design-Layout
 
-[IRIS-Design-Core](https://github.com/mobigen/IRIS-Design-Core/tree/main) 가이드를 확인할 수 있는 저장소
+디자인 레이아웃 저장소
 
-작업 설정은 IRIS-Design-Product 저장소의 [문서](https://github.com/mobigen/IRIS-Design-Product/blob/main/README.md)에서 확인해주세요 😉
+## 작업 방법
+
+IRIS-Design-Layout 에는 HTML view가 없습니다.
+
+IMA / Studio / Topology에서 사용되고 있는 목록 화면 / 편집 화면 레이아웃 스타일 코드가 담겨있습니다.
