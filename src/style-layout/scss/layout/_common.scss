@@ -1,0 +1,25 @@
+//-------------------------------------------
+//  iframe 감싸는 공통 클래스 (IDP, ISB, IMA, Topology)
+// ------------------------------------------
+.service-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.service-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+
+.service-container section {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
