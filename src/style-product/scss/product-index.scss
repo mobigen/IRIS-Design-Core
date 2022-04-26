@@ -4,6 +4,7 @@ $font-path: "/src/style-core/fonts/";
 $img-path: "/src/style-core/images";
 
 @import "/src/style-core/scss/core-index.scss";
+@import "/src/style-layout/scss/layout-index.scss";
 
 // 1. core와 product scss를 분리해서 import 하는 방법
 // ----------------------------
