@@ -38,7 +38,7 @@
 }
 
 .alert__icon {
-  @include svg-icon-size(rem(24px));
+  @include svg-icon-size(24px);
   flex-shrink: 0;
   margin-right: $spacing-sm;
   margin-left: -$spacing-xs;
@@ -63,6 +63,8 @@
   word-break: keep-all;
   word-wrap: break-word;
   white-space: normal;
+  max-height: rem(150px);
+  overflow-y: auto;
 }
 
 // -------------------------

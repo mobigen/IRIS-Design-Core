@@ -302,7 +302,7 @@
   display: none;
   z-index: z("dropdown");
   position: absolute;
-  top: calc(100% + rem(2px));
+  top: calc(100% + 2px);
   // left: 0;
   width: 100%;
   max-height: rem(320px);
@@ -409,7 +409,7 @@
 .select--up {
   .select-container {
     top: auto;
-    bottom: calc(100% + rem(2px));
+    bottom: calc(100% + 2px);
     box-shadow: 0 0 rem(8px) 0 $box-shadow;
   }
 }

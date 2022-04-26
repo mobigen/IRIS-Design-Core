@@ -3,9 +3,10 @@
 @import "vars";
 
 // Base Mixins
-@import "box-shadow";
+@import "font-face";
 @import "font-style";
-@import "motion";
-@import "z-index";
 @import "breakpoints";
 @import "grid-system";
+@import "box-shadow";
+@import "z-index";
+@import "motion";

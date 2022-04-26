@@ -46,15 +46,6 @@
   background-color: #fff09c;
 }
 
-.svg-icon {
-  @include svg-icon-size(rem(18px));
-  display: inline-block;
-  vertical-align: middle;
-  flex-shrink: 0;
-  fill: $icon-01;
-  color: $icon-01;
-}
-
 .img-icon {
   display: flex;
   flex-shrink: 0;
@@ -71,7 +62,7 @@
   height: rem(16px);
   margin: 0 $spacing-xs;
   border-left: 1px solid $ui-04;
-  clip: rect(rem(1px), rem(1px), rem(1px), rem(1px));
+  clip: rect(1px, 1px, 1px, 1px);
 }
 
 .division-line-horizontal {
@@ -82,7 +73,7 @@
   height: rem(1px);
   margin: $spacing-3xs 0;
   border-bottom: 1px solid $ui-04;
-  clip: rect(rem(1px), rem(1px), rem(1px), rem(1px));
+  clip: rect(1px, 1px, 1px, 1px);
 }
 
 .v-group {
