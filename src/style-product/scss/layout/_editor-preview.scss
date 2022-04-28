@@ -44,6 +44,10 @@
   height: 100%;
 }
 
+.editor-preview-layout--responsive .editor-preview-layout__preview-wrap {
+  height: auto;
+}
+
 .editor-preview-layout__preview {
   position: relative;
   margin: 0 auto;
