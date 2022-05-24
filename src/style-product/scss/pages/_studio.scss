@@ -8,11 +8,11 @@
 }
 
 // area
-.object-area .chart-container.chart-bg-none {
+.chart-container.chart-bg-none {
   background-color: transparent;
 }
 
-.object-area {
+.object-motion {
   // studio 모션 차트 옵션 설정 스타일
   .motion-chart-btn-group {
     display: flex;
@@ -181,7 +181,7 @@
 }
 
 // grid 차트 체크박스 커스텀
-.canvas-object.object-area {
+.canvas-object.object-table {
   .ag-theme-default .ag-checkbox-input-wrapper {
     line-height: 20px;
     width: 20px;
@@ -275,13 +275,16 @@
 }
 
 .editor-layout-head__title {
-  @include line-height("heading");
-  max-width: rem(400px);
+  max-width: 100%;
 }
 
 .editor-layout-head__title-text {
   @include text-overflow;
   @include font-weight("medium");
+}
+
+.editor-layout-head__title-input {
+  width: rem(400px);
 }
 
 .editor-layout-head__title-button {
@@ -307,10 +310,28 @@
   flex-shrink: 0;
 }
 
-.editor-layout-head__object-list {
+.editor-layout-head__object-group {
+  position: relative;
   display: flex;
-  flex: 1;
+  align-items: center;
+  width: 100%;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+.editor-layout-head__object-list-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
   margin-left: $spacing-xs;
+}
+
+.editor-layout-head__object-list {
+  position: absolute;
+  display: flex;
+  white-space: nowrap;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 .editor-layout-head__object-list-item {
@@ -323,8 +344,44 @@
   }
 }
 
+.object-navigation {
+  display: flex;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  background-color: $ui-02;
+}
+
+.object-navigation .button {
+  // 시인성 문제로 아이콘 두께 조절
+  .svg-icon {
+    stroke: $link;
+    stroke-width: 1.5;
+    stroke-opacity: 0.4;
+  }
+}
+
+.object-navigation__button-next:last-child {
+  margin-left: -1px;
+}
+
 .editor-layout-head__object-list-item--selected {
-  background-color: darken($ui-01, 3%);
+  background: rgba(77, 174, 255, 0.17);
+
+  .svg-icon {
+    fill: $primary;
+    stroke: $primary;
+  }
+
+  .button:hover:not(:disabled) .svg-icon {
+    fill: $hover-primary;
+    stroke: $hover-primary;
+  }
+
+  .button:active:not(:disabled) .svg-icon {
+    fill: $active-primary;
+    stroke: $active-primary;
+  }
 }
 
 .editor-layout-head__additinal-buttons {
@@ -333,6 +390,7 @@
 
 .editor-layout-head__responsive {
   margin-right: $spacing-sm;
+  margin-left: $spacing-xl;
 }
 
 .editor-layout-body {
@@ -443,12 +501,17 @@
   bottom: auto;
   width: 100%;
   height: 100%;
-  z-index: z("float");
+  z-index: 6;
   overflow: hidden;
 }
 
+.object-interactive-button {
+  position: absolute;
+  top: 0;
+  right: -38px;
+}
+
 // 기본 박스 스타일들
-.object-area,
 .object-image,
 .object-renew,
 .object-map,
@@ -463,14 +526,6 @@
 
   &.canvas-object--active {
     background-color: $ui-01;
-  }
-}
-
-.object-area--bg-none {
-  background: none;
-
-  &:hover {
-    background: none;
   }
 }
 
@@ -495,7 +550,7 @@
 .object-tag:not([preview]),
 .object-url:not([preview]),
 .object-check-and-radio:not([preview]),
-.object-slider:not([preview]), 
+.object-slider:not([preview]),
 .object-line:not([preview]) {
   border: 1px dashed $ui-04;
 }
@@ -829,7 +884,7 @@
 }
 
 // sankey
-.object-sankey{
+.object-sankey {
   background: $odd-row sankey(77889a) no-repeat center;
 
   &:hover:not([preview]) {
@@ -1033,6 +1088,14 @@
   }
 }
 
+.object-area--bg-none {
+  background: none !important;
+
+  &:hover {
+    background: none !important;
+  }
+}
+
 .growth-rate {
   display: flex;
   flex-direction: row;
@@ -1118,7 +1181,7 @@
 }
 
 .object-combo-box .select,
-.object-combo-box .select-selector{
+.object-combo-box .select-selector {
   width: 100%;
   height: 100%;
 }
@@ -1531,7 +1594,7 @@
 .canvas-object--active.object-image--inserted,
 .object-image--inserted:hover:not([preview]) {
   background: none;
-  border: 1px solid transparent;
+  border: 0;
 }
 
 // line
@@ -1541,7 +1604,6 @@
 }
 
 .line--vertical {
-
   .vertical-group {
     height: 100%;
     border-top: 0;
@@ -1550,7 +1612,7 @@
   .border-style--thickness-1 {
     border-left-width: 1px;
   }
-  
+
   .border-style--thickness-2 {
     border-left-width: 2px;
   }
@@ -1650,7 +1712,7 @@
     .tab__button-text.text-italic {
       padding-right: rem(5px);
     }
-    
+
     .tab__item--selected {
       background-color: $ui-03;
 
@@ -1869,7 +1931,7 @@
 .select-container {
   max-height: rem(330px);
 }
-  
+
 .dynamic-form__list::-webkit-scrollbar {
   -webkit-appearance: none;
 }
@@ -1888,12 +1950,12 @@
   background-color: #c1c1c1;
 }
 
-.dynamic-form__list::-webkit-scrollbar-track { 
-  background-color: #fafafa; 
-  border-radius: 8px; 
+.dynamic-form__list::-webkit-scrollbar-track {
+  background-color: #fafafa;
+  border-radius: 8px;
   border-left: 1px solid #ededed;
   border-right: 1px solid #ededed;
-} 
+}
 
 .dynamic-form__list::-webkit-scrollbar-thumb:hover {
   background-color: #7d7d7d;
@@ -1986,6 +2048,21 @@
   z-index: 4;
   pointer-events: none;
   margin: -1px;
+}
+
+.canvas-object--interactive:not([preview])::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid $secondary;
+  border-radius: 0;
+  z-index: 4;
+  pointer-events: none;
+  margin: -1px;
+  box-shadow: 0px 0px 4px rgba(77, 174, 255, 0.4);
 }
 
 .canvas-object--connected::after,
@@ -2191,11 +2268,11 @@
   border-radius: 2px;
 }
 
-// 차트 > 선 스타일 옵션 추가 
+// 차트 > 선 스타일 옵션 추가
 
 .border-option {
   width: 100%;
-  
+
   &__svg-line {
     width: 100%;
     height: 100%;
@@ -2225,8 +2302,8 @@
 
   .select--disabled {
     .border-style {
-    stroke: $text-05;
-    } 
+      stroke: $text-05;
+    }
   }
 
   .border-style {
@@ -2237,23 +2314,23 @@
   .border-style--thickness-1 {
     stroke-width: 1;
   }
-  
+
   .border-style--thickness-2 {
     stroke-width: 2;
   }
-  
+
   .border-style--thickness-3 {
     stroke-width: 3;
   }
-  
+
   .border-style--thickness-4 {
     stroke-width: 4;
   }
-  
+
   .border-style--thickness-5 {
     stroke-width: 5;
   }
-  
+
   .border-style--thickness-6 {
     stroke-width: 6;
   }
@@ -2385,6 +2462,11 @@
   margin-right: $spacing-2xs;
 }
 
+.data-color-select__preview .data-color-select__preview-item {
+  width: 50%;
+  height: 50%;
+}
+
 .data-color-select__preview-list {
   display: flex;
   margin-right: $spacing-2xs;
@@ -2398,8 +2480,8 @@
 
 .data-color-select__preview-item {
   display: inline-flex;
-  width: 50%;
-  height: 50%;
+  width: 11px;
+  height: 11px;
   flex-shrink: 0;
 }
 
@@ -2985,6 +3067,46 @@
   }
 }
 
+.title-type__body {
+  .form__item {
+    padding: $spacing-md 0;
+  }
+
+  .form__item:last-child {
+    padding: $spacing-md 0 0 0;
+  }
+}
+
+.form--dsl {
+  .form__item-head {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .form__label-group {
+    display: flex;
+    align-items: center;
+    flex: 1;
+
+    .form__label {
+      width: unset;
+    }
+
+    .button {
+      padding: 0 $spacing-2xs;
+    }
+  }
+}
+
+.transform-method__itme-group {
+  margin-bottom: $spacing-3xs;
+}
+
+.transform-method .select {
+  flex: 1;
+}
+
 .code__pre {
   @include font-size("13");
   background-color: $odd-row;
@@ -3016,6 +3138,39 @@
   margin-bottom: $spacing-2xs;
 }
 
+// tooltip에 더보기 버튼이 올때 스타일 처리
+.tooltip-studio--help {
+  & .button:last-child {
+    margin-top: $spacing-xs;
+  }
+
+  .button--underline {
+    &:hover:not(disabled) {
+      color: $ui-02;
+      opacity: 0.8;
+
+      .svg-icon {
+        fill: $ui-02;
+      }
+    }
+    &:active,
+    &:focus {
+      color: $ui-02;
+
+      .svg-icon {
+        fill: $ui-02;
+      }
+    }
+
+    color: $ui-02;
+    padding: 0;
+
+    .svg-icon {
+      fill: $ui-02;
+    }
+  }
+}
+
 //studio내 텍스트가 길어질때 툴팁을 벗어나는 문제 방지
 .tooltip-studio__text {
   white-space: normal;
@@ -3029,6 +3184,11 @@
 // popup 보고서를 제외한 편집 화면에서 차트 툴팁이 시각화 옵션 위로 올라오지 않도록 방지
 .modal + .highcharts-tooltip-container {
   z-index: 9998 !important;
+}
+
+// 모달 타이틀 우측에 컨텐츠가 특정 길이 이상 넘칠때 디자인 깨짐 방지 (IE 이슈로 calc 삭제 불가 최대 사이즈로 고정)
+.modal__head-title {
+  width: calc(100% - 240px);
 }
 
 // -------------------------
@@ -3144,19 +3304,107 @@
   }
 }
 
+// ------------------------------------
+// pandas - list, table 목록 스타일 추가
+// ------------------------------------
+.table-list-layout {
+  display: flex;
+  width: 100%;
+
+  .side-nav {
+    width: 340px;
+  }
+
+  .side-nav__list-wrap {
+    margin-top: $spacing-md;
+  }
+
+  .side-nav__list-title {
+    @include font-weight("medium");
+    line-height: 2.5;
+    color: $text-02;
+  }
+
+  .list__list {
+    height: rem(442px);
+    overflow-y: auto;
+  }
+
+  .list__item--selected {
+    background-color: $ui-01;
+
+    .list__button {
+      @include font-weight("medium");
+    }
+  }
+
+  .side-nav__list-action-buttons {
+    display: flex;
+    margin-right: $spacing-2xs;
+    z-index: 1;
+  }
+
+  .side-nav__list-action-button:not(:last-child) {
+    margin-right: $spacing-xs;
+  }
+}
+
+.select-content {
+  width: 100%;
+  flex: 1;
+  border-left: 1px solid $ui-04;
+
+  .modal__head {
+    background-color: $odd-row;
+  }
+
+  .select-content__title {
+    @include font-weight("medium");
+    line-height: 2.5;
+    color: $text-02;
+  }
+
+  .select-content__helper-text {
+    @include font-size("13");
+    @include font-weight("regular");
+    color: $text-03;
+    padding-left: $spacing-2xs;
+  }
+
+  .select-content__body {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 38px);
+    padding: $spacing-sm;
+  }
+
+  .select-content__data {
+    margin-top: auto;
+  }
+
+  .select-content__table {
+    table-layout: fixed;
+
+    td,
+    th {
+      text-align: center;
+    }
+  }
+}
+
 //데이터 모델 필터 스타일 적용
 .data-model__body .select--borderless {
   min-width: auto;
 }
-  
+
 .data-model__body .data-modal__select {
   flex: 1;
 }
 
-.data-model__body .select--borderless .select-selector__button{
+.data-model__body .select--borderless .select-selector__button {
   width: rem(32px);
   padding: 0 5px;
- }
+}
 
 // -------------------------
 // style-core로 옮겨질 검토가 필요한 스타일
@@ -3165,9 +3413,4 @@
 .tag--teal.tag--not-clickable:hover:not(:disabled) {
   background-color: #adf0f0;
   color: #007d79;
-}
-
-.alert__text {
-  max-height: rem(150px);
-  overflow-y: auto;
 }

@@ -1,15 +1,36 @@
-.progressbar,
+// -------------------------
+// Progressbar
+// -------------------------
 .progressbar::-webkit-progress-bar {
   overflow: hidden;
   position: relative;
-  height: 18px;
+  height: rem(18px);
   background-color: $ui-04;
   border-radius: 4px;
 }
 
-.progressbar__gage,
+.progressbar {
+  overflow: hidden;
+  position: relative;
+  height: rem(18px);
+  background-color: $ui-04;
+  border-radius: 4px;
+  border: none;
+}
+
 .progressbar::-webkit-progress-value {
-  z-index: z('float');
+  z-index: z("float");
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: $primary;
+}
+
+.progressbar__gage {
+  z-index: z("float");
+  height: 100%;
   position: absolute;
   left: 0;
   top: 0;
@@ -57,18 +78,21 @@
 // -------------------------
 .progressbar--major {
   .progressbar__gage {
-    background-color: #34DCA1;
+    background-color: #34dca1;
   }
 }
 
 .progressbar--major::-webkit-progress-value {
-  background-color: #34DCA1;
+  background-color: #34dca1;
 }
 
 // -------------------------
 // progressbar--sm
 // -------------------------
-.progressbar--sm,
-.progressbar--sm::-webkit-progress-bar{
+.progressbar--sm::-webkit-progress-bar {
+  height: rem(6px);
+}
+
+.progressbar--sm {
   height: rem(6px);
 }

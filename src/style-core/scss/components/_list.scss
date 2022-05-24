@@ -1,3 +1,6 @@
+// -------------------------
+// List
+// -------------------------
 .list {
   @include list;
   @include list--hidable;
@@ -233,7 +236,7 @@
 }
 
 .dynamic-list__no-contents .notification-message {
-  height: 480px;
+  height: rem(480px);
 }
 
 .dynamic-list__toolbar {
@@ -242,8 +245,8 @@
 }
 
 .dynamic-list__items {
-  min-height: 480px;
-  max-height: 480px;
+  min-height: rem(480px);
+  max-height: rem(480px);
   padding-right: $spacing-xs;
   overflow-y: auto;
   position: relative;

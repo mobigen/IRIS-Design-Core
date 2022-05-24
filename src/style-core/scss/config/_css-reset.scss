@@ -123,7 +123,6 @@ table {
   border-spacing: 0;
 }
 
-// reset a tag 논의 필요
 // a {
 //   text-decoration: none;
 //   color: $text-01;
@@ -143,7 +142,11 @@ button:focus,
 input:focus {
   outline: 0;
 }
-// reset a tag 논의 필요 끝
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid $primary;
+}
 
 * {
   box-sizing: border-box;

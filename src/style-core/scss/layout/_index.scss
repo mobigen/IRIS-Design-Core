@@ -4,7 +4,7 @@
 // index-layout-head
 .index-layout-head {
   background-color: $ui-02;
-  box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 rem(4px) rem(11px) rgba(0, 0, 0, 0.03);
 }
 
 .index-layout-head__title {
@@ -12,14 +12,14 @@
   @include font-weight("medium");
   white-space: nowrap;
   color: $text-01;
-  letter-spacing: -0.3px;
+  letter-spacing: rem(-0.3px);
 }
 
 .index-layout-head__title-bar {
   display: flex;
   align-items: center;
   height: rem(56px);
-  padding: 0 20px;
+  padding: 0 $spacing-md + $spacing-2xs;
 }
 
 .index-layout-head__title-bar .select--borderless .select-container {
@@ -52,13 +52,13 @@
   right: 0;
   bottom: rem(200px);
   width: 100%;
-  min-width: 1200px;
+  min-width: rem(1200px);
   display: flex;
   flex-direction: column;
   flex: 1 0 auto;
   z-index: z("modal");
   background: $ui-01;
-  box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 rem(4px) rem(11px) rgba(0, 0, 0, 0.03);
 }
 
 .index-layout-body__inner {
@@ -92,8 +92,19 @@
 .index-layout-body__top-bar {
   display: flex;
   align-items: center;
-  height: rem(56px);
-  padding: $spacing-sm 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-height: rem(56px);
+  max-height: rem(100px);
+  height: auto;
+  padding: 0 $spacing-md + $spacing-2xs $spacing-sm $spacing-md + $spacing-2xs;
+}
+
+.index-layout-body__left-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: $spacing-sm;
 }
 
 .index-layout-body__filter {
@@ -115,9 +126,9 @@
 .index-layout-body__filter-title {
   @include text-overflow;
   @include font-weight("regular");
-  font-size: 15px;
+  @include font-size("15");
   color: $text-02;
-  letter-spacing: -0.3px;
+  letter-spacing: rem(-0.3px);
   em {
     @include font-weight("medium");
   }
@@ -134,18 +145,18 @@
 }
 
 .index-layout-body__management-text {
+  @include font-size("15");
   display: block;
   margin-right: $spacing-xs;
-  font-size: rem(15px);
   color: $active-secondary;
   white-space: nowrap;
   word-break: keep-all;
 }
 
 .index-layout-body__controller {
-  margin-left: auto;
   display: flex;
   align-items: center;
+  padding-top: $spacing-sm;
 }
 
 .index-layout-body__controller-select {
@@ -182,7 +193,7 @@
   }
 }
 
-.button.index-layout-body__controller-refresh-button {
+.index-layout-body__controller-refresh-button {
   margin-left: $spacing-xs;
 }
 
@@ -209,7 +220,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 62px;
+  height: rem(62px);
 }
 
 .generate-link-group .text-area {
@@ -218,7 +229,7 @@
 
 .url-group {
   min-height: rem(80px);
-  max-height: 235px;
+  max-height: rem(235px);
   overflow-y: auto;
   background-color: $ui-02;
   border: 1px solid $ui-04;
@@ -264,7 +275,7 @@
 
 // 카테고리 관리
 .list.list-category-dialog {
-  height: 280px;
+  height: rem(280px);
   overflow-y: auto;
 }
 
@@ -296,12 +307,12 @@
 
 // IMA, ISS, ITS 목록화면 공통 클래스
 .project-list {
-  padding: 0 20px;
+  padding: 0 $spacing-md + $spacing-2xs;
   height: calc(100vh - 115px);
 }
 
 .project-thumbnail {
-  padding: 0 35px $layout-xs 35px;
+  padding: 0 $spacing-xl + $spacing-2xs $layout-xs $spacing-xl + $spacing-2xs;
   flex: 1 0 auto;
   overflow-y: auto;
   height: calc(100vh - 112px);
@@ -400,14 +411,14 @@
   padding: $spacing-sm;
   background-color: $ui-02;
   border: 1px solid $ui-04;
-  box-shadow: 0px 2px 0px rgba(206, 211, 217, 0.2);
+  box-shadow: 0 rem(2px) 0 rgba(206, 211, 217, 0.2);
   border-radius: 2px;
   transition: all $duration-slow-01 $iris-standard-easing;
   text-decoration: none;
   cursor: pointer;
 
   &:hover {
-    box-shadow: 0px 0px 30px rgba(206, 211, 217, 0.8);
+    box-shadow: 0 0 rem(30px) rgba(206, 211, 217, 0.8);
     color: inherit;
 
     .project-thumbnail-list__details {
@@ -434,8 +445,8 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -25px;
-  margin-left: -25px;
+  margin-top: -$spacing-lg;
+  margin-left: -$spacing-lg;
 }
 
 .project-thumbnail-list__thumbnail-icon .svg-icon {
@@ -450,7 +461,6 @@
   top: 0;
   right: 0;
   bottom: 0;
-  background-image: url(https://www.fujifilm.com/products/digital_cameras/x/fujifilm_x_t1/sample_images/img/index/ff_x_t1_001.JPG);
   background-position: 0 0;
   background-size: cover;
   background-repeat: no-repeat;
@@ -491,11 +501,11 @@
 
 .project-thumbnail-list__information-title {
   @include text-overflow;
+  @include font-size("15");
   position: relative;
   padding: $spacing-2xs 0;
-  font-size: 15px;
   font-weight: normal;
-  letter-spacing: -0.3px;
+  letter-spacing: rem(-0.3px);
   color: $text-02;
 }
 
@@ -511,6 +521,7 @@
 
   &:first-child {
     @include text-overflow;
+    max-width: fit-content;
   }
 
   &:first-child:not(:only-child) {
@@ -518,6 +529,7 @@
   }
 
   & + & {
+    max-width: inherit;
     flex-shrink: 0;
     margin-left: auto;
   }
@@ -531,7 +543,7 @@
 // 추후 삭제
 .project-thumbnail-list__tags {
   position: absolute;
-  bottom: 6px;
+  bottom: rem(6px);
   right: rem(8px);
   display: flex;
   flex-direction: row;
@@ -544,7 +556,7 @@
 
 .project-thumbnail-list__badges {
   position: absolute;
-  bottom: 6px;
+  bottom: rem(6px);
   right: rem(8px);
   display: flex;
   flex-direction: row;
@@ -580,23 +592,6 @@
       .svg-icon {
         fill: $ui-02;
       }
-    }
-  }
-}
-
-// responsive
-@media all and (max-width: 1280px) {
-  .index-layout-body__top-bar.index-layout-body__top-bar--reponsive-lg {
-    flex-wrap: wrap;
-    height: auto;
-
-    .index-layout-body__management {
-      margin-right: 10px;
-    }
-
-    .index-layout-body__controller {
-      margin-left: 0;
-      margin-top: $spacing-sm;
     }
   }
 }

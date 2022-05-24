@@ -50,7 +50,7 @@
       </ul>
       <div class="tab__panel">
         <!-- 스크롤이 필요한 경우 overflow-y 클래스 추가하고 mh-400와 같은 max-height 클래스 혹은 inline-style로 height 값 추가 -->
-        <div class="tab__contents overflow-y mh-400 tab__contents--active">
+        <div class="tab__contents tab__contents--active">
           <!-- 복잡도가 높은 form 요소에 form--complex 스타일 추가 -->
           <div class="form form--vertical">
             <div class="form__body">
@@ -317,9 +317,9 @@
                         <colgroup>
                           <col width="65px">
                           <col width="225px">
-                          <col width="95px">
-                          <col width="125px">
-                          <col width="125px">
+                          <col width="115px">
+                          <col width="115px">
+                          <col width="115px">
                           <col width="">
                         </colgroup>
                         <thead>
@@ -327,8 +327,8 @@
                             <th class="none">설정</th>
                             <th>열</th>
                             <th>표현</th>
-                            <th>가로 정렬</th>
-                            <th>세로 정렬</th>
+                            <th>텍스트 정렬</th>
+                            <th>텍스트 맞춤</th>
                             <th>
                               줄바꿈
                               <!-- 줄 바꿈 툴팁-->
@@ -341,7 +341,8 @@
                               <div class="tooltip-studio tooltip-studio--top" style="display: none;">
                                 <div class="tooltip-studio__arrow"></div>
                                 <div class="tooltip-studio__text">
-                                  <span class="tooltip-studio__text">자동 줄 바꿈 : 셀 너비에 맞게 데이터가 줄 바꿈됩니다.<br>CRLF 변환 : 데이터 값에 포함된
+                                  <span class="tooltip-studio__text">자동 줄 바꿈 : 셀 너비에 맞게 데이터가 줄 바꿈됩니다.<br>CRLF 변환 : 데이터
+                                    값에 포함된
                                     CRLF를 줄 바꿈 처리합니다.</span>
                                 </div>
                               </div>
@@ -354,9 +355,9 @@
                           <colgroup>
                             <col width="65px">
                             <col width="225px">
-                            <col width="95px">
-                            <col width="125px">
-                            <col width="125px">
+                            <col width="115px">
+                            <col width="115px">
+                            <col width="115px">
                             <col width="">
                           </colgroup>
                           <tbody>
@@ -384,7 +385,8 @@
                                   <div class="tooltip-studio tooltip-studio--top" style="display: none;">
                                     <div class="tooltip-studio__arrow"></div>
                                     <div class="tooltip-studio__inner">
-                                      <span class="tooltip-studio__text">일괄 설정 시, 동적으로 출력되는 헤더 설정은 일괄 설정의 기준을 따릅니다.</span>
+                                      <span class="tooltip-studio__text">일괄 설정 시, 동적으로 출력되는 헤더 설정은 일괄 설정의 기준을
+                                        따릅니다.</span>
                                     </div>
                                   </div>
                                 </div>
@@ -397,6 +399,12 @@
                                     title="텍스트" disabled="disabled">
                                     <svg class="svg-icon">
                                       <use xlink:href="#text"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="toggle-button__item toggle-button__item--icon" title="숫자"
+                                    disabled="disabled">
+                                    <svg class="svg-icon">
+                                      <use xlink:href="#hash"></use>
                                     </svg>
                                   </button>
                                   <button class="toggle-button__item toggle-button__item--icon" title="프로그레스바"
@@ -499,6 +507,11 @@
                                       <use xlink:href="#text"></use>
                                     </svg>
                                   </button>
+                                  <button class="toggle-button__item toggle-button__item--icon" title="숫자">
+                                    <svg class="svg-icon">
+                                      <use xlink:href="#hash"></use>
+                                    </svg>
+                                  </button>
                                   <button class="toggle-button__item toggle-button__item--icon" title="프로그레스바">
                                     <svg class="svg-icon">
                                       <use xlink:href="#progress-bar"></use>
@@ -592,6 +605,11 @@
                                     title="텍스트">
                                     <svg class="svg-icon">
                                       <use xlink:href="#text"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="toggle-button__item toggle-button__item--icon" title="숫자">
+                                    <svg class="svg-icon">
+                                      <use xlink:href="#hash"></use>
                                     </svg>
                                   </button>
                                   <button class="toggle-button__item toggle-button__item--icon" title="프로그레스바">
@@ -689,99 +707,9 @@
                                       <use xlink:href="#text"></use>
                                     </svg>
                                   </button>
-                                  <button class="toggle-button__item toggle-button__item--icon" title="프로그레스바">
+                                  <button class="toggle-button__item toggle-button__item--icon" title="숫자">
                                     <svg class="svg-icon">
-                                      <use xlink:href="#progress-bar"></use>
-                                    </svg>
-                                  </button>
-                                </div>
-                              </td>
-                              <!-- 가로 정렬 -->
-                              <td>
-                                <div class="toggle-button justify-center">
-                                  <!-- 왼쪽 정렬 -->
-                                  <button
-                                    class="toggle-button__item toggle-button__item--icon toggle-button__item--selected"
-                                    title="왼쪽 정렬">
-                                    <svg class="svg-icon">
-                                      <use xlink:href="#text-align-left"></use>
-                                    </svg>
-                                  </button>
-                                  <!-- 가운데 정렬 -->
-                                  <button class="toggle-button__item toggle-button__item--icon" title="가운데 정렬">
-                                    <svg class="svg-icon">
-                                      <use xlink:href="#text-align-center"></use>
-                                    </svg>
-                                  </button>
-                                  <!-- 오른쪽 정렬 -->
-                                  <button class="toggle-button__item toggle-button__item--icon" title="오른쪽 정렬">
-                                    <svg class="svg-icon">
-                                      <use xlink:href="#text-align-right"></use>
-                                    </svg>
-                                  </button>
-                                </div>
-                              </td>
-                              <!-- 세로 정렬 -->
-                              <td>
-                                <div class="toggle-button justify-center">
-                                  <!-- 왼쪽 정렬 -->
-                                  <button class="toggle-button__item toggle-button__item--icon" type="button"
-                                    title="수직 상단 정렬">
-                                    <svg class="svg-icon">
-                                      <use xlink:href="#vertical-align-top"></use>
-                                    </svg>
-                                  </button>
-                                  <button
-                                    class="toggle-button__item toggle-button__item--icon toggle-button__item--selected"
-                                    type="button" title="수직 가운데 정렬">
-                                    <svg class="svg-icon">
-                                      <use xlink:href="#vertical-align-middle"></use>
-                                    </svg>
-                                  </button>
-                                  <button class="toggle-button__item toggle-button__item--icon" type="button"
-                                    title="수직 하단 정렬">
-                                    <svg class="svg-icon">
-                                      <use xlink:href="#vertical-align-bottom"></use>
-                                    </svg>
-                                  </button>
-                                </div>
-                              </td>
-                              <!-- 줄바꿈 -->
-                              <td class="tl">
-                                <div class="checkbox">
-                                  <input id="formCheckbox_04-1" type="checkbox" class="checkbox__input">
-                                  <label for="formCheckbox_04-1" class="checkbox__label">자동
-                                    줄바꿈</label>
-                                </div>
-                                <div class="checkbox">
-                                  <input id="formCheckbox_04-2" type="checkbox" class="checkbox__input">
-                                  <label for="formCheckbox_04-2" class="checkbox__label">CRLF
-                                    변환</label>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <!-- 설정 -->
-                              <td class="td--spacing-sm text-center">
-                                <div class="checkbox">
-                                  <input id="formCheckbox_04" type="checkbox" class="checkbox__input">
-                                  <label class="checkbox__label" for="formCheckbox_04"></label>
-                                </div>
-                              </td>
-                              <!-- 열 -->
-                              <td>
-                                <span class="tl fl">
-                                  DATETIME
-                                </span>
-                              </td>
-                              <!-- 표현 -->
-                              <td>
-                                <div class="toggle-button justify-center">
-                                  <button
-                                    class="toggle-button__item toggle-button__item--icon toggle-button__item--selected"
-                                    title="텍스트">
-                                    <svg class="svg-icon">
-                                      <use xlink:href="#text"></use>
+                                      <use xlink:href="#hash"></use>
                                     </svg>
                                   </button>
                                   <button class="toggle-button__item toggle-button__item--icon" title="프로그레스바">
@@ -877,6 +805,111 @@
                                     title="텍스트">
                                     <svg class="svg-icon">
                                       <use xlink:href="#text"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="toggle-button__item toggle-button__item--icon" title="숫자">
+                                    <svg class="svg-icon">
+                                      <use xlink:href="#hash"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="toggle-button__item toggle-button__item--icon" title="프로그레스바">
+                                    <svg class="svg-icon">
+                                      <use xlink:href="#progress-bar"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </td>
+                              <!-- 가로 정렬 -->
+                              <td>
+                                <div class="toggle-button justify-center">
+                                  <!-- 왼쪽 정렬 -->
+                                  <button
+                                    class="toggle-button__item toggle-button__item--icon toggle-button__item--selected"
+                                    title="왼쪽 정렬">
+                                    <svg class="svg-icon">
+                                      <use xlink:href="#text-align-left"></use>
+                                    </svg>
+                                  </button>
+                                  <!-- 가운데 정렬 -->
+                                  <button class="toggle-button__item toggle-button__item--icon" title="가운데 정렬">
+                                    <svg class="svg-icon">
+                                      <use xlink:href="#text-align-center"></use>
+                                    </svg>
+                                  </button>
+                                  <!-- 오른쪽 정렬 -->
+                                  <button class="toggle-button__item toggle-button__item--icon" title="오른쪽 정렬">
+                                    <svg class="svg-icon">
+                                      <use xlink:href="#text-align-right"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </td>
+                              <!-- 세로 정렬 -->
+                              <td>
+                                <div class="toggle-button justify-center">
+                                  <!-- 왼쪽 정렬 -->
+                                  <button class="toggle-button__item toggle-button__item--icon" type="button"
+                                    title="수직 상단 정렬">
+                                    <svg class="svg-icon">
+                                      <use xlink:href="#vertical-align-top"></use>
+                                    </svg>
+                                  </button>
+                                  <button
+                                    class="toggle-button__item toggle-button__item--icon toggle-button__item--selected"
+                                    type="button" title="수직 가운데 정렬">
+                                    <svg class="svg-icon">
+                                      <use xlink:href="#vertical-align-middle"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="toggle-button__item toggle-button__item--icon" type="button"
+                                    title="수직 하단 정렬">
+                                    <svg class="svg-icon">
+                                      <use xlink:href="#vertical-align-bottom"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </td>
+                              <!-- 줄바꿈 -->
+                              <td class="tl">
+                                <div class="checkbox">
+                                  <input id="formCheckbox_04-1" type="checkbox" class="checkbox__input">
+                                  <label for="formCheckbox_04-1" class="checkbox__label">자동
+                                    줄바꿈</label>
+                                </div>
+                                <div class="checkbox">
+                                  <input id="formCheckbox_04-2" type="checkbox" class="checkbox__input">
+                                  <label for="formCheckbox_04-2" class="checkbox__label">CRLF
+                                    변환</label>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <!-- 설정 -->
+                              <td class="td--spacing-sm text-center">
+                                <div class="checkbox">
+                                  <input id="formCheckbox_04" type="checkbox" class="checkbox__input">
+                                  <label class="checkbox__label" for="formCheckbox_04"></label>
+                                </div>
+                              </td>
+                              <!-- 열 -->
+                              <td>
+                                <span class="tl fl">
+                                  DATETIME
+                                </span>
+                              </td>
+                              <!-- 표현 -->
+                              <td>
+                                <div class="toggle-button justify-center">
+                                  <button
+                                    class="toggle-button__item toggle-button__item--icon toggle-button__item--selected"
+                                    title="텍스트">
+                                    <svg class="svg-icon">
+                                      <use xlink:href="#text"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="toggle-button__item toggle-button__item--icon" title="숫자">
+                                    <svg class="svg-icon">
+                                      <use xlink:href="#hash"></use>
                                     </svg>
                                   </button>
                                   <button class="toggle-button__item toggle-button__item--icon" title="프로그레스바">

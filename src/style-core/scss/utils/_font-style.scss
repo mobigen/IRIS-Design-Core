@@ -1,7 +1,6 @@
 //-------------------------------------------
 //  Font Families
 // ------------------------------------------
-
 @use "sass:math";
 
 $font-families: (
@@ -24,7 +23,6 @@ $font-families: (
 //-------------------------------------------
 //  Font Weight
 // ------------------------------------------
-
 $font-weights: (
   "light": 300,
   "regular": 400,
@@ -43,7 +41,6 @@ $font-weights: (
 //-------------------------------------------
 //  Letter Spacing
 // ------------------------------------------
-
 @mixin letter-spacing {
   letter-spacing: 0;
 }
@@ -57,14 +54,13 @@ $font-weights: (
   } @else if $el == "title" {
     line-height: 1.2;
   } @else {
-    @warn '@mixin line-height($el) 을 사용할 수 없습니다. 'heading', 'body' 또는 'title'를 사용해 주세요.';
+    @warn '@mixin line-height($el) 을 사용할 수 없습니다. heading, body 또는 title를 사용해 주세요.';
   }
 }
 
 //-------------------------------------------
 //  Font Size
 // ------------------------------------------
-
 $base-font-size: 16px !default; // Default
 
 @function rem($px) {
@@ -97,6 +93,7 @@ $font-size-map: (
   "20": 1.25rem,
   "18": 1.125rem,
   "16": 1rem,
+  "15": 0.938rem,
   "14": 0.875rem,
   "12": 0.75rem,
   "13": 0.8125rem,
@@ -108,7 +105,7 @@ $font-size-map: (
   @if map-has-key($font-size-map, $size) {
     font-size: map-get($font-size-map, $size);
   } @else {
-    @warn 'IRIS의 폰트 사이즈가 아닙니다! 10, 11, 12, 13, 14, 16, 18, 20, 24, 28, 32, 36, 48, 54, 72, 76 중에서 사용해 주세요.';
+    @warn 'IRIS의 폰트 사이즈가 아닙니다! 10, 11, 12, 13, 14, 15, 16, 18, 20, 24, 28, 32, 36, 48, 54, 72, 76 중에서 사용해 주세요.';
   }
 }
 

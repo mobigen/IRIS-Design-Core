@@ -1,3 +1,6 @@
+// -------------------------
+// Accordion
+// -------------------------
 .accordion {
   border: 1px solid $ui-04;
 }
@@ -17,6 +20,10 @@
 
 .accordion-horizontal__button {
   padding: $spacing-xs $spacing-3xs $spacing-xs $spacing-3xs;
+
+  &:focus-visible:not(:disabled) {
+    border: 2px solid $default-focus;
+  }
 }
 
 .accordion-horizontal__text {
@@ -52,6 +59,10 @@
   height: $button-height-md;
   padding: $spacing-2xs $spacing-xs;
   background-color: $hover-row;
+
+  &:focus-visible:not(:disabled) {
+    border: 2px solid $default-focus;
+  }
 }
 
 .accordion__head-icon {

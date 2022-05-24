@@ -18,11 +18,16 @@
 
 .editor-preview-layout-head__title {
   flex: 1;
+  width: 100%;
 }
 
 .editor-preview-layout-head__title-text {
   @include line-height("heading");
   @include font-weight("medium");
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .editor-preview-layout__buttons {
@@ -37,6 +42,10 @@
 
 .editor-preview-layout__preview-wrap {
   height: 100%;
+}
+
+.editor-preview-layout--responsive .editor-preview-layout__preview-wrap {
+  height: auto;
 }
 
 .editor-preview-layout__preview {

@@ -1,3 +1,6 @@
+// -------------------------
+// Form
+// -------------------------
 @mixin form__item($both-side-padding) {
   @include line-height("heading");
   display: flex;
@@ -75,7 +78,7 @@
 .form__detail-value {
   @include font-size("13");
   color: $text-01;
-  width: 40px;
+  width: rem(40px);
 }
 
 .form__label-text + .button--link {
@@ -88,7 +91,7 @@
 
 .form__detail-text {
   @include font-weight("medium");
-  font-size: 15px;
+  @include font-size("15");
   color: $text-01;
 }
 
@@ -157,7 +160,7 @@
   .form__label,
   .form__text,
   .form__items-title-text {
-    font-size: rem(15px);
+    @include font-size("15");
   }
 }
 
@@ -190,7 +193,7 @@
   }
 
   .form__label-text {
-    font-size: 15px;
+    @include font-size("15");
   }
 
   .form__label-subtext {
@@ -203,7 +206,7 @@
   }
 
   .form__detail-textarea {
-    height: 120px;
+    height: rem(120px);
   }
 
   .form__detail-detail {
@@ -224,6 +227,19 @@
 
 .dynamic-form__item {
   display: flex;
+}
+
+.form__v-group-item {
+  display: flex;
+  align-items: center;
+  height: rem(32px);
+}
+
+.form__v-group-title {
+  display: flex;
+  align-items: center;
+  width: rem(130px);
+  color: $text-02;
 }
 
 .dynamic-form__item + .dynamic-form__item {
@@ -323,8 +339,8 @@
   }
 
   .notification__icon {
-    width: 18px;
-    height: 18px;
+    width: rem(18px);
+    height: rem(18px);
     margin: $spacing-xs;
   }
 
@@ -365,7 +381,7 @@
   }
 
   .dynamic-form__action-buttons {
-    width: 68px;
+    width: rem(68px);
     margin-left: 0;
   }
 
