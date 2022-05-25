@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "node ./clean-dist.js && webpack --config webpack.dev.js",
     "build": "node ./clean-dist.js && webpack --config webpack.prod.js",
-    "pull-core": "git subtree pull -P src/style-core core-upstream iris--design-layout --squash",
-    "push-core": "git subtree push -P src/style-core core-origin iris--design-layout",
+    "pull-core": "git subtree pull -P src/style-core core-upstream dev --squash",
+    "push-core": "git subtree push -P src/style-core core-origin dev",
     "pull-layout": "git subtree pull -P src/style-layout layout-upstream dev --squash",
     "push-layout": "git subtree push -P src/style-layout layout-origin dev"
   },
