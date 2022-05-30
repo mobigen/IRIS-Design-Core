@@ -105,12 +105,22 @@
     <div class="modal-variation">
       <h3 class="modal-variation__name">테이블 목록</h3>
       <div class="modal-examle">
+        <!--
+          table-list-single.html 내에 table-list.html를 include 하면,
+          2뎁스 include로 파일 경로가 중첩되면서 이슈가 발생하고 있어서 table-list.html은 include하지 않고
+          코드 복사 붙여넣기로 변경(Windows 이슈)
+        -->
         @@include('../partials/studio/modals/table-list-single.html')
       </div>
     </div>
     <div class="modal-variation">
       <h3 class="modal-variation__name">테이블 목록 - 샘플데이터 보기</h3>
       <div class="modal-examle">
+        <!--
+          table-list-expand.html 내에 table-list.html를 include 하면,
+          2뎁스 include로 파일 경로가 중첩되면서 이슈가 발생하고 있어서 table-list.html은 include하지 않고
+          코드 복사 붙여넣기로 변경(Windows 이슈)
+        -->
         @@include('../partials/studio/modals/table-list-expand.html')
       </div>
     </div>
