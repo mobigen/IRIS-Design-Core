@@ -1,0 +1,103 @@
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// 한줄 말줄임 적용
+@mixin text-overflow($width: false) {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  @if ($width) {
+    width: $width;
+  }
+}
+
+// 숨김 처리
+@mixin hidden {
+  position: absolute;
+  width: rem(1px);
+  height: rem(1px);
+  padding: 0;
+  margin: rem(-1px);
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  visibility: visible;
+  white-space: nowrap;
+}
+
+// 의미있는 이미지 대체 텍스트 (IR - Image Replacement)
+@mixin ir-pm {
+  /* 레이아웃에 영향을 끼치지 않도록 */
+  position: absolute;
+  /* 스크린 리더가 읽을 수 있도록 */
+  width: rem(1px);
+  height: rem(1px);
+  /* 눈에 보이는 부분을 제거 */
+  clip: rect(0 0 0 0);
+  margin: rem(-1px);
+  overflow: hidden;
+}
+
+// 이미지 가로에 꽉차게 보여지게 적용
+@mixin img-g {
+  display: block;
+  width: 100%;
+}
+
+// table 숨김 처리
+@mixin caption-out {
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  visibility: hidden;
+}
+
+// 요소 우측 중앙 정렬
+@mixin position-right-center($right-spacing) {
+  position: absolute;
+  top: 50%;
+  right: $right-spacing;
+  transform: translateY(-50%);
+}
+
+// 일정한 패딩 적용
+@mixin stable-padding($padding-up-and-down, $padding-both-sides) {
+  padding: $padding-up-and-down $padding-both-sides;
+}
+
+// svg 아이콘 사이즈 적용
+@mixin svg-icon-size($size) {
+  width: $size;
+  height: $size;
+}
+
+// svg 아이콘 stroke 두께 설정
+@mixin svg-icon-stroke($stroke-color) {
+  stroke: $stroke-color;
+  stroke-width: 1;
+  stroke-opacity: 0.4;
+}
+
+// 요소 우측 가운데 정렬
+@mixin right-position {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+// 스크롤 안되도록 처리
+@mixin not-scroll {
+  overflow: hidden;
+}

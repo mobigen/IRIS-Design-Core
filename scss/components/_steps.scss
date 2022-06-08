@@ -1,0 +1,40 @@
+// -------------------------
+// Steps
+// -------------------------
+.steps {
+  display: flex;
+  align-items: center;
+}
+
+.steps__item {
+  display: flex;
+  align-items: center;
+}
+
+.steps__item + .steps__item {
+  margin-left: $spacing-lg;
+}
+
+.steps__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: rem(32px);
+  height: rem(32px);
+  background-color: $ui-04;
+  border-radius: 50%;
+}
+
+.steps__icon-text {
+  @include font-weight("bold");
+  @include font-size("16");
+  color: $text-04;
+}
+
+.steps__title {
+  margin-left: $spacing-xs;
+}
+
+.steps__item--current .steps__icon {
+  background-color: $secondary;
+}

@@ -1,0 +1,178 @@
+// -------------------------
+// Tooltip - Studio
+// -------------------------
+.tooltip-studio {
+  z-index: z("tooltip");
+  position: absolute;
+  max-width: rem(480px);
+  padding: $spacing-sm;
+  background-color: $text-03;
+  border-radius: 4px;
+  box-shadow: 0 rem(4px) rem(8px) 0 rgba(0, 0, 0, 0.07);
+  transition-duration: $duration-fast-02;
+  transition-timing-function: ease-in-out;
+  // white-space: nowrap;
+}
+
+.tooltip-studio__arrow {
+  position: absolute;
+  width: rem(8px);
+  height: rem(8px);
+  background-color: $text-03;
+  border: 1px solid $text-03;
+  transform: rotate(45deg);
+  content: "";
+}
+
+.tooltip-studio__inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.tooltip-studio__title {
+  @include font-size("14");
+  @include font-weight("medium");
+  @include line-height("heading");
+  color: $text-04;
+}
+
+.tooltip-studio__text {
+  @include font-size("13");
+  @include line-height("body");
+  color: $text-04;
+  white-space: nowrap;
+}
+
+.tooltip-studio__text a {
+  color: $text-04;
+}
+
+// Tooltip 위로 위치
+.tooltip-studio--top {
+  .tooltip-studio__arrow {
+    top: calc(100% - 4px);
+    left: 50%;
+    margin-left: -$spacing-2xs;
+    border-width: 0 1px 1px 0;
+  }
+}
+
+// // Tooltip 아래로 위치
+.tooltip-studio--bottom {
+  .tooltip-studio__arrow {
+    top: rem(-4px);
+    left: 50%;
+    margin-left: -$spacing-2xs;
+    border-width: 1px 0 0 1px;
+  }
+}
+
+// Tooltip 왼쪽으로 위치
+.tooltip-studio--left {
+  .tooltip-studio__arrow {
+    top: 50%;
+    right: rem(-4px);
+    margin-top: -$spacing-2xs;
+    border-width: 1px 1px 0 0;
+  }
+}
+
+// Tooltip 오른쪽으로 위치
+.tooltip-studio--right {
+  .tooltip-studio__arrow {
+    top: 50%;
+    left: rem(-4px);
+    margin-top: -$spacing-2xs;
+    border-width: 0 0 1px 1px;
+  }
+}
+
+.tooltip-studio--top-right {
+  .tooltip-studio__arrow {
+    top: calc(100% - 4px);
+    right: rem(12px);
+    border-width: 0 1px 1px 0;
+  }
+}
+
+.tooltip-studio--top-left {
+  .tooltip-studio__arrow {
+    top: calc(100% - 4px);
+    left: rem(12px);
+    border-width: 0 1px 1px 0;
+  }
+}
+
+.tooltip-studio--bottom-right {
+  .tooltip-studio__arrow {
+    top: rem(-4px);
+    right: rem(12px);
+    border-width: 1px 0 0 1px;
+  }
+}
+
+.tooltip-studio--bottom-left {
+  .tooltip-studio__arrow {
+    top: rem(-4px);
+    left: rem(12px);
+    border-width: 1px 0 0 1px;
+  }
+}
+
+.tooltip-studio--right-top {
+  .tooltip-studio__arrow {
+    top: rem(8px);
+    left: rem(-4px);
+    border-width: 0 0 1px 1px;
+  }
+}
+
+.tooltip-studio--right-bottom {
+  .tooltip-studio__arrow {
+    bottom: rem(8px);
+    left: rem(-4px);
+    border-width: 0 0 1px 1px;
+  }
+}
+
+.tooltip-studio--left-top {
+  .tooltip-studio__arrow {
+    top: rem(8px);
+    right: rem(-4px);
+    border-width: 1px 1px 0 0;
+  }
+}
+
+.tooltip-studio--left-bottom {
+  .tooltip-studio__arrow {
+    bottom: rem(8px);
+    right: rem(-4px);
+    border-width: 1px 1px 0 0;
+  }
+}
+
+// -------------------------
+// Theme - tooltip--light
+// ------------------------
+
+.tooltip-studio--light {
+  background-color: $ui-01;
+  box-shadow: 0 rem(2px) rem(12px) rem(2px) rgba(0, 0, 0, 0.14);
+}
+
+.tooltip-studio--light .tooltip-studio__arrow {
+  background-color: $ui-01;
+  border-color: darken($ui-01, 8%);
+}
+
+.tooltip-studio--light .tooltip-studio__title {
+  color: $text-02;
+}
+
+.tooltip-studio--light .tooltip-studio__text {
+  color: $text-02;
+}
+
+.tooltip-studio--light .tooltip-studio__text a {
+  color: $text-02;
+}

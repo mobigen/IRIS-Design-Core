@@ -1,0 +1,101 @@
+// -------------------------
+// Alert
+// -------------------------
+.alert {
+  @include layer("pop-out");
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  border-radius: $field-border-radius;
+  min-width: rem(280px);
+  max-width: rem(520px);
+  z-index: z("alert");
+}
+
+.alert__foot {
+  @include stable-padding($spacing-xs, $spacing-sm);
+  display: flex;
+  background-color: $ui-01;
+}
+
+.alert__foot .button + .button,
+.alert__foot div + div,
+.alert__foot .modal__foot-main-buttons div + div {
+  margin-left: $spacing-xs;
+}
+
+.alert__foot .alert__foot-main-buttons {
+  display: flex;
+  margin-left: auto;
+}
+
+// modal과 디자인이 똑같은 부분 끝
+
+.alert__body {
+  display: flex;
+  padding: $layout-sm $layout-md;
+  background-color: $ui-02;
+}
+
+.alert__icon {
+  @include svg-icon-size(24px);
+  flex-shrink: 0;
+  margin-right: $spacing-sm;
+  margin-left: -$spacing-xs;
+}
+
+.alert__contents {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.alert__title {
+  @include font-weight("medium");
+  @include font-size("16");
+  color: $text-02;
+}
+
+.alert__text {
+  @include font-size("14");
+  @include line-height("body");
+  color: $text-03;
+  word-break: keep-all;
+  word-wrap: break-word;
+  white-space: normal;
+  max-height: rem(150px);
+  overflow-y: auto;
+}
+
+// -------------------------
+// modifiers
+// -------------------------
+.alert--default {
+  .alert__icon {
+    display: none;
+  }
+}
+
+.alert--info {
+  .alert__icon {
+    fill: $support-01;
+  }
+}
+
+.alert--success {
+  .alert__icon {
+    fill: $support-02;
+  }
+}
+
+.alert--warning {
+  .alert__icon {
+    fill: $support-03;
+  }
+}
+
+.alert--error {
+  .alert__icon {
+    fill: $support-04;
+  }
+}
