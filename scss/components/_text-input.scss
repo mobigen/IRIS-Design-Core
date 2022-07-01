@@ -55,8 +55,8 @@
   &[readonly]:hover,
   &[readonly]:focus {
     cursor: default;
-    border-color: transparent;
-    background-color: $ui-02;
+    border-color: $ui-04;
+    background-color: $odd-row;
     box-shadow: none;
   }
 
