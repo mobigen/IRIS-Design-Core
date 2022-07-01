@@ -311,8 +311,12 @@ th .button {
 // -------------------------
 // table cursor pointer
 // -------------------------
-.table--corsor-pointer tbody tr {
+.table--cursor-pointer tbody tr {
   cursor: pointer;
+}
+
+.table--cursor-pointer .notification-message {
+  cursor: default;
 }
 
 // -------------------------
