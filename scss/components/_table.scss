@@ -309,6 +309,13 @@ th .button {
 }
 
 // -------------------------
+// table cursor pointer
+// -------------------------
+.table--corsor-pointer tbody tr {
+  cursor: pointer;
+}
+
+// -------------------------
 // table summary, details
 // -------------------------
 .table__summary {
