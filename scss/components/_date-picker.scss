@@ -44,6 +44,13 @@
   height: rem(32px);
 }
 
+.date-picker-panel__today-marker {
+  width: rem(8px);
+  height: rem(8px);
+  margin-left: $spacing-2xs;
+  background-color: $ui-03;
+}
+
 .date-picker-panel__head-actions {
   margin-left: auto;
 }
@@ -301,6 +308,39 @@ a.ui-button:active,
   color: $text-04;
 }
 
+//날짜객체 디자인개선
+.ui-datepicker-today .ui-state-default {
+  background: $ui-03;
+}
+
+.ui-datepicker-today .ui-state-hover {
+  background: $ui-04;
+}
+
+.ui-state-selected .ui-state-default {
+  background: $secondary;
+  color: $text-04;
+}
+
+.ui-state-selected .ui-state-hover {
+  background: $active-secondary;
+  color: $text-04;
+}
+
+.ui-datepicker-current-day .ui-state-default {
+  background: $secondary;
+  color: $text-04;
+}
+
+.ui-datepicker-current-day .ui-state-hover {
+  background: $active-secondary;
+  color: $text-04;
+}
+
+.ui-datepicker-week-end.ui-state-selected .ui-state-default {
+  color: $text-04;
+}
+
 // range style
 .ui-datepicker-range::before {
   position: absolute;
@@ -315,8 +355,12 @@ a.ui-button:active,
   content: "";
 }
 
+.ui-datepicker-range .ui-state-hover {
+  background-color: $hover-secondary;
+}
+
 .ui-datepicker-calendar .ui-datepicker-range:first-child::before {
-  left: rem(4px);
+  left: rem(0.8px);
   width: 100%;
 }
 
