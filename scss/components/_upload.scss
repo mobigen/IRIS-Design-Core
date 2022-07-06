@@ -81,6 +81,14 @@
     @include font-weight("light");
     color: $text-05;
   }
+  &[readonly],
+  &[readonly]:hover,
+  &[readonly]:focus {
+    cursor: default;
+    border-color: transparent;
+    background-color: $ui-02;
+    box-shadow: none;
+  }
 }
 
 .upload__file {
