@@ -243,10 +243,6 @@
     }
   }
 
-  .checkbox__label:hover {
-    border-color: $primary;
-  }
-
   .checkbox__input:checked + .checkbox__label {
     background-color: $primary;
     border-color: $primary;
@@ -255,8 +251,7 @@
 
   .checkbox__input:checked:focus-visible:not(:disabled) {
     + .checkbox__label {
-      border-color: $default-focus;
-      background-color: $default-focus;
+      outline: 2px solid $default-focus;
     }
   }
 
