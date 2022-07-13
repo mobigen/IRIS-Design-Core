@@ -66,6 +66,10 @@
   background-color: $text-04;
 }
 
+.radio__icon {
+  width: rem(20px);
+  height: rem(20px);
+}
 // -------------------------
 // 상태별 스타일
 // -------------------------
@@ -81,6 +85,14 @@
 }
 
 // checked 상태
+.radio__input:checked {
+  + .radio__label {
+    .radio__icon {
+      fill: $ui-02;
+    }
+  }
+}
+
 .radio__input:checked + .radio__label::before {
   background-color: $primary;
   border-color: $primary;
@@ -135,6 +147,11 @@
     width: rem(8px);
     height: rem(8px);
   }
+
+  .radio__icon {
+    width: rem(24px);
+    height: rem(24px);
+  }
 }
 
 .radio--sm {
@@ -158,6 +175,11 @@
     top: rem(8px);
     width: rem(4px);
     height: rem(4px);
+  }
+
+  .radio__icon {
+    width: rem(16px);
+    height: rem(16px);
   }
 }
 // -------------------------
@@ -202,11 +224,13 @@
     }
   }
 
-  .radio__input:checked + .radio__label {
-    z-index: z("float");
-    background-color: $primary;
-    border-color: $primary;
-    color: $text-04;
+  .radio__input:checked {
+    + .radio__label {
+      z-index: z("float");
+      background-color: $primary;
+      border-color: $primary;
+      color: $text-04;
+    }
   }
 
   .radio__input:checked:focus-visible:not(:disabled) {
@@ -226,6 +250,28 @@
     .radio__label {
       padding: 0 $spacing-md;
       height: rem(24px);
+    }
+  }
+}
+
+.radio-switch--icon {
+  .radio {
+    .radio__label {
+      width: rem(32px);
+      padding: 0 rem(5px);
+      justify-content: center;
+    }
+  }
+  .radio--lg {
+    .radio__label {
+      width: rem(40px);
+      padding: 0 rem(7px);
+    }
+  }
+  .radio--sm {
+    .radio__label {
+      width: rem(24px);
+      padding: 0 rem(3px);
     }
   }
 }
