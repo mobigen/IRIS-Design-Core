@@ -21,6 +21,19 @@
   }
 }
 
+// 원하는 줄 수로 말줄임 적용
+// @include multi-text-overflow(line-height 값, 줄 수)
+@mixin multi-text-overflow($line-height, $lines) {
+  display: block;
+  display: -webkit-box;
+  overflow: hidden;
+  max-height: $line-height * $lines;
+  line-height: rem($line-height);
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+}
+
 // 숨김 처리
 @mixin hidden {
   position: absolute;
@@ -100,4 +113,12 @@
 // 스크롤 안되도록 처리
 @mixin not-scroll {
   overflow: hidden;
+}
+
+// IE 크로스 브라우징 대응
+/* IE10+ */
+@mixin ie-resolution {
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    @content;
+  }
 }
