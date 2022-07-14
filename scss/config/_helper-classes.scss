@@ -34,6 +34,11 @@
   @include font-weight("bold");
 }
 
+.inline-text-emphasis {
+  @include font-weight("bold");
+  display: inline;
+}
+
 .right-position {
   @include right-position;
 }
