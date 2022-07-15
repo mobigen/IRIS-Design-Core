@@ -73,8 +73,14 @@
   width: rem(50px);
   height: rem(60px);
   flex-direction: column;
+
   * + * {
     margin-left: 0;
+  }
+
+  .badge__label {
+    @include text-overflow(100%);
+    text-align: center;
   }
 
   &.badge--sm {
