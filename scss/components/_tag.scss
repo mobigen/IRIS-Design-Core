@@ -34,6 +34,14 @@
   @include font-weight("medium");
 }
 
+.tag__link {
+  color: $text-03;
+
+  &:focus-visible:not(:disabled) {
+    outline: 2px solid $default-focus;
+  }
+}
+
 .tag__remove-button {
   width: rem(14px);
   height: rem(14px);
@@ -47,6 +55,33 @@
   }
 }
 
+.tag__delete-button {
+  @include button-normal;
+  width: rem(14px);
+  height: rem(14px);
+  padding: 0;
+  margin-left: $spacing-2xs;
+  background-color: transparent;
+  border-radius: $button-border-radius;
+
+  .svg-icon {
+    width: rem(14px);
+    height: rem(14px);
+    fill: $icon-01;
+  }
+
+  &:hover {
+    background-color: rgba($primary, 0.15);
+    .svg-icon {
+      fill: $primary;
+    }
+  }
+
+  &:focus-visible:not(:disabled) {
+    outline: 2px solid $default-focus;
+  }
+}
+
 .tag--selected {
   background-color: $primary;
   color: $text-04;
@@ -54,6 +89,10 @@
   &:hover:not(:disabled) {
     background-color: $hover-primary;
     color: $text-04;
+
+    .tag__link {
+      color: $text-04;
+    }
   }
 
   &:disabled {
@@ -62,10 +101,24 @@
       background-color: transparent;
     }
   }
+
+  .tag__link {
+    color: $text-04;
+  }
 }
 
 .tag--selected .tag__remove-button {
   fill: $text-04;
+
+  &:hover {
+    background-color: rgba($text-04, 0.2);
+  }
+}
+
+.tag--selected .tag__delete-button {
+  .svg-icon {
+    fill: $text-04;
+  }
 
   &:hover {
     background-color: rgba($text-04, 0.2);
@@ -89,9 +142,17 @@
   background-color: $bg-color;
   color: $font-color;
 
+  .tag__link {
+    color: $font-color;
+  }
+
   &:hover:not(:disabled) {
     background-color: darken($bg-color, 4%);
     color: $font-color;
+
+    .tag__link {
+      color: $font-color;
+    }
   }
 
   &:disabled {
@@ -110,9 +171,25 @@
     }
   }
 
+  .tag__delete-button {
+    .svg-icon {
+      fill: $font-color;
+    }
+    &:hover {
+      background-color: rgba($font-color, 0.15);
+      .svg-icon {
+        fill: $font-color;
+      }
+    }
+  }
+
   &.tag--selected {
     background-color: darken($bg-color, 22%);
     color: $selected-font-color;
+
+    .tag__link {
+      color: $selected-font-color;
+    }
 
     &:hover:not(:disabled) {
       background-color: darken($bg-color, 16%);
@@ -131,6 +208,15 @@
 
       &:hover {
         background-color: rgba($selected-font-color, 0.15);
+      }
+    }
+
+    .tag__delete-button {
+      .svg-icon {
+        fill: $selected-font-color;
+      }
+      &:hover {
+        background-color: rgba($font-color, 0.15);
       }
     }
   }
