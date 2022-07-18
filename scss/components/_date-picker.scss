@@ -68,10 +68,6 @@
   }
 }
 
-.date-picker-panel .time-picker {
-  height: rem(32px);
-}
-
 // jquery-ui: datepicker
 // 스타일링을 위한 항목들만 작성 되어 있습니다.
 // jquery-ui.css를 그대로 사용하는 스타일은 ../vendors/jquery-ui.scss 에 작성 되어 있습니다.
@@ -314,6 +310,7 @@ a.ui-button:active,
 
 //날짜객체 디자인개선
 .ui-datepicker-today .ui-state-default {
+  top: 0;
   background: $ui-03;
   color: $text-04;
 }
@@ -333,6 +330,7 @@ a.ui-button:active,
 }
 
 .ui-datepicker-current-day .ui-state-default {
+  top: 0;
   background: $secondary;
   color: $text-04;
 }
