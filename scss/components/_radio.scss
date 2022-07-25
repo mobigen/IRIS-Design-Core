@@ -208,7 +208,7 @@
 
   .radio__label {
     height: rem(32px);
-    padding: 0 $spacing-md;
+    padding: 0 $spacing-sm;
     line-height: 1;
     border: 1px solid $ui-04;
 
@@ -248,7 +248,7 @@
 
   .radio--sm {
     .radio__label {
-      padding: 0 $spacing-md;
+      padding: 0 $spacing-xs;
       height: rem(24px);
     }
   }
