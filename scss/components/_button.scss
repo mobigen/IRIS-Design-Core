@@ -120,31 +120,21 @@
 
 @mixin button--tertiary {
   @include button-theme($ui-02, $text-02, $ui-01, $ui-03, $ui-04);
+
+  &:active {
+    border-color: transparent;
+    color: $text-04;
+
+    .svg-icon {
+      fill: $ui-02;
+    }
+  }
 }
 
 @mixin button--link {
-  @include button-theme(transparent, $text-02, transparent, transparent);
-  &:hover:not(:disabled) {
-    color: $text-03;
-
-    .svg-icon {
-      fill: $text-03;
-    }
-  }
+  @include button-theme(transparent, $text-02, $ui-01, rgba($secondary, 0.17), transparent);
 
   &:active {
-    color: darken($text-02, 0.25);
-
-    .svg-icon {
-      fill: darken($text-02, 0.25);
-    }
-  }
-}
-
-@mixin button--support {
-  @include button-theme($ui-02, $primary, #e1eaf7, #c6d8f2, $ui-04);
-  // support 예외 사항
-  &:hover:not(:disabled) {
     color: $primary;
 
     .svg-icon {
@@ -153,16 +143,19 @@
   }
 }
 
+@mixin button--support {
+  @include button-theme($ui-02, $primary, rgba($primary, 0.07), rgba($primary, 0.15), $ui-04);
+  // support 예외 사항
+  &:hover:not(:disabled) {
+    border-color: $primary;
+  }
+}
+
 @mixin button--danger {
-  @include button-theme($ui-02, $negative, $negative, $active-negative, $ui-04);
+  @include button-theme($ui-02, $negative, rgba($negative, 0.07), rgba($negative, 0.15), $ui-04);
   // danger 예외 사항
   &:hover:not(:disabled) {
-    color: $text-04;
     border-color: $negative;
-
-    .svg-icon {
-      fill: $text-04;
-    }
   }
 }
 
