@@ -54,7 +54,7 @@
   }
 
   &__button {
-    @include text-overflow;
+    @include ellipsis;
     @include button-normal;
     @include font-weight("regular");
     @include stable-padding($spacing-2xs, $spacing-xs);
@@ -110,7 +110,7 @@
   }
 
   &__text {
-    @include text-overflow;
+    @include ellipsis;
     @include font-size("14");
     @include line-height("heading");
     vertical-align: middle;
@@ -164,7 +164,7 @@
   // checkbox, radio overwrite
   // -------------------------
   &__item .checkbox {
-    @include text-overflow;
+    @include ellipsis;
     @include stable-padding($spacing-2xs, $spacing-xs);
     // background-color: $ui-02;
     height: $button-height-md;
@@ -196,7 +196,7 @@
   }
 
   &__item .radio {
-    @include text-overflow;
+    @include ellipsis;
     @include stable-padding($spacing-2xs, $spacing-xs);
     // background-color: $ui-02;
     height: $button-height-md;
@@ -361,7 +361,7 @@
   }
 
   &__text {
-    @include text-overflow;
+    @include ellipsis;
     @include font-size("14");
     @include line-height("heading");
     width: 100%;

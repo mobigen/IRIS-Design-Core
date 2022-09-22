@@ -1,27 +1,5 @@
-// New Design System
-// @button-base                    || 모든 버튼에 사용되는 공통 스타일 믹스인
-// 1. Type 별 Button 클래스          || 형태를 결정하는 버튼 유형 클래스 (기본은 md 사이즈)
-// button                          || 기본 버튼
-// button--icon                    || 아이콘 버튼
-// 2. 6개 Theme별 Button 클래스
-// @button-theme                   || 믹스인
-// button--primary
-// button--secondary
-// button--tertiary
-// button--link
-// button--support
-// button--danger
-// button--negative
-// button--underline
-// button--underline-support
-// button--underline-negative
-// 3. Size별 Button 클래스            || 버튼 사이즈를 결정하는 클래스 (버튼 유형마다 여백이 달라짐)
-// button--lg
-// button--md
-// button--sm
-
 // -------------------------
-// button-base
+// button-base || 모든 버튼에 사용되는 공통 스타일 믹스인
 // -------------------------
 @mixin button-base {
   @include button-normal;
@@ -132,7 +110,13 @@
 }
 
 @mixin button--link {
-  @include button-theme(transparent, $text-02, $ui-01, rgba($secondary, 0.17), transparent);
+  @include button-theme(
+    transparent,
+    $text-02,
+    $ui-01,
+    rgba($secondary, 0.17),
+    transparent
+  );
 
   &:active {
     color: $primary;
@@ -144,7 +128,13 @@
 }
 
 @mixin button--support {
-  @include button-theme($ui-02, $primary, rgba($primary, 0.07), rgba($primary, 0.15), $ui-04);
+  @include button-theme(
+    $ui-02,
+    $primary,
+    rgba($primary, 0.07),
+    rgba($primary, 0.15),
+    $ui-04
+  );
   // support 예외 사항
   &:hover:not(:disabled) {
     border-color: $primary;
@@ -152,7 +142,13 @@
 }
 
 @mixin button--danger {
-  @include button-theme($ui-02, $negative, rgba($negative, 0.07), rgba($negative, 0.15), $ui-04);
+  @include button-theme(
+    $ui-02,
+    $negative,
+    rgba($negative, 0.07),
+    rgba($negative, 0.15),
+    $ui-04
+  );
   // danger 예외 사항
   &:hover:not(:disabled) {
     border-color: $negative;
@@ -290,130 +286,132 @@
 // -------------------------
 .button {
   @include button;
-}
 
-.button--icon {
-  @include button--icon(6px, 20px);
-}
-
-.button--tertiary {
-  @include button--tertiary;
-}
-
-.button--primary {
-  @include button--primary;
-}
-
-.button--secondary {
-  @include button--secondary;
-}
-
-.button--link {
-  @include button--link;
-}
-
-.button--support {
-  @include button--support;
-}
-
-.button--danger {
-  @include button--danger;
-}
-
-.button--negative {
-  @include button--negative;
-}
-
-.button--underline {
-  @include button--underline;
-}
-
-.button--underline-support {
-  @include button--underline-support;
-}
-
-.button--underline-negative {
-  @include button--underline-negative;
-}
-
-.button--lg {
-  @include button--lg;
-
-  .svg-icon + .button__text {
-    margin-left: $spacing-xs * 0.75;
+  &--icon {
+    @include button--icon(6px, 20px);
   }
-}
 
-.button--sm {
-  @include button--sm;
-}
+  &--tertiary {
+    @include button--tertiary;
+  }
 
-.button--icon.button--lg {
-  @include button--icon(8px, 24px);
-}
+  &--primary {
+    @include button--primary;
+  }
 
-.button--icon.button--sm {
-  @include button--icon(4px, 16px);
-}
+  &--secondary {
+    @include button--secondary;
+  }
 
-// link 테마 버튼이 icon만 사용되는 경우 예외 사항
-.button--icon.button--link {
-  @include button--icon(4px, 24px);
-}
+  &--link {
+    @include button--link;
+  }
 
-.button--icon.button--link.button--lg {
-  @include button--icon(4px, 28px);
-}
+  &--support {
+    @include button--support;
+  }
 
-.button--icon.button--link.button--sm {
-  @include button--icon(2px, 20px);
-}
+  &--danger {
+    @include button--danger;
+  }
 
-.button--icon.button--link.button--xs {
-  @include button--icon(1px, 16px);
-}
+  &--negative {
+    @include button--negative;
+  }
 
-// underline 테마 버튼일 때 예외 사항
-.button--lg.button--underline,
-.button--lg.button--underline-support,
-.button--lg.button--underline-negative,
-.button--sm.button--underline,
-.button--sm.button--underline-support,
-.button--sm.button--underline-negative {
-  padding-left: 0;
-  padding-right: 0;
+  &--underline {
+    @include button--underline;
+  }
+
+  &--underline-support {
+    @include button--underline-support;
+  }
+
+  &--underline-negative {
+    @include button--underline-negative;
+  }
+
+  &--lg {
+    @include button--lg;
+
+    .svg-icon + .button__text {
+      margin-left: $spacing-xs * 0.75;
+    }
+  }
+
+  &--sm {
+    @include button--sm;
+  }
+
+  &--icon {
+    &.button--lg {
+      @include button--icon(8px, 24px);
+    }
+
+    &.button--sm {
+      @include button--icon(4px, 16px);
+    }
+
+    // link 테마 버튼이 icon만 사용되는 경우 예외 사항
+    &.button--link {
+      @include button--icon(4px, 24px);
+    }
+
+    &.button--link.button--lg {
+      @include button--icon(4px, 28px);
+    }
+
+    &.button--link.button--sm {
+      @include button--icon(2px, 20px);
+    }
+
+    &.button--link.button--xs {
+      @include button--icon(1px, 16px);
+    }
+  }
+
+  // underline 테마 버튼일 때 예외 사항
+  &--lg.button--underline,
+  &--lg.button--underline-support,
+  &--lg.button--underline-negative,
+  &--sm.button--underline,
+  &--sm.button--underline-support,
+  &--sm.button--underline-negative {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .button-group {
   display: flex;
-}
 
-.button-group__button.select {
-  min-width: auto;
-}
+  &__button.select {
+    min-width: auto;
+  }
 
-.button-group__button:first-child,
-.button-group__button:first-child .select-selector__button {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
+  &__button:first-child,
+  &__button:first-child .select-selector__button {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
 
-.button-group__button:last-child,
-.button-group__button:first-child .select-selector__button {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
+  &__button:last-child,
+  &__button:first-child .select-selector__button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
 
-.button-group__button + .button-group__button,
-.button-group__button + .button-group__button .select-selector__button {
-  border-left-width: 0;
-}
+  &__button + .button-group__button,
+  &__button + .button-group__button .select-selector__button {
+    border-left-width: 0;
+  }
 
-.button-group__button .svg-icon {
-  @include svg-icon-size(20px);
-}
+  &__button .svg-icon {
+    @include svg-icon-size(20px);
+  }
 
-.button-group__button .select-selector__button {
-  padding-left: $spacing-xs;
-  padding-right: $spacing-lg;
+  &__button .select-selector__button {
+    padding-left: $spacing-xs;
+    padding-right: $spacing-lg;
+  }
 }

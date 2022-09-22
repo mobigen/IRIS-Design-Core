@@ -1,16 +1,23 @@
 //-------------------------------------------
-//  Breakpoints - 신규 방식
-//  Desktop 우선 순위로 적용
+// Desktop First -> max-width
+// Mobile First -> min-width
 // ------------------------------------------
+// 1440px / 1024px / 768px / 480px / 360px
 $breakpoints: (
-  "laptop": (
-    max-width: rem(1279px)
+  "breakpoint-xl": (
+    max-width: rem(1440px)
   ),
-  "tablet": (
-    max-width: rem(767px)
+  "breakpoint-lg": (
+    max-width: rem(1024px)
   ),
-  "mobile": (
+  "breakpoint-md": (
+    max-width: rem(768px)
+  ),
+  "breakpoint-sm": (
     max-width: rem(480px)
+  ),
+  "breakpoint-xs": (
+    max-width: rem(360px)
   )
 ) !default;
 
