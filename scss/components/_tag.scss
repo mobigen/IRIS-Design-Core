@@ -42,6 +42,7 @@
   }
 }
 
+// TODO: 추후 삭제 필요 (사용안함)
 .tag__remove-button {
   width: rem(14px);
   height: rem(14px);
@@ -55,6 +56,7 @@
   }
 }
 
+// 신규 사용
 .tag__delete-button {
   @include button-normal;
   width: rem(14px);
