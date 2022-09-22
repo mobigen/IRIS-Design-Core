@@ -179,7 +179,7 @@
 
   // 복사 버튼
   .ag-cell__group {
-    @include text-overflow;
+    @include ellipsis;
     position: relative;
     padding-right: $spacing-sm * 3;
   }
@@ -232,7 +232,7 @@
 }
 
 .search-result__text {
-  @include text-overflow;
+  @include ellipsis;
   @include font-size("20");
   margin-top: $spacing-xs;
   color: $text-03;
@@ -242,6 +242,3 @@
   width: rem(72px);
   height: rem(72px);
 }
-
-
-

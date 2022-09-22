@@ -61,16 +61,6 @@ $font-weights: (
 //-------------------------------------------
 //  Font Size
 // ------------------------------------------
-$base-font-size: 16px !default; // Default
-
-@function rem($px) {
-  @return math.div($px, $base-font-size) * 1rem;
-}
-
-@function em($px) {
-  @return math.div($px, $base-font-size) * 1em;
-}
-
 // 두꺼운 서체에서 사용되는 font-smoothing
 @mixin font-smoothing {
   -webkit-font-smoothing: antialiased;

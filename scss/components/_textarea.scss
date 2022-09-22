@@ -59,22 +59,22 @@
     @include font-weight("light");
     color: $text-05;
   }
-}
 
-.text-area--fixed {
-  resize: none;
-}
+  &--fixed {
+    resize: none;
+  }
 
-.text-area-wrap {
-  width: 100%;
-}
+  &-wrap {
+    width: 100%;
 
-.text-area-wrap__foot-buttons {
-  display: flex;
-}
+    &__foot-buttons {
+      display: flex;
+    }
 
-.text-area-wrap__foot-text {
-  @include font-size("12");
-  @include line-height("title");
-  color: $text-03;
+    &__foot-text {
+      @include font-size("12");
+      @include line-height("title");
+      color: $text-03;
+    }
+  }
 }
