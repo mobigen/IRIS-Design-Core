@@ -36,6 +36,36 @@
   }
 }
 
+// 신규 추가
+.index-layout-head__tab {
+  &.tab {
+    height: 100%;
+  }
+
+  .tab {
+    &__bar {
+      height: 100%;
+      &:after {
+        content: none;
+      }
+    }
+
+    &__item {
+      height: 100%;
+      &--selected {
+        &:after {
+          height: rem(3px);
+        }
+      }
+    }
+
+    &__button-text {
+      @include font-weight("medium");
+      @include font-size("15");
+    }
+  }
+}
+
 .index-layout-body {
   display: flex;
   flex-direction: column;

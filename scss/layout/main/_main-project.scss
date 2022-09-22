@@ -270,6 +270,7 @@
 
     &:hover,
     &:active {
+      background-color: transparent;
       .svg-icon {
         fill: $ui-02;
       }
