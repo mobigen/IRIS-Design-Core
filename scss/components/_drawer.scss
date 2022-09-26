@@ -15,7 +15,7 @@
 
     &-title {
       @include font-weight("medium");
-      @include ellipsis;
+      @include text-overflow;
       @include font-size("18");
       flex: 1;
     }

@@ -23,7 +23,7 @@
     }
 
     &-title {
-      @include ellipsis;
+      @include text-overflow;
       display: flex;
       flex: 1 0 auto;
       align-items: center;
@@ -31,7 +31,7 @@
     }
 
     &-subtitle {
-      @include ellipsis;
+      @include text-overflow;
       @include line-height("body");
       @include font-size("13");
       margin-left: $spacing-2xs;

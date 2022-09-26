@@ -21,7 +21,7 @@
 
     &-title {
       @include font-weight("medium");
-      @include ellipsis;
+      @include text-overflow;
       color: $text-02;
       margin-bottom: $spacing-3xs;
     }
@@ -164,13 +164,13 @@
         margin-right: $spacing-xs;
 
         &-layer {
-          @include ellipsis(block);
+          @include text-overflow(block);
           @include font-size("12");
           color: $text-03;
         }
 
         &-text {
-          @include ellipsis(block);
+          @include text-overflow(block);
         }
       }
 
@@ -182,7 +182,7 @@
         overflow: hidden;
 
         &-text {
-          @include ellipsis(block);
+          @include text-overflow(block);
           margin-left: $spacing-2xs;
         }
       }

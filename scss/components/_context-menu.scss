@@ -59,7 +59,7 @@
     padding: $spacing-2xs $spacing-sm;
     background-color: $hover-row;
     &-title {
-      @include ellipsis;
+      @include text-overflow;
       @include font-size("14");
       @include font-weight("medium");
       flex: 1;

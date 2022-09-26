@@ -235,7 +235,7 @@
 
     .text-input {
       @include font-weight("regular");
-      @include ellipsis;
+      @include text-overflow;
       width: 100%;
       height: 100%;
       padding-right: $spacing-xl;
@@ -260,7 +260,7 @@
   }
 
   &__title {
-    @include ellipsis;
+    @include text-overflow;
     @include font-size("14");
     @include font-weight("regular");
     color: $text-02;

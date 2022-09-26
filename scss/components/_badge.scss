@@ -85,7 +85,7 @@
     }
 
     .badge__label {
-      @include ellipsis(100%);
+      @include text-overflow(100%);
       text-align: center;
     }
 
