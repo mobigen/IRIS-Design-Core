@@ -334,7 +334,7 @@ input[type="range"] + .text-input-wrap .text-input {
 
   &__title {
     @include font-weight("regular");
-    @include ellipsis();
+    @include text-overflow();
   }
 
   &__button {

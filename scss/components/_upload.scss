@@ -71,7 +71,7 @@
   }
   &__input {
     @include text-input;
-    @include ellipsis;
+    @include text-overflow;
     height: 100%;
     border-radius: 0;
 

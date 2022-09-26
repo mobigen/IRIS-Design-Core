@@ -10,7 +10,7 @@
 }
 
 // 한줄 말줄임 적용
-@mixin ellipsis($width: false) {
+@mixin text-overflow($width: false) {
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -22,8 +22,8 @@
 }
 
 // 원하는 줄 수로 말줄임 적용
-// @include ellipsis-multi(line-height 값, 줄 수)
-@mixin ellipsis-multi($line-height, $lines) {
+// @include multi-text-overflow(line-height 값, 줄 수)
+@mixin multi-text-overflow($line-height, $lines) {
   display: block;
   display: -webkit-box;
   overflow: hidden;

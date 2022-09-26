@@ -40,7 +40,7 @@
 
   &__head-title {
     @include font-weight("medium");
-    @include ellipsis(100%);
+    @include text-overflow(100%);
     display: flex;
     align-items: center;
     color: $text-02;

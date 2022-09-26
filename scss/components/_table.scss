@@ -282,7 +282,7 @@
   }
 
   &-title {
-    @include ellipsis();
+    @include text-overflow();
     @include font-weight("regular");
     @include font-size("13");
     @include line-height("heading");
@@ -319,7 +319,7 @@
   }
 
   &-target-text {
-    @include ellipsis;
+    @include text-overflow;
     &:hover {
       text-decoration: underline;
     }

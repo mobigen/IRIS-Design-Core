@@ -40,7 +40,7 @@
     }
 
     &-title-text {
-      @include ellipsis;
+      @include text-overflow;
       @include font-size("14");
       @include font-weight("medium");
       @include line-height("title");
@@ -92,7 +92,7 @@
   @include list;
 
   &__text {
-    @include ellipsis;
+    @include text-overflow;
     width: 100%;
     margin: 0;
   }

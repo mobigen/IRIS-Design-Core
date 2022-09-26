@@ -105,7 +105,7 @@
     &-helper-text {
       @include font-size("12");
       @include line-height("heading");
-      @include ellipsis;
+      @include text-overflow;
       padding-left: $spacing-2xs;
       color: $text-03;
     }

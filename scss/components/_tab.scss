@@ -89,7 +89,7 @@
     }
 
     &-text {
-      @include ellipsis;
+      @include text-overflow;
       color: $text-02;
     }
   }
