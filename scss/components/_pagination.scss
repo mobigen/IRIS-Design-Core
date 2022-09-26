@@ -6,74 +6,74 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
 
-  &__button,
-  &__link {
-    @include button-normal;
-    @include font-weight("regular");
-    width: rem(32px);
-    height: rem(32px);
-    background-color: transparent;
-    border-radius: $field-border-radius;
+.pagination__button,
+.pagination__link {
+  @include button-normal;
+  @include font-weight("regular");
+  width: rem(32px);
+  height: rem(32px);
+  background-color: transparent;
+  border-radius: $field-border-radius;
+  color: $text-02;
+}
+
+.pagination__link {
+  &:hover:not(:disabled) {
+    background-color: $ui-01;
     color: $text-02;
   }
 
-  &__link {
-    &:hover:not(:disabled) {
-      background-color: $ui-01;
-      color: $text-02;
-    }
+  &:focus,
+  &:focus:hover {
+    background-color: $primary;
+    color: $ui-02;
 
-    &:focus,
-    &:focus:hover {
-      background-color: $primary;
-      color: $ui-02;
-
-      .svg-icon {
-        fill: $ui-02;
-      }
-    }
-
-    &--selected {
-      background-color: $primary;
-      color: $ui-02;
-
-      .svg-icon {
-        fill: $ui-02;
-      }
+    .svg-icon {
+      fill: $ui-02;
     }
   }
 
-  &__list {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
+  &--selected {
+    background-color: $primary;
+    color: $ui-02;
 
-  &__ellipsis {
-    display: block;
-    padding: 0 $spacing-xs;
+    .svg-icon {
+      fill: $ui-02;
+    }
   }
+}
 
-  &__input {
-    @include font-weight("medium");
-    width: auto;
-    height: rem(28px);
-    padding: $spacing-2xs $spacing-xs;
-    line-height: rem(18px);
-    border-color: transparent;
-  }
+.pagination__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
 
-  &__dash {
-    @include line-height("heading");
-    margin-right: $spacing-2xs;
-    margin-left: $spacing-2xs;
-  }
+.pagination__ellipsis {
+  display: block;
+  padding: 0 $spacing-xs;
+}
 
-  &__last-page {
-    @include line-height("heading");
-    margin-right: $spacing-2xs;
-    margin-left: $spacing-2xs;
-  }
+.pagination__input {
+  @include font-weight("medium");
+  width: auto;
+  height: rem(28px);
+  padding: $spacing-2xs $spacing-xs;
+  line-height: rem(18px);
+  border-color: transparent;
+}
+
+.pagination__dash {
+  @include line-height("heading");
+  margin-right: $spacing-2xs;
+  margin-left: $spacing-2xs;
+}
+
+.pagination__last-page {
+  @include line-height("heading");
+  margin-right: $spacing-2xs;
+  margin-left: $spacing-2xs;
 }

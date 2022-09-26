@@ -98,19 +98,19 @@
 .h-group {
   display: flex;
   align-items: center;
+}
 
-  & > *:not(:last-child) {
-    margin-right: $spacing-2xs;
-  }
+.h-group > *:not(:last-child) {
+  margin-right: $spacing-2xs;
+}
 
-  & ~ .h-group,
-  & .select {
-    width: auto;
-  }
+.h-group ~ .h-group,
+.h-group .select {
+  width: auto;
+}
 
-  &--half .h-group__item {
-    width: 50%;
-  }
+.h-group--half .h-group__item {
+  width: 50%;
 }
 
 .form__detail .h-group {
@@ -119,10 +119,10 @@
 
 .item-group {
   display: flex;
+}
 
-  & > *:not(:last-child) {
-    margin-right: $spacing-2xs;
-  }
+.item-group > *:not(:last-child) {
+  margin-right: $spacing-2xs;
 }
 
 // -------------------------
@@ -377,6 +377,13 @@
 .overflow-x {
   overflow-x: auto;
   overflow-y: hidden;
+}
+
+// -------------------------
+// font-size
+// -------------------------
+.font-size-11 {
+  @include font-size("11");
 }
 
 // -------------------------

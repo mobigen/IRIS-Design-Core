@@ -3,29 +3,30 @@
 // -------------------------
 .time-picker {
   @include picker;
-  // dropdown container
-  &-container {
-    @include list;
-    flex: auto;
-    height: rem(258px);
-    width: 100%;
-    min-width: rem(128px);
-  }
+}
 
-  &-container__list {
-    width: 33.33%;
-    overflow-y: auto;
+// dropdown container
+.time-picker-container {
+  @include list;
+  flex: auto;
+  height: rem(258px);
+  width: 100%;
+  min-width: rem(128px);
+}
 
-    &:not(:last-child) {
-      border-right: 1px solid $ui-04;
-    }
-  }
+.time-picker-container__list {
+  width: 33.33%;
+  overflow-y: auto;
 
-  &-container__button {
-    text-align: center;
+  &:not(:last-child) {
+    border-right: 1px solid $ui-04;
   }
+}
 
-  &-container__list + &-container__list::before {
-    display: none;
-  }
+.time-picker-container__button {
+  text-align: center;
+}
+
+.time-picker-container__list + .time-picker-container__list::before {
+  display: none;
 }

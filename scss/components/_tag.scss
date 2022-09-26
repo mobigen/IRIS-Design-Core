@@ -1,4 +1,143 @@
 // -------------------------
+// Tag
+// -------------------------
+.tag {
+  @include button-normal;
+  @include font-size("12");
+  height: rem(24px);
+  padding: 0 $spacing-2xs;
+  border-radius: $field-border-radius;
+  background-color: $hover-row;
+  color: $text-03;
+
+  &:hover:not(:disabled) {
+    background-color: darken($hover-row, 5%);
+    color: $primary;
+  }
+
+  &:focus-visible:not(:disabled) {
+    outline: 2px solid $default-focus;
+  }
+
+  &:disabled {
+    opacity: 0.25;
+    cursor: not-allowed;
+
+    .tag__remove-button:hover {
+      fill: $icon-01;
+    }
+  }
+}
+
+.tag__label {
+  @include line-height("heading");
+  @include font-weight("medium");
+}
+
+.tag__link {
+  color: $text-03;
+
+  &:focus-visible:not(:disabled) {
+    outline: 2px solid $default-focus;
+  }
+}
+
+// TODO: 추후 삭제 필요 (사용안함)
+.tag__remove-button {
+  width: rem(14px);
+  height: rem(14px);
+  margin-left: $spacing-2xs;
+  border-radius: $field-border-radius;
+  fill: $icon-01;
+
+  &:hover {
+    background-color: rgba($primary, 0.15);
+    fill: $primary;
+  }
+}
+
+// 신규 사용
+.tag__delete-button {
+  @include button-normal;
+  width: rem(14px);
+  height: rem(14px);
+  padding: 0;
+  margin-left: $spacing-2xs;
+  background-color: transparent;
+  border-radius: $button-border-radius;
+
+  .svg-icon {
+    width: rem(14px);
+    height: rem(14px);
+    fill: $icon-01;
+  }
+
+  &:hover {
+    background-color: rgba($primary, 0.15);
+    .svg-icon {
+      fill: $primary;
+    }
+  }
+
+  &:focus-visible:not(:disabled) {
+    outline: 2px solid $default-focus;
+  }
+}
+
+.tag--selected {
+  background-color: $primary;
+  color: $text-04;
+
+  &:hover:not(:disabled) {
+    background-color: $hover-primary;
+    color: $text-04;
+
+    .tag__link {
+      color: $text-04;
+    }
+  }
+
+  &:disabled {
+    .tag__remove-button:hover {
+      fill: $text-04;
+      background-color: transparent;
+    }
+  }
+
+  .tag__link {
+    color: $text-04;
+  }
+}
+
+.tag--selected .tag__remove-button {
+  fill: $text-04;
+
+  &:hover {
+    background-color: rgba($text-04, 0.2);
+  }
+}
+
+.tag--selected .tag__delete-button {
+  .svg-icon {
+    fill: $text-04;
+  }
+
+  &:hover {
+    background-color: rgba($text-04, 0.2);
+  }
+}
+
+.tag--lg {
+  @include font-size("14");
+  height: rem(32px);
+  padding: 0 $spacing-xs;
+}
+
+.tag--sm {
+  height: rem(18px);
+}
+
+// -------------------------
 // theme별 mixin
 // -------------------------
 @mixin tag-theme($bg-color, $font-color, $selected-font-color) {
@@ -85,181 +224,44 @@
   }
 }
 
-// -------------------------
-// Tag
-// -------------------------
-.tag {
-  @include button-normal;
-  @include font-size("12");
-  height: rem(24px);
-  padding: 0 $spacing-2xs;
-  border-radius: $field-border-radius;
-  background-color: $hover-row;
-  color: $text-03;
+.tag--red {
+  @include tag-theme(#ffd7d9, #da1e28, $text-04);
+}
 
-  &:hover:not(:disabled) {
-    background-color: darken($hover-row, 5%);
-    color: $primary;
-  }
+.tag--red-deep {
+  @include tag-theme(#ff676e, $text-04, $text-04);
+}
 
-  &:focus-visible:not(:disabled) {
-    outline: 2px solid $default-focus;
-  }
+.tag--cyan {
+  @include tag-theme(#bae6ff, #0089c9, $text-04);
+}
 
-  &:disabled {
-    opacity: 0.25;
-    cursor: not-allowed;
+.tag--cyan-deep {
+  @include tag-theme(#4abdff, $text-04, $text-04);
+}
 
-    .tag__remove-button:hover {
-      fill: $icon-01;
-    }
-  }
+.tag--green {
+  @include tag-theme(#c4f5d1, #198038, $text-04);
+}
 
-  &__label {
-    @include line-height("heading");
-    @include font-weight("medium");
-  }
+.tag--green-deep {
+  @include tag-theme(#59d079, $text-04, $text-04);
+}
 
-  &__link {
-    color: $text-03;
+.tag--teal {
+  @include tag-theme(#adf0f0, #007d79, $text-04);
+}
 
-    &:focus-visible:not(:disabled) {
-      outline: 2px solid $default-focus;
-    }
-  }
+.tag--teal-deep {
+  @include tag-theme(#3de1e1, $text-04, $text-04);
+}
 
-  // TODO: 추후 삭제 필요 (사용안함)
-  &__remove-button {
-    width: rem(14px);
-    height: rem(14px);
-    margin-left: $spacing-2xs;
-    border-radius: $field-border-radius;
-    fill: $icon-01;
+.tag--purple {
+  @include tag-theme(#decff5, #6929c4, $text-04);
+}
 
-    &:hover {
-      background-color: rgba($primary, 0.15);
-      fill: $primary;
-    }
-  }
-
-  // 신규 사용
-  &__delete-button {
-    @include button-normal;
-    width: rem(14px);
-    height: rem(14px);
-    padding: 0;
-    margin-left: $spacing-2xs;
-    background-color: transparent;
-    border-radius: $button-border-radius;
-
-    .svg-icon {
-      width: rem(14px);
-      height: rem(14px);
-      fill: $icon-01;
-    }
-
-    &:hover {
-      background-color: rgba($primary, 0.15);
-      .svg-icon {
-        fill: $primary;
-      }
-    }
-
-    &:focus-visible:not(:disabled) {
-      outline: 2px solid $default-focus;
-    }
-  }
-
-  &--selected {
-    background-color: $primary;
-    color: $text-04;
-
-    &:hover:not(:disabled) {
-      background-color: $hover-primary;
-      color: $text-04;
-
-      .tag__link {
-        color: $text-04;
-      }
-    }
-
-    &:disabled {
-      .tag__remove-button:hover {
-        fill: $text-04;
-        background-color: transparent;
-      }
-    }
-
-    .tag__link {
-      color: $text-04;
-    }
-    .tag__remove-button {
-      fill: $text-04;
-
-      &:hover {
-        background-color: rgba($text-04, 0.2);
-      }
-    }
-
-    .tag__delete-button {
-      .svg-icon {
-        fill: $text-04;
-      }
-
-      &:hover {
-        background-color: rgba($text-04, 0.2);
-      }
-    }
-  }
-
-  &--lg {
-    @include font-size("14");
-    height: rem(32px);
-    padding: 0 $spacing-xs;
-  }
-
-  &--sm {
-    height: rem(18px);
-  }
-  &--red {
-    @include tag-theme(#ffd7d9, #da1e28, $text-04);
-  }
-
-  &--red-deep {
-    @include tag-theme(#ff676e, $text-04, $text-04);
-  }
-
-  &--cyan {
-    @include tag-theme(#bae6ff, #0089c9, $text-04);
-  }
-
-  &--cyan-deep {
-    @include tag-theme(#4abdff, $text-04, $text-04);
-  }
-
-  &--green {
-    @include tag-theme(#c4f5d1, #198038, $text-04);
-  }
-
-  &--green-deep {
-    @include tag-theme(#59d079, $text-04, $text-04);
-  }
-
-  &--teal {
-    @include tag-theme(#adf0f0, #007d79, $text-04);
-  }
-
-  &--teal-deep {
-    @include tag-theme(#3de1e1, $text-04, $text-04);
-  }
-
-  &--purple {
-    @include tag-theme(#decff5, #6929c4, $text-04);
-  }
-
-  &--purple-deep {
-    @include tag-theme(#a26aff, $text-04, $text-04);
-  }
+.tag--purple-deep {
+  @include tag-theme(#a26aff, $text-04, $text-04);
 }
 
 // 목록화면 쪽에서 사용 중으로 추후 제거
