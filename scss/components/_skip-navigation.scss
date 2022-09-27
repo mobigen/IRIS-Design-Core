@@ -1,0 +1,21 @@
+.skip-navigation {
+  &__link {
+    z-index: z("tooltip");
+    position: absolute;
+    top: rem(-200px);
+    left: 0;
+    width: rem(160px);
+    height: rem(48px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $ui-02;
+    color: $ui-02;
+    background: $secondary;
+
+    &:active,
+    &:focus {
+      top: 0;
+    }
+  }
+}
