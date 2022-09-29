@@ -3,6 +3,7 @@
 // -------------------------
 .table {
   width: 100%;
+  border: 1px solid $ui-04;
 }
 
 .table caption {
@@ -127,10 +128,6 @@ th .button {
 // -------------------------
 // Theme - table--secondary
 // -------------------------
-.table--secondary {
-  border: 1px solid $ui-04;
-}
-
 .table--secondary tr:nth-child(2n) td {
   background-color: $odd-row;
 }
