@@ -147,7 +147,7 @@
 // -------------------------
 .checkbox--lg {
   .checkbox__label {
-    @include font-size("16");
+    @include font-size("15");
     padding-left: $spacing-lg + $spacing-2xs;
     min-height: rem(28px);
   }

@@ -26,7 +26,7 @@
   @include line-height("heading");
   @include font-weight("regular");
   position: relative;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   padding-left: $spacing-lg;
   min-height: $layout-xs;
@@ -127,7 +127,7 @@
 // -------------------------
 .radio--lg {
   .radio__label {
-    @include font-size("16");
+    @include font-size("15");
     padding-left: $spacing-lg + $spacing-2xs; //width of radio 20px + 8px of padding
     min-height: rem(28px);
   }
