@@ -13,10 +13,10 @@
 }
 
 .modal__head {
+  @include stable-padding($spacing-2xs, $spacing-sm);
   display: flex;
   align-items: center;
-  padding: $spacing-2xs $spacing-sm $spacing-2xs $spacing-md;
-  min-height: rem(38px);
+  min-height: rem(40px);
   border-bottom: 1px solid $ui-04;
 }
 
@@ -30,6 +30,13 @@
   flex: 1 0 auto;
   align-items: center;
   width: calc(100% - 140px);
+}
+
+.modal__head-title-text {
+  @include text-overflow;
+  @include line-height("body");
+  @include font-size("14");
+  color: $text-02;
 }
 
 .modal__head-subtitle {
