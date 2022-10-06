@@ -78,7 +78,7 @@
 }
 
 .modal__foot {
-  @include stable-padding($spacing-xs, $spacing-sm);
+  @include stable-padding($spacing-sm, $spacing-sm);
   display: flex;
   background-color: $ui-01;
 }
