@@ -6,9 +6,16 @@
   align-items: center;
 }
 
-.steps__item {
+.steps__item,
+.steps__button {
   display: flex;
   align-items: center;
+}
+
+.steps__button {
+  @include button-base;
+  padding: 0;
+  background-color: $ui-02;
 }
 
 .steps__item + .steps__item {
@@ -27,12 +34,18 @@
 
 .steps__icon-text {
   @include font-weight("bold");
-  @include font-size("16");
+  @include font-size("15");
   color: $text-04;
 }
 
 .steps__title {
-  margin-left: $spacing-xs;
+  margin-left: rem(10px);
+}
+
+.steps__title-text {
+  @include font-weight("medium");
+  @include font-size("15");
+  color: $text-02;
 }
 
 .steps__item--current .steps__icon {
