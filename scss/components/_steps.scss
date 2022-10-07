@@ -14,8 +14,13 @@
 
 .steps__button {
   @include button-base;
+  height: auto;
   padding: 0;
+  line-height: 1;
   background-color: $ui-02;
+  border-radius: none;
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
 }
 
 .steps__item + .steps__item {
