@@ -348,6 +348,10 @@
       height: $button-height-lg;
     }
 
+    .select-container__text {
+      @include font-size("14");
+    }
+
     .select-container__icon {
       @include svg-icon-size(20px);
       right: $spacing-sm;

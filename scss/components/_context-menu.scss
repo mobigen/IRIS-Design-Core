@@ -102,43 +102,10 @@
 
   .context-menu__button {
     @include stable-padding($spacing-2xs, $spacing-sm);
-    height: $button-height-lg;
-  }
-
-  .context-menu__icon,
-  .context-menu__action-button .svg-icon {
-    @include svg-icon-size(20px);
   }
 
   .context-submenu__button {
     @include stable-padding($spacing-2xs, $spacing-sm);
-    height: $button-height-lg;
-  }
-
-  .checkbox {
-    @include stable-padding($spacing-2xs, $spacing-sm);
-    height: $button-height-lg;
-
-    .checkbox__label {
-      height: 100%;
-
-      &::before {
-        top: 50%;
-        margin-top: -$spacing-xs;
-      }
-
-      &::after {
-        top: 50%;
-        margin-top: -$spacing-xs;
-      }
-    }
-  }
-  .checkbox--indeterminate {
-    .checkbox__label {
-      &::after {
-        margin-top: rem(-3px);
-      }
-    }
   }
 }
 

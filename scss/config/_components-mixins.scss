@@ -111,7 +111,7 @@
 
   &__text {
     @include text-overflow;
-    @include font-size("14");
+    @include font-size("13");
     @include line-height("heading");
     vertical-align: middle;
     color: $text-01;
@@ -284,6 +284,46 @@
 
   &__item--selected &__action-button .button__text {
     color: $primary;
+  }
+
+  &--lg &__button {
+    height: rem(40px);
+  }
+
+  &--lg .checkbox {
+    @include stable-padding($spacing-2xs, $spacing-sm);
+    height: rem(40px);
+
+    .checkbox__label {
+      height: 100%;
+
+      &::before {
+        top: 50%;
+        margin-top: -$spacing-xs;
+      }
+
+      &::after {
+        top: 50%;
+        margin-top: -$spacing-xs;
+      }
+    }
+
+    &.checkbox--indeterminate {
+      .checkbox__label {
+        &::after {
+          margin-top: rem(-4px);
+        }
+      }
+    }
+  }
+
+  &--lg &__text {
+    @include font-size("14");
+  }
+
+  &--lg &__icon,
+  &--lg .list__action-button .svg-icon {
+    @include svg-icon-size(20px);
   }
 }
 

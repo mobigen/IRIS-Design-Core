@@ -74,17 +74,13 @@
   height: rem(40px);
 }
 
-.list__button .list__icon {
-  width: rem(24px);
-  height: rem(24px);
-}
-
 .list__button .list__subicon {
   width: rem(20px);
   height: rem(20px);
 }
 
 .list__subtext {
+  @include font-size("13");
   margin-left: $spacing-2xs;
   color: $text-03;
 }
@@ -319,8 +315,4 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   line-height: 2rem;
-}
-
-.list--lg .list__item {
-  height: rem(40px);
 }
