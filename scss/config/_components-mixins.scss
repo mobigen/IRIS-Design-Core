@@ -292,7 +292,6 @@
   }
 
   &--lg .checkbox {
-    @include stable-padding($spacing-2xs, $spacing-sm);
     height: rem(40px);
 
     .checkbox__label {
@@ -315,6 +314,25 @@
         &::after {
           margin-top: rem(-4px);
         }
+      }
+    }
+  }
+
+  &--lg .radio {
+    height: rem(40px);
+
+    .radio__label {
+      @include font-size("14");
+      height: 100%;
+
+      &::before {
+        top: 50%;
+        margin-top: -$spacing-xs;
+      }
+
+      &::after {
+        top: 50%;
+        margin-top: -3px;
       }
     }
   }
