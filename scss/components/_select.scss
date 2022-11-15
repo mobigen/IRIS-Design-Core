@@ -366,6 +366,18 @@
       @include svg-icon-size(20px);
       right: $spacing-sm;
     }
+
+    .select-container__notification{
+      height: $button-height-lg;
+
+      .notification-message__icon{
+        @include svg-icon-size(20px);
+      }
+
+      .notification-message__text{
+        @include font-size("14");
+      }
+    }
   }
 }
 
@@ -404,6 +416,10 @@
 
     .select-container__text {
       @include font-size("12");
+    }
+
+    .select-container__notification{
+      height: $button-height-sm;
     }
   }
 }
