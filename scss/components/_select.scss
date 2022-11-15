@@ -333,6 +333,16 @@
   box-shadow: 0 0 rem(8px) 0 $box-shadow;
 }
 
+.select-container__notification, .notification-message{
+  width: 100%;
+
+  .notification-message__text{
+    @include text-overflow();
+  }
+}
+
+
+
 // -------------------------
 // Size overwrite
 // -------------------------
