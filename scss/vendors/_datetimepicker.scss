@@ -1,4 +1,5 @@
 .mx-input {
+  @include font-family("sans");
   @include font-size("14");
   height: rem(32px);
   padding: 0 $spacing-xl 0 $spacing-sm;
@@ -17,6 +18,12 @@
         background-color: $hover-field-border;
       }
     }
+
+    + .mx-icon-clear {
+      &:after {
+        background-color: $hover-field-border;
+      }
+    }
   }
 
   &:focus {
@@ -27,6 +34,11 @@
       &:after {
         background-color: $secondary;
       }
+    }
+
+    ~ .mx-icon-calendar:after,
+    ~ .mx-icon-clear:after {
+      background-color: $secondary;
     }
   }
 
@@ -180,4 +192,26 @@
 
 .mx-btn-shortcut {
   @include font-size("12");
+}
+
+// Size - Lg
+.mx-datepicker--lg {
+  .mx-input {
+    padding-right: rem(40px);
+    height: $button-height-lg;
+  }
+
+  .mx-icon-calendar,
+  .mx-icon-clear {
+    right: rem(10px);
+    width: rem(20px);
+    height: rem(20px);
+  }
+
+  .mx-icon-calendar:after,
+  .mx-icon-clear:after {
+    right: rem(30px);
+    top: rem(-9px);
+    height: rem(38px);
+  }
 }
