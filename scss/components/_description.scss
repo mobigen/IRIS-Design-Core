@@ -36,6 +36,11 @@
   word-break: normal;
 }
 
+.description__title-group {
+  display: flex;
+  justify-content: space-between;
+}
+
 .description__text {
   @include text-overflow;
   flex: 1;
