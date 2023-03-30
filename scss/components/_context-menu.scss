@@ -14,8 +14,16 @@
 				color: $text-02;
 			}
 
+			.context-menu__icon {
+				fill: $text-02;
+			}
+
 			> .context-menu__text {
 				color: $primary;
+			}
+
+			> .context-menu__icon {
+				fill: $primary;
 			}
 		}
 	}
