@@ -2,142 +2,155 @@
 // Context menu
 // -------------------------
 .context-menu {
-  @include list;
-  @include layer("pop-out");
-  position: absolute;
-  border-radius: $field-border-radius;
-  z-index: z("overlay");
+	@include list;
+	@include layer("pop-out");
+	position: absolute;
+	border-radius: $field-border-radius;
+	z-index: z("overlay");
+
+	&__button {
+		&:active {
+			.context-menu__text {
+				color: $text-02;
+			}
+
+			> .context-menu__text {
+				color: $primary;
+			}
+		}
+	}
 }
 
 .context-menu__list {
-  min-width: rem(130px);
-  padding: $spacing-2xs 0;
-  background-color: $ui-02;
+	min-width: rem(130px);
+	padding: $spacing-2xs 0;
+	background-color: $ui-02;
 }
 
 .context-menu__icon {
-  fill: $text-02;
+	fill: $text-02;
 }
 
 .context-menu__text {
-  flex-grow: 1;
-  color: $text-02;
+	flex-grow: 1;
+	color: $text-02;
 }
 
 .context-menu__subtext {
-  @include font-size("12");
-  color: $text-03;
-  margin-left: $spacing-md;
+	@include font-size("12");
+	color: $text-03;
+	margin-left: $spacing-md;
 }
 
 .context-submenu {
-  @include list;
-  @include layer("pop-out");
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 100%;
-  border-radius: $field-border-radius;
-  z-index: z("overlay");
+	@include list;
+	@include layer("pop-out");
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 100%;
+	border-radius: $field-border-radius;
+	z-index: z("overlay");
 }
 
 .context-menu__item:hover .context-submenu {
-  display: block;
+	display: block;
 }
 
 .context-submenu__list {
-  min-width: rem(100px);
-  padding: $spacing-2xs 0;
-  background-color: $ui-02;
+	min-width: rem(100px);
+	padding: $spacing-2xs 0;
+	background-color: $ui-02;
 }
 
 .context-menu__submenu-icon {
-  display: none;
-  margin-right: $spacing-3xs;
+	display: none;
+	margin-right: $spacing-3xs;
 }
 
 .context-menu__item--submenu .context-menu__submenu-icon {
-  display: block;
+	display: block;
 }
 
 .context-menu__head {
-  display: flex;
-  justify-content: flex-start;
-  width: 100%;
-  height: $button-height-md;
-  padding: $spacing-2xs $spacing-sm;
-  background-color: $hover-row;
+	display: flex;
+	justify-content: flex-start;
+	width: 100%;
+	height: $button-height-md;
+	padding: $spacing-2xs $spacing-sm;
+	background-color: $hover-row;
 }
 
 .context-menu__head-title {
-  @include text-overflow;
-  @include font-size("14");
-  @include font-weight("medium");
-  flex: 1;
-  text-align: left;
-  color: $text-02;
+	@include text-overflow;
+	@include font-size("14");
+	@include font-weight("medium");
+	flex: 1;
+	text-align: left;
+	color: $text-02;
 }
 
 .context-menu__foot {
-  @include stable-padding($spacing-xs, $spacing-sm);
-  display: flex;
-  background-color: $ui-01;
+	@include stable-padding($spacing-xs, $spacing-sm);
+	display: flex;
+	background-color: $ui-01;
 }
 
 .context-menu__foot-main-buttons {
-  display: flex;
-  margin-left: auto;
+	display: flex;
+	margin-left: auto;
 }
 
 .context-menu__foot .button + .button {
-  margin-left: $spacing-xs;
+	margin-left: $spacing-xs;
 }
+
 // -------------------------
 // Size overwrite
 // -------------------------
 .context-menu--lg {
-  .context-menu__list {
-    min-width: rem(140px);
-  }
+	.context-menu__list {
+		min-width: rem(140px);
+	}
 
-  .context-menu__button {
-    @include stable-padding($spacing-2xs, $spacing-sm);
-  }
+	.context-menu__button {
+		@include stable-padding($spacing-2xs, $spacing-sm);
+	}
 
-  .context-submenu__button {
-    @include stable-padding($spacing-2xs, $spacing-sm);
-  }
+	.context-submenu__button {
+		@include stable-padding($spacing-2xs, $spacing-sm);
+	}
 }
 
 .context-menu--sm {
-  .context-menu__list {
-    min-width: rem(110px);
-  }
+	.context-menu__list {
+		min-width: rem(110px);
+	}
 
-  .context-menu__button {
-    @include stable-padding($spacing-3xs, $spacing-xs);
-    height: $button-height-sm;
-    line-height: rem(9px);
-  }
+	.context-menu__button {
+		@include stable-padding($spacing-3xs, $spacing-xs);
+		height: $button-height-sm;
+		line-height: rem(9px);
+	}
 
-  .context-menu__icon,
-  .context-menu__action-button .svg-icon {
-    @include svg-icon-size(16px);
-  }
+	.context-menu__icon,
+	.context-menu__action-button .svg-icon {
+		@include svg-icon-size(16px);
+	}
 
-  .context-menu__text {
-    @include font-size("12");
-  }
+	.context-menu__text {
+		@include font-size("12");
+	}
 
-  .context-submenu__button {
-    @include stable-padding($spacing-3xs, $spacing-xs);
-    height: $button-height-sm;
-    line-height: rem(9px);
-  }
+	.context-submenu__button {
+		@include stable-padding($spacing-3xs, $spacing-xs);
+		height: $button-height-sm;
+		line-height: rem(9px);
+	}
 
-  .context-submenu__text {
-    @include font-size("12");
-  }
+	.context-submenu__text {
+		@include font-size("12");
+	}
 }
 
 // -------------------------
@@ -145,5 +158,5 @@
 // -------------------------
 
 .context-menu__item--division-line {
-  border-bottom: 1px solid $ui-04;
+	border-bottom: 1px solid $ui-04;
 }
