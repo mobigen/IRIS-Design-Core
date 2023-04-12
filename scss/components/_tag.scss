@@ -16,7 +16,7 @@
   }
 
   &:focus-visible:not(:disabled) {
-    outline: 2px solid $default-focus;
+    outline: 1px dashed $text-01;
   }
 
   &:disabled {
@@ -38,7 +38,7 @@
   color: $text-03;
 
   &:focus-visible:not(:disabled) {
-    outline: 2px solid $default-focus;
+    outline: 1px dashed $text-01;
   }
 }
 
@@ -80,7 +80,7 @@
   }
 
   &:focus-visible:not(:disabled) {
-    outline: 2px solid $default-focus;
+    outline: 1px dashed $text-01;
   }
 }
 

@@ -70,6 +70,12 @@
   width: rem(20px);
   height: rem(20px);
 }
+
+.radio__input:focus-visible:not(:disabled) {
+  + .radio__label {
+    outline: 1px dashed $text-01;
+  }
+}
 // -------------------------
 // 상태별 스타일
 // -------------------------
@@ -220,7 +226,7 @@
 
   .radio__input:focus-visible:not(:disabled) {
     + .radio__label {
-      border-color: $primary;
+      outline: 1px dashed $text-01;
     }
   }
 
@@ -235,7 +241,7 @@
 
   .radio__input:checked:focus-visible:not(:disabled) {
     + .radio__label {
-      outline: 2px solid $default-focus;
+      outline: 1px dashed $text-01;
     }
   }
 
