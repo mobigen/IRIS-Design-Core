@@ -19,7 +19,6 @@
     }
 
     &:focus-visible:not(:disabled) {
-      border: 1px dashed $text-02;
       box-shadow: none;
     }
   }
@@ -218,7 +217,6 @@
   }
 
   &:focus-visible:not(:disabled) {
-    border: 1px dashed $text-01;
     box-shadow: none;
   }
 }
@@ -236,7 +234,6 @@
   color: $text-02;
 
   &:focus-visible:not(:disabled) {
-    border: 2px solid $default-focus;
     box-shadow: none;
   }
 }
@@ -514,6 +511,10 @@
         color: $secondary;
       }
     }
+  }
+
+  .select-selector__button:focus-visible:not(:disabled) {
+    outline: 1px dashed $text-01;
   }
 }
 

@@ -23,7 +23,7 @@
   padding: $spacing-xs $spacing-3xs $spacing-xs $spacing-3xs;
 
   &:focus-visible:not(:disabled) {
-    border: 1px dashed $text-01;
+    outline: 1px dashed $text-01;
   }
 }
 
@@ -62,7 +62,7 @@
   background-color: $hover-row;
 
   &:focus-visible:not(:disabled) {
-    border: 1px dashed $text-01;
+    outline: 1px dashed $text-01;
   }
 }
 

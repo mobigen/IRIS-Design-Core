@@ -165,7 +165,7 @@
   }
 
   &:focus-visible:not(:disabled) {
-    border: 1px dashed $text-01;
+    outline: 1px dashed $text-01;
   }
 
   // 뒤에 search-button 있는 경우
