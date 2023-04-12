@@ -143,8 +143,9 @@ input:focus {
 }
 
 a:focus-visible,
-button:focus-visible {
-  outline: 2px solid $primary;
+button:focus-visible,
+input:focus-visible {
+  outline: 1px dashed $text-01;
 }
 
 * {
