@@ -243,5 +243,11 @@
   height: rem(72px);
 }
 
+// ag-grid 키보드 포커스 스타일 - outline으로 넣으면 가려짐
+.ag-header-cell.ag-focus-managed::after{
+  content: none !important;
+}
 
-
+.ag-cell-focus:focus-visible, .ag-header-cell:focus-visible {
+  border: 1px dashed $text-01 !important;
+}
