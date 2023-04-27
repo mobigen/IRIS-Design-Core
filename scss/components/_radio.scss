@@ -71,18 +71,13 @@
   height: rem(20px);
 }
 
-.radio__input:focus-visible:not(:disabled) {
-  + .radio__label {
-    outline: 1px dashed $text-01;
-  }
-}
 // -------------------------
 // 상태별 스타일
 // -------------------------
-// hover 상태
+
 .radio__input:focus-visible:not(:disabled) {
-  + .radio__label:before {
-    outline: 2px solid $default-focus;
+  + .radio__label {
+    outline: 1px dashed $text-01;
   }
 }
 
