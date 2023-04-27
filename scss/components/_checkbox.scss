@@ -65,19 +65,12 @@
   transform-origin: bottom right;
 }
 
-.checkbox__input:focus-visible:not(:disabled) {
-  + .checkbox__label {
-    outline: 1px dashed $text-01;
-  }
-}
-
 // -------------------------
 // 상태별 스타일
 // -------------------------
-// hover 상태
 .checkbox__input:focus-visible:not(:disabled) {
-  + .checkbox__label:before {
-    border-color: $primary;
+  + .checkbox__label {
+    outline: 1px dashed $text-01;
   }
 }
 
