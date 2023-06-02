@@ -205,3 +205,20 @@
 .modal__body--overflow-hidden {
   overflow: hidden;
 }
+
+// modal__head 에서 현재 선택된 데이터 표시
+.current-data {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  &__icon {
+    @include svg-icon-size(20px);
+    margin-right: $spacing-2xs;
+  }
+
+  &__text {
+    @include font-size("14");
+    color: $text-02;
+  }
+}
