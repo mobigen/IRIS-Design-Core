@@ -99,6 +99,12 @@
   }
 }
 
+.select--empty {
+  .select-selector__title {
+    color: $text-05;
+  }
+}
+
 .select--disabled {
   .select-selector__button {
     border-color: $hover-row !important;
@@ -120,6 +126,7 @@
 
   .select-selector__title {
     color: $text-05;
+    opacity: 0.5;
   }
 
   .select-selector__icon {
