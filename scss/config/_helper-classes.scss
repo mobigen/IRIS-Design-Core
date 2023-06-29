@@ -85,10 +85,7 @@ table .caption-out {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-
-  & > *:not(:last-child) {
-    margin-bottom: $spacing-2xs;
-  }
+  gap: $spacing-2xs;
 
   & + & {
     margin-top: $spacing-2xs;
@@ -98,10 +95,7 @@ table .caption-out {
 .h-group {
   display: flex;
   align-items: center;
-}
-
-.h-group > *:not(:last-child) {
-  margin-right: $spacing-2xs;
+  gap: $spacing-2xs;
 }
 
 .h-group ~ .h-group,
