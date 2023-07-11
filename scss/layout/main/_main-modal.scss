@@ -91,6 +91,13 @@
   width: 100%;
   display: flex;
   align-items: center;
+
+  &:focus-visible:not(:disabled),
+  &:focus-within:not(:disabled) {
+    .list__action-buttons {
+      display: flex;
+    }
+  }
 }
 
 .list__item-inner .h-group {
