@@ -1,0 +1,476 @@
+// -------------------------
+// Multi Select
+// -------------------------
+
+.check-combobox {
+  position: relative;
+  flex-shrink: 0;
+
+  // -------------------------
+  // modifier-Open
+  // -------------------------
+  &--open {
+    .check-combobox-selector {
+      &__input {
+        .text-input {
+          border-color: $secondary;
+          box-shadow: 0 0 rem(4px) rgba(77, 174, 255, 0.4);
+
+          &:hover:not(:disabled) {
+            border-color: $secondary;
+          }
+        }
+      }
+
+      &__button {
+        border-color: $secondary;
+        box-shadow: 0 0 rem(4px) rgba(77, 174, 255, 0.4);
+
+        &:hover:not(:disabled) {
+          border-color: $secondary;
+        }
+      }
+    }
+
+    .check-combobox-container {
+      display: block;
+    }
+  }
+
+  // -------------------------
+  // modifier-Disabled
+  // -------------------------
+  &--disabled {
+    .check-combobox-selector {
+      &__input {
+        .text-input {
+          cursor: not-allowed;
+          border-color: $hover-row;
+          box-shadow: none;
+
+          &:hover:not(:disabled) {
+            border-color: $hover-row;
+          }
+        }
+      }
+
+      &__close-button.button--icon.button--link {
+        cursor: not-allowed;
+
+        &.button--icon {
+          .svg-icon {
+            fill: $disabled-02;
+          }
+        }
+      }
+
+      &__button {
+        border-color: $hover-row !important;
+        cursor: not-allowed;
+        box-shadow: none;
+
+        .svg-icon {
+          fill: $disabled-02;
+        }
+
+        &:hover:not(:disabled),
+        &:hover:active,
+        &:hover:focus {
+          box-shadow: none;
+          border-color: $hover-row !important;
+          cursor: not-allowed;
+        }
+
+        &:focus {
+          box-shadow: none;
+        }
+      }
+
+      &__title {
+        color: $text-05;
+      }
+    }
+
+    &.check-combobox--open {
+      .check-combobox-container {
+        display: none;
+      }
+    }
+  }
+
+  // -------------------------
+  // modifier-Large
+  // -------------------------
+  &--lg {
+    .check-combobox-selector {
+      height: rem(40px);
+
+      &__input {
+        .text-input {
+          @include font-size("15");
+          padding-right: rem(36px);
+        }
+      }
+
+      &__close-button.button--icon.button--link {
+        @include svg-icon-size(26px);
+        margin-top: rem(-13px);
+      }
+
+      &__button {
+        padding-right: rem(36px);
+
+        .svg-icon {
+          @include svg-icon-size(24px);
+          margin-top: rem(-12px);
+        }
+      }
+
+      &__title {
+        @include font-size("15");
+      }
+    }
+
+    .check-combobox-container {
+      .checkbox {
+        height: rem(40px);
+
+        &__label {
+          padding-left: rem(26px);
+
+          &:before {
+            top: 50%;
+            margin-top: -$spacing-xs;
+          }
+
+          &:after {
+            top: $spacing-xs;
+          }
+        }
+
+        &--indeterminate {
+          .checkbox {
+            &__label {
+              &:after {
+                top: $spacing-sm;
+              }
+            }
+          }
+        }
+      }
+
+      .notification-message {
+        height: rem(40px);
+
+        &__icon {
+          @include svg-icon-size(20px);
+        }
+
+        &__text {
+          @include font-size("14");
+        }
+      }
+
+      &__text {
+        @include font-size("14");
+      }
+
+      &__icon {
+        @include svg-icon-size(20px);
+      }
+
+      &__button {
+        height: rem(40px);
+      }
+    }
+  }
+
+  // -------------------------
+  // modifier-Small
+  // -------------------------
+  &--sm {
+    .check-combobox-selector {
+      height: rem(24px);
+
+      &__input {
+        .text-input {
+          @include font-size("12");
+          padding-right: rem(24px);
+        }
+      }
+
+      &__close-button.button--icon.button--link {
+        @include svg-icon-size(18px);
+        right: rem(7px);
+        margin-top: rem(-9px);
+      }
+
+      &__button {
+        padding-right: rem(24px);
+
+        .svg-icon {
+          @include svg-icon-size(16px);
+          right: $spacing-xs;
+          margin-top: rem(-8px);
+        }
+      }
+
+      &__title {
+        @include font-size("12");
+        line-height: rem(24px);
+      }
+    }
+
+    .check-combobox-container {
+      .checkbox {
+        height: rem(24px);
+        padding: 0 $spacing-xs 0 $spacing-xs;
+
+        &__label {
+          padding-left: rem(18px);
+
+          &:before {
+            @include svg-icon-size(12px);
+            top: 50%;
+            margin-top: rem(-6px);
+            margin-left: 0;
+          }
+
+          &:after {
+            left: $spacing-3xs;
+          }
+        }
+
+        &--indeterminate {
+          .checkbox {
+            &__label {
+              &:after {
+                top: $spacing-xs;
+                left: $spacing-3xs;
+              }
+            }
+          }
+        }
+      }
+
+      .notification-message {
+        height: rem(24px);
+        padding: 0 $spacing-xs 0 $spacing-xs;
+      }
+
+      &__text {
+        @include font-size("12");
+      }
+
+      &__icon + .check-combobox-container__text {
+        margin-left: $spacing-3xs;
+      }
+
+      &__icon {
+        @include svg-icon-size(16px);
+      }
+
+      &__button {
+        height: rem(24px);
+      }
+    }
+  }
+}
+
+// -------------------------
+// Multi Select selector
+// -------------------------
+.check-combobox-selector {
+  position: relative;
+  height: rem(32px);
+
+  &__input {
+    height: 100%;
+
+    .text-input {
+      @include font-weight("regular");
+      @include font-size("14");
+      height: 100%;
+      padding: $spacing-3xs rem(32px) $spacing-3xs $spacing-sm;
+      color: $text-02;
+    }
+  }
+
+  &__close-button.button--icon.button--link {
+    @include svg-icon-size(22px);
+    position: absolute;
+    top: 50%;
+    right: rem(11px);
+    margin-top: rem(-11px);
+    padding: 0;
+
+    &.button--icon {
+      .svg-icon {
+        width: 100%;
+        height: 100%;
+        fill: $text-03;
+      }
+    }
+  }
+
+  &__button {
+    @include button-normal;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    padding: $spacing-2xs $spacing-xl $spacing-2xs $spacing-sm;
+    background-color: $ui-02;
+    border: 1px solid $ui-04;
+    border-radius: $button-border-radius;
+
+    .svg-icon {
+      @include svg-icon-size(20px);
+      position: absolute;
+      top: 50%;
+      margin-top: rem(-10px);
+      right: $spacing-sm;
+
+      &.check-combobox-type__icon {
+        position: static;
+        margin: 0 $spacing-2xs 0 0;
+      }
+    }
+
+    &:active {
+      border-color: $secondary !important;
+    }
+
+    &:hover {
+      border-color: $text-03;
+    }
+
+    &:focus {
+      border-color: $secondary;
+      box-shadow: 0 0 rem(4px) rgba(77, 174, 255, 0.4);
+    }
+
+    &:focus-visible:not(:disabled) {
+      border: 2px solid $default-focus;
+      box-shadow: none;
+    }
+  }
+
+  &__title {
+    @include text-overflow;
+    @include font-size("14");
+    @include font-weight("regular");
+    color: $text-02;
+  }
+}
+
+// -------------------------
+// select panel(dropdown)
+// -------------------------
+.check-combobox-container {
+  @include list;
+  @include layer("overlay");
+  display: none;
+  z-index: z("dropdown");
+  position: absolute;
+  top: calc(100% + 2px);
+  width: 100%;
+  max-height: rem(320px);
+  background-color: $ui-02;
+  border-radius: rem(2px);
+  border: 1px solid $ui-04;
+  overflow: auto;
+
+  .checkbox {
+    &__input {
+      &:checked {
+        & + .checkbox__label {
+          &:hover {
+            &:before {
+              border-color: $primary;
+            }
+          }
+        }
+      }
+    }
+
+    &__label {
+      height: 100%;
+
+      &:hover {
+        &:before {
+          border-color: $text-03;
+        }
+      }
+    }
+
+    &--indeterminate {
+      .checkbox {
+        &__label {
+          &:hover {
+            &:before {
+              border-color: $primary;
+            }
+          }
+        }
+      }
+    }
+  }
+  .notification-message {
+    width: 100%;
+
+    &__text {
+      @include text-overflow();
+    }
+  }
+
+  &.check-combobox-container--lg {
+    .checkbox {
+      height: rem(40px);
+
+      &__label {
+        padding-left: rem(26px);
+
+        &:before {
+          top: 50%;
+          margin-top: -$spacing-xs;
+        }
+
+        &:after {
+          top: $spacing-xs;
+          margin-top: 0;
+        }
+      }
+
+      &--indeterminate {
+        .checkbox {
+          &__label {
+            &:after {
+              top: $spacing-sm;
+              margin-top: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .notification-message {
+      height: rem(40px);
+
+      &__icon {
+        @include svg-icon-size(20px);
+      }
+
+      &__text {
+        @include font-size("14");
+      }
+    }
+
+    &__text {
+      @include font-size("14");
+    }
+
+    &__icon {
+      @include svg-icon-size(20px);
+    }
+  }
+}
