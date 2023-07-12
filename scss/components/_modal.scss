@@ -229,9 +229,9 @@
   }
 
   &__subtext {
-    @include text-overflow;
     @include font-weight(medium);
     @include font-size("14");
+    white-space: pre;
     color: $text-02;
   }
 }
