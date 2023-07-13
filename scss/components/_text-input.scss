@@ -56,7 +56,8 @@
   &[readonly]:focus {
     cursor: default;
     border-color: $ui-04;
-    background-color: $odd-row;
+    background-color: $disabled-01;
+    color: $text-02;
     box-shadow: none;
   }
 
