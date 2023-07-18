@@ -35,6 +35,10 @@
         @include line-height("body");
         @include font-size("14");
         color: $text-02;
+
+        & + .current-data {
+          margin-left: $spacing-sm;
+        }
       }
     }
 
@@ -220,7 +224,6 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-left: $spacing-sm;
 
   &__icon {
     @include svg-icon-size(20px);
