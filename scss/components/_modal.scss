@@ -13,6 +13,7 @@
 
   &__head {
     @include stable-padding($spacing-2xs, $spacing-sm);
+    flex-shrink: 0;
     display: flex;
     align-items: center;
     min-height: rem(40px);
@@ -91,6 +92,7 @@
 
   &__foot {
     @include stable-padding($spacing-sm, $spacing-sm);
+    flex-shrink: 0;
     display: flex;
     background-color: $ui-01;
 
