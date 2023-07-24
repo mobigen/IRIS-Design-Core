@@ -103,22 +103,28 @@
   // -------------------------
   &--lg {
     .check-combobox-selector {
-      height: rem(40px);
+      height: $button-height-lg;
 
       &__input {
         .text-input {
           @include font-size("15");
-          padding-right: rem(36px);
+          padding-right: $spacing-xl;
         }
       }
 
       &__close-button.button--icon.button--link {
-        @include svg-icon-size(26px);
-        margin-top: rem(-13px);
+        @include svg-icon-size(24px);
+        margin-top: rem(-12px);
+
+        &.button--icon {
+          .svg-icon {
+            @include svg-icon-size(24px);
+          }
+        }
       }
 
       &__button {
-        padding-right: rem(36px);
+        padding-right: $spacing-xl;
 
         .svg-icon {
           @include svg-icon-size(24px);
@@ -195,22 +201,30 @@
       &__input {
         .text-input {
           @include font-size("12");
-          padding-right: rem(24px);
+          padding-left: $spacing-xs;
+          padding-right: rem(20px);
         }
       }
 
       &__close-button.button--icon.button--link {
-        @include svg-icon-size(18px);
-        right: rem(7px);
-        margin-top: rem(-9px);
+        @include svg-icon-size(16px);
+        right: $spacing-2xs;
+        margin-top: rem(-8px);
+
+        &.button--icon {
+          .svg-icon {
+            @include svg-icon-size(16px);
+          }
+        }
       }
 
       &__button {
-        padding-right: rem(24px);
+        padding-left: $spacing-xs;
+        padding-right: rem(20px);
 
         .svg-icon {
           @include svg-icon-size(16px);
-          right: $spacing-xs;
+          right: $spacing-2xs;
           margin-top: rem(-8px);
         }
       }
@@ -291,23 +305,22 @@
       @include font-weight("regular");
       @include font-size("14");
       height: 100%;
-      padding: $spacing-3xs rem(32px) $spacing-3xs $spacing-sm;
+      padding: $spacing-3xs rem(28px) $spacing-3xs $spacing-sm;
       color: $text-02;
     }
   }
 
   &__close-button.button--icon.button--link {
-    @include svg-icon-size(22px);
+    @include svg-icon-size(20px);
     position: absolute;
     top: 50%;
-    right: rem(11px);
+    right: $spacing-xs;
     margin-top: rem(-11px);
     padding: 0;
 
     &.button--icon {
       .svg-icon {
-        width: 100%;
-        height: 100%;
+        @include svg-icon-size(20px);
         fill: $text-03;
       }
     }
@@ -318,7 +331,7 @@
     justify-content: flex-start;
     width: 100%;
     height: 100%;
-    padding: $spacing-2xs $spacing-xl $spacing-2xs $spacing-sm;
+    padding: $spacing-2xs rem(28px) $spacing-2xs $spacing-sm;
     background-color: $ui-02;
     border: 1px solid $ui-04;
     border-radius: $button-border-radius;
@@ -328,7 +341,7 @@
       position: absolute;
       top: 50%;
       margin-top: rem(-10px);
-      right: $spacing-sm;
+      right: $spacing-xs;
 
       &.check-combobox-type__icon {
         position: static;
