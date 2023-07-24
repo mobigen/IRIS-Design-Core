@@ -206,7 +206,7 @@
   justify-content: flex-start;
   width: 100%;
   height: 100%;
-  padding: $spacing-2xs $spacing-xl $spacing-2xs $spacing-sm;
+  padding: $spacing-3xs rem(28px) $spacing-3xs $spacing-sm;
   background-color: $ui-02;
   border: 1px solid $ui-04;
   border-radius: $button-border-radius;
@@ -238,7 +238,7 @@
   @include text-overflow;
   width: 100%;
   height: 100%;
-  padding-right: $spacing-xl;
+  padding-right: rem(28px);
   color: $text-02;
 
   &:focus-visible:not(:disabled) {
@@ -338,15 +338,13 @@
   box-shadow: 0 0 rem(8px) 0 $box-shadow;
 }
 
-.select-container__notification > .notification-message{
+.select-container__notification > .notification-message {
   width: 100%;
 
-  .notification-message__text{
+  .notification-message__text {
     @include text-overflow();
   }
 }
-
-
 
 // -------------------------
 // Size overwrite
@@ -355,6 +353,21 @@
 .select--lg {
   .select-selector {
     height: $button-height-lg;
+
+    &__button {
+      padding-right: $spacing-xl;
+    }
+
+    &__icon {
+      @include svg-icon-size(24px);
+      margin-top: -$spacing-sm;
+    }
+
+    &__input {
+      .text-input {
+        padding-right: $spacing-xl;
+      }
+    }
   }
 
   .select-container {
@@ -372,14 +385,14 @@
       right: $spacing-sm;
     }
 
-    .select-container__notification{
+    .select-container__notification {
       height: $button-height-lg;
 
-      .notification-message__icon{
+      .notification-message__icon {
         @include svg-icon-size(20px);
       }
 
-      .notification-message__text{
+      .notification-message__text {
         @include font-size("14");
       }
     }
@@ -390,20 +403,24 @@
 .select--sm {
   .select-selector {
     height: $button-height-sm;
-  }
 
-  .select-selector__button {
-    padding-left: $spacing-xs;
-    padding-right: $spacing-lg;
-  }
+    &__button {
+      padding-left: $spacing-xs;
+      padding-right: rem(20px);
+    }
 
-  .select-selector__icon {
-    right: rem(4px);
-    width: rem(18px);
-    height: rem(18px);
-    margin-top: -$spacing-xs;
-  }
+    &__icon {
+      @include svg-icon-size(16px);
+      right: $spacing-2xs;
+      margin-top: -$spacing-xs;
+    }
 
+    &__input {
+      .text-input {
+        padding-right: rem(20px);
+      }
+    }
+  }
   .select-container {
     .select-selector__icon {
       @include svg-icon-size(14px);
@@ -423,7 +440,7 @@
       @include font-size("12");
     }
 
-    .select-container__notification{
+    .select-container__notification {
       height: $button-height-sm;
     }
   }
