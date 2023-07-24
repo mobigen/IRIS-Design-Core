@@ -9,6 +9,7 @@
   box-shadow: none;
   border-radius: 2px;
   color: $text-02;
+  cursor: pointer;
 
   &:hover {
     border-color: $hover-field-border;
@@ -69,6 +70,7 @@
   width: rem(15px);
   height: rem(15px);
   color: $text-03;
+  cursor: pointer;
 
   svg {
     width: 100%;
