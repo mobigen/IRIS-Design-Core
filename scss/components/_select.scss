@@ -362,6 +362,12 @@
       @include svg-icon-size(24px);
       margin-top: rem(-12px);
     }
+
+    &__input {
+      .text-input {
+        padding-right: rem(32px);
+      }
+    }
   }
 
   .select-container {
