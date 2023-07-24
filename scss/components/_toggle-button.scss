@@ -6,10 +6,6 @@
   flex-direction: row;
   align-items: center;
 
-  &:not(:first-child) {
-    margin-left: $spacing-2xs;
-  }
-
   &--gap {
     gap: $spacing-2xs;
   }
