@@ -218,10 +218,7 @@
 .checkbox-toggle {
   display: flex;
   align-items: center;
-
-  .checkbox:not(:last-of-type) {
-    margin-right: $spacing-xs;
-  }
+  gap: $spacing-xs;
 
   .checkbox__label {
     height: rem(32px);
