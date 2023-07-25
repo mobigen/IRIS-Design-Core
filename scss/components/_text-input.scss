@@ -103,7 +103,7 @@
 
   .text-input {
     // 뒤에 button이 있는 경우
-    &:not(&:last-child) {
+    &:not(:last-child) {
       padding-right: rem(26px);
     }
 
@@ -168,7 +168,7 @@
   }
 
   // 뒤에 search-button 있는 경우
-  &:not(&:last-child) {
+  &:not(:last-child) {
     right: rem(38px);
   }
 }
@@ -209,7 +209,7 @@
     @include text-input--lg;
 
     // 뒤에 button이 있는 경우
-    &:not(&:last-child) {
+    &:not(:last-child) {
       padding-right: rem(28px);
     }
 
@@ -231,7 +231,7 @@
     @include svg-icon-size(20px);
 
     // 뒤에 search-button 있는 경우
-    &:not(&:last-child) {
+    &:not(:last-child) {
       right: rem(46px);
     }
     .svg-icon {
@@ -249,7 +249,7 @@
     @include text-input--sm;
 
     // 뒤에 button이 있는 경우
-    &:not(&:last-child) {
+    &:not(:last-child) {
       padding-right: rem(18px);
     }
 
@@ -276,7 +276,7 @@
 
   .text-input-group__clear-button {
     // 뒤에 search-button 있는 경우
-    &:not(&:last-child) {
+    &:not(:last-child) {
       right: rem(27px);
     }
 
