@@ -238,6 +238,8 @@
   @include text-overflow;
   width: 100%;
   height: 100%;
+  padding-top: $spacing-3xs;
+  padding-bottom: $spacing-3xs;
   padding-right: rem(28px);
   color: $text-02;
 
@@ -405,8 +407,7 @@
     height: $button-height-sm;
 
     &__button {
-      padding-left: $spacing-xs;
-      padding-right: rem(20px);
+      padding: 0 rem(20px) 0 $spacing-xs;
     }
 
     &__icon {
@@ -417,6 +418,8 @@
 
     &__input {
       .text-input {
+        padding-top: 0;
+        padding-bottom: 0;
         padding-right: rem(20px);
       }
     }
