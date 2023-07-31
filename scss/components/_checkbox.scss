@@ -68,10 +68,9 @@
 // -------------------------
 // 상태별 스타일
 // -------------------------
-// hover 상태
 .checkbox__input:focus-visible:not(:disabled) {
-  + .checkbox__label:before {
-    border-color: $primary;
+  + .checkbox__label {
+    outline: 1px dashed $text-01;
   }
 }
 
@@ -219,10 +218,7 @@
 .checkbox-toggle {
   display: flex;
   align-items: center;
-
-  .checkbox:not(:last-of-type) {
-    margin-right: $spacing-xs;
-  }
+  gap: $spacing-xs;
 
   .checkbox__label {
     height: rem(32px);
@@ -239,7 +235,7 @@
 
   .checkbox__input:focus-visible:not(:disabled) {
     + .checkbox__label {
-      border-color: $primary;
+      outline: 1px dashed $text-01;
     }
   }
 
@@ -251,7 +247,7 @@
 
   .checkbox__input:checked:focus-visible:not(:disabled) {
     + .checkbox__label {
-      outline: 2px solid $default-focus;
+      outline: 1px dashed $text-01;
     }
   }
 

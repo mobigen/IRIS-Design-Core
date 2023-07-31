@@ -209,39 +209,12 @@
   }
 }
 
-// IMA, ISS, ITS - 검색한 보고서가 없는 경우
-.search-result {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
+// ag-grid 키보드 포커스 스타일 - outline으로 넣으면 가려짐
+.ag-header-cell.ag-focus-managed::after {
+  content: none !important;
 }
 
-.search-result__title {
-  @include font-weight("medium");
-  @include font-size("24");
-  margin-top: $spacing-lg;
-  color: $text-03;
-  letter-spacing: rem(-0.3px);
-
-  em {
-    color: $icon-02;
-  }
+.ag-cell-focus:focus-visible,
+.ag-header-cell:focus-visible {
+  border: 1px dashed $text-01 !important;
 }
-
-.search-result__text {
-  @include text-overflow;
-  @include font-size("20");
-  margin-top: $spacing-xs;
-  color: $text-03;
-}
-
-.svg-icon.search-result__icon {
-  width: rem(72px);
-  height: rem(72px);
-}
-
-
-

@@ -77,7 +77,7 @@
     }
 
     &:focus-visible:not(:disabled) {
-      border: 2px solid $default-focus;
+      outline: 1px dashed $text-01;
     }
   }
 
@@ -156,7 +156,14 @@
     }
 
     &:focus-visible:not(:disabled) {
-      border: 2px solid $default-focus;
+      outline: 1px dashed $text-01;
+    }
+
+    &:disabled,
+    &:disabled:hover,
+    &:disabled:focus {
+      opacity: 0.25;
+      cursor: not-allowed;
     }
   }
 
@@ -398,7 +405,7 @@
     }
 
     &:focus-visible:not(:disabled) {
-      border: 2px solid $default-focus;
+      outline: 1px dashed $text-01;
     }
   }
 
