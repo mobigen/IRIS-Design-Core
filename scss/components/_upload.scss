@@ -226,7 +226,7 @@
   }
 
   &:focus-visible:not(:disabled) {
-    outline: 1px dashed $text-01;
+    outline: 2px solid $default-focus;
   }
 
   .svg-icon {

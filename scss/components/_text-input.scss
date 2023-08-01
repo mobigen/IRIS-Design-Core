@@ -10,7 +10,7 @@
   background-color: $ui-02;
   width: 100%;
   height: rem(32px);
-  padding: $spacing-3xs $spacing-sm;
+  padding: 0 $spacing-sm;
   color: $text-01;
   border: 1px solid $ui-04;
   border-radius: $field-border-radius;
@@ -69,6 +69,7 @@
 
 @mixin text-input--lg {
   @include font-size("16");
+  padding: 0 $spacing-md;
   height: rem(40px);
 }
 
@@ -103,12 +104,12 @@
 
   .text-input {
     // 뒤에 button이 있는 경우
-    &:not(:last-child) {
-      padding-right: rem(26px);
+    &:not(&:last-child) {
+      padding-right: $spacing-lg;
     }
 
     &:nth-last-child(3):not(div) {
-      padding-right: rem(57px);
+      padding-right: ($spacing-xl * 2) - $spacing-3xs !important;
     }
   }
 }
@@ -118,11 +119,12 @@
 }
 
 .text-input-group__icon {
-  @include svg-icon-size(18px);
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   left: $spacing-xs;
+  width: rem(20px);
+  height: rem(20px);
   border: none;
   padding: 0;
   z-index: z("float");
@@ -134,14 +136,14 @@
   }
 
   & ~ .text-input {
-    $icon-spacing: 18px + 12px + 4px;
+    $icon-spacing: 8px + 20px + 4px;
     padding-left: $icon-spacing;
   }
 }
 
 .text-input-group__clear-button {
   @include button-normal;
-  @include position-right-center(8px);
+  @include position-right-center(6px);
   width: rem(18px);
   height: rem(18px);
   padding: 0;
@@ -163,13 +165,9 @@
     }
   }
 
-  &:focus-visible:not(:disabled) {
-    outline: 1px dashed $text-01;
-  }
-
   // 뒤에 search-button 있는 경우
-  &:not(:last-child) {
-    right: rem(38px);
+  &:not(&:last-child) {
+    right: $spacing-2xl;
   }
 }
 
@@ -208,34 +206,30 @@
   .text-input {
     @include text-input--lg;
 
-    // 뒤에 button이 있는 경우
-    &:not(:last-child) {
-      padding-right: rem(28px);
-    }
-
     &:nth-last-child(3):not(div) {
-      padding-right: rem(67px);
+      padding-right: $spacing-sm * 6 !important;
     }
   }
 
   .text-input-group__icon {
-    @include svg-icon-size(20px);
+    left: $spacing-sm;
 
     & ~ .text-input {
       $icon-spacing: 12px + 20px + 4px; // left + width + text사이와의 여백
       padding-left: $icon-spacing;
     }
   }
-
   .text-input-group__clear-button {
-    @include svg-icon-size(20px);
+    width: rem(20px);
+    height: rem(20px);
 
     // 뒤에 search-button 있는 경우
-    &:not(:last-child) {
-      right: rem(46px);
+    &:not(&:last-child) {
+      right: $spacing-3xl;
     }
     .svg-icon {
-      @include svg-icon-size(20px);
+      width: rem(20px);
+      height: rem(20px);
     }
   }
 
@@ -248,40 +242,38 @@
   .text-input {
     @include text-input--sm;
 
-    // 뒤에 button이 있는 경우
-    &:not(:last-child) {
-      padding-right: rem(18px);
-    }
-
     &:nth-last-child(3):not(div) {
-      padding-right: rem(41px);
+      padding-right: $spacing-3xl - $spacing-3xs !important;
     }
   }
 
   .text-input-group__icon {
-    @include svg-icon-size(14px);
-    left: $spacing-xs;
+    left: $spacing-2xs;
+    width: rem(14px);
+    height: rem(14px);
 
     & ~ .text-input {
-      $icon-spacing: 4px + 14px + 8px; // left + width + text사이와의 여백
+      $icon-spacing: 4px + 14px + 2px; // left + width + text사이와의 여백
       padding-left: $icon-spacing;
     }
   }
 
   .text-input-group__clear-button,
   .text-input-group__button {
-    @include svg-icon-size(14px);
-    right: $spacing-2xs;
+    right: rem(4px);
+    width: rem(14px);
+    height: rem(14px);
   }
 
   .text-input-group__clear-button {
     // 뒤에 search-button 있는 경우
-    &:not(:last-child) {
-      right: rem(27px);
+    &:not(&:last-child) {
+      right: $spacing-xl;
     }
 
     .svg-icon {
-      @include svg-icon-size(14px);
+      width: rem(14px);
+      height: rem(14px);
     }
   }
 

@@ -6,30 +6,8 @@
   flex-direction: row;
   align-items: center;
 
-  &--gap {
-    gap: $spacing-2xs;
-
-    .toggle-button__item {
-      border-radius: $button-border-radius !important;
-    }
-
-    &-xs {
-      gap: $spacing-xs;
-
-      .toggle-button__item {
-        border-radius: $button-border-radius !important;
-      }
-    }
-  }
-
-  &--sm {
-    .toggle-button__item {
-      @include button--sm;
-    }
-
-    .toggle-button__item--icon.toggle-button__item {
-      @include button--icon(4px, 16px);
-    }
+  &:not(:first-child) {
+    margin-left: $spacing-2xs;
   }
 }
 
