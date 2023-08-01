@@ -126,6 +126,14 @@
     }
   }
 
+  .select-selector__close-button.button--icon.button--link {
+    cursor: not-allowed;
+
+    .svg-icon {
+      fill: $disabled-02;
+    }
+  }
+
   .select-selector__title {
     color: $text-05;
     opacity: 0.5;
@@ -285,6 +293,22 @@
   pointer-events: none;
 }
 
+// combo-box 유형일때 사용
+.select-selector__close-button.button--icon.button--link {
+  @include svg-icon-size(20px);
+  position: absolute;
+  top: 50%;
+  right: $spacing-xs;
+  margin-top: rem(-11px);
+  padding: 0;
+
+  .svg-icon {
+    @include svg-icon-size(20px);
+    fill: $text-03;
+  }
+}
+
+//TODO:추후 정리 필요 (쓰이지 않고 있음)
 .select-selector__icon-button {
   @include button-normal;
   display: flex;
@@ -372,6 +396,15 @@
         padding-right: $spacing-xl;
       }
     }
+
+    &__close-button.button--icon.button--link {
+      @include svg-icon-size(24px);
+      margin-top: rem(-12px);
+
+      .svg-icon {
+        @include svg-icon-size(24px);
+      }
+    }
   }
 
   .select-container {
@@ -423,6 +456,16 @@
         padding-top: 0;
         padding-bottom: 0;
         padding-right: rem(20px);
+      }
+    }
+
+    &__close-button.button--icon.button--link {
+      @include svg-icon-size(16px);
+      margin-top: rem(-8px);
+      right: $spacing-2xs;
+
+      .svg-icon {
+        @include svg-icon-size(16px);
       }
     }
   }
