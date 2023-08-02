@@ -254,6 +254,10 @@
   color: $text-02;
   border-color: $secondary;
 
+  &:hover:not(:disabled) {
+    border-color: $secondary;
+  }
+
   &:focus-visible:not(:disabled) {
     box-shadow: none;
   }
