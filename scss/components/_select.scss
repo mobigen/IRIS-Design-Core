@@ -252,6 +252,7 @@
   padding-bottom: $spacing-3xs;
   padding-right: rem(28px);
   color: $text-02;
+  border-color: $secondary;
 
   &:focus-visible:not(:disabled) {
     box-shadow: none;
