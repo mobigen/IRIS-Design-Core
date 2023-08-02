@@ -68,7 +68,7 @@
 }
 
 @mixin text-input--lg {
-  @include font-size("16");
+  @include font-size("15");
   height: rem(40px);
 }
 

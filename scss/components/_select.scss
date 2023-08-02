@@ -393,6 +393,10 @@
       margin-top: -$spacing-sm;
     }
 
+    &__title {
+      @include font-size("15");
+    }
+
     &__input {
       .text-input {
         padding-right: $spacing-xl;
@@ -447,6 +451,10 @@
       @include svg-icon-size(16px);
       right: $spacing-2xs;
       margin-top: -$spacing-xs;
+    }
+
+    &__title {
+      @include font-size("12");
     }
 
     &__input {
