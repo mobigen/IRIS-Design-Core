@@ -59,6 +59,13 @@
   &:last-child {
     border-bottom: 0;
   }
+
+  .checkbox {
+    .checkbox__label {
+      @include text-overflow;
+      line-height: 24px;
+    }
+  }
 }
 
 .transfer-list__options {
