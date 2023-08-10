@@ -60,6 +60,10 @@
 
   &--loading {
     @include notification-message-status($text-03);
+
+    .loader__spinner {
+      margin-top: rem(3px);
+    }
   }
 
   &--normal {
