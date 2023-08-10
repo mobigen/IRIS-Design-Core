@@ -1,8 +1,11 @@
+.ag-sort-indicator-icon {
+  width: 28px;
+  height: 24px;
+}
+
 .ag-header-cell-sorted-none {
   .ag-sort-order.ag-hidden {
     display: block !important;
-    width: 28px;
-    height: 24px;
 
     &::before {
       content: "";

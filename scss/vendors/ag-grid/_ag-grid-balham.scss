@@ -74,19 +74,6 @@
     height: rem(24px);
   }
 
-  .ag-icon:before {
-    content: "";
-    background-color: transparent;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='24' fill='none' viewBox='0 0 25 24'%3E%3Cpath fill='%2377889A' fill-rule='evenodd' d='M12.545 5.346a.75.75 0 011.06 0l3.375 3.375a.75.75 0 01-1.06 1.061l-2.845-2.845-2.845 2.845a.75.75 0 11-1.06-1.06l3.375-3.376zM12.545 18.032a.75.75 0 001.06 0l3.375-3.375a.75.75 0 00-1.06-1.06l-2.845 2.844-2.845-2.845a.75.75 0 10-1.06 1.061l3.375 3.375z' clip-rule='evenodd'/%3E%3C/svg%3E");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 24px 24px;
-    height: rem(24px);
-    opacity: 1;
-    width: rem(24px);
-    display: inline-block;
-  }
-
   // body-viewport
   .ag-row {
     height: rem(40px) !important;
