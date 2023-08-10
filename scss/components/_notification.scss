@@ -25,11 +25,12 @@
 
 @mixin notification-message {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 
   &__icon {
     @include svg-icon-size(16px);
     margin-right: $spacing-2xs;
+    margin-top: rem(3px);
   }
 
   &__text {
