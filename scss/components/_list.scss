@@ -80,6 +80,7 @@
 }
 
 .list__subtext {
+  @include text-overflow;
   @include font-size("13");
   margin-left: $spacing-2xs;
   color: $text-03;
