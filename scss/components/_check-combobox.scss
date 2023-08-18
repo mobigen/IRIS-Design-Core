@@ -430,9 +430,14 @@
 
   .notification-message {
     width: 100%;
+    align-items: center;
 
     &__text {
       @include text-overflow();
+    }
+
+    .notification-message__icon {
+      margin-top: 0;
     }
   }
 
