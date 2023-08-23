@@ -88,6 +88,18 @@
 
 .list__body {
   overflow: auto;
+
+  &.list__body--no-data {
+    flex-grow: 1;
+    position: relative;
+  }
+
+  .notification-message {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .list__summary {
