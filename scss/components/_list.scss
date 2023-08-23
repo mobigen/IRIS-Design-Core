@@ -88,10 +88,10 @@
 
 .list__body {
   overflow: auto;
+  position: relative;
 
   &.list__body--no-data {
     flex-grow: 1;
-    position: relative;
   }
 
   .notification-message {
