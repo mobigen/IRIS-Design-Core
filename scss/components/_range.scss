@@ -17,7 +17,8 @@
 /* Mouse-over effects */
 .range-input:hover {
   background: $field-border;
-  &::-webkit-slider-thumb {
+  &::-webkit-slider-thumb,
+  &::-moz-slider-thumb {
     background: $hover-primary;
   }
 }
@@ -25,15 +26,17 @@
 /* focus effects */
 .range-input:active,
 .range-input:focus {
-  &::-webkit-slider-thumb {
+  &::-webkit-slider-thumb,
+  &::-moz-slider-thumb {
     background: $active-primary;
   }
 }
 
-/* focus effects */
+/* disabled effects */
 .range-input:disabled {
   cursor: not-allowed;
-  &::-webkit-slider-thumb {
+  &::-webkit-slider-thumb,
+  &::-moz-slider-thumb {
     background: $text-05;
     cursor: not-allowed;
   }
@@ -54,6 +57,8 @@
   width: rem(16px);
   height: rem(16px);
   background: $primary;
+  border-radius: 50%;
+  border: none;
   cursor: pointer;
 }
 
