@@ -181,8 +181,13 @@
   }
 }
 
-.modal .form--complex .text-input {
-  width: auto;
+.modal .form--complex {
+  .text-input {
+    width: auto;
+  }
+  .range-input {
+    width: auto;
+  }
 }
 
 .modal .tab__contents {
