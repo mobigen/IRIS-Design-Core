@@ -265,10 +265,12 @@
   // -------------------------
   &__item--selected {
     color: $primary;
+    background-color: $hover-ui-accent;
   }
 
   &__item--selected &__text {
     color: $primary;
+    font-weight: 500;
   }
 
   &__item--selected &__icon,
