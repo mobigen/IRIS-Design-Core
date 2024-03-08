@@ -2230,7 +2230,10 @@ input[type="radio"] {
 /*.ag-theme-default .ag-row-selected {
     background-color: #bde2e5; }*/
 .ag-theme-default .ag-row-selected {
-  background-color: $ui-01;
+  background-color: $hover-ui-accent;
+  .ag-cell {
+    color: $primary;
+  }
 }
 
 .ag-theme-default .ag-cell-range-selected:not(.ag-cell-focus) {
