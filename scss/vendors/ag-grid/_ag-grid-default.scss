@@ -2232,7 +2232,7 @@ input[type="radio"] {
 .ag-theme-default .ag-row-selected {
   background-color: $hover-ui-accent;
   .ag-cell {
-    color: $primary;
+    color: $primary !important;
   }
 }
 
