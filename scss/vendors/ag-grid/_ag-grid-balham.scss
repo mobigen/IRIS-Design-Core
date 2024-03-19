@@ -110,17 +110,10 @@
     background-color: $ui-02;
   }
 
-  .ag-row-selected {
+  .ag-row-selected, .ag-row-selected:hover {
     .ag-cell {
       background-color: $hover-ui-accent;
       color: $primary;
-    }
-
-    &:hover {
-      .ag-cell {
-        background-color: $ui-01;
-        color: $primary;
-      }
     }
   }
 
@@ -242,6 +235,3 @@
   width: rem(72px);
   height: rem(72px);
 }
-
-
-
