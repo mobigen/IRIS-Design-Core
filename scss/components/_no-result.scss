@@ -1,0 +1,57 @@
+// 컨텐츠, 검색 결과 등 결과 없는 경우
+// TODO: [개선] search-result -> no-result으로 변경할 것
+.search-result,
+.no-result {
+  @include stable-padding($spacing-md, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  white-space: nowrap;
+
+  &__title {
+    @include font-weight("medium");
+    @include font-size("24");
+    margin-top: $spacing-lg;
+    color: $text-03;
+    letter-spacing: rem(-0.3px);
+
+    em {
+      color: $icon-02;
+    }
+  }
+
+  &__text {
+    @include text-overflow;
+    @include font-size("20");
+    margin-top: $spacing-xs;
+    color: $text-03;
+  }
+
+  &__icon.svg-icon {
+    width: rem(72px);
+    height: rem(72px);
+    fill: $icon-01;
+  }
+
+  &--sm {
+    .search-result,
+    .no-result {
+      &__title {
+        @include font-size("18");
+        margin-top: $spacing-md;
+      }
+
+      &__text {
+        @include font-size("14");
+      }
+
+      &__icon.svg-icon {
+        width: rem(48px);
+        height: rem(48px);
+      }
+    }
+  }
+}
