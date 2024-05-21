@@ -41,3 +41,53 @@
     /* Modern browsers */ url("#{$font-path}/NotoSans-Bold.ttf")
       format("truetype"); /* Safari, Android, iOS */
 }
+
+// 중국어
+@font-face {
+  font-family: "Microsoft YaHei";
+  font-style: normal;
+  src:/* Super modern browsers */ url("#{$font-path}/chinese.msyh.woff")
+      format("woff"),
+    /* Modern browsers */ url("#{$font-path}/chinese.msyh.ttf")
+      format("truetype"); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: "NotoSansSC";
+  font-style: normal;
+  font-weight: 300;
+  src:/* Super modern browsers */ url("#{$font-path}/NotoSansSC-Light.woff")
+      format("woff"),
+    /* Modern browsers */ url("#{$font-path}/NotoSansSC-Light.ttf")
+      format("truetype"); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: "NotoSansSC";
+  font-style: normal;
+  font-weight: 400;
+  src:/* Super modern browsers */ url("#{$font-path}/NotoSansSC-Regular.woff")
+      format("woff"),
+    /* Modern browsers */ url("#{$font-path}/NotoSansSC-Regular.ttf")
+      format("truetype"); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: "NotoSansSC";
+  font-style: normal;
+  font-weight: 500;
+  src:/* Super modern browsers */ url("#{$font-path}/NotoSansSC-Medium.woff")
+      format("woff"),
+    /* Modern browsers */ url("#{$font-path}/NotoSansSC-Medium.ttf")
+      format("truetype"); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: "NotoSansSC";
+  font-style: normal;
+  font-weight: 700;
+  src:/* Super modern browsers */ url("#{$font-path}/NotoSansSC-Bold.woff")
+      format("woff"),
+    /* Modern browsers */ url("#{$font-path}/NotoSansSC-Bold.ttf")
+      format("truetype"); /* Safari, Android, iOS */
+}
