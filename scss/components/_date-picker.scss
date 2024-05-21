@@ -74,7 +74,6 @@
 /* Component containers
 ----------------------------------*/
 .ui-widget {
-  @include font-family("sans");
   @include font-size("14");
 }
 .ui-widget .ui-widget {
@@ -84,7 +83,6 @@
 .ui-widget select,
 .ui-widget textarea,
 .ui-widget button {
-  @include font-family("sans");
   @include font-size("14");
 }
 .ui-widget-content {

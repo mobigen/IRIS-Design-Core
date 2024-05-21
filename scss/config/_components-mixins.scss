@@ -2,7 +2,6 @@
 // button 엘리먼트 normalize
 // -------------------------
 @mixin button-normal {
-  @include font-family("sans");
   @include font-weight("medium");
   @include font-smoothing;
   @include letter-spacing;
@@ -465,7 +464,6 @@
   }
 
   &-selector__input {
-    @include font-family("sans");
     @include font-size("14");
     @include line-height("body");
     min-width: rem(127px);
