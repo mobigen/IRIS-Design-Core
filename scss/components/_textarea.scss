@@ -3,7 +3,6 @@
 // -------------------------
 .text-area {
   @include font-size("14");
-  @include font-family("sans");
   padding: $spacing-2xs $spacing-xs;
   width: 100%;
   min-width: rem(120px);

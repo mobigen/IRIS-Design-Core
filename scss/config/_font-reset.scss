@@ -1,9 +1,21 @@
+*:lang(ja) {
+font-family: 'メイリオ', Meiryo, 'Yu Gothic UI';
+}
+
+*:lang(zh) {
+  font-family: 'Microsoft YaHei', 'NotoSansSC';
+}
+
+*:lang(ko),
+*:lang(en) {
+  @include font-family("sans");
+}
+
 html {
   font-size: $base-font-size;
 }
 
 body {
-  @include font-family("sans");
   @include font-size("14");
   @include letter-spacing;
   @include line-height("body");

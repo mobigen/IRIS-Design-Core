@@ -3,7 +3,6 @@
 // ---------------------------------------------
 // mixins
 @mixin text-input {
-  @include font-family("sans");
   @include font-size("14");
   @include font-weight("regular");
   position: relative;

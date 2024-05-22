@@ -2,8 +2,6 @@
 // balham Theme Customizing
 // -------------------------
 .ag-theme-balham {
-  @include font-family("sans");
-
   /* This CSS is to not apply the border for the column having 'no-border' class */
   .no-border.ag-cell:focus {
     border: none;
