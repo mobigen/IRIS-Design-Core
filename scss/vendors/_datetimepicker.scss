@@ -1,5 +1,4 @@
 .mx-input {
-  @include font-family("sans");
   @include font-size("14");
   height: rem(32px);
   padding: 0 $spacing-xl 0 $spacing-sm;
