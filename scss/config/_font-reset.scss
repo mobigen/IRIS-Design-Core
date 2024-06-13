@@ -2,10 +2,10 @@ html {
   font-size: $base-font-size;
 
   &:lang(ja) {
-    font-family: 'メイリオ', Meiryo, 'Yu Gothic UI';
+    font-family: 'Yu Gothic', 'メイリオ', Meiryo, 'MS Gothic', 'Osaka', 'Hiragino Kaku Gothic';
 
       .ag-grid-balham {
-        font-family: 'メイリオ', Meiryo, 'Yu Gothic UI';
+        font-family: 'Yu Gothic', 'メイリオ', Meiryo, 'MS Gothic', 'Osaka', 'Hiragino Kaku Gothic';
       }
     }
 
