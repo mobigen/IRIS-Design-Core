@@ -2,18 +2,18 @@ html {
   font-size: $base-font-size;
 
   &:lang(ja) {
-    font-family: 'メイリオ', Meiryo, 'Yu Gothic UI';
+    font-family: 'YuGothic', 'Meiryo', -apple-system, 'NotoSansKR', BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
       .ag-grid-balham {
-        font-family: 'メイリオ', Meiryo, 'Yu Gothic UI';
+        font-family: 'YuGothic', 'Meiryo', -apple-system, 'NotoSansKR', BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       }
     }
 
   &:lang(zh) {
-    font-family: 'Microsoft YaHei', 'NotoSansSC';
+    font-family: 'Microsoft YaHei', 'NotoSansSC', -apple-system, 'NotoSansKR', BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
     .ag-grid-balham {
-      font-family: 'Microsoft YaHei', 'NotoSansSC';
+      font-family: 'Microsoft YaHei', 'NotoSansSC', -apple-system, 'NotoSansKR', BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     }
   }
 
