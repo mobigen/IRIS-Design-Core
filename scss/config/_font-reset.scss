@@ -2,18 +2,18 @@ html {
   font-size: $base-font-size;
 
   &:lang(ja) {
-    font-family: 'Yu Gothic', 'メイリオ', Meiryo, 'MS Gothic', 'Osaka', 'Hiragino Kaku Gothic';
+    font-family: 'Yu Gothic', 'Meiryo', 'MS Gothic', 'Osaka', 'Hiragino Kaku Gothic';
 
       .ag-grid-balham {
-        font-family: 'Yu Gothic', 'メイリオ', Meiryo, 'MS Gothic', 'Osaka', 'Hiragino Kaku Gothic';
+        font-family: 'Yu Gothic', 'Meiryo', 'MS Gothic', 'Osaka', 'Hiragino Kaku Gothic';
       }
     }
 
   &:lang(zh) {
-    font-family: 'Microsoft YaHei', 'NotoSansSC';
+    font-family: 'Microsoft YaHei', 'NotoSansSC', 'Microsoft JhengHei UI', 'PingFang SC';
 
     .ag-grid-balham {
-      font-family: 'Microsoft YaHei', 'NotoSansSC';
+      font-family: 'Microsoft YaHei', 'NotoSansSC', 'Microsoft JhengHei UI', 'PingFang SC';
     }
   }
 
