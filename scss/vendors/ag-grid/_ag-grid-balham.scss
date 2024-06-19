@@ -2,6 +2,18 @@
 // balham Theme Customizing
 // -------------------------
 .ag-theme-balham {
+  &:lang(ja) {
+    font-family: 'YuGothic', 'Meiryo', 'NotoSansKR', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+
+  &:lang(zh) {
+    font-family: 'Microsoft YaHei', 'NotoSansSC', 'NotoSansKR', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+
+  &:lang(ko),
+  &:lang(en) {
+    @include font-family("sans");
+  }
   /* This CSS is to not apply the border for the column having 'no-border' class */
   .no-border.ag-cell:focus {
     border: none;
