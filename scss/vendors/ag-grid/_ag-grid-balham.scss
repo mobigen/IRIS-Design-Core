@@ -3,11 +3,11 @@
 // -------------------------
 .ag-theme-balham {
   &:lang(ja) {
-    font-family: 'YuGothic', 'Meiryo', 'NotoSansKR', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: 'YuGothic',  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   }
 
   &:lang(zh) {
-    font-family: 'Microsoft YaHei', 'NotoSansSC', 'NotoSansKR', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: 'Microsoft YaHei', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   }
 
   &:lang(ko),

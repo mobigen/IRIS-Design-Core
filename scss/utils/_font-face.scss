@@ -92,13 +92,38 @@
       format("truetype"); /* Safari, Android, iOS */
 }
 
+
 // 중국어
 @font-face {
   font-family: "Microsoft YaHei";
   font-style: normal;
-  src:/* Super modern browsers */ url("#{$font-path}/chinese.msyh.woff")
+  font-weight: 400;
+  src: url("#{$font-path}/MicrosoftYaHeiUILight.woff2") format("woff2"),
+    /* Super modern browsers */ url("#{$font-path}/MicrosoftYaHeiUILight.woff")
       format("woff"),
-    /* Modern browsers */ url("#{$font-path}/chinese.msyh.ttf")
+    /* Modern browsers */ url("#{$font-path}/MicrosoftYaHeiUILight.ttf")
+      format("truetype"); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: "Microsoft YaHei";
+  font-style: normal;
+  font-weight: 500;
+  src: url("#{$font-path}/MicrosoftYaHeiUI.woff2") format("woff2"),
+    /* Super modern browsers */ url("#{$font-path}/MicrosoftYaHeiUI.woff")
+      format("woff"),
+    /* Modern browsers */ url("#{$font-path}/MicrosoftYaHeiUI.ttf")
+      format("truetype"); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: "Microsoft YaHei";
+  font-style: normal;
+  font-weight: 700;
+  src: url("#{$font-path}/MicrosoftYaHeiUI-Bold.woff2") format("woff2"),
+    /* Super modern browsers */ url("#{$font-path}/MicrosoftYaHeiUI-Bold.woff")
+      format("woff"),
+    /* Modern browsers */ url("#{$font-path}/MicrosoftYaHeiUI-Bold.ttf")
       format("truetype"); /* Safari, Android, iOS */
 }
 
