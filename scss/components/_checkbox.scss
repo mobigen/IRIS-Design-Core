@@ -69,11 +69,6 @@
 // 상태별 스타일
 // -------------------------
 // hover 상태
-.checkbox__input:focus-visible:not(:disabled) {
-  + .checkbox__label:before {
-    border-color: $primary;
-  }
-}
 
 .checkbox__label:hover::before {
   border-color: $primary;
@@ -234,12 +229,6 @@
     &:after,
     &:before {
       content: none;
-    }
-  }
-
-  .checkbox__input:focus-visible:not(:disabled) {
-    + .checkbox__label {
-      border-color: $primary;
     }
   }
 

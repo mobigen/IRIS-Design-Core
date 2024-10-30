@@ -218,12 +218,6 @@
     }
   }
 
-  .radio__input:focus-visible:not(:disabled) {
-    + .radio__label {
-      border-color: $primary;
-    }
-  }
-
   .radio__input:checked {
     + .radio__label {
       z-index: z("float");
