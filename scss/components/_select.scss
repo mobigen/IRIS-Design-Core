@@ -17,12 +17,8 @@
     &:hover:not(:disabled) {
       border-color: $secondary;
     }
-
-    &:focus-visible:not(:disabled) {
-      border: 2px solid $default-focus;
-      box-shadow: none;
-    }
   }
+}
 
   .select-selector__icon {
     transform: rotate(-180deg);
@@ -218,7 +214,7 @@
   }
 
   &:focus-visible:not(:disabled) {
-    border: 2px solid $default-focus;
+    outline: 2px solid $default-focus;
     box-shadow: none;
   }
 }
@@ -234,11 +230,6 @@
   height: 100%;
   padding-right: $spacing-xl;
   color: $text-02;
-
-  &:focus-visible:not(:disabled) {
-    border: 2px solid $default-focus;
-    box-shadow: none;
-  }
 }
 
 .select-selector__input-icon {
