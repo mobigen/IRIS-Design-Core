@@ -121,7 +121,7 @@
 @mixin button--tertiary {
   @include button-theme($ui-02, $text-02, $ui-01, $ui-03, $ui-04);
 
-  &:active {
+  &:active:not(:disabled) {
     border-color: transparent;
     color: $text-04;
 
@@ -134,7 +134,7 @@
 @mixin button--link {
   @include button-theme(transparent, $text-02, $ui-01, rgba($secondary, 0.17), transparent);
 
-  &:active {
+  &:active:not(:disabled) {
     color: $primary;
 
     .svg-icon {
@@ -176,7 +176,7 @@
     }
   }
 
-  &:active {
+  &:active:not(:disabled) {
     color: darken($text-02, 0.25);
 
     .svg-icon {
@@ -198,7 +198,7 @@
     }
   }
 
-  &:active {
+  &:active:not(:disabled) {
     color: darken($primary, 0.25);
 
     .svg-icon {
@@ -221,7 +221,7 @@
     }
   }
 
-  &:active {
+  &:active:not(:disabled) {
     color: darken($negative, 0.25);
 
     .svg-icon {
