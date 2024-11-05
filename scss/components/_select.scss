@@ -201,7 +201,7 @@
   border-radius: $button-border-radius;
 
   &:active {
-    border-color: $secondary !important;
+    border-color: $secondary;
   }
 
   &:hover {
