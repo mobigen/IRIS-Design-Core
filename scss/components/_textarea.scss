@@ -3,7 +3,9 @@
 // -------------------------
 .text-area {
   @include font-size("14");
+  display: block;
   padding: $spacing-2xs $spacing-xs;
+  margin: 0;
   width: 100%;
   min-width: rem(120px);
   min-height: rem(40px);
