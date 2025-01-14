@@ -105,7 +105,7 @@ th .button {
 
 .table .tr--selected td,
 .table .tr--selected:hover td {
-  background-color: $ui-01 !important;
+  background-color: $hover-ui-accent !important;
   color: $active-primary !important;
 }
 
