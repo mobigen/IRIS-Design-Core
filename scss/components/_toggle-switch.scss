@@ -8,7 +8,7 @@
 
 .toggle-switch__switch {
   @include button-normal;
-  z-index: z("float");
+  position: relative;
   justify-content: flex-start;
   width: rem(45px);
   height: rem(22px);
@@ -34,7 +34,6 @@
 }
 
 .toggle-switch__handle {
-  z-index: 0;
   display: block;
   width: rem(18px);
   height: rem(18px);
