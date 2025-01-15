@@ -8,18 +8,21 @@
 
 .toggle-switch__switch {
   @include button-normal;
+  z-index: z("float");
   justify-content: flex-start;
   width: rem(45px);
   height: rem(22px);
   padding: $spacing-3xs;
-  background-color: #BAC3CC;
+  background-color: $text-03;
   border: none;
   border-radius: 16px;
+  opacity: 0.5;
   transition-duration: $duration-fast-02;
   transition-timing-function: ease-in-out;
 
   &:focus-visible:not(:disabled) {
     outline: 2px solid $default-focus;
+    opacity: 1;
   }
 
   &:disabled,
@@ -31,6 +34,7 @@
 }
 
 .toggle-switch__handle {
+  z-index: 0;
   display: block;
   width: rem(18px);
   height: rem(18px);
@@ -46,6 +50,7 @@
 
 .toggle-switch__switch--selected {
   background-color: $primary;
+  opacity: 1;
 
   .toggle-switch__handle {
     margin-left: auto;
