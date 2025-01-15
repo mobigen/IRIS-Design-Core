@@ -12,16 +12,14 @@
   width: rem(45px);
   height: rem(22px);
   padding: $spacing-3xs;
-  background-color: $text-03;
+  background-color: #BAC3CC;
   border: none;
   border-radius: 16px;
-  opacity: 0.5;
   transition-duration: $duration-fast-02;
   transition-timing-function: ease-in-out;
 
   &:focus-visible:not(:disabled) {
     outline: 2px solid $default-focus;
-    opacity: 1;
   }
 
   &:disabled,
@@ -48,7 +46,6 @@
 
 .toggle-switch__switch--selected {
   background-color: $primary;
-  opacity: 1;
 
   .toggle-switch__handle {
     margin-left: auto;
