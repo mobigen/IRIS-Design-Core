@@ -42,6 +42,50 @@
       format("truetype"); /* Safari, Android, iOS */
 }
 
+@font-face {
+  font-family: "PretendardGOV";
+  font-style: normal;
+  font-weight: 300;
+  src: url("#{$font-path}/PretendardGOV-Light.woff2") format("woff2"),
+    /* Super modern browsers */ url("#{$font-path}/PretendardGOV-Light.woff")
+      format("woff"),
+    /* Modern browsers */ url("#{$font-path}/PretendardGOV-Light.ttf")
+      format("truetype"); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: "PretendardGOV";
+  font-style: normal;
+  font-weight: 400;
+  src: url("#{$font-path}/PretendardGOV-Regular.woff2") format("woff2"),
+    /* Super modern browsers */ url("#{$font-path}/PretendardGOV-Regular.woff")
+      format("woff"),
+    /* Modern browsers */ url("#{$font-path}/PretendardGOV-Regular.ttf")
+      format("truetype"); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: "PretendardGOV";
+  font-style: normal;
+  font-weight: 500;
+  src: url("#{$font-path}/NotoSans-Medium.woff2") format("woff2"),
+    /* Super modern browsers */ url("#{$font-path}/NotoSans-Medium.woff")
+      format("woff"),
+    /* Modern browsers */ url("#{$font-path}/NotoSans-Medium.ttf")
+      format("truetype"); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: "PretendardGOV";
+  font-style: normal;
+  font-weight: 700;
+  src: url("#{$font-path}/PretendardGOV-Bold.woff2") format("woff2"),
+    /* Super modern browsers */ url("#{$font-path}/PretendardGOV-Bold.woff")
+      format("woff"),
+    /* Modern browsers */ url("#{$font-path}/PretendardGOV-Bold.ttf")
+      format("truetype"); /* Safari, Android, iOS */
+}
+
 // 일본어
 @font-face {
   font-family: "Meiryo";
