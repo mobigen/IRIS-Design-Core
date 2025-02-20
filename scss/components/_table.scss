@@ -46,10 +46,7 @@ th .button {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.table__action-buttons .button + .button {
-  margin-left: $spacing-2xs;
+  gap: $spacing-3xs;
 }
 
 .table--action-buttons-hidable .table--action-buttons {
@@ -62,6 +59,10 @@ th .button {
 
 .table--action-buttons-hidable td {
   position: relative;
+
+  .table__icon > .svg-icon {
+    fill: $text-02;
+  }
 }
 
 .table--action-buttons-hidable .table__action-buttons {
