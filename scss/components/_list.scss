@@ -136,6 +136,10 @@
   display: flex;
   flex-direction: column;
   margin-right: $spacing-xs;
+
+  &:has(.list__details-item-trigger-icon) {
+    flex-direction: row;
+  }
 }
 
 .list__details-item-trigger-layer {
@@ -146,6 +150,11 @@
 
 .list__details-item-trigger-text {
   @include text-overflow(block);
+}
+
+.list__details-item-trigger-icon {
+  @include svg-icon-size(20px);
+  margin-left: $spacing-2xs;
 }
 
 .list__details-item-component {
