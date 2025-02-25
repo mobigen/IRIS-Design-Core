@@ -160,6 +160,10 @@ table .caption-out {
   justify-content: center;
 }
 
+.justify-around {
+  justify-content: space-around;
+}
+
 .flex-wrap {
   flex-wrap: wrap;
 }
@@ -461,10 +465,6 @@ table .caption-out {
 
 .whitespace-pre-wrap {
   white-space: pre-wrap;
-}
-
-.line-2 {
-  line-height: 2;
 }
 
 .break-normal {
