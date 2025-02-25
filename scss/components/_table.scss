@@ -60,7 +60,7 @@ th .button {
 
 .table--action-buttons-hidable tr:hover .table__action-buttons {
   display: flex;
-  padding-inline: 8px;
+  padding-inline: $spacing-xs;
 }
 
 .table--action-buttons-hidable td {
