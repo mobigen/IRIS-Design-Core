@@ -51,16 +51,16 @@ th .button {
 
 .table--action-buttons-hidable .table--action-buttons {
   display: none;
-  justify-content: space-around;
-
-  .button--sm {
-    width: rem(24px);
-  }
 }
 
 .table--action-buttons-hidable tr:hover .table__action-buttons {
   display: flex;
   padding-inline: $spacing-xs;
+  justify-content: space-around;
+
+  .button--sm {
+    width: rem(24px);
+  }
 }
 
 .table--action-buttons-hidable td {
