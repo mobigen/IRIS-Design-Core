@@ -159,6 +159,21 @@
     }
   }
 
+  &__number {
+    @include font-size("12");
+    @include line-height("body");
+    @include font-weight("medium");
+    display: flex;
+    justify-content: center;
+    min-width: rem(20px);
+    padding: 0 $spacing-2xs;
+    margin-right: $spacing-xs;
+    border-radius: 4px;
+    border: 1px solid $ui-04;
+    color: $text-02;
+    background: $ui-01;
+  }
+
   // -------------------------
   // checkbox, radio overwrite
   // -------------------------
@@ -235,7 +250,8 @@
   }
 
   &__item--disabled &__button,
-  &__item--disabled &__action-button {
+  &__item--disabled &__action-button,
+  &__item--disabled &__number {
     opacity: 0.4;
     cursor: not-allowed;
   }
