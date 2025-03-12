@@ -61,7 +61,7 @@
 	z-index: z("overlay");
 }
 
-.context-menu__item:hover .context-submenu {
+.context-menu__item:hover > .context-submenu {
 	display: block;
 }
 
