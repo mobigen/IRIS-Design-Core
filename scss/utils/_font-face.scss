@@ -86,6 +86,51 @@
       format("truetype"); /* Safari, Android, iOS */
 }
 
+@font-face {
+  font-family: "GmarketSans";
+  font-style: normal;
+  font-weight: 300;
+  src: url("#{$font-path}/GmarketSans-Light.woff2") format("woff2"),
+    /* Super modern browsers */ url("#{$font-path}/GmarketSans-Light.woff")
+      format("woff"),
+    /* Modern browsers */ url("#{$font-path}/GmarketSans-Light.ttf")
+      format("truetype"); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: "GmarketSans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("#{$font-path}/GmarketSans-Medium.woff2") format("woff2"),
+    /* Super modern browsers */ url("#{$font-path}/GmarketSans-Medium.woff")
+      format("woff"),
+    /* Modern browsers */ url("#{$font-path}/GmarketSans-Medium.ttf")
+      format("truetype"); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: "GmarketSans";
+  font-style: normal;
+  font-weight: 500;
+  src: url("#{$font-path}/GmarketSans-Medium.woff2") format("woff2"),
+    /* Super modern browsers */ url("#{$font-path}/GmarketSans-Medium.woff")
+      format("woff"),
+    /* Modern browsers */ url("#{$font-path}/GmarketSans-Medium.ttf")
+      format("truetype"); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: "GmarketSans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("#{$font-path}/GmarketSans-Bold.woff2") format("woff2"),
+    /* Super modern browsers */ url("#{$font-path}/GmarketSans-Bold.woff")
+      format("woff"),
+    /* Modern browsers */ url("#{$font-path}/GmarketSans-Bold.ttf")
+      format("truetype"); /* Safari, Android, iOS */
+}
+
+
 // 일본어
 @font-face {
   font-family: "Meiryo";
