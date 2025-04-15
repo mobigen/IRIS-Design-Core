@@ -100,6 +100,17 @@
 @font-face {
   font-family: "GmarketSans";
   font-style: normal;
+  font-weight: 400;
+  src: url("#{$font-path}/GmarketSans-Medium.woff2") format("woff2"),
+    /* Super modern browsers */ url("#{$font-path}/GmarketSans-Medium.woff")
+      format("woff"),
+    /* Modern browsers */ url("#{$font-path}/GmarketSans-Medium.ttf")
+      format("truetype"); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: "GmarketSans";
+  font-style: normal;
   font-weight: 500;
   src: url("#{$font-path}/GmarketSans-Medium.woff2") format("woff2"),
     /* Super modern browsers */ url("#{$font-path}/GmarketSans-Medium.woff")
