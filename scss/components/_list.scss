@@ -193,8 +193,17 @@
   padding-right: 0;
 }
 
-.list--expandable .list__button {
-  padding-left: 0;
+.list--expandable .list__summary-content {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.list--expandable .list__action-buttons {
+  flex: 0 0 120px;
+}
+
+.list--expandable .list__action-buttons {
+  flex: 0 0 120px;
 }
 
 .list__head-right-box {
