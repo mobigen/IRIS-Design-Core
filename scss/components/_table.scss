@@ -103,6 +103,19 @@ th .button {
   justify-content: center;
 }
 
+.tr--division-line {
+  td {
+    border-bottom: 1px solid $ui-04;
+    padding-bottom: 6px;
+  }
+
+  & + tr {
+    td {
+      padding-top: 6px;
+    }
+  }
+}
+
 // -------------------------
 // Status
 // -------------------------
