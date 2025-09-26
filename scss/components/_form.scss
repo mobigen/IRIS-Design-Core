@@ -238,6 +238,7 @@
 .form__v-group-title {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
   width: rem(130px);
   color: $text-02;
 }
