@@ -141,33 +141,6 @@ table .caption-out {
   padding-left: $spacing-2xs + $spacing-3xs !important;
 }
 
-// -------------------------
-// flex box
-// -------------------------
-.d-flex {
-  display: flex;
-}
-
-.self-start {
-  align-self: flex-start;
-}
-
-.items-center {
-  align-items: center;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.justify-around {
-  justify-content: space-around;
-}
-
-.flex-wrap {
-  flex-wrap: wrap;
-}
-
 .ml-8 {
   margin-left: $spacing-xs;
 }
@@ -186,6 +159,10 @@ table .caption-out {
 
 .mt-auto {
   margin-top: auto !important;
+}
+
+.mt-4 {
+  margin-top: $spacing-2xs !important;
 }
 
 .mt-8 {
@@ -218,6 +195,45 @@ table .caption-out {
 .my-0 {
   margin-bottom: 0 !important;
   margin-top: 0 !important;
+}
+
+// -------------------------
+// flex box
+// -------------------------
+.d-flex {
+  display: flex;
+}
+
+.self-start {
+  align-self: flex-start;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.gap-2 {
+  gap: $spacing-3xs;
+}
+
+.gap-4 {
+  gap: $spacing-2xs;
+}
+
+.gap-8 {
+  gap: $spacing-xs;
 }
 
 // .seaching-select-disable 클래스를 개선
