@@ -227,6 +227,28 @@
 
 .dynamic-form__item {
   display: flex;
+
+  //다이나믹폼 라벨에 스위치 추가될 때 스타일
+  .form__label--switch {
+    height: auto;
+    align-items: flex-start;
+    margin-top: 7px;
+
+    .form__label-text {
+      flex: 1;
+      min-width: 0;
+      line-height: 18px;
+    }
+
+    .toggle-switch {
+      flex: 0;
+      margin-right: $spacing-xs;
+    }
+
+    & + .form__detail {
+      justify-content: flex-start;
+    }
+  }
 }
 
 .form__v-group-item {
