@@ -19,7 +19,6 @@
     }
   }
 
-
   .select-selector__icon {
     transform: rotate(-180deg);
   }
@@ -188,6 +187,17 @@
 .select-selector {
   position: relative;
   height: $button-height-md;
+
+  &:has(.select-selector__tag-group) {
+    height: auto;
+  }
+
+  &__tag-group {
+    display: flex;
+    gap: $spacing-2xs;
+    flex-wrap: wrap;
+    width: 100%;
+  }
 }
 
 .select-selector__button {
@@ -324,15 +334,13 @@
   box-shadow: 0 0 rem(8px) 0 $box-shadow;
 }
 
-.select-container__notification > .notification-message{
+.select-container__notification > .notification-message {
   width: 100%;
 
-  .notification-message__text{
+  .notification-message__text {
     @include text-overflow();
   }
 }
-
-
 
 // -------------------------
 // Size overwrite
@@ -358,14 +366,14 @@
       right: $spacing-sm;
     }
 
-    .select-container__notification{
+    .select-container__notification {
       height: $button-height-lg;
 
-      .notification-message__icon{
+      .notification-message__icon {
         @include svg-icon-size(20px);
       }
 
-      .notification-message__text{
+      .notification-message__text {
         @include font-size("14");
       }
     }
@@ -409,7 +417,7 @@
       @include font-size("12");
     }
 
-    .select-container__notification{
+    .select-container__notification {
       height: $button-height-sm;
     }
   }
