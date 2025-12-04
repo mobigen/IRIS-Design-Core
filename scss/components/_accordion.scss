@@ -5,7 +5,6 @@
   border: 1px solid $ui-04;
 }
 
-
 .accordion-vertical {
   @include list;
 }
@@ -125,6 +124,11 @@
 
 .accordion-vertical__item + .accordion-vertical__item {
   border-top: 1px solid $ui-04;
+}
+
+.accordion-vertical__form {
+  padding: $spacing-2xs $spacing-xs;
+  background-color: $ui-02;
 }
 
 // -------------------------
