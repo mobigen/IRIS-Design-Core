@@ -224,6 +224,10 @@ table .caption-out {
   justify-content: center;
 }
 
+.justify-between {
+  justify-content: space-between;
+}
+
 .justify-around {
   justify-content: space-around;
 }
@@ -242,6 +246,10 @@ table .caption-out {
 
 .gap-8 {
   gap: $spacing-xs;
+}
+
+.gap-12 {
+  gap: $spacing-sm;
 }
 
 // .seaching-select-disable 클래스를 개선
