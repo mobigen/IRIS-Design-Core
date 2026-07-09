@@ -43,8 +43,12 @@
 
 .toggle-switch__label {
   @include font-size("13");
-  margin-right: $spacing-2xs;
   color: $text-02;
+}
+
+.toggle-switch__label + .toggle-switch__switch,
+.toggle-switch__switch + .toggle-switch__label {
+  margin-left: $spacing-2xs;
 }
 
 .toggle-switch__switch--selected {
